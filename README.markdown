@@ -6,12 +6,8 @@
 * Tags: diy,minimum
 
 ###Note:
-You could use this theme almost as is. But There are several things you have to do before you use this theme.
+CSS Radarは現役フロントエンドデベロッパーが、CSS/CSS3/HTML/HTML5の情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+質問や記事のリクエストは[Twitter@cssradar](http://twitter.com/#!/cssradar)にて受け付けています。
 
-* open up \_config.yml 
-  You need to change sitename, tagline and url value to make theme work nicely. It still works if you didn't but if you publish as your site using this theme, then you must change them.
-
-* open up \_includes/ga.html and edit UA-XXXXX-X with your site ID on Google Analytics.
-  If you don't need stats then delete {% include ga.html %} line on \_layouts\default.htm.
-
-See LICENSE for term of use.
+###License
+\_site以下にあるすべての記事、画像は記事内でことわりがない限りCreative Common Attribute by 3.0にて、それ以外のファイルはすべてMITライセンスでライセンスしています。
