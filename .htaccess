@@ -1,0 +1,21 @@
+//Custom 400 errors
+ErrorDocument 400 /404/
+
+//Custom 401 errors
+ErrorDocument 401 /404/
+
+//Custom 403 errors
+ErrorDocument 403 /404/
+
+//Custom 404 errors
+ErrorDocument 404 /404/
+
+//Custom 500 errors
+ErrorDocument 500 /404/
+
+//Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+

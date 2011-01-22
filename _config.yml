@@ -1,0 +1,13 @@
+#Presentation Settings
+sitename: CSS Radar
+tagline: For Frond End Developers
+url: http://css.studiomohawk.com
+#Deployment Settings
+pygments:    true
+markdown:    kramdown
+permalink:   pretty
+kramdown:
+  auto_ids: false
+exclude: LICENSE, README.markdown
+ftp_host: studiomohawk.com
+ftp_dir: /www/css

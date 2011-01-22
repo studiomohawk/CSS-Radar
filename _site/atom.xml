@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>CSS Radar | For Frond End Developers</title>
+ <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
+ <link href="http://css.studiomohawk.com"/>
+ <updated>2011-01-23T02:33:47+09:00</updated>
+ <id>http://layouts.studiomohawk.com/</id>
+
+ 
+ <entry>
+   <title>CSS RadarをJekyllで作り直し</title>
+   <link href="http://css.studiomohawk.com/cssradar/2011/01/23/scratch-and-build/"/>
+   <updated>2011-01-23T00:00:00+09:00</updated>
+   <id>http://css.studiomohawk.com/cssradar/2011/01/23/scratch-and-build</id>
+   <content type="html">&lt;h2&gt;CSS Radarについて&lt;/h2&gt;
+
+&lt;p&gt;ほんの半年ほど前からCSS Radarを再開したものの、目的が記事を書くことに知らない間に置き換わっていた。&lt;br /&gt;
+役に立つコンテンツを作れば、ユーザは勝手に増えていく、という幻想を抱くほど私は甘くないが、ユーザを増やすために記事を書くということと、CSS Radarの目的は抜本的に違う。なにより、リアルな現場で働いている人間として、毎日クオリティの高いオリジナルコンテンツを追加できるほど暇ではない。&lt;/p&gt;
+
+&lt;p&gt;だから、少しずつでも確実に自分自身の成長につながる記事を書いていこうと、そういう意思をもって、これまで書いた記事とも決別することにした。&lt;br /&gt;
+これまで通り、記事のリクエストは&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;にて募集していくし、人気のあった記事はリライトしていく予定だ。&lt;br /&gt;
+リクエストがあればその記事を最優先でリライトしていくので、気軽にリクエストしてほしい。&lt;/p&gt;
+
+&lt;h2&gt;WordPressとの決別。Jekyllとの出会い&lt;/h2&gt;
+
+&lt;p&gt;長年愛用してきたWordPressと決別することにした。私にとってWordPressほど優秀なブログツールはおそらくない。それでも新しい環境にチャレンジしていこうということで、&lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;を利用し始めた。&lt;/p&gt;
+
+&lt;h3&gt;Jekyllとは？&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;元々はgithubのレポジトリ用ページ作成ツール&lt;/li&gt;
+  &lt;li&gt;静的ブログエンジン、コマンドラインでブログを生成する&lt;/li&gt;
+  &lt;li&gt;非常にシンプルで、静的ブログエンジンとしては強力。WordPressでできたことはできない事が多いが普通のブログには十分&lt;/li&gt;
+  &lt;li&gt;記事はmarkdown(ライトウェイトマークアップ言語)を使って記述&lt;/li&gt;
+  &lt;li&gt;MacVimで記事を書くことができる&lt;/li&gt;
+  &lt;li&gt;記事もソースコードもバージョンコントロールできる = gitを使って、&lt;a href=&quot;https://github.com/studiomohawk&quot;&gt;github&lt;/a&gt;で管理できる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;CSS Radarの今後&lt;/h2&gt;
+
+&lt;p&gt;これまで通りCSSやHTMLについても書いていくが、メインエディタであるVimについて、gitを使ったバージョンコントロール、Macを環境とした開発やデザインに使えるツールの紹介やウェブツールについても書いていく。
+これまでは知っていることについて書いていたが、これからは知らないこと、覚えていくことについて書いていくつもりだ。&lt;/p&gt;
+
+&lt;p&gt;知らないことを書いていくので、これまでよりは更新頻度は落ちることになる。&lt;br /&gt;
+記事を作成している間は、&lt;a href=&quot;http://pinboard.in/u:studiomohawk&quot;&gt;Pinboard&lt;/a&gt;や&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;、そして&lt;a href=&quot;http://www.flickr.com/photos/studiomohawk/&quot;&gt;Flickr&lt;/a&gt;で、私が何をしているかわかるので、ぜひそちらものぞいてみて欲しい。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

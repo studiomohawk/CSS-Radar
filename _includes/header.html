@@ -1,0 +1,30 @@
+<header id="head">
+<div class="head-inner">
+	<ul class="logo-area left">
+		<li class="logo"><a href="/">{{ site.sitename }}</a></li>
+		<li class="tagline">{{ site.tagline }}</li>
+	</ul>
+	
+	{% if page.layout == 'home' or page.layout == 'post' %}
+	<ul id="menu" class="menu right">
+		<li>Recent Articles</li>
+	</ul>
+	<nav class="backnumber">
+		<ul>
+			{% for post in site.posts limit:5 %}
+		<li>
+		<h6 class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h6>
+			<date>
+				<span class="day">{{ post.date | date: '%d' }}</span>
+				<span class="month"><abbr>{{ post.date | date: '%b' }}</abbr></span>
+			</date> 
+		</li>
+		{% endfor %}
+		<li class="btn">
+			<a href="/backnumber/" class="btn">Read More</a>
+		</li>
+		</ul>
+	</nav>
+	{% endif %}
+</div>
+</header><!-- id="head" -->
