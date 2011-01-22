@@ -70,9 +70,6 @@ a:hover {
   text-align: center;
   border: 1px solid #3e4039;
   border-top: 0px;
-  -webkit-border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px #bbbbbb;
   z-index: 300;
 }
 .menu li:before {
