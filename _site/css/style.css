@@ -233,6 +233,10 @@ a:hover {
 .the-article .content blockquote p { margin-left: 0; }
 .the-article .content ul { list-style: square; }
 .the-article .content ol { list-style: decimal; }
+.the-article .content p code {
+  background-color: rgba(75, 77, 69, 0.8);
+  padding: 0 5px;
+}
 .the-article .content img {
   display: block;
   outline: 1px solid #505b5f;
@@ -268,7 +272,8 @@ a:hover {
   margin: 0 0 7px 7px;
 }
 .the-article .content .highlight pre {
-  background-color: rgba(75, 77, 69, 0.8);
+  color: #444444;
+  background-color: #f2f2f2;
   border: 1px solid #585a51;
   margin-left: 0;
   padding: 7px;

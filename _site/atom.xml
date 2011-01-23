@@ -4,9 +4,151 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-01-23T03:24:47+09:00</updated>
+ <updated>2011-01-23T21:58:31+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>レスポンシブウェブデザインについて</title>
+   <link href="http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/"/>
+   <updated>2011-01-24T00:00:00+09:00</updated>
+   <id>http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design</id>
+   <content type="html">&lt;p&gt;いまこの記事を読んでいるモニタのサイズは何インチだろうか？&lt;br /&gt;
+iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブック、ノートPC、デスクトップPCと数年前なら思いもよらなかったモニタ/スクリーンサイズでユーザはウェブサイトを閲覧し始めている。
+今後もさらに解像度が異なる環境が増えていくことは間違いない。&lt;/p&gt;
+
+&lt;p&gt;ではそのサイズのモニタごとに、スクリーンごとにデザインを作り、HTML/CSSを書き足していくのか？&lt;br /&gt;
+その疑問への1つの回答がレスポンシブウェブデザイン(Responsive Web Design)。
+多くの場合、CSS3で利用が可能になる予定のMedia Queriesを活用して、モニタ/スクリーンのサイズに合わせて最適なデザインを供給するデザイン/コーディング手法がレスポンシブウェブデザインと呼ばれている。&lt;/p&gt;
+
+&lt;h2&gt;レスポンシブウェブデザインの例&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://colly.com/&quot;&gt;Simon Collison&lt;/a&gt; / Simon Collisonはレスポンシブウェブデザインをいち早く導入したウェブデザイナ&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.informationarchitects.jp/en/&quot;&gt;Information Architects&lt;/a&gt; / WordPressを使ってレスポンシブデザインを実現している&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://thinkvitamin.com/&quot;&gt;Think Vitamin&lt;/a&gt; / こちらも最近のリニューアルからレスポンシブウェブデザインを導入&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;実際にサイトを訪れてブラウザのサイズを変更してほしい。サイズに応じてレイアウトが変わっていくのを見てほしい。&lt;/p&gt;
+
+&lt;h2&gt;レスポンシブデザインが解決しないこと&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;レスポンシブウェブデザインは、特にハンドヘルドデバイス用に最適な解決方法と考えられるが、すべての問題に対する解決を提示できるわけではない。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A List Apartの記事、&lt;a href=&quot;http://www.alistapart.com/articles/responsive-web-design/&quot;&gt;Responsive Web Design&lt;/a&gt;にてEthan Marcotteは、次のように書いている。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;That’s not to say there isn’t a business case for separate sites geared toward specific devices; 
+for example, if the user goals for your mobile site are more limited in scope than its desktop equivalent, then serving different content to each might be the best approach.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ユーザのゴールに合わせて、ハンドヘルドデバイス用にコンテンツを変更することがベストの解決方法である場合もあるということだ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://membership.thinkvitamin.com/library/responsive-web-design/mobile/context&quot;&gt;Responsive Web Design: Mobile: Context(Think Vitamin)&lt;/a&gt;にてNick Pettitも、レスポンシブウェブデザインを採用するかについて、&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;スピード&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ハンドヘルドデバイスはWIFIで接続することもあるが、多くの場合は3G回線で接続する。すでに多くのユーザが感じているように、iPhone4のSafariがいくら早くなっても、デスクトップのブラウザのスピードには勝てない。JavaScriptやCSSを無意味にハンドヘルドデバイスでも読み込むことはスピードを犠牲にすることになる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;スクリーンサイズ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;言わずもがな、ハンドヘルドデバイスのスクリーンサイズは決して大きくない。&lt;code&gt;display: none&lt;/code&gt;が解決してくれる問題かもしれないが、実際には難しい場合もある。例えば、レストランの情報をデスクトップからアクセスする場合と、ハンドヘルドデバイスからアクセスする場合とでは、提供すべくコンテンツが異なる。そして画像のサイズについて、iPhone4など解像度の高いスクリーンを持つデバイスも現れはじめており、レスポンシブウェブデザインだけでは解決できない問題もある。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;場所&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ハンドヘルドデバイスは持ち運ぶため存在する。スクリーンサイズの差異による問題点と同じく、デスクトップと、ハンドヘルドデバイスではユーザが求めているコンテンツそのものが異なる場合も多い。デスクトップではほとんど役目を果たすことがないGeolocationも、ハンドヘルドには重要になってくる。&lt;/p&gt;
+
+&lt;p&gt;というような観点で検討するべきだと話している。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://5by5.tv/bigwebshow/6&quot;&gt;EPISODE #6: MOBILE FIRST (The Big Web Show)&lt;/a&gt;では、Luke Wroblewskiは「モバイルからまずデザインを始める」という提案をしている。&lt;br /&gt;
+こちらも非常に興味深い。現時点では通常デスクトップ用のデザインからスタートし、その後にハンドヘルドデバイス用に最適化していくのが通常のフローと言えるが、Lukeはモバイルデバイス用のデザインを先に行う事で、モバイルで提供すべきサービスの根幹に集中することができ、デザインだけではなく、UIやサイト構造、そしてインタラクションもシンプルにすることができると話している。&lt;br /&gt;
+ミニマムなスタート地点からデスクトップ用デザインなど大きなモニタ/スクリーン、マウスやキーボードなどに対応するデザインを作ることで、すべてのユーザに対して最適なデザインを提供できるという考え方だ。&lt;/p&gt;
+
+&lt;h2&gt;Media Queries&lt;/h2&gt;
+
+&lt;p&gt;レスポンシブデザインでは、多くの場合、CSS3でサポートされる予定のMedia Queriesを活用し、サイズの異なるモニタ/スクリーンに対し最適なデザインを提供する。&lt;br /&gt;
+Media Queriesについては、&lt;a href=&quot;http://hardboiledwebdesign.com/&quot;&gt;Hardboiled Web Design&lt;/a&gt;の著者であるAndy Clarkの記事&lt;a href=&quot;http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries&quot;&gt;Hardboiled CSS3 Media Queries&lt;/a&gt;で実例を見る事ができる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* iPhone 3 (横向き) ----------- */&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;screen&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; 	&lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;min-width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;321px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; 	&lt;span class=&quot;c&quot;&gt;/* ここにスタイルルール */&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;CSS3で拡張されるMedia Queriesでは、&lt;code&gt;screen&lt;/code&gt;や&lt;code&gt;print&lt;/code&gt;のようなメディアタイプだけでなく、デバイス自体のサイズやスクリーンのサイズなどを利用できるようになる。&lt;br /&gt;
+例:&lt;code&gt;min-width : 321px&lt;/code&gt;、&lt;code&gt;max-width : 320p&lt;/code&gt;、&lt;code&gt;max-device-width : 1024px&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;上記のように既存のスタイルシートに追記することも可能だし、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;smartphone.css&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;media=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;only screen and (min-device-width : 320px) and (max-device-width : 480px)&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というように&lt;code&gt;link&lt;/code&gt;を使って別のスタイルシートとして管理することもできる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;smartphone&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.css&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;min-device-width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;320px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;max-device-width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;480px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;W3Cによれば&lt;code&gt;@import&lt;/code&gt;を使っても上記のように記述することが可能だ。(&lt;a href=&quot;http://www.w3.org/TR/css3-mediaqueries/#media0&quot;&gt;Media Queries&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;現時点でのMedia Queriesのサポート状況は、Firefox, Chrome, Safari, Opera, Internet Explorer 9, Android スマートフォン, そしてiOSデバイス(iPhone、iPhone4、iPad、iPod touch)がサポートしている。(※Androidスマートフォン、iPhone、iPod touchについては、W3Cで宣言されているすべての値を利用できるわけではないようだ)&lt;/p&gt;
+
+&lt;p&gt;Androidスマートフォン、iPhone、iPod touch、iPadなどのハンドヘルド端末については、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;width=device-width; initial-scale=1.0; maximum-scale=1.0;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;という記述も必要になるだろう。
+&lt;code&gt;meta viewport&lt;/code&gt;については&lt;a href=&quot;http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html&quot;&gt;Safari Reference Library&lt;/a&gt;(英語)が詳しい説明をしている。&lt;br /&gt;
+またはQuirksmodeの&lt;a href=&quot;http://www.quirksmode.org/blog/archives/2010/09/combining_meta.htm&quot;&gt;Combining meta viewport and media queries&lt;/a&gt;(英語)も参考になる。&lt;/p&gt;
+
+&lt;p&gt;また、IE6〜IE8まではCSS3で拡張される予定のMedia Queriesはサポートされていないので、レスポンシブデザインの実装をしないか、&lt;a href=&quot;http://code.google.com/p/css3-mediaqueries-js/&quot;&gt;css3-mediaqueries-js&lt;/a&gt;というJavaScriptを使った実装は可能だ。
+レスポンシブウェブデザインは&lt;em&gt;すべてのブラウザで見た目を同じにしなくてはならない&lt;/em&gt;という思想からはほど遠くプログレッシブエンハンスメントという手法に近いので、無理にIE6〜IE8への実装をする必要性はない。&lt;br /&gt;
+レスポンシブウェブデザインは、確かにユーザのスクリーンサイズに合わせた最適なデザインを提供することができるが、それができなくてもユーザビリティはマイナスになったりはしない。&lt;/p&gt;
+
+&lt;h2&gt;レスポンシブグリッドCSS&lt;/h2&gt;
+
+&lt;p&gt;レスポンシブグリッドの最大の弱点は、実装がやや大変なこと。現実的にモバイルに最適化されることを想定していないウェブデザインをモバイル用に変更したり、サイズが変わった際にどのようにグリッドが変更していくべきかなど、デザインとテクニックの両面で解決しなければいけない問題点がある。&lt;br /&gt;
+そこで現れ始めたのが、レスポンシブウェブデザインのためのグリッドCSSだ。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lessframework.com/&quot;&gt;Less Framework3&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;黄金比をベースに3、5、8、13コラム、最小320pxから1280px以上のモニタ/スクリーンに合わせてコラムグリッドの数を変更する。実際に配布されているのは、&lt;code&gt;body&lt;/code&gt;に対してmedea queriesを使って幅のサイズを指定するところのみ。コラムグリッドについては、配布されるファイルのコメントを参考にグリッド用のクラスを作成する。非常にミニマムな構成なので、レスポンシブウェブデザインを学ぶ上でのソースコードリーディングに最適だ。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cssgrid.net/&quot;&gt;The 1140 grid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらは、その名前の通り1140px以上を最大幅とするレスポンシブグリッドCSS。Less Framework3と異なる点はコラムグリッド用のクラスは用意されているところ。そしてコラムグリッドとガター(コラムとコラムの間のマージン)はパーセントで指定されているところ。画像に対しても&lt;code&gt;max-width&lt;/code&gt;を指定し、モニタ/スクリーンのサイズに対して最適なサイズに変更されるようになっていたりする。Photoshopのファイルも配布している。&lt;/p&gt;
+
+&lt;h2&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.alistapart.com/articles/responsive-web-design/&quot;&gt;Responsive Web Design (A list Apart)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.w3.org/TR/css3-mediaqueries/&quot;&gt;Media Queries (W3C)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/&quot;&gt;Responsive Web Design: What It Is and How To Use It (Smashing Magazine)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://css-tricks.com/css-media-queries/&quot;&gt;CSS Media Queries &amp;amp; Using Available Space (CSS-Tricks)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://x7.fi/2010/02/12/how-to-fit-your-website-for-the-apple-ipad/&quot;&gt;How to fit your website for the Apple iPad (x7 Labs)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.quirksmode.org/blog/archives/2010/09/combining_meta.html&quot;&gt;Combining meta viewport and media queries (Quirksmode)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html&quot;&gt;Configuring the Viewport (Safari Reference Library)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.lukew.com/ff/entry.asp?1117&quot;&gt;Mobile First Helps with Big Issues (LukeW)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://5by5.tv/bigwebshow/6&quot;&gt;EPISODE #6: MOBILE FIRST (The Big Web Show)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://membership.thinkvitamin.com/library/responsive-web-design/mobile/context&quot;&gt;Responsive Web Design: Mobile: Context (Think Vitamin)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>CSS RadarをJekyllで作り直し</title>
