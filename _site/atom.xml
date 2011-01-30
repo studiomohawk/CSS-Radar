@@ -4,9 +4,328 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-01-23T21:58:31+09:00</updated>
+ <updated>2011-01-30T13:56:20+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>Gitでバージョンコントロール</title>
+   <link href="http://css.studiomohawk.com/tool/2011/01/29/git-version-control/"/>
+   <updated>2011-01-29T00:00:00+09:00</updated>
+   <id>http://css.studiomohawk.com/tool/2011/01/29/git-version-control</id>
+   <content type="html">&lt;p&gt;バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;作業用フォルダがstyle.bk20110128なんて名前であふれている&lt;/li&gt;
+  &lt;li&gt;なんでこの変更したのか、覚えていない。もう3ヶ月も前の話だし&lt;/li&gt;
+  &lt;li&gt;誰が最新のファイル持ってるかわからないまま、作業を開始、もう1度やり直し&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;HTMLであろうと、CSSであろうと、JSであろうと、何であろうとソースコードを人間は必ずどこかで例のような目にあうのだ。    &lt;/p&gt;
+
+&lt;p&gt;バックアップも、更新履歴も、システムでやればいいじゃない。を解決してくれるのが&lt;em&gt;Git&lt;/em&gt;。&lt;br /&gt;
+セットアップも簡単で、利用するのも簡単。
+あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。&lt;/p&gt;
+
+&lt;h2&gt;Gitのインストール&lt;/h2&gt;
+&lt;p&gt;※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://code.google.com/p/git-osx-installer/downloads/list?can=3&quot;&gt;OSX Installer for Git&lt;/a&gt;から、自分のOSバージョンにあわせてdmgをダウンロード。&lt;a href=&quot;http://code.google.com/p/msysgit/downloads/list?can=3&quot;&gt;Winはこちら&lt;/a&gt;&lt;br /&gt;
+あとはインストーラにお任せ。&lt;/p&gt;
+
+&lt;p&gt;Gitは、アプリケーションフォルダには&lt;em&gt;入らない&lt;/em&gt;系統のアプリ。Terminalで使える。&lt;br /&gt;
+&lt;em&gt;Terminal&lt;/em&gt;(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。  &lt;/p&gt;
+
+&lt;p&gt;では、&lt;code&gt;git --version&lt;/code&gt;&lt;br /&gt;
+をTerminalへコピペしてみてほしい。ちゃんとインストールできていれば、&lt;br /&gt;
+&lt;code&gt;git version 1.7.1.1&lt;/code&gt;&lt;br /&gt;
+というような表示がされるだろう。&lt;/p&gt;
+
+&lt;p&gt;で、コマンドラインでしか使えないの？ なんてことはないので、&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.syntevo.com/smartgit/index.html&quot;&gt;SmartGit&lt;/a&gt;(個人利用はフリー、Winにも対応)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.git-tower.com/&quot;&gt;Tower&lt;/a&gt;(betaテスト中フリー、Macのみ)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://code.google.com/p/tortoisegit/&quot;&gt;TortoiseGit&lt;/a&gt;(フリー、Winのみ)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちら、GitをGUIで利用できるようにするアプリ達。私はTowerをテストしつつ、Macでも、Winでも使えるSmartGitをメインで利用している。どちらも日本語版はないが、基本の用語さえ覚えてしまえば問題ないだろう。
+GUIアプリをインストールしても、もう少しTerminalは開いたままに。&lt;/p&gt;
+
+&lt;h2&gt;Gitの基本用語&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;レポジトリ(Repository)&lt;/em&gt; - 更新履歴などを管理するバージョンコントロールの要になる保管庫。&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;コミット(Commit)&lt;/em&gt; - エディタでいうならば保存に近いコミット。Gitに対して変更が完了したよ、と伝えるコマンド。コミットにはメッセージが必要で、どこをどうして変更したのか伝えることで履歴管理が可能になる&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;クローン(Clone)&lt;/em&gt; - Gitでは0からレポジトリを作成するのも簡単だが、既存のレポジトリをクローンすることができる。多人数で開発をする際は非常に便利&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;ブランチ(Branch)&lt;/em&gt; - メインの開発からの分岐を作成するブランチ。&lt;q&gt;&amp;ldquo;Git のブランチモデルは、Git の機能の中でもっともすばらしいものだという人もいるほど&amp;rdquo;&lt;/q&gt; &lt;cite&gt;&lt;a href=&quot;http://progit.org/book/ja/ch3-0.html&quot;&gt;Pro Git&lt;/a&gt;&lt;/cite&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Gitをインストールした後にやるべきこと&lt;/h2&gt;
+
+&lt;p&gt;Terminalはまだ開いたままだろうか？&lt;br /&gt;
+準備が整ったら以下のコマンドを、必要な部分は修正してから、Terminalにて実行。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;まずは自己紹介をしよう&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;名前&amp;quot;&lt;/span&gt;
+git config --global user.email メールアドレス@example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;標準のエディタを設定&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*Terminalから利用する場合にコミットメッセージを書くのに使うエディタ。たいていの場合Terminalのデフォルト、viかvimが使われる。それ以外のエディタが好みの場合は設定しよう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global core.editor emacs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ホワイトスペースを無視する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Gitではホワイトスペース1つを追加しても、ファイルを変更したと認識される(Rubyではホワイトスペースは大事)が、大抵の場合、ホワイトスペース1つでコミットする、ということもないだろう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global apply.whitespace nowarn
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;すべてのGitレポジトリに無視ファイルを適応&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Macなら.DS_Store(普段は見えないけれど、Gitは認識する)など、OSが自動で生成するファイルとか、毎回.gitignore(無視リストファイル)を、レポジトリに追加したり、その.gitignoreをコミットしたりするのは面倒。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global core.excludesfile ~/.gitignore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;このコマンドのままだと、ホームディレクトリに.gitignoreがあるから&amp;ndash;globalで読んでねという意味になる。&lt;br /&gt;
+私はこのファイルを&lt;a href=&quot;http://db.tt/jxIW2Rp&quot;&gt;Dropbox&lt;/a&gt;を使って、すべての環境で同じファイルを見るようにしている。&lt;/p&gt;
+
+&lt;p&gt;Dropboxにdotというディレクトリを作成し、その下に.gitignoreファイルを作成してる&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global core.excludesfile /Users/&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;ユーザディレクトリ&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;/Dropbox/dot/.gitignore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Macならこんな具合。&lt;/p&gt;
+
+&lt;p&gt;.gitignoreファイルの文法は&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# &amp;#39;#&amp;#39; から始まる行はコメント&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# foo.txtというファイル名は無視&lt;/span&gt;
+foo.txt
+&lt;span class=&quot;c&quot;&gt;# .htmlで終わるファイルを無視。&amp;#39;\*&amp;#39;はワイルドカード&lt;/span&gt;
+*.html
+&lt;span class=&quot;c&quot;&gt;# &amp;#39;!&amp;#39;は例外。上の例から引き続きで、.htmlで終わるファイルは無視するけどfoo.htmlは例外。&lt;/span&gt;
+!foo.html
+
+&lt;span class=&quot;c&quot;&gt;# Macユーザなら、下記で基本はOK。参考: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore&lt;/span&gt;
+
+.DS_Store?
+Icon?
+&lt;span class=&quot;c&quot;&gt;# Thumbnails&lt;/span&gt;
+._*
+&lt;span class=&quot;c&quot;&gt;# Files that might appear on external disk&lt;/span&gt;
+.Spotlight-V100
+.Trashes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Gitの基本的なワークフロー&lt;/h2&gt;
+
+&lt;p&gt;それでは先ほど紹介した用語と、ほかのいくつかのGitのコマンドを交えながらGitの基本的なワークフローを説明しよう。&lt;/p&gt;
+
+&lt;p&gt;その前に少しTerminalで使えるコマンドを少々。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;cd&lt;/em&gt; - ”Change Directly”。ディレクトリを変更するコマンド。&lt;code&gt;cd ../&lt;/code&gt;とすれば、親ディレクトリにも移動できる、HTMLのリンクと同じ。&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;pwd&lt;/em&gt; - 現在のディレクトリを教えてくれる。Macだけかも&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;ls&lt;/em&gt; - 現在のディレクトリに含まれるファイルをリストアップしてくれる、Winだと&lt;code&gt;ls -a&lt;/code&gt;としないとだめ？&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;touch&lt;/em&gt; - ファイルを作成できる。&lt;code&gt;touch style.css&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ファイルの移動や、削除ももちろんコマンドでできるが。慣れないうちは上記の4つで十分だ。私もコマンドになれてきたとはいえ、使うBashコマンドの7割は上記の4つという程度。&lt;/p&gt;
+
+&lt;p&gt;それでは、Gitの世界へようこそ。最初は面倒だなと思うこともあるけれど、これから幾多の困難をともにする強力なパートナとなってくれるだろう。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;既存のレポジトリをクローンしない場合、&lt;code&gt;git init&lt;/code&gt;はgitのスタートを告げるコマンド。&lt;br /&gt;
+作業ディレクトリに対して.gitディレクトリを作成する。  &lt;/p&gt;
+
+&lt;p&gt;Macユーザ、恐れるなかれ、.gitディレクトリ、だけではないが.(ドット)から始まるファイル、ディレクトリは普通はFinderには見えない隠し要素になる。&lt;br /&gt;
+Terminalで&lt;code&gt;ls&lt;/code&gt;とすれば、きちんと存在が確認できる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;または上記のコマンドを叩くと見えるようになる。&lt;br /&gt;
+おお、うざい。と思ったら、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;defaults write com.apple.finder AppleShowAllFiles FALSE
+killall Finder
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;で元に戻せる。&lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;TotalFinder&lt;/a&gt;というFinderにタブを追加できるアプリケーションなら、GUIでOn/Offできる機能もついてくるのでおすすめ($15)(ちょっと重いけど、便利)。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git add&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;.gitが作成された作業ディレクトリに必要なファイルを作成/コピーしてきたら、&lt;code&gt;git add&lt;/code&gt;コマンドで、ファイルをレポジトリに追加する。&lt;br /&gt;
+私は大概&lt;code&gt;git add .&lt;/code&gt;としてしまう。最後の.(ドット)は、まだレポジトリに追加されていないファイル全部、という意味だ。&lt;br /&gt;
+もちろん、&lt;code&gt;git add ファイル名&lt;/code&gt;としてファイルを1つづつ追加することも可能。&lt;/p&gt;
+
+&lt;p&gt;※readme.mdというテキストファイルを追加して、そこにプロジェクトの概要などを書き留めておくと、便利だ。.mdはMarkdownというライトウェイトマークアップ言語の拡張子。こちらについては、別記事で紹介する予定。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;初めてのコミット。まずはプロジェクトの開始を伝えるコミットからスタート。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git commit -a -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Initial Commit&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;-aフラグは、すべての変更に対してコミットするという意味。便利だが、ある理由で1ファイルを修正したのか、そのある理由が複数ファイルに渡る修正なのか、それとも？となってしまうので、コミットの単位については明確な理由がかける範囲で。&lt;br /&gt;
+-mフラグは、エディタを開かず、その場でコミットメッセージを書けるようにする。その後&amp;rsquo;(シングルクォート)か&amp;rdquo;(ダブルクォート)で囲んだ部分がメッセージになる。日本語でももちろん問題ない。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;それではgitの現状を確認してみよう。&lt;code&gt;git status&lt;/code&gt;では、.gitディレクトリに含めれるファイルすべてを密かに監視している。&lt;br /&gt;
+ファイルは追加(add)されているか？ コミット済みなのか？　コミットから変更されたか？ 前回のコミットから変更されたか？&lt;br /&gt;
+git statusはそれらの状態を教えてくれる便利なコマンドだ。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git log&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ファイルに変更を加え、いくつかのコミットを行った後、しばらくすると変更点についてはすっかり忘れている。&lt;br /&gt;
+そんな時はコミットメッセージを読めばわかる。(わかるようにコミットメッセージを書くことが大事)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git log --graph --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とフラグを渡しつつ、&lt;code&gt;git log&lt;/code&gt;とすると下記のようにコミット1回につき1行で、表示される。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;7366587c589fe6ee60aeff553e899dc13086d7ec About Responsive Web Design is finished
+28b07e6c8fa6299c9c6b3321a339b1c7881e2fe4 erase meta since I use .htaccess
+90187a85261b208abbb0c52511fcf675ebe4739d fix css little bit
+5035c4eabe855efbac15596663190a6126eb0880 Read me was old
+4600e678e757950e5d6a7c7fbfc9a6420333e1c2 Ready to deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ここでは残念ながら地味な表示だが、Terminal内では、デキる感じがしないでもないように、黒背景にグリーンが映えるマトリックスな世界を繰り広げられる(Terminalの設定による)。&lt;br /&gt;
+&lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;pimping out git log&lt;/a&gt;で紹介されていた&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global &lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;.lg &lt;span class=&quot;s2&quot;&gt;&amp;quot;log --graph --pretty=format:&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39; --abbrev-commit --date=relative&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、git logのデフォルトで1行、色つきフォーマットでログを見ることが可能&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git branch&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Gitの真打ち、branch。ブランチは分岐を表示・作成するコマンド。  &lt;/p&gt;
+
+&lt;p&gt;コミットがすべて完了しているmaster(デフォルト)で、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git branch newfeature
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、masterをベースにnewfeatureというブランチが作成される。  &lt;/p&gt;
+
+&lt;p&gt;私は現状、以下のようにブランチモデルを作っている。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;master(デフォルト) = 現時点で本番環境を管理するブランチ。ここへのコミットは少ない。gitnのtag機能を使ってバージョンナンバを持っている。&lt;/li&gt;
+  &lt;li&gt;develop = 開発バージョン。基本的にすべての作業はこのブランチをメインして行う。ここへのコミットは非常に多い。&lt;/li&gt;
+  &lt;li&gt;feature = developとの違いは、開発の中でも特に新しいデザインパターン用のコーディングなどを行う。&lt;/li&gt;
+  &lt;li&gt;fix = 文字通り修正用のブランチ。修正が完了次第コミットし、必要に応じてmasterまたはdevelopとマージする。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;開発の規模感にもよるが、HTML、CSS、JavaScriptをメインで担当する私にとっては上記のブランチでまかなえる。&lt;br /&gt;
+上記のブランチモデルは、&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt;を参考に、よりシンプルにしたバージョン。
+このブランチの詳しい使い方については、また別の記事としたい。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git merge&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;branchにはmergeは欠かせない。表裏一体の存在といえる。branchを作成し、その場で開発を続けていても、いつかはmasterへマージする日がやってくる。&lt;br /&gt;
+マージする際、衝突があればgitはそれを解決しないとマージできないと警告を発する。SmartGitを利用していれば、グラフィカルな環境で衝突している部分を表示してくれる。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git merge&lt;/code&gt;をする際には、まず現在いるブランチをコミットして、から&lt;code&gt;git checkout master&lt;/code&gt;というように、マージさせたいブランチに切り替える。&lt;br /&gt;
+自分が今いるブランチがどこなのか、ほかにどんなブランチがあるかを確認するには、&lt;code&gt;git branch&lt;/code&gt;とすれば&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;*master
+newfeature
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というように表示してくれる。&lt;br /&gt;
+ちなみに、Terminal用プログラムBashの設定で&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;parse_git_branch &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git-symbolic-ref HEAD 2&amp;gt; /dev/null&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;(&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#refs/heads/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;)&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;RED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;31m\]&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;YELLOW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;33m\]&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;GREEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;32m\]&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ &amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;上記を追加すると、コマンドプロンプト(コマンドを叩く左側に出る文字列)に、現在のブランチを表示してくれる。
+USERディレクトリ下に.bashrcという名前で上記を追加して保存。既存でなければ、ファイル名を.bashrcとし保存すればOK。&lt;/p&gt;
+
+&lt;p&gt;では無事にmasterへブランチを切り替えられただろうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git merge myfeature&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;これで、myfeatureブランチはmasterブランチへマージが完了する。&lt;/p&gt;
+
+&lt;p&gt;ここまでできるようになれば、すっかりGitは使えるようになったといえるはずだ。&lt;br /&gt;
+まだまだ奥が深いGitだが、まずは始めること。&lt;br /&gt;
+githubの使いこなしや、ブランチモデルのベストプラクティスなどまだまだ楽しいトピックもあるが、今回の記事はここまで。&lt;br /&gt;
+Gitについて、もっと知りたいことがあれば、&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;にてリクエストしてほしい。&lt;/p&gt;
+
+&lt;h2&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://progit.org/book/ja/&quot;&gt;Pro Git&lt;/a&gt; - オンラインでなら無料で日本語訳されたPro Gitを読むことができる。まだ私自身すべてを読み終えたわけではないが、かなり勉強になる&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://help.github.com/git-cheat-sheets/&quot;&gt;Git cheat sheets (github)&lt;/a&gt; - Githubにあるgitのチートシート&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt; - ブランチモデルの実例をコマンドともに解説している&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kernel.org/pub/software/scm/git/docs/&quot;&gt;git(1) Manual Page&lt;/a&gt; - gitのマニュアルページ。コマンドのフラグなどはこちら。git helpからコマンドでも参照できる&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www8.atwiki.jp/git_jp/pub/git-manual-jp/Documentation/chunked/index.html&quot;&gt;Git ユーザマニュアル (バージョン 1.5.3 以降用)&lt;/a&gt; - 上記リンクの日本語版&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.alistapart.com/articles/get-started-with-git/&quot;&gt;Get Started with Git (A List Apart)&lt;/a&gt; - A List ApartにてAl Shaw氏による記事&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gitcasts.com/&quot;&gt;GitCasts&lt;/a&gt; - Gitのスクリーンキャスト。英語だが、グラフィカルな環境でしか覚えられない人には最適&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>レスポンシブウェブデザインについて</title>
