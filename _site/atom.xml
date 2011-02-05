@@ -4,7 +4,7 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-01-30T13:56:20+09:00</updated>
+ <updated>2011-02-05T14:38:52+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
  
@@ -235,7 +235,7 @@ git statusはそれらの状態を教えてくれる便利なコマンドだ。 
 &lt;p&gt;ここでは残念ながら地味な表示だが、Terminal内では、デキる感じがしないでもないように、黒背景にグリーンが映えるマトリックスな世界を繰り広げられる(Terminalの設定による)。&lt;br /&gt;
 &lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;pimping out git log&lt;/a&gt;で紹介されていた&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global &lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;.lg &lt;span class=&quot;s2&quot;&gt;&amp;quot;log --graph --pretty=format:&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39; --abbrev-commit --date=relative&amp;quot;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global alias.lg &lt;span class=&quot;s2&quot;&gt;&amp;quot;log --graph --pretty=format:&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39; --abbrev-commit --date=relative&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 

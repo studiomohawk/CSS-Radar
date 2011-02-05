@@ -18,14 +18,12 @@ desctiption: CSS Radarへの記事のリクエストはTwitterで受け付けて
 					</header>
 					<div class="bd">
 						<p>記事のリクエストは<a href="http://twitter.com/#!/cssradar">Twitter @ cssradar</a>まで</p>
-						
 						<h2>Recent Articles</h2>
 						<ul class="recent">
 							{% for post in site.posts limit:10 %}
 							<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 							{% endfor %}
 						</ul>
-
 					</div>
 				</div>
 			</div>
