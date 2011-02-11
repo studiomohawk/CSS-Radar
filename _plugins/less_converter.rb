@@ -2,7 +2,7 @@ module Jekyll
   # Compiled LESS CSS into CSS. You must specify an empty YAML front matter
   # at the beginning of the file.
   # .less -> .css
-  class LessConverter < Converter
+  class juicerConverter < Converter
     safe true
     priority :low
     pygments_prefix "\n"
