@@ -1,13 +1,12 @@
 /* clearfix
 ----------------------------------------------------------------------------------------------------*/
 .clearfix:after,
-.grid:after,
-.hasGrid:after,
 #head:after,
 #main:after,
 #main .content:after,
 #main .content .bd:after,
-.the-footer:after {
+#main .content footer:after,
+#foot:after {
 	clear:both;
 	display:block;
 	visibility:hidden;
@@ -17,13 +16,12 @@
 	font-size:xx-large;
 	content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
 .clearfix,
-.grid,
-.hasGrid,
 #head,
 #main,
 #main .content,
 #main .content .bd,
-.the-footer { zoom: 1; } /* IE6-7 */
+#main .content footer,
+#foot { zoom: 1; } /* IE6-7 */
 /* typography
 -------------------------------------------------------- */
 body {

@@ -13,15 +13,6 @@ html {
 	background-color: #2D3335;
 	color: #FAFAFA;
 }
-
-.head-inner,
-.content .head-inner,
-.content .bd,
-.content .foot-inner,
-.foot-inner {
-	width: 940px;
-	margin: 0 auto;
-}
 .left {
 	*display: inline;
 	float: left;
@@ -34,15 +25,15 @@ html {
 -------------------------------------------------------- */
 a:link {
 	color: #fafafa;
-	text-decoration: none;	
+	text-decoration: none;
 }
 a:visited {
 	color: #d0d1d0;
-	text-decoration: none;	
+	text-decoration: none;
 }
 a:hover {
 	color: #ffffff;
-	text-decoration: none;	
+	text-decoration: none;
 }
 /* HEADER
 ----------------------------------------------- */
@@ -133,7 +124,6 @@ a:hover {
 	.content { 
 		h1, h2, h3, h4, h5, h6 {
 			color: #8BE234;
-			margin-left: 240px;
 			a:link {
 				color: #8BE234;
 				border: 0;
@@ -150,7 +140,6 @@ a:hover {
 		a:link { border-bottom: 1px dotted #8BE234; }
 		a:visited { border-bottom: 1px dotted #bee795; }
 		a:hover { border-bottom: 1px dotted #fb933a; }
-		p, ul, ol, dl, blockquote { margin-left: 240px; }
 		blockquote {
 			border-left: 1em solid rgba(21, 25, 25, 0.8);
 			padding-left: 1em;
@@ -160,7 +149,7 @@ a:hover {
 		ol { list-style: decimal; }
 		p code, li code {
 			background-color: rgba(75, 77, 69, 0.8);
-   			padding: 0 5px;
+			padding: 0 5px;
 		}
 		img {
 			display: block;
@@ -171,10 +160,7 @@ a:hover {
 		}
 		img.left { margin-right: 14px; }
 		img.right { margin-left: 14px; }
-		img.huge {
-			position: relative;
-				left: -240px;
-		}
+		img.huge { position: relative; }
 		header {
 			background: #444e51;
 			border-top: 1px solid #212627;
@@ -186,7 +172,7 @@ a:hover {
 				margin-top: 0;
 				margin-bottom: 0;
 			}
-			.meta { margin-left: 240px;
+			.meta {
 				.category:before { content: "about " }
 				.category:after { content: " /" }
 				date:before { content: "published at" }
@@ -234,10 +220,8 @@ a:hover {
 		border-width: 0;
 	}
 	.article-inner {
-		margin: 0 auto;
 		padding: 1.5em 0;
 		position: relative;
-		width: 940px;
 		}
 		h2 {
 			margin-top: 0;

@@ -20,8 +20,8 @@ title: CSS Radar
 		{{ post.content }}
 	</div>
 	<footer>
-		<div class="foot-inner hasGrid">
-		<nav class="pagenation grid grid-6 alpha">
+		<div class="foot-inner">
+		<nav class="pagenation left">
 		<ul>
 			{% if post.previous %}
 			<li class="prev"><a class="internal" rel="prev"  href="{{ post.previous.url }}" title="View {{ post.previous.title }}">&laquo; {{ post.previous.title }}</a></li>
@@ -34,7 +34,7 @@ title: CSS Radar
 			{% endif %}
 		</ul>
 		</nav>
-		<nav class="archive grid grid-6 omega">
+		<nav class="archive right">
 			<ul>
 			    <li>
 			        <a href="/backnumber/">Back Number</a>

@@ -7,11 +7,11 @@ $(document).ready(function() {
 });
 
 function createGrid () {
-	$('body').append('<div id="less-grid"></div>');
-	var pageWidth = $('body').width();
+	$('.foot_inner').append('<div id="less-grid"></div>');
+	var pageWidth = $('.foot-inner').width();
 	$('#less-grid').css({ 
 							width: pageWidth,
-							position: "absolute",
+							position: "fixed",
 							top: "0",
 							bottom: "0",
 							zIndex: 900
@@ -41,9 +41,9 @@ function createGrid () {
 function createSwitch () {
 	$('body').append('<span id="less-grid-switch">show grid</span>');
 	$('#less-grid-switch').css({ 
-							position: "absolute",
+							position: "fixed",
 							top: "0",
-							right: "0",
+							left: "0",
 							background: "#3d5fa3",
 							border: "2px solid #fff",
 							borderTop: 0,

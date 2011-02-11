@@ -1,0 +1,118 @@
+/*	Less Framework 3
+	by Joni Korpi
+	http://lessframework.com	*/
+
+/*	Default 8-column layout
+	60 px columns, 24 px gutters, 60 px margins, 768 px total
+	---------------------------------------------------------
+	1     2      3      4      5      6      7      8     
+	60px  144px  228px  312px  396px  480px  564px  648px	*/
+
+body {
+	padding: 42px 0 0;
+	-webkit-tap-highlight-color: rgb(255,255,0);
+}
+img { max-width: 100%; }
+.head-inner,
+.hd-article,
+.content .bd,
+.foot-inner,
+.archive .article-inner {
+	padding-right: 60px;
+	padding-left: 60px;
+	width: 648px;
+}
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { margin-left: 0; margin-right: 0; }
+.content p, .content ul, .content ol, .content dl, .content blockquote, .content .meta { margin-left: 0; margin-right: 0; }
+.content .highlight { margin-right: 0; }
+.content img.huge {
+	left: 0;
+	max-width: 628px;
+}
+.archive .meta { position: relative; }
+#foot .hasGrid div { width: 648px; }
+
+/*	13-column layout
+	60 px columns, 24 px gutters, 72 px margins, 1212 px total (extra space for scrollbars)
+	---------------------------------------------------------------------------------------
+	1     2      3      4      5      6      7      8      9      10     11     12     13
+	60px  144px  228px  312px  396px  480px  564px  648px  732px  816px  900px  984px  1068px	*/
+
+@media only screen and (min-width: 1212px) {
+	body { padding: 48px 0 0; }
+	.head-inner,
+	.hd-article,
+	.content .bd,
+	.foot-inner,
+	.archive .article-inner { 
+		padding-left: 72px;
+		padding-right: 72px;
+		width: 1068px;
+	}
+	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { margin-left: 252px; margin-right: 84px; }
+	.content p, .content ul, .content ol, .content dl, .content blockquote, .content .meta { margin-left: 252px; margin-right: 84px; }
+	.content .highlight { margin-right: 84px; }
+	.content img.huge {
+		left: -252px;
+		max-width: 1048px;
+	}
+	.archive .meta { position: absolute; }
+	#foot .hasGrid div { width: 480px; }
+}
+
+/*	5-column layout
+	60 px columns, 24 px gutters, 42 px margins, 480 px total
+	---------------------------------------------------------
+	1     2      3      4      5
+	60px  144px  228px  312px  396px	*/
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+	body {
+		padding: 30px 0 0;
+		/* Prevents Mobile Safari from bumping up font sizes in landscape */
+		-webkit-text-size-adjust: 100%; 
+	}
+	.logo { font-size: 2.5em; }
+	.head-inner,
+	.hd-article,
+	.content .bd,
+	.foot-inner,
+	.archive .article-inner {
+		padding-right: 42px;
+		padding-left: 42px;
+		width: 396px;
+	}
+	.menu { display: none; }
+	.content img.huge { max-width: 376px; }
+	.archive h2 { font-size: 1.4em; }
+	.archive .meta { position: relative; }
+	#foot .hasGrid div { width: 396px; }
+}
+
+/*	3-column layout
+	60 px columns, 24 px gutters, 46 px margins, 320 px total
+	---------------------------------------------------------
+	1     2      3
+	60px  144px  228px	*/
+
+@media only screen and (max-width: 479px) {
+	body {
+		padding: 24px 0 0;
+		/* Prevents Mobile Safari from bumping up font sizes in landscape */
+		-webkit-text-size-adjust: 100%;
+	}
+
+	.logo { font-size: 2.3em; }
+	.head-inner,
+	.hd-article,
+	.content .bd,
+	.foot-inner,
+	.archive .article-inner {
+		padding-right: 46px;
+		padding-left: 46px;
+		width: 228px;
+	}
+	.content img.huge { max-width: 208px; }
+	.menu { display: none; }
+	#foot .hasGrid div { width: 228px; }
+}
