@@ -7,9 +7,19 @@ namespace :juicer do
     end
 end
 
-desc "rsync _site"
-  task :rsync => :"juicer:css" do
-    system('rsync -avz --delete -e _site/ ssh studiomo@studiomohawk.com:/www/css')
+namespace :rsync do
+  desc "--dry-run rsync"
+    task :dryrun => :"juicer:css" do
+      system('rsync _site/ -ave ssh --dry-run --delete studiomo@studiomohawk.com:www/css/')
+    end
+
+  desc "rsync"
+    task :rsync => :"rsync:dryrun" do
+      system('rsync -avz -delete -e _site/ ssh studiomo@studiomohawk.com:/www/css')
+    end
 end
 
-rsync -ave ssh studiomo@studiomohawk.com:wwww/css/ _site/
+desc 'List all draft posts'
+task :drafts do
+    puts `grep -l 'published: false' _posts/*`
+end
