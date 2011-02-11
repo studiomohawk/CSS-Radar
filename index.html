@@ -18,6 +18,7 @@ title: CSS Radar
 	</header>
 	<div class="bd">
 		{{ post.content }}
+		{% include ask.html %}
 	</div>
 	<footer>
 		<div class="foot-inner">
@@ -30,7 +31,7 @@ title: CSS Radar
 			<li class="pipe"> | </li>
 			{% endif %}
 			{% if post.next %}
-			<li class="next"><a class="internal" rel="next"  href="{{ post.next.url }}" title="View {{ post.next.title }}">{{ post.next.title }} &rarr;</a></li>
+			<li class="next"><a class="internal" rel="next"  href="{{ post.next.url }}" title="View {{ post.next.title }}">{{ post.next.title }} &raquo;</a></li>
 			{% endif %}
 		</ul>
 		</nav>
