@@ -236,6 +236,9 @@ a:hover {
   padding: 7px;
   overflow: auto;
 }
+.the-article .content .ask { border-top: 1px solid #444e51; }
+.the-article .content .ask small { font-size: 85%; }
+.the-article .content .ask strong { display: block; }
 .the-article .content footer {
   background: #151919;
   border-top: 1px solid rgba(57, 64, 67, 0.8);

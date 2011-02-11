@@ -21,10 +21,23 @@
 					</header>
 					<div class="bd">
 						{{ content }}
+						<div class="ask">
+							<h3>Ask Me Anything via E-mail</h3>
+							<p>
+							<small>コメントシステムはいまいち。githubのデザイナ、<a href="http://warpspire.com/ask/">Kyle Neathの言う通りに。</a>
+								<br>顔写真はないけれど(写真を撮られるのがキライ)、このブログは本名を公開して更新をすることにした。コメントも同じように、匿名性をなくしたい。どんなコメントでも、少なくともデフォルトでは、公開されることもない代わりに、私とコメントをいただくあなた。2人の間のコミュニケーションにできる。<br>
+								もし、コメントがより多くの人に見てもらうべくコメントであれば、公開します。<br>
+								記事のリクエストなどもこちらから。リクエストについては、<a href="http://twitter.com/cssradar" rel="me">Twitterでも受け付けてます。</a>
+							</small>
+							</p>
+							<p>
+								<a class="askme" href="mailto:cssradar+ask@gmail.com">質問やコメントは、Eメールにて。<strong>cssradar+ask@gmail.com</strong></a>
+							</p>
+						</div>
 					</div>
 					<footer>
-					<div class="foot-inner hasGrid">
-						<nav class="pagenation grid grid-6 alpha">
+					<div class="foot-inner">
+						<nav class="pagenation left">
 						<ul>
 							{% if page.previous %}
 							<li class="prev"><a class="internal" rel="prev"  href="{{ page.previous.url }}" title="View {{ page.previous.title }}">&laquo; {{ page.previous.title }}</a></li>
@@ -37,7 +50,7 @@
 							{% endif %}
 						</ul>
 						</nav>
-						<nav class="archive grid grid-6 omega">
+						<nav class="archive right">
 							<ul>
 								<li>
 									<a href="/backnumber/">Back Number</a>
