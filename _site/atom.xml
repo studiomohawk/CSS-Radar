@@ -4,9 +4,204 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-02-13T11:33:10+09:00</updated>
+ <updated>2011-02-13T19:04:06+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>ターミナルを使いこなす</title>
+   <link href="http://css.studiomohawk.com/tool/2011/02/13/terminal-101/"/>
+   <updated>2011-02-13T00:00:00+09:00</updated>
+   <id>http://css.studiomohawk.com/tool/2011/02/13/terminal-101</id>
+   <content type="html">&lt;p&gt;Terminal.appは怖い。&lt;br /&gt;
+GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。&lt;br /&gt;
+Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。  &lt;/p&gt;
+
+&lt;p&gt;MacVimをメインのエディタにしてから3ヶ月ほど、年明けから&lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;を使ってブログを作成しはじめた。Rubyを覚えてみようと今年から勉強中。&lt;br /&gt;
+自分自身考えてもいなかったが、それらすべてがターミナルの便利さを教えてくれた。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MacVimでは、もちろんコマンドを実行できるが、コマンドそのものとは関係なく、インサートモードとノーマルモードの切り替えというメンタリティはGUIとCUIのメンタリティと似てる。それに覚えるのに時間はかかるかもしれないが、一旦覚えてしまうともう戻れない中毒性に近い利便性を手に入れる楽しみも覚えられた。&lt;/li&gt;
+  &lt;li&gt;Jekyllはターミナルを使わなければブログの更新すら出来なくなる。基本的なコマンドはJekyllを使ううちに覚えてしまった。  &lt;/li&gt;
+  &lt;li&gt;Rubyはirbで実際にRubyを使って気楽に自分の書いたコードをテストしたりするのにターミナルを利用している。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ソースコードリーディングのテキストとしてお気に入りのHTML5 Boilerplateで、&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/wiki/Build-script&quot;&gt;Build
+Script&lt;/a&gt;が追加され、フロントエンドデベロッパの間でも、自前のオートメーションを作ることが当たり前になってきそうな流れもある。
+そんなタイミングだからこそ、ターミナルを使いこなせる人になろうと、こんな時代に提言したい。&lt;/p&gt;
+
+&lt;p&gt;私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるが、きっかけさえつかんでしまえば、どうにかなる。ちなみに私はWindowsでは&lt;a href=&quot;http://www.cygwin.com/&quot;&gt;Cygwin&lt;/a&gt;を&lt;a href=&quot;http://sourceforge.net/projects/console/&quot;&gt;Console&lt;/a&gt;から利用している。&lt;/p&gt;
+
+&lt;h2&gt;まずは見た目からカスタマイズ&lt;/h2&gt;
+
+&lt;p&gt;私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないが、そんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。&lt;br /&gt;
+だからこそ、ターミナルにも見た目を要求したい。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://visor.binaryage.com/&quot;&gt;Visor&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;Visorはターミナルをショートカットキーで呼び出すことが出来るTerminal.appのヘルパ。&lt;strong&gt;control+control&lt;/strong&gt;で画面の1/3ほどのターミナル画面がスライドしてくる便利でかつ、おしゃれなツール。&lt;br /&gt;
+Macでは&lt;a href=&quot;http://sites.google.com/site/iterm2home/&quot;&gt;iTerm2&lt;/a&gt;というターミナル互換アプリも人気があるようで、こちらはVisorとは連動できないが、同じようにショートカットキーで呼び出すことができるオプションがある。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://gist.github.com/824504&quot;&gt;.bashrc&lt;/a&gt;(リンク先は私が利用している.bashrcファイルの一部)&lt;/p&gt;
+
+    &lt;p&gt;デフォルトでTerminalを開くと、黒い背景に白い文字。あまりにも地味なので、私はもう少しだけカラフルにしている。&lt;br /&gt;
+そのついでに&lt;a href=&quot;/tool/2011/01/29/git-version-control/&quot;&gt;Git&lt;/a&gt;をターミナルで使いやすくなるように、ブランチ名や変更を知らせてくれるマークもカラーをつけて表示している。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ちょっとカスタマイズしてあげるだけで気持ちよく利用することができる。  &lt;/p&gt;
+
+&lt;h3&gt;Mac OSXでターミナルにgitのブランチ名を表示する方法&lt;/h3&gt;
+
+&lt;p&gt;少し話から外れるがせっかくなのでその方法を紹介しよう。&lt;br /&gt;
+まずはgitのオートコンプリーションを探してみよう。  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;/usr/local/git/contrib/completion/git-completion.bash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;通常であれば、上記のようなファイルがあるはずだ。もしなければ、&lt;a href=&quot;https://github.com/git/git/tree/master/contrib/completion&quot;&gt;こちら&lt;/a&gt;にファイルがあるので、&lt;code&gt;/usr/local/git/contrib/completion/&lt;/code&gt;というディレクトリに&lt;code&gt;git-completion.bash&lt;/code&gt;という名前で保存してほしい。&lt;/p&gt;
+
+&lt;p&gt;そして次は.bashrc。&lt;br /&gt;
+MacVimを利用している人なら見覚えがある.(ドット)ファイル。.bashrcはTerminalの中で働いているBashの設定ファイル。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/824504&quot;&gt;gist&lt;/a&gt;にも置いてあるが&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# git settings&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /usr/local/git/contrib/completion/git-completion.bash
+&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWDIRTYSTATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Git用のカスタマイズは上記の部分。こちらだけでも.bashrcファイルの最後の方に追加しておけば、設定終了。&lt;br /&gt;
+もし.bashrcファイルが見当たらないようであれば、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;touch ~/.bashrc
+open ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;として、開いたエディタに上記のスニペットを追加すればOK。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;保存したら、上記のコマンドで変更を反映できる。&lt;/p&gt;
+
+&lt;h2&gt;ターミナルの使い方&lt;/h2&gt;
+
+&lt;p&gt;私自身もまだまだ基本的なコマンドしかソラでは実行できない。必要に応じてコマンドは覚えていけばいいので、自分のペースで続けていってほしい。&lt;br /&gt;
+まずはターミナルで使える便利なショートカットキーを、そして実際にいくつかコマンドを見ていこう。&lt;/p&gt;
+
+&lt;h3&gt;ショートカットキー&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;control + A&lt;/strong&gt; / 現在のラインの一番始めに移動&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;control + H&lt;/strong&gt; / 現在のラインの一番最後に移動&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;control + U&lt;/strong&gt; / 
+現在位置より手前のラインを削除。ラインの一番最後の場合はラインを削除になる。間違ってオートコンプリートしてしまったときや癖で上カーセルを叩いてしまった場合に便利&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;control + C&lt;/strong&gt; / 現在動作しているプロセスを終了する&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;command + T&lt;/strong&gt; / 新しくタブを作る。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tab&lt;/strong&gt; / 
+ファイル名やディレクトリ名をオートコンプリートしてくれる。先ほど設定したgitのオートコンプリートも同じキーでOK&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;上カーソル&lt;/strong&gt; / ターミナルのヒストリを呼び出してくれる。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ほかにもまだまだショートカットキーはあるが、私が普段使い出来るショートカットはこんな感じだ。&lt;/p&gt;
+
+&lt;h3&gt;コマンド&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;cd&lt;/strong&gt; &lt;/p&gt;
+
+    &lt;p&gt;Change Directoryの略。&lt;code&gt;cd
+DIR_NAME&lt;/code&gt;のように、移動したいディレクトリ名を入力する。&lt;br /&gt;
+&lt;code&gt;Tab&lt;/code&gt;を使って、オートコンプリートできるし。&lt;code&gt;cd DIR_NAME/CHILD_DIR_NAME&lt;/code&gt;というようにさらに深い階層へもいける、/の後も数文字タイプしたらきちんとオートコンプリートしてくれる。&lt;br /&gt;
+&lt;code&gt;cd ..&lt;/code&gt;とすれば親ディレクトリに移動、&lt;code&gt;cd
+~&lt;/code&gt;とすればルートディレクトリに移動となる。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;pwd&lt;/strong&gt; / 現在のディレクトリを表示してくれる。ふと迷子になりがちなので便利&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;ls&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;ディレクトリ内のファイル、ディレクトリを表示するコマンド。&lt;br /&gt;
+&lt;code&gt;ls
+DIR_NAME&lt;/code&gt;とすれば、DIR_NAMEの中のファイル、ディレクトリを表示しれくてる。&lt;br /&gt;
+&lt;code&gt;ls
+-l&lt;/code&gt;とすると、ファイル、ディレクトリの詳細の情報つきでリスト表示しれくてる。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;touch&lt;/strong&gt; / ファイルを作成するコマンド。&lt;code&gt;touch
+style.css&lt;/code&gt;とすれば、現在のディレクトリにstyle.cssを生成してくれる。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;open&lt;/strong&gt;
+/ こちらはファイルやディレクトリを関連づけしてあるアプリで開いてくれるコマンド。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;mkdir&lt;/strong&gt; / ディレクトリを生成するコマンド。&lt;code&gt;mkdir
+DIR_NAME&lt;/code&gt;でDIR_NAMEというディレクトリを作成できる。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;まだまだたくさんのコマンドがあるが、私が安心して利用できる基本コマンドはこれくらいだ。ファイルをコピーしたり、削除したりするコマンドは不安が残るので少し慣れたら使い始めるといいだろう。&lt;br /&gt;
+とりあえずのところは、&lt;code&gt;open
+DIR_NAME&lt;/code&gt;としてFinderを立ち上げてコピーや削除をすれば問題ない。&lt;/p&gt;
+
+&lt;h2&gt;パッケージマネジャ&lt;/h2&gt;
+
+&lt;p&gt;Bashだけでももちろん協力なツールではあるが、せっかくだからもっとたくさん機能を追加してみたい。&lt;br /&gt;
+RubyやPython、Javaなどコマンドラインでも使える強力なツールがあるが、これらのツールを管理するのはとても大変。そのために&lt;strong&gt;パッケージマネジャ&lt;/strong&gt;が必要になってくる。&lt;/p&gt;
+
+&lt;p&gt;Macにはデフォルトで使えるパッケージマネジャはインストールされていない。MacPortやFink、そして今回紹介するHomebrewがマックではデファクトとされている。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt;はシンプルで強力な、新しい世代のパッケージマネジャ。非常に簡単にインストールできるし、利用も簡単なので、初心者にはもってこいのパッケージマネジャ。&lt;br /&gt;
+私はHomebrewでgitをインストールし直した。こちらのほうがアップデートが簡単にできるということで。&lt;/p&gt;
+
+&lt;h2&gt;Homebrewのインストール&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://developer.apple.com/technologies/xcode.html&quot;&gt;xcodeをインストール&lt;/a&gt;、Macで開発するのに当たって絶対に必要になってくるのでxcodeをインストール。Homebrewでも使う。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;ruby -e &quot;$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)&quot;&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;以上でインストールが完了する。&lt;/p&gt;
+
+&lt;p&gt;早速インストールが終わっているか確認してみよう。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;brew --version&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;0.7.1らしいバージョンナンバが表示されれば問題ない。&lt;/p&gt;
+
+&lt;p&gt;それでは、早速ツールをインストールしてみよう。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;brew install curl&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;curlはさまざまなプロトコルを用いてデータを転送するライブラリ。(by &lt;a href=&quot;http://ja.wikipedia.org/wiki/CURL&quot;&gt;Wikipedia
+cURL&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;brew
+search&lt;/code&gt;とすれば、インストールできるツールの一覧を表示してくてる。&lt;code&gt;brew
+list&lt;/code&gt;とすると、インストールされているツールの一覧を表示してくれる。&lt;/p&gt;
+
+&lt;p&gt;英語ではあるが、brewのコマンドは&lt;a href=&quot;https://github.com/mxcl/homebrew/wiki/The-brew-command&quot;&gt;こちら&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;ターミナルの世界へようこそ&lt;/h2&gt;
+
+&lt;p&gt;ここまでできたら、すっかりコマンド使いっぽく見える。コマンドラインになれてきたら次のステップはオートメーション。&lt;br /&gt;
+私はRubyのRakeを使って、いろいろなタスクを自動化しはじめている。&lt;br /&gt;
+興味があれば、まずはHTML5 Boilerplateの&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/wiki/Build-script&quot;&gt;Build
+Script&lt;/a&gt;について調べてみるといいだろう。&lt;br /&gt;
+現時点では、HTMLを圧縮したり、CSSをコンバインして圧縮したり、Jpeg、PNGのファイルサイズを最適化したりと実に様々なフロントエンドなタスクを自動化している。HTML5 Boilerplateではantというビルドツールを活用している。  &lt;/p&gt;
+
+&lt;p&gt;Rubyでは&lt;a href=&quot;https://github.com/flyerhzm/css_sprite&quot;&gt;CSS
+Spriteを自動化&lt;/a&gt;したりすることもできるようなので、あの30分はかかりそうな面倒なspriteも自動で行うことができるわけだ。&lt;/p&gt;
+
+&lt;p&gt;どこかの本で読んだことの受け売りだが、60分かかるタスクがあるとしたら、59分かけてそのタスクを行うスクリプトを書いて、1分で実行する。これからのウェブデザイン/フロントエンドデベロッパにはそんな心構えが必要になってくるだろう。&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Gitでバージョンコントロール</title>
@@ -33,7 +228,9 @@
 &lt;p&gt;&lt;a href=&quot;http://code.google.com/p/git-osx-installer/downloads/list?can=3&quot;&gt;OSX Installer for Git&lt;/a&gt;から、自分のOSバージョンにあわせてdmgをダウンロード。&lt;a href=&quot;http://code.google.com/p/msysgit/downloads/list?can=3&quot;&gt;Winはこちら&lt;/a&gt;&lt;br /&gt;
 あとはインストーラにお任せ。&lt;/p&gt;
 
-&lt;p&gt;Gitは、アプリケーションフォルダには&lt;em&gt;入らない&lt;/em&gt;系統のアプリ。Terminalで使える。&lt;br /&gt;
+&lt;p&gt;私は&lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt;を使って、Gitをインストールした。&lt;/p&gt;
+
+&lt;p&gt;Gitはアプリケーションフォルダには&lt;em&gt;入らない&lt;/em&gt;系統のアプリ。Terminalで使える。&lt;br /&gt;
 &lt;em&gt;Terminal&lt;/em&gt;(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。  &lt;/p&gt;
 
 &lt;p&gt;では、&lt;code&gt;git --version&lt;/code&gt;&lt;br /&gt;
