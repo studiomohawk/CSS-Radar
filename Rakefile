@@ -5,6 +5,10 @@ namespace :juicer do
     task :css do
       sh 'juicer merge --force _site/style/master.css'
     end
+  desc 'Merges JavaScripts'
+    task :js do
+      sh  'juicer merge -i --force _site/js/common.js'
+    end
 end
 
 namespace :rsync do

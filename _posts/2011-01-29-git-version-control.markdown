@@ -23,7 +23,9 @@ HTMLであろうと、CSSであろうと、JSであろうと、何であろう�
 [OSX Installer for Git](http://code.google.com/p/git-osx-installer/downloads/list?can=3)から、自分のOSバージョンにあわせてdmgをダウンロード。[Winはこちら](http://code.google.com/p/msysgit/downloads/list?can=3)  
 あとはインストーラにお任せ。
 
-Gitは、アプリケーションフォルダには*入らない*系統のアプリ。Terminalで使える。  
+私は[Homebrew](http://mxcl.github.com/homebrew/)を使って、Gitをインストールした。
+
+Gitはアプリケーションフォルダには*入らない*系統のアプリ。Terminalで使える。  
 *Terminal*(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。  
 
 では、<code>git --version</code>  

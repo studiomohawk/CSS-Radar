@@ -8,6 +8,4 @@ markdown:    kramdown
 permalink:   pretty
 kramdown:
   auto_ids: false
-exclude: LICENSE, README.markdown
-ftp_host: studiomohawk.com
-ftp_dir: /www/css
+exclude: LICENSE, README.markdown, Rakefile
