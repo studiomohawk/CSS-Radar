@@ -18,7 +18,7 @@ namespace :rsync do
     end
 
   desc "rsync"
-    task :rsync => :"rsync:dryrun" do
+    task :live => :"rsync:dryrun" do
       system('rsync -avz -delete -e _site/ ssh studiomo@studiomohawk.com:/www/css')
     end
 end
