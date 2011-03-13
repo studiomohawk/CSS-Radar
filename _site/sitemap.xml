@@ -6,22 +6,27 @@
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
+  <loc>http://css.studiomohawk.com/tool/2011/03/12/html5boilerplate/</loc>
+  <lastmod>2011-03-12T00:00:00+09:00</lastmod>
+</url>
+
+<url>
   <loc>http://css.studiomohawk.com/tool/2011/02/13/terminal-101/</loc>
-  <lastmod>2011-01-30T05:06:30+00:00</lastmod>
+  <lastmod>2011-02-13T00:00:00+09:00</lastmod>
 </url>
 
 <url>
   <loc>http://css.studiomohawk.com/tool/2011/01/29/git-version-control/</loc>
-  <lastmod>2011-01-30T05:06:30+00:00</lastmod>
+  <lastmod>2011-01-29T00:00:00+09:00</lastmod>
 </url>
 
 <url>
   <loc>http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/</loc>
-  <lastmod>2011-01-30T05:06:30+00:00</lastmod>
+  <lastmod>2011-01-24T00:00:00+09:00</lastmod>
 </url>
 
 <url>
   <loc>http://css.studiomohawk.com/cssradar/2011/01/23/scratch-and-build/</loc>
-  <lastmod>2011-01-30T05:06:30+00:00</lastmod>
+  <lastmod>2011-01-23T00:00:00+09:00</lastmod>
 </url>
 

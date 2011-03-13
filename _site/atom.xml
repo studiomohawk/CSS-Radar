@@ -4,9 +4,90 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-02-13T21:03:51+09:00</updated>
+ <updated>2011-03-13T10:21:21+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>HTML5 Boilerplate</title>
+   <link href="http://css.studiomohawk.com/tool/2011/03/12/html5boilerplate/"/>
+   <updated>2011-03-12T00:00:00+09:00</updated>
+   <id>http://css.studiomohawk.com/tool/2011/03/12/html5boilerplate</id>
+   <content type="html">&lt;p&gt;フロントエンドデベロッパな人たちはウェブ開発プロジェクトを始めるにあたり、HTML、CSS、JSのスケルトン(必要最小限の記述をしたファイル達)を含んだディレクトリを持っている人が多い事だろう。&lt;br /&gt;
+私も個人のプロジェクト、仕事でのプロジェクトともに、それぞれに少しだけカスタマイズを行うだけで開発をはじめることができるディレクトリを持っている。  &lt;/p&gt;
+
+&lt;p&gt;今回紹介する(おそらくすでに紹介するまでもないほど知られているが)&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5 BOILERPLATE&lt;/a&gt;は、Paul IrishとDivya Manianを中心として生み出された膨大な量の知見を詰め込んだHTML5を使ったプロジェクト用のスタートポイント。&lt;br /&gt;
+知っての通り、HTML5を使い始めるのは決して今からでも&lt;strong&gt;早すぎるということは決してない&lt;/strong&gt;が、HTML5に対応するなんてまだ先、と思っていても、このHTML5
+BOILERPLATEに詰め込まれたベスト中のベストプラクティスを吸収しておけば、現在のプロジェクトもより盤石にすることができるはずだ。&lt;/p&gt;
+
+&lt;h2&gt;HTML5 Boilerplateの特筆すべき5のポイント&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.modernizr.com/&quot;&gt;Modernizr&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;ModernizrはJavaScriptを利用して、ブラウザでサポートしているHTML5/CSS3機能を検出し、HTMLタグ内のclassにサポート状況を出力したり、IEにおけるHTML5要素のスタイル設定行うユーティリティライブラリ。&lt;br /&gt;
+HTML5での開発には欠かす事ができないライブラリ。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/blob/master/css/style.css&quot;&gt;CSS&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;HTML5用リセットCSSをベースに、非常に強固なデフォルトスタイルと.clearfixなど便利なツールClassが用意されている。クロスブラウザ対応はIE6にも対応してあり、日本ではまだまだ現実的な対応として求められる箇所なだけに非常に便利。&lt;br /&gt;
+また、プリント用のメディアクエリや、スマートフォン用に使えるメディアクエリの記述もされている&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/blob/master/index.html&quot;&gt;HTML&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;IEコンディショナルコメントを活用したIE用Classの生成を始めとして、HTML5の新要素を含んだ形で、かつ最小限のスケルトンとして提供されている。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/tree/master/js&quot;&gt;JavaScript&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;Google
+CDNが落ちてもローカルからjQueryを呼び出すスニペットを始めに、ユニットテストを行いやすいような設計でJavaScriptのファイル群は用意されている。jQueryの利用を前提にして、プラグインの呼び出しを記述するファイルなどが用意されている。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;パフォーマンス最適化&lt;/p&gt;
+
+    &lt;p&gt;HTML5
+Boilerplateでは、クロスブラウザ対応などはもちろんとして、パフォーマンス最適化を最も重視した構成になっている。&lt;br /&gt;
+JSをドキュメントの最後に配置するという非常に当たり前の事から、.htaccessファイルによる最適化(gzipやファイルのキャッシュ設定など)も提供されており、少し前のバージョンからはAntを利用したビルドスクリプトを使って、ファイルの圧縮、結合、キャッシュバスタの設定、画像ファイルの最適化などを自動(コマンドは使うが)で行えるようにできるようにしている。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;HTML5 Boilerplateの入手方法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;http://html5boilerplate.com/&lt;/a&gt;から最新の安定板(1.0
+RC
+2011/03/11現在)をダウンロードすることができる。まずは、コメントありのファイルをダウンロードして、一通りソースコードを読んでみる事をおすすめする。非常に勉強になる事ばかり。&lt;/p&gt;
+
+&lt;p&gt;つい先日から、&lt;a href=&quot;http://jp.html5boilerplate.com/&quot;&gt;http://jp.html5boilerplate.com/&lt;/a&gt;日本語に翻訳されたバージョン(私が翻訳を行いました。完璧とは言いがたい訳です。誤訳やよりよい翻訳があれば、&lt;a href=&quot;https://github.com/studiomohawk/html5boilerplate-site&quot;&gt;githubにて翻訳プロジェクトをクローン&lt;/a&gt;していますので、フィードバックをお待ちしています）も利用できるようになっている。&lt;/p&gt;
+
+&lt;p&gt;また、&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate&quot;&gt;Github&lt;/a&gt;からでも入手可能なので、Gitを扱い慣れている場合はそちらから。ブランチとしてコメントのある、なしを選べます(masterがコメントあり、strippedがコメントなし)&lt;/p&gt;
+
+&lt;p&gt;他にも15秒でHTML5
+Boilerplateをベースに必要なスターティングポイントを生成してくれるサービス、&lt;a href=&quot;http://initializr.com/&quot;&gt;Initializr&lt;/a&gt;というサイトもある。&lt;br /&gt;
+コメント、JavaScript、jQuery(圧縮するか、否かも)、Modernizrの利用、サーバ側の設定ファイル、Google
+Analyticsの要不要など、カスタマイズすることが可能。&lt;/p&gt;
+
+&lt;h2&gt;ビルドスクリプトの使い方&lt;/h2&gt;
+
+&lt;p&gt;私もAntに詳しくないのでHTML5
+Boilerplateのビルドスクリプトの使い方については、IBMのデベロッパワークにお任せすることに。詳しくは&lt;a href=&quot;http://www.ibm.com/developerworks/jp/web/library/wa-html5boilerplate/#build&quot;&gt;こちら&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;私自身はRakeに慣れてきたので、AntのビルドスクリプトをRakeに置き換えてみようかなと思っている。すでにRakeマスタな人がいたら、ぜひ本家のHTML5
+BoilerplateにPull Requestを送ってくださいませ。&lt;/p&gt;
+
+&lt;h2&gt;HTML5 Boilerplateについてもっと詳しく&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=qyM37XKkmKQ&quot;&gt;Paul Irish on HTML5 Boilerplate @YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://net.tutsplus.com/tutorials/html-css-techniques/the-official-guide-to-html5-boilerplate/&quot;&gt;The Official Guide to HTML5 Boilerplate @Nettuts+&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/jp/web/library/wa-html5boilerplate/&quot;&gt;HTML5 Boilerplate を使用して Web 開発を容易に始める @IBM Developer Works&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.1stwebdesigner.com/design/snippets-html5-boilerplate/&quot;&gt;20 Snippets You should be using from Html5 Boilerplate @1st Web Designer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>ターミナルを使いこなす</title>

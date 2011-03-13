@@ -10,6 +10,6 @@ layout: nil
 {% for post in site.posts %}
 <url>
   <loc>{{ site.url }}{{ post.url }}</loc>
-  <lastmod>2011-01-30T05:06:30+00:00</lastmod>
+  <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 </url>
 {% endfor %}
