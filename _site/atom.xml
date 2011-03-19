@@ -4,23 +4,23 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-03-13T10:21:21+09:00</updated>
+ <updated>2011-03-19T19:40:34+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
  
  <entry>
    <title>HTML5 Boilerplate</title>
-   <link href="http://css.studiomohawk.com/tool/2011/03/12/html5boilerplate/"/>
-   <updated>2011-03-12T00:00:00+09:00</updated>
-   <id>http://css.studiomohawk.com/tool/2011/03/12/html5boilerplate</id>
+   <link href="http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/"/>
+   <updated>2011-03-15T00:00:00+09:00</updated>
+   <id>http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate</id>
    <content type="html">&lt;p&gt;フロントエンドデベロッパな人たちはウェブ開発プロジェクトを始めるにあたり、HTML、CSS、JSのスケルトン(必要最小限の記述をしたファイル達)を含んだディレクトリを持っている人が多い事だろう。&lt;br /&gt;
-私も個人のプロジェクト、仕事でのプロジェクトともに、それぞれに少しだけカスタマイズを行うだけで開発をはじめることができるディレクトリを持っている。  &lt;/p&gt;
+私も個人のプロジェクト、仕事でのプロジェクトともに、それぞれに少しだけカスタマイズを行うだけで開発を始めることができるディレクトリを持っている。  &lt;/p&gt;
 
 &lt;p&gt;今回紹介する(おそらくすでに紹介するまでもないほど知られているが)&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5 BOILERPLATE&lt;/a&gt;は、Paul IrishとDivya Manianを中心として生み出された膨大な量の知見を詰め込んだHTML5を使ったプロジェクト用のスタートポイント。&lt;br /&gt;
 知っての通り、HTML5を使い始めるのは決して今からでも&lt;strong&gt;早すぎるということは決してない&lt;/strong&gt;が、HTML5に対応するなんてまだ先、と思っていても、このHTML5
 BOILERPLATEに詰め込まれたベスト中のベストプラクティスを吸収しておけば、現在のプロジェクトもより盤石にすることができるはずだ。&lt;/p&gt;
 
-&lt;h2&gt;HTML5 Boilerplateの特筆すべき5のポイント&lt;/h2&gt;
+&lt;h2&gt;HTML5 Boilerplateの特筆すべき5つのポイント&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -63,7 +63,7 @@ RC
 
 &lt;p&gt;つい先日から、&lt;a href=&quot;http://jp.html5boilerplate.com/&quot;&gt;http://jp.html5boilerplate.com/&lt;/a&gt;日本語に翻訳されたバージョン(私が翻訳を行いました。完璧とは言いがたい訳です。誤訳やよりよい翻訳があれば、&lt;a href=&quot;https://github.com/studiomohawk/html5boilerplate-site&quot;&gt;githubにて翻訳プロジェクトをクローン&lt;/a&gt;していますので、フィードバックをお待ちしています）も利用できるようになっている。&lt;/p&gt;
 
-&lt;p&gt;また、&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate&quot;&gt;Github&lt;/a&gt;からでも入手可能なので、Gitを扱い慣れている場合はそちらから。ブランチとしてコメントのある、なしを選べます(masterがコメントあり、strippedがコメントなし)&lt;/p&gt;
+&lt;p&gt;また、&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate&quot;&gt;Github&lt;/a&gt;からでも入手可能なので、Gitを扱い慣れている場合はそちらから。ブランチとしてコメントのある、なしを選べる(masterがコメントあり、strippedがコメントなし)&lt;/p&gt;
 
 &lt;p&gt;他にも15秒でHTML5
 Boilerplateをベースに必要なスターティングポイントを生成してくれるサービス、&lt;a href=&quot;http://initializr.com/&quot;&gt;Initializr&lt;/a&gt;というサイトもある。&lt;br /&gt;

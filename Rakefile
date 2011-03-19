@@ -7,7 +7,7 @@ namespace :juicer do
     end
   desc 'Merges JavaScripts'
     task :js do
-      sh  'juicer merge -i --force _site/js/common.js'
+      sh  'juicer merge -i --force _site/js/master.js'
     end
 end
 
