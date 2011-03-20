@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('#menu').click(function() {
-		$('#head .backnumber').slideToggle(500);
+		$('#backnumber').slideToggle(500);
 	});
 	$('a.fancybox').fancybox({
 		'transitionIn'	:	'elastic',
