@@ -2,7 +2,7 @@ task :default => [:"juicer:css"]
 
 namespace :juicer do
   desc 'Merges stylesheets'
-    task :css do
+    task :css => :"juicer:js" do
       sh 'juicer merge --force _site/style/master.css'
     end
   desc 'Merges JavaScripts'

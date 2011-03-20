@@ -10,7 +10,6 @@
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml" />
 	<script src="/js/modernizr.js"></script>
 	<link rel="stylesheet" media="all" href="/style/master.min.css">
-	<link rel="stylesheet" media="all" href="/style/mediaqueries.css">
 	
 		<title>HTML5 Boilerplate | CSS Radar | For Frond End Developers</title>
 		<meta name="description" content="フロントエンドデベロッパな人たちはウェブ開発プロジェクトを始めるにあたり、HTML、CSS、JSのスケルトン(必要最小限の記述をしたファイル達)を含んだディレクトリを持っている人が多い事だろう。 私も個人のプロジェクト、仕事でのプロジェクトともに、それぞれに少しだけカスタマイズを行うだけで開発を始めることができるディレクトリを持っている。 今回紹介する(おそらくすでに紹介するまでもないほど知られているが)HTML5 BOILERPLATEは、Paul IrishとDivya Manianを中心として生み出された膨大な量の知見を詰め込んだHTML5を使ったプロジェクト用のスタートポイント。 知っての通り、HTML5を使い始めるのは決して今からでも早すぎるということは決してないが、HTML5に対応するなんてまだ先、と思っていても、このHTML5 BOILERPLATEに詰め込まれたベスト中のベストプラクティスを吸収しておけば、現在のプロジェクトもより盤石にすることができるはずだ。 HTML5 Boilerplateの特筆すべき5つのポイント Modernizr ModernizrはJavaScriptを利用して、ブラウザでサポートしているHTML5/CSS3機能を検出し、HTMLタグ内のclassにサポート状況を出力したり、IEにおけるHTML5要素のスタイル設定行うユーティリティライブラリ。 HTML5での開発には欠かす事ができないライブラリ。 CSS HTML5用リセットCSSをベースに、非常に強固なデフォルトスタイルと.clearfixなど便利なツールClassが用意されている。クロスブラウザ対応はIE6にも対応してあり、日本ではまだまだ現実的な対応として求められる箇所なだけに非常に便利。 また、プリント用のメディアクエリや、スマートフォン用に使えるメディアクエリの記述もされている HTML IEコンディショナルコメントを活用したIE用Classの生成を始めとして、HTML5の新要素を含んだ形で、かつ最小限のスケルトンとして提供されている。 JavaScript Google CDNが落ちてもローカルからjQueryを呼び出すスニペットを始めに、ユニットテストを行いやすいような設計でJavaScriptのファイル群は用意されている。jQueryの利用を前提にして、プラグインの呼び出しを記述するファイルなどが用意されている。 パフォーマンス最適化 HTML5 Boilerplateでは、クロスブラウザ対応などはもちろんとして、パフォーマンス最適化を最も重視した構成になっている。 JSをドキュメントの最後に配置するという非常に当たり前の事から、.htaccessファイルによる最適化(gzipやファイルのキャッシュ設定など)も提供されており、少し前のバージョンからはAntを利用したビルドスクリプトを使って、ファイルの圧縮、結合、キャッシュバスタの設定、画像ファイルの最適化などを自動(コマンドは使うが)で行えるようにできるようにしている。...">
@@ -237,10 +236,8 @@ BoilerplateにPull Requestを送ってくださいませ。</p>
 </footer><!-- id="foot" -->
 
 	</div><!-- id="page" -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-<script src="/js/jquery.fancybox.js"></script>
-<script src="/js/jquery.easing.js"></script>
-<script src="/js/common.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="/js/master.min.js"></script>
 <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
        change the UA-XXXXX-X to be your site's ID -->
 <script>
