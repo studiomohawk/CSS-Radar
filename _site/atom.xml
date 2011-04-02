@@ -4,9 +4,108 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-03-20T12:47:16+09:00</updated>
+ <updated>2011-04-02T09:54:11+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>ワイヤフレーム</title>
+   <link href="http://css.studiomohawk.com/webdesign/2011/04/01/wireframe/"/>
+   <updated>2011-04-01T00:00:00+09:00</updated>
+   <id>http://css.studiomohawk.com/webdesign/2011/04/01/wireframe</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/webdesign/2011/04/01/wireframe/protoplate.png&quot; alt=&quot;Image&quot; class=&quot;huge&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ワイヤフレームって作ったことありますか？&lt;br /&gt;
+ワイヤフレームはウェブページのコンテントを視覚的に表現するドキュメントの中核を担う存在。
+建築用語でいうところのブループリントと同じだろうか。&lt;/p&gt;
+
+&lt;p&gt;52 Weeks of UXによると、UXデザイナにとって&lt;strong&gt;なくてはならない&lt;/strong&gt;モノであり、IAのベストフレンド、とさえある。(&lt;a href=&quot;http://52weeksofux.com/post/866406780/wireframing-is-not-a-religion&quot;&gt;Wireframing is not a religion&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;私が現在働いている会社にはもちろん、UXデザイナという職種もないし、IAという職種もない。デザイナがその一部を担っている。&lt;br /&gt;
+私にとってもワイヤフレームはなくてはならないツールであり、ベストフレンド。現在担当しているプロジェクトでは、この数週間に60以上のワイヤフレームを作成している。&lt;br /&gt;
+まだ一度もPhotoshopを開く事なく、ワイヤフレームをベースにしたプロトタイプも4ページほど作成してある。&lt;br /&gt;
+どんな見た目になるのかはまだ誰もわからないが、どんなコンテンツがどこに必要で、どんなアクションがいつ必要なのかについては、共通の認識を持っている。
+これこそがワイヤフレームの強みであり、存在意義。&lt;/p&gt;
+
+&lt;h2&gt;ワイヤフレームの使用法&lt;/h2&gt;
+
+&lt;p&gt;見てみないとわからない。&lt;br /&gt;
+デザイナとして働いている私自身、外部のデザイナに仕事を依頼している場合に、そんな台詞を言うことがある。&lt;/p&gt;
+
+&lt;p&gt;誰でもデザインについては、それぞれの主観を持つことができる。&lt;/p&gt;
+
+&lt;p&gt;どこかで、見てみないとわからない、という人は、レストランでも食べてみないと注文できないのか、というようなことを言っている場面に出くわしたことがあるが、では、国産イノシシのシヴュや、オーストラリア産仔羊肉のナバラン仕立てとメニューにあったら、どれくらいの人がどんな味の料理が出てくるかわかるか？&lt;br /&gt;
+私はいまだにポワレがなんだかも覚えられないくらいはフランス料理に詳しくはないから、私には無理だ。&lt;br /&gt;
+でも、そんな料理を饗してくれるレストランには、それらがどんな料理なのか素人にもわかるように教えてくれるその道のプロフェッショナルがいるから、訊けばわかる。少なくとも想像することを手助けしてくれる。&lt;/p&gt;
+
+&lt;p&gt;ワイヤフレームは&lt;em&gt;差異と類似を明確にする&lt;/em&gt;ツール。
+&lt;a href=&quot;http://uxmovement.com/wireframes/how-to-get-clients-to-approve-your-wireframes-every-time&quot;&gt;How to Get Clients to Approve Your Wireframes Every Time@UX Movement&lt;/a&gt;でも言及されているが、
+リデザイン前のデザインと、より効果的だと考えているワイヤフレームを比較することで違いを提示する。クライアントの要望に近しいデザインとの類似をワイヤフレームで提示する。
+この2つの比較はPhotoshopで作成した精度の高いモックアップでも可能だ。しかし、ワイヤフレームのフットワークの良さは、より効率的にパターンを生み出す原動力になる。&lt;br /&gt;
+幾つかのワイヤフレームのパターンの中で、差異や類似を提示することももちろんできる。&lt;/p&gt;
+
+&lt;h2&gt;もう1つのワイヤフレームの使用法&lt;/h2&gt;
+
+&lt;p&gt;ワイヤフレームは思考を助けるツールでもある。
+思考を集約することも、拡張することも、とても自然に行うことができる。&lt;br /&gt;
+最前この数週間で60以上のワイヤフレームを作ったと書いたけれど、その内、私自身もプロジェクトメンバも納得できる状態になっているのは4枚くらいだ。&lt;br /&gt;
+その4枚については、合わせて10回以上は繰り返して変更を加えてきている。&lt;br /&gt;
+私が実際にワイヤフレームを作成している時間は非常に短い。Photoshopで高精度なモックアップを60枚作り、4枚を10回以上は修正する、なんてただの悪夢でしかない。
+人は誰でも、ある事柄に費やした時間に比例して、その事柄に愛着を持ってしまう習性がある。&lt;br /&gt;
+デザイナやコーダにとって、修正はいつだってつらいのはそのためだ。たとえその修正が圧倒的に効果的だと思っていても、いつでも芽生えた愛着と天秤にかける自分がいる。&lt;br /&gt;
+だからこそ、素早く作成も修正も行うことができるワイヤフレームの作成方法を模索する必要がある。&lt;/p&gt;
+
+&lt;p&gt;また、デザインは問題を解決するための手段であるとよく言われる。ワイヤフレームは問題を見つけ出す手段でもあるところが大きな違い。&lt;br /&gt;
+迷子になっている人が、今自分がどこにいるのか把握できないのと同じく、問題を明確にできなければ、解決することは不可能。
+その問題を浮き彫りにするためのツールとしてもワイヤフレームは有効だ。&lt;/p&gt;
+
+&lt;h2&gt;ワイヤフレームツール&lt;/h2&gt;
+
+&lt;p&gt;フリーのツールも、有料のツールも、画像編集アプリケーションと同じくらいの種類があるワイヤフレームツール。
+中には実際にクリックしたり、マウスオーバできたりとインタラクションすら簡単に作成できる高度なツールも存在する。&lt;/p&gt;
+
+&lt;p&gt;私が利用しているのは、&lt;a href=&quot;http://balsamiq.com/&quot;&gt;Balsamiq&lt;/a&gt;。手書き風のワイヤフレームを簡単に作成できるAdobe
+Airアプリ。環境を選ばないし、ライセンス1つで自分が使用している端末なら数に制限無くインストールできる。&lt;br /&gt;
+$79とやや高額な価格設定かと思うかも知れないが、幾つかのツールを試用してみて、マニュアルなしでも利用できる手軽さと、意外なまでに拡張性がある部分を評価して購入した。&lt;br /&gt;
+今やBalsamiqでワイヤフレームだけではなく、ワークフローやサイトマップも作成したりもするようになり、Balsamiqを使わない日はない。&lt;/p&gt;
+
+&lt;p&gt;多くのウェブアプリも存在するジャンルではあるが、私はブラウザで作業するのがやや苦手なのでデスクトップアプリに絞って探したが、
+&lt;a href=&quot;https://gomockingbird.com/&quot;&gt;gomockingbird&lt;/a&gt;やFirefoxのアドオンとしても動作する&lt;a href=&quot;http://pencil.evolus.vn/en-US/Home.aspx&quot;&gt;Pencil Project&lt;/a&gt;なども試してみるといいだろう。&lt;/p&gt;
+
+&lt;p&gt;デスクトップアプリでBalsamiqと最後まで悩んだのが、&lt;a href=&quot;http://www.flairbuilder.com/&quot;&gt;flairbuilder&lt;/a&gt;。こちらはbalsamiqよりも高機能で実際に動作するプロトタイプを作成できる強みがある。
+ただワイヤフレームアプリにおいては、シンプルさを優先した方が確実に効率的だということで、Balsamiqを選択した。&lt;/p&gt;
+
+&lt;p&gt;もちろん、使い慣れたPhotoshopやFireworksなども工夫をすれば、かなり効率的にワイヤフレームを作ることができるはずだ。  &lt;/p&gt;
+
+&lt;h2&gt;ドキュメントとしてのワイヤフレーム&lt;/h2&gt;
+
+&lt;p&gt;37Signalsの&lt;a href=&quot;http://gettingreal.37signals.com/ch11_Dont_Do_Dead_Documents.php&quot;&gt;Don&amp;rsquo;t Do Dead Documents&lt;/a&gt;にて、&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If a wireframe document is destined to stop and never directly become the actual design, don&amp;rsquo;t bother doing it. 
+If the wireframe starts as a wireframe and then morphs into the actual design, go for it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;とある、&lt;br /&gt;
+要約すると、ワイヤフレームを単純なドキュメントとして作成するなら、ワイヤフレームの存在に意味はなく、本当のデザインに変化していくなら、作るべきだということ。&lt;/p&gt;
+
+&lt;p&gt;ドキュメンテーションはどんな職種でも必要になるアウトプットの1つだと思うが、デザイナも例外無く成果物の1つとしてドキュメントがあるだろう。
+ワイヤフレームはデザイナのドキュメントとしてはもっとも視覚的なドキュメントになるはずなので、ないよりはあった方がインパクトがあるかも知れないが、
+37Signalsの記事で言及されているように、デザインに昇華しないワイヤフレームは単純に時間の無駄なので、その時間を追加のパターンの作成や、追加の修正に費やした方がいい。&lt;/p&gt;
+
+&lt;p&gt;私にとっては、思考を手助けしてくれるツールの側面がまずあり、そこからデザインへの昇華は自然なフローとなっているので、ワイヤフレームは飛ばすことができないタスクの1つ。&lt;/p&gt;
+
+&lt;h2&gt;参考サイト&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.uxmag.com/design/shades-of-grey-wireframes-as-thinking-device&quot;&gt;uxmag&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://52weeksofux.com/post/866406780/wireframing-is-not-a-religion&quot;&gt;52weeksofux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://leehardingonline.co.uk/2010/06/the-value-of-wireframing/&quot;&gt;The Value of Wireframing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://userpathways.com/2008/06/the-what-when-and-why-of-wireframes/&quot;&gt;The what, when and why of wireframes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.uxmag.com/design/shades-of-grey-wireframes-as-thinking-device&quot;&gt;Shades of Grey: Wireframes as Thinking Device&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>HTML5 Boilerplate</title>
