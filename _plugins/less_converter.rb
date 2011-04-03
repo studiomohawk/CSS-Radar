@@ -3,11 +3,9 @@ module Jekyll
 	class LessConverter < Converter
 		safe true
 		priority :low
-
 		def matches(ext)
 			ext =~ /less/i
 		end
-
 		def output_ext(ext)
 			".css"
 		end
@@ -19,6 +17,4 @@ module Jekyll
 			end 
 		end
 	end
-
 end
-

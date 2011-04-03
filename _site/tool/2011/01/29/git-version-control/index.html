@@ -32,6 +32,14 @@
 		<ul>
 			
 		<li>
+		<h6 class="title"><a href="/css/2011/04/03/use_less_to_clean_up_your_css/" title="LESS: CSSをよりシンプルに、パワフルに">LESS: CSSをよりシンプルに、パワフルに</a></h6>
+			<date>
+				<span class="day">03</span>
+				<span class="month"><abbr>Apr</abbr></span>
+			</date> 
+		</li>
+		
+		<li>
 		<h6 class="title"><a href="/webdesign/2011/04/01/wireframe/" title="ワイヤフレーム">ワイヤフレーム</a></h6>
 			<date>
 				<span class="day">01</span>
@@ -59,14 +67,6 @@
 		<h6 class="title"><a href="/tool/2011/01/29/git-version-control/" title="Gitでバージョンコントロール">Gitでバージョンコントロール</a></h6>
 			<date>
 				<span class="day">29</span>
-				<span class="month"><abbr>Jan</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/css/2011/01/24/about-responsive-web-design/" title="レスポンシブウェブデザインについて">レスポンシブウェブデザインについて</a></h6>
-			<date>
-				<span class="day">24</span>
 				<span class="month"><abbr>Jan</abbr></span>
 			</date> 
 		</li>
@@ -145,7 +145,7 @@ GUIアプリをインストールしても、もう少しTerminalは開いたま
   <li><em>レポジトリ(Repository)</em> - 更新履歴などを管理するバージョンコントロールの要になる保管庫。</li>
   <li><em>コミット(Commit)</em> - エディタでいうならば保存に近いコミット。Gitに対して変更が完了したよ、と伝えるコマンド。コミットにはメッセージが必要で、どこをどうして変更したのか伝えることで履歴管理が可能になる</li>
   <li><em>クローン(Clone)</em> - Gitでは0からレポジトリを作成するのも簡単だが、既存のレポジトリをクローンすることができる。多人数で開発をする際は非常に便利</li>
-  <li><em>ブランチ(Branch)</em> - メインの開発からの分岐を作成するブランチ。<q>&ldquo;Git のブランチモデルは、Git の機能の中でもっともすばらしいものだという人もいるほど&rdquo;</q> <cite><a href="http://progit.org/book/ja/ch3-0.html">Pro Git</a></cite></li>
+  <li><em>ブランチ(Branch)</em> - メインの開発からの分岐を作成するブランチ。<q>“Git のブランチモデルは、Git の機能の中でもっともすばらしいものだという人もいるほど”</q> <cite><a href="http://progit.org/book/ja/ch3-0.html">Pro Git</a></cite></li>
 </ul>
 
 <h2>Gitをインストールした後にやるべきこと</h2>
@@ -192,7 +192,7 @@ git config --global user.email メールアドレス@example.com
 </code></pre>
 </div>
 
-<p>このコマンドのままだと、ホームディレクトリに.gitignoreがあるから&ndash;globalで読んでねという意味になる。<br />
+<p>このコマンドのままだと、ホームディレクトリに.gitignoreがあるから–globalで読んでねという意味になる。<br />
 私はこのファイルを<a href="http://db.tt/jxIW2Rp">Dropbox</a>を使って、すべての環境で同じファイルを見るようにしている。</p>
 
 <p>Dropboxにdotというディレクトリを作成し、その下に.gitignoreファイルを作成してる</p>
@@ -288,7 +288,7 @@ killall Finder
 </div>
 
 <p>-aフラグは、すべての変更に対してコミットするという意味。便利だが、ある理由で1ファイルを修正したのか、そのある理由が複数ファイルに渡る修正なのか、それとも？となってしまうので、コミットの単位については明確な理由がかける範囲で。<br />
--mフラグは、エディタを開かず、その場でコミットメッセージを書けるようにする。その後&rsquo;(シングルクォート)か&rdquo;(ダブルクォート)で囲んだ部分がメッセージになる。日本語でももちろん問題ない。</p>
+-mフラグは、エディタを開かず、その場でコミットメッセージを書けるようにする。その後’(シングルクォート)か”(ダブルクォート)で囲んだ部分がメッセージになる。日本語でももちろん問題ない。</p>
 
 <ul>
   <li><code>git status</code></li>

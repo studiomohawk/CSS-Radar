@@ -35,7 +35,7 @@ namespace :post do
 layout: post
 category: #{args.category}
 title: #{args.title}
-date: #{Time.now.strftime('%Y-%m-%d-%S')}
+date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
 ---
 EOS
     end

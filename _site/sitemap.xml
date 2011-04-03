@@ -6,6 +6,11 @@
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
+  <loc>http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/</loc>
+  <lastmod>2011-04-03T12:51:36+09:00</lastmod>
+</url>
+
+<url>
   <loc>http://css.studiomohawk.com/webdesign/2011/04/01/wireframe/</loc>
   <lastmod>2011-04-01T00:00:00+09:00</lastmod>
 </url>
