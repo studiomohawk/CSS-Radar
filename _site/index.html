@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml" />
-	<script src="/js/modernizr.js"></script>
 	<link rel="stylesheet" media="all" href="/style/master.min.css">
+	<script src="/js/modernizr.js"></script>
 	
 		<title>CSS Radar | For Frond End Developers</title>
 		<meta name="description" content="現役フロントエンドデベロッパーが、CSS/CSS3/HTML/HTML5の情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。">
@@ -31,6 +31,14 @@
 	<nav id="backnumber" class="backnumber">
 		<ul>
 			
+		<li>
+		<h6 class="title"><a href="/frontend/2011/04/09/why_speed_matters/" title="ページの高速化とその方法について">ページの高速化とその方法について</a></h6>
+			<date>
+				<span class="day">09</span>
+				<span class="month"><abbr>Apr</abbr></span>
+			</date> 
+		</li>
+		
 		<li>
 		<h6 class="title"><a href="/css/2011/04/03/use_less_to_clean_up_your_css/" title="LESS: CSSをよりシンプルに、パワフルに">LESS: CSSをよりシンプルに、パワフルに</a></h6>
 			<date>
@@ -63,14 +71,6 @@
 			</date> 
 		</li>
 		
-		<li>
-		<h6 class="title"><a href="/tool/2011/01/29/git-version-control/" title="Gitでバージョンコントロール">Gitでバージョンコントロール</a></h6>
-			<date>
-				<span class="day">29</span>
-				<span class="month"><abbr>Jan</abbr></span>
-			</date> 
-		</li>
-		
 		<li class="btn">
 			<a href="/backnumber/" class="btn">Read More</a>
 		</li>
@@ -86,11 +86,11 @@
 				<div class="content">
 	<header>
 	<div class="head-inner">
-		<h1><a href="/css/2011/04/03/use_less_to_clean_up_your_css/" title="LESS: CSSをよりシンプルに、パワフルに">LESS: CSSをよりシンプルに、パワフルに</a></h1>
+		<h1><a href="/frontend/2011/04/09/why_speed_matters/" title="ページの高速化とその方法について">ページの高速化とその方法について</a></h1>
 		<div class="meta">
-			<span class="category"><a href="/categories/css/" class="css" title="css">css</a></span>
-			<date title="2011-04-03T12:51:36+09:00">
-				<span class="day">03</span>
+			<span class="category"><a href="/categories/frontend/" class="frontend" title="frontend">frontend</a></span>
+			<date title="2011-04-09T11:46:40+09:00">
+				<span class="day">09</span>
 				<span class="month"><abbr>Apr</abbr></span>
 				<span class="year">2011</span>
 			</date>
@@ -98,287 +98,127 @@
 	</div>
 	</header>
 	<div class="bd">
-		<p>If it ain’t broken, don’t fix it.</p>
+		<p>ハードウェアの値段が下がり、ネットの接続環境も高速化していく。ブラウザも高速化を競い合っている。<br />
+それでもなお、GoogleもYahoo!、FacebookもTwitterもページのロード時間を短縮するテクニックを生み出している。</p>
 
-<p>壊れてないなら、直す必要はない。<br />
-CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも簡単に覚えられた。  </p>
+<p>なぜだろうか？</p>
 
-<p><a href="http://sass-lang.com/">SASS</a>や<a href="http://lesscss.org/">LESS</a>のようなCSSの拡張が完全に悪だとは思わないが、絶対に必要だとも感じない。<br />
-でも、知っておくともっとシンプルに、もっとパワフルに、もっと素早くCSSを書くことができる、プラスアルファの便利ツールであることは間違いない。  </p>
+<p>もちろん、カスタマの満足度を上げ、終局的には売り上げに貢献するからだ。</p>
 
-<p>実際このブログでも、ほかの幾つかの個人プロジェクトでは私はLESSを使い始めている。<br />
-SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが、LESSはJSを使ってダイナミックにCSSへ変換してくれたりもでき、すこしだけ開発時に楽をできるので私はLESSを選んだ。<br />
-もちろん、今話題の<a href="http://nodejs.org/">Node.js</a>でも利用できるという点もはやり好きモノの私にはぴったりだ。<br />
-ちなみに、SASSでも</p>
+<p>GoogleもYahoo!も世界で1位2位を争うほどすばらしいデータセンタを所有しているのだから、早くて当たり前。
+なんて思っていないだろうか？
+ページのロード時間の80%はフロントエンドで最適化できる。バックエンドが重要ではないとは言わないが、我々フロントエンドデベロッパのもっとも大切なタスクの1つがページの最適化。</p>
 
-<div class="highlight"><pre><code class="sh">sass --watch style.scss:style.css
-</code></pre>
-</div>
+<h2>ページのロード時間で失うモノ</h2>
 
-<p>とコマンドラインから実行すれば、SASSファイルを保存するたびにCSSへ変換してくれるそうだから、自分の好みに合わせて利用してほしい。  </p>
+<p>サイト最適化ファームのStrangeloopがMashable!に寄稿した記事、<a href="http://mashable.com/2011/04/06/site-speed/">Why Websites Are Slow &amp; Why Speed Really Matters [INFOGRAPHIC]</a>
+によると、  </p>
 
-<h2>LESSでできること</h2>
-
-<p>LESSでは、<strong>変数</strong>、<strong>ミックスイン</strong>、<strong>入れ子ルール</strong>、<strong>名前空間</strong>、<strong>四則演算と関数</strong>などをCSSに追加することができる。<br />
-プログラミングの経験があるなら、それぞれ覚えがあるだろう機能達ばかりで、CSSには存在しない機能。</p>
-
-<p>オフィシャルサイトに詳しく利用法については説明があるので、詳細は<a href="http://lesscss.org/">こちら</a>を確認してほしい。<br />
-もちろん英語なので、日本語訳が必要な場合はメールか<a href="http://twitter.com/#!/cssradar">Twitter@cssradar</a>でリクエストを。</p>
+<p>1秒のロード時間の増加で、</p>
 
 <ul>
-  <li><strong>変数</strong></li>
+  <li>7%のコンバージョン</li>
+  <li>11%のPV</li>
+  <li>16%のカスタマ満足度</li>
 </ul>
 
-<div class="highlight"><pre><code class="css"><span class="k">@color</span><span class="o">:</span> <span class="nf">#4D926F</span><span class="p">;</span>
-<span class="nf">#header</span> <span class="p">{</span>
-  <span class="k">color</span><span class="o">:</span> <span class="o">@</span><span class="k">color</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">h2</span> <span class="p">{</span>
-  <span class="k">color</span><span class="o">:</span> <span class="o">@</span><span class="k">color</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p>を失うとある。  </p>
 
-<p>というLESSは、</p>
+<p>さらに、3秒待たされると57%のカスタマはサイトから離脱し、そのうち80%のユーザはそのサイトへ戻ってこず、そのうち50%がネガティブな経験を他の人にも共有する。<br />
+もっと加えると、平均的にユーザは実際のロード時間より15%ほど追加でロードにかかっていると感じ、人にその話をする場合、実際のロード時間より35%遅いと伝えている。</p>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#header</span> <span class="p">{</span>
-  <span class="k">color</span><span class="o">:</span> <span class="m">#4D926F</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nt">h2</span> <span class="p">{</span>
-  <span class="k">color</span><span class="o">:</span> <span class="m">#4D926F</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p>3クリックルールにはもう意味がないかも知れないが、3秒ルールは実際に存在する。  </p>
 
-<p>のように解釈される。</p>
+<h2>Steve Soudersの教え</h2>
 
-<p><strong>@+変数名</strong></p>
+<p>元Yahoo!のパフォーマンス担当責任者であり、現在はGoogleで働くSteve Soudersの<a href="http://www.oreilly.co.jp/books/9784873113616/">ハイパフォーマンスWebサイト</a>はこのトピックの中で確実に読んでおくべき本。
+彼が作り出した14のルールはYahoo!のYSlowのチェック項目にもなっているので見たことがあるはずだ。<br />
+GoogleのPageSpeedでも近しいチェック項目を持っているので、それぞれの項目が何を意味して、それがどうしてページロード時間の最適化につながるかについて覚えておくことをおすすめする。</p>
 
-<p>で定義できる。正確には変数というよりは、定数に近い使われ方をしている。  </p>
-
-<div class="highlight"><pre><code class="css"><span class="k">@var</span><span class="o">:</span> <span class="nt">red</span><span class="p">;</span>
-
-<span class="nf">#page</span> <span class="p">{</span>
-  <span class="o">@</span><span class="n">var</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
-  <span class="m">#header</span> <span class="err">{</span>
-    <span class="k">color</span><span class="o">:</span> <span class="o">@</span><span class="n">var</span><span class="p">;</span> <span class="o">//</span> <span class="nb">white</span>
-  <span class="p">}</span>
-<span class="err">}</span>
-
-<span class="nf">#footer</span> <span class="p">{</span>
-  <span class="k">color</span><span class="o">:</span> <span class="o">@</span><span class="n">var</span><span class="p">;</span> <span class="o">//</span> <span class="nb">red</span>  
-<span class="p">}</span>
-</code></pre>
-</div>
-
-<p>ただし、プログラミング言語と同じくスコープがあり、上記のようにローカルに定義がない場合は、親ルールから定義を探し、それでもなければグローバルを探すように作られている。<br />
-このスコープに関しては変数だけではなく、ミックスインの定義についても同様に扱われる。</p>
+<h2>最適化チェックツール</h2>
 
 <ul>
+  <li><a href="http://developer.yahoo.com/yslow/">Yahoo! YSlow for Firebug</a></li>
   <li>
-    <p><strong>ミックスイン</strong></p>
+    <p><a href="http://code.google.com/speed/page-speed/">Page Speed</a></p>
 
-    <p>こちらも実際にどのようにLESSで記述し、実際にCSSでどのように解釈されるのかを見た方が早いだろう。</p>
+    <p>先ほどもその名前が出てきたが、この2つは絶対に必要なブラウザ拡張。Firefox+Firebugでも利用できるが、今では両方ともChromeでも動作する。Page
+Speedは<a href="http://pagespeed.googlelabs.com/">オンラインバージョン</a>も公開され、モバイルでもチェックができる。</p>
+  </li>
+  <li>
+    <p><a href="http://gtmetrix.com/">GTmetrix</a></p>
+
+    <p>こちらはYSlowとPage
+Speedを同時にチェックするオンラインツール。ブックマークレットも配布されている。</p>
+  </li>
+  <li>
+    <p><a href="http://loads.in/">loads.in</a></p>
+
+    <p>せっかく最適化しても、結果をコンスタントなテスト環境でチェックできなければ意味がない。<br />
+Loads.inでは珍しく日本のサーバからのロード時間をテストしてくれる。ついでにブラウザ別の結果も見ることができるので、おすすめのオンラインツール。</p>
   </li>
 </ul>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.bordered</span> <span class="p">{</span>
-  <span class="k">border-top</span><span class="o">:</span> <span class="k">dotted</span> <span class="m">1px</span> <span class="nb">black</span><span class="p">;</span>
-  <span class="k">border-bottom</span><span class="o">:</span> <span class="k">solid</span> <span class="m">2px</span> <span class="nb">black</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<h2>最適化ツール</h2>
 
-<p>というLESSで定義したミックスインを</p>
+<h3>CSSスプライト</h3>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#menu</span> <span class="nt">a</span> <span class="p">{</span>
-  <span class="k">color</span><span class="o">:</span> <span class="m">#111</span><span class="p">;</span>
-  <span class="o">.</span><span class="n">bordered</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<ul>
+  <li>オンラインツール: <a href="http://spritegen.website-performance.org/">CSS Sprite Generator</a></li>
+  <li>Ruby(ターミナルから利用): <a href="https://github.com/merbjedi/sprite">merbjedi/sprite - GitHub</a></li>
+  <li>SASS連携: <a href="http://www.hagenburger.net/BLOG/Lemonade-CSS-Sprites-for-Sass-Compass.html">Generate CSS Sprites on the Fly with Lemonade</a></li>
+  <li>Adobe Air: <a href="http://collamo.jp/tonttu">Tonttu for Adobe® AIR™</a></li>
+</ul>
 
-<p>にしてルールセットの中に追加すると、</p>
+<h3>JavaScriptとCSSの結合と縮小化</h3>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#menu</span> <span class="nt">a</span> <span class="p">{</span>
-  <span class="k">color</span><span class="o">:</span> <span class="m">#111</span><span class="p">;</span>
-  <span class="k">border-top</span><span class="o">:</span> <span class="k">dotted</span> <span class="m">1px</span> <span class="nb">black</span><span class="p">;</span>
-  <span class="k">border-bottom</span><span class="o">:</span> <span class="k">solid</span> <span class="m">2px</span> <span class="nb">black</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<ul>
+  <li>Ruby(ターミナルから利用): - Ruby(ターミナルから利用): <a href="http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool">Juicer - a CSS and JavaScript packaging tool / Ruby - cjohansen.no</a></li>
+  <li>オンラインツール (CSSとJS): <a href="http://www.refresh-sf.com/yui/">Online YUI Compressor</a></li>
+  <li>オンラインツール (CSS): <a href="http://www.cleancss.com/">Clean CSS</a></li>
+  <li>オンラインツール (JS): <a href="http://closure-compiler.appspot.com/home">Closure Compiler Service</a></li>
+</ul>
 
-<p>CSSではこのように解釈される。  </p>
+<h3>画像最適化</h3>
 
-<p>CSS3を利用する場合、まだまだ多くのベンダープリフィックスを追加しなければいけないのが現実。<br />
-そんな際にこのミックスインは威力を発揮する。<br />
-ミックスインはパラメータを渡したり、デフォルトを定義することもできるので、使い回しが効く機能でもある。<br />
-詳しい説明は、<a href="http://lesscss.org/#-parametric-mixins">こちら</a>から。</p>
+<ul>
+  <li>Mac OS X GUI: <a href="http://imageoptim.pornel.net/">ImageOptim – a PNG/JPEG/GIF optimizer for Mac OS X</a>
+　
+### バラバラのツールは必要ない？</li>
+</ul>
+
+<p>そんなにたくさん上げられても使いこなすまで時間がかかりそうだと思ったら、 
+<a href="http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/">以前紹介した</a><br />
+<a href="http://html5boilerplate.com/">HTML5
+Boilerplate</a>のビルドスクリプトを利用することをおすすめする。<br />
+CSSスプライト以外はHTML5 Boilerplateのビルドスクリプトでも行える。</p>
+
+<h2>.htaccess(サーバ側で設定できるなら、その方がベター)</h2>
 
 <ul>
   <li>
-    <p><strong>入れ子ルール</strong></p>
+    <p><a href="https://github.com/paulirish/html5-boilerplate/blob/master/.htaccess">.htaccess on HTML5 Boilerplate</a></p>
 
-    <p>変数やミックスインももちろん強力な追加機能ではあるが、私の一番のお気に入りがこの入れ子ルール。  </p>
+    <p>HTML5
+Boilerplateの.htaccessを利用するだけでYSlowのスコアが15ポイントはあがるのではないかと思うほどすばらしいファイル。</p>
   </li>
 </ul>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#header</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="nb">black</span><span class="p">;</span> <span class="p">}</span>
-<span class="nf">#header</span> <span class="nc">.navigation</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nf">#header</span> <span class="nc">.logo</span> <span class="p">{</span> 
-  <span class="k">width</span><span class="o">:</span> <span class="m">300px</span><span class="p">;</span> 
-<span class="p">}</span>
-<span class="nf">#header</span> <span class="nc">.logo</span><span class="nd">:hover</span> <span class="p">{</span>
-  <span class="k">text-decoration</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<h2>スピードについて</h2>
 
-<p>という<strong>CSS</strong>は、LESSでは</p>
+<p>つい先日FireFox4がリリースされたが、Chromeのスピードには及ばない。SafariもOperaも起動速度に関してはかなり気を使っているし、ページのレンダリングに関しても同様。<br />
+毎日確実に利用するものだからこそ、スピードが大事。ということだろう。  </p>
 
-<div class="highlight"><pre><code class="css"><span class="nf">#header</span>        <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="nb">black</span><span class="p">;</span>
-  <span class="o">.</span><span class="n">navigation</span>  <span class="err">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">12px</span> <span class="p">}</span>
-  <span class="nc">.logo</span>        <span class="p">{</span> <span class="k">width</span><span class="o">:</span> <span class="m">300px</span><span class="p">;</span>
-    <span class="o">&amp;:</span><span class="n">hover</span>    <span class="err">{</span> <span class="k">text-decoration</span><span class="o">:</span> <span class="k">none</span> <span class="p">}</span>
-  <span class="err">}</span>
-<span class="err">}</span>
-</code></pre>
-</div>
+<p>ウェブサイトも同様にスピードが大事。<br />
+Googleのページランクに関わるからでも、上に書いた実質的なロスでもかまわない、どうにかしてページロード速度の最適化が大切であるかをステークホルダと共有し、実践してほしい。<br />
+もちろん個人サイトでどんな風にやっていくべきかを実験するのもいいだろう。  </p>
 
-<p>というように記述することができる。<br />
-何度もセレクタを書かずに済むだけではなく、DOMの構造とほぼ同じ構造になるし、なにより、このように記述することを覚えるとキレイにセレクタを整理する癖がつく。<br />
-なお、<strong>&amp;:hover</strong>という記述があるが、こちらは疑似クラス(:link、:visited、:hover、:focusなど)を追加するのに活躍する。<br />
-<strong>&amp;</strong>という結合子は、入れ子になったセレクタを子孫として扱わず、親セレクタに追加することができる。<br />
-なので、疑似クラスだけではなく、</p>
+<p>私自身かなり気を使って最適化をしている。
+このサイトは海外のサーバなので日本では少しレスポンスが遅く、他の個人サイトと同様Amazon
+S3に移行する予定だ。  </p>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.float.left</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
-</code></pre>
-</div>
-
-<p>というようなマルチクラスの記述にも対応できる。</p>
-
-<ul>
-  <li><strong>名前空間</strong></li>
-</ul>
-
-<p>　こちらは変数やミックスインをまとめる際に活用できる機能。</p>
-
-<div class="highlight"><pre><code class="css"><span class="nf">#bundle</span> <span class="p">{</span>
-  <span class="o">.</span><span class="n">button</span> <span class="p">()</span> <span class="err">{</span>
-    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">black</span><span class="p">;</span>
-    <span class="k">background-color</span><span class="o">:</span> <span class="n">grey</span><span class="p">;</span>
-    <span class="o">&amp;:</span><span class="n">hover</span> <span class="err">{</span> <span class="k">background-color</span><span class="o">:</span> <span class="nb">white</span> <span class="p">}</span>
-  <span class="err">}</span>
-</code></pre>
-</div>
-
-<p><strong>#bundle</strong>という名前空間の中に<strong>.button</strong>というミックスインを定義する。</p>
-
-<div class="highlight"><pre><code class="css"><span class="nf">#header</span> <span class="nt">a</span> <span class="p">{</span>
-  <span class="k">color</span><span class="o">:</span> <span class="nb">orange</span><span class="p">;</span>
-  <span class="m">#bundle</span> <span class="o">&gt;</span> <span class="o">.</span><span class="n">button</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-
-<p>このようにして呼び出すことが可能。</p>
-
-<ul>
-  <li>
-    <p><strong>四則演算と関数</strong></p>
-
-    <p>こちらは使ったことがまだないので、<a href="http://lesscss.org/#-color-functions">オフィシャルサイトで例</a>を見てほしい。</p>
-  </li>
-</ul>
-
-<h2>便利なミックスインのコレクション</h2>
-
-<p>自分がよく利用するルールのミックスインを定義しておけば、飛躍的にCSSの開発はスピードアップする。<br />
-フロントエンドデベロッパやウェブデザイナはいつだって時間が足りない職種なので、自分なりのコレクションを作って、<a href="https://gist.github.com/">Gist</a>などに置いておくと便利だ。</p>
-
-<ul>
-  <li><a href="http://markdotto.com/bootstrap/">Bootstrap.less</a></li>
-  <li><a href="http://lesselements.com/">LESS Elements</a></li>
-</ul>
-
-<p>すでに便利なミックスインを公開している人もいるので、それらから自分の派生を作るほうが早いかも知れないので、ソースを見てみるといいだろう。</p>
-
-<h2>使い方</h2>
-
-<p>ここまで来てようやく使い方の説明になるが、</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet/less&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;styles.less&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;less.js&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre>
-</div>
-
-<p>と使い方はとても簡単。<br />
-注意してほしいのは、<strong>rel=”stylesheet/less”</strong>の部分だけだ。</p>
-
-<p>ちなみにGoogle Codeにレポジトリを持っているので、</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet/less&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;/stylesheets/styles.less&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://lesscss.googlecode.com/files/less-1.0.41.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre>
-</div>
-
-<p>とすると何もダウンロードせずともLESSを使うことができる。</p>
-
-<p>さらに</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
-    <span class="nx">less</span><span class="p">.</span><span class="nx">env</span> <span class="o">=</span> <span class="s2">&quot;development&quot;</span><span class="p">;</span>
-    <span class="nx">less</span><span class="p">.</span><span class="nx">watch</span><span class="p">();</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre>
-</div>
-
-<p>この記述をHTMLに追記しておけばlessファイルが保存されると、CSSがリフレッシュなしに変更が適応される。<br />
-毎回毎回リフレッシュするのは面倒な上、意外と時間の無駄なので、開発中はぜひ利用してほしい。</p>
-
-<p>なお、URLの末尾に<strong>#!watch</strong>としても同じことができるので、開発後に記述を削除するのを忘れそうな人は、こちらをおすすめする。</p>
-
-<h2>開発が終わったら</h2>
-
-<p>node.jsで動作するサイトでない限りは、LESSの記述はCSSに展開する必要があるだろう。</p>
-
-<p>MacではGUIのアプリで行うこともできるが(<a href="http://incident57.com/less/">LESS.app</a>)、WindowsではGUIアプリは見当たらない。おそらくLinuxでも同じだろう。<br />
-SASSではJavaで動作するクロスプラットフォームのUIがある。(<a href="http://compass.handlino.com/">Compass.app</a>)</p>
-
-<p>私はnode.jsをコマンドラインから利用してLESSをCSSに展開している。<br />
-node.jsは恐ろしいほどのスピードで開発が進んでいるので、どの環境でも簡単にインストールすることができるようになってきた。</p>
-
-<p>node.jsのインストールについては<a href="https://github.com/joyent/node/wiki/Installation">こちら</a>を参考に。</p>
-
-<p>Macを利用しているなら、Homebrewから0.40をインストールすることができる。<br />
-また、node.jsにもNPMというパッケージマネージャがあり、こちらでless.jsをインストールすることも簡単にできる。</p>
-
-<p>インストールが終わったら、</p>
-
-<div class="highlight"><pre><code class="sh">lessc styles.less &gt; styles.css
-</code></pre>
-</div>
-
-<p>とすればいいだけ。</p>
-
-<div class="highlight"><pre><code class="sh">lessc -x　styles.less &gt; styles.css
-</code></pre>
-</div>
-
-<p>のように、<strong>-x</strong>オプションをつけると圧縮したCSSとして展開される。</p>
-
-<h2>参考サイト</h2>
-
-<ul>
-  <li><a href="http://markdotto.com/bootstrap/">Bootstrap.less</a></li>
-  <li><a href="http://lesselements.com/">LESS Elements</a></li>
-  <li><a href="http://fadeyev.net/2010/06/19/lessjs-will-obsolete-css/">Less.js Will Obsolete CSS</a></li>
-  <li><a href="http://lesscss.org/">LESS</a></li>
-  <li><a href="http://sass-lang.com/">SASS</a></li>
-</ul>
+<p>すると、.htaccessが使えないので、Rakeを使って自動化を行うよう調整中。
+Amazonのクラウドサービスを使ってみるというのもいい経験になったし、Rakeによるビルド/デプロイの自動化もツールとして昇華しやすいので会社でも役に立つと思っている。</p>
 
 		<div class="ask">
 	<h3>Ask Me Anything via E-mail</h3>
@@ -400,7 +240,7 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 		<nav class="pagenation left">
 		<ul>
 			
-			<li class="prev"><a class="internal" rel="prev"  href="/webdesign/2011/04/01/wireframe/" title="View ワイヤフレーム">&laquo; ワイヤフレーム</a></li>
+			<li class="prev"><a class="internal" rel="prev"  href="/css/2011/04/03/use_less_to_clean_up_your_css/" title="View LESS: CSSをよりシンプルに、パワフルに">&laquo; LESS: CSSをよりシンプルに、パワフルに</a></li>
 			
 			
 			

@@ -4,9 +4,138 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-04-03T22:31:14+09:00</updated>
+ <updated>2011-04-10T11:04:43+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>ページの高速化とその方法について</title>
+   <link href="http://css.studiomohawk.com/frontend/2011/04/09/why_speed_matters/"/>
+   <updated>2011-04-09T11:46:40+09:00</updated>
+   <id>http://css.studiomohawk.com/frontend/2011/04/09/why_speed_matters</id>
+   <content type="html">&lt;p&gt;ハードウェアの値段が下がり、ネットの接続環境も高速化していく。ブラウザも高速化を競い合っている。&lt;br /&gt;
+それでもなお、GoogleもYahoo!、FacebookもTwitterもページのロード時間を短縮するテクニックを生み出している。&lt;/p&gt;
+
+&lt;p&gt;なぜだろうか？&lt;/p&gt;
+
+&lt;p&gt;もちろん、カスタマの満足度を上げ、終局的には売り上げに貢献するからだ。&lt;/p&gt;
+
+&lt;p&gt;GoogleもYahoo!も世界で1位2位を争うほどすばらしいデータセンタを所有しているのだから、早くて当たり前。
+なんて思っていないだろうか？
+ページのロード時間の80%はフロントエンドで最適化できる。バックエンドが重要ではないとは言わないが、我々フロントエンドデベロッパのもっとも大切なタスクの1つがページの最適化。&lt;/p&gt;
+
+&lt;h2&gt;ページのロード時間で失うモノ&lt;/h2&gt;
+
+&lt;p&gt;サイト最適化ファームのStrangeloopがMashable!に寄稿した記事、&lt;a href=&quot;http://mashable.com/2011/04/06/site-speed/&quot;&gt;Why Websites Are Slow &amp;amp; Why Speed Really Matters [INFOGRAPHIC]&lt;/a&gt;
+によると、  &lt;/p&gt;
+
+&lt;p&gt;1秒のロード時間の増加で、&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;7%のコンバージョン&lt;/li&gt;
+  &lt;li&gt;11%のPV&lt;/li&gt;
+  &lt;li&gt;16%のカスタマ満足度&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;を失うとある。  &lt;/p&gt;
+
+&lt;p&gt;さらに、3秒待たされると57%のカスタマはサイトから離脱し、そのうち80%のユーザはそのサイトへ戻ってこず、そのうち50%がネガティブな経験を他の人にも共有する。&lt;br /&gt;
+もっと加えると、平均的にユーザは実際のロード時間より15%ほど追加でロードにかかっていると感じ、人にその話をする場合、実際のロード時間より35%遅いと伝えている。&lt;/p&gt;
+
+&lt;p&gt;3クリックルールにはもう意味がないかも知れないが、3秒ルールは実際に存在する。  &lt;/p&gt;
+
+&lt;h2&gt;Steve Soudersの教え&lt;/h2&gt;
+
+&lt;p&gt;元Yahoo!のパフォーマンス担当責任者であり、現在はGoogleで働くSteve Soudersの&lt;a href=&quot;http://www.oreilly.co.jp/books/9784873113616/&quot;&gt;ハイパフォーマンスWebサイト&lt;/a&gt;はこのトピックの中で確実に読んでおくべき本。
+彼が作り出した14のルールはYahoo!のYSlowのチェック項目にもなっているので見たことがあるはずだ。&lt;br /&gt;
+GoogleのPageSpeedでも近しいチェック項目を持っているので、それぞれの項目が何を意味して、それがどうしてページロード時間の最適化につながるかについて覚えておくことをおすすめする。&lt;/p&gt;
+
+&lt;h2&gt;最適化チェックツール&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://developer.yahoo.com/yslow/&quot;&gt;Yahoo! YSlow for Firebug&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://code.google.com/speed/page-speed/&quot;&gt;Page Speed&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;先ほどもその名前が出てきたが、この2つは絶対に必要なブラウザ拡張。Firefox+Firebugでも利用できるが、今では両方ともChromeでも動作する。Page
+Speedは&lt;a href=&quot;http://pagespeed.googlelabs.com/&quot;&gt;オンラインバージョン&lt;/a&gt;も公開され、モバイルでもチェックができる。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://gtmetrix.com/&quot;&gt;GTmetrix&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;こちらはYSlowとPage
+Speedを同時にチェックするオンラインツール。ブックマークレットも配布されている。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://loads.in/&quot;&gt;loads.in&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;せっかく最適化しても、結果をコンスタントなテスト環境でチェックできなければ意味がない。&lt;br /&gt;
+Loads.inでは珍しく日本のサーバからのロード時間をテストしてくれる。ついでにブラウザ別の結果も見ることができるので、おすすめのオンラインツール。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;最適化ツール&lt;/h2&gt;
+
+&lt;h3&gt;CSSスプライト&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;オンラインツール: &lt;a href=&quot;http://spritegen.website-performance.org/&quot;&gt;CSS Sprite Generator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Ruby(ターミナルから利用): &lt;a href=&quot;https://github.com/merbjedi/sprite&quot;&gt;merbjedi/sprite - GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SASS連携: &lt;a href=&quot;http://www.hagenburger.net/BLOG/Lemonade-CSS-Sprites-for-Sass-Compass.html&quot;&gt;Generate CSS Sprites on the Fly with Lemonade&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Adobe Air: &lt;a href=&quot;http://collamo.jp/tonttu&quot;&gt;Tonttu for Adobe® AIR™&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;JavaScriptとCSSの結合と縮小化&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ruby(ターミナルから利用): - Ruby(ターミナルから利用): &lt;a href=&quot;http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool&quot;&gt;Juicer - a CSS and JavaScript packaging tool / Ruby - cjohansen.no&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;オンラインツール (CSSとJS): &lt;a href=&quot;http://www.refresh-sf.com/yui/&quot;&gt;Online YUI Compressor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;オンラインツール (CSS): &lt;a href=&quot;http://www.cleancss.com/&quot;&gt;Clean CSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;オンラインツール (JS): &lt;a href=&quot;http://closure-compiler.appspot.com/home&quot;&gt;Closure Compiler Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;画像最適化&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mac OS X GUI: &lt;a href=&quot;http://imageoptim.pornel.net/&quot;&gt;ImageOptim – a PNG/JPEG/GIF optimizer for Mac OS X&lt;/a&gt;
+　
+### バラバラのツールは必要ない？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;そんなにたくさん上げられても使いこなすまで時間がかかりそうだと思ったら、 
+&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/&quot;&gt;以前紹介した&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5
+Boilerplate&lt;/a&gt;のビルドスクリプトを利用することをおすすめする。&lt;br /&gt;
+CSSスプライト以外はHTML5 Boilerplateのビルドスクリプトでも行える。&lt;/p&gt;
+
+&lt;h2&gt;.htaccess(サーバ側で設定できるなら、その方がベター)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/blob/master/.htaccess&quot;&gt;.htaccess on HTML5 Boilerplate&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;HTML5
+Boilerplateの.htaccessを利用するだけでYSlowのスコアが15ポイントはあがるのではないかと思うほどすばらしいファイル。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;スピードについて&lt;/h2&gt;
+
+&lt;p&gt;つい先日FireFox4がリリースされたが、Chromeのスピードには及ばない。SafariもOperaも起動速度に関してはかなり気を使っているし、ページのレンダリングに関しても同様。&lt;br /&gt;
+毎日確実に利用するものだからこそ、スピードが大事。ということだろう。  &lt;/p&gt;
+
+&lt;p&gt;ウェブサイトも同様にスピードが大事。&lt;br /&gt;
+Googleのページランクに関わるからでも、上に書いた実質的なロスでもかまわない、どうにかしてページロード速度の最適化が大切であるかをステークホルダと共有し、実践してほしい。&lt;br /&gt;
+もちろん個人サイトでどんな風にやっていくべきかを実験するのもいいだろう。  &lt;/p&gt;
+
+&lt;p&gt;私自身かなり気を使って最適化をしている。
+このサイトは海外のサーバなので日本では少しレスポンスが遅く、他の個人サイトと同様Amazon
+S3に移行する予定だ。  &lt;/p&gt;
+
+&lt;p&gt;すると、.htaccessが使えないので、Rakeを使って自動化を行うよう調整中。
+Amazonのクラウドサービスを使ってみるというのもいい経験になったし、Rakeによるビルド/デプロイの自動化もツールとして昇華しやすいので会社でも役に立つと思っている。&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>LESS: CSSをよりシンプルに、パワフルに</title>

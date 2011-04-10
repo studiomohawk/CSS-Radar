@@ -42,4 +42,3 @@ EOS
     puts "Now open #{path} in an editor."
   end
 end
-
