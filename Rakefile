@@ -1,4 +1,5 @@
 task :default => [:"juicer:css"]
+sys_head = '_includes/system_head.html'
 
 namespace :juicer do
   desc 'Merges stylesheets'
@@ -11,12 +12,36 @@ namespace :juicer do
     end
 end
 
+namespace :switch do
+  desk 'Switch CSS to master.css'
+  task :expand do
+    text = File.read(sys_head)
+    if text =~ /master.min.css/ then
+      replace = text.gsub(/master.min.css/, "master.css")
+    elsif  text =~ /master.css/ then
+      puts 'Your css is already development mode, you sould run rake switch:minify to switch it to production mode'
+    end
+    File.open(sys_head, "w") {|file| file.puts replace}
+  end
+  desc 'switch CSS to master.min.css'
+  task :toMasterMin => :juicercss do
+    text = File.read(sys_head)
+    replace = text.gsub(/master.css/, "master.min.css")
+    File.open(sys_head, "w") {|file| file.puts replace}
+	puts 'Now. You are using minified css.'
+  end
+end
+
+desc 'Running Jekyll with --server --auto opition'
+  task :jekyllauto => :"switch:expand" do
+  system('jekyll --server --auto')
+end
+
 namespace :rsync do
   desc "--dry-run rsync"
     task :dryrun => :"juicer:css" do
       system('rsync _site/ -ave ssh --dry-run --delete studiomo@studiomohawk.com:www/css/')
     end
-
   desc "rsync"
     task :live => :"juicer:css" do
       system('rsync _site/ -ave ssh --delete studiomo@studiomohawk.com:www/css/')
@@ -25,7 +50,7 @@ end
 
 namespace :post do
   desc "Given a title as an argument, create a new post file"
-  task :new, [:title, :category] do |t, args|
+  task :new, [:title, :category] => :jekyllauto do |t, args|
     filename = "#{Time.now.strftime('%Y-%m-%d')}-#{args.title.gsub(/\s/, '_').downcase}.markdown"
     path = File.join("_posts", filename)
     if File.exist? path; raise RuntimeError.new("Won't clobber #{path}"); end
