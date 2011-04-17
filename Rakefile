@@ -13,7 +13,7 @@ namespace :juicer do
 end
 
 namespace :switch do
-  desk 'Switch CSS to master.css'
+  desc 'Switch CSS to master.css'
   task :expand do
     text = File.read(sys_head)
     if text =~ /master.min.css/ then
@@ -33,7 +33,7 @@ namespace :switch do
 end
 
 desc 'Running Jekyll with --server --auto opition'
-  task :jekyllauto => :"switch:expand" do
+task :jekyllauto => :"switch:expand" do
   system('jekyll --server --auto')
 end
 
@@ -50,7 +50,7 @@ end
 
 namespace :post do
   desc "Given a title as an argument, create a new post file"
-  task :new, [:title, :category] => :jekyllauto do |t, args|
+  task :new, [:title, :category] do |t, args|
     filename = "#{Time.now.strftime('%Y-%m-%d')}-#{args.title.gsub(/\s/, '_').downcase}.markdown"
     path = File.join("_posts", filename)
     if File.exist? path; raise RuntimeError.new("Won't clobber #{path}"); end

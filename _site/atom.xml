@@ -4,9 +4,175 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-04-10T11:04:43+09:00</updated>
+ <updated>2011-04-17T18:48:45+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>ブラウザでデザインをするということ</title>
+   <link href="http://css.studiomohawk.com/webdesign/2011/04/16/designing_in_browser/"/>
+   <updated>2011-04-16T10:53:05+09:00</updated>
+   <id>http://css.studiomohawk.com/webdesign/2011/04/16/designing_in_browser</id>
+   <content type="html">&lt;p&gt;長い間、Adobe
+Photoshopはウェブデザインのデファクトアプリとして君臨してきた。もちろん、今も私のMac
+MiniにCS4がインストールされている。&lt;/p&gt;
+
+&lt;p&gt;しかし、個人プロジェクトはもちろん、すでに会社のプロジェクトでも私はPhotoshopを卒業しつつある。&lt;br /&gt;
+Firefox
++ Firebugとお気に入りのエディタ(Vim)。そしてCSS3があれば、Photoshopを使わなくてもデザインができる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1907828001/ref=as_li_ss_tl?ie=UTF8&amp;amp;tag=studiomohawk-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1907828001&quot;&gt;Hardboiled Web Design&lt;/a&gt;の作者であるAndy Clarkeは&lt;a href=&quot;http://stuffandnonsense.co.uk/blog/about/i_dont_care_about_responsive_web_design/&quot;&gt;I don’t care about Responsive Web Design&lt;/a&gt;にて、&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Today, anything that’s fixed and unresponsive isn’t web design, it’s something else. If you don’t embrace the inherent fluidity of the web, you’re not a web designer, you’re something else.
+Web design &lt;strong&gt;is&lt;/strong&gt; responsive design, Responsive Web Design &lt;strong&gt;is&lt;/strong&gt; web design, done right.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;とすら書いているが、&lt;a href=&quot;http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/&quot;&gt;レスポンシブウェブデザイン&lt;/a&gt;はPhotoshopで作ることはとても難しい。レスポンシブデザインこそが、紙的な発想から離れることができなかったウェブデザインの新しい時代の旗手。&lt;/p&gt;
+
+&lt;p&gt;ブラウザでデザインをするということ。&lt;br /&gt;
+その際の実際のプロセスと便利なツール、そして注意点について紹介しよう。&lt;/p&gt;
+
+&lt;h2&gt;インブラウザ デザインのプロセス&lt;/h2&gt;
+
+&lt;h3&gt;アイデアの集約と大まかなレイアウトの決定&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://css.studiomohawk.com/webdesign/2011/04/01/wireframe/&quot;&gt;ワイヤフレーム&lt;/a&gt;は、ブラウザでデザインを行う際には確実に必要なプロセス。&lt;br /&gt;
+Photoshopでのデザインであれば、ワイヤフレームの有効性はPhotoshopの習熟度によっては低くなることもあるかもしれないが、今回はそうはいかない。&lt;br /&gt;
+ワイヤフレームだって、スタティックな画像じゃないか、と思うかも知れないし、それは事実だ。  &lt;/p&gt;
+
+&lt;p&gt;それでも、以前書いたように、ワイヤフレームはアイデアを形にする最初のステップであり、要素がどこにどんな風に配置されるのかを集約し、レイアウトするのにはぴったりのツールだ。&lt;/p&gt;
+
+&lt;h4&gt;このステップで利用するツール&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://balsamiq.com/&quot;&gt;Balsamiq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;ベースになるHTMLとCSSの作成&lt;/h3&gt;
+
+&lt;p&gt;このステップは基礎になるHTMLを作っていく。CSSリセットや、ベースのCSS、そしてヘッダやフッタ、ボディになる部分を作成する。&lt;/p&gt;
+
+&lt;p&gt;自分でよく使うテンプレートを持っておくことで大幅に時間を短縮できる部分だ。&lt;br /&gt;
+私は&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/&quot;&gt;HTML5 Boilerplate&lt;/a&gt;に、グリッドや&lt;a href=&quot;https://github.com/stubbornella/oocss&quot;&gt;OOCSS&lt;/a&gt;のモジュールを組み込むカスタマイズを施し、よく利用するCSSのスタイルを&lt;a href=&quot;http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/&quot;&gt;LESS&lt;/a&gt;のミックスインとして用意している。&lt;/p&gt;
+
+&lt;h4&gt;このステップで利用するツール&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5 Boilerplate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/stubbornella/oocss&quot;&gt;OOCSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lesscss.org/&quot;&gt;LESS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;レイアウト&lt;/h3&gt;
+
+&lt;p&gt;まずはグリッドを決めてしまう。&lt;br /&gt;
+Photoshopでのステップだと、グリッドを使ったり、ガイドを使ったりするのがこのステップ。
+この時点でグリッドがレスポンシブデザインに対応しているとあとで楽に作業ができる。&lt;br /&gt;
+もちろん、慣れないうちは大変だし、リデザインの場合はそうもいかないこともあるだろう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://griddle.it/&quot;&gt;Griddle.it&lt;/a&gt;を使って簡単にCSSでガイドを作成する方法を紹介しよう。&lt;/p&gt;
+
+&lt;p&gt;Griddle.itは&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;http://griddle.it/[全体幅]-[コラム数]-[ガターサイズ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;という指定で、グリッド画像を生成してくれる。
+例えば、こちらを開いてみてほしい。&lt;a href=&quot;http://griddle.it/960-12-30&quot;&gt;幅960px 12コラム 30pxのガター&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;自動で画像を生成してくれるので、グリッドパターンが確定したら、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(http://griddle.it/960-12-30)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;repeat-y&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;背景画像に読み込んでしまえばOK。&lt;/p&gt;
+
+&lt;p&gt;レスポンシブデザインに対応したいという方は、私のおすすめフレームワーク&lt;a href=&quot;http://lessframework.com/&quot;&gt;Less
+Framework&lt;/a&gt;を利用して、ベース(グリッドの部分だけ利用するのがおすすめ)のCSSを作成し、Less Frameworkに対応した実際にグリッドがウィンドウのサイズに合わせて変更されるこの&lt;a href=&quot;http://arnaumarch.com/en/less-grid.html&quot;&gt;JavaScript&lt;/a&gt;を組み込むと楽にできる。&lt;/p&gt;
+
+&lt;p&gt;すでに自分のレスポンシブデザインのベースがあるという場合は、Griddle.itを利用して、media
+queriesで呼び出す画像を切り替えればOK。&lt;/p&gt;
+
+&lt;p&gt;また、HTML5 Boilerplateをベースに選択していて、Less
+Frameworkなどを組み込むのが面倒な場合は、Andy Clerkeの&lt;a href=&quot;http://stuffandnonsense.co.uk/projects/320andup/&quot;&gt;320 and up&lt;/a&gt;を利用するといいだろう。(モバイルファーストという概念で作られているので、若干注意が必要)&lt;/p&gt;
+
+&lt;p&gt;さらに、レスポンシブウェブデザインでは現在のウィンドウの幅がどのサイズにあたるのかわかりづらいとちょっと面倒なので、
+&lt;a href=&quot;http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/&quot;&gt;Window Size bookmarklet to test/debug CSS3 Media Queries&lt;/a&gt;のブックマークレットを利用すれば、ウィンドウサイズを知らせてくれるので、非常に便利。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、この後のステップでは、CSSやHTMLを保存し、ブラウザをリフレッシュして変更を確認し〜を繰り返す。
+より時短を目指すため、&lt;a href=&quot;http://livejs.com/&quot;&gt;Live.js&lt;/a&gt;を活用することをおすすめする。&lt;br /&gt;
+このJavaScriptは、ファイルの保存を検知して、ブラウザのリロードを行わず、変更を反映するという夢のようなツール。&lt;br /&gt;
+ブラウザでデザインしていなくて、コーディングしている時にかなり役に立つ強力なJavaScript。&lt;/p&gt;
+
+&lt;h4&gt;このステップで利用するツール&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://griddle.it/&quot;&gt;Griddle.it&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/&quot;&gt;Window Size bookmarklet to test/debug CSS3 Media Queries&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://livejs.com/&quot;&gt;Live.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lessframework.com/&quot;&gt;Less Framework&lt;/a&gt; + &lt;a href=&quot;http://arnaumarch.com/en/less-grid.html&quot;&gt;Less Grid&lt;/a&gt; (Less Framework利用時)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stuffandnonsense.co.uk/projects/320andup/&quot;&gt;320 and up&lt;/a&gt; (HTML5
+Boilerplate利用時)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;残りのステップは、デザインしていくだけ。&lt;/h3&gt;
+
+&lt;p&gt;コンテンツなしにデザインすることができないのは、Photoshopであろうと、ブラウザでのデザインでも同じ。
+だが、画像素材や原稿がまだの場合は、想定している画像のサイズや原稿の分量などを伝えるというステップもあってもいいかも知れない。
+(実際に私の職場では非常によくある)&lt;/p&gt;
+
+&lt;p&gt;フレキシビリティこそが、ブラウザでデザインすることのもっとも優れた点なので、活用していこう。&lt;/p&gt;
+
+&lt;p&gt;ダミー画像の生成なら、&lt;a href=&quot;http://lorempixum.com/&quot;&gt;lorempixum&lt;/a&gt;が数あるダミー生成ツールのなかでももっとも優れている。&lt;br /&gt;
+グレーを始めとする単色だけでなく、サイズの指定はもちろん、色の指定、画像のジャンルの指定すらできる優れものだ。&lt;/p&gt;
+
+&lt;p&gt;プロトタイプとして、素材の提供者にブラウザで確認してもらうには十分こと足りるだろう。&lt;br /&gt;
+日本語では、海外のようなLorem Ipsumテキストがないので、どうしてもダミー原稿が欲しい場合は、私は&lt;a href=&quot;http://webtools.dounokouno.com/dummytext/index.html&quot;&gt;ダミーテキストジェネレータ&lt;/a&gt;を利用している。&lt;/p&gt;
+
+&lt;h2&gt;インブラウザ デザインの注意点&lt;/h2&gt;
+
+&lt;p&gt;CSS3はIE6-8では使えないプロパティもある。&lt;strong&gt;全てをブラウザでデザインすることは不可能だ&lt;/strong&gt;。&lt;br /&gt;
+テキスチャやCSS3では表現しづらいデザインももちろんある。&lt;br /&gt;
+&lt;strong&gt;Photoshopを絶対に使ってはならない&lt;/strong&gt;ということではない。&lt;br /&gt;
+ブラウザでデザインすることはPhotoshopでページすべてのデザインを行うよりもフレキシブルだということ、そして、現時点でそれを行うことが以前に比べれば格段に簡単になったことが大切な部分だと思ってほしい。&lt;/p&gt;
+
+&lt;p&gt;Photoshopでページすべてのデザインをしていると、カラースキームを変更するのは大変。&lt;br /&gt;
+Photoshopでページすべてのデザインをしていると、フォントを変更するのは大変。&lt;br /&gt;
+Photoshopでページすべてのデザインをしていると、要素の配置1つを動かしても大変。&lt;br /&gt;
+レイヤーの管理は崩壊し、ちょっとした変更の依頼もストレスになる。&lt;br /&gt;
+もちろん、先に書いたレスポンシブウェブデザインの実現も相当な時間がかかる。&lt;/p&gt;
+
+&lt;p&gt;インブラウザ デザインではこういった部分でPhotoshopより優れている。&lt;br /&gt;
+Photoshopがインブラウザ デザインより優れている部分ももちろんある。&lt;br /&gt;
+(私にとっては十分だが)&lt;a href=&quot;http://www.pixelmator.com/&quot;&gt;Pixelmator&lt;/a&gt;も、レイヤースタイルに対応した&lt;a href=&quot;http://flyingmeat.com/acorn/&quot;&gt;Acorn&lt;/a&gt;もPhotoshopがデファクトになってきた強力な機能やユーザビリティにはまだ少し距離がある。&lt;br /&gt;
+ここで最も大切なことは、Photoshopでのデザインプロセスにも疑問を投げかける時代が来たということ。&lt;/p&gt;
+
+&lt;p&gt;よりプロダクティブになることが、ウェブデザイナのタスクの1つで、そうすることで、より優れた問題解決を提案できる、作ることそのものより、どうやって問題を解決するべきか、を考える時間を作り出していくことが大切なこと。&lt;/p&gt;
+
+&lt;p&gt;ブラウザでデザインすること。&lt;br /&gt;
+このプロセス、ツールセットにバージョンをつけるとしたら、1.0RCといったところだろう。&lt;br /&gt;
+CS5.5になるほど、イテレーションを繰り返しすばらしいプロダクトを提供してきたAdobe
+Photoshopと比べればまだまだ始まったばかり。&lt;br /&gt;
+このプロセス/ツールセットのバージョンアップを行うのは、ウェブデザイナたちの役割だ。&lt;/p&gt;
+
+&lt;h2&gt;ブラウザでのデザインについてもっと詳しく&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://37signals.com/svn/posts/1061-why-we-skip-photoshop&quot;&gt;Why we skip Photoshop (37signals)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hicksdesign.co.uk/journal/graphics-editor-or-text-editor&quot;&gt;Graphics Editor or Text Editor? (The Hickensian)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.stuffandnonsense.co.uk/blog/about/walls_come_tumbling_down_presentation_slides_and_transcript/&quot;&gt;Walls Come Tumbling Down presentation slides and transcript (Stuff and Nonsense)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://24ways.org/2009/make-your-mockup-in-markup&quot;&gt;Make Your Mockup in Markup (24 ways)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://christeso.com/why-i-never-design-a-site-in-photoshop&quot;&gt;Why I never design a site in Photoshop (Bullies Get High On Beatings)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.quora.com/Joel-Lewenstein/Life-Without-Photoshop&quot;&gt;Life Without Photoshop by Joel Lewenstein (Quora)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.inspiredm.com/learn-to-use-your-browser-in-web-design/&quot;&gt;Learn to Use Your Browser in Web Design (Inspired Magazine)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>ページの高速化とその方法について</title>
