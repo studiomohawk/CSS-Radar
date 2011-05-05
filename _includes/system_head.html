@@ -7,13 +7,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
-	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="{{ site.sitename }} | {{ site.tagline }}" type="application/atom+xml" />
+	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="{{ site.sitename }} | {{ site.tagline }}" type="application/atom+xml">
 	<link rel="stylesheet" media="all" href="/style/master.min.css">
 	<script src="/js/modernizr.js"></script>
 	{% case page.layout %}
 	{% when 'home' %}
 		<title>{{ site.sitename }} | {{ site.tagline }}</title>
-		<meta name="description" content="現役フロントエンドデベロッパーが、CSS/CSS3/HTML/HTML5の情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。">
+		<meta name="description" content="現役フロントエンドデベロッパ、斉藤祐也が、CSS/CSS3/HTML/HTML5の情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。">
 	{% when 'post' %}
 		<title>{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
 		<meta name="description" content="{{ content | strip_html | truncatewords: 25 }}">
@@ -22,4 +22,3 @@
 		<meta name="description" content="{{ page.desctiption }}">
 	{% endcase %}
 </head>
-

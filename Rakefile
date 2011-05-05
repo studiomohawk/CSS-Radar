@@ -33,7 +33,7 @@ namespace :switch do
 end
 
 desc 'Running Jekyll with --server --auto opition'
-task :jekyllauto => :"switch:expand" do
+task :dev do
   system('jekyll --server --auto')
 end
 

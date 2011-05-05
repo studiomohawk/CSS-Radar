@@ -5,7 +5,7 @@ title: CSS Radar
 {% for post in site.posts limit:1 %}
 	<header>
 	<div class="head-inner">
-		<h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+		<h1><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h1>
 		<div class="meta">
 			<span class="category">{{ post.categories | category_links }}</span>
 			<date title="{{ post.date | date_to_xmlschema }}">
@@ -18,7 +18,6 @@ title: CSS Radar
 	</header>
 	<div class="bd">
 		{{ post.content }}
-		{% include ask.html %}
 	</div>
 	<footer>
 		<div class="foot-inner">
