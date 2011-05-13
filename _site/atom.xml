@@ -4,9 +4,372 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-05-05T12:45:15+09:00</updated>
+ <updated>2011-05-14T01:25:47+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>ウェブデザイナのためのRuby入門</title>
+   <link href="http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/"/>
+   <updated>2011-05-14T00:03:59+09:00</updated>
+   <id>http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev</id>
+   <content type="html">&lt;p&gt;CSS
+Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。&lt;br /&gt;
+今回はCSSやデザインからはほど遠いように思えるRubyについて。&lt;br /&gt;
+前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。
+Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら、面倒なことを楽にすることもでき始めてきた。
+そこで、Rubyを少しだけ使い倒す方法を紹介しようと思い立った。&lt;/p&gt;
+
+&lt;p&gt;たまにはPhotoshopを離れて(&lt;a href=&quot;http://css.studiomohawk.com/webdesign/2011/04/16/designing_in_browser/&quot;&gt;私はあまり使いませんが&lt;/a&gt;)、新しいことに挑戦してみませんか？&lt;/p&gt;
+
+&lt;p class=&quot;small&quot;&gt;*私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。&lt;br /&gt;
+なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。&lt;/p&gt;
+
+&lt;h2 id=&quot;rubyinstall&quot;&gt;Rubyのインストール&lt;/h2&gt;
+
+&lt;p&gt;Mac OS
+XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。&lt;/p&gt;
+
+&lt;p&gt;MacにおけるRubyの管理は、&lt;a href=&quot;https://rvm.beginrescueend.com/&quot;&gt;RVM - Ruby Version
+Manager&lt;/a&gt;がおすすめ。&lt;br /&gt;
+RVMを利用するためには、gitが必須になる。gitのインストールについては、&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/01/29/git-version-control/&quot;&gt;こちらを参照してほしい&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;RVMのインストール方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;ターミナルを開いて、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo bash &amp;lt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;curl -s https://rvm.beginrescueend.com/install/rvm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;~/.bash_profile か ~/.bashrcに&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -s &lt;span class=&quot;s2&quot;&gt;&amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# This loads RVM into a shell session.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;を追加(上記ファイルがない場合は、作成して追加)&lt;br /&gt;
+では、RVMが正しく動作するかを確認しよう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;rvm | head -1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とターミナルで実行してみる&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm is a &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;と返事が返ってきたら成功。
+成功したら、またターミナルにて&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.rvm/scripts/rvm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;と実行しておこう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm install 1.9.2-head
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすれば、ruby 1.9.2-headのバージョンをインストールできる。&lt;br /&gt;
+ちなみに、RVMでインストールできるバージョンは&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm list known
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすればリストが表示されるので、表示されたパッケージを&lt;code&gt;rvm
+install&lt;/code&gt;の後に記述すればそのパッケージをインストールできる。&lt;/p&gt;
+
+&lt;p&gt;なお、RVMではバージョンごとにgemのパッケージを管理するため、さっきまで使えたはずのgemがないとエラーが出る、なんて事態に遭遇したら、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ruby -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;として現在利用しているrubyのバージョンを確認してみよう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm --default use 1.9.2 &lt;span class=&quot;c&quot;&gt;# とすると、1.9.2をデフォルトで利用しはじめ&lt;/span&gt;
+
+rvm use system &lt;span class=&quot;c&quot;&gt;# システムにインストールされているRubyと&lt;/span&gt;
+rvm default &lt;span class=&quot;c&quot;&gt;# デフォルト設定したRubyを切り替えることも可能 &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;詳しくは&lt;a href=&quot;https://rvm.beginrescueend.com/&quot;&gt;https://rvm.beginrescueend.com/&lt;/a&gt;(英語)&lt;/p&gt;
+
+&lt;h2&gt;Ruby Gem&lt;/h2&gt;
+
+&lt;p&gt;RubyにはGemと呼ばれるパッケージマネージャがある。1.9系以降からはRubyの標準機能となったそうだ。&lt;br /&gt;
+MacではGemも標準でインストールされていたと思うが、記憶が確かではないので確認してほしい。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo gem update --system
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、アップデートできるので試してみてほしい。&lt;/p&gt;
+
+&lt;p&gt;パッケージマネージャってなんだ、という点については、Ubuntuを使っていた私にはすんなり理解できたが、そうでもない人が多いのでMacでいうところの、macportやfink、homebrewみたいなライブラリ集積地みたいなものだと覚えておけばいいはず。
+*Homebrewについては、&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/02/13/terminal-101/&quot;&gt;こちらの記事&lt;/a&gt;で紹介したので、参考にしてほしい。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install PACKAGENAME
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;として、パッケージをインストールできる。&lt;br /&gt;
+例えば、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install rake
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、Ruby版make(ビルドツール)であるrakeをインストールできる。  &lt;/p&gt;
+
+&lt;h2&gt;ウェブデザイナにおすすめのパッケージ&lt;/h2&gt;
+
+&lt;h3&gt;CSS Sprite&lt;/h3&gt;
+
+&lt;p&gt;CSSスプライトはパフォーマンス向上のためには必須になるテクニックだが、作成するのも、管理するのも、メンテナンスするのもとても面倒。
+ある特定のディレクトリに画像を入れて、自動でスプライト画像を作成し、CSSもあわせて作ってくれたら。を叶えるプログラムがRubyにある。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/merbjedi/sprite&quot;&gt;merbjedi / sprite&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rmagick&lt;/code&gt;gemが必要になるので、まずはこのgemをインストール。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install rmagick &lt;span class=&quot;c&quot;&gt;#私はこのコマンドではエラーになったので、下記を実行してから、再度チャレンジした&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# エラーになった場合は&lt;/span&gt;
+sudo brew install libxml2
+sudo brew install ImageMagick
+&lt;span class=&quot;c&quot;&gt;# を実行してから、上記を実行してほしい。なお、homebrewを利用している場合の例&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;そしてspriteのgemをインストール&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem sources -a http://gemcutter.org
+gem install sprite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;使い方&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;public/
+  images/
+    sprites/
+      black-icons/
+        stop.png
+        go.png
+        back.png
+        forward.png
+
+      weather/
+        sunny.gif
+        rainy.gif
+        cloudy.gif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というようなディレクトリ構造を例とすると、
+&lt;code&gt;public&lt;/code&gt;にて&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sprite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というコマンドを実行すると&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;public/
+  stylesheets/
+    sprites.css
+  images/
+    sprites/
+      black-icons.png
+      weather.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というファイルを生成する。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-small&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/small.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-medium&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/medium.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-large&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/large.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;21px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-xlarge&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/xlarge.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;96px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というようなスタイルを書き出してくれる。&lt;br /&gt;
+sassのmixinも利用できるようで、設定も変更できる。&lt;/p&gt;
+
+&lt;p&gt;詳しくは&lt;a href=&quot;https://github.com/merbjedi/sprite&quot;&gt;こちら&lt;/a&gt;(英語)。&lt;/p&gt;
+
+&lt;h3&gt;SASS/LESS&lt;/h3&gt;
+
+&lt;p&gt;LESSは今ではnode.jsプロジェクトとして生まれ変わったが、最新版ではないものの、gemからインストールはできる。
+SASSについては、先日1年ぶりほどのアップデートがありアクティブにRubyプロジェクトとして成長している。&lt;/p&gt;
+
+&lt;p&gt;ちなみに、SASSでは&lt;a href=&quot;http://www.hagenburger.net/BLOG/Lemonade-CSS-Sprites-for-Sass-Compass.html&quot;&gt;Lemonade&lt;/a&gt;というパッケージを利用してCSS Spriteの自動化を行うこともできる。&lt;/p&gt;
+
+&lt;p&gt;LESSについての説明は、&lt;a href=&quot;http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/&quot;&gt;LESS: CSSをよりシンプルに、パワフルに&lt;/a&gt;を参考にしてほしい。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install less &lt;span class=&quot;c&quot;&gt;#LESS&lt;/span&gt;
+gem install sass &lt;span class=&quot;c&quot;&gt;#SASS&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Juicer&lt;/h3&gt;
+
+&lt;p&gt;リクエスト回数を減らすためには、CSS/JSの呼び出しは最小にしておく必要がある。&lt;br /&gt;
+が、CSSもJSもメンテナンス性を考えれば、たくさんのファイルになってしまうのが常。&lt;br /&gt;
+この矛盾を解決するためのプログラムが&lt;a href=&quot;http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool&quot;&gt;Juicer&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;Juicerは、YUI
+Compressorを利用してCSS/JSを圧縮した上で、CSSであれば@importを使ってファイルを結合してくれ、JSであれば、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;/**
+ * @depends prototype.js
+ * @depends widgets/lightbox.js
+ */
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というコメントを使って、ファイルの結合を行うことが可能。&lt;br /&gt;
+CSSはmaster.cssというファイルに@importのみを記述して、JSもmaster.jsというファイルにコメント文だけ記述している。&lt;/p&gt;
+
+&lt;p&gt;実行すると、それぞれmaster.min.css、master.min.jsというファイルを書き出してくれる。&lt;/p&gt;
+
+&lt;p&gt;使い方はとても簡単。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;juicer merge --force master.css &lt;span class=&quot;c&quot;&gt;# CSS --forceはmaster.min.cssが存在しても上書きを強制&lt;/span&gt;
+juicer merge -i --force master.js &lt;span class=&quot;c&quot;&gt;#JS -iはエラーを無視して圧縮/結合を実行するオプション&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ついでに、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(/somepath/someimage.png?embed=true)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* ?embed=trueを追加する */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、画像をdata-urlに変換してくれる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;juicer merge --force master.css --embed-images data_uri
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;のように実行すればOK。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install juicer &lt;span class=&quot;c&quot;&gt;# Juicerをインストール&lt;/span&gt;
+juicer install yui_compressor &lt;span class=&quot;c&quot;&gt;# YUI compressorをインストール&lt;/span&gt;
+juicer install closure_compiler &lt;span class=&quot;c&quot;&gt;# Google Closure Compilerをインストール&lt;/span&gt;
+juicer install jslint &lt;span class=&quot;c&quot;&gt;# JsLintをインストール&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;CSS Redundancy Checker&lt;/h3&gt;
+
+&lt;p&gt;何年か前にウェブツールとして同名のツールがあり、ある日使えなくなってしまった。
+&lt;a href=&quot;http://code.google.com/p/css-redundancy-checker/&quot;&gt;CSS Redundancy
+Checker&lt;/a&gt;は、あるHTML郡で使われていないスタイルルールをリストアップしてくれるという強力なツール。&lt;br /&gt;
+フロントエンドデベロッパのタスクのほとんどはIteration、日本語にすると反復することが多く、その反復がよりよいモノを生み出すための最も大事な原動力となる。&lt;br /&gt;
+しかしその副産物として、使っていないスタイルルールであふれかえって、何を消したらまずいのかもはやわからない状態になってしまう。&lt;br /&gt;
+その問題を解決するのがこのツールというわけだ。&lt;/p&gt;
+
+&lt;p&gt;使い方&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ruby css-redundancy-checker.rb &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;CSSファイル名&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;HTMLファイルディレクトリ または URLを一行ずつ記述した.txt&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とするだけ。CSSを分割して管理している場合は、Juicerで結合してから実行するといいだろう。
+もちろんある特定のCSSファイルをチェックしたい場合は、個別に指定すればOK。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo gem install hpricot &lt;span class=&quot;c&quot;&gt;# hpricotをインストール、必須&lt;/span&gt;
+svn checkout http://css-redundancy-checker.googlecode.com/svn/trunk/ css-redundancy-checker
+&lt;span class=&quot;c&quot;&gt;# svnをインストールしていない場合は、sudo brew install svnとしてから&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;css-redundancy-checker.rbという名前の通り、このスクリプトは単純な1ファイル。&lt;br /&gt;
+なので、実行する際はインストールしたディレクトリに移動してから実行する必要がある。&lt;/p&gt;
+
+&lt;h3&gt;Rake&lt;/h3&gt;
+
+&lt;p&gt;Rakeはそれ自体ではなにもしないが、非常に強力なツール。&lt;br /&gt;
+ビルドツールとして誕生したRakeのはずだが、私はビルドツールがなんのことかも完璧には理解できない。&lt;br /&gt;
+要するに、A)の次はB)を実行し、C)を実行するのは、A)を実行する必要がある。&lt;br /&gt;
+というなプロセスをrubyを使って行うことができる。いわばエディタなどにあるマクロみたいな存在。&lt;/p&gt;
+
+&lt;p&gt;ここまで紹介してきたツール群はもちろんのこと、Rakeを使って  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://optipng.sourceforge.net/&quot;&gt;OptiPNG&lt;/a&gt;を使ってPNG画像の最適化&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sylvana.net/jpegcrop/jpegtran/&quot;&gt;JPEGtran&lt;/a&gt;を使ってJPEG画像の最適化
+(Macへのインストール方法は、&lt;a href=&quot;http://www.phpied.com/installing-jpegtran-mac-unix-linux/&quot;&gt;こちらを参照&lt;/a&gt;(英語))&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;sprite&lt;/code&gt;を使ってスプライト画像/CSSを作成&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;juicer&lt;/code&gt;を使って、CSS/JSの圧縮/結合&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://code.google.com/p/htmlcompressor/&quot;&gt;htmlcompressor&lt;/a&gt;を使ってHTMLの最適化&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;このプロセスをrake taskとして作成すれば、&lt;code&gt;rake
+タスク名&lt;/code&gt;とするだけで一気に終了できる。  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rsync&lt;/code&gt;や&lt;code&gt;ftp&lt;/code&gt;なども合わせるとファイルアップロードまで自動化できる。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rakeのチュートリアル&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jasonseifer.com/2010/04/06/rake-tutorial&quot;&gt;Rake Tutorial by Jason Seifer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://martinfowler.com/articles/rake.html&quot;&gt;Using the Rake Build Language&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pastie.org/242691&quot;&gt;Rake Quick Reference by Greg Houston&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;などが参考になるだろう。もちろん全部英語の文書なので、CSS
+Radarの癖にRakeの詳しい説明を知りたい方は、&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;にてリクエストしてほしい。&lt;br /&gt;
+私も覚えたてなので、全部の質問には答えることができるかわからないが。&lt;/p&gt;
+
+&lt;h2&gt;ウェブデザイナ/フロントエンドデベロッパのRuby&lt;/h2&gt;
+
+&lt;p&gt;ウェブデザイナ/フロントエンドデベロッパのタスクは多岐に渡る。&lt;br /&gt;
+Adobe
+Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/アクセシビリティに考慮し、行動心理学を応用しつつ、ウェブサイトをユーザに届ける。&lt;br /&gt;
+その上、プログラマの領分であるはずのRubyにまで手を出す。&lt;br /&gt;
+それもすべて時間を生み出すための技術。&lt;br /&gt;
+その時間がよりよいサイトを生み出すための原動力だから。&lt;br /&gt;
+新しいことへの出会いはいつだってインスピレーションへ続く近道だと信じているので、是非チャレンジしてほしい。&lt;br /&gt;
+もし今回紹介しなかった便利なスクリプトなどご存知でしたら、是非教えてください。&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>ブラウザでデザインをするということ</title>

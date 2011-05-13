@@ -9,7 +9,7 @@
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
 	<link rel="stylesheet" media="all" href="/style/master.min.css">
-	<script src="/js/modernizr.js"></script>
+	<script src="//ajax.cdnjs.com/ajax/libs/modernizr/1.7/modernizr-1.7.min.js"></script>
 	
 		<title>CSS Radar | For Frond End Developers</title>
 		<meta name="description" content="現役フロントエンドデベロッパ、斉藤祐也が、CSS/CSS3/HTML/HTML5の情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。">
@@ -31,6 +31,14 @@
 	<nav id="backnumber" class="backnumber">
 		<ul>
 			
+		<li>
+		<h6 class="title"><a href="/tool/2011/05/14/ruby_for_designer_frontend_dev/" title="ウェブデザイナのためのRuby入門">ウェブデザイナのためのRuby入門</a></h6>
+			<date>
+				<span class="day">14</span>
+				<span class="month"><abbr>May</abbr></span>
+			</date> 
+		</li>
+		
 		<li>
 		<h6 class="title"><a href="/webdesign/2011/04/16/designing_in_browser/" title="ブラウザでデザインをするということ">ブラウザでデザインをするということ</a></h6>
 			<date>
@@ -63,14 +71,6 @@
 			</date> 
 		</li>
 		
-		<li>
-		<h6 class="title"><a href="/tool/2011/03/15/html5boilerplate/" title="HTML5 Boilerplate">HTML5 Boilerplate</a></h6>
-			<date>
-				<span class="day">15</span>
-				<span class="month"><abbr>Mar</abbr></span>
-			</date> 
-		</li>
-		
 		<li class="btn">
 			<a href="/backnumber/" class="btn">Read More</a>
 		</li>
@@ -86,176 +86,373 @@
 				<div class="content">
 	<header>
 	<div class="head-inner">
-		<h1><a href="/webdesign/2011/04/16/designing_in_browser/" title="ブラウザでデザインをするということ" rel="bookmark">ブラウザでデザインをするということ</a></h1>
+		<h1><a href="/tool/2011/05/14/ruby_for_designer_frontend_dev/" title="ウェブデザイナのためのRuby入門" rel="bookmark">ウェブデザイナのためのRuby入門</a></h1>
 		<div class="meta">
-			<span class="category"><a href="/categories/webdesign/" class="webdesign" title="webdesign">webdesign</a></span>
-			<date title="2011-04-16T10:53:05+09:00">
-				<span class="day">16</span>
-				<span class="month"><abbr>Apr</abbr></span>
+			<span class="category"><a href="/categories/tool/" class="tool" title="tool">tool</a></span>
+			<date title="2011-05-14T00:03:59+09:00">
+				<span class="day">14</span>
+				<span class="month"><abbr>May</abbr></span>
 				<span class="year">2011</span>
 			</date>
 		</div>
 	</div>
 	</header>
 	<div class="bd">
-		<p>長い間、Adobe
-Photoshopはウェブデザインのデファクトアプリとして君臨してきた。もちろん、今も私のMac
-MiniにCS4がインストールされている。</p>
+		<p>CSS
+Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。<br />
+今回はCSSやデザインからはほど遠いように思えるRubyについて。<br />
+前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。
+Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら、面倒なことを楽にすることもでき始めてきた。
+そこで、Rubyを少しだけ使い倒す方法を紹介しようと思い立った。</p>
 
-<p>しかし、個人プロジェクトはもちろん、すでに会社のプロジェクトでも私はPhotoshopを卒業しつつある。<br />
-Firefox
-+ Firebugとお気に入りのエディタ(Vim)。そしてCSS3があれば、Photoshopを使わなくてもデザインができる。</p>
+<p>たまにはPhotoshopを離れて(<a href="http://css.studiomohawk.com/webdesign/2011/04/16/designing_in_browser/">私はあまり使いませんが</a>)、新しいことに挑戦してみませんか？</p>
 
-<p><a href="http://www.amazon.com/gp/product/1907828001/ref=as_li_ss_tl?ie=UTF8&amp;tag=studiomohawk-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1907828001">Hardboiled Web Design</a>の作者であるAndy Clarkeは<a href="http://stuffandnonsense.co.uk/blog/about/i_dont_care_about_responsive_web_design/">I don’t care about Responsive Web Design</a>にて、</p>
+<p class="small">*私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。<br />
+なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。</p>
 
-<blockquote>
-  <p>Today, anything that’s fixed and unresponsive isn’t web design, it’s something else. If you don’t embrace the inherent fluidity of the web, you’re not a web designer, you’re something else.
-Web design <strong>is</strong> responsive design, Responsive Web Design <strong>is</strong> web design, done right.</p>
-</blockquote>
+<h2 id="rubyinstall">Rubyのインストール</h2>
 
-<p>とすら書いているが、<a href="http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/">レスポンシブウェブデザイン</a>はPhotoshopで作ることはとても難しい。レスポンシブデザインこそが、紙的な発想から離れることができなかったウェブデザインの新しい時代の旗手。</p>
+<p>Mac OS
+XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。</p>
 
-<p>ブラウザでデザインをするということ。<br />
-その際の実際のプロセスと便利なツール、そして注意点について紹介しよう。</p>
+<p>MacにおけるRubyの管理は、<a href="https://rvm.beginrescueend.com/">RVM - Ruby Version
+Manager</a>がおすすめ。<br />
+RVMを利用するためには、gitが必須になる。gitのインストールについては、<a href="http://css.studiomohawk.com/tool/2011/01/29/git-version-control/">こちらを参照してほしい</a>。</p>
 
-<h2>インブラウザ デザインのプロセス</h2>
+<p><strong>RVMのインストール方法</strong></p>
 
-<h3>アイデアの集約と大まかなレイアウトの決定</h3>
+<p>ターミナルを開いて、</p>
 
-<p><a href="http://css.studiomohawk.com/webdesign/2011/04/01/wireframe/">ワイヤフレーム</a>は、ブラウザでデザインを行う際には確実に必要なプロセス。<br />
-Photoshopでのデザインであれば、ワイヤフレームの有効性はPhotoshopの習熟度によっては低くなることもあるかもしれないが、今回はそうはいかない。<br />
-ワイヤフレームだって、スタティックな画像じゃないか、と思うかも知れないし、それは事実だ。  </p>
-
-<p>それでも、以前書いたように、ワイヤフレームはアイデアを形にする最初のステップであり、要素がどこにどんな風に配置されるのかを集約し、レイアウトするのにはぴったりのツールだ。</p>
-
-<h4>このステップで利用するツール</h4>
-
-<ul>
-  <li><a href="http://balsamiq.com/">Balsamiq</a></li>
-</ul>
-
-<h3>ベースになるHTMLとCSSの作成</h3>
-
-<p>このステップは基礎になるHTMLを作っていく。CSSリセットや、ベースのCSS、そしてヘッダやフッタ、ボディになる部分を作成する。</p>
-
-<p>自分でよく使うテンプレートを持っておくことで大幅に時間を短縮できる部分だ。<br />
-私は<a href="http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/">HTML5 Boilerplate</a>に、グリッドや<a href="https://github.com/stubbornella/oocss">OOCSS</a>のモジュールを組み込むカスタマイズを施し、よく利用するCSSのスタイルを<a href="http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/">LESS</a>のミックスインとして用意している。</p>
-
-<h4>このステップで利用するツール</h4>
-
-<ul>
-  <li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
-  <li><a href="https://github.com/stubbornella/oocss">OOCSS</a></li>
-  <li><a href="http://lesscss.org/">LESS</a></li>
-</ul>
-
-<h3>レイアウト</h3>
-
-<p>まずはグリッドを決めてしまう。<br />
-Photoshopでのステップだと、グリッドを使ったり、ガイドを使ったりするのがこのステップ。
-この時点でグリッドがレスポンシブデザインに対応しているとあとで楽に作業ができる。<br />
-もちろん、慣れないうちは大変だし、リデザインの場合はそうもいかないこともあるだろう。</p>
-
-<p><a href="http://griddle.it/">Griddle.it</a>を使って簡単にCSSでガイドを作成する方法を紹介しよう。</p>
-
-<p>Griddle.itは</p>
-
-<div class="highlight"><pre><code class="html">http://griddle.it/[全体幅]-[コラム数]-[ガターサイズ]
+<div class="highlight"><pre><code class="sh">sudo bash &lt; &lt;<span class="o">(</span>curl -s https://rvm.beginrescueend.com/install/rvm<span class="o">)</span>
 </code></pre>
 </div>
 
-<p>という指定で、グリッド画像を生成してくれる。
-例えば、こちらを開いてみてほしい。<a href="http://griddle.it/960-12-30">幅960px 12コラム 30pxのガター</a></p>
+<p>~/.bash_profile か ~/.bashrcに</p>
 
-<p>自動で画像を生成してくれるので、グリッドパターンが確定したら、</p>
+<div class="highlight"><pre><code class="sh"><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="c"># This loads RVM into a shell session.</span>
+</code></pre>
+</div>
 
-<div class="highlight"><pre><code class="css"><span class="nt">body</span> <span class="p">{</span>
-  <span class="k">background</span><span class="o">:</span> <span class="sx">url(http://griddle.it/960-12-30)</span> <span class="k">repeat-y</span> <span class="k">center</span> <span class="k">top</span><span class="p">;</span>
+<p>を追加(上記ファイルがない場合は、作成して追加)<br />
+では、RVMが正しく動作するかを確認しよう。</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nb">type </span>rvm | head -1
+</code></pre>
+</div>
+
+<p>とターミナルで実行してみる</p>
+
+<div class="highlight"><pre><code class="sh">rvm is a <span class="k">function</span>
+</code></pre>
+</div>
+
+<p>と返事が返ってきたら成功。
+成功したら、またターミナルにて</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nb">source</span> ~/.rvm/scripts/rvm
+</code></pre>
+</div>
+
+<p>と実行しておこう。</p>
+
+<div class="highlight"><pre><code class="sh">rvm install 1.9.2-head
+</code></pre>
+</div>
+
+<p>とすれば、ruby 1.9.2-headのバージョンをインストールできる。<br />
+ちなみに、RVMでインストールできるバージョンは</p>
+
+<div class="highlight"><pre><code class="sh">rvm list known
+</code></pre>
+</div>
+
+<p>とすればリストが表示されるので、表示されたパッケージを<code>rvm
+install</code>の後に記述すればそのパッケージをインストールできる。</p>
+
+<p>なお、RVMではバージョンごとにgemのパッケージを管理するため、さっきまで使えたはずのgemがないとエラーが出る、なんて事態に遭遇したら、</p>
+
+<div class="highlight"><pre><code class="sh">ruby -v
+</code></pre>
+</div>
+
+<p>として現在利用しているrubyのバージョンを確認してみよう。</p>
+
+<div class="highlight"><pre><code class="sh">rvm --default use 1.9.2 <span class="c"># とすると、1.9.2をデフォルトで利用しはじめ</span>
+
+rvm use system <span class="c"># システムにインストールされているRubyと</span>
+rvm default <span class="c"># デフォルト設定したRubyを切り替えることも可能 </span>
+</code></pre>
+</div>
+
+<p>詳しくは<a href="https://rvm.beginrescueend.com/">https://rvm.beginrescueend.com/</a>(英語)</p>
+
+<h2>Ruby Gem</h2>
+
+<p>RubyにはGemと呼ばれるパッケージマネージャがある。1.9系以降からはRubyの標準機能となったそうだ。<br />
+MacではGemも標準でインストールされていたと思うが、記憶が確かではないので確認してほしい。</p>
+
+<div class="highlight"><pre><code class="sh">sudo gem update --system
+</code></pre>
+</div>
+
+<p>とすると、アップデートできるので試してみてほしい。</p>
+
+<p>パッケージマネージャってなんだ、という点については、Ubuntuを使っていた私にはすんなり理解できたが、そうでもない人が多いのでMacでいうところの、macportやfink、homebrewみたいなライブラリ集積地みたいなものだと覚えておけばいいはず。
+*Homebrewについては、<a href="http://css.studiomohawk.com/tool/2011/02/13/terminal-101/">こちらの記事</a>で紹介したので、参考にしてほしい。</p>
+
+<div class="highlight"><pre><code class="sh">gem install PACKAGENAME
+</code></pre>
+</div>
+
+<p>として、パッケージをインストールできる。<br />
+例えば、</p>
+
+<div class="highlight"><pre><code class="sh">gem install rake
+</code></pre>
+</div>
+
+<p>とすると、Ruby版make(ビルドツール)であるrakeをインストールできる。  </p>
+
+<h2>ウェブデザイナにおすすめのパッケージ</h2>
+
+<h3>CSS Sprite</h3>
+
+<p>CSSスプライトはパフォーマンス向上のためには必須になるテクニックだが、作成するのも、管理するのも、メンテナンスするのもとても面倒。
+ある特定のディレクトリに画像を入れて、自動でスプライト画像を作成し、CSSもあわせて作ってくれたら。を叶えるプログラムがRubyにある。</p>
+
+<ul>
+  <li><strong><a href="https://github.com/merbjedi/sprite">merbjedi / sprite</a></strong></li>
+</ul>
+
+<p><strong>インストール</strong></p>
+
+<p><code>rmagick</code>gemが必要になるので、まずはこのgemをインストール。</p>
+
+<div class="highlight"><pre><code class="sh">gem install rmagick <span class="c">#私はこのコマンドではエラーになったので、下記を実行してから、再度チャレンジした</span>
+
+<span class="c"># エラーになった場合は</span>
+sudo brew install libxml2
+sudo brew install ImageMagick
+<span class="c"># を実行してから、上記を実行してほしい。なお、homebrewを利用している場合の例</span>
+</code></pre>
+</div>
+
+<p>そしてspriteのgemをインストール</p>
+
+<div class="highlight"><pre><code class="sh">gem sources -a http://gemcutter.org
+gem install sprite
+</code></pre>
+</div>
+
+<p><strong>使い方</strong></p>
+
+<div class="highlight"><pre><code class="sh">public/
+  images/
+    sprites/
+      black-icons/
+        stop.png
+        go.png
+        back.png
+        forward.png
+
+      weather/
+        sunny.gif
+        rainy.gif
+        cloudy.gif
+</code></pre>
+</div>
+
+<p>というようなディレクトリ構造を例とすると、
+<code>public</code>にて</p>
+
+<div class="highlight"><pre><code class="sh">sprite
+</code></pre>
+</div>
+
+<p>というコマンドを実行すると</p>
+
+<div class="highlight"><pre><code class="sh">public/
+  stylesheets/
+    sprites.css
+  images/
+    sprites/
+      black-icons.png
+      weather.png
+</code></pre>
+</div>
+
+<p>というファイルを生成する。</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.sprites.blue-stars-small</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/small.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">0px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">6px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.sprites.blue-stars-medium</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/medium.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">6px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.sprites.blue-stars-large</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/large.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">21px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">60px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.sprites.blue-stars-xlarge</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/xlarge.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">96px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">75px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>背景画像に読み込んでしまえばOK。</p>
+<p>というようなスタイルを書き出してくれる。<br />
+sassのmixinも利用できるようで、設定も変更できる。</p>
 
-<p>レスポンシブデザインに対応したいという方は、私のおすすめフレームワーク<a href="http://lessframework.com/">Less
-Framework</a>を利用して、ベース(グリッドの部分だけ利用するのがおすすめ)のCSSを作成し、Less Frameworkに対応した実際にグリッドがウィンドウのサイズに合わせて変更されるこの<a href="http://arnaumarch.com/en/less-grid.html">JavaScript</a>を組み込むと楽にできる。</p>
+<p>詳しくは<a href="https://github.com/merbjedi/sprite">こちら</a>(英語)。</p>
 
-<p>すでに自分のレスポンシブデザインのベースがあるという場合は、Griddle.itを利用して、media
-queriesで呼び出す画像を切り替えればOK。</p>
+<h3>SASS/LESS</h3>
 
-<p>また、HTML5 Boilerplateをベースに選択していて、Less
-Frameworkなどを組み込むのが面倒な場合は、Andy Clerkeの<a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and up</a>を利用するといいだろう。(モバイルファーストという概念で作られているので、若干注意が必要)</p>
+<p>LESSは今ではnode.jsプロジェクトとして生まれ変わったが、最新版ではないものの、gemからインストールはできる。
+SASSについては、先日1年ぶりほどのアップデートがありアクティブにRubyプロジェクトとして成長している。</p>
 
-<p>さらに、レスポンシブウェブデザインでは現在のウィンドウの幅がどのサイズにあたるのかわかりづらいとちょっと面倒なので、
-<a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size bookmarklet to test/debug CSS3 Media Queries</a>のブックマークレットを利用すれば、ウィンドウサイズを知らせてくれるので、非常に便利。</p>
+<p>ちなみに、SASSでは<a href="http://www.hagenburger.net/BLOG/Lemonade-CSS-Sprites-for-Sass-Compass.html">Lemonade</a>というパッケージを利用してCSS Spriteの自動化を行うこともできる。</p>
 
-<p>ちなみに、この後のステップでは、CSSやHTMLを保存し、ブラウザをリフレッシュして変更を確認し〜を繰り返す。
-より時短を目指すため、<a href="http://livejs.com/">Live.js</a>を活用することをおすすめする。<br />
-このJavaScriptは、ファイルの保存を検知して、ブラウザのリロードを行わず、変更を反映するという夢のようなツール。<br />
-ブラウザでデザインしていなくて、コーディングしている時にかなり役に立つ強力なJavaScript。</p>
+<p>LESSについての説明は、<a href="http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/">LESS: CSSをよりシンプルに、パワフルに</a>を参考にしてほしい。</p>
 
-<h4>このステップで利用するツール</h4>
+<p><strong>インストール</strong></p>
+
+<div class="highlight"><pre><code class="sh">gem install less <span class="c">#LESS</span>
+gem install sass <span class="c">#SASS</span>
+</code></pre>
+</div>
+
+<h3>Juicer</h3>
+
+<p>リクエスト回数を減らすためには、CSS/JSの呼び出しは最小にしておく必要がある。<br />
+が、CSSもJSもメンテナンス性を考えれば、たくさんのファイルになってしまうのが常。<br />
+この矛盾を解決するためのプログラムが<a href="http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool">Juicer</a>。</p>
+
+<p>Juicerは、YUI
+Compressorを利用してCSS/JSを圧縮した上で、CSSであれば@importを使ってファイルを結合してくれ、JSであれば、</p>
+
+<div class="highlight"><pre><code class="sh">/**
+ * @depends prototype.js
+ * @depends widgets/lightbox.js
+ */
+</code></pre>
+</div>
+
+<p>というコメントを使って、ファイルの結合を行うことが可能。<br />
+CSSはmaster.cssというファイルに@importのみを記述して、JSもmaster.jsというファイルにコメント文だけ記述している。</p>
+
+<p>実行すると、それぞれmaster.min.css、master.min.jsというファイルを書き出してくれる。</p>
+
+<p>使い方はとても簡単。</p>
+
+<div class="highlight"><pre><code class="sh">juicer merge --force master.css <span class="c"># CSS --forceはmaster.min.cssが存在しても上書きを強制</span>
+juicer merge -i --force master.js <span class="c">#JS -iはエラーを無視して圧縮/結合を実行するオプション</span>
+</code></pre>
+</div>
+
+<p>ついでに、</p>
+
+<div class="highlight"><pre><code class="css"><span class="nt">h1</span> <span class="p">{</span> <span class="k">background</span><span class="o">:</span> <span class="sx">url(/somepath/someimage.png?embed=true)</span><span class="p">;</span> <span class="p">}</span>
+<span class="c">/* ?embed=trueを追加する */</span>
+</code></pre>
+</div>
+
+<p>とすると、画像をdata-urlに変換してくれる。</p>
+
+<div class="highlight"><pre><code class="sh">juicer merge --force master.css --embed-images data_uri
+</code></pre>
+</div>
+
+<p>のように実行すればOK。</p>
+
+<p><strong>インストール</strong></p>
+
+<div class="highlight"><pre><code class="sh">gem install juicer <span class="c"># Juicerをインストール</span>
+juicer install yui_compressor <span class="c"># YUI compressorをインストール</span>
+juicer install closure_compiler <span class="c"># Google Closure Compilerをインストール</span>
+juicer install jslint <span class="c"># JsLintをインストール</span>
+</code></pre>
+</div>
+
+<h3>CSS Redundancy Checker</h3>
+
+<p>何年か前にウェブツールとして同名のツールがあり、ある日使えなくなってしまった。
+<a href="http://code.google.com/p/css-redundancy-checker/">CSS Redundancy
+Checker</a>は、あるHTML郡で使われていないスタイルルールをリストアップしてくれるという強力なツール。<br />
+フロントエンドデベロッパのタスクのほとんどはIteration、日本語にすると反復することが多く、その反復がよりよいモノを生み出すための最も大事な原動力となる。<br />
+しかしその副産物として、使っていないスタイルルールであふれかえって、何を消したらまずいのかもはやわからない状態になってしまう。<br />
+その問題を解決するのがこのツールというわけだ。</p>
+
+<p>使い方</p>
+
+<div class="highlight"><pre><code class="sh">ruby css-redundancy-checker.rb <span class="o">[</span>CSSファイル名<span class="o">]</span> <span class="o">[</span>HTMLファイルディレクトリ または URLを一行ずつ記述した.txt<span class="o">]</span>
+</code></pre>
+</div>
+
+<p>とするだけ。CSSを分割して管理している場合は、Juicerで結合してから実行するといいだろう。
+もちろんある特定のCSSファイルをチェックしたい場合は、個別に指定すればOK。</p>
+
+<p><strong>インストール</strong></p>
+
+<div class="highlight"><pre><code class="sh">sudo gem install hpricot <span class="c"># hpricotをインストール、必須</span>
+svn checkout http://css-redundancy-checker.googlecode.com/svn/trunk/ css-redundancy-checker
+<span class="c"># svnをインストールしていない場合は、sudo brew install svnとしてから</span>
+</code></pre>
+</div>
+
+<p>css-redundancy-checker.rbという名前の通り、このスクリプトは単純な1ファイル。<br />
+なので、実行する際はインストールしたディレクトリに移動してから実行する必要がある。</p>
+
+<h3>Rake</h3>
+
+<p>Rakeはそれ自体ではなにもしないが、非常に強力なツール。<br />
+ビルドツールとして誕生したRakeのはずだが、私はビルドツールがなんのことかも完璧には理解できない。<br />
+要するに、A)の次はB)を実行し、C)を実行するのは、A)を実行する必要がある。<br />
+というなプロセスをrubyを使って行うことができる。いわばエディタなどにあるマクロみたいな存在。</p>
+
+<p>ここまで紹介してきたツール群はもちろんのこと、Rakeを使って  </p>
 
 <ul>
-  <li><a href="http://griddle.it/">Griddle.it</a></li>
-  <li><a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size bookmarklet to test/debug CSS3 Media Queries</a></li>
-  <li><a href="http://livejs.com/">Live.js</a></li>
-  <li><a href="http://lessframework.com/">Less Framework</a> + <a href="http://arnaumarch.com/en/less-grid.html">Less Grid</a> (Less Framework利用時)</li>
-  <li><a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and up</a> (HTML5
-Boilerplate利用時)</li>
+  <li><a href="http://optipng.sourceforge.net/">OptiPNG</a>を使ってPNG画像の最適化</li>
+  <li><a href="http://sylvana.net/jpegcrop/jpegtran/">JPEGtran</a>を使ってJPEG画像の最適化
+(Macへのインストール方法は、<a href="http://www.phpied.com/installing-jpegtran-mac-unix-linux/">こちらを参照</a>(英語))</li>
+  <li><code>sprite</code>を使ってスプライト画像/CSSを作成</li>
+  <li><code>juicer</code>を使って、CSS/JSの圧縮/結合</li>
+  <li><a href="http://code.google.com/p/htmlcompressor/">htmlcompressor</a>を使ってHTMLの最適化</li>
 </ul>
 
-<h3>残りのステップは、デザインしていくだけ。</h3>
+<p>このプロセスをrake taskとして作成すれば、<code>rake
+タスク名</code>とするだけで一気に終了できる。  </p>
 
-<p>コンテンツなしにデザインすることができないのは、Photoshopであろうと、ブラウザでのデザインでも同じ。
-だが、画像素材や原稿がまだの場合は、想定している画像のサイズや原稿の分量などを伝えるというステップもあってもいいかも知れない。
-(実際に私の職場では非常によくある)</p>
+<p><code>rsync</code>や<code>ftp</code>なども合わせるとファイルアップロードまで自動化できる。</p>
 
-<p>フレキシビリティこそが、ブラウザでデザインすることのもっとも優れた点なので、活用していこう。</p>
-
-<p>ダミー画像の生成なら、<a href="http://lorempixum.com/">lorempixum</a>が数あるダミー生成ツールのなかでももっとも優れている。<br />
-グレーを始めとする単色だけでなく、サイズの指定はもちろん、色の指定、画像のジャンルの指定すらできる優れものだ。</p>
-
-<p>プロトタイプとして、素材の提供者にブラウザで確認してもらうには十分こと足りるだろう。<br />
-日本語では、海外のようなLorem Ipsumテキストがないので、どうしてもダミー原稿が欲しい場合は、私は<a href="http://webtools.dounokouno.com/dummytext/index.html">ダミーテキストジェネレータ</a>を利用している。</p>
-
-<h2>インブラウザ デザインの注意点</h2>
-
-<p>CSS3はIE6-8では使えないプロパティもある。<strong>全てをブラウザでデザインすることは不可能だ</strong>。<br />
-テキスチャやCSS3では表現しづらいデザインももちろんある。<br />
-<strong>Photoshopを絶対に使ってはならない</strong>ということではない。<br />
-ブラウザでデザインすることはPhotoshopでページすべてのデザインを行うよりもフレキシブルだということ、そして、現時点でそれを行うことが以前に比べれば格段に簡単になったことが大切な部分だと思ってほしい。</p>
-
-<p>Photoshopでページすべてのデザインをしていると、カラースキームを変更するのは大変。<br />
-Photoshopでページすべてのデザインをしていると、フォントを変更するのは大変。<br />
-Photoshopでページすべてのデザインをしていると、要素の配置1つを動かしても大変。<br />
-レイヤーの管理は崩壊し、ちょっとした変更の依頼もストレスになる。<br />
-もちろん、先に書いたレスポンシブウェブデザインの実現も相当な時間がかかる。</p>
-
-<p>インブラウザ デザインではこういった部分でPhotoshopより優れている。<br />
-Photoshopがインブラウザ デザインより優れている部分ももちろんある。<br />
-(私にとっては十分だが)<a href="http://www.pixelmator.com/">Pixelmator</a>も、レイヤースタイルに対応した<a href="http://flyingmeat.com/acorn/">Acorn</a>もPhotoshopがデファクトになってきた強力な機能やユーザビリティにはまだ少し距離がある。<br />
-ここで最も大切なことは、Photoshopでのデザインプロセスにも疑問を投げかける時代が来たということ。</p>
-
-<p>よりプロダクティブになることが、ウェブデザイナのタスクの1つで、そうすることで、より優れた問題解決を提案できる、作ることそのものより、どうやって問題を解決するべきか、を考える時間を作り出していくことが大切なこと。</p>
-
-<p>ブラウザでデザインすること。<br />
-このプロセス、ツールセットにバージョンをつけるとしたら、1.0RCといったところだろう。<br />
-CS5.5になるほど、イテレーションを繰り返しすばらしいプロダクトを提供してきたAdobe
-Photoshopと比べればまだまだ始まったばかり。<br />
-このプロセス/ツールセットのバージョンアップを行うのは、ウェブデザイナたちの役割だ。</p>
-
-<h2>ブラウザでのデザインについてもっと詳しく</h2>
+<p><strong>Rakeのチュートリアル</strong></p>
 
 <ul>
-  <li><a href="http://37signals.com/svn/posts/1061-why-we-skip-photoshop">Why we skip Photoshop (37signals)</a></li>
-  <li><a href="http://www.hicksdesign.co.uk/journal/graphics-editor-or-text-editor">Graphics Editor or Text Editor? (The Hickensian)</a></li>
-  <li><a href="http://www.stuffandnonsense.co.uk/blog/about/walls_come_tumbling_down_presentation_slides_and_transcript/">Walls Come Tumbling Down presentation slides and transcript (Stuff and Nonsense)</a></li>
-  <li><a href="http://24ways.org/2009/make-your-mockup-in-markup">Make Your Mockup in Markup (24 ways)</a></li>
-  <li><a href="http://christeso.com/why-i-never-design-a-site-in-photoshop">Why I never design a site in Photoshop (Bullies Get High On Beatings)</a></li>
-  <li><a href="http://www.quora.com/Joel-Lewenstein/Life-Without-Photoshop">Life Without Photoshop by Joel Lewenstein (Quora)</a></li>
-  <li><a href="http://www.inspiredm.com/learn-to-use-your-browser-in-web-design/">Learn to Use Your Browser in Web Design (Inspired Magazine)</a></li>
+  <li><a href="http://jasonseifer.com/2010/04/06/rake-tutorial">Rake Tutorial by Jason Seifer</a></li>
+  <li><a href="http://martinfowler.com/articles/rake.html">Using the Rake Build Language</a></li>
+  <li><a href="http://pastie.org/242691">Rake Quick Reference by Greg Houston</a></li>
 </ul>
+
+<p>などが参考になるだろう。もちろん全部英語の文書なので、CSS
+Radarの癖にRakeの詳しい説明を知りたい方は、<a href="http://twitter.com/#!/cssradar">Twitter@cssradar</a>にてリクエストしてほしい。<br />
+私も覚えたてなので、全部の質問には答えることができるかわからないが。</p>
+
+<h2>ウェブデザイナ/フロントエンドデベロッパのRuby</h2>
+
+<p>ウェブデザイナ/フロントエンドデベロッパのタスクは多岐に渡る。<br />
+Adobe
+Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/アクセシビリティに考慮し、行動心理学を応用しつつ、ウェブサイトをユーザに届ける。<br />
+その上、プログラマの領分であるはずのRubyにまで手を出す。<br />
+それもすべて時間を生み出すための技術。<br />
+その時間がよりよいサイトを生み出すための原動力だから。<br />
+新しいことへの出会いはいつだってインスピレーションへ続く近道だと信じているので、是非チャレンジしてほしい。<br />
+もし今回紹介しなかった便利なスクリプトなどご存知でしたら、是非教えてください。</p>
 
 	</div>
 	<footer>
@@ -263,7 +460,7 @@ Photoshopと比べればまだまだ始まったばかり。<br />
 		<nav class="pagenation left">
 		<ul>
 			
-			<li class="prev"><a class="internal" rel="prev"  href="/frontend/2011/04/09/why_speed_matters/" title="View ページの高速化とその方法について">&laquo; ページの高速化とその方法について</a></li>
+			<li class="prev"><a class="internal" rel="prev"  href="/webdesign/2011/04/16/designing_in_browser/" title="View ブラウザでデザインをするということ">&laquo; ブラウザでデザインをするということ</a></li>
 			
 			
 			
@@ -311,7 +508,7 @@ Theme: <a href="https://github.com/studiomohawk/CSS-Radar">the_radar</a> created
 </footer><!-- id="foot" -->
 
 	</div><!-- id="page" -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 <script src="/js/master.min.js"></script>
 <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
        change the UA-XXXXX-X to be your site's ID -->

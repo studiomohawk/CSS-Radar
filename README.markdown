@@ -5,9 +5,18 @@
 * Version: 1.0
 * Tags: diy,minimum
 
-### About:
+### About Theme:
+
+[Jekyll](https://github.com/mojombo/jekyll)テーマ、the_radarは読みやすいテキストをメインフォーカスにおいたシンプルでミニマムなテーマ。  
+HTML5とCSS3をフル活用し、シンプルなマークアップとスタイルも実現しています。  
+テーマファイルは自由に利用できます。  
+もし、テーマファイルを利用してサイトを作成した場合、このページか、あるいは、[CSS Radar](http://css.studiomohawk.com/)へのリンクをどこかにいれて貰えるとうれしいですが、強制はしません。
+
+### About Site:
+
 現役フロントエンドデベロッパ、斉藤祐也が、CSS/CSS3/HTML/HTML5の情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
 質問や記事のリクエストは[Twitter@cssradar](http://twitter.com/#!/cssradar)でも受け付けています。
 
 ### License:
+
 \_site以下にあるすべての記事、画像は記事内で断りがない限りCreative Common Attribute by 3.0にて、それ以外のファイルはすべてMITライセンスでライセンスしています。

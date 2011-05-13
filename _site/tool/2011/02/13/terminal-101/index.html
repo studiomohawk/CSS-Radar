@@ -9,7 +9,7 @@
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
 	<link rel="stylesheet" media="all" href="/style/master.min.css">
-	<script src="/js/modernizr.js"></script>
+	<script src="//ajax.cdnjs.com/ajax/libs/modernizr/1.7/modernizr-1.7.min.js"></script>
 	
 		<title>ターミナルを使いこなす | CSS Radar | For Frond End Developers</title>
 		<meta name="description" content="Terminal.appは怖い。 GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。 Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。 MacVimをメインのエディタにしてから3ヶ月ほど、年明けからJekyllを使ってブログを作成しはじめた。Rubyを覚えてみようと今年から勉強中。 自分自身考えてもいなかったが、それらすべてがターミナルの便利さを教えてくれた。 MacVimでは、もちろんコマンドを実行できるが、コマンドそのものとは関係なく、インサートモードとノーマルモードの切り替えというメンタリティはGUIとCUIのメンタリティと似てる。それに覚えるのに時間はかかるかもしれないが、一旦覚えてしまうともう戻れない中毒性に近い利便性を手に入れる楽しみも覚えられた。 Jekyllはターミナルを使わなければブログの更新すら出来なくなる。基本的なコマンドはJekyllを使ううちに覚えてしまった。 Rubyはirbで実際にRubyを使って気楽に自分の書いたコードをテストしたりするのにターミナルを利用している。 ソースコードリーディングのテキストとしてお気に入りのHTML5 Boilerplateで、Build Scriptが追加され、フロントエンドデベロッパの間でも、自前のオートメーションを作ることが当たり前になってきそうな流れもある。 そんなタイミングだからこそ、ターミナルを使いこなせる人になろうと、こんな時代に提言したい。 私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるが、きっかけさえつかんでしまえば、どうにかなる。ちなみに私はWindowsではCygwinをConsoleから利用している。 まずは見た目からカスタマイズ 私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないが、そんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。 だからこそ、ターミナルにも見た目を要求したい。 Visor Visorはターミナルをショートカットキーで呼び出すことが出来るTerminal.appのヘルパ。control+controlで画面の1/3ほどのターミナル画面がスライドしてくる便利でかつ、おしゃれなツール。 MacではiTerm2というターミナル互換アプリも人気があるようで、こちらはVisorとは連動できないが、同じようにショートカットキーで呼び出すことができるオプションがある。 .bashrc(リンク先は私が利用している.bashrcファイルの一部) デフォルトでTerminalを開くと、黒い背景に白い文字。あまりにも地味なので、私はもう少しだけカラフルにしている。 そのついでにGitをターミナルで使いやすくなるように、ブランチ名や変更を知らせてくれるマークもカラーをつけて表示している。 ちょっとカスタマイズしてあげるだけで気持ちよく利用することができる。 Mac OSXでターミナルにgitのブランチ名を表示する方法...">
@@ -31,6 +31,14 @@
 	<nav id="backnumber" class="backnumber">
 		<ul>
 			
+		<li>
+		<h6 class="title"><a href="/tool/2011/05/14/ruby_for_designer_frontend_dev/" title="ウェブデザイナのためのRuby入門">ウェブデザイナのためのRuby入門</a></h6>
+			<date>
+				<span class="day">14</span>
+				<span class="month"><abbr>May</abbr></span>
+			</date> 
+		</li>
+		
 		<li>
 		<h6 class="title"><a href="/webdesign/2011/04/16/designing_in_browser/" title="ブラウザでデザインをするということ">ブラウザでデザインをするということ</a></h6>
 			<date>
@@ -60,14 +68,6 @@
 			<date>
 				<span class="day">01</span>
 				<span class="month"><abbr>Apr</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/tool/2011/03/15/html5boilerplate/" title="HTML5 Boilerplate">HTML5 Boilerplate</a></h6>
-			<date>
-				<span class="day">15</span>
-				<span class="month"><abbr>Mar</abbr></span>
 			</date> 
 		</li>
 		
@@ -351,7 +351,7 @@ Theme: <a href="https://github.com/studiomohawk/CSS-Radar">the_radar</a> created
 </footer><!-- id="foot" -->
 
 	</div><!-- id="page" -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 <script src="/js/master.min.js"></script>
 <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
        change the UA-XXXXX-X to be your site's ID -->
