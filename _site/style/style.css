@@ -221,7 +221,8 @@ a:hover {
 }
 .the-article .content .meta .category:before { content: "about "; }
 .the-article .content .meta .category:after { content: " /"; }
-.the-article .content .meta date:before { content: "published at"; }
+.the-article .content .meta .date-pub:before { content: "and published at"; }
+.the-article .content .meta .update-pub:before { content: " / updated at"; }
 .the-article .content .highlight { margin-bottom: 1.5em; }
 .the-article .content .highlight:before {
   content: "Source code:";
@@ -279,7 +280,8 @@ a:hover {
 }
 .archive .meta .category:before { content: "in "; }
 .archive .meta .category:after { content: " section"; }
-.archive .meta date:before { content: "and published at"; }
+.archive .meta .date-pub:before { content: "and published at"; }
+.archive .meta .update-pub:before { content: " / updated at"; }
 #foot {
   background: #1a1a1a;
   border-top: 1px solid rgba(39, 39, 39, 0.8);
