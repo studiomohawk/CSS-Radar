@@ -193,8 +193,16 @@ a:hover {
 			overflow: auto;
 		}
 		.ask { border-top: 1px solid #444e51;
-			small { font-size: 85%; }
-			strong { display: block; }
+			small {
+				font-size: 85%;
+				margin-left: 14px;
+			}
+			.askme {
+				background-color: rgba(75, 77, 69, 0.8);
+				padding: 3px 5px;
+			}
+			.askme:link { border-bottom: 0 none; }
+			.askme:hover { background-color: rgba(75, 77, 69, 0.5); }
 		}
 
 		footer {

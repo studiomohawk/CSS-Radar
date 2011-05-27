@@ -29,23 +29,21 @@ title: CSS Radar
 	<footer>
 		<div class="foot-inner">
 		<nav class="pagenation left">
-		<ul>
-			{% if post.previous %}
-			<li class="prev"><a class="internal" rel="prev"  href="{{ post.previous.url }}" title="View {{ post.previous.title }}">&laquo; {{ post.previous.title }}</a></li>
-			{% endif %}
-			{% if post.previous and post.next %}
-			<li class="pipe"> | </li>
-			{% endif %}
-			{% if post.next %}
-			<li class="next"><a class="internal" rel="next"  href="{{ post.next.url }}" title="View {{ post.next.title }}">{{ post.next.title }} &raquo;</a></li>
-			{% endif %}
-		</ul>
+			<ul>
+				{% if post.previous %}
+				<li class="prev"><a class="internal" rel="prev"  href="{{ post.previous.url }}" title="View {{ post.previous.title }}">&laquo; {{ post.previous.title }}</a></li>
+				{% endif %}
+				{% if post.previous and post.next %}
+				<li class="pipe"> | </li>
+				{% endif %}
+				{% if post.next %}
+				<li class="next"><a class="internal" rel="next"  href="{{ post.next.url }}" title="View {{ post.next.title }}">{{ post.next.title }} &raquo;</a></li>
+				{% endif %}
+			</ul>
 		</nav>
 		<nav class="archive right">
 			<ul>
-			    <li>
-			        <a href="/backnumber/">Back Number</a>
-			    </li>
+				<li><a href="/backnumber/">Back Number</a></li>
 			</ul>
 		</nav>
 		</div>

@@ -238,8 +238,16 @@ a:hover {
   overflow: auto;
 }
 .the-article .content .ask { border-top: 1px solid #444e51; }
-.the-article .content .ask small { font-size: 85%; }
-.the-article .content .ask strong { display: block; }
+.the-article .content .ask small {
+  font-size: 85%;
+  margin-left: 14px;
+}
+.the-article .content .ask .askme {
+  background-color: rgba(75, 77, 69, 0.8);
+  padding: 3px 5px;
+}
+.the-article .content .ask .askme:link { border-bottom: 0 none; }
+.the-article .content .ask .askme:hover { background-color: rgba(75, 77, 69, 0.5); }
 .the-article .content footer {
   background: #151919;
   border-top: 1px solid rgba(57, 64, 67, 0.8);
