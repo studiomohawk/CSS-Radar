@@ -1,27 +1,214 @@
 ---
 layout: post
 category: tool 
-title: Jekyll
-date: 2011-05-22 20:02:28
-published: false
+title: Jekyllを使ってブログをつくろう
+date: 2011-06-11 13:39:28
 ---
+
+Amazon S3にて静的ファイルによるウェブサイトを構築できるようになり、Amazon Web
+Serviceが日本リージョンを追加したことで、これからJekyllのような静的ファイルジェネレータを使ったブログが日本でも増えるのではないか。  
+
+Jekyllといえば、このCSS
+Radarも今年1月からwordpressを離れ、Jekyllを使ってブログを構築している。  
+(残念ながらまだAmazon S3でのホストはしていない)  
+
+Amazon Web Service勉強会でも、JekyllとAmazon S3についての発表があった。([usteam](http://www.ustream.tv/recorded/14269210))  
+そこで、今回はRubyでも、コマンドラインでも初心者である私でもつくれるようになったJekyllについて紹介しよう。
 
 ## 開発環境の準備
 
-## 基本ファイルストラクチャとポスト
+JekyllはRubyで作成されているので、当然ながらRubyが必要。  
+Rubyの導入については、[ウェブデザイナのためのRuby入門](http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/)を参考にしてほしい。
 
-## レイアウトの作成
+Rubyの準備ができたら、
+
+{% highlight sh %}
+gem install jekyll
+{% endhighlight %}
+
+*パーミッションがどうの、というエラーがでたら、``sudo gem instal
+jekyll``とすればインストールできるはず。
+
+CSS
+RadarではHTMLやら、CSSなどのソースコードの表示もあるので、Pygmentsを使ってシンタックスハイライトを行っている。  
+Homebrewを使っているなら、インストールは簡単。
+
+{% highlight sh %}
+brew install pip && pip install pygments
+{% endhighlight %}
+
+としてから、Homebrewでは実行ファイルにsymlinkがつかないそうで、下記を実行してsymlinkをつくる
+
+{% highlight sh %}
+ln -s /usr/local/Cellar/python/2.7/bin/pygmentize /usr/local/bin/pygmentize
+{% endhighlight %}
+
+## 基本フォルダ/ファイル構造と記事の作成
+
+### 基本フォルダとファイルの準備
+
+{% highlight sh %}
+.  
+|-- _config.yml (設定ファイル)  
+|-- _layouts (テンプレートフォルダ)  
+|   |-- default.html  
+|   -- post.html  
+|-- _posts (記事フォルダ、.textileか.markdownで記述)  
+|   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile  
+|   -- 2009-04-26-barcamp-boston-4-roundup.textile  
+|-- _site (HTML生成先フォルダ)  
+-- index.html
+{% endhighlight %}
+
+アンダーバーから始まる、``_layouts``、``_posts``、``_site``の3つのフォルダが必須のフォルダになる。  
+手前から、テンプレート保管、記事、生成先フォルダという役割がある。  
+``_config.yml``はサイト全体に影響する設定ファイル。
+
+必須になるのはたったこれだけというシンプル設計もJekyllの魅力の1つ。
+
+### 記事の作成
+
+Jekyllでは、記事の作成は.markdown、または.textileという軽量マークアップ言語の文法で記述されたプレーンテキストファイルで行う。  
+``$YEAR-$MONTH-$DATE-$TITLE.$FORMAT``という形式で、\_postsフォルダに格納されたファイルをJekyllがプロセスしてくれる。  
+
+例えば、2011年5月14日に作成したウェブデザイナのためのRuby入門という記事なら、``2011-05-22-ruby-for-designer.markdown``というファイル名になる。  
+URLに入るタイトル名はアルファベットにしておいた方が無難だろう。2バイト文字を利用できるかは試してみた事はない。
+
+{% highlight sh %}
+---
+layout: post
+category: tool 
+title: Jekyllを使ってブログをつくろう
+date: 2011-06-11 13:39:28
+---
+{% endhighlight %}
+
+記事のファイルの先頭にはYAML front matterと呼ばれる設定部分が必要になる。  
+今回の記事のYAML front matterが上記。  
+layoutでは、\_layoutsに作成したテンプレート定義ファイルを設定し、  
+categoryにはカテゴリ、titleにはもちろんタイトル、そしてdateには更新日を記述することができる。  
+ここで必須になるのは、layoutとtitleの2ヶ所のみとなり、YAML front
+matterで設定した項目は、記事であればその記事内のテンプレート定義ファイル内の変数として利用することが可能。
+
+## テンプレートの作成
+
+それではテンプレートの作成について見てみよう。
+
+テンプレート定義ファイルは何の変哲もないHTMLで記述される。例外は記事ファイル内のYAML front matterに記述するlayoutの部分で利用する、テンプレート名をこちらも同じく、
+
+{% highlight sh %}
+---
+layout: post
+---
+{% endhighlight %}
+
+というようにYAML front
+matterとして記述するという点と、後述するLiquidというテンプレートエンジンを利用して記事部分のレンダリングなどを行ったりするという点が異なる。　　
+
+wordpressでもそうだが、この手のテンプレファイル系は実際にファイル自体を見た方が早い。  
+私が公開しているJekyll用テーマファイル、[the_minimumの記事用レイアウトファイル](https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_layouts/post.html)を見ながら、
+次項を読んでほしい。
 
 ## Liquidについて
 
+Liquidは非常にシンプルなテンプレートエンジンで、これまでwordpressに慣れてきた場合は少し物足りなく感じるかもしれないが、その代わり覚えるのは簡単。
+Liquidで利用できるタグについては、[こちら](https://github.com/tobi/liquid/wiki/liquid-for-designers)を参考に、  
+また、Jekyllで利用できるLiquidの拡張タグについては、[こちら](https://github.com/mojombo/jekyll/wiki/Liquid-Extensions)。
+
+先ほどのthe_minimumのpost.htmlを見ながらLiquidテンプレートタグで必須になるもタグと、便利なタグについて紹介しよう。
+
+<script src="https://gist.github.com/1021183.js?file=liquid.required.tag.html"></script>
+
+必須になるのは上記2つというやはりシンプル設計。
+
+<script src="https://gist.github.com/1021118.js?file=liquid.html"></script>
+
+インクルードはメンテナンスのために覚えておきたいタグで、  
+オフィシャルページにもあまり説明のないページネーションについてはもっともシンプルな例ながら、利用できるタグについてはほぼ網羅しているので、カスタマイズする際の参考になれば。
+
+## \_config.ymlの設定
+
+ここで利用できる値はほぼ無限にあるものの、まずはオフィシャルを参考にしてほしい。
+[https://github.com/mojombo/jekyll/wiki/Configuration](https://github.com/mojombo/jekyll/wiki/Configuration)
+
+\_config.ymlは非常に強力で、オフィシャルで使えるとしている設定以外にも自由に設定を拡張できる。  
+こちらについても、[the_minimumのファイルを参考にしてほしい](https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_config.yml)。
+
+\_config.ymlで設定した値はテンプレートファイル内で、
+
+``site.項目``  
+
+のように呼び出す事ができる。例えば、the_minimumで設定したGoogle
+Analytics用IDを格納する``ga``を呼び出す場合は、
+
+``site.ga``
+
+というように呼び出す事が可能。  
+コンスタントに利用する値、他には例えばサイトのURLやサイト自体のタイトルなどを設定しておくと管理が非常に楽になるはずだ。
+
 ## ページの作り方
 
-## 基本以外のディレクトリとファイルの扱い
+wordpressでは単一ページを作成し、aboutページなどを作成してきたという人もいることだろう。  
+Jekyllでも単一ページを作成することが可能。
 
-## おすすめプラグイン
+ページの作成方法についてもやはりシンプル設計で、トップページにあたる部分``index.html``(トップページも単一ページ)と同じ階層にhtmlファイルを設置すればOK。  
+こちらはCSS Radarのファイルを覗いてみてほしい。
+
+- [404ページ](https://github.com/studiomohawk/CSS-Radar/blob/master/404.html)
+- [バックナンバページ](https://github.com/studiomohawk/CSS-Radar/blob/master/backnumber.html)
+- 少しトリッキーながらフィードファイルも生成できる [atom.xml](https://github.com/studiomohawk/CSS-Radar/blob/master/atom.xml)
+
+## 基本以外のフォルダについて
+
+Jekyllでは``\_layouts``、``\_posts``、``_site``のみが必須のフォルダと先ほど書いたが、Liquidの説明部分で書いたようにインクルードファイルを格納する、``_include``フォルダや、Jekyllに拡張機能を追加するための、``_plugins``フォルダを作成することができる。アンダーバーがフォルダ名の頭にある場合、Jekyllはそれらをシステムファイルとして扱い、プロセスの際にそれらフォルダも見に行くようになっている。  
+
+アンダーバーがついていないフォルダはJekyllとしては何の処理もしないが、きちんと``\_site``フォルダへ移動してくれる。  
+なので、CSSやJavascript、そして画像などを格納するフォルダを、それぞれ、``style``、``script``、``image``というようにして、ファイルを格納しておこう。
 
 ## ローカル環境でプレビュー
 
+このチュートリアル中に新たにデザインを作成し、Jekyll用にコーディングを完成するのは難しいと思うので、ここから先はすでに作成した私のthe_minimumをダウンロードしてから実践して見てほしい。
+
+Jekyllではコマンドラインを利用してファイルの生成を行う。そう、デザイナには不可解な黒い画面。  
+黒い画面とはいえ、使うコマンドは片手で数えられる程度なので、問題ないし、コピペできるように記述するので、是非試してみてほしい。
+
+それでは、[the_minimumのダウンロードは終わっただろうか](https://github.com/studiomohawk/jekyll-theme-the_minimum)？  
+ターミナルを開いて、the_minimumをダウンロードしたフォルダに移動してほしい。移動は``cd``。
+
+{% highlight sh %}
+jekyll --server --auto
+{% endhighlight %}
+
+``--server``オプションはプレビュー環境用のサーバを立ち上げ、  
+``--auto``オプションは、ローカルファイルが保存されるたびに、ファイル生成を行うオプション。
+
+このコマンドをターミナルにて実行したら、
+
+[http://localhost:4000/](http://localhost:4000/)
+
+をブラウザで見るとJekyllをローカル環境で動作させた結果を見る事ができる。  
+
+Jekyllは非常に強力なのに、シンプルで、インクルードなど便利な機能もついてくるので使い方を工夫すればすばらしいプロトタイプ作成ツールにもなるのではないかと思って、ベースとなるテンプレートを鋭意作成中。
+話は少しそれたが、思っていた以上に簡単だったのではないだろうか？
+
 ## サーバへのアップロード
 
+サーバへのアップロードはとても簡単。  
+FTPを使って、``\_site``内に生成されたファイル群をアップロードすればOK。  
+
+私は面倒くさがりなので、rakeを使ってrsyncでサーバとローカルファイルの同期をとっている。
+``rake rsync:live``
+とするだけで、指定のローカルフォルダとサーバの同期がとれるようにしてある。
+
+美しさの保証はまったくしないが、[Rakefileも公開してある](https://github.com/studiomohawk/CSS-Radar/blob/master/Rakefile)ので参考になれば。
+
 ## 最後に
+
+Jekyllを使ってみようと思ったきっかけは、Rubyの勉強になるだろうという単純な動機からだったが、今となってはwordpressより手軽で、ページロードのスピードも格段に早く、セキュリティの心配もまったくせずに済む、この環境が気に入っている。  
+もちろん、覚えなければならないことも多いし、バージョンが0.10という若い番号なだけに、きちんとしたドキュメントすら整備されていない。  
+万人にお勧めできるとは言いがたいが、新しいことにチャレンジすることはいい刺激になることは保証する。
+
+CSS Radarの直近の目標はAmazon S3でホストするように変更すること。  
+どなたか、東京リージョンを利用できるコマンドラインのツールをご存知でしたら、教えてください。
+
+Jekyllについて何か質問があれば、わかる範囲であればサポートしますので、いつでもどうぞ。
