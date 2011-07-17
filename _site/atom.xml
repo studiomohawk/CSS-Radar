@@ -4,7 +4,7 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-06-19T11:25:29+09:00</updated>
+ <updated>2011-06-26T12:39:34+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
  
@@ -834,7 +834,7 @@ Loads.inでは珍しく日本のサーバからのロード時間をテストし
 &lt;h3&gt;JavaScriptとCSSの結合と縮小化&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Ruby(ターミナルから利用): - Ruby(ターミナルから利用): &lt;a href=&quot;http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool&quot;&gt;Juicer - a CSS and JavaScript packaging tool / Ruby - cjohansen.no&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Ruby(ターミナルから利用): &lt;a href=&quot;http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool&quot;&gt;Juicer - a CSS and JavaScript packaging tool / Ruby - cjohansen.no&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;オンラインツール (CSSとJS): &lt;a href=&quot;http://www.refresh-sf.com/yui/&quot;&gt;Online YUI Compressor&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;オンラインツール (CSS): &lt;a href=&quot;http://www.cleancss.com/&quot;&gt;Clean CSS&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;オンラインツール (JS): &lt;a href=&quot;http://closure-compiler.appspot.com/home&quot;&gt;Closure Compiler Service&lt;/a&gt;&lt;/li&gt;

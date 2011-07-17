@@ -69,7 +69,7 @@ GoogleのPageSpeedでも近しいチェック項目を持っているので、�
 
 ### JavaScriptとCSSの結合と縮小化
 
-- Ruby(ターミナルから利用): - Ruby(ターミナルから利用): [Juicer - a CSS and JavaScript packaging tool / Ruby - cjohansen.no](http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool)
+- Ruby(ターミナルから利用): [Juicer - a CSS and JavaScript packaging tool / Ruby - cjohansen.no](http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool)
 - オンラインツール (CSSとJS): [Online YUI Compressor](http://www.refresh-sf.com/yui/)
 - オンラインツール (CSS): [Clean CSS](http://www.cleancss.com/)
 - オンラインツール (JS): [Closure Compiler Service](http://closure-compiler.appspot.com/home)
