@@ -8,11 +8,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<link rel="stylesheet" media="all" href="/style/master.css">
+	<link rel="stylesheet" media="all" href="/style/master.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
 	
 		<title>ウェブデザイナのためのRuby入門 | CSS Radar | For Frond End Developers</title>
-		<meta name="description" content="CSS Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。 今回はCSSやデザインからはほど遠いように思えるRubyについて。 前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。 Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら、面倒なことを楽にすることもでき始めてきた。 そこで、Rubyを少しだけ使い倒す方法を紹介しようと思い立った。 たまにはPhotoshopを離れて(私はあまり使いませんが)、新しいことに挑戦してみませんか？ *私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。 なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。 Rubyのインストール Mac OS XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。 MacにおけるRubyの管理は、RVM - Ruby Version Managerがおすすめ。 RVMを利用するためには、gitが必須になる。gitのインストールについては、こちらを参照してほしい。 RVMのインストール方法 ターミナルを開いて、 sudo bash &lt;...">
+		<meta name="description" content="CSS Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。 今回はCSSやデザインからはほど遠いように思えるRubyについて。 前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。 Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら、面倒なことを楽にすることもでき始めてきた。 そこで、Rubyを少しだけ使い倒す方法を紹介しようと思い立った。 たまにはPhotoshopを離れて(私はあまり使いませんが)、新しいことに挑戦してみませんか？ *私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。 なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。 Rubyのインストール Mac OS XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。 MacにおけるRubyの管理は、RVM - Ruby Version Managerがおすすめ。 RVMを利用するためには、gitが必須になる。gitのインストールについては、こちらを参照してほしい。 RVMのインストール方法 ターミナルを開いて、 ~/.bash_profile か ~/.bashrcに...">
 	
 </head>
 
@@ -124,66 +124,27 @@ RVMを利用するためには、gitが必須になる。gitのインストー�
 
 <p>ターミナルを開いて、</p>
 
-<div class="highlight"><pre><code class="sh">sudo bash &lt; &lt;<span class="o">(</span>curl -s https://rvm.beginrescueend.com/install/rvm<span class="o">)</span>
-</code></pre>
-</div>
-
 <p>~/.bash_profile か ~/.bashrcに</p>
-
-<div class="highlight"><pre><code class="sh"><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="c"># This loads RVM into a shell session.</span>
-</code></pre>
-</div>
 
 <p>を追加(上記ファイルがない場合は、作成して追加)<br />
 では、RVMが正しく動作するかを確認しよう。</p>
 
-<div class="highlight"><pre><code class="sh"><span class="nb">type </span>rvm | head -1
-</code></pre>
-</div>
-
 <p>とターミナルで実行してみる</p>
-
-<div class="highlight"><pre><code class="sh">rvm is a <span class="k">function</span>
-</code></pre>
-</div>
 
 <p>と返事が返ってきたら成功。
 成功したら、またターミナルにて</p>
 
-<div class="highlight"><pre><code class="sh"><span class="nb">source</span> ~/.rvm/scripts/rvm
-</code></pre>
-</div>
-
 <p>と実行しておこう。</p>
-
-<div class="highlight"><pre><code class="sh">rvm install 1.9.2-head
-</code></pre>
-</div>
 
 <p>とすれば、ruby 1.9.2-headのバージョンをインストールできる。<br />
 ちなみに、RVMでインストールできるバージョンは</p>
-
-<div class="highlight"><pre><code class="sh">rvm list known
-</code></pre>
-</div>
 
 <p>とすればリストが表示されるので、表示されたパッケージを<code>rvm
 install</code>の後に記述すればそのパッケージをインストールできる。</p>
 
 <p>なお、RVMではバージョンごとにgemのパッケージを管理するため、さっきまで使えたはずのgemがないとエラーが出る、なんて事態に遭遇したら、</p>
 
-<div class="highlight"><pre><code class="sh">ruby -v
-</code></pre>
-</div>
-
 <p>として現在利用しているrubyのバージョンを確認してみよう。</p>
-
-<div class="highlight"><pre><code class="sh">rvm --default use 1.9.2 <span class="c"># とすると、1.9.2をデフォルトで利用しはじめ</span>
-
-rvm use system <span class="c"># システムにインストールされているRubyと</span>
-rvm default <span class="c"># デフォルト設定したRubyを切り替えることも可能 </span>
-</code></pre>
-</div>
 
 <p>詳しくは<a href="https://rvm.beginrescueend.com/">https://rvm.beginrescueend.com/</a>(英語)</p>
 
@@ -192,25 +153,13 @@ rvm default <span class="c"># デフォルト設定したRubyを切り替える�
 <p>RubyにはGemと呼ばれるパッケージマネージャがある。1.9系以降からはRubyの標準機能となったそうだ。<br />
 MacではGemも標準でインストールされていたと思うが、記憶が確かではないので確認してほしい。</p>
 
-<div class="highlight"><pre><code class="sh">sudo gem update --system
-</code></pre>
-</div>
-
 <p>とすると、アップデートできるので試してみてほしい。</p>
 
 <p>パッケージマネージャってなんだ、という点については、Ubuntuを使っていた私にはすんなり理解できたが、そうでもない人が多いのでMacでいうところの、macportやfink、homebrewみたいなライブラリ集積地みたいなものだと覚えておけばいいはず。
 *Homebrewについては、<a href="http://css.studiomohawk.com/tool/2011/02/13/terminal-101/">こちらの記事</a>で紹介したので、参考にしてほしい。</p>
 
-<div class="highlight"><pre><code class="sh">gem install PACKAGENAME
-</code></pre>
-</div>
-
 <p>として、パッケージをインストールできる。<br />
 例えば、</p>
-
-<div class="highlight"><pre><code class="sh">gem install rake
-</code></pre>
-</div>
 
 <p>とすると、Ruby版make(ビルドツール)であるrakeをインストールできる。  </p>
 
@@ -229,83 +178,16 @@ MacではGemも標準でインストールされていたと思うが、記憶�
 
 <p><code>rmagick</code>gemが必要になるので、まずはこのgemをインストール。</p>
 
-<div class="highlight"><pre><code class="sh">gem install rmagick <span class="c">#私はこのコマンドではエラーになったので、下記を実行してから、再度チャレンジした</span>
-
-<span class="c"># エラーになった場合は</span>
-sudo brew install libxml2
-sudo brew install ImageMagick
-<span class="c"># を実行してから、上記を実行してほしい。なお、homebrewを利用している場合の例</span>
-</code></pre>
-</div>
-
 <p>そしてspriteのgemをインストール</p>
 
-<div class="highlight"><pre><code class="sh">gem sources -a http://gemcutter.org
-gem install sprite
-</code></pre>
-</div>
-
 <p><strong>使い方</strong></p>
-
-<div class="highlight"><pre><code class="sh">public/
-  images/
-    sprites/
-      black-icons/
-        stop.png
-        go.png
-        back.png
-        forward.png
-
-      weather/
-        sunny.gif
-        rainy.gif
-        cloudy.gif
-</code></pre>
-</div>
 
 <p>というようなディレクトリ構造を例とすると、
 <code>public</code>にて</p>
 
-<div class="highlight"><pre><code class="sh">sprite
-</code></pre>
-</div>
-
 <p>というコマンドを実行すると</p>
 
-<div class="highlight"><pre><code class="sh">public/
-  stylesheets/
-    sprites.css
-  images/
-    sprites/
-      black-icons.png
-      weather.png
-</code></pre>
-</div>
-
 <p>というファイルを生成する。</p>
-
-<div class="highlight"><pre><code class="css"><span class="nc">.sprites.blue-stars-small</span> <span class="p">{</span>
-  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/small.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">0px</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">6px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.sprites.blue-stars-medium</span> <span class="p">{</span>
-  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/medium.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">6px</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.sprites.blue-stars-large</span> <span class="p">{</span>
-  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/large.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">21px</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">60px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.sprites.blue-stars-xlarge</span> <span class="p">{</span>
-  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/xlarge.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">96px</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">75px</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
 
 <p>というようなスタイルを書き出してくれる。<br />
 sassのmixinも利用できるようで、設定も変更できる。</p>
@@ -323,11 +205,6 @@ SASSについては、先日1年ぶりほどのアップデートがありアク
 
 <p><strong>インストール</strong></p>
 
-<div class="highlight"><pre><code class="sh">gem install less <span class="c">#LESS</span>
-gem install sass <span class="c">#SASS</span>
-</code></pre>
-</div>
-
 <h3>Juicer</h3>
 
 <p>リクエスト回数を減らすためには、CSS/JSの呼び出しは最小にしておく必要がある。<br />
@@ -337,13 +214,6 @@ gem install sass <span class="c">#SASS</span>
 <p>Juicerは、YUI
 Compressorを利用してCSS/JSを圧縮した上で、CSSであれば@importを使ってファイルを結合してくれ、JSであれば、</p>
 
-<div class="highlight"><pre><code class="sh">/**
- * @depends prototype.js
- * @depends widgets/lightbox.js
- */
-</code></pre>
-</div>
-
 <p>というコメントを使って、ファイルの結合を行うことが可能。<br />
 CSSはmaster.cssというファイルに@importのみを記述して、JSもmaster.jsというファイルにコメント文だけ記述している。</p>
 
@@ -351,34 +221,13 @@ CSSはmaster.cssというファイルに@importのみを記述して、JSもmast
 
 <p>使い方はとても簡単。</p>
 
-<div class="highlight"><pre><code class="sh">juicer merge --force master.css <span class="c"># CSS --forceはmaster.min.cssが存在しても上書きを強制</span>
-juicer merge -i --force master.js <span class="c">#JS -iはエラーを無視して圧縮/結合を実行するオプション</span>
-</code></pre>
-</div>
-
 <p>ついでに、</p>
 
-<div class="highlight"><pre><code class="css"><span class="nt">h1</span> <span class="p">{</span> <span class="k">background</span><span class="o">:</span> <span class="sx">url(/somepath/someimage.png?embed=true)</span><span class="p">;</span> <span class="p">}</span>
-<span class="c">/* ?embed=trueを追加する */</span>
-</code></pre>
-</div>
-
 <p>とすると、画像をdata-urlに変換してくれる。</p>
-
-<div class="highlight"><pre><code class="sh">juicer merge --force master.css --embed-images data_uri
-</code></pre>
-</div>
 
 <p>のように実行すればOK。</p>
 
 <p><strong>インストール</strong></p>
-
-<div class="highlight"><pre><code class="sh">gem install juicer <span class="c"># Juicerをインストール</span>
-juicer install yui_compressor <span class="c"># YUI compressorをインストール</span>
-juicer install closure_compiler <span class="c"># Google Closure Compilerをインストール</span>
-juicer install jslint <span class="c"># JsLintをインストール</span>
-</code></pre>
-</div>
 
 <h3>CSS Redundancy Checker</h3>
 
@@ -391,20 +240,10 @@ Checker</a>は、あるHTML郡で使われていないスタイルルールを�
 
 <p>使い方</p>
 
-<div class="highlight"><pre><code class="sh">ruby css-redundancy-checker.rb <span class="o">[</span>CSSファイル名<span class="o">]</span> <span class="o">[</span>HTMLファイルディレクトリ または URLを一行ずつ記述した.txt<span class="o">]</span>
-</code></pre>
-</div>
-
 <p>とするだけ。CSSを分割して管理している場合は、Juicerで結合してから実行するといいだろう。
 もちろんある特定のCSSファイルをチェックしたい場合は、個別に指定すればOK。</p>
 
 <p><strong>インストール</strong></p>
-
-<div class="highlight"><pre><code class="sh">sudo gem install hpricot <span class="c"># hpricotをインストール、必須</span>
-svn checkout http://css-redundancy-checker.googlecode.com/svn/trunk/ css-redundancy-checker
-<span class="c"># svnをインストールしていない場合は、sudo brew install svnとしてから</span>
-</code></pre>
-</div>
 
 <p>css-redundancy-checker.rbという名前の通り、このスクリプトは単純な1ファイル。<br />
 なので、実行する際はインストールしたディレクトリに移動してから実行する必要がある。</p>
@@ -500,7 +339,7 @@ Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/ア�
 <ul>
 	<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件のウェブデザイン情報をつぶやきます</li>
 	<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
-	<li><a href="http://www.facebook.com/studiomohawk" rel="me" title="facebook">Facebook</a> / Invite Onlyのグループを画策中、参加者はメールにて</li>
+	<li><a href="http://www.facebook.com/studiomohawk" rel="me" title="Google +">Google Plus</a> / Twitterの代わりにしようか考え中</li>
 	<li><a href="http://forrst.com/people/studiomohawk" rel="me" title="Forrst">Forrst</a> / インバイトオンリーのコード、デザイン共有サービス</li>
 	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / デザインのインスピレーション収集中、もちろん写真も</li>
 	<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>

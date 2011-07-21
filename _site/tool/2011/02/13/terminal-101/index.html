@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<link rel="stylesheet" media="all" href="/style/master.css">
+	<link rel="stylesheet" media="all" href="/style/master.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
 	
 		<title>ターミナルを使いこなす | CSS Radar | For Frond End Developers</title>
@@ -154,26 +154,10 @@ MacVimを利用している人なら見覚えがある.(ドット)ファイル�
 
 <p><a href="https://gist.github.com/824504">gist</a>にも置いてあるが</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># git settings</span>
-<span class="nb">source</span> /usr/local/git/contrib/completion/git-completion.bash
-<span class="nv">GIT_PS1_SHOWDIRTYSTATE</span><span class="o">=</span><span class="nb">true</span>
-<span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ &#39;</span>
-</code></pre>
-</div>
-
 <p>Git用のカスタマイズは上記の部分。こちらだけでも.bashrcファイルの最後の方に追加しておけば、設定終了。<br />
 もし.bashrcファイルが見当たらないようであれば、</p>
 
-<div class="highlight"><pre><code class="bash">touch ~/.bashrc
-open ~/.bashrc
-</code></pre>
-</div>
-
 <p>として、開いたエディタに上記のスニペットを追加すればOK。</p>
-
-<div class="highlight"><pre><code class="bash"><span class="nb">source</span> ~/.bashrc
-</code></pre>
-</div>
 
 <p>保存したら、上記のコマンドで変更を反映できる。</p>
 
@@ -332,7 +316,7 @@ Spriteを自動化</a>したりすることもできるようなので、あの3
 <ul>
 	<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件のウェブデザイン情報をつぶやきます</li>
 	<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
-	<li><a href="http://www.facebook.com/studiomohawk" rel="me" title="facebook">Facebook</a> / Invite Onlyのグループを画策中、参加者はメールにて</li>
+	<li><a href="http://www.facebook.com/studiomohawk" rel="me" title="Google +">Google Plus</a> / Twitterの代わりにしようか考え中</li>
 	<li><a href="http://forrst.com/people/studiomohawk" rel="me" title="Forrst">Forrst</a> / インバイトオンリーのコード、デザイン共有サービス</li>
 	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / デザインのインスピレーション収集中、もちろん写真も</li>
 	<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>

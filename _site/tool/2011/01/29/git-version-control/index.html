@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<link rel="stylesheet" media="all" href="/style/master.css">
+	<link rel="stylesheet" media="all" href="/style/master.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
 	
 		<title>Gitでバージョンコントロール | CSS Radar | For Frond End Developers</title>
@@ -155,23 +155,15 @@ GUIアプリをインストールしても、もう少しTerminalは開いたま
 準備が整ったら以下のコマンドを、必要な部分は修正してから、Terminalにて実行。</p>
 
 <ul>
-  <li>まずは自己紹介をしよう</li>
-</ul>
-
-<div class="highlight"><pre><code class="bash">git config --global user.name <span class="s2">&quot;名前&quot;</span>
-git config --global user.email メールアドレス@example.com
-</code></pre>
-</div>
-
-<ul>
-  <li>標準のエディタを設定</li>
+  <li>
+    <p>まずは自己紹介をしよう</p>
+  </li>
+  <li>
+    <p>標準のエディタを設定</p>
+  </li>
 </ul>
 
 <p>*Terminalから利用する場合にコミットメッセージを書くのに使うエディタ。たいていの場合Terminalのデフォルト、viかvimが使われる。それ以外のエディタが好みの場合は設定しよう。</p>
-
-<div class="highlight"><pre><code class="bash">git config --global core.editor emacs
-</code></pre>
-</div>
 
 <ul>
   <li>ホワイトスペースを無視する</li>
@@ -179,52 +171,20 @@ git config --global user.email メールアドレス@example.com
 
 <p>Gitではホワイトスペース1つを追加しても、ファイルを変更したと認識される(Rubyではホワイトスペースは大事)が、大抵の場合、ホワイトスペース1つでコミットする、ということもないだろう。</p>
 
-<div class="highlight"><pre><code class="bash">git config --global apply.whitespace nowarn
-</code></pre>
-</div>
-
 <ul>
   <li>すべてのGitレポジトリに無視ファイルを適応</li>
 </ul>
 
 <p>Macなら.DS_Store(普段は見えないけれど、Gitは認識する)など、OSが自動で生成するファイルとか、毎回.gitignore(無視リストファイル)を、レポジトリに追加したり、その.gitignoreをコミットしたりするのは面倒。</p>
 
-<div class="highlight"><pre><code class="bash">git config --global core.excludesfile ~/.gitignore
-</code></pre>
-</div>
-
 <p>このコマンドのままだと、ホームディレクトリに.gitignoreがあるから–globalで読んでねという意味になる。<br />
 私はこのファイルを<a href="http://db.tt/jxIW2Rp">Dropbox</a>を使って、すべての環境で同じファイルを見るようにしている。</p>
 
 <p>Dropboxにdotというディレクトリを作成し、その下に.gitignoreファイルを作成してる</p>
 
-<div class="highlight"><pre><code class="bash">git config --global core.excludesfile /Users/<span class="o">[</span>ユーザディレクトリ<span class="o">]</span>/Dropbox/dot/.gitignore
-</code></pre>
-</div>
-
 <p>Macならこんな具合。</p>
 
 <p>.gitignoreファイルの文法は</p>
-
-<div class="highlight"><pre><code class="bash"><span class="c"># &#39;#&#39; から始まる行はコメント</span>
-<span class="c"># foo.txtというファイル名は無視</span>
-foo.txt
-<span class="c"># .htmlで終わるファイルを無視。&#39;\*&#39;はワイルドカード</span>
-*.html
-<span class="c"># &#39;!&#39;は例外。上の例から引き続きで、.htmlで終わるファイルは無視するけどfoo.htmlは例外。</span>
-!foo.html
-
-<span class="c"># Macユーザなら、下記で基本はOK。参考: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore</span>
-
-.DS_Store?
-Icon?
-<span class="c"># Thumbnails</span>
-._*
-<span class="c"># Files that might appear on external disk</span>
-.Spotlight-V100
-.Trashes
-</code></pre>
-</div>
 
 <h2>Gitの基本的なワークフロー</h2>
 
@@ -253,18 +213,8 @@ Icon?
 <p>Macユーザ、恐れるなかれ、.gitディレクトリ、だけではないが.(ドット)から始まるファイル、ディレクトリは普通はFinderには見えない隠し要素になる。<br />
 Terminalで<code>ls</code>とすれば、きちんと存在が確認できる。</p>
 
-<div class="highlight"><pre><code class="bash">defaults write com.apple.finder AppleShowAllFiles TRUE
-killall Finder
-</code></pre>
-</div>
-
 <p>または上記のコマンドを叩くと見えるようになる。<br />
 おお、うざい。と思ったら、</p>
-
-<div class="highlight"><pre><code class="bash">defaults write com.apple.finder AppleShowAllFiles FALSE
-killall Finder
-</code></pre>
-</div>
 
 <p>で元に戻せる。<a href="http://totalfinder.binaryage.com/">TotalFinder</a>というFinderにタブを追加できるアプリケーションなら、GUIでOn/Offできる機能もついてくるのでおすすめ($15)(ちょっと重いけど、便利)。</p>
 
@@ -284,10 +234,6 @@ killall Finder
 
 <p>初めてのコミット。まずはプロジェクトの開始を伝えるコミットからスタート。</p>
 
-<div class="highlight"><pre><code class="bash">git commit -a -m <span class="s2">&quot;Initial Commit&quot;</span>
-</code></pre>
-</div>
-
 <p>-aフラグは、すべての変更に対してコミットするという意味。便利だが、ある理由で1ファイルを修正したのか、そのある理由が複数ファイルに渡る修正なのか、それとも？となってしまうので、コミットの単位については明確な理由がかける範囲で。<br />
 -mフラグは、エディタを開かず、その場でコミットメッセージを書けるようにする。その後’(シングルクォート)か”(ダブルクォート)で囲んだ部分がメッセージになる。日本語でももちろん問題ない。</p>
 
@@ -306,26 +252,10 @@ git statusはそれらの状態を教えてくれる便利なコマンドだ。 
 <p>ファイルに変更を加え、いくつかのコミットを行った後、しばらくすると変更点についてはすっかり忘れている。<br />
 そんな時はコミットメッセージを読めばわかる。(わかるようにコミットメッセージを書くことが大事)</p>
 
-<div class="highlight"><pre><code class="bash">git log --graph --pretty<span class="o">=</span>oneline
-</code></pre>
-</div>
-
 <p>とフラグを渡しつつ、<code>git log</code>とすると下記のようにコミット1回につき1行で、表示される。</p>
-
-<div class="highlight"><pre><code class="bash">7366587c589fe6ee60aeff553e899dc13086d7ec About Responsive Web Design is finished
-28b07e6c8fa6299c9c6b3321a339b1c7881e2fe4 erase meta since I use .htaccess
-90187a85261b208abbb0c52511fcf675ebe4739d fix css little bit
-5035c4eabe855efbac15596663190a6126eb0880 Read me was old
-4600e678e757950e5d6a7c7fbfc9a6420333e1c2 Ready to deploy
-</code></pre>
-</div>
 
 <p>ここでは残念ながら地味な表示だが、Terminal内では、デキる感じがしないでもないように、黒背景にグリーンが映えるマトリックスな世界を繰り広げられる(Terminalの設定による)。<br />
 <a href="http://www.jukie.net/bart/blog/pimping-out-git-log">pimping out git log</a>で紹介されていた</p>
-
-<div class="highlight"><pre><code class="bash">git config --global alias.lg <span class="s2">&quot;log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit --date=relative&quot;</span>
-</code></pre>
-</div>
 
 <p>とすると、git logのデフォルトで1行、色つきフォーマットでログを見ることが可能</p>
 
@@ -336,10 +266,6 @@ git statusはそれらの状態を教えてくれる便利なコマンドだ。 
 <p>Gitの真打ち、branch。ブランチは分岐を表示・作成するコマンド。  </p>
 
 <p>コミットがすべて完了しているmaster(デフォルト)で、</p>
-
-<div class="highlight"><pre><code class="bash">git branch newfeature
-</code></pre>
-</div>
 
 <p>とすると、masterをベースにnewfeatureというブランチが作成される。  </p>
 
@@ -366,26 +292,8 @@ git statusはそれらの状態を教えてくれる便利なコマンドだ。 
 <p><code>git merge</code>をする際には、まず現在いるブランチをコミットして、から<code>git checkout master</code>というように、マージさせたいブランチに切り替える。<br />
 自分が今いるブランチがどこなのか、ほかにどんなブランチがあるかを確認するには、<code>git branch</code>とすれば</p>
 
-<div class="highlight"><pre><code class="bash">*master
-newfeature
-</code></pre>
-</div>
-
 <p>というように表示してくれる。<br />
 ちなみに、Terminal用プログラムBashの設定で</p>
-
-<div class="highlight"><pre><code class="bash"><span class="k">function </span>parse_git_branch <span class="o">{</span>
-  <span class="nv">ref</span><span class="o">=</span><span class="k">$(</span>git-symbolic-ref HEAD 2&gt; /dev/null<span class="k">)</span> <span class="o">||</span> <span class="k">return</span>
-<span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;(&quot;</span><span class="k">${</span><span class="nv">ref</span><span class="p">#refs/heads/</span><span class="k">}</span><span class="s2">&quot;)&quot;</span>
-<span class="o">}</span>
-
-<span class="nv">RED</span><span class="o">=</span><span class="s2">&quot;\[\033[0;31m\]&quot;</span>
-<span class="nv">YELLOW</span><span class="o">=</span><span class="s2">&quot;\[\033[0;33m\]&quot;</span>
-<span class="nv">GREEN</span><span class="o">=</span><span class="s2">&quot;\[\033[0;32m\]&quot;</span>
-
-<span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ &quot;</span>
-</code></pre>
-</div>
 
 <p>上記を追加すると、コマンドプロンプト(コマンドを叩く左側に出る文字列)に、現在のブランチを表示してくれる。
 USERディレクトリ下に.bashrcという名前で上記を追加して保存。既存でなければ、ファイル名を.bashrcとし保存すればOK。</p>
@@ -458,7 +366,7 @@ Gitについて、もっと知りたいことがあれば、<a href="http://twit
 <ul>
 	<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件のウェブデザイン情報をつぶやきます</li>
 	<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
-	<li><a href="http://www.facebook.com/studiomohawk" rel="me" title="facebook">Facebook</a> / Invite Onlyのグループを画策中、参加者はメールにて</li>
+	<li><a href="http://www.facebook.com/studiomohawk" rel="me" title="Google +">Google Plus</a> / Twitterの代わりにしようか考え中</li>
 	<li><a href="http://forrst.com/people/studiomohawk" rel="me" title="Forrst">Forrst</a> / インバイトオンリーのコード、デザイン共有サービス</li>
 	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / デザインのインスピレーション収集中、もちろん写真も</li>
 	<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
