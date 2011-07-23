@@ -6,8 +6,13 @@
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 <loc>http://css.studiomohawk.com</loc>
-	<lastmod>2011-07-22T00:23:13+09:00</lastmod>
+	<lastmod>2011-07-24T00:24:47+09:00</lastmod>
 	<priority>1.0</priority>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces/</loc>
+	<lastmod>2011-07-23T12:34:42+09:00</lastmod>
 </url>
 
 <url>

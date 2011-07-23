@@ -259,6 +259,52 @@ a:hover {
 }
 .the-article .content footer ul li { display: inline; }
 .the-article .content footer .archive ul { text-align: right; }
+html.changelog {
+  background-color: #002b36;
+  color: #fdf6e3;
+}
+.changelog .the-article .content a:link { border-bottom: 1px dotted #d33682; }
+.changelog .the-article .content a:visited { border-bottom: 1px dotted #c74282; }
+.changelog .the-article .content a:hover { border-bottom: 1px dotted #df2a82; }
+.changelog .the-article .content header {
+  background: #073642;
+  border-top: 1px solid rgba(238, 232, 213, 0.2);
+  border-bottom: 1px solid rgba(238, 232, 213, 0.2);
+  -webkit-box-shadow: 0px 1px 0px rgba(2, 16, 20, 0.6);
+  -moz-box-shadow: 0px 1px 0px rgba(2, 16, 20, 0.6);
+  box-shadow: 0px 1px 0px rgba(2, 16, 20, 0.6);
+}
+.changelog .the-article .content header h1 { color: #b58900; }
+.changelog .the-article .content header h2 {
+  color: #b5ad00;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.changelog .the-article .content footer {
+  background: #073642;
+  border-top: 1px solid rgba(238, 232, 213, 0.2);
+  border-bottom: 1px solid rgba(238, 232, 213, 0.2);
+  -webkit-box-shadow: 0px 1px 0px rgba(2, 16, 20, 0.6);
+  -moz-box-shadow: 0px 1px 0px rgba(2, 16, 20, 0.6);
+  box-shadow: 0px 1px 0px rgba(2, 16, 20, 0.6);
+}
+.changelog .the-article .content footer h1 { color: #b58900; }
+.changelog .the-article .content footer h2 {
+  color: #b5ad00;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.changelog .the-article .content h2 { color: #b5ad00; }
+.changelog .the-article .content h3 { color: #b5ad00; }
+.changelog .the-article .content h4 { color: #b5ad00; }
+.changelog .the-article .content h5 { color: #b5ad00; }
+.changelog .the-article .content h6 { color: #b5ad00; }
+.changelog .the-article .content .ask { border-top: 1px solid #586e75; }
+.changelog .the-article .content .ask .askme { background-color: rgba(88, 110, 117, 0.8); }
+.changelog #foot { background-color: #002b36; }
+.changelog #foot a:link { color: #d33682; }
+.changelog #foot a:visited { color: #c74282; }
+.changelog #foot a:hover { color: #df2a82; }
 .archive #main header {
   background: #1a1a1a;
   padding: 1.5em 0;

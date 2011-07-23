@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="ja" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="ja" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="na" class="no-js ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="ja" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7 ]> <html lang="ja" class="home no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="ja" class="home no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="na" class="home no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="ja" class="home no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<link rel="stylesheet" media="all" href="/style/master.min.css">
+	<link rel="stylesheet" media="all" href="/style/master.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
 	
 		<title>CSS Radar | For Frond End Developers</title>
@@ -31,6 +31,14 @@
 	<nav id="backnumber" class="backnumber">
 		<ul>
 			
+		<li>
+		<h6 class="title"><a href="/git/2011/07/23/git-bits-and-pieces/" title="Git - フロントエンドデベロッパのためのgit">Git - フロントエンドデベロッパのためのgit</a></h6>
+			<date>
+				<span class="day">23</span>
+				<span class="month"><abbr>Jul</abbr></span>
+			</date> 
+		</li>
+		
 		<li>
 		<h6 class="title"><a href="/tool/2011/06/11/jekyll-101.tool/" title="Jekyllを使ってブログをつくろう">Jekyllを使ってブログをつくろう</a></h6>
 			<date>
@@ -63,14 +71,6 @@
 			</date> 
 		</li>
 		
-		<li>
-		<h6 class="title"><a href="/css/2011/04/03/use_less_to_clean_up_your_css/" title="LESS: CSSをよりシンプルに、パワフルに">LESS: CSSをよりシンプルに、パワフルに</a></h6>
-			<date>
-				<span class="day">03</span>
-				<span class="month"><abbr>Apr</abbr></span>
-			</date> 
-		</li>
-		
 		<li class="btn">
 			<a href="/backnumber/" class="btn">Read More</a>
 		</li>
@@ -86,12 +86,12 @@
 				<div class="content">
 	<header>
 	<div class="head-inner">
-		<h1><a href="/tool/2011/06/11/jekyll-101.tool/" title="Jekyllを使ってブログをつくろう" rel="bookmark">Jekyllを使ってブログをつくろう</a></h1>
+		<h1><a href="/git/2011/07/23/git-bits-and-pieces/" title="Git - フロントエンドデベロッパのためのgit" rel="bookmark">Git - フロントエンドデベロッパのためのgit</a></h1>
 		<div class="meta">
-			<span class="category"><a href="/categories/tool/" class="tool" title="tool">tool</a></span>
-			<date class="date-pub" title="2011-06-11T13:39:28+09:00">
-				<span class="day">11</span>
-				<span class="month"><abbr>Jun</abbr></span>
+			<span class="category"><a href="/categories/git/" class="git" title="git">git</a></span>
+			<date class="date-pub" title="2011-07-23T12:34:42+09:00">
+				<span class="day">23</span>
+				<span class="month"><abbr>Jul</abbr></span>
 				<span class="year">2011</span>
 			</date>
 			
@@ -99,171 +99,21 @@
 	</div>
 	</header>
 	<div class="bd">
-		<p>Amazon S3にて静的ファイルによるウェブサイトを構築できるようになり、Amazon Web
-Serviceが日本リージョンを追加したことで、これからJekyllのような静的ファイルジェネレータを使ったブログが日本でも増えるのではないか。  </p>
-
-<p>Jekyllといえば、このCSS
-Radarも今年1月からwordpressを離れ、Jekyllを使ってブログを構築している。<br />
-(残念ながらまだAmazon S3でのホストはしていない)  </p>
-
-<p>Amazon Web Service勉強会でも、JekyllとAmazon S3についての発表があった。(<a href="http://www.ustream.tv/recorded/14269210">usteam</a>)<br />
-そこで、今回はRubyでも、コマンドラインでも初心者である私でもつくれるようになったJekyllについて紹介しよう。</p>
-
-<h2>開発環境の準備</h2>
-
-<p>JekyllはRubyで作成されているので、当然ながらRubyが必要。<br />
-Rubyの導入については、<a href="http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/">ウェブデザイナのためのRuby入門</a>を参考にしてほしい。</p>
-
-<p>Rubyの準備ができたら、</p>
-
-<p>*パーミッションがどうの、というエラーがでたら、<code>sudo gem instal
-jekyll</code>とすればインストールできるはず。</p>
-
-<p>CSS
-RadarではHTMLやら、CSSなどのソースコードの表示もあるので、Pygmentsを使ってシンタックスハイライトを行っている。<br />
-Homebrewを使っているなら、インストールは簡単。</p>
-
-<p>としてから、Homebrewでは実行ファイルにsymlinkがつかないそうで、下記を実行してsymlinkをつくる</p>
-
-<h2>基本フォルダ/ファイル構造と記事の作成</h2>
-
-<h3>基本フォルダとファイルの準備</h3>
-
-<p>アンダーバーから始まる、<code>_layouts</code>、<code>_posts</code>、<code>_site</code>の3つのフォルダが必須のフォルダになる。<br />
-手前から、テンプレート保管、記事、生成先フォルダという役割がある。<br />
-<code>_config.yml</code>はサイト全体に影響する設定ファイル。</p>
-
-<p>必須になるのはたったこれだけというシンプル設計もJekyllの魅力の1つ。</p>
-
-<h3>記事の作成</h3>
-
-<p>Jekyllでは、記事の作成は.markdown、または.textileという軽量マークアップ言語の文法で記述されたプレーンテキストファイルで行う。<br />
-<code>$YEAR-$MONTH-$DATE-$TITLE.$FORMAT</code>という形式で、_postsフォルダに格納されたファイルをJekyllがプロセスしてくれる。  </p>
-
-<p>例えば、2011年5月14日に作成したウェブデザイナのためのRuby入門という記事なら、<code>2011-05-22-ruby-for-designer.markdown</code>というファイル名になる。<br />
-URLに入るタイトル名はアルファベットにしておいた方が無難だろう。2バイト文字を利用できるかは試してみた事はない。</p>
-
-<p>記事のファイルの先頭にはYAML front matterと呼ばれる設定部分が必要になる。<br />
-今回の記事のYAML front matterが上記。<br />
-layoutでは、_layoutsに作成したテンプレート定義ファイルを設定し、<br />
-categoryにはカテゴリ、titleにはもちろんタイトル、そしてdateには更新日を記述することができる。<br />
-ここで必須になるのは、layoutとtitleの2ヶ所のみとなり、YAML front
-matterで設定した項目は、記事であればその記事内のテンプレート定義ファイル内の変数として利用することが可能。</p>
-
-<h2>テンプレートの作成</h2>
-
-<p>それではテンプレートの作成について見てみよう。</p>
-
-<p>テンプレート定義ファイルは何の変哲もないHTMLで記述される。例外は記事ファイル内のYAML front matterに記述するlayoutの部分で利用する、テンプレート名をこちらも同じく、</p>
-
-<p>というようにYAML front
-matterとして記述するという点と、後述するLiquidというテンプレートエンジンを利用して記事部分のレンダリングなどを行ったりするという点が異なる。　　</p>
-
-<p>wordpressでもそうだが、この手のテンプレファイル系は実際にファイル自体を見た方が早い。<br />
-私が公開しているJekyll用テーマファイル、<a href="https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_layouts/post.html">the_minimumの記事用レイアウトファイル</a>を見ながら、
-次項を読んでほしい。</p>
-
-<h2>Liquidについて</h2>
-
-<p>Liquidは非常にシンプルなテンプレートエンジンで、これまでwordpressに慣れてきた場合は少し物足りなく感じるかもしれないが、その代わり覚えるのは簡単。
-Liquidで利用できるタグについては、<a href="https://github.com/tobi/liquid/wiki/liquid-for-designers">こちら</a>を参考に、<br />
-また、Jekyllで利用できるLiquidの拡張タグについては、<a href="https://github.com/mojombo/jekyll/wiki/Liquid-Extensions">こちら</a>。</p>
-
-<p>先ほどのthe_minimumのpost.htmlを見ながらLiquidテンプレートタグで必須になるもタグと、便利なタグについて紹介しよう。</p>
-
-<script src="https://gist.github.com/1021183.js?file=liquid.required.tag.html"></script>
-
-<p>必須になるのは上記2つというやはりシンプル設計。</p>
-
-<script src="https://gist.github.com/1021118.js?file=liquid.html"></script>
-
-<p>インクルードはメンテナンスのために覚えておきたいタグで、<br />
-オフィシャルページにもあまり説明のないページネーションについてはもっともシンプルな例ながら、利用できるタグについてはほぼ網羅しているので、カスタマイズする際の参考になれば。</p>
-
-<h2>_config.ymlの設定</h2>
-
-<p>ここで利用できる値はほぼ無限にあるものの、まずはオフィシャルを参考にしてほしい。
-<a href="https://github.com/mojombo/jekyll/wiki/Configuration">https://github.com/mojombo/jekyll/wiki/Configuration</a></p>
-
-<p>_config.ymlは非常に強力で、オフィシャルで使えるとしている設定以外にも自由に設定を拡張できる。<br />
-こちらについても、<a href="https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_config.yml">the_minimumのファイルを参考にしてほしい</a>。</p>
-
-<p>_config.ymlで設定した値はテンプレートファイル内で、</p>
-
-<p><code>site.項目</code>  </p>
-
-<p>のように呼び出す事ができる。例えば、the_minimumで設定したGoogle
-Analytics用IDを格納する<code>ga</code>を呼び出す場合は、</p>
-
-<p><code>site.ga</code></p>
-
-<p>というように呼び出す事が可能。<br />
-コンスタントに利用する値、他には例えばサイトのURLやサイト自体のタイトルなどを設定しておくと管理が非常に楽になるはずだ。</p>
-
-<h2>ページの作り方</h2>
-
-<p>wordpressでは単一ページを作成し、aboutページなどを作成してきたという人もいることだろう。<br />
-Jekyllでも単一ページを作成することが可能。</p>
-
-<p>ページの作成方法についてもやはりシンプル設計で、トップページにあたる部分<code>index.html</code>(トップページも単一ページ)と同じ階層にhtmlファイルを設置すればOK。<br />
-こちらはCSS Radarのファイルを覗いてみてほしい。</p>
+		<h3 id="gitdiff">git diff - 2011/07/23</h3>
 
 <ul>
-  <li><a href="https://github.com/studiomohawk/CSS-Radar/blob/master/404.html">404ページ</a></li>
-  <li><a href="https://github.com/studiomohawk/CSS-Radar/blob/master/backnumber.html">バックナンバページ</a></li>
-  <li>少しトリッキーながらフィードファイルも生成できる <a href="https://github.com/studiomohawk/CSS-Radar/blob/master/atom.xml">atom.xml</a></li>
+  <li>フラグなしに<code>git diff</code>とした場合、最後のcommitと現在の状態を比較する</li>
+  <li><code>git diff -- &lt;filename&gt;</code>とすると、1ファイルのみを比較できる</li>
+  <li><code>git diff --cached</code>ではステージングにあるファイル群とHEAD(*)を比較する</li>
 </ul>
 
-<h2>基本以外のフォルダについて</h2>
+<p>/* HEADは現在のブランチと同義だと思っていていいそうだ。(<a href="http://stackoverflow.com/questions/2304087/what-is-git-head-exactly">What is git head, exactly? - Stack Overflow</a>)</p>
 
-<p>Jekyllでは<code>\_layouts</code>、<code>\_posts</code>、<code>_site</code>のみが必須のフォルダと先ほど書いたが、Liquidの説明部分で書いたようにインクルードファイルを格納する、<code>_include</code>フォルダや、Jekyllに拡張機能を追加するための、<code>_plugins</code>フォルダを作成することができる。アンダーバーがフォルダ名の頭にある場合、Jekyllはそれらをシステムファイルとして扱い、プロセスの際にそれらフォルダも見に行くようになっている。  </p>
+<p>あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。<br />
+バージョンコントロールを初めたばかりならなおさらだろう。
+そんな時にも便利なのが<code>git diff</code>だ。</p>
 
-<p>アンダーバーがついていないフォルダはJekyllとしては何の処理もしないが、きちんと<code>\_site</code>フォルダへ移動してくれる。<br />
-なので、CSSやJavascript、そして画像などを格納するフォルダを、それぞれ、<code>style</code>、<code>script</code>、<code>image</code>というようにして、ファイルを格納しておこう。</p>
-
-<h2>ローカル環境でプレビュー</h2>
-
-<p>このチュートリアル中に新たにデザインを作成し、Jekyll用にコーディングを完成するのは難しいと思うので、ここから先はすでに作成した私のthe_minimumをダウンロードしてから実践して見てほしい。</p>
-
-<p>Jekyllではコマンドラインを利用してファイルの生成を行う。そう、デザイナには不可解な黒い画面。<br />
-黒い画面とはいえ、使うコマンドは片手で数えられる程度なので、問題ないし、コピペできるように記述するので、是非試してみてほしい。</p>
-
-<p>それでは、<a href="https://github.com/studiomohawk/jekyll-theme-the_minimum">the_minimumのダウンロードは終わっただろうか</a>？<br />
-ターミナルを開いて、the_minimumをダウンロードしたフォルダに移動してほしい。移動は<code>cd</code>。</p>
-
-<p><code>--server</code>オプションはプレビュー環境用のサーバを立ち上げ、<br />
-<code>--auto</code>オプションは、ローカルファイルが保存されるたびに、ファイル生成を行うオプション。</p>
-
-<p>このコマンドをターミナルにて実行したら、</p>
-
-<p><a href="http://localhost:4000/">http://localhost:4000/</a></p>
-
-<p>をブラウザで見るとJekyllをローカル環境で動作させた結果を見る事ができる。  </p>
-
-<p>Jekyllは非常に強力なのに、シンプルで、インクルードなど便利な機能もついてくるので使い方を工夫すればすばらしいプロトタイプ作成ツールにもなるのではないかと思って、ベースとなるテンプレートを鋭意作成中。
-話は少しそれたが、思っていた以上に簡単だったのではないだろうか？</p>
-
-<h2>サーバへのアップロード</h2>
-
-<p>サーバへのアップロードはとても簡単。<br />
-FTPを使って、<code>\_site</code>内に生成されたファイル群をアップロードすればOK。  </p>
-
-<p>私は面倒くさがりなので、rakeを使ってrsyncでサーバとローカルファイルの同期をとっている。
-<code>rake rsync:live</code>
-とするだけで、指定のローカルフォルダとサーバの同期がとれるようにしてある。</p>
-
-<p>美しさの保証はまったくしないが、<a href="https://github.com/studiomohawk/CSS-Radar/blob/master/Rakefile">Rakefileも公開してある</a>ので参考になれば。</p>
-
-<h2>最後に</h2>
-
-<p>Jekyllを使ってみようと思ったきっかけは、Rubyの勉強になるだろうという単純な動機からだったが、今となってはwordpressより手軽で、ページロードのスピードも格段に早く、セキュリティの心配もまったくせずに済む、この環境が気に入っている。<br />
-もちろん、覚えなければならないことも多いし、バージョンが0.10という若い番号なだけに、きちんとしたドキュメントすら整備されていない。<br />
-万人にお勧めできるとは言いがたいが、新しいことにチャレンジすることはいい刺激になることは保証する。</p>
-
-<p>CSS Radarの直近の目標はAmazon S3でホストするように変更すること。<br />
-どなたか、東京リージョンを利用できるコマンドラインのツールをご存知でしたら、教えてください。</p>
-
-<p>Jekyllについて何か質問があれば、わかる範囲であればサポートしますので、いつでもどうぞ。</p>
+<p>もちろん、チームでの作業の場合、マスタをCommitする際に、他の人が作業した部分をレビューするのには欠かす事ができないコマンド。</p>
 
 	</div>
 	<footer>
@@ -271,7 +121,7 @@ FTPを使って、<code>\_site</code>内に生成されたファイル群をア�
 		<nav class="pagenation left">
 			<ul>
 				
-				<li class="prev"><a class="internal" rel="prev"  href="/tool/2011/05/14/ruby_for_designer_frontend_dev/" title="View ウェブデザイナのためのRuby入門">&laquo; ウェブデザイナのためのRuby入門</a></li>
+				<li class="prev"><a class="internal" rel="prev"  href="/tool/2011/06/11/jekyll-101.tool/" title="View Jekyllを使ってブログをつくろう">&laquo; Jekyllを使ってブログをつくろう</a></li>
 				
 				
 				

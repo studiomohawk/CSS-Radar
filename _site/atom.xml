@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+ <link rel="hub" href="https://pubsubhubbub.appspot.com"/>
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-07-22T00:23:13+09:00</updated>
+ <updated>2011-07-24T00:24:47+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>Git - フロントエンドデベロッパのためのgit</title>
+   <link href="http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces/"/>
+   <updated>2011-07-23T12:34:42+09:00</updated>
+   <id>http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces</id>
+   <content type="html">&lt;h3 id=&quot;gitdiff&quot;&gt;git diff - 2011/07/23&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;フラグなしに&lt;code&gt;git diff&lt;/code&gt;とした場合、最後のcommitと現在の状態を比較する&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git diff -- &amp;lt;filename&amp;gt;&lt;/code&gt;とすると、1ファイルのみを比較できる&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git diff --cached&lt;/code&gt;ではステージングにあるファイル群とHEAD(*)を比較する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;/* HEADは現在のブランチと同義だと思っていていいそうだ。(&lt;a href=&quot;http://stackoverflow.com/questions/2304087/what-is-git-head-exactly&quot;&gt;What is git head, exactly? - Stack Overflow&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。&lt;br /&gt;
+バージョンコントロールを初めたばかりならなおさらだろう。
+そんな時にも便利なのが&lt;code&gt;git diff&lt;/code&gt;だ。&lt;/p&gt;
+
+&lt;p&gt;もちろん、チームでの作業の場合、マスタをCommitする際に、他の人が作業した部分をレビューするのには欠かす事ができないコマンド。&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Jekyllを使ってブログをつくろう</title>
