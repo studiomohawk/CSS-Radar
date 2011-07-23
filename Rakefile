@@ -47,7 +47,7 @@ desc 'Ping pubsubhubbub server.'
 task :ping do
   require 'cgi'
   require 'net/http'
-  printHeader 'Pinging pubsubhubbub server'
+  puts 'Pinging pubsubhubbub server'
   data = 'hub.mode=publish&hub.url=' + CGI::escape("http://feeds.feedburner.com/CssRadar")
   http = Net::HTTP.new('pubsubhubbub.appspot.com', 80)
   resp, data = http.post('http://pubsubhubbub.appspot.com/publish',
