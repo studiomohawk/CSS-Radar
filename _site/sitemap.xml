@@ -6,8 +6,13 @@
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 <loc>http://css.studiomohawk.com</loc>
-	<lastmod>2011-07-24T00:49:45+09:00</lastmod>
+	<lastmod>2011-07-24T11:10:47+09:00</lastmod>
 	<priority>1.0</priority>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/vim/2011/07/24/vim-bits-and-pieces/</loc>
+	<lastmod>2011-07-24T00:57:55+09:00</lastmod>
 </url>
 
 <url>

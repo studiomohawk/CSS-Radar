@@ -4,9 +4,76 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-07-24T00:49:45+09:00</updated>
+ <updated>2011-07-24T11:10:47+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>Vim - ビギナーズサバイバルガイド</title>
+   <link href="http://css.studiomohawk.com/vim/2011/07/24/vim-bits-and-pieces/"/>
+   <updated>2011-07-24T00:57:55+09:00</updated>
+   <id>http://css.studiomohawk.com/vim/2011/07/24/vim-bits-and-pieces</id>
+   <content type="html">&lt;h3 id=&quot;preface&quot;&gt;Preface &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h3&gt;
+
+&lt;p&gt;Vimにおける設定ファイルである.vimrc。&lt;br /&gt;
+私のGoogleサーチによる他者の知の結晶とも言える.vimrcはgithubにあるので、参考になれば。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/studiomohawk/vim&quot;&gt;.vimrc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vimで覚えるべきポイントは大きく分けて3つ。
+コマンド、プラグイン、そして設定。&lt;br /&gt;
+この記事ではその3つにVimについての情報源を追加した4つを軸にしつつ、時系列でエントリを追記する形をとることにする。&lt;br /&gt;
+なお、プラグインを追加する際、設定も同時に行う場合が多いが、その場合はプラグインのエントリに記述する。
+また、同様に覚えたコマンドをより簡単に呼び出すための設定もコマンドのエントリに記述する。&lt;/p&gt;
+
+&lt;p&gt;私のVimに対するアプローチは、Ruby on RailsとjQueryのコアメンバであるYehuda Katz氏の記事、&lt;a href=&quot;http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/&quot;&gt;Everyone Who Tried to Convince Me to use Vim was Wrong&lt;/a&gt;と同じで、始めからVimのやり方に合わせるのではなく、マウスを使ったって、Control + Sで保存したって、別にかまわないと思っている。&lt;/p&gt;
+
+&lt;p&gt;私にとってVimはフィロソフィーではなく、あくまでもツールである。&lt;br /&gt;
+便利に使えるからこそのツールで、エンドユーザはその壮大な設計思想など気にする必要はない。自分のペースで自分らしく使いこなす事が真の効率化なのだから。&lt;/p&gt;
+
+&lt;h3 id=&quot;command&quot;&gt;コマンド&lt;/h3&gt;
+
+&lt;h4&gt;バッファにあるファイルを全部タブで開く &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;:tab ball&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;plugin&quot;&gt;プラグイン&lt;/h3&gt;
+
+&lt;h4&gt;&lt;a href=&quot;http://sjl.bitbucket.org/gundo.vim/&quot;&gt;Gundo&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h4&gt;
+
+&lt;p&gt;Gundo.vimはVimの編集履歴のツリーをバージョンコントロールしたように見せてくれるプラグイン。&lt;br /&gt;
+単にツリーを表示するだけではなく、そのundoの状態もプレビュできる強力なツール。  &lt;/p&gt;
+
+&lt;p&gt;実際に動作している様を見た方が便利さがわかるので、&lt;a href=&quot;http://vimcasts.org/episodes/undo-branching-and-gundo-vim/&quot;&gt;見てみてほしい&lt;/a&gt; (via Vimcast)。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sjl.bitbucket.org/gundo.vim/&quot;&gt;Gundo - Visualize your Vim Undo Tree&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sjl/gundo.vim/&quot;&gt;sjl/gundo.vim - GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vimrc&quot;&gt;設定&lt;/h3&gt;
+
+&lt;h4&gt;タブをFirefoxのように操る &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;Control + Tab&lt;/code&gt;で次のタブへ&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Control + Shift + Tab&lt;/code&gt;で前のタブへ&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Control + t&lt;/code&gt;で新しいタブを作る&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;resource&quot;&gt;リソース &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/&quot;&gt;Vimcasts - free screencasts about the text editor Vim&lt;/a&gt; / Vimのチュートリアルビデオキャスト。基本のコマンドからプラグインまで詳しく解説している(英語)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://peepcode.com/products/smash-into-vim-i&quot;&gt;Smash Into Vim by PeepCode&lt;/a&gt; / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート1 $12 (英語)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://peepcode.com/products/smash-into-vim-ii&quot;&gt;Smash Into Vim II by PeepCode&lt;/a&gt; / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート2 $12 (英語)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Git - フロントエンドデベロッパのためのgit</title>

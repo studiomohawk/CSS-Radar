@@ -32,6 +32,14 @@
 		<ul>
 			
 		<li>
+		<h6 class="title"><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド">Vim - ビギナーズサバイバルガイド</a></h6>
+			<date>
+				<span class="day">24</span>
+				<span class="month"><abbr>Jul</abbr></span>
+			</date> 
+		</li>
+		
+		<li>
 		<h6 class="title"><a href="/git/2011/07/23/git-bits-and-pieces/" title="Git - フロントエンドデベロッパのためのgit">Git - フロントエンドデベロッパのためのgit</a></h6>
 			<date>
 				<span class="day">23</span>
@@ -63,14 +71,6 @@
 			</date> 
 		</li>
 		
-		<li>
-		<h6 class="title"><a href="/frontend/2011/04/09/why_speed_matters/" title="ページの高速化とその方法について">ページの高速化とその方法について</a></h6>
-			<date>
-				<span class="day">09</span>
-				<span class="month"><abbr>Apr</abbr></span>
-			</date> 
-		</li>
-		
 		<li class="btn">
 			<a href="/backnumber/" class="btn">Read More</a>
 		</li>
@@ -86,11 +86,11 @@
 				<div class="content">
 	<header>
 	<div class="head-inner">
-		<h1><a href="/git/2011/07/23/git-bits-and-pieces/" title="Git - フロントエンドデベロッパのためのgit" rel="bookmark">Git - フロントエンドデベロッパのためのgit</a></h1>
+		<h1><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド" rel="bookmark">Vim - ビギナーズサバイバルガイド</a></h1>
 		<div class="meta">
-			<span class="category"><a href="/categories/git/" class="git" title="git">git</a></span>
-			<date class="date-pub" title="2011-07-23T12:34:42+09:00">
-				<span class="day">23</span>
+			<span class="category"><a href="/categories/vim/" class="vim" title="vim">vim</a></span>
+			<date class="date-pub" title="2011-07-24T00:57:55+09:00">
+				<span class="day">24</span>
 				<span class="month"><abbr>Jul</abbr></span>
 				<span class="year">2011</span>
 			</date>
@@ -99,21 +99,65 @@
 	</div>
 	</header>
 	<div class="bd">
-		<h3 id="gitdiff">git diff - 2011/07/23</h3>
+		<h3 id="preface">Preface <span class="small">(Update: 2011/07/24)</span></h3>
+
+<p>Vimにおける設定ファイルである.vimrc。<br />
+私のGoogleサーチによる他者の知の結晶とも言える.vimrcはgithubにあるので、参考になれば。</p>
 
 <ul>
-  <li>フラグなしに<code>git diff</code>とした場合、最後のcommitと現在の状態を比較する</li>
-  <li><code>git diff -- &lt;filename&gt;</code>とすると、1ファイルのみを比較できる</li>
-  <li><code>git diff --cached</code>ではステージングにあるファイル群とHEAD(*)を比較する</li>
+  <li><a href="https://github.com/studiomohawk/vim">.vimrc</a></li>
 </ul>
 
-<p>/* HEADは現在のブランチと同義だと思っていていいそうだ。(<a href="http://stackoverflow.com/questions/2304087/what-is-git-head-exactly">What is git head, exactly? - Stack Overflow</a>)</p>
+<p>Vimで覚えるべきポイントは大きく分けて3つ。
+コマンド、プラグイン、そして設定。<br />
+この記事ではその3つにVimについての情報源を追加した4つを軸にしつつ、時系列でエントリを追記する形をとることにする。<br />
+なお、プラグインを追加する際、設定も同時に行う場合が多いが、その場合はプラグインのエントリに記述する。
+また、同様に覚えたコマンドをより簡単に呼び出すための設定もコマンドのエントリに記述する。</p>
 
-<p>あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。<br />
-バージョンコントロールを初めたばかりならなおさらだろう。
-そんな時にも便利なのが<code>git diff</code>だ。</p>
+<p>私のVimに対するアプローチは、Ruby on RailsとjQueryのコアメンバであるYehuda Katz氏の記事、<a href="http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/">Everyone Who Tried to Convince Me to use Vim was Wrong</a>と同じで、始めからVimのやり方に合わせるのではなく、マウスを使ったって、Control + Sで保存したって、別にかまわないと思っている。</p>
 
-<p>もちろん、チームでの作業の場合、マスタをCommitする際に、他の人が作業した部分をレビューするのには欠かす事ができないコマンド。</p>
+<p>私にとってVimはフィロソフィーではなく、あくまでもツールである。<br />
+便利に使えるからこそのツールで、エンドユーザはその壮大な設計思想など気にする必要はない。自分のペースで自分らしく使いこなす事が真の効率化なのだから。</p>
+
+<h3 id="command">コマンド</h3>
+
+<h4>バッファにあるファイルを全部タブで開く <span class="small">(Update: 2011/07/24)</span></h4>
+
+<ul>
+  <li><code>:tab ball</code></li>
+</ul>
+
+<h3 id="plugin">プラグイン</h3>
+
+<h4><a href="http://sjl.bitbucket.org/gundo.vim/">Gundo</a> <span class="small">(Update: 2011/07/24)</span></h4>
+
+<p>Gundo.vimはVimの編集履歴のツリーをバージョンコントロールしたように見せてくれるプラグイン。<br />
+単にツリーを表示するだけではなく、そのundoの状態もプレビュできる強力なツール。  </p>
+
+<p>実際に動作している様を見た方が便利さがわかるので、<a href="http://vimcasts.org/episodes/undo-branching-and-gundo-vim/">見てみてほしい</a> (via Vimcast)。  </p>
+
+<ul>
+  <li><a href="http://sjl.bitbucket.org/gundo.vim/">Gundo - Visualize your Vim Undo Tree</a></li>
+  <li><a href="https://github.com/sjl/gundo.vim/">sjl/gundo.vim - GitHub</a></li>
+</ul>
+
+<h3 id="vimrc">設定</h3>
+
+<h4>タブをFirefoxのように操る <span class="small">(Update: 2011/07/24)</span></h4>
+
+<ul>
+  <li><code>Control + Tab</code>で次のタブへ</li>
+  <li><code>Control + Shift + Tab</code>で前のタブへ</li>
+  <li><code>Control + t</code>で新しいタブを作る</li>
+</ul>
+
+<h3 id="resource">リソース <span class="small">(Update: 2011/07/24)</span></h3>
+
+<ul>
+  <li><a href="http://vimcasts.org/">Vimcasts - free screencasts about the text editor Vim</a> / Vimのチュートリアルビデオキャスト。基本のコマンドからプラグインまで詳しく解説している(英語)</li>
+  <li><a href="http://peepcode.com/products/smash-into-vim-i">Smash Into Vim by PeepCode</a> / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート1 $12 (英語)</li>
+  <li><a href="http://peepcode.com/products/smash-into-vim-ii">Smash Into Vim II by PeepCode</a> / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート2 $12 (英語)</li>
+</ul>
 
 	</div>
 	<footer>
@@ -121,7 +165,7 @@
 		<nav class="pagenation left">
 			<ul>
 				
-				<li class="prev"><a class="internal" rel="prev"  href="/tool/2011/06/11/jekyll-101.tool/" title="View Jekyllを使ってブログをつくろう">&laquo; Jekyllを使ってブログをつくろう</a></li>
+				<li class="prev"><a class="internal" rel="prev"  href="/git/2011/07/23/git-bits-and-pieces/" title="View Git - フロントエンドデベロッパのためのgit">&laquo; Git - フロントエンドデベロッパのためのgit</a></li>
 				
 				
 				
