@@ -3,3 +3,5 @@ _site
 _site/
 _site/*
 _site/*.xml
+_site/atom.xml
+_site/sitemap.xml
