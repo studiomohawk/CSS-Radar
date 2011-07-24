@@ -2,4 +2,4 @@ _site/**/*
 _site
 _site/
 _site/*
-_site*
+_site/*.xml
