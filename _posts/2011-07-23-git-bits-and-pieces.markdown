@@ -3,7 +3,38 @@ layout: changelog
 category: git 
 title: Git - フロントエンドデベロッパのためのgit
 date: 2011-07-23 12:34:42
+update: 2011-07-29 22:42:50
 ---
+
+### git alias - 2011/07/29 {#gitalias}
+
+コマンドラインの便利さはコマンドを覚えてしまえば、色々なことがコマンド1つ、あるいは2つでできてしまう、ということにつきる。  
+gitもGUIツールの利便性は否定しないが、コマンドラインから利用することにしている私。  
+少しでもタイプする文字を減らしたいので、``git alias``。
+
+``git config -e --global``
+
+とすると、システムワイドで利用するgitの設定ファイル.gitconfigファイルをエディタで開ける。  
+すでに自分のメールと名前は設定済みのはずなので、ファイルに追記すれば、aliasを利用できる。
+
+6行目までは、単純によく使うコマンドを2文字に省略しただけで、  
+``lg``は[この記事](http://www.jukie.net/bart/blog/pimping-out-git-log)から拝借した。``git log``を少しセクシーにしてくれる。  
+``fix``は私があまりにもよく繰り返す、コミットしたあとで、そのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う``--amend``オプションをaliasにした。  
+コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、``git add
+FILE``と追加して、``git
+fix``とすると、前のコミットメーッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。
+
+{% highlight bash %}
+[alias]
+st = status
+ci = commit
+br = branch
+co = checkout
+df = diff
+dc = diff --cached
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+fix = commit --amend -C HEAD
+{% endhighlight %}
 
 ### git diff - 2011/07/23 {#gitdiff}
 
