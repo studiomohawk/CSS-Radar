@@ -1,0 +1,16 @@
+javascript_compressor: yui
+
+javascripts:
+  master:
+    - _site/js/jquery.easing.js
+    - _site/js/jquery.fancybox.js
+    - _site/js/common.js
+stylesheets:
+   master:
+    - _site/style/reset.css
+    - _site/style/base.css
+    - _site/style/mod.css
+    - _site/style/style.css
+    - _site/style/syntaxhighlighter.css
+    - _site/style/jquery.fancybox.css
+    - _site/style/mediaqueries.css

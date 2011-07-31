@@ -1,5 +1,4 @@
 task :default => [:"juicer:css"]
-sys_head = '_includes/system_head.html'
 
 namespace :juicer do
   desc 'Merges stylesheets'
@@ -14,11 +13,11 @@ end
 
 namespace :rsync do
   desc "--dry-run rsync"
-    task :dryrun => :"juicer:css" do
+    task :dryrun do
       system('rsync _site/ -ave ssh --dry-run --delete studiomo@studiomohawk.com:www/css/')
     end
   desc "rsync"
-    task :live => :"juicer:css" do
+    task :live do
       system('rsync _site/ -ave ssh --delete studiomo@studiomohawk.com:www/css/')
     end
 end
@@ -55,4 +54,30 @@ task :ping do
                          {'Content-Type' => 'application/x-www-form-urlencoded'})
 
   puts "Ping error: #{resp}, #{data}" unless resp.code == "204"
+end
+
+desc "Launch preview environment"
+task :preview do
+  system "jekyll --auto --server"
+end
+
+desc "Build site"
+task :build do
+  system "jekyll"
+end
+
+desc "Package app for production"
+task :package do
+  ENV['JEKYLL_ENV'] = 'production'
+  
+  Rake::Task["build"].invoke
+
+  print "Compressing assets..."
+  system "jammit -o assets -c _assets.yml"
+  puts "done."
+end
+
+desc "Deploy Amazon s3 Using s3Sync"
+task :deploy do
+  system('s3sync -rpv _site/ css.studiomohawk.com:')
 end
