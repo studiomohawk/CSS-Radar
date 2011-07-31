@@ -4,9 +4,215 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-07-24T11:34:45+09:00</updated>
+ <updated>2011-07-31T12:46:32+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>必携Mac OSXアプリ12</title>
+   <link href="http://css.studiomohawk.com/tool/2011/07/30/indispensable-mac-apps/"/>
+   <updated>2011-07-30T00:13:28+09:00</updated>
+   <id>http://css.studiomohawk.com/tool/2011/07/30/indispensable-mac-apps</id>
+   <content type="html">&lt;p&gt;Windowsでも、Ubuntuでも、Macでも。これまでどんな環境でも少しでも楽になるためなら、どんな苦労も厭わないという生き方を選んだ私は数多くのアプリを愛用してきた。&lt;br /&gt;
+今の私のメイン環境はMac OSX。もちろんLionにアップグレードしたばかり。&lt;br /&gt;
+すでに知っての通り、HTML + CSS
++ JSを駆使しながら、現役フロントエンドデベロッパ/ウェブデザイナとして生計を立ている。&lt;br /&gt;
+そんな私がどうしても手放す事ができない12のアプリを紹介する。  &lt;/p&gt;
+
+&lt;h2&gt;前段&lt;/h2&gt;
+
+&lt;p&gt;記事のための記事は書かないのがCSS
+Radarで大事にしている編集方針なので、衝突する点が多々ある記事だとは思うが、ウェブコンテンツは今まさにクリエイトからキュレートへ移行を始めている。そんな中、どんな12を選ぶのか、そしてそれらをどんな風に紹介するのかという点は私がこれまであまり触れてこなかったので、私にとっては勉強になるはず。
+今回紹介する12のアプリはよりよいアプリが見つかればサシカエられていく。この方式は最近の2記事でチャレンジした手法を取り入れる事にした。&lt;/p&gt;
+
+&lt;h2&gt;1. &lt;a href=&quot;http://www.chromium.org/getting-involved/dev-channel&quot;&gt;Google Chrome Dev&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Google ChromeのDevチャネル版が私のメインブラウザ兼開発環境。FireFox
++ Firebugにもお世話になることは多いが、ChromeのDevelper
+Toolはかなり便利な点も多く、少しずつながら使い方も覚えてきたので、最近ではChromeを開発環境としても利用し始めた。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?gl=US&amp;amp;v=nOEw9iiopwI&quot;&gt;Google Chrome Developer Tools: 12 Tricks to Develop Quicker - YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://paulirish.com/2011/a-re-introduction-to-the-chrome-developer-tools/&quot;&gt;A Re-introduction to the Chrome Developer Tools « Paul Irish&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ChromeのDevelopmper Toolを使いこなすためにおすすめのビデオが上記。Paul
+Irishが直接解説しているのもおすすめの理由(私は彼のジョークまじりの説明が好き)。&lt;/p&gt;
+
+&lt;h2&gt;2. &lt;a href=&quot;https://github.com/b4winckler/macvim&quot;&gt;MacVim 7.3 Snapshot 61&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/vim/2011/07/24/vim-bits-and-pieces/&quot;&gt;Vim
+- ビギナーズサバイバルガイド&lt;/a&gt;でも紹介している私のメインテキストエディタ。&lt;br /&gt;
+EspressoもCodaもイマイチ合わず、HTML + CSS
++ JSがメインで制作する私にとってIDEは重すぎる。そこで挑戦し、今もなおその挑戦が続いているのがMacVim。会社の環境も長らく愛用したNotepad++からgvimに移行した。&lt;br /&gt;
+前述の記事でも紹介しているが、&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vim.runpaint.org/toc/&quot;&gt;Vim Recipes&lt;/a&gt;
+/ 基本から応用まで非常にシンプルでミニマムなフォーマットで丁寧に解説してくれる(英語)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/&quot;&gt;Vimcasts - free screencasts about the text editor Vim&lt;/a&gt; / Vimのチュートリアルビデオキャスト。基本のコマンドからプラグインまで詳しく解説している(英語)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;私のレベルでは大体この2サイトで紹介されていることくらいしかできないが、それでも十分な生産性の向上があった。とっつき憎いが、覚えてしまえば離れられない、そういう種類のテキストエディタ。&lt;br /&gt;
+何よりも大きいのが、少なくとも数年は新着エディタの登場に心乱されずに済むところだろう。&lt;/p&gt;
+
+&lt;h2&gt;3. &lt;a href=&quot;http://www.alfredapp.com/&quot;&gt;Alfred Powerpack&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;アプリランチャであるAlfredは新鋭アプリと言ってもいいだろう。アプリケーションをキーワードで呼び出す(アプリの起動以外にも今は色々と機能が追加された)というシンプルなアプリ。&lt;br /&gt;
+Lionの登場でLaunchPadが新たに追加されたが、圧倒的にAlfredの方が便利。AlfredのおかげでDockに入れているアプリも最小で済んでいる。&lt;br /&gt;
+Mac App
+Storeでは無料でインストールできるが、私は£12でPowerpackを購入した。Powerpackではファイルシステムを呼び出し、ナビゲートできたり、iTune
+Mini
+Playerが追加されていたり、Terminalのコマンドすら打てたりと非常に便利なのでおすすめだ。£12はバージョンが1.0になるまでの暫定の値段らしく、先日まさに0.99のベータ版がリリースされた。&lt;br /&gt;
+この値段が設定された頃から比べるとかなり機能が追加されているので、今がまさに買い時のアプリだろう。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://alfredtips.tumblr.com/&quot;&gt;Anna's Alfred Hat Tips&lt;/a&gt;
+/ このブログでは小さなTips達をたくさん更新している。私の知らないAlfredに出会わせてくれる非常に有用なサイト&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;4. &lt;a href=&quot;http://www.smilesoftware.com/TextExpander/&quot;&gt;TextExpander&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Mac App
+Storeでも購入できるようになったTextExpander。その名の通り、あらかじめ登録したスニペットを特定のキーワードをタイプして呼び出してくれる非常に便利この上ないアプリ。 &lt;/p&gt;
+
+&lt;p&gt;メールの定型文はもちろん、CSS、HTML、JSなどのスニペット、そしてgitのコマンドなど様々な場面で利用している。&lt;br /&gt;
+AppleScriptも利用できるということで、コピーしたURLから短縮URLを発行するなんてこともできる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;!dh&lt;/code&gt; で現在の日付と時間を呼び出したり&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;!jq&lt;/code&gt; でGoogle CDNホストのjQueryのURL入りscriptタグを呼び出したり&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;!skelton&lt;/code&gt; でよく使うHTMLのパターンを呼び出したり&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;と使い方はユーザによって千差万別の超ユーティリティアプリ。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://brettterpstra.com/code/?did=6&quot;&gt;TextExpander Snippets via Brett Terpstra&lt;/a&gt; / Brett Terpstraによる便利なTextExpander用スニペット集&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.smilesoftware.com/TextExpander/takecontrol.html&quot;&gt;TAKE CONTROL OF TEXTEXPANDER&lt;/a&gt; / Michael E. Cohenによる公式ハンドブック。$10、ebook。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;5. &lt;a href=&quot;http://www.realmacsoftware.com/littlesnapper/&quot;&gt;LittleSnapper&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;私のステルス365日プロジェクトで、&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;で展開している&lt;a href=&quot;http://flic.kr/s/aHsiYTTKK3&quot;&gt;#webdesigninspプロジェクト&lt;/a&gt;では必ず必要なスクリーンショット。&lt;br /&gt;
+これがなかなか面倒なわけだが、RealMacによるLittleSnapperのおかげで成立している。&lt;br /&gt;
+よりよいデザイナになるために、自分のためだけでも気に入ったデザインの収集はやるべきことの1つだと私は考えているが、LittleSnapperならただスクリーンショットを撮るだけではなく、iPhotoやApetureなど写真整理、編集アプリなみにタグづけを行ったりプロジェクトディレクトリを作ったりと散逸しがちなスクリーンショットを管理する点で他のスクリーンショットアプリを凌駕している。  &lt;/p&gt;
+
+&lt;p&gt;もちろん、アノテーションをつけたり、トリミングしたりと基本的な編集機能も備えているし、私のようにFlickrにアップロードするのもボタン1つ。&lt;br /&gt;
+Google
+PicasaやFacebookなどにもアップロードできたらいいなとは思うものの、精力的に開発は続いているので、近い将来それも叶うと信じている。  &lt;/p&gt;
+
+&lt;h2&gt;6. &lt;a href=&quot;http://www.iterm2.com/#/section/home&quot;&gt;iTerm2&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;私は黒い画面、ターミナルを使う事を恐れないデザイナ、どころか大体いつでも開いているので、iTerm2は必携アプリ。&lt;br /&gt;
+タブ切り替えができたり、呼び出しにもグローバルホットキーが使えたりと通常のTerminalにはない便利な機能が満載で、非常に多くの開発者も愛用している。
+あの&lt;a href=&quot;http://john.resig.usesthis.com/&quot;&gt;John Resig&lt;/a&gt;も愛用しているそうだ。  &lt;/p&gt;
+
+&lt;p&gt;iTerm2のウェブサイトにて、他にも様々なフィーチャについて&lt;a href=&quot;http://www.iterm2.com/#/section/features/split_panes&quot;&gt;画像つきで説明しているので&lt;/a&gt;、説明こそ英語だが、一見すればその機能がわかるので、1度見てみる事をおすすめする。&lt;br /&gt;
+使いやすい黒い画面を手に入れてしまうと、本当に離れられなくなるので、まだ使いこなせないな、と感じているなら是非トライしてみてほしい。&lt;/p&gt;
+
+&lt;p&gt;アプリとして数えるのもどうかと思ったバージョンコントロールツールの&lt;a href=&quot;/git/2011/07/23/git-bits-and-pieces/&quot;&gt;git&lt;/a&gt;も、&lt;a href=&quot;/tool/2011/05/14/ruby_for_designer_frontend_dev/&quot;&gt;ウェブデザイナのためのRuby入門&lt;/a&gt;で紹介した数々のツールも、このiTerm2があるからこそ使いこなせるようになってきたと言えるだろう。&lt;/p&gt;
+
+&lt;h2&gt;7. &lt;a href=&quot;http://brettterpstra.com/project/nvalt/&quot;&gt;nvALT 2&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;nvALT 2は&lt;a href=&quot;http://elasticthreads.tumblr.com/&quot;&gt;Elastic Threads (David Halter)&lt;/a&gt;と&lt;a href=&quot;http://brettterpstra.com/&quot;&gt;Brett Terpstra&lt;/a&gt;による、オープンソースのメモアプリ&lt;a href=&quot;http://notational.net/&quot;&gt;Notational Velocity&lt;/a&gt;のフォーク。先日久しぶりのアップデートがあり。nvAltはオリジナルのNotational Velocityの公式なエッジバージョンとなる発表があった。nvAltで追加された機能がNotational Velocityでも追加されるようになるそうだ。&lt;/p&gt;
+
+&lt;p&gt;シンプルインターフェイスからは想像もできない機能が豊富ながら、使っている際はまったく気にならない非常に優秀なアプリ。&lt;br /&gt;
+何か思いついたらさっと呼び出し、markdown形式でメモを取る。  &lt;/p&gt;
+
+&lt;p&gt;ブログのアイデアから、Todo、スニペットの一時保管場所として利用している。iOSで愛用している&lt;a href=&quot;http://simplenoteapp.com/&quot;&gt;Simplenote&lt;/a&gt;とも同期を取る事ができるので、外出先でもメモの読み書きが可能。&lt;br /&gt;
+私がオリジナルではなくnvAltを愛用している理由は&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;markdown形式で書いたメモのプレビュ機能&lt;/li&gt;
+  &lt;li&gt;ノート間のリンク&lt;/li&gt;
+  &lt;li&gt;ノートの最大幅を決めてリーダビリティを向上&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この3点が主な理由。今回のアップデートでSafari/Chromeのextensionも登場し、ブラウザからnvAltへの文字の移動が楽になった。 &lt;/p&gt;
+
+&lt;p&gt;保存されるノートは単純な.txtファイルなので、Dropboxを使った他デバイスとの同期も簡単。&lt;/p&gt;
+
+&lt;h2&gt;8. &lt;a href=&quot;http://db.tt/2usxiol&quot;&gt;Dropbox&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;もはやあまりにも有名で説明の必要がないファイル同期アプリのDropbox。その機能自体も魅力的だが、現時点ではデファクトアプリとなっているので、他アプリとの連携が魅力になっている。&lt;br /&gt;
+私は現在50GBプランを利用して、大体60%くらい使い切っている。なんでもDropboxに放り込む癖があるからだ。 &lt;/p&gt;
+
+&lt;p&gt;100GBプランへの移行も検討しているが、そこそこいい値段なので、残り必要なストレージはAmazon
+S3を&lt;a href=&quot;http://www.expandrive.com/&quot;&gt;ExpanDrive&lt;/a&gt;から利用する実験を行っている。&lt;/p&gt;
+
+&lt;p&gt;最近Dropboxのセキュリティについて疑問視する記事が散見されたが、もともと他人に見てほしくないファイルを他者に託すこと自体に疑問があるので、私にはあまり影響がない。  &lt;/p&gt;
+
+&lt;h2&gt;9. &lt;a href=&quot;http://www.apple.com/aperture/&quot;&gt;Aperture&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;私の趣味はデザインとコーディング。&lt;br /&gt;
+少し変わった趣味なので(仕事でもある)、数年前に始めた趣味が写真。下手の横好きのレベルを脱さないが、驚くほどデザインの勉強にもなる写真の趣味に欠かす事ができないのが、Aperture。&lt;br /&gt;
+私はどうしてもAdobeのプロダクトが好きになれないので、同系アプリのLightroomではなくApertureを愛用している。&lt;/p&gt;
+
+&lt;p&gt;Apertureはプロ用アプリでありかつ、iPhotoレベルのシンプルさをキープし続けるというすばらしいコンセプトの元、開発されている。  &lt;/p&gt;
+
+&lt;p&gt;レタッチはもちろん、写真の整理、選定も非常にやりやすく、FlickrやFacebookへのアップロードも簡単にできるし、デファクトスタンダードなアプリなだけあって多くのサードパーティプラグインも存在する。&lt;br /&gt;
+写真は撮るものではなくて作るもの、というフィロソフィーの元、私はRawで撮った写真を必ずJpegへ現像するポストプロダクションを行うので、本当になくてはならない存在。  &lt;/p&gt;
+
+&lt;p&gt;写真を大量に撮るので容量が心配だったので、外付けのHDDで作業をしているが、この状態だとAppertureのよい点が十分に引き出せないということが最近わかったので、別のワークフローを考え中。&lt;br /&gt;
+おそらく一旦スクラッチ的な場所をローカルで持って、レタッチ、現像などの処理を行い、終わったら外付けHDDへエクスポートする、というのが理想のようだ。&lt;br /&gt;
+この一連の作業もそれほど面倒にならない点はすばらしい。&lt;/p&gt;
+
+&lt;p&gt;大した写真ではないが、私がどんな写真を撮っているか気になる方は、&lt;a href=&quot;http://www.flickr.com/photos/studiomohawk/&quot;&gt;Flickr&lt;/a&gt;まで。&lt;/p&gt;
+
+&lt;h2&gt;10. &lt;a href=&quot;https://github.com/fikovnik/ShiftIt&quot;&gt;ShiftIt&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;限りあるスクリーンの中でどのようにウィンドウを管理していくかは生産性向上には欠かせない問題。&lt;br /&gt;
+様々なアプリを試してみたが、Mac上でもっとも優秀なウィンドウ管理アプリはShiftIt。  &lt;/p&gt;
+
+&lt;p&gt;キーボードショートカットにより、モニター一杯にウィンドウを配置するフルスクリーンから、上下、左右半分、1/4など様々なサイズと位置にウィンドウを配置、リサイズしてくれる。&lt;br /&gt;
+私は昔から2モニタの愛好者で、いまでもそうだが、モニタのサイズの大型化とその値段の減少により、最近では1つのモニタでウィンドウ管理するほうが生産性は向上するという見解も見かけるようになってきた。&lt;br /&gt;
+確かに複数モニタは金銭的にも、またなにより、置き場所に結構困ることが多いはずなので、シングルモニタ
++ ウィンドウ管理のほうがその点でも優れていると言える。  &lt;/p&gt;
+
+&lt;p&gt;いつも使っているというわけではないが自然にショートカットキーを叩けるようになってきたので、これがないと困るレベルまで使いこなしてきた。&lt;br /&gt;
+地味なアプリながら必携と言わざる得ないだろう。  &lt;/p&gt;
+
+&lt;p&gt;なお、ShiftItは自分でコンパイルする必要があるが、Snow
+Leopard移行であればXCodeからコンパイルできるし、コンパイル用のスクリプトも用意されているので、コマンドからそのスクリプトを実行すればあとは自動で処理されるので、難しい事は何もない。
+Lion環境で利用しているが、今のところ問題ない。作者もLionへ移行したそうなので、なにかあれば対応すると言っていた。&lt;/p&gt;
+
+&lt;h2&gt;11. &lt;a href=&quot;http://balsamiq.com/&quot;&gt;Balsamiq&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/webdesign/2011/04/01/wireframe/&quot;&gt;ワイヤフレーム&lt;/a&gt;の記事でも紹介したBalsamiq。
+Adobe
+Airアプリで、もちろんクロスブラウザ。個人プロジェクトでも、会社の仕事でも必ず使うし、デザインのプロセスのなかで一番楽しいのがワイヤフレームな私のお気に入り。&lt;br /&gt;
+$79は少し高いかなと感じることだろうが、まず間違いなく損はしない。
+精力的にアップデートはかかるし、何よりもアイデアを取り出すためのツールとしてのワイヤフレームの価値を十二分に理解したチームが開発にあたっているので、とにかく使いやすい。&lt;/p&gt;
+
+&lt;p&gt;私はBalsamiqを使ってワイヤフレームだけではなく、図解付きのドキュメントを作ったり、サイトマップを作ったり、ワークフローを書いたりもしている。&lt;br /&gt;
+手書き感溢れるワイヤフレームは多くのフィードバックを得やすく、そのフィードバックを反映することもストレスなしでできるので、使っているのがとても楽しい。 &lt;/p&gt;
+
+&lt;p&gt;ワイヤフレームをイテレートして改善していき、よりよいプロダクトの最終系が見えてくる時間こそ、デザイナとして仕事つづけるモチベーションにつながる。&lt;br /&gt;
+メニューなどは英語だが、おそらくアレルギさえなければ問題なく使えるだろう。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blogs.balsamiq.com/ux/&quot;&gt;Balsamiq UX Blog&lt;/a&gt;
+/ BalsamiqチームのUXDがUXを通してBalsamiqでの表現方法などを教えてくれる。Balsamiqを使ってなくても十分役に立つ情報&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;12. &lt;a href=&quot;http://sparrowmailapp.com/&quot;&gt;Sparrow&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Macのデフォルトメールアプリ、mailを1度も使った事がないが、Gmailが個人でも会社でもメールプロバイダである私に取ってはSparrowの存在があるからこそ。  &lt;/p&gt;
+
+&lt;p&gt;非常にシンプルにデザインされ、Gmailの読み書きに関してはブラウザ版よりこちらの方が邪魔にならなくて済む。私のようにブラウザが開発環境であるフロントエンドな人間はGmailにタブを奪われ、メモリを奪われることほど生産性が低下することはない。&lt;br /&gt;
+最近のアップデートにより、ラベルを表示するサイドバーや複数アカウントを一気に管理できるUnifiled
+Inboxという機能も追加され、使い勝手はさらに向上した。  &lt;/p&gt;
+
+&lt;p&gt;非常によくデザインされたアプリで、使っていて気持ちがいい。この1年以内に公開されたアプリながら多くのユーザを獲得したのも十分理解できる。&lt;br /&gt;
+現在ではMac App Storeからも購入できる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sparrowtips.tumblr.com/&quot;&gt;Sparrowtips&lt;/a&gt;
+/ オフィシャルTipsブログ。Sparrowの多くの機能をわかりやすく紹介しているので、購入の際の参考と勢い余って購入してしまった後の使いこなしの参考に&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Vim - ビギナーズサバイバルガイド</title>
@@ -35,6 +241,61 @@
 
 &lt;h3 id=&quot;command&quot;&gt;コマンド&lt;/h3&gt;
 
+&lt;h4&gt;ファイルを分割ウィンドウで開く &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/29)&lt;/span&gt;&lt;/h4&gt;
+
+&lt;p&gt;高度なテキストエディタには必ずと言っていいほど存在するファイルを上下、あるいは左右で分割して表示する方法。&lt;br /&gt;
+私はCSSファイルは同じ記述は繰り返さないように最大の努力をしているが、HTMLファイルは同じような記述で書けるように最大限の努力をしている。&lt;br /&gt;
+そんな際に重宝するのがこのコマンド。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;ctrl-w s&lt;/code&gt; こちらは現在のファイルを左右に分割&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ctrl-w v&lt;/code&gt; こちらは現在のファイルを上下に分割&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;HTML
++ CSSの組み合わせは大体の場合セットで開いていた方が何かと便利。そんな際は&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;:sp FILENAME&lt;/code&gt; FILENAMEを新しく左右に分割されたウィンドウにロード&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:vp FILENAME&lt;/code&gt; FILENAMEを新しく上下に分割されたウィンドウにロード&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最近はワイドなモニターが主流なので、左右で分割しても苦にならないだろうが、私は昔の人間なので上下に開くことが多い。&lt;/p&gt;
+
+&lt;p&gt;開く方法を紹介したからには、閉じる方法も紹介しよう。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;:on&lt;/code&gt; は現在選択されているウィンドウのみを残して、他のウィンドウを閉じる&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:q&lt;/code&gt; は現在選択されちえるウィンドウを閉じる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;コマンドが多いなと感じる事だろうが、sはsplitの略で、vはvertical
+splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ。&lt;/p&gt;
+
+&lt;h4&gt;行をソートする &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/29)&lt;/span&gt;&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;:'&amp;lt;,'&amp;gt;!sort&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;選択行をアルファベット順に並べ替える。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;まず、ソートしたい行を選択&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:&lt;/code&gt; をタイプすると、&lt;code&gt;:'&amp;lt;,'&amp;gt;'&lt;/code&gt;と表示される&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;!sort&lt;/code&gt;とタイプ = &lt;code&gt;:'&amp;lt;,'&amp;gt;!sort&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;何が便利かというと、私はCSSのプロパティをアルファベット順に並べ替える(IEハックは除外するが、ここは手作業)ので重宝している。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;:'&amp;lt;,'&amp;gt;!sort -u&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;とすると、ユニークな行だけ、つまり重複行を削除することも可能。&lt;/p&gt;
+
+&lt;p&gt;私の環境では日本語に置けるソートは上手く行かないが、ユニーク行を残すことはできた。&lt;/p&gt;
+
 &lt;h4&gt;バッファにあるファイルを全部タブで開く &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -42,6 +303,55 @@
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;plugin&quot;&gt;プラグイン&lt;/h3&gt;
+
+&lt;h4&gt;&lt;a href=&quot;https://github.com/godlygeek/tabular&quot;&gt;Tabular.vim&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/29)&lt;/span&gt;&lt;/h4&gt;
+
+&lt;p&gt;Tabular.vimは&lt;code&gt;=&lt;/code&gt;や、&lt;code&gt;:&lt;/code&gt;のような決まった文字を基点にツラを合わせるためのプラグイン。&lt;br /&gt;
+読みやすいコードを目指すあまり、書いている最中でもツラを合わせないと気が済まない人には必携だ。&lt;/p&gt;
+
+&lt;p&gt;例えば、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#selector&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;zoom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;letter-spacing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;word-spacing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;のようなCSSを&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;:Tab\:&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;とすると&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#selector&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;zoom&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;letter-spacing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;word-spacing&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;vertical-align&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;このようになる。(環境によっては、再現されない可能性がある、そんな際は&lt;a href=&quot;http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/&quot;&gt;Bitstream Vera Sans Mono&lt;/a&gt;をインストールすれば見られるようになる。日本語Fontではないが、プログラマ向Fontとして有名なので、持っていて損はしないだろう)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;nnoremap &amp;lt;leader&amp;gt;tab :Tab /:\zs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;.vimrcには、上記のマッピングを追記した。例とは異なるツラの揃え方だが、私はこちらのほうが好み。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/godlygeek/tabular&quot;&gt;godlygeek/tabular - GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4&gt;&lt;a href=&quot;http://sjl.bitbucket.org/gundo.vim/&quot;&gt;Gundo&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h4&gt;
 
@@ -65,9 +375,24 @@
   &lt;li&gt;&lt;code&gt;Control + t&lt;/code&gt;で新しいタブを作る&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;resource&quot;&gt;リソース &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;vim&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;quot; keymap Firefox like tab move {&lt;/span&gt;
+nmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;tabprevious&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+nmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :tabnext&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;tabprevious&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :tabnext&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+imap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;Esc&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;:&lt;span class=&quot;k&quot;&gt;tabprevious&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;i
+imap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;Esc&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;:tabnext&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;i
+nmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;tabnew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+imap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;Esc&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;:&lt;span class=&quot;k&quot;&gt;tabnew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;quot; }&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;resource&quot;&gt;リソース &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/29)&lt;/span&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vim.runpaint.org/toc/&quot;&gt;Vim Recipes&lt;/a&gt;
+/ 基本から応用まで非常にシンプルでミニマムなフォーマットで丁寧に解説してくれる (英語)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/&quot;&gt;Vimcasts - free screencasts about the text editor Vim&lt;/a&gt; / Vimのチュートリアルビデオキャスト。基本のコマンドからプラグインまで詳しく解説している(英語)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://peepcode.com/products/smash-into-vim-i&quot;&gt;Smash Into Vim by PeepCode&lt;/a&gt; / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート1 $12 (英語)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://peepcode.com/products/smash-into-vim-ii&quot;&gt;Smash Into Vim II by PeepCode&lt;/a&gt; / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート2 $12 (英語)&lt;/li&gt;
@@ -80,7 +405,37 @@
    <link href="http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces/"/>
    <updated>2011-07-23T12:34:42+09:00</updated>
    <id>http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces</id>
-   <content type="html">&lt;h3 id=&quot;gitdiff&quot;&gt;git diff - 2011/07/23&lt;/h3&gt;
+   <content type="html">&lt;h3 id=&quot;gitalias&quot;&gt;git alias - 2011/07/29&lt;/h3&gt;
+
+&lt;p&gt;コマンドラインの便利さはコマンドを覚えてしまえば、色々なことがコマンド1つ、あるいは2つでできてしまう、ということにつきる。&lt;br /&gt;
+gitもGUIツールの利便性は否定しないが、コマンドラインから利用することにしている私。&lt;br /&gt;
+少しでもタイプする文字を減らしたいので、&lt;code&gt;git alias&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git config -e --global&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;とすると、システムワイドで利用するgitの設定ファイル.gitconfigファイルをエディタで開ける。&lt;br /&gt;
+すでに自分のメールと名前は設定済みのはずなので、ファイルに追記すれば、aliasを利用できる。&lt;/p&gt;
+
+&lt;p&gt;6行目までは、単純によく使うコマンドを2文字に省略しただけで、&lt;br /&gt;
+&lt;code&gt;lg&lt;/code&gt;は&lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;この記事&lt;/a&gt;から拝借した。&lt;code&gt;git log&lt;/code&gt;を少しセクシーにしてくれる。&lt;br /&gt;
+&lt;code&gt;fix&lt;/code&gt;は私があまりにもよく繰り返す、コミットしたあとで、そのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う&lt;code&gt;--amend&lt;/code&gt;オプションをaliasにした。&lt;br /&gt;
+コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、&lt;code&gt;git add
+FILE&lt;/code&gt;と追加して、&lt;code&gt;git
+fix&lt;/code&gt;とすると、前のコミットメーッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; status
+&lt;span class=&quot;nv&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit
+&lt;span class=&quot;nv&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; branch
+&lt;span class=&quot;nv&quot;&gt;co&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; checkout
+&lt;span class=&quot;nv&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff
+&lt;span class=&quot;nv&quot;&gt;dc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff --cached
+&lt;span class=&quot;nv&quot;&gt;lg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --graph --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s1&quot;&gt;&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39;&lt;/span&gt; --abbrev-commit --date&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;relative
+&lt;span class=&quot;nv&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit --amend -C HEAD
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;gitdiff&quot;&gt;git diff - 2011/07/23&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;フラグなしに&lt;code&gt;git diff&lt;/code&gt;とした場合、最後のcommitと現在の状態を比較する&lt;/li&gt;
@@ -120,6 +475,10 @@ Rubyの導入については、&lt;a href=&quot;http://css.studiomohawk.com/tool
 
 &lt;p&gt;Rubyの準備ができたら、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;*パーミッションがどうの、というエラーがでたら、&lt;code&gt;sudo gem instal
 jekyll&lt;/code&gt;とすればインストールできるはず。&lt;/p&gt;
 
@@ -127,11 +486,32 @@ jekyll&lt;/code&gt;とすればインストールできるはず。&lt;/p&gt;
 RadarではHTMLやら、CSSなどのソースコードの表示もあるので、Pygmentsを使ってシンタックスハイライトを行っている。&lt;br /&gt;
 Homebrewを使っているなら、インストールは簡単。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;brew install pip &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; pip install pygments
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;としてから、Homebrewでは実行ファイルにsymlinkがつかないそうで、下記を実行してsymlinkをつくる&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ln -s /usr/local/Cellar/python/2.7/bin/pygmentize /usr/local/bin/pygmentize
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2&gt;基本フォルダ/ファイル構造と記事の作成&lt;/h2&gt;
 
 &lt;h3&gt;基本フォルダとファイルの準備&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;.  
+|-- _config.yml &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;設定ファイル&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+|-- _layouts &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;テンプレートフォルダ&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+|   |-- default.html  
+|   -- post.html  
+|-- _posts &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;記事フォルダ、.textileか.markdownで記述&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+|   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile  
+|   -- 2009-04-26-barcamp-boston-4-roundup.textile  
+|-- _site &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HTML生成先フォルダ&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+-- index.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;アンダーバーから始まる、&lt;code&gt;_layouts&lt;/code&gt;、&lt;code&gt;_posts&lt;/code&gt;、&lt;code&gt;_site&lt;/code&gt;の3つのフォルダが必須のフォルダになる。&lt;br /&gt;
 手前から、テンプレート保管、記事、生成先フォルダという役割がある。&lt;br /&gt;
@@ -147,6 +527,15 @@ Homebrewを使っているなら、インストールは簡単。&lt;/p&gt;
 &lt;p&gt;例えば、2011年5月14日に作成したウェブデザイナのためのRuby入門という記事なら、&lt;code&gt;2011-05-22-ruby-for-designer.markdown&lt;/code&gt;というファイル名になる。&lt;br /&gt;
 URLに入るタイトル名はアルファベットにしておいた方が無難だろう。2バイト文字を利用できるかは試してみた事はない。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;---
+layout: post
+category: tool 
+title: Jekyllを使ってブログをつくろう
+date: 2011-06-11 13:39:28
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;記事のファイルの先頭にはYAML front matterと呼ばれる設定部分が必要になる。&lt;br /&gt;
 今回の記事のYAML front matterが上記。&lt;br /&gt;
 layoutでは、_layoutsに作成したテンプレート定義ファイルを設定し、&lt;br /&gt;
@@ -159,6 +548,12 @@ matterで設定した項目は、記事であればその記事内のテンプ�
 &lt;p&gt;それではテンプレートの作成について見てみよう。&lt;/p&gt;
 
 &lt;p&gt;テンプレート定義ファイルは何の変哲もないHTMLで記述される。例外は記事ファイル内のYAML front matterに記述するlayoutの部分で利用する、テンプレート名をこちらも同じく、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;---
+layout: post
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;というようにYAML front
 matterとして記述するという点と、後述するLiquidというテンプレートエンジンを利用して記事部分のレンダリングなどを行ったりするという点が異なる。　　&lt;/p&gt;
@@ -235,6 +630,10 @@ Jekyllでも単一ページを作成することが可能。&lt;/p&gt;
 &lt;p&gt;それでは、&lt;a href=&quot;https://github.com/studiomohawk/jekyll-theme-the_minimum&quot;&gt;the_minimumのダウンロードは終わっただろうか&lt;/a&gt;？&lt;br /&gt;
 ターミナルを開いて、the_minimumをダウンロードしたフォルダに移動してほしい。移動は&lt;code&gt;cd&lt;/code&gt;。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;jekyll --server --auto
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;&lt;code&gt;--server&lt;/code&gt;オプションはプレビュー環境用のサーバを立ち上げ、&lt;br /&gt;
 &lt;code&gt;--auto&lt;/code&gt;オプションは、ローカルファイルが保存されるたびに、ファイル生成を行うオプション。&lt;/p&gt;
 
@@ -301,27 +700,66 @@ RVMを利用するためには、gitが必須になる。gitのインストー�
 
 &lt;p&gt;ターミナルを開いて、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo bash &amp;lt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;curl -s https://rvm.beginrescueend.com/install/rvm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;~/.bash_profile か ~/.bashrcに&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -s &lt;span class=&quot;s2&quot;&gt;&amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# This loads RVM into a shell session.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;を追加(上記ファイルがない場合は、作成して追加)&lt;br /&gt;
 では、RVMが正しく動作するかを確認しよう。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;rvm | head -1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;とターミナルで実行してみる&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm is a &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;と返事が返ってきたら成功。
 成功したら、またターミナルにて&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.rvm/scripts/rvm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;と実行しておこう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm install 1.9.2-head
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;とすれば、ruby 1.9.2-headのバージョンをインストールできる。&lt;br /&gt;
 ちなみに、RVMでインストールできるバージョンは&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm list known
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;とすればリストが表示されるので、表示されたパッケージを&lt;code&gt;rvm
 install&lt;/code&gt;の後に記述すればそのパッケージをインストールできる。&lt;/p&gt;
 
 &lt;p&gt;なお、RVMではバージョンごとにgemのパッケージを管理するため、さっきまで使えたはずのgemがないとエラーが出る、なんて事態に遭遇したら、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ruby -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;として現在利用しているrubyのバージョンを確認してみよう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm --default use 1.9.2 &lt;span class=&quot;c&quot;&gt;# とすると、1.9.2をデフォルトで利用しはじめ&lt;/span&gt;
+
+rvm use system &lt;span class=&quot;c&quot;&gt;# システムにインストールされているRubyと&lt;/span&gt;
+rvm default &lt;span class=&quot;c&quot;&gt;# デフォルト設定したRubyを切り替えることも可能 &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;詳しくは&lt;a href=&quot;https://rvm.beginrescueend.com/&quot;&gt;https://rvm.beginrescueend.com/&lt;/a&gt;(英語)&lt;/p&gt;
 
@@ -330,13 +768,25 @@ install&lt;/code&gt;の後に記述すればそのパッケージをインスト
 &lt;p&gt;RubyにはGemと呼ばれるパッケージマネージャがある。1.9系以降からはRubyの標準機能となったそうだ。&lt;br /&gt;
 MacではGemも標準でインストールされていたと思うが、記憶が確かではないので確認してほしい。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo gem update --system
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;とすると、アップデートできるので試してみてほしい。&lt;/p&gt;
 
 &lt;p&gt;パッケージマネージャってなんだ、という点については、Ubuntuを使っていた私にはすんなり理解できたが、そうでもない人が多いのでMacでいうところの、macportやfink、homebrewみたいなライブラリ集積地みたいなものだと覚えておけばいいはず。
 *Homebrewについては、&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/02/13/terminal-101/&quot;&gt;こちらの記事&lt;/a&gt;で紹介したので、参考にしてほしい。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install PACKAGENAME
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;として、パッケージをインストールできる。&lt;br /&gt;
 例えば、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install rake
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;とすると、Ruby版make(ビルドツール)であるrakeをインストールできる。  &lt;/p&gt;
 
@@ -355,16 +805,83 @@ MacではGemも標準でインストールされていたと思うが、記憶�
 
 &lt;p&gt;&lt;code&gt;rmagick&lt;/code&gt;gemが必要になるので、まずはこのgemをインストール。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install rmagick &lt;span class=&quot;c&quot;&gt;#私はこのコマンドではエラーになったので、下記を実行してから、再度チャレンジした&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# エラーになった場合は&lt;/span&gt;
+sudo brew install libxml2
+sudo brew install ImageMagick
+&lt;span class=&quot;c&quot;&gt;# を実行してから、上記を実行してほしい。なお、homebrewを利用している場合の例&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;そしてspriteのgemをインストール&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem sources -a http://gemcutter.org
+gem install sprite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;&lt;strong&gt;使い方&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;public/
+  images/
+    sprites/
+      black-icons/
+        stop.png
+        go.png
+        back.png
+        forward.png
+
+      weather/
+        sunny.gif
+        rainy.gif
+        cloudy.gif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;というようなディレクトリ構造を例とすると、
 &lt;code&gt;public&lt;/code&gt;にて&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sprite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;というコマンドを実行すると&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;public/
+  stylesheets/
+    sprites.css
+  images/
+    sprites/
+      black-icons.png
+      weather.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;というファイルを生成する。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-small&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/small.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-medium&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/medium.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-large&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/large.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;21px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-xlarge&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/xlarge.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;96px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;というようなスタイルを書き出してくれる。&lt;br /&gt;
 sassのmixinも利用できるようで、設定も変更できる。&lt;/p&gt;
@@ -382,6 +899,11 @@ SASSについては、先日1年ぶりほどのアップデートがありアク
 
 &lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install less &lt;span class=&quot;c&quot;&gt;#LESS&lt;/span&gt;
+gem install sass &lt;span class=&quot;c&quot;&gt;#SASS&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;h3&gt;Juicer&lt;/h3&gt;
 
 &lt;p&gt;リクエスト回数を減らすためには、CSS/JSの呼び出しは最小にしておく必要がある。&lt;br /&gt;
@@ -391,6 +913,13 @@ SASSについては、先日1年ぶりほどのアップデートがありアク
 &lt;p&gt;Juicerは、YUI
 Compressorを利用してCSS/JSを圧縮した上で、CSSであれば@importを使ってファイルを結合してくれ、JSであれば、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;/**
+ * @depends prototype.js
+ * @depends widgets/lightbox.js
+ */
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;というコメントを使って、ファイルの結合を行うことが可能。&lt;br /&gt;
 CSSはmaster.cssというファイルに@importのみを記述して、JSもmaster.jsというファイルにコメント文だけ記述している。&lt;/p&gt;
 
@@ -398,13 +927,34 @@ CSSはmaster.cssというファイルに@importのみを記述して、JSもmast
 
 &lt;p&gt;使い方はとても簡単。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;juicer merge --force master.css &lt;span class=&quot;c&quot;&gt;# CSS --forceはmaster.min.cssが存在しても上書きを強制&lt;/span&gt;
+juicer merge -i --force master.js &lt;span class=&quot;c&quot;&gt;#JS -iはエラーを無視して圧縮/結合を実行するオプション&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;ついでに、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(/somepath/someimage.png?embed=true)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* ?embed=trueを追加する */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;とすると、画像をdata-urlに変換してくれる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;juicer merge --force master.css --embed-images data_uri
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;のように実行すればOK。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install juicer &lt;span class=&quot;c&quot;&gt;# Juicerをインストール&lt;/span&gt;
+juicer install yui_compressor &lt;span class=&quot;c&quot;&gt;# YUI compressorをインストール&lt;/span&gt;
+juicer install closure_compiler &lt;span class=&quot;c&quot;&gt;# Google Closure Compilerをインストール&lt;/span&gt;
+juicer install jslint &lt;span class=&quot;c&quot;&gt;# JsLintをインストール&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3&gt;CSS Redundancy Checker&lt;/h3&gt;
 
@@ -417,10 +967,20 @@ Checker&lt;/a&gt;は、あるHTML郡で使われていないスタイルルー�
 
 &lt;p&gt;使い方&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ruby css-redundancy-checker.rb &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;CSSファイル名&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;HTMLファイルディレクトリ または URLを一行ずつ記述した.txt&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;とするだけ。CSSを分割して管理している場合は、Juicerで結合してから実行するといいだろう。
 もちろんある特定のCSSファイルをチェックしたい場合は、個別に指定すればOK。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo gem install hpricot &lt;span class=&quot;c&quot;&gt;# hpricotをインストール、必須&lt;/span&gt;
+svn checkout http://css-redundancy-checker.googlecode.com/svn/trunk/ css-redundancy-checker
+&lt;span class=&quot;c&quot;&gt;# svnをインストールしていない場合は、sudo brew install svnとしてから&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;css-redundancy-checker.rbという名前の通り、このスクリプトは単純な1ファイル。&lt;br /&gt;
 なので、実行する際はインストールしたディレクトリに移動してから実行する必要がある。&lt;/p&gt;
@@ -540,10 +1100,20 @@ Photoshopでのステップだと、グリッドを使ったり、ガイドを�
 
 &lt;p&gt;Griddle.itは&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;http://griddle.it/[全体幅]-[コラム数]-[ガターサイズ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;という指定で、グリッド画像を生成してくれる。
 例えば、こちらを開いてみてほしい。&lt;a href=&quot;http://griddle.it/960-12-30&quot;&gt;幅960px 12コラム 30pxのガター&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;自動で画像を生成してくれるので、グリッドパターンが確定したら、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(http://griddle.it/960-12-30)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;repeat-y&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;背景画像に読み込んでしまえばOK。&lt;/p&gt;
 
@@ -776,6 +1346,10 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
 もちろん、今話題の&lt;a href=&quot;http://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;でも利用できるという点もはやり好きモノの私にはぴったりだ。&lt;br /&gt;
 ちなみに、SASSでも&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sass --watch style.scss:style.css
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;とコマンドラインから実行すれば、SASSファイルを保存するたびにCSSへ変換してくれるそうだから、自分の好みに合わせて利用してほしい。  &lt;/p&gt;
 
 &lt;h2&gt;LESSでできること&lt;/h2&gt;
@@ -790,13 +1364,47 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
   &lt;li&gt;&lt;strong&gt;変数&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;k&quot;&gt;@color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;#4D926F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;というLESSは、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#4D926F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#4D926F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;のように解釈される。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;@+変数名&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;で定義できる。正確には変数というよりは、定数に近い使われ方をしている。  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;k&quot;&gt;@var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;#page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;m&quot;&gt;#header&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;white&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;#footer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;red&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;ただし、プログラミング言語と同じくスコープがあり、上記のようにローカルに定義がない場合は、親ルールから定義を探し、それでもなければグローバルを探すように作られている。&lt;br /&gt;
 このスコープに関しては変数だけではなく、ミックスインの定義についても同様に扱われる。&lt;/p&gt;
@@ -809,9 +1417,31 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.bordered&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;border-top&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;dotted&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;border-bottom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;というLESSで定義したミックスインを&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#111&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bordered&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;にしてルールセットの中に追加すると、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#menu&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#111&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;border-top&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;dotted&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;border-bottom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;CSSではこのように解釈される。  &lt;/p&gt;
 
@@ -828,13 +1458,39 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.navigation&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.logo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#header&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.logo&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;という&lt;strong&gt;CSS&lt;/strong&gt;は、LESSでは&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#header&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigation&lt;/span&gt;  &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;.logo&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;amp;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hover&lt;/span&gt;    &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;text-decoration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;none&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;というように記述することができる。&lt;br /&gt;
 何度もセレクタを書かずに済むだけではなく、DOMの構造とほぼ同じ構造になるし、なにより、このように記述することを覚えるとキレイにセレクタを整理する癖がつく。&lt;br /&gt;
 なお、&lt;strong&gt;&amp;amp;:hover&lt;/strong&gt;という記述があるが、こちらは疑似クラス(:link、:visited、:hover、:focusなど)を追加するのに活躍する。&lt;br /&gt;
 &lt;strong&gt;&amp;amp;&lt;/strong&gt;という結合子は、入れ子になったセレクタを子孫として扱わず、親セレクタに追加することができる。&lt;br /&gt;
 なので、疑似クラスだけではなく、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.float.left&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;というようなマルチクラスの記述にも対応できる。&lt;/p&gt;
 
@@ -844,7 +1500,24 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
 
 &lt;p&gt;　こちらは変数やミックスインをまとめる際に活用できる機能。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#bundle&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;amp;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hover&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;white&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;&lt;strong&gt;#bundle&lt;/strong&gt;という名前空間の中に&lt;strong&gt;.button&lt;/strong&gt;というミックスインを定義する。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#header&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;m&quot;&gt;#bundle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;このようにして呼び出すことが可能。&lt;/p&gt;
 
@@ -872,14 +1545,31 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
 
 &lt;p&gt;ここまで来てようやく使い方の説明になるが、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet/less&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;styles.less&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;less.js&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;と使い方はとても簡単。&lt;br /&gt;
 注意してほしいのは、&lt;strong&gt;rel=”stylesheet/less”&lt;/strong&gt;の部分だけだ。&lt;/p&gt;
 
 &lt;p&gt;ちなみにGoogle Codeにレポジトリを持っているので、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet/less&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/stylesheets/styles.less&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://lesscss.googlecode.com/files/less-1.0.41.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;とすると何もダウンロードせずともLESSを使うことができる。&lt;/p&gt;
 
 &lt;p&gt;さらに&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;development&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;この記述をHTMLに追記しておけばlessファイルが保存されると、CSSがリフレッシュなしに変更が適応される。&lt;br /&gt;
 毎回毎回リフレッシュするのは面倒な上、意外と時間の無駄なので、開発中はぜひ利用してほしい。&lt;/p&gt;
@@ -903,7 +1593,15 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 
 &lt;p&gt;インストールが終わったら、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;lessc styles.less &amp;gt; styles.css
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;とすればいいだけ。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;lessc -x　styles.less &amp;gt; styles.css
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;のように、&lt;strong&gt;-x&lt;/strong&gt;オプションをつけると圧縮したCSSとして展開される。&lt;/p&gt;
 
@@ -1159,10 +1857,26 @@ MacVimを利用している人なら見覚えがある.(ドット)ファイル�
 
 &lt;p&gt;&lt;a href=&quot;https://gist.github.com/824504&quot;&gt;gist&lt;/a&gt;にも置いてあるが&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# git settings&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /usr/local/git/contrib/completion/git-completion.bash
+&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWDIRTYSTATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Git用のカスタマイズは上記の部分。こちらだけでも.bashrcファイルの最後の方に追加しておけば、設定終了。&lt;br /&gt;
 もし.bashrcファイルが見当たらないようであれば、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;touch ~/.bashrc
+open ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;として、開いたエディタに上記のスニペットを追加すればOK。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;保存したら、上記のコマンドで変更を反映できる。&lt;/p&gt;
 
@@ -1339,15 +2053,23 @@ GUIアプリをインストールしても、もう少しTerminalは開いたま
 準備が整ったら以下のコマンドを、必要な部分は修正してから、Terminalにて実行。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;まずは自己紹介をしよう&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;標準のエディタを設定&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;まずは自己紹介をしよう&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;名前&amp;quot;&lt;/span&gt;
+git config --global user.email メールアドレス@example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;標準のエディタを設定&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;*Terminalから利用する場合にコミットメッセージを書くのに使うエディタ。たいていの場合Terminalのデフォルト、viかvimが使われる。それ以外のエディタが好みの場合は設定しよう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global core.editor emacs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;ホワイトスペースを無視する&lt;/li&gt;
@@ -1355,20 +2077,52 @@ GUIアプリをインストールしても、もう少しTerminalは開いたま
 
 &lt;p&gt;Gitではホワイトスペース1つを追加しても、ファイルを変更したと認識される(Rubyではホワイトスペースは大事)が、大抵の場合、ホワイトスペース1つでコミットする、ということもないだろう。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global apply.whitespace nowarn
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;ul&gt;
   &lt;li&gt;すべてのGitレポジトリに無視ファイルを適応&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Macなら.DS_Store(普段は見えないけれど、Gitは認識する)など、OSが自動で生成するファイルとか、毎回.gitignore(無視リストファイル)を、レポジトリに追加したり、その.gitignoreをコミットしたりするのは面倒。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global core.excludesfile ~/.gitignore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;このコマンドのままだと、ホームディレクトリに.gitignoreがあるから–globalで読んでねという意味になる。&lt;br /&gt;
 私はこのファイルを&lt;a href=&quot;http://db.tt/jxIW2Rp&quot;&gt;Dropbox&lt;/a&gt;を使って、すべての環境で同じファイルを見るようにしている。&lt;/p&gt;
 
 &lt;p&gt;Dropboxにdotというディレクトリを作成し、その下に.gitignoreファイルを作成してる&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global core.excludesfile /Users/&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;ユーザディレクトリ&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;/Dropbox/dot/.gitignore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Macならこんな具合。&lt;/p&gt;
 
 &lt;p&gt;.gitignoreファイルの文法は&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# &amp;#39;#&amp;#39; から始まる行はコメント&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# foo.txtというファイル名は無視&lt;/span&gt;
+foo.txt
+&lt;span class=&quot;c&quot;&gt;# .htmlで終わるファイルを無視。&amp;#39;\*&amp;#39;はワイルドカード&lt;/span&gt;
+*.html
+&lt;span class=&quot;c&quot;&gt;# &amp;#39;!&amp;#39;は例外。上の例から引き続きで、.htmlで終わるファイルは無視するけどfoo.htmlは例外。&lt;/span&gt;
+!foo.html
+
+&lt;span class=&quot;c&quot;&gt;# Macユーザなら、下記で基本はOK。参考: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore&lt;/span&gt;
+
+.DS_Store?
+Icon?
+&lt;span class=&quot;c&quot;&gt;# Thumbnails&lt;/span&gt;
+._*
+&lt;span class=&quot;c&quot;&gt;# Files that might appear on external disk&lt;/span&gt;
+.Spotlight-V100
+.Trashes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2&gt;Gitの基本的なワークフロー&lt;/h2&gt;
 
@@ -1397,8 +2151,18 @@ GUIアプリをインストールしても、もう少しTerminalは開いたま
 &lt;p&gt;Macユーザ、恐れるなかれ、.gitディレクトリ、だけではないが.(ドット)から始まるファイル、ディレクトリは普通はFinderには見えない隠し要素になる。&lt;br /&gt;
 Terminalで&lt;code&gt;ls&lt;/code&gt;とすれば、きちんと存在が確認できる。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;または上記のコマンドを叩くと見えるようになる。&lt;br /&gt;
 おお、うざい。と思ったら、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;defaults write com.apple.finder AppleShowAllFiles FALSE
+killall Finder
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;で元に戻せる。&lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;TotalFinder&lt;/a&gt;というFinderにタブを追加できるアプリケーションなら、GUIでOn/Offできる機能もついてくるのでおすすめ($15)(ちょっと重いけど、便利)。&lt;/p&gt;
 
@@ -1418,6 +2182,10 @@ Terminalで&lt;code&gt;ls&lt;/code&gt;とすれば、きちんと存在が確認
 
 &lt;p&gt;初めてのコミット。まずはプロジェクトの開始を伝えるコミットからスタート。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git commit -a -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Initial Commit&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;-aフラグは、すべての変更に対してコミットするという意味。便利だが、ある理由で1ファイルを修正したのか、そのある理由が複数ファイルに渡る修正なのか、それとも？となってしまうので、コミットの単位については明確な理由がかける範囲で。&lt;br /&gt;
 -mフラグは、エディタを開かず、その場でコミットメッセージを書けるようにする。その後’(シングルクォート)か”(ダブルクォート)で囲んだ部分がメッセージになる。日本語でももちろん問題ない。&lt;/p&gt;
 
@@ -1436,10 +2204,26 @@ git statusはそれらの状態を教えてくれる便利なコマンドだ。 
 &lt;p&gt;ファイルに変更を加え、いくつかのコミットを行った後、しばらくすると変更点についてはすっかり忘れている。&lt;br /&gt;
 そんな時はコミットメッセージを読めばわかる。(わかるようにコミットメッセージを書くことが大事)&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git log --graph --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;とフラグを渡しつつ、&lt;code&gt;git log&lt;/code&gt;とすると下記のようにコミット1回につき1行で、表示される。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;7366587c589fe6ee60aeff553e899dc13086d7ec About Responsive Web Design is finished
+28b07e6c8fa6299c9c6b3321a339b1c7881e2fe4 erase meta since I use .htaccess
+90187a85261b208abbb0c52511fcf675ebe4739d fix css little bit
+5035c4eabe855efbac15596663190a6126eb0880 Read me was old
+4600e678e757950e5d6a7c7fbfc9a6420333e1c2 Ready to deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;ここでは残念ながら地味な表示だが、Terminal内では、デキる感じがしないでもないように、黒背景にグリーンが映えるマトリックスな世界を繰り広げられる(Terminalの設定による)。&lt;br /&gt;
 &lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;pimping out git log&lt;/a&gt;で紹介されていた&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global alias.lg &lt;span class=&quot;s2&quot;&gt;&amp;quot;log --graph --pretty=format:&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39; --abbrev-commit --date=relative&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;とすると、git logのデフォルトで1行、色つきフォーマットでログを見ることが可能&lt;/p&gt;
 
@@ -1450,6 +2234,10 @@ git statusはそれらの状態を教えてくれる便利なコマンドだ。 
 &lt;p&gt;Gitの真打ち、branch。ブランチは分岐を表示・作成するコマンド。  &lt;/p&gt;
 
 &lt;p&gt;コミットがすべて完了しているmaster(デフォルト)で、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git branch newfeature
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;とすると、masterをベースにnewfeatureというブランチが作成される。  &lt;/p&gt;
 
@@ -1476,8 +2264,26 @@ git statusはそれらの状態を教えてくれる便利なコマンドだ。 
 &lt;p&gt;&lt;code&gt;git merge&lt;/code&gt;をする際には、まず現在いるブランチをコミットして、から&lt;code&gt;git checkout master&lt;/code&gt;というように、マージさせたいブランチに切り替える。&lt;br /&gt;
 自分が今いるブランチがどこなのか、ほかにどんなブランチがあるかを確認するには、&lt;code&gt;git branch&lt;/code&gt;とすれば&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;*master
+newfeature
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;というように表示してくれる。&lt;br /&gt;
 ちなみに、Terminal用プログラムBashの設定で&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;parse_git_branch &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git-symbolic-ref HEAD 2&amp;gt; /dev/null&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;(&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#refs/heads/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;)&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;RED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;31m\]&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;YELLOW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;33m\]&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;GREEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;32m\]&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ &amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;上記を追加すると、コマンドプロンプト(コマンドを叩く左側に出る文字列)に、現在のブランチを表示してくれる。
 USERディレクトリ下に.bashrcという名前で上記を追加して保存。既存でなければ、ファイル名を.bashrcとし保存すればOK。&lt;/p&gt;
@@ -1574,18 +2380,38 @@ for example, if the user goals for your mobile site are more limited in scope th
 &lt;p&gt;レスポンシブデザインでは、多くの場合、CSS3でサポートされる予定のMedia Queriesを活用し、サイズの異なるモニタ/スクリーンに対し最適なデザインを提供する。&lt;br /&gt;
 Media Queriesについては、&lt;a href=&quot;http://hardboiledwebdesign.com/&quot;&gt;Hardboiled Web Design&lt;/a&gt;の著者であるAndy Clarkの記事&lt;a href=&quot;http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries&quot;&gt;Hardboiled CSS3 Media Queries&lt;/a&gt;で実例を見る事ができる。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* iPhone 3 (横向き) ----------- */&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;screen&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; 	&lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;min-width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;321px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; 	&lt;span class=&quot;c&quot;&gt;/* ここにスタイルルール */&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;CSS3で拡張されるMedia Queriesでは、&lt;code&gt;screen&lt;/code&gt;や&lt;code&gt;print&lt;/code&gt;のようなメディアタイプだけでなく、デバイス自体のサイズやスクリーンのサイズなどを利用できるようになる。&lt;br /&gt;
 例:&lt;code&gt;min-width : 321px&lt;/code&gt;、&lt;code&gt;max-width : 320p&lt;/code&gt;、&lt;code&gt;max-device-width : 1024px&lt;/code&gt;  &lt;/p&gt;
 
 &lt;p&gt;上記のように既存のスタイルシートに追記することも可能だし、&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;smartphone.css&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;media=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;only screen and (min-device-width : 320px) and (max-device-width : 480px)&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;p&gt;というように&lt;code&gt;link&lt;/code&gt;を使って別のスタイルシートとして管理することもできる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;smartphone&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.css&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;min-device-width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;320px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;max-device-width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;480px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;W3Cによれば&lt;code&gt;@import&lt;/code&gt;を使っても上記のように記述することが可能だ。(&lt;a href=&quot;http://www.w3.org/TR/css3-mediaqueries/#media0&quot;&gt;Media Queries&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;現時点でのMedia Queriesのサポート状況は、Firefox, Chrome, Safari, Opera, Internet Explorer 9, Android スマートフォン, そしてiOSデバイス(iPhone、iPhone4、iPad、iPod touch)がサポートしている。(※Androidスマートフォン、iPhone、iPod touchについては、W3Cで宣言されているすべての値を利用できるわけではないようだ)&lt;/p&gt;
 
 &lt;p&gt;Androidスマートフォン、iPhone、iPod touch、iPadなどのハンドヘルド端末については、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;width=device-width; initial-scale=1.0; maximum-scale=1.0;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;という記述も必要になるだろう。
 &lt;code&gt;meta viewport&lt;/code&gt;については&lt;a href=&quot;http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html&quot;&gt;Safari Reference Library&lt;/a&gt;(英語)が詳しい説明をしている。&lt;br /&gt;

@@ -9,7 +9,7 @@
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
 	<link rel="stylesheet" media="all" href="/style/master.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
 	
 		<title>ターミナルを使いこなす | CSS Radar | For Frond End Developers</title>
 		<meta name="description" content="Terminal.appは怖い。 GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。 Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。 MacVimをメインのエディタにしてから3ヶ月ほど、年明けからJekyllを使ってブログを作成しはじめた。Rubyを覚えてみようと今年から勉強中。 自分自身考えてもいなかったが、それらすべてがターミナルの便利さを教えてくれた。 MacVimでは、もちろんコマンドを実行できるが、コマンドそのものとは関係なく、インサートモードとノーマルモードの切り替えというメンタリティはGUIとCUIのメンタリティと似てる。それに覚えるのに時間はかかるかもしれないが、一旦覚えてしまうともう戻れない中毒性に近い利便性を手に入れる楽しみも覚えられた。 Jekyllはターミナルを使わなければブログの更新すら出来なくなる。基本的なコマンドはJekyllを使ううちに覚えてしまった。 Rubyはirbで実際にRubyを使って気楽に自分の書いたコードをテストしたりするのにターミナルを利用している。 ソースコードリーディングのテキストとしてお気に入りのHTML5 Boilerplateで、Build Scriptが追加され、フロントエンドデベロッパの間でも、自前のオートメーションを作ることが当たり前になってきそうな流れもある。 そんなタイミングだからこそ、ターミナルを使いこなせる人になろうと、こんな時代に提言したい。 私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるが、きっかけさえつかんでしまえば、どうにかなる。ちなみに私はWindowsではCygwinをConsoleから利用している。 まずは見た目からカスタマイズ 私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないが、そんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。 だからこそ、ターミナルにも見た目を要求したい。 Visor Visorはターミナルをショートカットキーで呼び出すことが出来るTerminal.appのヘルパ。control+controlで画面の1/3ほどのターミナル画面がスライドしてくる便利でかつ、おしゃれなツール。 MacではiTerm2というターミナル互換アプリも人気があるようで、こちらはVisorとは連動できないが、同じようにショートカットキーで呼び出すことができるオプションがある。 .bashrc(リンク先は私が利用している.bashrcファイルの一部) デフォルトでTerminalを開くと、黒い背景に白い文字。あまりにも地味なので、私はもう少しだけカラフルにしている。 そのついでにGitをターミナルで使いやすくなるように、ブランチ名や変更を知らせてくれるマークもカラーをつけて表示している。 ちょっとカスタマイズしてあげるだけで気持ちよく利用することができる。 Mac OSXでターミナルにgitのブランチ名を表示する方法...">
@@ -31,6 +31,14 @@
 	<nav id="backnumber" class="backnumber">
 		<ul>
 			
+		<li>
+		<h6 class="title"><a href="/tool/2011/07/30/indispensable-mac-apps/" title="必携Mac OSXアプリ12">必携Mac OSXアプリ12</a></h6>
+			<date>
+				<span class="day">30</span>
+				<span class="month"><abbr>Jul</abbr></span>
+			</date> 
+		</li>
+		
 		<li>
 		<h6 class="title"><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド">Vim - ビギナーズサバイバルガイド</a></h6>
 			<date>
@@ -60,14 +68,6 @@
 			<date>
 				<span class="day">14</span>
 				<span class="month"><abbr>May</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/webdesign/2011/04/16/designing_in_browser/" title="ブラウザでデザインをするということ">ブラウザでデザインをするということ</a></h6>
-			<date>
-				<span class="day">16</span>
-				<span class="month"><abbr>Apr</abbr></span>
 			</date> 
 		</li>
 		
@@ -154,10 +154,26 @@ MacVimを利用している人なら見覚えがある.(ドット)ファイル�
 
 <p><a href="https://gist.github.com/824504">gist</a>にも置いてあるが</p>
 
+<div class="highlight"><pre><code class="bash"><span class="c"># git settings</span>
+<span class="nb">source</span> /usr/local/git/contrib/completion/git-completion.bash
+<span class="nv">GIT_PS1_SHOWDIRTYSTATE</span><span class="o">=</span><span class="nb">true</span>
+<span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ &#39;</span>
+</code></pre>
+</div>
+
 <p>Git用のカスタマイズは上記の部分。こちらだけでも.bashrcファイルの最後の方に追加しておけば、設定終了。<br />
 もし.bashrcファイルが見当たらないようであれば、</p>
 
+<div class="highlight"><pre><code class="bash">touch ~/.bashrc
+open ~/.bashrc
+</code></pre>
+</div>
+
 <p>として、開いたエディタに上記のスニペットを追加すればOK。</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">source</span> ~/.bashrc
+</code></pre>
+</div>
 
 <p>保存したら、上記のコマンドで変更を反映できる。</p>
 

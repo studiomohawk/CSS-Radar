@@ -9,7 +9,7 @@
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
 	<link rel="stylesheet" media="all" href="/style/master.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
 	
 		<title>レスポンシブウェブデザインについて | CSS Radar | For Frond End Developers</title>
 		<meta name="description" content="いまこの記事を読んでいるモニタのサイズは何インチだろうか？ iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブック、ノートPC、デスクトップPCと数年前なら思いもよらなかったモニタ/スクリーンサイズでユーザはウェブサイトを閲覧し始めている。 今後もさらに解像度が異なる環境が増えていくことは間違いない。 ではそのサイズのモニタごとに、スクリーンごとにデザインを作り、HTML/CSSを書き足していくのか？ その疑問への1つの回答がレスポンシブウェブデザイン(Responsive Web Design)。 多くの場合、CSS3で利用が可能になる予定のMedia Queriesを活用して、モニタ/スクリーンのサイズに合わせて最適なデザインを供給するデザイン/コーディング手法がレスポンシブウェブデザインと呼ばれている。 レスポンシブウェブデザインの例 Simon Collison / Simon Collisonはレスポンシブウェブデザインをいち早く導入したウェブデザイナ Information Architects / WordPressを使ってレスポンシブデザインを実現している Think Vitamin / こちらも最近のリニューアルからレスポンシブウェブデザインを導入 実際にサイトを訪れてブラウザのサイズを変更してほしい。サイズに応じてレイアウトが変わっていくのを見てほしい。 レスポンシブデザインが解決しないこと...">
@@ -31,6 +31,14 @@
 	<nav id="backnumber" class="backnumber">
 		<ul>
 			
+		<li>
+		<h6 class="title"><a href="/tool/2011/07/30/indispensable-mac-apps/" title="必携Mac OSXアプリ12">必携Mac OSXアプリ12</a></h6>
+			<date>
+				<span class="day">30</span>
+				<span class="month"><abbr>Jul</abbr></span>
+			</date> 
+		</li>
+		
 		<li>
 		<h6 class="title"><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド">Vim - ビギナーズサバイバルガイド</a></h6>
 			<date>
@@ -60,14 +68,6 @@
 			<date>
 				<span class="day">14</span>
 				<span class="month"><abbr>May</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/webdesign/2011/04/16/designing_in_browser/" title="ブラウザでデザインをするということ">ブラウザでデザインをするということ</a></h6>
-			<date>
-				<span class="day">16</span>
-				<span class="month"><abbr>Apr</abbr></span>
 			</date> 
 		</li>
 		
@@ -161,18 +161,38 @@ for example, if the user goals for your mobile site are more limited in scope th
 <p>レスポンシブデザインでは、多くの場合、CSS3でサポートされる予定のMedia Queriesを活用し、サイズの異なるモニタ/スクリーンに対し最適なデザインを提供する。<br />
 Media Queriesについては、<a href="http://hardboiledwebdesign.com/">Hardboiled Web Design</a>の著者であるAndy Clarkの記事<a href="http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries">Hardboiled CSS3 Media Queries</a>で実例を見る事ができる。</p>
 
+<div class="highlight"><pre><code class="css"><span class="lineno">1</span> <span class="c">/* iPhone 3 (横向き) ----------- */</span>
+<span class="lineno">2</span> <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> 
+<span class="lineno">3</span> 	<span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span> <span class="o">:</span> <span class="nt">321px</span><span class="o">)</span> <span class="p">{</span>
+<span class="lineno">4</span> 	<span class="c">/* ここにスタイルルール */</span>
+<span class="lineno">5</span> <span class="p">}</span>
+</code></pre>
+</div>
+
 <p>CSS3で拡張されるMedia Queriesでは、<code>screen</code>や<code>print</code>のようなメディアタイプだけでなく、デバイス自体のサイズやスクリーンのサイズなどを利用できるようになる。<br />
 例:<code>min-width : 321px</code>、<code>max-width : 320p</code>、<code>max-device-width : 1024px</code>  </p>
 
 <p>上記のように既存のスタイルシートに追記することも可能だし、</p>
 
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;smartphone.css&quot;</span> <span class="na">media=</span><span class="s">&quot;only screen and (min-device-width : 320px) and (max-device-width : 480px)&quot;</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
 <p>というように<code>link</code>を使って別のスタイルシートとして管理することもできる。</p>
+
+<div class="highlight"><pre><code class="css"><span class="lineno">1</span> <span class="k">@import</span> <span class="nt">url</span><span class="o">(</span><span class="nt">smartphone</span><span class="nc">.css</span><span class="o">)</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-device-width</span> <span class="o">:</span> <span class="nt">320px</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-device-width</span> <span class="o">:</span> <span class="nt">480px</span><span class="o">)</span><span class="p">;</span>
+</code></pre>
+</div>
 
 <p>W3Cによれば<code>@import</code>を使っても上記のように記述することが可能だ。(<a href="http://www.w3.org/TR/css3-mediaqueries/#media0">Media Queries</a>)</p>
 
 <p>現時点でのMedia Queriesのサポート状況は、Firefox, Chrome, Safari, Opera, Internet Explorer 9, Android スマートフォン, そしてiOSデバイス(iPhone、iPhone4、iPad、iPod touch)がサポートしている。(※Androidスマートフォン、iPhone、iPod touchについては、W3Cで宣言されているすべての値を利用できるわけではないようだ)</p>
 
 <p>Androidスマートフォン、iPhone、iPod touch、iPadなどのハンドヘルド端末については、</p>
+
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width; initial-scale=1.0; maximum-scale=1.0;&quot;</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
 
 <p>という記述も必要になるだろう。
 <code>meta viewport</code>については<a href="http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html">Safari Reference Library</a>(英語)が詳しい説明をしている。<br />

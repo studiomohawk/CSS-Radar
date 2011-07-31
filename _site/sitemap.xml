@@ -6,8 +6,13 @@
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 <loc>http://css.studiomohawk.com</loc>
-	<lastmod>2011-07-24T11:34:45+09:00</lastmod>
+	<lastmod>2011-07-31T12:46:32+09:00</lastmod>
 	<priority>1.0</priority>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/tool/2011/07/30/indispensable-mac-apps/</loc>
+	<lastmod>2011-07-30T00:13:28+09:00</lastmod>
 </url>
 
 <url>

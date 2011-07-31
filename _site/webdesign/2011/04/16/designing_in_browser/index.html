@@ -9,7 +9,7 @@
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
 	<link rel="stylesheet" media="all" href="/style/master.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
 	
 		<title>ブラウザでデザインをするということ | CSS Radar | For Frond End Developers</title>
 		<meta name="description" content="長い間、Adobe Photoshopはウェブデザインのデファクトアプリとして君臨してきた。もちろん、今も私のMac MiniにCS4がインストールされている。 しかし、個人プロジェクトはもちろん、すでに会社のプロジェクトでも私はPhotoshopを卒業しつつある。 Firefox + Firebugとお気に入りのエディタ(Vim)。そしてCSS3があれば、Photoshopを使わなくてもデザインができる。 Hardboiled Web Designの作者であるAndy ClarkeはI don’t care about Responsive Web Designにて、 Today, anything that’s fixed and unresponsive isn’t web...">
@@ -31,6 +31,14 @@
 	<nav id="backnumber" class="backnumber">
 		<ul>
 			
+		<li>
+		<h6 class="title"><a href="/tool/2011/07/30/indispensable-mac-apps/" title="必携Mac OSXアプリ12">必携Mac OSXアプリ12</a></h6>
+			<date>
+				<span class="day">30</span>
+				<span class="month"><abbr>Jul</abbr></span>
+			</date> 
+		</li>
+		
 		<li>
 		<h6 class="title"><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド">Vim - ビギナーズサバイバルガイド</a></h6>
 			<date>
@@ -60,14 +68,6 @@
 			<date>
 				<span class="day">14</span>
 				<span class="month"><abbr>May</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/webdesign/2011/04/16/designing_in_browser/" title="ブラウザでデザインをするということ">ブラウザでデザインをするということ</a></h6>
-			<date>
-				<span class="day">16</span>
-				<span class="month"><abbr>Apr</abbr></span>
 			</date> 
 		</li>
 		
@@ -161,10 +161,20 @@ Photoshopでのステップだと、グリッドを使ったり、ガイドを�
 
 <p>Griddle.itは</p>
 
+<div class="highlight"><pre><code class="html">http://griddle.it/[全体幅]-[コラム数]-[ガターサイズ]
+</code></pre>
+</div>
+
 <p>という指定で、グリッド画像を生成してくれる。
 例えば、こちらを開いてみてほしい。<a href="http://griddle.it/960-12-30">幅960px 12コラム 30pxのガター</a></p>
 
 <p>自動で画像を生成してくれるので、グリッドパターンが確定したら、</p>
+
+<div class="highlight"><pre><code class="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(http://griddle.it/960-12-30)</span> <span class="k">repeat-y</span> <span class="k">center</span> <span class="k">top</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <p>背景画像に読み込んでしまえばOK。</p>
 
