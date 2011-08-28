@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="ja" class="post no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="ja" class="post no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="na" class="post no-js ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="ja" class="post no-js"> <!--<![endif]-->
+<!--[if lt IE 7 ]> <html lang="ja" class="post no-js ie6" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="ja" class="post no-js ie7" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="na" class="post no-js ie8" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="ja" class="post no-js" itemscope itemtype="http://schema.org/Blog"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
-	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<!--<link rel="stylesheet" media="all" href="/style/master.min.css">-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
+    <link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
     <link href='/assets/master.css' rel="stylesheet" media="all">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
-	
-		<title>LESS: CSSをよりシンプルに、パワフルに | CSS Radar | For Frond End Developers</title>
-		<meta name="description" content="If it ain’t broken, don’t fix it. 壊れてないなら、直す必要はない。 CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも簡単に覚えられた。 SASSやLESSのようなCSSの拡張が完全に悪だとは思わないが、絶対に必要だとも感じない。 でも、知っておくともっとシンプルに、もっとパワフルに、もっと素早くCSSを書くことができる、プラスアルファの便利ツールであることは間違いない。 実際このブログでも、ほかの幾つかの個人プロジェクトでは私はLESSを使い始めている。 SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが、LESSはJSを使ってダイナミックにCSSへ変換してくれたりもでき、すこしだけ開発時に楽をできるので私はLESSを選んだ。 もちろん、今話題のNode.jsでも利用できるという点もはやり好きモノの私にはぴったりだ。 ちなみに、SASSでも sass --watch style.scss:style.css とコマンドラインから実行すれば、SASSファイルを保存するたびにCSSへ変換してくれるそうだから、自分の好みに合わせて利用してほしい。 LESSでできること LESSでは、変数、ミックスイン、入れ子ルール、名前空間、四則演算と関数などをCSSに追加することができる。 プログラミングの経験があるなら、それぞれ覚えがあるだろう機能達ばかりで、CSSには存在しない機能。 オフィシャルサイトに詳しく利用法については説明があるので、詳細はこちらを確認してほしい。 もちろん英語なので、日本語訳が必要な場合はメールかTwitter@cssradarでリクエストを。 変数...">
-	
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+    
+    <title itemprop="name" content="LESS: CSSをよりシンプルに、パワフルに | CSS Radar">LESS: CSSをよりシンプルに、パワフルに | CSS Radar | For Frond End Developers</title>
+    <meta itemprop="description" name="description" content="If it ain’t broken, don’t fix it. 壊れてないなら、直す必要はない。 CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも簡単に覚えられた。 SASSやLESSのようなCSSの拡張が完全に悪だとは思わないが、絶対に必要だとも感じない。 でも、知っておくともっとシンプルに、もっとパワフルに、もっと素早くCSSを書くことができる、プラスアルファの便利ツールであることは間違いない。 実際このブログでも、ほかの幾つかの個人プロジェクトでは私はLESSを使い始めている。 SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが、LESSはJSを使ってダイナミックにCSSへ変換してくれたりもでき、すこしだけ開発時に楽をできるので私はLESSを選んだ。 もちろん、今話題のNode.jsでも利用できるという点もはやり好きモノの私にはぴったりだ。 ちなみに、SASSでも sass --watch style.scss:style.css とコマンドラインから実行すれば、SASSファイルを保存するたびにCSSへ変換してくれるそうだから、自分の好みに合わせて利用してほしい。 LESSでできること LESSでは、変数、ミックスイン、入れ子ルール、名前空間、四則演算と関数などをCSSに追加することができる。 プログラミングの経験があるなら、それぞれ覚えがあるだろう機能達ばかりで、CSSには存在しない機能。 オフィシャルサイトに詳しく利用法については説明があるので、詳細はこちらを確認してほしい。 もちろん英語なので、日本語訳が必要な場合はメールかTwitter@cssradarでリクエストを。 変数...">
+    
+    <script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-61203-11']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
 </head>
 
 <body>
@@ -382,6 +394,10 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
   <li><a href="http://sass-lang.com/">SASS</a></li>
 </ul>
 
+                      <div class="social">
+<div class="g-plusone"></div>
+</div>
+
                       <div class="ask">
 	<h3>Ask Me Anything via E-mail</h3>
 	<p class="btn-3d"><a class="askme" href="mailto:cssradar+ask@gmail.com">質問やコメントはEメールにて cssradar+ask@gmail.com</a><small><a href="/ask/">コメントについて</a></small></p>
@@ -450,20 +466,18 @@ Theme: <a href="https://github.com/studiomohawk/CSS-Radar">the_radar</a> created
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <!--<script src="/js/master.min.js"></script>-->
 <script src='/assets/master.js'></script>
-<!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
-       change the UA-XXXXX-X to be your site's ID -->
-	   <script>
-		   var _gaq = _gaq || [];
-		   _gaq.push(['_setAccount', 'UA-61203-11']);
-		   _gaq.push(['_trackPageview']);
-		   _gaq.push(['_trackPageLoadTime']);
+<script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-61203-11']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
 
-		   (function() {
-			   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		   })();
-	   </script>
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
 
 
 </body>

@@ -24,7 +24,7 @@ img { max-width: 100%; }
 	width: 648px;
 }
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { margin-left: 0; margin-right: 0; }
-.content p, .content ul, .content ol, .content dl, .content blockquote, .content .meta { margin-left: 0; margin-right: 0; }
+.content p, .content ul, .content ol, .content dl, .content blockquote, .content .meta, .content .social { margin-left: 0; margin-right: 0; }
 .content .highlight { margin-right: 0; }
 .content img.huge {
 	left: 0;
@@ -52,7 +52,7 @@ img { max-width: 100%; }
 		width: 1068px;
 	}
 	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { margin-left: 252px; margin-right: 84px; }
-	.content p, .content ul, .content ol, .content dl, .content blockquote, .content .meta { margin-left: 252px; margin-right: 84px; }
+	.content p, .content ul, .content ol, .content dl, .content blockquote, .content .meta, .content .social { margin-left: 252px; margin-right: 84px; }
 	.content ul p, .content ol p, .content dl p { margin-left: 0; }
 	.content .highlight { margin-right: 84px; }
 	.content img.huge {

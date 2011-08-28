@@ -1,6 +1,7 @@
 #Presentation Settings
 sitename: CSS Radar
 tagline: For Frond End Developers
+desc: 現役フロントエンドデベロッパ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます
 url: http://css.studiomohawk.com
 #Deployment Settings
 pygments:    true

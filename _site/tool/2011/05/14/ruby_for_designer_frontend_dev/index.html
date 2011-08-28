@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="ja" class="post no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="ja" class="post no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="na" class="post no-js ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="ja" class="post no-js"> <!--<![endif]-->
+<!--[if lt IE 7 ]> <html lang="ja" class="post no-js ie6" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="ja" class="post no-js ie7" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="na" class="post no-js ie8" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="ja" class="post no-js" itemscope itemtype="http://schema.org/Blog"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
-	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<!--<link rel="stylesheet" media="all" href="/style/master.min.css">-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
+    <link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
     <link href='/assets/master.css' rel="stylesheet" media="all">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.4/modernizr.min.js"></script>
-	
-		<title>ウェブデザイナのためのRuby入門 | CSS Radar | For Frond End Developers</title>
-		<meta name="description" content="CSS Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。 今回はCSSやデザインからはほど遠いように思えるRubyについて。 前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。 Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら、面倒なことを楽にすることもでき始めてきた。 そこで、Rubyを少しだけ使い倒す方法を紹介しようと思い立った。 たまにはPhotoshopを離れて(私はあまり使いませんが)、新しいことに挑戦してみませんか？ *私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。 なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。 Rubyのインストール Mac OS XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。 MacにおけるRubyの管理は、RVM - Ruby Version Managerがおすすめ。 RVMを利用するためには、gitが必須になる。gitのインストールについては、こちらを参照してほしい。 RVMのインストール方法 ターミナルを開いて、 sudo bash &lt;...">
-	
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+    
+    <title itemprop="name" content="ウェブデザイナのためのRuby入門 | CSS Radar">ウェブデザイナのためのRuby入門 | CSS Radar | For Frond End Developers</title>
+    <meta itemprop="description" name="description" content="CSS Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。 今回はCSSやデザインからはほど遠いように思えるRubyについて。 前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。 Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら、面倒なことを楽にすることもでき始めてきた。 そこで、Rubyを少しだけ使い倒す方法を紹介しようと思い立った。 たまにはPhotoshopを離れて(私はあまり使いませんが)、新しいことに挑戦してみませんか？ *私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。 なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。 Rubyのインストール Mac OS XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。 MacにおけるRubyの管理は、RVM - Ruby Version Managerがおすすめ。 RVMを利用するためには、gitが必須になる。gitのインストールについては、こちらを参照してほしい。 RVMのインストール方法 ターミナルを開いて、 sudo bash &lt;...">
+    
+    <script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-61203-11']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
 </head>
 
 <body>
@@ -456,6 +468,10 @@ Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/ア�
 新しいことへの出会いはいつだってインスピレーションへ続く近道だと信じているので、是非チャレンジしてほしい。<br />
 もし今回紹介しなかった便利なスクリプトなどご存知でしたら、是非教えてください。</p>
 
+                      <div class="social">
+<div class="g-plusone"></div>
+</div>
+
                       <div class="ask">
 	<h3>Ask Me Anything via E-mail</h3>
 	<p class="btn-3d"><a class="askme" href="mailto:cssradar+ask@gmail.com">質問やコメントはEメールにて cssradar+ask@gmail.com</a><small><a href="/ask/">コメントについて</a></small></p>
@@ -524,20 +540,18 @@ Theme: <a href="https://github.com/studiomohawk/CSS-Radar">the_radar</a> created
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <!--<script src="/js/master.min.js"></script>-->
 <script src='/assets/master.js'></script>
-<!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
-       change the UA-XXXXX-X to be your site's ID -->
-	   <script>
-		   var _gaq = _gaq || [];
-		   _gaq.push(['_setAccount', 'UA-61203-11']);
-		   _gaq.push(['_trackPageview']);
-		   _gaq.push(['_trackPageLoadTime']);
+<script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-61203-11']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
 
-		   (function() {
-			   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		   })();
-	   </script>
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
 
 
 </body>

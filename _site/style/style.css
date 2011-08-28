@@ -238,6 +238,10 @@ a:hover {
   padding: 7px;
   overflow: auto;
 }
+.the-article .content .social {
+  height: 31px;
+  margin-bottom: 21px;
+}
 .the-article .content .ask { border-top: 1px solid #444e51; }
 .the-article .content .ask small {
   font-size: 85%;
