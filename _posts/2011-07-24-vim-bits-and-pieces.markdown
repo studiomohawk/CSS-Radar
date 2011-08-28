@@ -130,6 +130,46 @@ Gundo.vimはVimの編集履歴のツリーをバージョンコントロール�
 - [Gundo - Visualize your Vim Undo Tree](http://sjl.bitbucket.org/gundo.vim/)
 - [sjl/gundo.vim - GitHub](https://github.com/sjl/gundo.vim/)
 
+#### [Pathogen](https://github.com/tpope/vim-pathogen) <span class="small">(Update: 2011/08/28)</span> 
+
+vim-pathogenはVimのプラグインをGitのsubmoduleで管理することができるプラグイン。  
+Vimのプラグイン管理は非常に面倒な作業の1つ。gitの使い方を覚えなければならないところが慣れるまでは大変かもしれないが、それだけの価値はある。
+
+**プラグイン(fugitive)を追加**
+
+{% highlight sh %}
+git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive  
+# git submoduleでfugitiveをbundle/fugitiveに追加  
+git submodule update --init  
+# submoduleを登録して、アップデート
+{% endhighlight %}
+
+**プラグインを削除**
+
+{% highlight sh %}
+rm -r -f 削除するプラグインのディレクトリ (例: bundle/fugitive)  
+# .gitmodulesをエディタで開いて、削除するsubmoduleの該当行を削除する  
+git rm -r 削除するプラグインのディレクトリ (最後のスラッシュはいれない)  
+git submodule sync
+{% endhighlight %}
+
+**プラグインをアップデート**
+
+{% highlight sh %}
+git submodule foreach git pull origin master
+{% endhighlight %}
+
+なお、pathogenを利用するためには、.vimrcに
+
+{% highlight vim %}
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+{% endhighlight %}
+
+と追加する必要がある。この行はfiletypeの設定以前に呼び出す必要があるため、.vimrcの最初の行に追加することをおすすめする。
+
+- [tpope/vim-pathogen - GitHub](https://github.com/tpope/vim-pathogen)
+
 ### 設定 {#vimrc}
 
 #### タブをFirefoxのように操る <span class="small">(Update: 2011/07/24)</span>
