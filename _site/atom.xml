@@ -4,7 +4,7 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-08-28T10:21:11+09:00</updated>
+ <updated>2011-08-28T14:38:26+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
  
@@ -463,7 +463,7 @@ gitもGUIツールの利便性は否定しないが、コマンドラインか�
 &lt;code&gt;fix&lt;/code&gt;は私があまりにもよく繰り返す、コミットしたあとで、そのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う&lt;code&gt;--amend&lt;/code&gt;オプションをaliasにした。&lt;br /&gt;
 コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、&lt;code&gt;git add
 FILE&lt;/code&gt;と追加して、&lt;code&gt;git
-fix&lt;/code&gt;とすると、前のコミットメーッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。&lt;/p&gt;
+fix&lt;/code&gt;とすると、前のコミットメッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; status
