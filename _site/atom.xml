@@ -4,7 +4,7 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-07-31T16:24:20+09:00</updated>
+ <updated>2011-08-28T10:21:11+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
  
@@ -363,6 +363,48 @@ splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ�
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://sjl.bitbucket.org/gundo.vim/&quot;&gt;Gundo - Visualize your Vim Undo Tree&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/sjl/gundo.vim/&quot;&gt;sjl/gundo.vim - GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;Pathogen&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(Update: 2011/08/28)&lt;/span&gt;&lt;/h4&gt;
+
+&lt;p&gt;vim-pathogenはVimのプラグインをGitのsubmoduleで管理することができるプラグイン。&lt;br /&gt;
+Vimのプラグイン管理は非常に面倒な作業の1つ。gitの使い方を覚えなければならないところが慣れるまでは大変かもしれないが、それだけの価値はある。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;プラグイン(fugitive)を追加&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive  
+&lt;span class=&quot;c&quot;&gt;# git submoduleでfugitiveをbundle/fugitiveに追加  &lt;/span&gt;
+git submodule update --init  
+&lt;span class=&quot;c&quot;&gt;# submoduleを登録して、アップデート&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;プラグインを削除&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rm -r -f 削除するプラグインのディレクトリ &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;例: bundle/fugitive&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;c&quot;&gt;# .gitmodulesをエディタで開いて、削除するsubmoduleの該当行を削除する  &lt;/span&gt;
+git rm -r 削除するプラグインのディレクトリ &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;最後のスラッシュはいれない&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+git submodule sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;プラグインをアップデート&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;git submodule foreach git pull origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;なお、pathogenを利用するためには、.vimrcに&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;vim&quot;&gt;&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; pathogen#runtime_append_all_bundles&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; pathogen#&lt;span class=&quot;k&quot;&gt;helptags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;と追加する必要がある。この行はfiletypeの設定以前に呼び出す必要があるため、.vimrcの最初の行に追加することをおすすめする。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;tpope/vim-pathogen - GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;vimrc&quot;&gt;設定&lt;/h3&gt;
