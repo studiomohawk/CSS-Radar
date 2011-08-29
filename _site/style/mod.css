@@ -25,3 +25,19 @@
 .media .bd > :first-child { margin-top:0; }
 .media .bd > :last-child { margin-bottom:0; }
 .media .img img { display:block; }
+.list-linear {
+	letter-spacing: -0.31em;
+	*letter-spacing: normal;
+	word-spacing: -0.43em;
+}
+.list-linear li {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	line-height: 1;
+	letter-spacing: normal;
+    margin-right: 7px;
+	word-spacing: normal;
+	vertical-align: middle;
+}
+.list-linear li:last-child { margin-right: 0; }
