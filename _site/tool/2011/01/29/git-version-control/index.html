@@ -4,17 +4,17 @@
 <!--[if IE 8 ]>    <html lang="na" class="post no-js ie8" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="ja" class="post no-js" itemscope itemtype="http://schema.org/Blog"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
-    <link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-    <link href='/assets/master.css' rel="stylesheet" media="all">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
-    
-    <title itemprop="name" content="Gitでバージョンコントロール | CSS Radar">Gitでバージョンコントロール | CSS Radar | For Frond End Developers</title>
-    <meta itemprop="description" name="description" content="バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。 作業用フォルダがstyle.bk20110128なんて名前であふれている なんでこの変更したのか、覚えていない。もう3ヶ月も前の話だし 誰が最新のファイル持ってるかわからないまま、作業を開始、もう1度やり直し HTMLであろうと、CSSであろうと、JSであろうと、何であろうとソースコードを人間は必ずどこかで例のような目にあうのだ。 バックアップも、更新履歴も、システムでやればいいじゃない。を解決してくれるのがGit。 セットアップも簡単で、利用するのも簡単。 あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。 Gitのインストール ※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。 OSX Installer for Gitから、自分のOSバージョンにあわせてdmgをダウンロード。Winはこちら あとはインストーラにお任せ。 私はHomebrewを使って、Gitをインストールした。 Gitはアプリケーションフォルダには入らない系統のアプリ。Terminalで使える。 Terminal(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。 では、git --version をTerminalへコピペしてみてほしい。ちゃんとインストールできていれば、 git version...">
-    
-    <script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
+	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
+	<link href='/assets/master.css' rel="stylesheet" media="all">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+	
+	<title itemprop="name" content="Gitでバージョンコントロール | CSS Radar">Gitでバージョンコントロール | CSS Radar | For Frond End Developers</title>
+	<meta itemprop="description" name="description" content="バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。 作業用フォルダがstyle.bk20110128なんて名前であふれている なんでこの変更したのか、覚えていない。もう3ヶ月も前の話だし 誰が最新のファイル持ってるかわからないまま、作業を開始、もう1度やり直し HTMLであろうと、CSSであろうと、JSであろうと、何であろうとソースコードを人間は必ずどこかで例のような目にあうのだ。 バックアップも、更新履歴も、システムでやればいいじゃない。を解決してくれるのがGit。 セットアップも簡単で、利用するのも簡単。 あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。 Gitのインストール ※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。 OSX Installer for Gitから、自分のOSバージョンにあわせてdmgをダウンロード。Winはこちら あとはインストーラにお任せ。 私はHomebrewを使って、Gitをインストールした。 Gitはアプリケーションフォルダには入らない系統のアプリ。Terminalで使える。 Terminal(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。 では、git --version をTerminalへコピペしてみてほしい。ちゃんとインストールできていれば、 git version...">
+	
+	<script>
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-61203-11']);
 	_gaq.push(['_trackPageview']);
@@ -427,10 +427,10 @@ Gitについて、もっと知りたいことがあれば、<a href="http://twit
 </ul>
 
                       <div class="social">
-  <ul class="list-linear">
-    <li><div class="g-plusone"></div><li>
-    <li><div class="twitter"><a href="https://twitter.com/cssradar" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#00AEFF"></a></div></li>
-  </ul>
+	<ul class="list-linear">
+		<li><div class="g-plusone"></div></li>
+		<li><div class="twitter"><a href="https://twitter.com/cssradar" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#00AEFF"></a></div></li>
+	</ul>
 </div>
 
                       <div class="ask">

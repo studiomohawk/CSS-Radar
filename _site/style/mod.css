@@ -29,6 +29,7 @@
 	letter-spacing: -0.31em;
 	*letter-spacing: normal;
 	word-spacing: -0.43em;
+	list-style: none;   
 }
 .list-linear li {
 	display: inline-block;

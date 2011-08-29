@@ -4,25 +4,25 @@
 <!--[if IE 8 ]>    <html lang="na" class="{{ page.layout }} no-js ie8" itemscope itemtype="http://schema.org/Blog"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="ja" class="{{ page.layout }} no-js" itemscope itemtype="http://schema.org/Blog"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
-    <link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="{{ site.sitename }} | {{ site.tagline }}" type="application/atom+xml">
-    {% include_css master %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
-    {% case page.layout %}
-    {% when 'home' %}
-    <title itemprop="name" content="{{ site.sitename }} | {{ site.tagline }}">{{ site.sitename }} | {{ site.tagline }}</title>
-    <meta itemprop="description" name="description" content="{{ site.desc }}">
-    {% when 'post' %}
-    <title itemprop="name" content="{{ page.title }} | {{ site.sitename }}">{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
-    <meta itemprop="description" name="description" content="{{ content | strip_html | truncatewords: 25 }}">
-    {% when 'changelog' %}
-    <title itemprop="name" content="{{ page.title }} | {{ site.sitename }}">{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
-    <meta itemprop="description" name="description" content="{{ content | strip_html | truncatewords: 25 }}">
-    {% else %}
-    <title itemprop="name" content="{{ page.title }} | {{ site.sitename }}">{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
-    <meta itemprop="description" name="description" content="{{ page.desctiption }}">
-    {% endcase %}
-    {% include ga.html %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
+	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="{{ site.sitename }} | {{ site.tagline }}" type="application/atom+xml">
+	{% include_css master %}
+	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+	{% case page.layout %}
+	{% when 'home' %}
+	<title itemprop="name" content="{{ site.sitename }} | {{ site.tagline }}">{{ site.sitename }} | {{ site.tagline }}</title>
+	<meta itemprop="description" name="description" content="{{ site.desc }}">
+	{% when 'post' %}
+	<title itemprop="name" content="{{ page.title }} | {{ site.sitename }}">{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
+	<meta itemprop="description" name="description" content="{{ content | strip_html | truncatewords: 25 }}">
+	{% when 'changelog' %}
+	<title itemprop="name" content="{{ page.title }} | {{ site.sitename }}">{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
+	<meta itemprop="description" name="description" content="{{ content | strip_html | truncatewords: 25 }}">
+	{% else %}
+	<title itemprop="name" content="{{ page.title }} | {{ site.sitename }}">{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
+	<meta itemprop="description" name="description" content="{{ page.desctiption }}">
+	{% endcase %}
+	{% include ga.html %}
 </head>
