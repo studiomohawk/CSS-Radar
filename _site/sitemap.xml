@@ -6,8 +6,13 @@
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 <loc>http://css.studiomohawk.com</loc>
-	<lastmod>2011-08-29T23:59:47+09:00</lastmod>
+	<lastmod>2011-09-11T13:07:25+09:00</lastmod>
 	<priority>1.0</priority>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/tool/2011/09/10/give_something_back_to_open_source_via_github/</loc>
+	<lastmod>2011-09-10T20:13:00+09:00</lastmod>
 </url>
 
 <url>

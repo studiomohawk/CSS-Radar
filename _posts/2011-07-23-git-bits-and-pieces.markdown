@@ -42,7 +42,7 @@ fix = commit --amend -C HEAD
 - ``git diff -- <filename>``とすると、1ファイルのみを比較できる
 - ``git diff --cached``ではステージングにあるファイル群とHEAD(*)を比較する
 
-/* HEADは現在のブランチと同義だと思っていていいそうだ。([What is git head, exactly? - Stack Overflow](http://stackoverflow.com/questions/2304087/what-is-git-head-exactly))
+\* HEADは現在のブランチと同義だと思っていていいそうだ。([What is git head, exactly? - Stack Overflow](http://stackoverflow.com/questions/2304087/what-is-git-head-exactly))
 
 あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。  
 バージョンコントロールを初めたばかりならなおさらだろう。

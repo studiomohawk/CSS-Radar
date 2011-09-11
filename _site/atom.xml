@@ -4,9 +4,111 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-08-29T23:59:47+09:00</updated>
+ <updated>2011-09-11T13:07:25+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
+ 
+ <entry>
+   <title>github - pull requestまでの道のり</title>
+   <link href="http://css.studiomohawk.com/tool/2011/09/10/give_something_back_to_open_source_via_github/"/>
+   <updated>2011-09-10T20:13:00+09:00</updated>
+   <id>http://css.studiomohawk.com/tool/2011/09/10/give_something_back_to_open_source_via_github</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/studiomohawk&quot;&gt;github&lt;/a&gt;を本格的に使い始めて1年くらいだろうか。&lt;br /&gt;
+これまで&lt;a href=&quot;/tool/2011/03/15/html5boilerplate/&quot;&gt;HTML5 Boilerplate&lt;/a&gt;の翻訳以外でpull
+requestを送った事がない。&lt;br /&gt;
+今回はOctopressというプロジェクトに貢献できる機会がありそうなので、
+githubでのfork、ローカル環境でのレポジトリの編集、そしてプロジェクトへのpull
+requestまでの道のりを紹介しよう。&lt;br /&gt;
+githubの基本的な使い方はもちろんのこと、Jekyllをより便利に、簡単に利用できるフレームワークであるOctopressについても解説していく。&lt;/p&gt;
+
+&lt;h2&gt;&lt;a href=&quot;http://octopress.org/&quot;&gt;Octopress&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;このブログのエンジンでもある、&lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;(Jekyllもオープンソース)をベースに様々な拡張を行ったフレームワークがOctopress。&lt;br /&gt;
+作ったまま放置している私のJekyllのテーマ集&lt;a href=&quot;http://www.layouts-the.me/&quot;&gt;_layouts&lt;/a&gt;を、この際Octopressに乗せ変えてしまおうと思っている。  &lt;/p&gt;
+
+&lt;h2&gt;Githubでforkする&lt;/h2&gt;
+
+&lt;p&gt;githubのレポジトリはプライベートなものを除いてすべてForkすることが可能だ。&lt;/p&gt;
+
+&lt;p&gt;ここでいうforkとはgithubにあるレポジトリを自分のレポジトリとしてコピーすることだと思っていて間違いはないだろう。&lt;br /&gt;
+さすがはgithub。&lt;a href=&quot;http://help.github.com/fork-a-repo/&quot;&gt;Fork
+A Repo&lt;/a&gt;という簡潔によくまとまったヘルプページがあるので、この手順に従っていけば誰でも簡単に自分のローカル環境にレポジトリを持つ事が可能だ。&lt;/p&gt;
+
+&lt;p&gt;では早速、octopressをforkしてみよう。&lt;br /&gt;
+&lt;a href=&quot;https://github.com/imathis/octopress&quot;&gt;imathis/octopress
+- GitHub&lt;/a&gt;のページへ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/tool/2011/09/10/give_something_back_to_open_source_via_github/fork-a-repo.png&quot; alt=&quot;Image&quot; class=&quot;huge&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Forkボタンをクリックすると&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/tool/2011/09/10/give_something_back_to_open_source_via_github/forked-a-repo.png&quot; alt=&quot;Image&quot; class=&quot;huge&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;自分のページにレポジトリがコピーされる。こうなった時点でこのレポジトリについては自分の思うがママ。ファイルを消そうと追加しようと自分のレポジトリとして扱われる。  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;git clone git@github.com:studiomohawk/octopress.git
+&lt;span class=&quot;c&quot;&gt;#studiomohawkの部分は自分のユーザ名に差し替える&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;そして上記のコマンドを叩けば、ローカル環境にレポジトリがコピーされる。&lt;br /&gt;
+私もそうしているがgithubからコピー(clone)するレポジトリはいつも同じディレクトリにしておくと忘れる可能性が低い。&lt;br /&gt;
+私はソースコードリーディングのためにもcloneしたりするので&lt;a href=&quot;http://db.tt/2usxiol&quot;&gt;Dropbox&lt;/a&gt;にgithubというディレクトリを作ってそこにcloneすることにしている。&lt;/p&gt;
+
+&lt;h2&gt;Octopressのセットアップ&lt;/h2&gt;
+
+&lt;p&gt;Octopressのセットアップはそれほど難しくない様子。
+&lt;a href=&quot;http://octopress.org/docs/setup/&quot;&gt;このステップ&lt;/a&gt;に則って順にコマンドを叩いていけばいい。  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm rvmrc trust &lt;span class=&quot;c&quot;&gt;# rvmの設定を承認する&lt;/span&gt;
+rvm reload &lt;span class=&quot;c&quot;&gt;# rmvをリロード&lt;/span&gt;
+gem install bundler &lt;span class=&quot;c&quot;&gt;# bundlerをインストール&lt;/span&gt;
+gem install rake &lt;span class=&quot;c&quot;&gt;# rakeをインストール&lt;/span&gt;
+bundle install &lt;span class=&quot;c&quot;&gt;# bundlerを使って必要なgemをインストール&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;そして&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rake install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、&lt;code&gt;source&lt;/code&gt;と&lt;code&gt;sass&lt;/code&gt;ディレクトリが生成される。&lt;/p&gt;
+
+&lt;p&gt;ここまでくればOctopressのデフォルトデザインを確認できる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/tool/2011/09/10/give_something_back_to_open_source_via_github/octopress-default-full.png&quot; class=&quot;fancybox&quot;&gt;&lt;img src=&quot;/tool/2011/09/10/give_something_back_to_open_source_via_github/octopress-default.png&quot; alt=&quot;Image&quot; class=&quot;huge&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rake generate
+rake preview
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Octopressのルートディレクトリで上記のコマンドを叩けばデザインを確認できる。&lt;br /&gt;
+(ダミーの記事は別途用意すること)&lt;/p&gt;
+
+&lt;h2&gt;以降のログは順次公開予定&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Octopressの設定について&lt;/li&gt;
+  &lt;li&gt;Octopressのデザインテーマの変更&lt;/li&gt;
+  &lt;li&gt;OctopressでAmazon S3にデプロイする(テーマの公開)&lt;/li&gt;
+  &lt;li&gt;githubで元のプロジェクトにpull request&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;などやりながら書いているのであくまでも予定だが、大まかに言って上記をカバーする予定。&lt;br /&gt;
+例によって質問はメール、あるいは&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;にていつでも受け付けている。&lt;/p&gt;
+
+&lt;h3&gt;参考ページ&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://help.github.com/fork-a-repo/&quot;&gt;Help.GitHub - Fork A Repo&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(2011/09/11 更新)&lt;/span&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/setup/&quot;&gt;Octopress Setup - Octopress&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(2011/09/11 更新)&lt;/span&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/blogging/&quot;&gt;Blogging Basics - Octopress&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(2011/09/11 更新)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>必携Mac OSXアプリ12</title>
@@ -485,7 +587,7 @@ fix&lt;/code&gt;とすると、前のコミットメッセージを繰り返し�
   &lt;li&gt;&lt;code&gt;git diff --cached&lt;/code&gt;ではステージングにあるファイル群とHEAD(*)を比較する&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;/* HEADは現在のブランチと同義だと思っていていいそうだ。(&lt;a href=&quot;http://stackoverflow.com/questions/2304087/what-is-git-head-exactly&quot;&gt;What is git head, exactly? - Stack Overflow&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;* HEADは現在のブランチと同義だと思っていていいそうだ。(&lt;a href=&quot;http://stackoverflow.com/questions/2304087/what-is-git-head-exactly&quot;&gt;What is git head, exactly? - Stack Overflow&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。&lt;br /&gt;
 バージョンコントロールを初めたばかりならなおさらだろう。

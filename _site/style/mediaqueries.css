@@ -54,7 +54,7 @@ img { max-width: 100%; }
 	.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 { margin-left: 252px; margin-right: 84px; }
 	.content p, .content ul, .content ol, .content dl, .content blockquote, .content .meta { margin-left: 252px; margin-right: 84px; }
 	.content ul p, .content ol p, .content dl p { margin-left: 0; }
-	.content .highlight { margin-right: 84px; }
+	.content .highlight { margin-right: 10px; }
 	.content img.huge {
 		left: -252px;
 		max-width: 1048px;
