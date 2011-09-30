@@ -81,3 +81,10 @@ desc "Deploy Amazon s3 Using s3Sync"
 task :deploy do
   system('s3sync -rpv _site/ css.studiomohawk.com:')
 end
+
+desc "Optimise all PNG files with optipng"
+task :optipng do
+  Dir.glob("_site/**/*.png").each do |file|
+    system "optipng -quiet -o7 #{file}"
+  end
+end
