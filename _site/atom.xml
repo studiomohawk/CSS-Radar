@@ -4,7 +4,7 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-10-22T18:24:12+09:00</updated>
+ <updated>2011-10-30T00:29:43+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
  
@@ -549,11 +549,38 @@ imap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;
    <link href="http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces/"/>
    <updated>2011-07-23T12:34:42+09:00</updated>
    <id>http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces</id>
-   <content type="html">&lt;h3 id=&quot;gitalias&quot;&gt;git alias - 2011/07/29&lt;/h3&gt;
+   <content type="html">&lt;h3 id=&quot;github&quot;&gt;Githubを使う - 2011/10/30&lt;/h3&gt;
+
+&lt;h3&gt;fork&lt;/h3&gt;
+
+&lt;p&gt;forkはGithub内で公開されているレポジトリを自分のレポジトリとしてコピーしてくる事を指す。&lt;br /&gt;
+利用したいレポジトリを見つけたら、forkボタンをクリックすれば自分のレポジトリにコピーが完成。この時点でどんな変更を行おうとそれは自分のレポジトリ内だけで完結する。&lt;br /&gt;
+その変更をオリジナルにも反映するべきという場合にはPull
+Requestをすることでオリジナルレポジトリの所有者に変更を伝える事ができる。  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git clone git@github.com:ユーザ名/レポジトリ名.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;forkしたレポジトリをローカル環境にclone。&lt;br /&gt;
+ちなみにコマンドラインで上記を実行する際は自分がどのディレクトリにいるのか確認しておこう。&lt;br /&gt;
+&lt;code&gt;pwd&lt;/code&gt;で自分の居場所を教えてくれる。&lt;br /&gt;
+レポジトリ名でディレクトリが生成されるので、
+ついでにremoteの設定をしておこう。この設定をしておけばオリジナルレポジトリで変更があった際にその変更をfetchできる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; レポジトリ名 &lt;span class=&quot;c&quot;&gt;# まずはそのディレクトリに移動&lt;/span&gt;
+git remote add upstream オリジナルのレポジトリのgitパス &lt;span class=&quot;c&quot;&gt;#パスはgithubのレポジトリのページにあるのでコピー&lt;/span&gt;
+git fetch upstream &lt;span class=&quot;c&quot;&gt;# 変更をfetch&lt;/span&gt;
+git merge upstream/master &lt;span class=&quot;c&quot;&gt;# 変更を自分のブランチにmergeする&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;gitalias&quot;&gt;git alias - 2011/10/30&lt;/h3&gt;
 
 &lt;p&gt;コマンドラインの便利さはコマンドを覚えてしまえば、色々なことがコマンド1つ、あるいは2つでできてしまう、ということにつきる。&lt;br /&gt;
 gitもGUIツールの利便性は否定しないが、コマンドラインから利用することにしている私。&lt;br /&gt;
-少しでもタイプする文字を減らしたいので、&lt;code&gt;git alias&lt;/code&gt;。&lt;/p&gt;
+少しでもタイプする文字を減らしたいので、そんな際に便利なのが&lt;code&gt;git alias&lt;/code&gt;。&lt;br /&gt;
+あらかじめ登録したコマンドをショートカットのように呼び出す事ができる機能だ。&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;git config -e --global&lt;/code&gt;&lt;/p&gt;
 
@@ -561,11 +588,13 @@ gitもGUIツールの利便性は否定しないが、コマンドラインか�
 すでに自分のメールと名前は設定済みのはずなので、ファイルに追記すれば、aliasを利用できる。&lt;/p&gt;
 
 &lt;p&gt;6行目までは、単純によく使うコマンドを2文字に省略しただけで、&lt;br /&gt;
-&lt;code&gt;lg&lt;/code&gt;は&lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;この記事&lt;/a&gt;から拝借した。&lt;code&gt;git log&lt;/code&gt;を少しセクシーにしてくれる。&lt;br /&gt;
-&lt;code&gt;fix&lt;/code&gt;は私があまりにもよく繰り返す、コミットしたあとで、そのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う&lt;code&gt;--amend&lt;/code&gt;オプションをaliasにした。&lt;br /&gt;
+&lt;code&gt;lg&lt;/code&gt;は&lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;この記事&lt;/a&gt;から拝借した。&lt;code&gt;git log&lt;/code&gt;を少しセクシーにしてくれる。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;fix&lt;/code&gt;は私があまりにもよく繰り返すコミットしたあとでそのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う&lt;code&gt;--amend&lt;/code&gt;オプションをaliasにした。&lt;br /&gt;
 コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、&lt;code&gt;git add
-FILE&lt;/code&gt;と追加して、&lt;code&gt;git
-fix&lt;/code&gt;とすると、前のコミットメッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。&lt;/p&gt;
+FILE&lt;/code&gt;と追加して、&lt;code&gt;git fix&lt;/code&gt;とすると、前のコミットメッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;unstage&lt;/code&gt;は&lt;code&gt;add&lt;/code&gt;の反対でgitのstageに追加したくないファイルを削除してくれる。&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; status
@@ -576,6 +605,7 @@ fix&lt;/code&gt;とすると、前のコミットメッセージを繰り返し�
 &lt;span class=&quot;nv&quot;&gt;dc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff --cached
 &lt;span class=&quot;nv&quot;&gt;lg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --graph --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s1&quot;&gt;&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39;&lt;/span&gt; --abbrev-commit --date&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;relative
 &lt;span class=&quot;nv&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit --amend -C HEAD
+&lt;span class=&quot;nv&quot;&gt;unstage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; reset HEAD
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -1249,7 +1279,10 @@ Photoshopでのステップだと、グリッドを使ったり、ガイドを�
 &lt;/div&gt;
 
 &lt;p&gt;という指定で、グリッド画像を生成してくれる。
-例えば、こちらを開いてみてほしい。&lt;a href=&quot;http://griddle.it/960-12-30&quot;&gt;幅960px 12コラム 30pxのガター&lt;/a&gt;&lt;/p&gt;
+例えば、こちらを開いてみてほしい。&lt;a href=&quot;http://griddle.it/960-12-30&quot;&gt;幅960px 12コラム 30pxのガター&lt;/a&gt;&lt;br /&gt;
+さらにバーティカルリズム用ガイドになる横線のグリッドも追加できる。
+&lt;a href=&quot;http://griddle.it/960-12-30?horizontal=30&quot;&gt;幅960px 12コラム 30pxのガター + 30pxの横線グリッド&lt;/a&gt;&lt;br /&gt;
+ここまで設計したデザインはなかなか日本では見かけないが、基礎が強固であればあるほど、表層のデザインは自由度が増すので、是非。&lt;/p&gt;
 
 &lt;p&gt;自動で画像を生成してくれるので、グリッドパターンが確定したら、&lt;/p&gt;
 
@@ -1267,23 +1300,33 @@ Framework&lt;/a&gt;を利用して、ベース(グリッドの部分だけ利用
 &lt;p&gt;すでに自分のレスポンシブデザインのベースがあるという場合は、Griddle.itを利用して、media
 queriesで呼び出す画像を切り替えればOK。&lt;/p&gt;
 
+&lt;p&gt;開発時にJSを呼び出しても問題ないという場合には、
+&lt;a href=&quot;http://bohemianalps.com/tools/grid/&quot;&gt;The Heads-Up
+Grid&lt;/a&gt;がおすすめだ。縦横のグリッドを自由に設定できる上にウィンドウサイズを検知してレスポンシブウェブデザイン用にサイズを変更してくれる。&lt;/p&gt;
+
 &lt;p&gt;また、HTML5 Boilerplateをベースに選択していて、Less
 Frameworkなどを組み込むのが面倒な場合は、Andy Clerkeの&lt;a href=&quot;http://stuffandnonsense.co.uk/projects/320andup/&quot;&gt;320 and up&lt;/a&gt;を利用するといいだろう。(モバイルファーストという概念で作られているので、若干注意が必要)&lt;/p&gt;
 
 &lt;p&gt;さらに、レスポンシブウェブデザインでは現在のウィンドウの幅がどのサイズにあたるのかわかりづらいとちょっと面倒なので、
 &lt;a href=&quot;http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/&quot;&gt;Window Size bookmarklet to test/debug CSS3 Media Queries&lt;/a&gt;のブックマークレットを利用すれば、ウィンドウサイズを知らせてくれるので、非常に便利。&lt;/p&gt;
 
-&lt;p&gt;ちなみに、この後のステップでは、CSSやHTMLを保存し、ブラウザをリフレッシュして変更を確認し〜を繰り返す。
+&lt;p&gt;ちなみにこの後のステップではCSSやHTMLを保存し、ブラウザをリフレッシュして変更を確認し〜を繰り返す。
 より時短を目指すため、&lt;a href=&quot;http://livejs.com/&quot;&gt;Live.js&lt;/a&gt;を活用することをおすすめする。&lt;br /&gt;
 このJavaScriptは、ファイルの保存を検知して、ブラウザのリロードを行わず、変更を反映するという夢のようなツール。&lt;br /&gt;
 ブラウザでデザインしていなくて、コーディングしている時にかなり役に立つ強力なJavaScript。&lt;/p&gt;
+
+&lt;p&gt;JSを追加したり、プロダクション用に削除したりと面倒だなと感じたら、&lt;br /&gt;
+&lt;a href=&quot;http://livereload.com/&quot;&gt;LiveReload&lt;/a&gt;というMac用のアプリがおすすめだ。ブラウザの拡張機能とこのアプリさえあれば、監視するフォルダを登録したらファイルを保存したらブラウザをリロードしてくれる。&lt;br /&gt;
+ついでに、LESSやSASSなどを利用していても自動的にCSSに変換してくれる強力なアプリ。&lt;/p&gt;
 
 &lt;h4&gt;このステップで利用するツール&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://griddle.it/&quot;&gt;Griddle.it&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/&quot;&gt;Window Size bookmarklet to test/debug CSS3 Media Queries&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bohemianalps.com/tools/grid/&quot;&gt;The Heads-Up Grid&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://livejs.com/&quot;&gt;Live.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://livereload.com/&quot;&gt;LiveReload&lt;/a&gt; (Macのみ)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://lessframework.com/&quot;&gt;Less Framework&lt;/a&gt; + &lt;a href=&quot;http://arnaumarch.com/en/less-grid.html&quot;&gt;Less Grid&lt;/a&gt; (Less Framework利用時)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://stuffandnonsense.co.uk/projects/320andup/&quot;&gt;320 and up&lt;/a&gt; (HTML5
 Boilerplate利用時)&lt;/li&gt;
@@ -1291,17 +1334,77 @@ Boilerplate利用時)&lt;/li&gt;
 
 &lt;h3&gt;残りのステップは、デザインしていくだけ。&lt;/h3&gt;
 
-&lt;p&gt;コンテンツなしにデザインすることができないのは、Photoshopであろうと、ブラウザでのデザインでも同じ。
+&lt;p&gt;コンテンツなしにデザインすることができないのはPhotoshopであろうと、ブラウザでのデザインでも同じ。
 だが、画像素材や原稿がまだの場合は、想定している画像のサイズや原稿の分量などを伝えるというステップもあってもいいかも知れない。
 (実際に私の職場では非常によくある)&lt;/p&gt;
 
-&lt;p&gt;フレキシビリティこそが、ブラウザでデザインすることのもっとも優れた点なので、活用していこう。&lt;/p&gt;
+&lt;p&gt;フレキシビリティこそがブラウザでデザインすることのもっとも優れた点なので活用していこう。&lt;/p&gt;
 
 &lt;p&gt;ダミー画像の生成なら、&lt;a href=&quot;http://lorempixum.com/&quot;&gt;lorempixum&lt;/a&gt;が数あるダミー生成ツールのなかでももっとも優れている。&lt;br /&gt;
-グレーを始めとする単色だけでなく、サイズの指定はもちろん、色の指定、画像のジャンルの指定すらできる優れものだ。&lt;/p&gt;
+グレーを始めとする単色だけでなく、サイズの指定はもちろん、画像のジャンルの指定すらできる優れものだ。&lt;/p&gt;
 
-&lt;p&gt;プロトタイプとして、素材の提供者にブラウザで確認してもらうには十分こと足りるだろう。&lt;br /&gt;
-日本語では、海外のようなLorem Ipsumテキストがないので、どうしてもダミー原稿が欲しい場合は、私は&lt;a href=&quot;http://webtools.dounokouno.com/dummytext/index.html&quot;&gt;ダミーテキストジェネレータ&lt;/a&gt;を利用している。&lt;/p&gt;
+&lt;p&gt;プロトタイプとして素材の提供者にブラウザで確認してもらうには十分こと足りるだろう。&lt;br /&gt;
+日本語では海外のようなLorem Ipsumテキストがないので、どうしてもダミー原稿が欲しい場合は、私は&lt;a href=&quot;http://webtools.dounokouno.com/dummytext/index.html&quot;&gt;ダミーテキストジェネレータ&lt;/a&gt;を利用している。&lt;/p&gt;
+
+&lt;h3&gt;インブラウザ デザインをより加速するオンラインツール達&lt;/h3&gt;
+
+&lt;p&gt;CSS3を活用してブラウザでデザインしていく上で欠かすことのできないツール群を紹介しよう。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://css3please.com/&quot;&gt;CSS3 Please! The Cross-Browser CSS3 Rule Generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Paul Irish氏によるCSS3
+Please!はCSS3のプロパティを実際に値を変え、その効果を確認しながら簡単にコピペすることができるウェブツール。&lt;br /&gt;
+border-radius、box-shadow、linear-gradient、rgba、transform、transitionなど、ブラウザプリフィックス付きで非常に便利。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://noisepng.com/&quot;&gt;NoisePNG - Generate noisy PNG-images with alpha-transparency&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;NoisePNGはその名の通りノイズを生成してPNGとしてダウンロードできるウェブツール。&lt;br /&gt;
+生成されるPNGはノイズの部分だけで色はRGBで指定して利用できるので非常に拡張性が高い。&lt;br /&gt;
+その上、&lt;a href=&quot;http://noisepng.com/100-80-5-monochrome.png&quot;&gt;http://noisepng.com/100-80-5-monochrome.png&lt;/a&gt;というURLで実際のデザインに簡単に組み込める。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.grained.org/&quot;&gt;Grained.org - Online grained gradient image generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらも先ほどのNoisePNGに近いサービスだが、こちらはノイズの入ったグラデーション画像をマウスのドラッグで生成できる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.patternify.com/&quot;&gt;Patternify - CSS Pattern Generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらはノイズではなく規則性のあるパターンを生成してくれるサービス。最大10pxx10pxのキャンバスと色、透明度も選択できるので、使い慣れてくると色々なパターンを作成できる。&lt;br /&gt;
+作成したパターンはデモ用のdata-url形式でコピーするかPNGをダウンロードできる。またパターンはURLを生成することも可能なので作ったパターンを保存することも可能。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.colorzilla.com/gradient-editor/&quot;&gt;Ultimate CSS Gradient Generator - ColorZilla.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CSS Gradient生成ツールのデファクトスタンダード。前述のCSS3
+Please!でもグラデーションは作成できるが、こちらはPhotoshopと同じようなGUIでの生成が可能。&lt;br /&gt;
+画像からCSSを生成することもできる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.wordpressthemeshock.com/css-drop-shadow/&quot;&gt;Css3 drop shadow generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらはDrop ShadowをプレビューしながらCSSを生成できるツール。やはりCSS3
+Please!でも同様の機能は提供されているが、こちらのほうが私には視覚的に理解しやすいし、数字ではなくスライダーを動かしながら調整できるところが便利。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://prefixr.com/&quot;&gt;Prefixr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ブラウザプリフィックスをタイプするのは面倒。&lt;br /&gt;
+このPrefixrではブラウザプリフィックスの内1つでも入力すると全ブラウザのプリフィックスとそれに対応したシンタックスを補完してくれる。&lt;br /&gt;
+なんとAPIすら提供しているので、Vimではすでにエディタ内からこのツールが利用できる。
+(&lt;a href=&quot;https://github.com/mr-szymanski/prefixr&quot;&gt;mr-szymanski/prefixr - GitHub&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;それぞれのサービスは他に類似サービスが沢山あるが、実際に使ってみて1番使い勝手のよいものをピックアップした。&lt;br /&gt;
+どれも自信を持っておすすめできるので試してみてほしい。&lt;/p&gt;
 
 &lt;h2&gt;インブラウザ デザインの注意点&lt;/h2&gt;
 
@@ -1321,11 +1424,11 @@ Photoshopがインブラウザ デザインより優れている部分ももち�
 (私にとっては十分だが)&lt;a href=&quot;http://www.pixelmator.com/&quot;&gt;Pixelmator&lt;/a&gt;も、レイヤースタイルに対応した&lt;a href=&quot;http://flyingmeat.com/acorn/&quot;&gt;Acorn&lt;/a&gt;もPhotoshopがデファクトになってきた強力な機能やユーザビリティにはまだ少し距離がある。&lt;br /&gt;
 ここで最も大切なことは、Photoshopでのデザインプロセスにも疑問を投げかける時代が来たということ。&lt;/p&gt;
 
-&lt;p&gt;よりプロダクティブになることが、ウェブデザイナのタスクの1つで、そうすることで、より優れた問題解決を提案できる、作ることそのものより、どうやって問題を解決するべきか、を考える時間を作り出していくことが大切なこと。&lt;/p&gt;
+&lt;p&gt;よりプロダクティブになることがウェブデザイナのタスクの1つで、そうすることでより優れた問題解決を提案できる。作ることそのものよりどうやって問題を解決するべきか、を考える時間を作り出していくことが大切なこと。&lt;/p&gt;
 
 &lt;p&gt;ブラウザでデザインすること。&lt;br /&gt;
 このプロセス、ツールセットにバージョンをつけるとしたら、1.0RCといったところだろう。&lt;br /&gt;
-CS5.5になるほど、イテレーションを繰り返しすばらしいプロダクトを提供してきたAdobe
+CS5.5になるほどイテレーションを繰り返しすばらしいプロダクトを提供してきたAdobe
 Photoshopと比べればまだまだ始まったばかり。&lt;br /&gt;
 このプロセス/ツールセットのバージョンアップを行うのは、ウェブデザイナたちの役割だ。&lt;/p&gt;
 

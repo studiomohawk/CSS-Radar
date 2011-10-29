@@ -108,6 +108,12 @@
 								<span class="year">2011</span>
 							</date>
 							
+							<date class="update-pub" title="2011-10-29 22:37:19">
+								<span class="day">29</span>
+								<span class="month"><abbr>Oct</abbr></span>
+								<span class="year">2011</span>
+							</date>
+							
 						</div>
 					</div>
 					</header>
@@ -179,7 +185,10 @@ Photoshopでのステップだと、グリッドを使ったり、ガイドを�
 </div>
 
 <p>という指定で、グリッド画像を生成してくれる。
-例えば、こちらを開いてみてほしい。<a href="http://griddle.it/960-12-30">幅960px 12コラム 30pxのガター</a></p>
+例えば、こちらを開いてみてほしい。<a href="http://griddle.it/960-12-30">幅960px 12コラム 30pxのガター</a><br />
+さらにバーティカルリズム用ガイドになる横線のグリッドも追加できる。
+<a href="http://griddle.it/960-12-30?horizontal=30">幅960px 12コラム 30pxのガター + 30pxの横線グリッド</a><br />
+ここまで設計したデザインはなかなか日本では見かけないが、基礎が強固であればあるほど、表層のデザインは自由度が増すので、是非。</p>
 
 <p>自動で画像を生成してくれるので、グリッドパターンが確定したら、</p>
 
@@ -197,23 +206,33 @@ Framework</a>を利用して、ベース(グリッドの部分だけ利用する
 <p>すでに自分のレスポンシブデザインのベースがあるという場合は、Griddle.itを利用して、media
 queriesで呼び出す画像を切り替えればOK。</p>
 
+<p>開発時にJSを呼び出しても問題ないという場合には、
+<a href="http://bohemianalps.com/tools/grid/">The Heads-Up
+Grid</a>がおすすめだ。縦横のグリッドを自由に設定できる上にウィンドウサイズを検知してレスポンシブウェブデザイン用にサイズを変更してくれる。</p>
+
 <p>また、HTML5 Boilerplateをベースに選択していて、Less
 Frameworkなどを組み込むのが面倒な場合は、Andy Clerkeの<a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and up</a>を利用するといいだろう。(モバイルファーストという概念で作られているので、若干注意が必要)</p>
 
 <p>さらに、レスポンシブウェブデザインでは現在のウィンドウの幅がどのサイズにあたるのかわかりづらいとちょっと面倒なので、
 <a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size bookmarklet to test/debug CSS3 Media Queries</a>のブックマークレットを利用すれば、ウィンドウサイズを知らせてくれるので、非常に便利。</p>
 
-<p>ちなみに、この後のステップでは、CSSやHTMLを保存し、ブラウザをリフレッシュして変更を確認し〜を繰り返す。
+<p>ちなみにこの後のステップではCSSやHTMLを保存し、ブラウザをリフレッシュして変更を確認し〜を繰り返す。
 より時短を目指すため、<a href="http://livejs.com/">Live.js</a>を活用することをおすすめする。<br />
 このJavaScriptは、ファイルの保存を検知して、ブラウザのリロードを行わず、変更を反映するという夢のようなツール。<br />
 ブラウザでデザインしていなくて、コーディングしている時にかなり役に立つ強力なJavaScript。</p>
+
+<p>JSを追加したり、プロダクション用に削除したりと面倒だなと感じたら、<br />
+<a href="http://livereload.com/">LiveReload</a>というMac用のアプリがおすすめだ。ブラウザの拡張機能とこのアプリさえあれば、監視するフォルダを登録したらファイルを保存したらブラウザをリロードしてくれる。<br />
+ついでに、LESSやSASSなどを利用していても自動的にCSSに変換してくれる強力なアプリ。</p>
 
 <h4>このステップで利用するツール</h4>
 
 <ul>
   <li><a href="http://griddle.it/">Griddle.it</a></li>
   <li><a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size bookmarklet to test/debug CSS3 Media Queries</a></li>
+  <li><a href="http://bohemianalps.com/tools/grid/">The Heads-Up Grid</a></li>
   <li><a href="http://livejs.com/">Live.js</a></li>
+  <li><a href="http://livereload.com/">LiveReload</a> (Macのみ)</li>
   <li><a href="http://lessframework.com/">Less Framework</a> + <a href="http://arnaumarch.com/en/less-grid.html">Less Grid</a> (Less Framework利用時)</li>
   <li><a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and up</a> (HTML5
 Boilerplate利用時)</li>
@@ -221,17 +240,77 @@ Boilerplate利用時)</li>
 
 <h3>残りのステップは、デザインしていくだけ。</h3>
 
-<p>コンテンツなしにデザインすることができないのは、Photoshopであろうと、ブラウザでのデザインでも同じ。
+<p>コンテンツなしにデザインすることができないのはPhotoshopであろうと、ブラウザでのデザインでも同じ。
 だが、画像素材や原稿がまだの場合は、想定している画像のサイズや原稿の分量などを伝えるというステップもあってもいいかも知れない。
 (実際に私の職場では非常によくある)</p>
 
-<p>フレキシビリティこそが、ブラウザでデザインすることのもっとも優れた点なので、活用していこう。</p>
+<p>フレキシビリティこそがブラウザでデザインすることのもっとも優れた点なので活用していこう。</p>
 
 <p>ダミー画像の生成なら、<a href="http://lorempixum.com/">lorempixum</a>が数あるダミー生成ツールのなかでももっとも優れている。<br />
-グレーを始めとする単色だけでなく、サイズの指定はもちろん、色の指定、画像のジャンルの指定すらできる優れものだ。</p>
+グレーを始めとする単色だけでなく、サイズの指定はもちろん、画像のジャンルの指定すらできる優れものだ。</p>
 
-<p>プロトタイプとして、素材の提供者にブラウザで確認してもらうには十分こと足りるだろう。<br />
-日本語では、海外のようなLorem Ipsumテキストがないので、どうしてもダミー原稿が欲しい場合は、私は<a href="http://webtools.dounokouno.com/dummytext/index.html">ダミーテキストジェネレータ</a>を利用している。</p>
+<p>プロトタイプとして素材の提供者にブラウザで確認してもらうには十分こと足りるだろう。<br />
+日本語では海外のようなLorem Ipsumテキストがないので、どうしてもダミー原稿が欲しい場合は、私は<a href="http://webtools.dounokouno.com/dummytext/index.html">ダミーテキストジェネレータ</a>を利用している。</p>
+
+<h3>インブラウザ デザインをより加速するオンラインツール達</h3>
+
+<p>CSS3を活用してブラウザでデザインしていく上で欠かすことのできないツール群を紹介しよう。  </p>
+
+<ul>
+  <li><a href="http://css3please.com/">CSS3 Please! The Cross-Browser CSS3 Rule Generator</a></li>
+</ul>
+
+<p>Paul Irish氏によるCSS3
+Please!はCSS3のプロパティを実際に値を変え、その効果を確認しながら簡単にコピペすることができるウェブツール。<br />
+border-radius、box-shadow、linear-gradient、rgba、transform、transitionなど、ブラウザプリフィックス付きで非常に便利。</p>
+
+<ul>
+  <li><a href="http://noisepng.com/">NoisePNG - Generate noisy PNG-images with alpha-transparency</a></li>
+</ul>
+
+<p>NoisePNGはその名の通りノイズを生成してPNGとしてダウンロードできるウェブツール。<br />
+生成されるPNGはノイズの部分だけで色はRGBで指定して利用できるので非常に拡張性が高い。<br />
+その上、<a href="http://noisepng.com/100-80-5-monochrome.png">http://noisepng.com/100-80-5-monochrome.png</a>というURLで実際のデザインに簡単に組み込める。</p>
+
+<ul>
+  <li><a href="http://www.grained.org/">Grained.org - Online grained gradient image generator</a></li>
+</ul>
+
+<p>こちらも先ほどのNoisePNGに近いサービスだが、こちらはノイズの入ったグラデーション画像をマウスのドラッグで生成できる。</p>
+
+<ul>
+  <li><a href="http://www.patternify.com/">Patternify - CSS Pattern Generator</a></li>
+</ul>
+
+<p>こちらはノイズではなく規則性のあるパターンを生成してくれるサービス。最大10pxx10pxのキャンバスと色、透明度も選択できるので、使い慣れてくると色々なパターンを作成できる。<br />
+作成したパターンはデモ用のdata-url形式でコピーするかPNGをダウンロードできる。またパターンはURLを生成することも可能なので作ったパターンを保存することも可能。</p>
+
+<ul>
+  <li><a href="http://www.colorzilla.com/gradient-editor/">Ultimate CSS Gradient Generator - ColorZilla.com</a></li>
+</ul>
+
+<p>CSS Gradient生成ツールのデファクトスタンダード。前述のCSS3
+Please!でもグラデーションは作成できるが、こちらはPhotoshopと同じようなGUIでの生成が可能。<br />
+画像からCSSを生成することもできる。</p>
+
+<ul>
+  <li><a href="http://www.wordpressthemeshock.com/css-drop-shadow/">Css3 drop shadow generator</a></li>
+</ul>
+
+<p>こちらはDrop ShadowをプレビューしながらCSSを生成できるツール。やはりCSS3
+Please!でも同様の機能は提供されているが、こちらのほうが私には視覚的に理解しやすいし、数字ではなくスライダーを動かしながら調整できるところが便利。</p>
+
+<ul>
+  <li><a href="http://prefixr.com/">Prefixr</a></li>
+</ul>
+
+<p>ブラウザプリフィックスをタイプするのは面倒。<br />
+このPrefixrではブラウザプリフィックスの内1つでも入力すると全ブラウザのプリフィックスとそれに対応したシンタックスを補完してくれる。<br />
+なんとAPIすら提供しているので、Vimではすでにエディタ内からこのツールが利用できる。
+(<a href="https://github.com/mr-szymanski/prefixr">mr-szymanski/prefixr - GitHub</a>)</p>
+
+<p>それぞれのサービスは他に類似サービスが沢山あるが、実際に使ってみて1番使い勝手のよいものをピックアップした。<br />
+どれも自信を持っておすすめできるので試してみてほしい。</p>
 
 <h2>インブラウザ デザインの注意点</h2>
 
@@ -251,11 +330,11 @@ Photoshopがインブラウザ デザインより優れている部分ももち�
 (私にとっては十分だが)<a href="http://www.pixelmator.com/">Pixelmator</a>も、レイヤースタイルに対応した<a href="http://flyingmeat.com/acorn/">Acorn</a>もPhotoshopがデファクトになってきた強力な機能やユーザビリティにはまだ少し距離がある。<br />
 ここで最も大切なことは、Photoshopでのデザインプロセスにも疑問を投げかける時代が来たということ。</p>
 
-<p>よりプロダクティブになることが、ウェブデザイナのタスクの1つで、そうすることで、より優れた問題解決を提案できる、作ることそのものより、どうやって問題を解決するべきか、を考える時間を作り出していくことが大切なこと。</p>
+<p>よりプロダクティブになることがウェブデザイナのタスクの1つで、そうすることでより優れた問題解決を提案できる。作ることそのものよりどうやって問題を解決するべきか、を考える時間を作り出していくことが大切なこと。</p>
 
 <p>ブラウザでデザインすること。<br />
 このプロセス、ツールセットにバージョンをつけるとしたら、1.0RCといったところだろう。<br />
-CS5.5になるほど、イテレーションを繰り返しすばらしいプロダクトを提供してきたAdobe
+CS5.5になるほどイテレーションを繰り返しすばらしいプロダクトを提供してきたAdobe
 Photoshopと比べればまだまだ始まったばかり。<br />
 このプロセス/ツールセットのバージョンアップを行うのは、ウェブデザイナたちの役割だ。</p>
 
