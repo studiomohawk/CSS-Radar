@@ -1,9 +1,17 @@
 ---
 layout: post
-title: "HTML5 Boilerplate"
-published: true
+title: HTML5 Boilerplate
 category: tool
+date: 2011-03-15 00:00:00
+toc:
+- {text: HTML5 Boilderplateとは, hash: whatis}
+- {text: HTML5 Boilerplateの特筆すべき5つのポイント, hash: feature}
+- {text: HTML5 Boilerplateの入手方法, hash: download}
+- {text: ビルドスクリプトの使い方, hash: buildscript}
+- {text: 参考リンク, hash: link}
 ---
+
+## HTML5 Boilderplateとは {#whatis}
 
 フロントエンドデベロッパな人たちはウェブ開発プロジェクトを始めるにあたり、HTML、CSS、JSのスケルトン(必要最小限の記述をしたファイル達)を含んだディレクトリを持っている人が多い事だろう。  
 私も個人のプロジェクト、仕事でのプロジェクトともに、それぞれに少しだけカスタマイズを行うだけで開発を始めることができるディレクトリを持っている。  
@@ -12,7 +20,7 @@ category: tool
 知っての通り、HTML5を使い始めるのは決して今からでも**早すぎるということは決してない**が、HTML5に対応するなんてまだ先、と思っていても、このHTML5
 BOILERPLATEに詰め込まれたベスト中のベストプラクティスを吸収しておけば、現在のプロジェクトもより盤石にすることができるはずだ。
 
-## HTML5 Boilerplateの特筆すべき5つのポイント
+## HTML5 Boilerplateの特筆すべき5つのポイント {#feature}
 
 - [Modernizr](http://www.modernizr.com/)
 
@@ -39,7 +47,7 @@ BOILERPLATEに詰め込まれたベスト中のベストプラクティスを吸
   Boilerplateでは、クロスブラウザ対応などはもちろんとして、パフォーマンス最適化を最も重視した構成になっている。  
   JSをドキュメントの最後に配置するという非常に当たり前の事から、.htaccessファイルによる最適化(gzipやファイルのキャッシュ設定など)も提供されており、少し前のバージョンからはAntを利用したビルドスクリプトを使って、ファイルの圧縮、結合、キャッシュバスタの設定、画像ファイルの最適化などを自動(コマンドは使うが)で行えるようにできるようにしている。
 
-## HTML5 Boilerplateの入手方法
+## HTML5 Boilerplateの入手方法 {#download}
 
 [http://html5boilerplate.com/](http://html5boilerplate.com/)から最新の安定板(1.0
 RC
@@ -54,7 +62,7 @@ Boilerplateをベースに必要なスターティングポイントを生成し
 コメント、JavaScript、jQuery(圧縮するか、否かも)、Modernizrの利用、サーバ側の設定ファイル、Google
 Analyticsの要不要など、カスタマイズすることが可能。
 
-## ビルドスクリプトの使い方
+## ビルドスクリプトの使い方 {#buildscript}
 
 私もAntに詳しくないのでHTML5
 Boilerplateのビルドスクリプトの使い方については、IBMのデベロッパワークにお任せすることに。詳しくは[こちら](http://www.ibm.com/developerworks/jp/web/library/wa-html5boilerplate/#build)。
@@ -62,7 +70,7 @@ Boilerplateのビルドスクリプトの使い方については、IBMのデベ
 私自身はRakeに慣れてきたので、AntのビルドスクリプトをRakeに置き換えてみようかなと思っている。すでにRakeマスタな人がいたら、ぜひ本家のHTML5
 BoilerplateにPull Requestを送ってくださいませ。
 
-## HTML5 Boilerplateについてもっと詳しく
+## 参考リンク {#link}
 
 - [Paul Irish on HTML5 Boilerplate @YouTube](http://www.youtube.com/watch?v=qyM37XKkmKQ)
 - [The Official Guide to HTML5 Boilerplate @Nettuts+](http://net.tutsplus.com/tutorials/html-css-techniques/the-official-guide-to-html5-boilerplate/)

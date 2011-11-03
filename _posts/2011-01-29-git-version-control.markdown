@@ -1,9 +1,21 @@
 ---
 layout: post
-title: Gitでバージョンコントロール
-published: true
+title: Git バージョンコントロール
 category: tool
+date: 2011-01-29 00:00:00
+update: 2011-11-03 17:45:45
+toc:
+- {text: バージョンコントロールについて, hash: whatis}
+- {text: Gitのインストール, hash: install}
+- {text: Gitの基本用語, hash: term}
+- {text: gitをインストールした後にやるべきこと, hash: todo}
+- {text: Gitの基本的なワークフロー, hash: workflow}
+- {text: GitのTips & Tricks, hash: tips}
+- {text: Githubの使い方, hash: github}
+- {text: 参考リンク, hash: link}
 ---
+
+## バージョンコントロールについて {#whatis}
 
 バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。  
 
@@ -17,7 +29,8 @@ HTMLであろうと、CSSであろうと、JSであろうと、何であろう�
 セットアップも簡単で、利用するのも簡単。
 あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。
 
-## Gitのインストール
+## Gitのインストール {#install}
+
 ※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。
 
 [OSX Installer for Git](http://code.google.com/p/git-osx-installer/downloads/list?can=3)から、自分のOSバージョンにあわせてdmgをダウンロード。[Winはこちら](http://code.google.com/p/msysgit/downloads/list?can=3)  
@@ -42,14 +55,14 @@ Gitはアプリケーションフォルダには*入らない*系統のアプリ
 こちら、GitをGUIで利用できるようにするアプリ達。私はTowerをテストしつつ、Macでも、Winでも使えるSmartGitをメインで利用している。どちらも日本語版はないが、基本の用語さえ覚えてしまえば問題ないだろう。
 GUIアプリをインストールしても、もう少しTerminalは開いたままに。
 
-## Gitの基本用語
+## Gitの基本用語 {#term}
 
 - *レポジトリ(Repository)* \- 更新履歴などを管理するバージョンコントロールの要になる保管庫。
 - *コミット(Commit)* \- エディタでいうならば保存に近いコミット。Gitに対して変更が完了したよ、と伝えるコマンド。コミットにはメッセージが必要で、どこをどうして変更したのか伝えることで履歴管理が可能になる
 - *クローン(Clone)* \- Gitでは0からレポジトリを作成するのも簡単だが、既存のレポジトリをクローンすることができる。多人数で開発をする際は非常に便利
 - *ブランチ(Branch)* \- メインの開発からの分岐を作成するブランチ。<q>"Git のブランチモデルは、Git の機能の中でもっともすばらしいものだという人もいるほど"</q> <cite>[Pro Git](http://progit.org/book/ja/ch3-0.html)</cite>
 
-## Gitをインストールした後にやるべきこと
+## Gitをインストールした後にやるべきこと {#todo}
 
 Terminalはまだ開いたままだろうか？  
 準備が整ったら以下のコマンドを、必要な部分は修正してから、Terminalにて実行。
@@ -118,7 +131,7 @@ Icon?
 .Trashes
 {% endhighlight %}
 
-## Gitの基本的なワークフロー
+## Gitの基本的なワークフロー {#workflow}
 
 それでは先ほど紹介した用語と、ほかのいくつかのGitのコマンドを交えながらGitの基本的なワークフローを説明しよう。
 
@@ -270,12 +283,83 @@ USERディレクトリ下に.bashrcという名前で上記を追加して保存
 
 これで、myfeatureブランチはmasterブランチへマージが完了する。
 
-ここまでできるようになれば、すっかりGitは使えるようになったといえるはずだ。  
-まだまだ奥が深いGitだが、まずは始めること。  
-githubの使いこなしや、ブランチモデルのベストプラクティスなどまだまだ楽しいトピックもあるが、今回の記事はここまで。  
-Gitについて、もっと知りたいことがあれば、[Twitter@cssradar](http://twitter.com/#!/cssradar)にてリクエストしてほしい。
+## GitのTips & Tricks {#tips}
 
-## 参考リンク
+### git alias
+
+コマンドラインの便利さはコマンドを覚えてしまえば、色々なことがコマンド1つ、あるいは2つでできてしまう、ということにつきる。  
+gitもGUIツールの利便性は否定しないが、コマンドラインから利用することにしている私。  
+少しでもタイプする文字を減らしたいので、そんな際に便利なのが``git alias``。  
+あらかじめ登録したコマンドをショートカットのように呼び出す事ができる機能だ。
+
+``git config -e --global``
+
+とすると、システムワイドで利用するgitの設定ファイル.gitconfigファイルをエディタで開ける。  
+すでに自分のメールと名前は設定済みのはずなので、ファイルに追記すれば、aliasを利用できる。
+
+6行目までは、単純によく使うコマンドを2文字に省略しただけで、  
+``lg``は[この記事](http://www.jukie.net/bart/blog/pimping-out-git-log)から拝借した。``git log``を少しセクシーにしてくれる。
+
+``fix``は私があまりにもよく繰り返すコミットしたあとでそのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う``--amend``オプションをaliasにした。  
+コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、``git add
+FILE``と追加して、``git fix``とすると、前のコミットメッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。
+
+``unstage``は``add``の反対でgitのstageに追加したくないファイルを削除してくれる。
+
+{% highlight bash %}
+[alias]
+st = status
+ci = commit
+br = branch
+co = checkout
+df = diff
+dc = diff --cached
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+fix = commit --amend -C HEAD
+unstage = reset HEAD
+{% endhighlight %}
+
+### git diff
+
+- フラグなしに``git diff``とした場合、最後のcommitと現在の状態を比較する
+- ``git diff -- <filename>``とすると、1ファイルのみを比較できる
+- ``git diff --cached``ではステージングにあるファイル群とHEAD(*)を比較する
+
+\* HEADは現在のブランチと同義だと思っていていいそうだ。([What is git head, exactly? - Stack Overflow](http://stackoverflow.com/questions/2304087/what-is-git-head-exactly))
+
+あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。  
+バージョンコントロールを初めたばかりならなおさらだろう。
+そんな時にも便利なのが``git diff``だ。
+
+もちろん、チームでの作業の場合、マスタをCommitする際に、他の人が作業した部分をレビューするのには欠かす事ができないコマンド。
+
+## Githubの使い方 {#github}
+
+### fork
+
+forkはGithub内で公開されているレポジトリを自分のレポジトリとしてコピーしてくる事を指す。  
+利用したいレポジトリを見つけたら、forkボタンをクリックすれば自分のレポジトリにコピーが完成。この時点でどんな変更を行おうとそれは自分のレポジトリ内だけで完結する。  
+その変更をオリジナルにも反映するべきという場合にはPull
+Requestをすることでオリジナルレポジトリの所有者に変更を伝える事ができる。  
+
+{% highlight bash %}
+git clone git@github.com:ユーザ名/レポジトリ名.git
+{% endhighlight %}
+
+forkしたレポジトリをローカル環境にclone。  
+ちなみにコマンドラインで上記を実行する際は自分がどのディレクトリにいるのか確認しておこう。  
+``pwd``で自分の居場所を教えてくれる。  
+レポジトリ名でディレクトリが生成されるので、
+ついでにremoteの設定をしておこう。この設定をしておけばオリジナルレポジトリで変更があった際にその変更をfetchできる。
+
+{% highlight bash %}
+cd レポジトリ名 # まずはそのディレクトリに移動
+git remote add upstream オリジナルのレポジトリのgitパス #パスはgithubのレポジトリのページにあるのでコピー
+git fetch upstream # 変更をfetch
+git merge upstream/master # 変更を自分のブランチにmergeする
+{% endhighlight %}
+
+## 参考リンク {#link}
 
 - [Pro Git](http://progit.org/book/ja/) \- オンラインでなら無料で日本語訳されたPro Gitを読むことができる。まだ私自身すべてを読み終えたわけではないが、かなり勉強になる
 - [Git cheat sheets (github)](http://help.github.com/git-cheat-sheets/) \- Githubにあるgitのチートシート

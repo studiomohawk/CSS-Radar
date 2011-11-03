@@ -1,12 +1,18 @@
 ---
-layout: changelog
-category: vim
-title: Vim - ビギナーズサバイバルガイド
-date: 2011-07-24  0:57:55
+layout: post
+category: tool
+title: Vim
+date: 2011-07-24 00:57:55
 update: 2011-07-29 23:01:04
+toc:
+- {text: はじめに, hash: preface}
+- {text: コマンド, hash: command}
+- {text: プラグイン, hash: plugin}
+- {text: 設定, hash: config}
+- {text: 参考リンク, hash: link}
 ---
 
-### Preface <span class="small">(Update: 2011/07/24)</span> {#preface}
+## はじめに {#preface}
 
 Vimにおける設定ファイルである.vimrc。  
 私のGoogleサーチによる他者の知の結晶とも言える.vimrcはgithubにあるので、参考になれば。
@@ -24,9 +30,9 @@ Vimで覚えるべきポイントは大きく分けて3つ。
 私にとってVimはフィロソフィーではなく、あくまでもツールである。  
 便利に使えるからこそのツールで、エンドユーザはその壮大な設計思想など気にする必要はない。自分のペースで自分らしく使いこなす事が真の効率化なのだから。
 
-### コマンド {#command}
+## コマンド {#command}
 
-#### ファイルを分割ウィンドウで開く <span class="small">(Update: 2011/07/29)</span>
+### ファイルを分割ウィンドウで開く
 
 高度なテキストエディタには必ずと言っていいほど存在するファイルを上下、あるいは左右で分割して表示する方法。  
 私はCSSファイルは同じ記述は繰り返さないように最大の努力をしているが、HTMLファイルは同じような記述で書けるように最大限の努力をしている。  
@@ -51,7 +57,7 @@ HTML
 コマンドが多いなと感じる事だろうが、sはsplitの略で、vはvertical
 splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ。
 
-#### 行をソートする <span class="small">(Update: 2011/07/29)</span>
+### 行をソートする
 
 - ``:'<,'>!sort``
 
@@ -69,13 +75,13 @@ splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ�
 
 私の環境では日本語に置けるソートは上手く行かないが、ユニーク行を残すことはできた。
 
-#### バッファにあるファイルを全部タブで開く <span class="small">(Update: 2011/07/24)</span>
+### バッファにあるファイルを全部タブで開く
 
 - ``:tab ball``
 
-### プラグイン {#plugin}
+## プラグイン {#plugin}
 
-#### [Tabular.vim](https://github.com/godlygeek/tabular) <span class="small">(Update: 2011/07/29)</span>
+### [Tabular.vim](https://github.com/godlygeek/tabular)
 
 Tabular.vimは``=``や、``:``のような決まった文字を基点にツラを合わせるためのプラグイン。  
 読みやすいコードを目指すあまり、書いている最中でもツラを合わせないと気が済まない人には必携だ。
@@ -120,7 +126,7 @@ Tabular.vimは``=``や、``:``のような決まった文字を基点にツラ�
 
 - [godlygeek/tabular - GitHub](https://github.com/godlygeek/tabular)
 
-#### [Gundo](http://sjl.bitbucket.org/gundo.vim/) <span class="small">(Update: 2011/07/24)</span>
+### [Gundo](http://sjl.bitbucket.org/gundo.vim/)
 
 Gundo.vimはVimの編集履歴のツリーをバージョンコントロールしたように見せてくれるプラグイン。  
 単にツリーを表示するだけではなく、そのundoの状態もプレビュできる強力なツール。  
@@ -130,7 +136,7 @@ Gundo.vimはVimの編集履歴のツリーをバージョンコントロール�
 - [Gundo - Visualize your Vim Undo Tree](http://sjl.bitbucket.org/gundo.vim/)
 - [sjl/gundo.vim - GitHub](https://github.com/sjl/gundo.vim/)
 
-#### [Pathogen](https://github.com/tpope/vim-pathogen) <span class="small">(Update: 2011/08/28)</span> 
+### [Pathogen](https://github.com/tpope/vim-pathogen)
 
 vim-pathogenはVimのプラグインをGitのsubmoduleで管理することができるプラグイン。  
 Vimのプラグイン管理は非常に面倒な作業の1つ。gitの使い方を覚えなければならないところが慣れるまでは大変かもしれないが、それだけの価値はある。
@@ -170,9 +176,9 @@ call pathogen#helptags()
 
 - [tpope/vim-pathogen - GitHub](https://github.com/tpope/vim-pathogen)
 
-### 設定 {#vimrc}
+## 設定 {#config}
 
-#### タブをFirefoxのように操る <span class="small">(Update: 2011/07/24)</span>
+### タブをFirefoxのように操る
 
 - ``Control + Tab``で次のタブへ
 - ``Control + Shift + Tab``で前のタブへ
@@ -192,7 +198,7 @@ imap <C-t> <Esc>:tabnew<CR>
 {% endhighlight %}
 
 
-### リソース <span class="small">(Update: 2011/07/29)</span> {#resource}
+## 参考リンク {#link}
 
 - [Vim Recipes](http://vim.runpaint.org/toc/)
   / 基本から応用まで非常にシンプルでミニマムなフォーマットで丁寧に解説してくれる (英語)

@@ -1,9 +1,17 @@
 ---
 layout: post
 category: tool
-title: ウェブデザイナのためのRuby入門
+title: ウェブデザイナのためのRuby
 date: 2011-05-14 00:03:59
+toc:
+- {text: Rubyはウェブデザイナに優しい, hash: rubyis}
+- {text: Rubyのインストール, hash: install}
+- {text: Ruby Gem, hash: gem}
+- {text: ウェブデザイナにおすすめのパッケージ, hash: package}
+- {text: まとめ, hash: conclusion}
 ---
+
+## Rubyはウェブデザイナに優しい {#rubyis}
 
 CSS
 Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。  
@@ -18,7 +26,7 @@ Rubyにチャレンジしている真っ最中ながら、色々な新しい概�
 なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。
 {: .small}
 
-## Rubyのインストール {#rubyinstall}
+## Rubyのインストール {#install}
 
 Mac OS
 XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。
@@ -94,7 +102,7 @@ rvm default # デフォルト設定したRubyを切り替えることも可能
 
 詳しくは[https://rvm.beginrescueend.com/](https://rvm.beginrescueend.com/)(英語)
 
-## Ruby Gem
+## Ruby Gem {#gem}
 
 RubyにはGemと呼ばれるパッケージマネージャがある。1.9系以降からはRubyの標準機能となったそうだ。  
 MacではGemも標準でインストールされていたと思うが、記憶が確かではないので確認してほしい。
@@ -121,7 +129,7 @@ gem install rake
 
 とすると、Ruby版make(ビルドツール)であるrakeをインストールできる。  
 
-## ウェブデザイナにおすすめのパッケージ
+## ウェブデザイナにおすすめのパッケージ {#package}
 
 ### CSS Sprite
 
@@ -345,7 +353,7 @@ Rakeはそれ自体ではなにもしないが、非常に強力なツール。
 Radarの癖にRakeの詳しい説明を知りたい方は、[Twitter@cssradar](http://twitter.com/#!/cssradar)にてリクエストしてほしい。  
 私も覚えたてなので、全部の質問には答えることができるかわからないが。
 
-## ウェブデザイナ/フロントエンドデベロッパのRuby
+## まとめ {#conclusion}
 
 ウェブデザイナ/フロントエンドデベロッパのタスクは多岐に渡る。  
 Adobe

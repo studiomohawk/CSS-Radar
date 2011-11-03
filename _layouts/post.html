@@ -10,12 +10,6 @@
 					<div class="head-inner">
 						<h1>{{ page.title }}</h1>
 						<div class="meta">
-							<span class="category">{{ page.categories | category_links }}</span>
-							<date class="date-pub" title="{{ page.date | date_to_xmlschema }}">
-								<span class="day">{{ page.date | date: '%d' }}</span>
-								<span class="month"><abbr>{{ page.date | date: '%b' }}</abbr></span>
-								<span class="year">{{ page.date | date: '%Y' }}</span>
-							</date>
 							{% if page.update %}
 							<date class="update-pub" title="{{ page.update }}">
 								<span class="day">{{ page.update | date: '%d' }}</span>
@@ -23,14 +17,20 @@
 								<span class="year">{{ page.update | date: '%Y' }}</span>
 							</date>
 							{% endif %}
+							<date class="date-pub" title="{{ page.date | date_to_xmlschema }}">
+								<span class="day">{{ page.date | date: '%d' }}</span>
+								<span class="month"><abbr>{{ page.date | date: '%b' }}</abbr></span>
+								<span class="year">{{ page.date | date: '%Y' }}</span>
+							</date>
+							<span class="category">{{ page.categories | category_links }}</span>
 						</div>
 					</div>
 					</header>
 					<div class="bd">
-                      {{ content }}
-                      {% include social.html %}
-                      {% include ask.html %}
-                    </div>
+						{{ content }}
+						{% include social.html %}
+						{% include ask.html %}
+					</div>
 					<footer>
 					<div class="foot-inner">
 						<nav class="pagenation left">
@@ -48,7 +48,7 @@
 						</nav>
 						<nav class="archive right">
 							<ul>
-								<li><a href="/backnumber/">Back Number</a></li>
+								<li><a href="/backnumber/">記事一覧</a></li>
 							</ul>
 						</nav>
 					</div>

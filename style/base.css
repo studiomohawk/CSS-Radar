@@ -5,7 +5,7 @@
 #main:after,
 #main .content:after,
 #main .content .bd:after,
-#main .content footer:after,
+#main footer:after,
 #foot:after {
 	clear:both;
 	display:block;
@@ -20,21 +20,21 @@
 #main,
 #main .content,
 #main .content .bd,
-#main .content footer,
+#main footer,
 #foot { zoom: 1; } /* IE6-7 */
 /* typography
 -------------------------------------------------------- */
 body {
 	font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
 	font-size: 100%;
-	line-height: 1.618; 
+	line-height: 1.618;
 }
 /* Headings
 -------------------------------------------------------- */
 h1, h2, h3, h4, h5,h6 {
 	font-weight: bold;
 }
-h1, .h1 { 
+h1, .h1 {
 	font-size:2em;
 	line-height: 1.5;
 	margin: 0.75em 0;

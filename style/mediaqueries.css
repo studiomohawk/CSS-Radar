@@ -17,6 +17,7 @@ img { max-width: 100%; }
 .hd-article,
 .content .bd,
 .foot-inner,
+.home .article-inner,
 .archive .article-inner {
 	margin: 0 auto;
 	padding-right: 60px;
@@ -45,6 +46,7 @@ img { max-width: 100%; }
 	.hd-article,
 	.content .bd,
 	.foot-inner,
+	.home .article-inner,
 	.archive .article-inner {
 		margin: 0 auto;
 		padding-left: 72px;
@@ -80,6 +82,7 @@ img { max-width: 100%; }
 	.hd-article,
 	.content .bd,
 	.foot-inner,
+	.home .article-inner,
 	.archive .article-inner {
 		margin: 0 auto;
 		padding-right: 42px;
@@ -111,6 +114,7 @@ img { max-width: 100%; }
 	.hd-article,
 	.content .bd,
 	.foot-inner,
+	.home .article-inner,
 	.archive .article-inner {
 		margin: 0 auto;
 		padding-right: 46px;

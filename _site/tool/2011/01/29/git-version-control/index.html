@@ -8,11 +8,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<link href='/assets/master.css' rel="stylesheet" media="all">
+	<link href='/style/reset.css' rel="stylesheet" media="all">
+<link href='/style/base.css' rel="stylesheet" media="all">
+<link href='/style/mod.css' rel="stylesheet" media="all">
+<link href='/style/style.css' rel="stylesheet" media="all">
+<link href='/style/syntaxhighlighter.css' rel="stylesheet" media="all">
+<link href='/style/jquery.fancybox.css' rel="stylesheet" media="all">
+<link href='/style/mediaqueries.css' rel="stylesheet" media="all">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
-	<title itemprop="name" content="Gitでバージョンコントロール | CSS Radar">Gitでバージョンコントロール | CSS Radar | For Frond End Developers</title>
-	<meta itemprop="description" name="description" content="バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。 作業用フォルダがstyle.bk20110128なんて名前であふれている なんでこの変更したのか、覚えていない。もう3ヶ月も前の話だし 誰が最新のファイル持ってるかわからないまま、作業を開始、もう1度やり直し HTMLであろうと、CSSであろうと、JSであろうと、何であろうとソースコードを人間は必ずどこかで例のような目にあうのだ。 バックアップも、更新履歴も、システムでやればいいじゃない。を解決してくれるのがGit。 セットアップも簡単で、利用するのも簡単。 あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。 Gitのインストール ※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。 OSX Installer for Gitから、自分のOSバージョンにあわせてdmgをダウンロード。Winはこちら あとはインストーラにお任せ。 私はHomebrewを使って、Gitをインストールした。 Gitはアプリケーションフォルダには入らない系統のアプリ。Terminalで使える。 Terminal(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。 では、git --version をTerminalへコピペしてみてほしい。ちゃんとインストールできていれば、 git version...">
+	<title itemprop="name" content="Git バージョンコントロール | CSS Radar">Git バージョンコントロール | CSS Radar | For Frond End Developers</title>
+	<meta itemprop="description" name="description" content="バージョンコントロールについて バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。 作業用フォルダがstyle.bk20110128なんて名前であふれている なんでこの変更したのか、覚えていない。もう3ヶ月も前の話だし 誰が最新のファイル持ってるかわからないまま、作業を開始、もう1度やり直し HTMLであろうと、CSSであろうと、JSであろうと、何であろうとソースコードを人間は必ずどこかで例のような目にあうのだ。 バックアップも、更新履歴も、システムでやればいいじゃない。を解決してくれるのがGit。 セットアップも簡単で、利用するのも簡単。 あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。 Gitのインストール ※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。 OSX Installer for Gitから、自分のOSバージョンにあわせてdmgをダウンロード。Winはこちら あとはインストーラにお任せ。 私はHomebrewを使って、Gitをインストールした。 Gitはアプリケーションフォルダには入らない系統のアプリ。Terminalで使える。 Terminal(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。 では、git --version をTerminalへコピペしてみてほしい。ちゃんとインストールできていれば、 git...">
 	
 	<script>
 	var _gaq = _gaq || [];
@@ -37,59 +43,6 @@
 		<li class="logo"><a href="/">CSS Radar</a></li>
 		<li class="tagline">For Frond End Developers</li>
 	</ul>
-	
-	<ul id="menu" class="menu right">
-		<li>Recent Articles</li>
-	</ul>
-	<nav id="backnumber" class="backnumber">
-		<ul>
-			
-		<li>
-		<h6 class="title"><a href="/tool/2011/09/10/give_something_back_to_open_source_via_github/" title="github - pull requestまでの道のり">github - pull requestまでの道のり</a></h6>
-			<date>
-				<span class="day">10</span>
-				<span class="month"><abbr>Sep</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/tool/2011/07/30/indispensable-mac-apps/" title="必携Mac OSXアプリ12">必携Mac OSXアプリ12</a></h6>
-			<date>
-				<span class="day">30</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド">Vim - ビギナーズサバイバルガイド</a></h6>
-			<date>
-				<span class="day">24</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/git/2011/07/23/git-bits-and-pieces/" title="Git - フロントエンドデベロッパのためのgit">Git - フロントエンドデベロッパのためのgit</a></h6>
-			<date>
-				<span class="day">23</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/tool/2011/06/11/jekyll-101.tool/" title="Jekyllを使ってブログをつくろう">Jekyllを使ってブログをつくろう</a></h6>
-			<date>
-				<span class="day">11</span>
-				<span class="month"><abbr>Jun</abbr></span>
-			</date> 
-		</li>
-		
-		<li class="btn">
-			<a href="/backnumber/" class="btn">Read More</a>
-		</li>
-		</ul>
-	</nav>
-	
 </div>
 </header><!-- id="head" -->
 
@@ -99,20 +52,28 @@
 				<div class="content">
 					<header>
 					<div class="head-inner">
-						<h1>Gitでバージョンコントロール</h1>
+						<h1>Git バージョンコントロール</h1>
 						<div class="meta">
-							<span class="category"><a href="/categories/tool/" class="tool" title="tool">tool</a></span>
+							
+							<date class="update-pub" title="2011-11-03 17:45:45">
+								<span class="day">03</span>
+								<span class="month"><abbr>Nov</abbr></span>
+								<span class="year">2011</span>
+							</date>
+							
 							<date class="date-pub" title="2011-01-29T00:00:00+09:00">
 								<span class="day">29</span>
 								<span class="month"><abbr>Jan</abbr></span>
 								<span class="year">2011</span>
 							</date>
-							
+							<span class="category"><a href="/categories/tool/" class="tool" title="tool">tool</a></span>
 						</div>
 					</div>
 					</header>
 					<div class="bd">
-                      <p>バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。  </p>
+						<h2 id="whatis">バージョンコントロールについて</h2>
+
+<p>バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。  </p>
 
 <ul>
   <li>作業用フォルダがstyle.bk20110128なんて名前であふれている</li>
@@ -126,7 +87,8 @@
 セットアップも簡単で、利用するのも簡単。
 あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。</p>
 
-<h2>Gitのインストール</h2>
+<h2 id="install">Gitのインストール</h2>
+
 <p>※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。</p>
 
 <p><a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3">OSX Installer for Git</a>から、自分のOSバージョンにあわせてdmgをダウンロード。<a href="http://code.google.com/p/msysgit/downloads/list?can=3">Winはこちら</a><br />
@@ -153,7 +115,7 @@
 <p>こちら、GitをGUIで利用できるようにするアプリ達。私はTowerをテストしつつ、Macでも、Winでも使えるSmartGitをメインで利用している。どちらも日本語版はないが、基本の用語さえ覚えてしまえば問題ないだろう。
 GUIアプリをインストールしても、もう少しTerminalは開いたままに。</p>
 
-<h2>Gitの基本用語</h2>
+<h2 id="term">Gitの基本用語</h2>
 
 <ul>
   <li><em>レポジトリ(Repository)</em> - 更新履歴などを管理するバージョンコントロールの要になる保管庫。</li>
@@ -162,7 +124,7 @@ GUIアプリをインストールしても、もう少しTerminalは開いたま
   <li><em>ブランチ(Branch)</em> - メインの開発からの分岐を作成するブランチ。<q>“Git のブランチモデルは、Git の機能の中でもっともすばらしいものだという人もいるほど”</q> <cite><a href="http://progit.org/book/ja/ch3-0.html">Pro Git</a></cite></li>
 </ul>
 
-<h2>Gitをインストールした後にやるべきこと</h2>
+<h2 id="todo">Gitをインストールした後にやるべきこと</h2>
 
 <p>Terminalはまだ開いたままだろうか？<br />
 準備が整ったら以下のコマンドを、必要な部分は修正してから、Terminalにて実行。</p>
@@ -239,7 +201,7 @@ Icon?
 </code></pre>
 </div>
 
-<h2>Gitの基本的なワークフロー</h2>
+<h2 id="workflow">Gitの基本的なワークフロー</h2>
 
 <p>それでは先ほど紹介した用語と、ほかのいくつかのGitのコマンドを交えながらGitの基本的なワークフローを説明しよう。</p>
 
@@ -409,12 +371,85 @@ USERディレクトリ下に.bashrcという名前で上記を追加して保存
 
 <p>これで、myfeatureブランチはmasterブランチへマージが完了する。</p>
 
-<p>ここまでできるようになれば、すっかりGitは使えるようになったといえるはずだ。<br />
-まだまだ奥が深いGitだが、まずは始めること。<br />
-githubの使いこなしや、ブランチモデルのベストプラクティスなどまだまだ楽しいトピックもあるが、今回の記事はここまで。<br />
-Gitについて、もっと知りたいことがあれば、<a href="http://twitter.com/#!/cssradar">Twitter@cssradar</a>にてリクエストしてほしい。</p>
+<h2 id="tips">GitのTips &amp; Tricks</h2>
 
-<h2>参考リンク</h2>
+<h3>git alias</h3>
+
+<p>コマンドラインの便利さはコマンドを覚えてしまえば、色々なことがコマンド1つ、あるいは2つでできてしまう、ということにつきる。<br />
+gitもGUIツールの利便性は否定しないが、コマンドラインから利用することにしている私。<br />
+少しでもタイプする文字を減らしたいので、そんな際に便利なのが<code>git alias</code>。<br />
+あらかじめ登録したコマンドをショートカットのように呼び出す事ができる機能だ。</p>
+
+<p><code>git config -e --global</code></p>
+
+<p>とすると、システムワイドで利用するgitの設定ファイル.gitconfigファイルをエディタで開ける。<br />
+すでに自分のメールと名前は設定済みのはずなので、ファイルに追記すれば、aliasを利用できる。</p>
+
+<p>6行目までは、単純によく使うコマンドを2文字に省略しただけで、<br />
+<code>lg</code>は<a href="http://www.jukie.net/bart/blog/pimping-out-git-log">この記事</a>から拝借した。<code>git log</code>を少しセクシーにしてくれる。</p>
+
+<p><code>fix</code>は私があまりにもよく繰り返すコミットしたあとでそのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う<code>--amend</code>オプションをaliasにした。<br />
+コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、<code>git add
+FILE</code>と追加して、<code>git fix</code>とすると、前のコミットメッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。</p>
+
+<p><code>unstage</code>は<code>add</code>の反対でgitのstageに追加したくないファイルを削除してくれる。</p>
+
+<div class="highlight"><pre><code class="bash"><span class="o">[</span><span class="nb">alias</span><span class="o">]</span>
+<span class="nv">st</span> <span class="o">=</span> status
+<span class="nv">ci</span> <span class="o">=</span> commit
+<span class="nv">br</span> <span class="o">=</span> branch
+<span class="nv">co</span> <span class="o">=</span> checkout
+<span class="nv">df</span> <span class="o">=</span> diff
+<span class="nv">dc</span> <span class="o">=</span> diff --cached
+<span class="nv">lg</span> <span class="o">=</span> log --graph --pretty<span class="o">=</span>format:<span class="s1">&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39;</span> --abbrev-commit --date<span class="o">=</span>relative
+<span class="nv">fix</span> <span class="o">=</span> commit --amend -C HEAD
+<span class="nv">unstage</span> <span class="o">=</span> reset HEAD
+</code></pre>
+</div>
+
+<h3>git diff</h3>
+
+<ul>
+  <li>フラグなしに<code>git diff</code>とした場合、最後のcommitと現在の状態を比較する</li>
+  <li><code>git diff -- &lt;filename&gt;</code>とすると、1ファイルのみを比較できる</li>
+  <li><code>git diff --cached</code>ではステージングにあるファイル群とHEAD(*)を比較する</li>
+</ul>
+
+<p>* HEADは現在のブランチと同義だと思っていていいそうだ。(<a href="http://stackoverflow.com/questions/2304087/what-is-git-head-exactly">What is git head, exactly? - Stack Overflow</a>)</p>
+
+<p>あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。<br />
+バージョンコントロールを初めたばかりならなおさらだろう。
+そんな時にも便利なのが<code>git diff</code>だ。</p>
+
+<p>もちろん、チームでの作業の場合、マスタをCommitする際に、他の人が作業した部分をレビューするのには欠かす事ができないコマンド。</p>
+
+<h2 id="github">Githubの使い方</h2>
+
+<h3>fork</h3>
+
+<p>forkはGithub内で公開されているレポジトリを自分のレポジトリとしてコピーしてくる事を指す。<br />
+利用したいレポジトリを見つけたら、forkボタンをクリックすれば自分のレポジトリにコピーが完成。この時点でどんな変更を行おうとそれは自分のレポジトリ内だけで完結する。<br />
+その変更をオリジナルにも反映するべきという場合にはPull
+Requestをすることでオリジナルレポジトリの所有者に変更を伝える事ができる。  </p>
+
+<div class="highlight"><pre><code class="bash">git clone git@github.com:ユーザ名/レポジトリ名.git
+</code></pre>
+</div>
+
+<p>forkしたレポジトリをローカル環境にclone。<br />
+ちなみにコマンドラインで上記を実行する際は自分がどのディレクトリにいるのか確認しておこう。<br />
+<code>pwd</code>で自分の居場所を教えてくれる。<br />
+レポジトリ名でディレクトリが生成されるので、
+ついでにremoteの設定をしておこう。この設定をしておけばオリジナルレポジトリで変更があった際にその変更をfetchできる。</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">cd</span> レポジトリ名 <span class="c"># まずはそのディレクトリに移動</span>
+git remote add upstream オリジナルのレポジトリのgitパス <span class="c">#パスはgithubのレポジトリのページにあるのでコピー</span>
+git fetch upstream <span class="c"># 変更をfetch</span>
+git merge upstream/master <span class="c"># 変更を自分のブランチにmergeする</span>
+</code></pre>
+</div>
+
+<h2 id="link">参考リンク</h2>
 
 <ul>
   <li><a href="http://progit.org/book/ja/">Pro Git</a> - オンラインでなら無料で日本語訳されたPro Gitを読むことができる。まだ私自身すべてを読み終えたわけではないが、かなり勉強になる</li>
@@ -426,36 +461,36 @@ Gitについて、もっと知りたいことがあれば、<a href="http://twit
   <li><a href="http://gitcasts.com/">GitCasts</a> - Gitのスクリーンキャスト。英語だが、グラフィカルな環境でしか覚えられない人には最適</li>
 </ul>
 
-                      <div class="social">
+						<div class="social">
 	<ul class="list-linear">
 		<li><div class="twitter"><a href="https://twitter.com/cssradar" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#00AEFF"></a></div></li>
 	</ul>
 </div>
 
-                      <div class="ask">
+						<div class="ask">
 	<h3>Ask Me Anything via E-mail</h3>
 	<p class="btn-3d"><a class="askme" href="mailto:cssradar+ask@gmail.com">質問やコメントはEメールにて cssradar+ask@gmail.com</a><small><a href="/ask/">コメントについて</a></small></p>
 </div>
 
-                    </div>
+					</div>
 					<footer>
 					<div class="foot-inner">
 						<nav class="pagenation left">
 							<ul>
 								
-								<li class="prev"><a class="internal" rel="prev"  href="/css/2011/01/24/about-responsive-web-design/" title="View レスポンシブウェブデザインについて">&laquo; レスポンシブウェブデザインについて</a></li>
+								<li class="prev"><a class="internal" rel="prev"  href="/css/2011/01/24/about-responsive-web-design/" title="View レスポンシブウェブデザイン">&laquo; レスポンシブウェブデザイン</a></li>
 								
 								
 								<li class="pipe"> | </li>
 								
 								
-								<li class="next"><a class="internal" rel="next"  href="/tool/2011/02/13/terminal-101/" title="View ターミナルを使いこなす">ターミナルを使いこなす &raquo;</a></li>
+								<li class="next"><a class="internal" rel="next"  href="/tool/2011/02/13/terminal-101/" title="View コマンドライン">コマンドライン &raquo;</a></li>
 								
 							</ul>
 						</nav>
 						<nav class="archive right">
 							<ul>
-								<li><a href="/backnumber/">Back Number</a></li>
+								<li><a href="/backnumber/">記事一覧</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -469,11 +504,13 @@ Gitについて、もっと知りたいことがあれば、<a href="http://twit
 	<div class="hasGrid">
 		<div class="left"><h4>about</h4>
 <p>
-現役フロントエンドデベロッパ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
 </p>
 <p>
-<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>で毎日紹介している記事を1週間分まとめてお届けするCSS Radar Newsletterをはじめました。<br>
-こちらから登録できます。<a href="http://tinyletter.com/cssradar">http://tinyletter.com/cssradar</a>
+記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そんな解決への私なりのベストプラクティスを集めていくのがCSS Radarの編集方針。
+</p>
+<p>
+最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。また<a href="http://tinyletter.com/cssradar">CSS Radar Newsletter</a>にて1週間分のつぶやきをまとめてメールマガジンとしてまとめています。
 </p>
 </div>
 		<div class="right"><h4>elsewhere</h4>
@@ -481,7 +518,7 @@ Gitについて、もっと知りたいことがあれば、<a href="http://twit
 	<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内のウェブデザイン情報をつぶやきます</li>
 	<li><a href="http://tinyletter.com/cssradar" rel="me" title="Newsletter">CSS Radar Newsletter</a> / CSS Radarニュースレター。Twitterまとめ + α</li>
 	<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
-	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / デザインのインスピレーション収集中、もちろん写真も</li>
+	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / 趣味は写真。Nikon D90ユーザ</li>
 	<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
 	<li><a href="http://www.layouts-the.me/" rel="me" title="_layouts - themes for jekyll">_layouts</a> / Jekyllテーマギャラリー(英語)</li>
 </ul>
@@ -498,8 +535,10 @@ Theme: <a href="https://github.com/studiomohawk/CSS-Radar">the_radar</a> created
 </footer><!-- id="foot" -->
 
 	</div><!-- id="page" -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src='/assets/master.js'></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src='/js/jquery.easing.js'></script>
+<script src='/js/jquery.fancybox.js'></script>
+<script src='/js/common.js'></script>
 
 </body>
 </html>

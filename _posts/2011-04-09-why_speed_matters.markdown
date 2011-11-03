@@ -1,9 +1,18 @@
 ---
 layout: post
+title: パフォーマンス最適化
 category: frontend
-title: ページの高速化とその方法について
 date: 2011-04-09 11:46:40
+toc:
+- {text: パフォーマンス最適化の意味, hash: whatis}
+- {text: ページのロード時間で失うモノ, hash: why}
+- {text: Steve Soudersの教え, hash: souders}
+- {text: 最適化チェックツール, hash: check}
+- {text: 最適化ツール, hash: tool}
+- {text: スピードについて, hash: aboutspeed}
 ---
+
+## パフォーマンス最適化の意味 {#whatis}
 
 ハードウェアの値段が下がり、ネットの接続環境も高速化していく。ブラウザも高速化を競い合っている。  
 それでもなお、GoogleもYahoo!、FacebookもTwitterもページのロード時間を短縮するテクニックを生み出している。
@@ -16,7 +25,7 @@ GoogleもYahoo!も世界で1位2位を争うほどすばらしいデータセン
 なんて思っていないだろうか？
 ページのロード時間の80%はフロントエンドで最適化できる。バックエンドが重要ではないとは言わないが、我々フロントエンドデベロッパのもっとも大切なタスクの1つがページの最適化。
 
-## ページのロード時間で失うモノ
+## ページのロード時間で失うモノ {#why}
 
 サイト最適化ファームのStrangeloopがMashable!に寄稿した記事、[Why Websites Are Slow &amp; Why Speed Really Matters [INFOGRAPHIC]](http://mashable.com/2011/04/06/site-speed/)
 によると、  
@@ -34,13 +43,13 @@ GoogleもYahoo!も世界で1位2位を争うほどすばらしいデータセン
 
 3クリックルールにはもう意味がないかも知れないが、3秒ルールは実際に存在する。  
 
-## Steve Soudersの教え
+## Steve Soudersの教え {#souders}
 
 元Yahoo!のパフォーマンス担当責任者であり、現在はGoogleで働くSteve Soudersの[ハイパフォーマンスWebサイト](http://www.oreilly.co.jp/books/9784873113616/)はこのトピックの中で確実に読んでおくべき本。
 彼が作り出した14のルールはYahoo!のYSlowのチェック項目にもなっているので見たことがあるはずだ。  
 GoogleのPageSpeedでも近しいチェック項目を持っているので、それぞれの項目が何を意味して、それがどうしてページロード時間の最適化につながるかについて覚えておくことをおすすめする。
 
-## 最適化チェックツール
+## 最適化チェックツール {#check}
 
 - [Yahoo! YSlow for Firebug](http://developer.yahoo.com/yslow/)
 - [Page Speed](http://code.google.com/speed/page-speed/)
@@ -58,7 +67,7 @@ GoogleのPageSpeedでも近しいチェック項目を持っているので、�
    せっかく最適化しても、結果をコンスタントなテスト環境でチェックできなければ意味がない。  
    Loads.inでは珍しく日本のサーバからのロード時間をテストしてくれる。ついでにブラウザ別の結果も見ることができるので、おすすめのオンラインツール。
 
-## 最適化ツール
+## 最適化ツール {#tool}
 
 ### CSSスプライト
 
@@ -86,14 +95,14 @@ GoogleのPageSpeedでも近しいチェック項目を持っているので、�
 Boilerplate](http://html5boilerplate.com/)のビルドスクリプトを利用することをおすすめする。  
 CSSスプライト以外はHTML5 Boilerplateのビルドスクリプトでも行える。
 
-## .htaccess(サーバ側で設定できるなら、その方がベター)
+### .htaccess(サーバ側で設定できるなら、その方がベター)
 
 - [.htaccess on HTML5 Boilerplate](https://github.com/paulirish/html5-boilerplate/blob/master/.htaccess)
 
   HTML5
   Boilerplateの.htaccessを利用するだけでYSlowのスコアが15ポイントはあがるのではないかと思うほどすばらしいファイル。
 
-## スピードについて
+## スピードについて {#aboutspeed}
 
 つい先日FireFox4がリリースされたが、Chromeのスピードには及ばない。SafariもOperaも起動速度に関してはかなり気を使っているし、ページのレンダリングに関しても同様。  
 毎日確実に利用するものだからこそ、スピードが大事。ということだろう。  

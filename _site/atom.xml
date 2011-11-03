@@ -4,324 +4,16 @@
  <title>CSS Radar | For Frond End Developers</title>
  <link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
  <link href="http://css.studiomohawk.com"/>
- <updated>2011-10-30T00:29:43+09:00</updated>
+ <updated>2011-11-03T20:53:24+09:00</updated>
  <id>http://layouts.studiomohawk.com/</id>
 
  
  <entry>
-   <title>github - pull requestまでの道のり</title>
-   <link href="http://css.studiomohawk.com/tool/2011/09/10/give_something_back_to_open_source_via_github/"/>
-   <updated>2011-09-10T20:13:00+09:00</updated>
-   <id>http://css.studiomohawk.com/tool/2011/09/10/give_something_back_to_open_source_via_github</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/studiomohawk&quot;&gt;github&lt;/a&gt;を本格的に使い始めて1年くらいだろうか。&lt;br /&gt;
-これまで&lt;a href=&quot;/tool/2011/03/15/html5boilerplate/&quot;&gt;HTML5 Boilerplate&lt;/a&gt;の翻訳以外でpull
-requestを送った事がない。&lt;br /&gt;
-今回はOctopressというプロジェクトに貢献できる機会がありそうなので、
-githubでのfork、ローカル環境でのレポジトリの編集、そしてプロジェクトへのpull
-requestまでの道のりを紹介しよう。&lt;br /&gt;
-githubの基本的な使い方はもちろんのこと、Jekyllをより便利に、簡単に利用できるフレームワークであるOctopressについても解説していく。&lt;/p&gt;
-
-&lt;h2&gt;&lt;a href=&quot;http://octopress.org/&quot;&gt;Octopress&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;このブログのエンジンでもある、&lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;(Jekyllもオープンソース)をベースに様々な拡張を行ったフレームワークがOctopress。&lt;br /&gt;
-作ったまま放置している私のJekyllのテーマ集&lt;a href=&quot;http://www.layouts-the.me/&quot;&gt;_layouts&lt;/a&gt;を、この際Octopressに乗せ変えてしまおうと思っている。  &lt;/p&gt;
-
-&lt;h2&gt;Githubでforkする&lt;/h2&gt;
-
-&lt;p&gt;githubのレポジトリはプライベートなものを除いてすべてForkすることが可能だ。&lt;/p&gt;
-
-&lt;p&gt;ここでいうforkとはgithubにあるレポジトリを自分のレポジトリとしてコピーすることだと思っていて間違いはないだろう。&lt;br /&gt;
-さすがはgithub。&lt;a href=&quot;http://help.github.com/fork-a-repo/&quot;&gt;Fork
-A Repo&lt;/a&gt;という簡潔によくまとまったヘルプページがあるので、この手順に従っていけば誰でも簡単に自分のローカル環境にレポジトリを持つ事が可能だ。&lt;/p&gt;
-
-&lt;p&gt;では早速、octopressをforkしてみよう。&lt;br /&gt;
-&lt;a href=&quot;https://github.com/imathis/octopress&quot;&gt;imathis/octopress
-- GitHub&lt;/a&gt;のページへ&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/tool/2011/09/10/give_something_back_to_open_source_via_github/fork-a-repo.png&quot; alt=&quot;Image&quot; class=&quot;huge&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Forkボタンをクリックすると&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/tool/2011/09/10/give_something_back_to_open_source_via_github/forked-a-repo.png&quot; alt=&quot;Image&quot; class=&quot;huge&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;自分のページにレポジトリがコピーされる。こうなった時点でこのレポジトリについては自分の思うがママ。ファイルを消そうと追加しようと自分のレポジトリとして扱われる。  &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;git clone git@github.com:studiomohawk/octopress.git
-&lt;span class=&quot;c&quot;&gt;#studiomohawkの部分は自分のユーザ名に差し替える&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;そして上記のコマンドを叩けば、ローカル環境にレポジトリがコピーされる。&lt;br /&gt;
-私もそうしているがgithubからコピー(clone)するレポジトリはいつも同じディレクトリにしておくと忘れる可能性が低い。&lt;br /&gt;
-私はソースコードリーディングのためにもcloneしたりするので&lt;a href=&quot;http://db.tt/2usxiol&quot;&gt;Dropbox&lt;/a&gt;にgithubというディレクトリを作ってそこにcloneすることにしている。&lt;/p&gt;
-
-&lt;h2&gt;Octopressのセットアップ&lt;/h2&gt;
-
-&lt;p&gt;Octopressのセットアップはそれほど難しくない様子。
-&lt;a href=&quot;http://octopress.org/docs/setup/&quot;&gt;このステップ&lt;/a&gt;に則って順にコマンドを叩いていけばいい。  &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm rvmrc trust &lt;span class=&quot;c&quot;&gt;# rvmの設定を承認する&lt;/span&gt;
-rvm reload &lt;span class=&quot;c&quot;&gt;# rmvをリロード&lt;/span&gt;
-gem install bundler &lt;span class=&quot;c&quot;&gt;# bundlerをインストール&lt;/span&gt;
-gem install rake &lt;span class=&quot;c&quot;&gt;# rakeをインストール&lt;/span&gt;
-bundle install &lt;span class=&quot;c&quot;&gt;# bundlerを使って必要なgemをインストール&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;そして&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rake install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;とすると、&lt;code&gt;source&lt;/code&gt;と&lt;code&gt;sass&lt;/code&gt;ディレクトリが生成される。&lt;/p&gt;
-
-&lt;p&gt;ここまでくればOctopressのデフォルトデザインを確認できる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/tool/2011/09/10/give_something_back_to_open_source_via_github/octopress-default-full.png&quot; class=&quot;fancybox&quot;&gt;&lt;img src=&quot;/tool/2011/09/10/give_something_back_to_open_source_via_github/octopress-default.png&quot; alt=&quot;Image&quot; class=&quot;huge&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rake generate
-rake preview
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Octopressのルートディレクトリで上記のコマンドを叩けばデザインを確認できる。&lt;br /&gt;
-(ダミーの記事は別途用意すること)&lt;/p&gt;
-
-&lt;h2&gt;以降のログは順次公開予定&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Octopressの設定について&lt;/li&gt;
-  &lt;li&gt;Octopressのデザインテーマの変更&lt;/li&gt;
-  &lt;li&gt;OctopressでAmazon S3にデプロイする(テーマの公開)&lt;/li&gt;
-  &lt;li&gt;githubで元のプロジェクトにpull request&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;などやりながら書いているのであくまでも予定だが、大まかに言って上記をカバーする予定。&lt;br /&gt;
-例によって質問はメール、あるいは&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;にていつでも受け付けている。&lt;/p&gt;
-
-&lt;h3&gt;参考ページ&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://help.github.com/fork-a-repo/&quot;&gt;Help.GitHub - Fork A Repo&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(2011/09/11 更新)&lt;/span&gt; &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/setup/&quot;&gt;Octopress Setup - Octopress&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(2011/09/11 更新)&lt;/span&gt; &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://octopress.org/docs/blogging/&quot;&gt;Blogging Basics - Octopress&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(2011/09/11 更新)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>必携Mac OSXアプリ12</title>
-   <link href="http://css.studiomohawk.com/tool/2011/07/30/indispensable-mac-apps/"/>
-   <updated>2011-07-30T00:13:28+09:00</updated>
-   <id>http://css.studiomohawk.com/tool/2011/07/30/indispensable-mac-apps</id>
-   <content type="html">&lt;p&gt;Windowsでも、Ubuntuでも、Macでも。これまでどんな環境でも少しでも楽になるためなら、どんな苦労も厭わないという生き方を選んだ私は数多くのアプリを愛用してきた。&lt;br /&gt;
-今の私のメイン環境はMac OSX。もちろんLionにアップグレードしたばかり。&lt;br /&gt;
-すでに知っての通り、HTML + CSS
-+ JSを駆使しながら、現役フロントエンドデベロッパ/ウェブデザイナとして生計を立ている。&lt;br /&gt;
-そんな私がどうしても手放す事ができない12のアプリを紹介する。  &lt;/p&gt;
-
-&lt;h2&gt;前段&lt;/h2&gt;
-
-&lt;p&gt;記事のための記事は書かないのがCSS
-Radarで大事にしている編集方針なので、衝突する点が多々ある記事だとは思うが、ウェブコンテンツは今まさにクリエイトからキュレートへ移行を始めている。そんな中、どんな12を選ぶのか、そしてそれらをどんな風に紹介するのかという点は私がこれまであまり触れてこなかったので、私にとっては勉強になるはず。
-今回紹介する12のアプリはよりよいアプリが見つかればサシカエられていく。この方式は最近の2記事でチャレンジした手法を取り入れる事にした。&lt;/p&gt;
-
-&lt;h2&gt;1. &lt;a href=&quot;http://www.chromium.org/getting-involved/dev-channel&quot;&gt;Google Chrome Dev&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Google ChromeのDevチャネル版が私のメインブラウザ兼開発環境。FireFox
-+ Firebugにもお世話になることは多いが、ChromeのDevelper
-Toolはかなり便利な点も多く、少しずつながら使い方も覚えてきたので、最近ではChromeを開発環境としても利用し始めた。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?gl=US&amp;amp;v=nOEw9iiopwI&quot;&gt;Google Chrome Developer Tools: 12 Tricks to Develop Quicker - YouTube&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://paulirish.com/2011/a-re-introduction-to-the-chrome-developer-tools/&quot;&gt;A Re-introduction to the Chrome Developer Tools « Paul Irish&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ChromeのDevelopmper Toolを使いこなすためにおすすめのビデオが上記。Paul
-Irishが直接解説しているのもおすすめの理由(私は彼のジョークまじりの説明が好き)。&lt;/p&gt;
-
-&lt;h2&gt;2. &lt;a href=&quot;https://github.com/b4winckler/macvim&quot;&gt;MacVim 7.3 Snapshot 61&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;/vim/2011/07/24/vim-bits-and-pieces/&quot;&gt;Vim
-- ビギナーズサバイバルガイド&lt;/a&gt;でも紹介している私のメインテキストエディタ。&lt;br /&gt;
-EspressoもCodaもイマイチ合わず、HTML + CSS
-+ JSがメインで制作する私にとってIDEは重すぎる。そこで挑戦し、今もなおその挑戦が続いているのがMacVim。会社の環境も長らく愛用したNotepad++からgvimに移行した。&lt;br /&gt;
-前述の記事でも紹介しているが、&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://vim.runpaint.org/toc/&quot;&gt;Vim Recipes&lt;/a&gt;
-/ 基本から応用まで非常にシンプルでミニマムなフォーマットで丁寧に解説してくれる(英語)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/&quot;&gt;Vimcasts - free screencasts about the text editor Vim&lt;/a&gt; / Vimのチュートリアルビデオキャスト。基本のコマンドからプラグインまで詳しく解説している(英語)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;私のレベルでは大体この2サイトで紹介されていることくらいしかできないが、それでも十分な生産性の向上があった。とっつき憎いが、覚えてしまえば離れられない、そういう種類のテキストエディタ。&lt;br /&gt;
-何よりも大きいのが、少なくとも数年は新着エディタの登場に心乱されずに済むところだろう。&lt;/p&gt;
-
-&lt;h2&gt;3. &lt;a href=&quot;http://www.alfredapp.com/&quot;&gt;Alfred Powerpack&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;アプリランチャであるAlfredは新鋭アプリと言ってもいいだろう。アプリケーションをキーワードで呼び出す(アプリの起動以外にも今は色々と機能が追加された)というシンプルなアプリ。&lt;br /&gt;
-Lionの登場でLaunchPadが新たに追加されたが、圧倒的にAlfredの方が便利。AlfredのおかげでDockに入れているアプリも最小で済んでいる。&lt;br /&gt;
-Mac App
-Storeでは無料でインストールできるが、私は£12でPowerpackを購入した。Powerpackではファイルシステムを呼び出し、ナビゲートできたり、iTune
-Mini
-Playerが追加されていたり、Terminalのコマンドすら打てたりと非常に便利なのでおすすめだ。£12はバージョンが1.0になるまでの暫定の値段らしく、先日まさに0.99のベータ版がリリースされた。&lt;br /&gt;
-この値段が設定された頃から比べるとかなり機能が追加されているので、今がまさに買い時のアプリだろう。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://alfredtips.tumblr.com/&quot;&gt;Anna's Alfred Hat Tips&lt;/a&gt;
-/ このブログでは小さなTips達をたくさん更新している。私の知らないAlfredに出会わせてくれる非常に有用なサイト&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;4. &lt;a href=&quot;http://www.smilesoftware.com/TextExpander/&quot;&gt;TextExpander&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Mac App
-Storeでも購入できるようになったTextExpander。その名の通り、あらかじめ登録したスニペットを特定のキーワードをタイプして呼び出してくれる非常に便利この上ないアプリ。 &lt;/p&gt;
-
-&lt;p&gt;メールの定型文はもちろん、CSS、HTML、JSなどのスニペット、そしてgitのコマンドなど様々な場面で利用している。&lt;br /&gt;
-AppleScriptも利用できるということで、コピーしたURLから短縮URLを発行するなんてこともできる。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;!dh&lt;/code&gt; で現在の日付と時間を呼び出したり&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;!jq&lt;/code&gt; でGoogle CDNホストのjQueryのURL入りscriptタグを呼び出したり&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;!skelton&lt;/code&gt; でよく使うHTMLのパターンを呼び出したり&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;と使い方はユーザによって千差万別の超ユーティリティアプリ。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://brettterpstra.com/code/?did=6&quot;&gt;TextExpander Snippets via Brett Terpstra&lt;/a&gt; / Brett Terpstraによる便利なTextExpander用スニペット集&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.smilesoftware.com/TextExpander/takecontrol.html&quot;&gt;TAKE CONTROL OF TEXTEXPANDER&lt;/a&gt; / Michael E. Cohenによる公式ハンドブック。$10、ebook。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;5. &lt;a href=&quot;http://www.realmacsoftware.com/littlesnapper/&quot;&gt;LittleSnapper&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;私のステルス365日プロジェクトで、&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;で展開している&lt;a href=&quot;http://flic.kr/s/aHsiYTTKK3&quot;&gt;#webdesigninspプロジェクト&lt;/a&gt;では必ず必要なスクリーンショット。&lt;br /&gt;
-これがなかなか面倒なわけだが、RealMacによるLittleSnapperのおかげで成立している。&lt;br /&gt;
-よりよいデザイナになるために、自分のためだけでも気に入ったデザインの収集はやるべきことの1つだと私は考えているが、LittleSnapperならただスクリーンショットを撮るだけではなく、iPhotoやApetureなど写真整理、編集アプリなみにタグづけを行ったりプロジェクトディレクトリを作ったりと散逸しがちなスクリーンショットを管理する点で他のスクリーンショットアプリを凌駕している。  &lt;/p&gt;
-
-&lt;p&gt;もちろん、アノテーションをつけたり、トリミングしたりと基本的な編集機能も備えているし、私のようにFlickrにアップロードするのもボタン1つ。&lt;br /&gt;
-Google
-PicasaやFacebookなどにもアップロードできたらいいなとは思うものの、精力的に開発は続いているので、近い将来それも叶うと信じている。  &lt;/p&gt;
-
-&lt;h2&gt;6. &lt;a href=&quot;http://www.iterm2.com/#/section/home&quot;&gt;iTerm2&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;私は黒い画面、ターミナルを使う事を恐れないデザイナ、どころか大体いつでも開いているので、iTerm2は必携アプリ。&lt;br /&gt;
-タブ切り替えができたり、呼び出しにもグローバルホットキーが使えたりと通常のTerminalにはない便利な機能が満載で、非常に多くの開発者も愛用している。
-あの&lt;a href=&quot;http://john.resig.usesthis.com/&quot;&gt;John Resig&lt;/a&gt;も愛用しているそうだ。  &lt;/p&gt;
-
-&lt;p&gt;iTerm2のウェブサイトにて、他にも様々なフィーチャについて&lt;a href=&quot;http://www.iterm2.com/#/section/features/split_panes&quot;&gt;画像つきで説明しているので&lt;/a&gt;、説明こそ英語だが、一見すればその機能がわかるので、1度見てみる事をおすすめする。&lt;br /&gt;
-使いやすい黒い画面を手に入れてしまうと、本当に離れられなくなるので、まだ使いこなせないな、と感じているなら是非トライしてみてほしい。&lt;/p&gt;
-
-&lt;p&gt;アプリとして数えるのもどうかと思ったバージョンコントロールツールの&lt;a href=&quot;/git/2011/07/23/git-bits-and-pieces/&quot;&gt;git&lt;/a&gt;も、&lt;a href=&quot;/tool/2011/05/14/ruby_for_designer_frontend_dev/&quot;&gt;ウェブデザイナのためのRuby入門&lt;/a&gt;で紹介した数々のツールも、このiTerm2があるからこそ使いこなせるようになってきたと言えるだろう。&lt;/p&gt;
-
-&lt;h2&gt;7. &lt;a href=&quot;http://brettterpstra.com/project/nvalt/&quot;&gt;nvALT 2&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;nvALT 2は&lt;a href=&quot;http://elasticthreads.tumblr.com/&quot;&gt;Elastic Threads (David Halter)&lt;/a&gt;と&lt;a href=&quot;http://brettterpstra.com/&quot;&gt;Brett Terpstra&lt;/a&gt;による、オープンソースのメモアプリ&lt;a href=&quot;http://notational.net/&quot;&gt;Notational Velocity&lt;/a&gt;のフォーク。先日久しぶりのアップデートがあり。nvAltはオリジナルのNotational Velocityの公式なエッジバージョンとなる発表があった。nvAltで追加された機能がNotational Velocityでも追加されるようになるそうだ。&lt;/p&gt;
-
-&lt;p&gt;シンプルインターフェイスからは想像もできない機能が豊富ながら、使っている際はまったく気にならない非常に優秀なアプリ。&lt;br /&gt;
-何か思いついたらさっと呼び出し、markdown形式でメモを取る。  &lt;/p&gt;
-
-&lt;p&gt;ブログのアイデアから、Todo、スニペットの一時保管場所として利用している。iOSで愛用している&lt;a href=&quot;http://simplenoteapp.com/&quot;&gt;Simplenote&lt;/a&gt;とも同期を取る事ができるので、外出先でもメモの読み書きが可能。&lt;br /&gt;
-私がオリジナルではなくnvAltを愛用している理由は&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;markdown形式で書いたメモのプレビュ機能&lt;/li&gt;
-  &lt;li&gt;ノート間のリンク&lt;/li&gt;
-  &lt;li&gt;ノートの最大幅を決めてリーダビリティを向上&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;この3点が主な理由。今回のアップデートでSafari/Chromeのextensionも登場し、ブラウザからnvAltへの文字の移動が楽になった。 &lt;/p&gt;
-
-&lt;p&gt;保存されるノートは単純な.txtファイルなので、Dropboxを使った他デバイスとの同期も簡単。&lt;/p&gt;
-
-&lt;h2&gt;8. &lt;a href=&quot;http://db.tt/2usxiol&quot;&gt;Dropbox&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;もはやあまりにも有名で説明の必要がないファイル同期アプリのDropbox。その機能自体も魅力的だが、現時点ではデファクトアプリとなっているので、他アプリとの連携が魅力になっている。&lt;br /&gt;
-私は現在50GBプランを利用して、大体60%くらい使い切っている。なんでもDropboxに放り込む癖があるからだ。 &lt;/p&gt;
-
-&lt;p&gt;100GBプランへの移行も検討しているが、そこそこいい値段なので、残り必要なストレージはAmazon
-S3を&lt;a href=&quot;http://www.expandrive.com/&quot;&gt;ExpanDrive&lt;/a&gt;から利用する実験を行っている。&lt;/p&gt;
-
-&lt;p&gt;最近Dropboxのセキュリティについて疑問視する記事が散見されたが、もともと他人に見てほしくないファイルを他者に託すこと自体に疑問があるので、私にはあまり影響がない。  &lt;/p&gt;
-
-&lt;h2&gt;9. &lt;a href=&quot;http://www.apple.com/aperture/&quot;&gt;Aperture&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;私の趣味はデザインとコーディング。&lt;br /&gt;
-少し変わった趣味なので(仕事でもある)、数年前に始めた趣味が写真。下手の横好きのレベルを脱さないが、驚くほどデザインの勉強にもなる写真の趣味に欠かす事ができないのが、Aperture。&lt;br /&gt;
-私はどうしてもAdobeのプロダクトが好きになれないので、同系アプリのLightroomではなくApertureを愛用している。&lt;/p&gt;
-
-&lt;p&gt;Apertureはプロ用アプリでありかつ、iPhotoレベルのシンプルさをキープし続けるというすばらしいコンセプトの元、開発されている。  &lt;/p&gt;
-
-&lt;p&gt;レタッチはもちろん、写真の整理、選定も非常にやりやすく、FlickrやFacebookへのアップロードも簡単にできるし、デファクトスタンダードなアプリなだけあって多くのサードパーティプラグインも存在する。&lt;br /&gt;
-写真は撮るものではなくて作るもの、というフィロソフィーの元、私はRawで撮った写真を必ずJpegへ現像するポストプロダクションを行うので、本当になくてはならない存在。  &lt;/p&gt;
-
-&lt;p&gt;写真を大量に撮るので容量が心配だったので、外付けのHDDで作業をしているが、この状態だとAppertureのよい点が十分に引き出せないということが最近わかったので、別のワークフローを考え中。&lt;br /&gt;
-おそらく一旦スクラッチ的な場所をローカルで持って、レタッチ、現像などの処理を行い、終わったら外付けHDDへエクスポートする、というのが理想のようだ。&lt;br /&gt;
-この一連の作業もそれほど面倒にならない点はすばらしい。&lt;/p&gt;
-
-&lt;p&gt;大した写真ではないが、私がどんな写真を撮っているか気になる方は、&lt;a href=&quot;http://www.flickr.com/photos/studiomohawk/&quot;&gt;Flickr&lt;/a&gt;まで。&lt;/p&gt;
-
-&lt;h2&gt;10. &lt;a href=&quot;https://github.com/fikovnik/ShiftIt&quot;&gt;ShiftIt&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;限りあるスクリーンの中でどのようにウィンドウを管理していくかは生産性向上には欠かせない問題。&lt;br /&gt;
-様々なアプリを試してみたが、Mac上でもっとも優秀なウィンドウ管理アプリはShiftIt。  &lt;/p&gt;
-
-&lt;p&gt;キーボードショートカットにより、モニター一杯にウィンドウを配置するフルスクリーンから、上下、左右半分、1/4など様々なサイズと位置にウィンドウを配置、リサイズしてくれる。&lt;br /&gt;
-私は昔から2モニタの愛好者で、いまでもそうだが、モニタのサイズの大型化とその値段の減少により、最近では1つのモニタでウィンドウ管理するほうが生産性は向上するという見解も見かけるようになってきた。&lt;br /&gt;
-確かに複数モニタは金銭的にも、またなにより、置き場所に結構困ることが多いはずなので、シングルモニタ
-+ ウィンドウ管理のほうがその点でも優れていると言える。  &lt;/p&gt;
-
-&lt;p&gt;いつも使っているというわけではないが自然にショートカットキーを叩けるようになってきたので、これがないと困るレベルまで使いこなしてきた。&lt;br /&gt;
-地味なアプリながら必携と言わざる得ないだろう。  &lt;/p&gt;
-
-&lt;p&gt;なお、ShiftItは自分でコンパイルする必要があるが、Snow
-Leopard移行であればXCodeからコンパイルできるし、コンパイル用のスクリプトも用意されているので、コマンドからそのスクリプトを実行すればあとは自動で処理されるので、難しい事は何もない。
-Lion環境で利用しているが、今のところ問題ない。作者もLionへ移行したそうなので、なにかあれば対応すると言っていた。&lt;/p&gt;
-
-&lt;h2&gt;11. &lt;a href=&quot;http://balsamiq.com/&quot;&gt;Balsamiq&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;/webdesign/2011/04/01/wireframe/&quot;&gt;ワイヤフレーム&lt;/a&gt;の記事でも紹介したBalsamiq。
-Adobe
-Airアプリで、もちろんクロスブラウザ。個人プロジェクトでも、会社の仕事でも必ず使うし、デザインのプロセスのなかで一番楽しいのがワイヤフレームな私のお気に入り。&lt;br /&gt;
-$79は少し高いかなと感じることだろうが、まず間違いなく損はしない。
-精力的にアップデートはかかるし、何よりもアイデアを取り出すためのツールとしてのワイヤフレームの価値を十二分に理解したチームが開発にあたっているので、とにかく使いやすい。&lt;/p&gt;
-
-&lt;p&gt;私はBalsamiqを使ってワイヤフレームだけではなく、図解付きのドキュメントを作ったり、サイトマップを作ったり、ワークフローを書いたりもしている。&lt;br /&gt;
-手書き感溢れるワイヤフレームは多くのフィードバックを得やすく、そのフィードバックを反映することもストレスなしでできるので、使っているのがとても楽しい。 &lt;/p&gt;
-
-&lt;p&gt;ワイヤフレームをイテレートして改善していき、よりよいプロダクトの最終系が見えてくる時間こそ、デザイナとして仕事つづけるモチベーションにつながる。&lt;br /&gt;
-メニューなどは英語だが、おそらくアレルギさえなければ問題なく使えるだろう。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.balsamiq.com/ux/&quot;&gt;Balsamiq UX Blog&lt;/a&gt;
-/ BalsamiqチームのUXDがUXを通してBalsamiqでの表現方法などを教えてくれる。Balsamiqを使ってなくても十分役に立つ情報&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;12. &lt;a href=&quot;http://sparrowmailapp.com/&quot;&gt;Sparrow&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Macのデフォルトメールアプリ、mailを1度も使った事がないが、Gmailが個人でも会社でもメールプロバイダである私に取ってはSparrowの存在があるからこそ。  &lt;/p&gt;
-
-&lt;p&gt;非常にシンプルにデザインされ、Gmailの読み書きに関してはブラウザ版よりこちらの方が邪魔にならなくて済む。私のようにブラウザが開発環境であるフロントエンドな人間はGmailにタブを奪われ、メモリを奪われることほど生産性が低下することはない。&lt;br /&gt;
-最近のアップデートにより、ラベルを表示するサイドバーや複数アカウントを一気に管理できるUnifiled
-Inboxという機能も追加され、使い勝手はさらに向上した。  &lt;/p&gt;
-
-&lt;p&gt;非常によくデザインされたアプリで、使っていて気持ちがいい。この1年以内に公開されたアプリながら多くのユーザを獲得したのも十分理解できる。&lt;br /&gt;
-現在ではMac App Storeからも購入できる。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://sparrowtips.tumblr.com/&quot;&gt;Sparrowtips&lt;/a&gt;
-/ オフィシャルTipsブログ。Sparrowの多くの機能をわかりやすく紹介しているので、購入の際の参考と勢い余って購入してしまった後の使いこなしの参考に&lt;/li&gt;
-&lt;/ul&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Vim - ビギナーズサバイバルガイド</title>
-   <link href="http://css.studiomohawk.com/vim/2011/07/24/vim-bits-and-pieces/"/>
+   <title>Vim</title>
+   <link href="http://css.studiomohawk.com/tool/2011/07/24/vim-bits-and-pieces/"/>
    <updated>2011-07-24T00:57:55+09:00</updated>
-   <id>http://css.studiomohawk.com/vim/2011/07/24/vim-bits-and-pieces</id>
-   <content type="html">&lt;h3 id=&quot;preface&quot;&gt;Preface &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h3&gt;
+   <id>http://css.studiomohawk.com/tool/2011/07/24/vim-bits-and-pieces</id>
+   <content type="html">&lt;h2 id=&quot;preface&quot;&gt;はじめに&lt;/h2&gt;
 
 &lt;p&gt;Vimにおける設定ファイルである.vimrc。&lt;br /&gt;
 私のGoogleサーチによる他者の知の結晶とも言える.vimrcはgithubにあるので、参考になれば。&lt;/p&gt;
@@ -341,9 +33,9 @@ Inboxという機能も追加され、使い勝手はさらに向上した。  &
 &lt;p&gt;私にとってVimはフィロソフィーではなく、あくまでもツールである。&lt;br /&gt;
 便利に使えるからこそのツールで、エンドユーザはその壮大な設計思想など気にする必要はない。自分のペースで自分らしく使いこなす事が真の効率化なのだから。&lt;/p&gt;
 
-&lt;h3 id=&quot;command&quot;&gt;コマンド&lt;/h3&gt;
+&lt;h2 id=&quot;command&quot;&gt;コマンド&lt;/h2&gt;
 
-&lt;h4&gt;ファイルを分割ウィンドウで開く &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/29)&lt;/span&gt;&lt;/h4&gt;
+&lt;h3&gt;ファイルを分割ウィンドウで開く&lt;/h3&gt;
 
 &lt;p&gt;高度なテキストエディタには必ずと言っていいほど存在するファイルを上下、あるいは左右で分割して表示する方法。&lt;br /&gt;
 私はCSSファイルは同じ記述は繰り返さないように最大の努力をしているが、HTMLファイルは同じような記述で書けるように最大限の努力をしている。&lt;br /&gt;
@@ -374,7 +66,7 @@ Inboxという機能も追加され、使い勝手はさらに向上した。  &
 &lt;p&gt;コマンドが多いなと感じる事だろうが、sはsplitの略で、vはvertical
 splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ。&lt;/p&gt;
 
-&lt;h4&gt;行をソートする &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/29)&lt;/span&gt;&lt;/h4&gt;
+&lt;h3&gt;行をソートする&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code&gt;:'&amp;lt;,'&amp;gt;!sort&lt;/code&gt;&lt;/li&gt;
@@ -398,15 +90,15 @@ splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ�
 
 &lt;p&gt;私の環境では日本語に置けるソートは上手く行かないが、ユニーク行を残すことはできた。&lt;/p&gt;
 
-&lt;h4&gt;バッファにあるファイルを全部タブで開く &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h4&gt;
+&lt;h3&gt;バッファにあるファイルを全部タブで開く&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code&gt;:tab ball&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;plugin&quot;&gt;プラグイン&lt;/h3&gt;
+&lt;h2 id=&quot;plugin&quot;&gt;プラグイン&lt;/h2&gt;
 
-&lt;h4&gt;&lt;a href=&quot;https://github.com/godlygeek/tabular&quot;&gt;Tabular.vim&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/29)&lt;/span&gt;&lt;/h4&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/godlygeek/tabular&quot;&gt;Tabular.vim&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Tabular.vimは&lt;code&gt;=&lt;/code&gt;や、&lt;code&gt;:&lt;/code&gt;のような決まった文字を基点にツラを合わせるためのプラグイン。&lt;br /&gt;
 読みやすいコードを目指すあまり、書いている最中でもツラを合わせないと気が済まない人には必携だ。&lt;/p&gt;
@@ -455,7 +147,7 @@ splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ�
   &lt;li&gt;&lt;a href=&quot;https://github.com/godlygeek/tabular&quot;&gt;godlygeek/tabular - GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4&gt;&lt;a href=&quot;http://sjl.bitbucket.org/gundo.vim/&quot;&gt;Gundo&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h4&gt;
+&lt;h3&gt;&lt;a href=&quot;http://sjl.bitbucket.org/gundo.vim/&quot;&gt;Gundo&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Gundo.vimはVimの編集履歴のツリーをバージョンコントロールしたように見せてくれるプラグイン。&lt;br /&gt;
 単にツリーを表示するだけではなく、そのundoの状態もプレビュできる強力なツール。  &lt;/p&gt;
@@ -467,7 +159,7 @@ splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ�
   &lt;li&gt;&lt;a href=&quot;https://github.com/sjl/gundo.vim/&quot;&gt;sjl/gundo.vim - GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;Pathogen&lt;/a&gt; &lt;span class=&quot;small&quot;&gt;(Update: 2011/08/28)&lt;/span&gt;&lt;/h4&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;Pathogen&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;vim-pathogenはVimのプラグインをGitのsubmoduleで管理することができるプラグイン。&lt;br /&gt;
 Vimのプラグイン管理は非常に面倒な作業の1つ。gitの使い方を覚えなければならないところが慣れるまでは大変かもしれないが、それだけの価値はある。&lt;/p&gt;
@@ -509,9 +201,9 @@ git submodule sync
   &lt;li&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;tpope/vim-pathogen - GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;vimrc&quot;&gt;設定&lt;/h3&gt;
+&lt;h2 id=&quot;config&quot;&gt;設定&lt;/h2&gt;
 
-&lt;h4&gt;タブをFirefoxのように操る &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/24)&lt;/span&gt;&lt;/h4&gt;
+&lt;h3&gt;タブをFirefoxのように操る&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;code&gt;Control + Tab&lt;/code&gt;で次のタブへ&lt;/li&gt;
@@ -532,7 +224,7 @@ imap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;resource&quot;&gt;リソース &lt;span class=&quot;small&quot;&gt;(Update: 2011/07/29)&lt;/span&gt;&lt;/h3&gt;
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://vim.runpaint.org/toc/&quot;&gt;Vim Recipes&lt;/a&gt;
@@ -545,94 +237,13 @@ imap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;
  </entry>
  
  <entry>
-   <title>Git - フロントエンドデベロッパのためのgit</title>
-   <link href="http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces/"/>
-   <updated>2011-07-23T12:34:42+09:00</updated>
-   <id>http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces</id>
-   <content type="html">&lt;h3 id=&quot;github&quot;&gt;Githubを使う - 2011/10/30&lt;/h3&gt;
-
-&lt;h3&gt;fork&lt;/h3&gt;
-
-&lt;p&gt;forkはGithub内で公開されているレポジトリを自分のレポジトリとしてコピーしてくる事を指す。&lt;br /&gt;
-利用したいレポジトリを見つけたら、forkボタンをクリックすれば自分のレポジトリにコピーが完成。この時点でどんな変更を行おうとそれは自分のレポジトリ内だけで完結する。&lt;br /&gt;
-その変更をオリジナルにも反映するべきという場合にはPull
-Requestをすることでオリジナルレポジトリの所有者に変更を伝える事ができる。  &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git clone git@github.com:ユーザ名/レポジトリ名.git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;forkしたレポジトリをローカル環境にclone。&lt;br /&gt;
-ちなみにコマンドラインで上記を実行する際は自分がどのディレクトリにいるのか確認しておこう。&lt;br /&gt;
-&lt;code&gt;pwd&lt;/code&gt;で自分の居場所を教えてくれる。&lt;br /&gt;
-レポジトリ名でディレクトリが生成されるので、
-ついでにremoteの設定をしておこう。この設定をしておけばオリジナルレポジトリで変更があった際にその変更をfetchできる。&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; レポジトリ名 &lt;span class=&quot;c&quot;&gt;# まずはそのディレクトリに移動&lt;/span&gt;
-git remote add upstream オリジナルのレポジトリのgitパス &lt;span class=&quot;c&quot;&gt;#パスはgithubのレポジトリのページにあるのでコピー&lt;/span&gt;
-git fetch upstream &lt;span class=&quot;c&quot;&gt;# 変更をfetch&lt;/span&gt;
-git merge upstream/master &lt;span class=&quot;c&quot;&gt;# 変更を自分のブランチにmergeする&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;gitalias&quot;&gt;git alias - 2011/10/30&lt;/h3&gt;
-
-&lt;p&gt;コマンドラインの便利さはコマンドを覚えてしまえば、色々なことがコマンド1つ、あるいは2つでできてしまう、ということにつきる。&lt;br /&gt;
-gitもGUIツールの利便性は否定しないが、コマンドラインから利用することにしている私。&lt;br /&gt;
-少しでもタイプする文字を減らしたいので、そんな際に便利なのが&lt;code&gt;git alias&lt;/code&gt;。&lt;br /&gt;
-あらかじめ登録したコマンドをショートカットのように呼び出す事ができる機能だ。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;git config -e --global&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;とすると、システムワイドで利用するgitの設定ファイル.gitconfigファイルをエディタで開ける。&lt;br /&gt;
-すでに自分のメールと名前は設定済みのはずなので、ファイルに追記すれば、aliasを利用できる。&lt;/p&gt;
-
-&lt;p&gt;6行目までは、単純によく使うコマンドを2文字に省略しただけで、&lt;br /&gt;
-&lt;code&gt;lg&lt;/code&gt;は&lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;この記事&lt;/a&gt;から拝借した。&lt;code&gt;git log&lt;/code&gt;を少しセクシーにしてくれる。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;fix&lt;/code&gt;は私があまりにもよく繰り返すコミットしたあとでそのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う&lt;code&gt;--amend&lt;/code&gt;オプションをaliasにした。&lt;br /&gt;
-コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、&lt;code&gt;git add
-FILE&lt;/code&gt;と追加して、&lt;code&gt;git fix&lt;/code&gt;とすると、前のコミットメッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;unstage&lt;/code&gt;は&lt;code&gt;add&lt;/code&gt;の反対でgitのstageに追加したくないファイルを削除してくれる。&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; status
-&lt;span class=&quot;nv&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit
-&lt;span class=&quot;nv&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; branch
-&lt;span class=&quot;nv&quot;&gt;co&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; checkout
-&lt;span class=&quot;nv&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff
-&lt;span class=&quot;nv&quot;&gt;dc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff --cached
-&lt;span class=&quot;nv&quot;&gt;lg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --graph --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s1&quot;&gt;&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39;&lt;/span&gt; --abbrev-commit --date&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;relative
-&lt;span class=&quot;nv&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit --amend -C HEAD
-&lt;span class=&quot;nv&quot;&gt;unstage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; reset HEAD
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;gitdiff&quot;&gt;git diff - 2011/07/23&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;フラグなしに&lt;code&gt;git diff&lt;/code&gt;とした場合、最後のcommitと現在の状態を比較する&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;git diff -- &amp;lt;filename&amp;gt;&lt;/code&gt;とすると、1ファイルのみを比較できる&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;git diff --cached&lt;/code&gt;ではステージングにあるファイル群とHEAD(*)を比較する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;* HEADは現在のブランチと同義だと思っていていいそうだ。(&lt;a href=&quot;http://stackoverflow.com/questions/2304087/what-is-git-head-exactly&quot;&gt;What is git head, exactly? - Stack Overflow&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。&lt;br /&gt;
-バージョンコントロールを初めたばかりならなおさらだろう。
-そんな時にも便利なのが&lt;code&gt;git diff&lt;/code&gt;だ。&lt;/p&gt;
-
-&lt;p&gt;もちろん、チームでの作業の場合、マスタをCommitする際に、他の人が作業した部分をレビューするのには欠かす事ができないコマンド。&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Jekyllを使ってブログをつくろう</title>
+   <title>Jekyll</title>
    <link href="http://css.studiomohawk.com/tool/2011/06/11/jekyll-101.tool/"/>
    <updated>2011-06-11T13:39:28+09:00</updated>
    <id>http://css.studiomohawk.com/tool/2011/06/11/jekyll-101.tool</id>
-   <content type="html">&lt;p&gt;Amazon S3にて静的ファイルによるウェブサイトを構築できるようになり、Amazon Web
+   <content type="html">&lt;h2 id=&quot;whatis&quot;&gt;Jekyllとは&lt;/h2&gt;
+
+&lt;p&gt;Amazon S3にて静的ファイルによるウェブサイトを構築できるようになり、Amazon Web
 Serviceが日本リージョンを追加したことで、これからJekyllのような静的ファイルジェネレータを使ったブログが日本でも増えるのではないか。  &lt;/p&gt;
 
 &lt;p&gt;Jekyllといえば、このCSS
@@ -642,10 +253,10 @@ Radarも今年1月からwordpressを離れ、Jekyllを使ってブログを構�
 &lt;p&gt;Amazon Web Service勉強会でも、JekyllとAmazon S3についての発表があった。(&lt;a href=&quot;http://www.ustream.tv/recorded/14269210&quot;&gt;usteam&lt;/a&gt;)&lt;br /&gt;
 そこで、今回はRubyでも、コマンドラインでも初心者である私でもつくれるようになったJekyllについて紹介しよう。&lt;/p&gt;
 
-&lt;h2&gt;開発環境の準備&lt;/h2&gt;
+&lt;h2 id=&quot;prepare&quot;&gt;開発環境の準備&lt;/h2&gt;
 
 &lt;p&gt;JekyllはRubyで作成されているので、当然ながらRubyが必要。&lt;br /&gt;
-Rubyの導入については、&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/&quot;&gt;ウェブデザイナのためのRuby入門&lt;/a&gt;を参考にしてほしい。&lt;/p&gt;
+Rubyの導入については、&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/&quot;&gt;ウェブデザイナのためのRuby&lt;/a&gt;を参考にしてほしい。&lt;/p&gt;
 
 &lt;p&gt;Rubyの準備ができたら、&lt;/p&gt;
 
@@ -670,7 +281,7 @@ Homebrewを使っているなら、インストールは簡単。&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h2&gt;基本フォルダ/ファイル構造と記事の作成&lt;/h2&gt;
+&lt;h2 id=&quot;structire&quot;&gt;基本フォルダ/ファイル構造と記事の作成&lt;/h2&gt;
 
 &lt;h3&gt;基本フォルダとファイルの準備&lt;/h3&gt;
 
@@ -717,7 +328,7 @@ categoryにはカテゴリ、titleにはもちろんタイトル、そしてdate
 ここで必須になるのは、layoutとtitleの2ヶ所のみとなり、YAML front
 matterで設定した項目は、記事であればその記事内のテンプレート定義ファイル内の変数として利用することが可能。&lt;/p&gt;
 
-&lt;h2&gt;テンプレートの作成&lt;/h2&gt;
+&lt;h2 id=&quot;template&quot;&gt;テンプレートの作成&lt;/h2&gt;
 
 &lt;p&gt;それではテンプレートの作成について見てみよう。&lt;/p&gt;
 
@@ -736,7 +347,7 @@ matterとして記述するという点と、後述するLiquidというテン�
 私が公開しているJekyll用テーマファイル、&lt;a href=&quot;https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_layouts/post.html&quot;&gt;the_minimumの記事用レイアウトファイル&lt;/a&gt;を見ながら、
 次項を読んでほしい。&lt;/p&gt;
 
-&lt;h2&gt;Liquidについて&lt;/h2&gt;
+&lt;h2 id=&quot;liquid&quot;&gt;Liquidについて&lt;/h2&gt;
 
 &lt;p&gt;Liquidは非常にシンプルなテンプレートエンジンで、これまでwordpressに慣れてきた場合は少し物足りなく感じるかもしれないが、その代わり覚えるのは簡単。
 Liquidで利用できるタグについては、&lt;a href=&quot;https://github.com/tobi/liquid/wiki/liquid-for-designers&quot;&gt;こちら&lt;/a&gt;を参考に、&lt;br /&gt;
@@ -753,7 +364,7 @@ Liquidで利用できるタグについては、&lt;a href=&quot;https://github.
 &lt;p&gt;インクルードはメンテナンスのために覚えておきたいタグで、&lt;br /&gt;
 オフィシャルページにもあまり説明のないページネーションについてはもっともシンプルな例ながら、利用できるタグについてはほぼ網羅しているので、カスタマイズする際の参考になれば。&lt;/p&gt;
 
-&lt;h2&gt;_config.ymlの設定&lt;/h2&gt;
+&lt;h2 id=&quot;config&quot;&gt;_config.ymlの設定&lt;/h2&gt;
 
 &lt;p&gt;ここで利用できる値はほぼ無限にあるものの、まずはオフィシャルを参考にしてほしい。
 &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Configuration&quot;&gt;https://github.com/mojombo/jekyll/wiki/Configuration&lt;/a&gt;&lt;/p&gt;
@@ -773,7 +384,7 @@ Analytics用IDを格納する&lt;code&gt;ga&lt;/code&gt;を呼び出す場合は
 &lt;p&gt;というように呼び出す事が可能。&lt;br /&gt;
 コンスタントに利用する値、他には例えばサイトのURLやサイト自体のタイトルなどを設定しておくと管理が非常に楽になるはずだ。&lt;/p&gt;
 
-&lt;h2&gt;ページの作り方&lt;/h2&gt;
+&lt;h2 id=&quot;page&quot;&gt;ページの作り方&lt;/h2&gt;
 
 &lt;p&gt;wordpressでは単一ページを作成し、aboutページなどを作成してきたという人もいることだろう。&lt;br /&gt;
 Jekyllでも単一ページを作成することが可能。&lt;/p&gt;
@@ -787,14 +398,14 @@ Jekyllでも単一ページを作成することが可能。&lt;/p&gt;
   &lt;li&gt;少しトリッキーながらフィードファイルも生成できる &lt;a href=&quot;https://github.com/studiomohawk/CSS-Radar/blob/master/atom.xml&quot;&gt;atom.xml&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;基本以外のフォルダについて&lt;/h2&gt;
+&lt;h2 id=&quot;otherdir&quot;&gt;基本以外のフォルダについて&lt;/h2&gt;
 
 &lt;p&gt;Jekyllでは&lt;code&gt;\_layouts&lt;/code&gt;、&lt;code&gt;\_posts&lt;/code&gt;、&lt;code&gt;_site&lt;/code&gt;のみが必須のフォルダと先ほど書いたが、Liquidの説明部分で書いたようにインクルードファイルを格納する、&lt;code&gt;_include&lt;/code&gt;フォルダや、Jekyllに拡張機能を追加するための、&lt;code&gt;_plugins&lt;/code&gt;フォルダを作成することができる。アンダーバーがフォルダ名の頭にある場合、Jekyllはそれらをシステムファイルとして扱い、プロセスの際にそれらフォルダも見に行くようになっている。  &lt;/p&gt;
 
 &lt;p&gt;アンダーバーがついていないフォルダはJekyllとしては何の処理もしないが、きちんと&lt;code&gt;\_site&lt;/code&gt;フォルダへ移動してくれる。&lt;br /&gt;
 なので、CSSやJavascript、そして画像などを格納するフォルダを、それぞれ、&lt;code&gt;style&lt;/code&gt;、&lt;code&gt;script&lt;/code&gt;、&lt;code&gt;image&lt;/code&gt;というようにして、ファイルを格納しておこう。&lt;/p&gt;
 
-&lt;h2&gt;ローカル環境でプレビュー&lt;/h2&gt;
+&lt;h2 id=&quot;preview&quot;&gt;ローカル環境でプレビュー&lt;/h2&gt;
 
 &lt;p&gt;このチュートリアル中に新たにデザインを作成し、Jekyll用にコーディングを完成するのは難しいと思うので、ここから先はすでに作成した私のthe_minimumをダウンロードしてから実践して見てほしい。&lt;/p&gt;
 
@@ -820,7 +431,7 @@ Jekyllでも単一ページを作成することが可能。&lt;/p&gt;
 &lt;p&gt;Jekyllは非常に強力なのに、シンプルで、インクルードなど便利な機能もついてくるので使い方を工夫すればすばらしいプロトタイプ作成ツールにもなるのではないかと思って、ベースとなるテンプレートを鋭意作成中。
 話は少しそれたが、思っていた以上に簡単だったのではないだろうか？&lt;/p&gt;
 
-&lt;h2&gt;サーバへのアップロード&lt;/h2&gt;
+&lt;h2 id=&quot;upload&quot;&gt;サーバへのアップロード&lt;/h2&gt;
 
 &lt;p&gt;サーバへのアップロードはとても簡単。&lt;br /&gt;
 FTPを使って、&lt;code&gt;\_site&lt;/code&gt;内に生成されたファイル群をアップロードすればOK。  &lt;/p&gt;
@@ -831,7 +442,7 @@ FTPを使って、&lt;code&gt;\_site&lt;/code&gt;内に生成されたファイ�
 
 &lt;p&gt;美しさの保証はまったくしないが、&lt;a href=&quot;https://github.com/studiomohawk/CSS-Radar/blob/master/Rakefile&quot;&gt;Rakefileも公開してある&lt;/a&gt;ので参考になれば。&lt;/p&gt;
 
-&lt;h2&gt;最後に&lt;/h2&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;最後に&lt;/h2&gt;
 
 &lt;p&gt;Jekyllを使ってみようと思ったきっかけは、Rubyの勉強になるだろうという単純な動機からだったが、今となってはwordpressより手軽で、ページロードのスピードも格段に早く、セキュリティの心配もまったくせずに済む、この環境が気に入っている。&lt;br /&gt;
 もちろん、覚えなければならないことも多いし、バージョンが0.10という若い番号なだけに、きちんとしたドキュメントすら整備されていない。&lt;br /&gt;
@@ -845,11 +456,13 @@ FTPを使って、&lt;code&gt;\_site&lt;/code&gt;内に生成されたファイ�
  </entry>
  
  <entry>
-   <title>ウェブデザイナのためのRuby入門</title>
+   <title>ウェブデザイナのためのRuby</title>
    <link href="http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/"/>
    <updated>2011-05-14T00:03:59+09:00</updated>
    <id>http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev</id>
-   <content type="html">&lt;p&gt;CSS
+   <content type="html">&lt;h2 id=&quot;rubyis&quot;&gt;Rubyはウェブデザイナに優しい&lt;/h2&gt;
+
+&lt;p&gt;CSS
 Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。&lt;br /&gt;
 今回はCSSやデザインからはほど遠いように思えるRubyについて。&lt;br /&gt;
 前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。
@@ -861,7 +474,7 @@ Rubyにチャレンジしている真っ最中ながら、色々な新しい概�
 &lt;p class=&quot;small&quot;&gt;*私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。&lt;br /&gt;
 なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。&lt;/p&gt;
 
-&lt;h2 id=&quot;rubyinstall&quot;&gt;Rubyのインストール&lt;/h2&gt;
+&lt;h2 id=&quot;install&quot;&gt;Rubyのインストール&lt;/h2&gt;
 
 &lt;p&gt;Mac OS
 XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。&lt;/p&gt;
@@ -937,7 +550,7 @@ rvm default &lt;span class=&quot;c&quot;&gt;# デフォルト設定したRubyを
 
 &lt;p&gt;詳しくは&lt;a href=&quot;https://rvm.beginrescueend.com/&quot;&gt;https://rvm.beginrescueend.com/&lt;/a&gt;(英語)&lt;/p&gt;
 
-&lt;h2&gt;Ruby Gem&lt;/h2&gt;
+&lt;h2 id=&quot;gem&quot;&gt;Ruby Gem&lt;/h2&gt;
 
 &lt;p&gt;RubyにはGemと呼ばれるパッケージマネージャがある。1.9系以降からはRubyの標準機能となったそうだ。&lt;br /&gt;
 MacではGemも標準でインストールされていたと思うが、記憶が確かではないので確認してほしい。&lt;/p&gt;
@@ -964,7 +577,7 @@ MacではGemも標準でインストールされていたと思うが、記憶�
 
 &lt;p&gt;とすると、Ruby版make(ビルドツール)であるrakeをインストールできる。  &lt;/p&gt;
 
-&lt;h2&gt;ウェブデザイナにおすすめのパッケージ&lt;/h2&gt;
+&lt;h2 id=&quot;package&quot;&gt;ウェブデザイナにおすすめのパッケージ&lt;/h2&gt;
 
 &lt;h3&gt;CSS Sprite&lt;/h3&gt;
 
@@ -1194,7 +807,7 @@ svn checkout http://css-redundancy-checker.googlecode.com/svn/trunk/ css-redunda
 Radarの癖にRakeの詳しい説明を知りたい方は、&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;にてリクエストしてほしい。&lt;br /&gt;
 私も覚えたてなので、全部の質問には答えることができるかわからないが。&lt;/p&gt;
 
-&lt;h2&gt;ウェブデザイナ/フロントエンドデベロッパのRuby&lt;/h2&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;ウェブデザイナ/フロントエンドデベロッパのタスクは多岐に渡る。&lt;br /&gt;
 Adobe
@@ -1208,11 +821,13 @@ Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/ア�
  </entry>
  
  <entry>
-   <title>ブラウザでデザインをするということ</title>
+   <title>インブラウザ デザイン</title>
    <link href="http://css.studiomohawk.com/webdesign/2011/04/16/designing_in_browser/"/>
    <updated>2011-04-16T10:53:05+09:00</updated>
    <id>http://css.studiomohawk.com/webdesign/2011/04/16/designing_in_browser</id>
-   <content type="html">&lt;p&gt;長い間、Adobe
+   <content type="html">&lt;h2 id=&quot;whatis&quot;&gt;インブラウザ デザインとは&lt;/h2&gt;
+
+&lt;p&gt;長い間、Adobe
 Photoshopはウェブデザインのデファクトアプリとして君臨してきた。もちろん、今も私のMac
 MiniにCS4がインストールされている。&lt;/p&gt;
 
@@ -1232,7 +847,7 @@ Web design &lt;strong&gt;is&lt;/strong&gt; responsive design, Responsive Web Des
 &lt;p&gt;ブラウザでデザインをするということ。&lt;br /&gt;
 その際の実際のプロセスと便利なツール、そして注意点について紹介しよう。&lt;/p&gt;
 
-&lt;h2&gt;インブラウザ デザインのプロセス&lt;/h2&gt;
+&lt;h2 id=&quot;process&quot;&gt;インブラウザ デザインのプロセス&lt;/h2&gt;
 
 &lt;h3&gt;アイデアの集約と大まかなレイアウトの決定&lt;/h3&gt;
 
@@ -1332,7 +947,7 @@ Frameworkなどを組み込むのが面倒な場合は、Andy Clerkeの&lt;a hre
 Boilerplate利用時)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;残りのステップは、デザインしていくだけ。&lt;/h3&gt;
+&lt;h3&gt;残りのステップは、デザインしていくだけ&lt;/h3&gt;
 
 &lt;p&gt;コンテンツなしにデザインすることができないのはPhotoshopであろうと、ブラウザでのデザインでも同じ。
 だが、画像素材や原稿がまだの場合は、想定している画像のサイズや原稿の分量などを伝えるというステップもあってもいいかも知れない。
@@ -1346,7 +961,7 @@ Boilerplate利用時)&lt;/li&gt;
 &lt;p&gt;プロトタイプとして素材の提供者にブラウザで確認してもらうには十分こと足りるだろう。&lt;br /&gt;
 日本語では海外のようなLorem Ipsumテキストがないので、どうしてもダミー原稿が欲しい場合は、私は&lt;a href=&quot;http://webtools.dounokouno.com/dummytext/index.html&quot;&gt;ダミーテキストジェネレータ&lt;/a&gt;を利用している。&lt;/p&gt;
 
-&lt;h3&gt;インブラウザ デザインをより加速するオンラインツール達&lt;/h3&gt;
+&lt;h2 id=&quot;tool&quot;&gt;インブラウザ デザインをより加速するオンラインツール達&lt;/h2&gt;
 
 &lt;p&gt;CSS3を活用してブラウザでデザインしていく上で欠かすことのできないツール群を紹介しよう。  &lt;/p&gt;
 
@@ -1406,7 +1021,7 @@ Please!でも同様の機能は提供されているが、こちらのほうが�
 &lt;p&gt;それぞれのサービスは他に類似サービスが沢山あるが、実際に使ってみて1番使い勝手のよいものをピックアップした。&lt;br /&gt;
 どれも自信を持っておすすめできるので試してみてほしい。&lt;/p&gt;
 
-&lt;h2&gt;インブラウザ デザインの注意点&lt;/h2&gt;
+&lt;h2 id=&quot;caution&quot;&gt;インブラウザ デザインの注意点&lt;/h2&gt;
 
 &lt;p&gt;CSS3はIE6-8では使えないプロパティもある。&lt;strong&gt;全てをブラウザでデザインすることは不可能だ&lt;/strong&gt;。&lt;br /&gt;
 テキスチャやCSS3では表現しづらいデザインももちろんある。&lt;br /&gt;
@@ -1432,7 +1047,7 @@ CS5.5になるほどイテレーションを繰り返しすばらしいプロダ
 Photoshopと比べればまだまだ始まったばかり。&lt;br /&gt;
 このプロセス/ツールセットのバージョンアップを行うのは、ウェブデザイナたちの役割だ。&lt;/p&gt;
 
-&lt;h2&gt;ブラウザでのデザインについてもっと詳しく&lt;/h2&gt;
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://37signals.com/svn/posts/1061-why-we-skip-photoshop&quot;&gt;Why we skip Photoshop (37signals)&lt;/a&gt;&lt;/li&gt;
@@ -1447,11 +1062,13 @@ Photoshopと比べればまだまだ始まったばかり。&lt;br /&gt;
  </entry>
  
  <entry>
-   <title>ページの高速化とその方法について</title>
+   <title>パフォーマンス最適化</title>
    <link href="http://css.studiomohawk.com/frontend/2011/04/09/why_speed_matters/"/>
    <updated>2011-04-09T11:46:40+09:00</updated>
    <id>http://css.studiomohawk.com/frontend/2011/04/09/why_speed_matters</id>
-   <content type="html">&lt;p&gt;ハードウェアの値段が下がり、ネットの接続環境も高速化していく。ブラウザも高速化を競い合っている。&lt;br /&gt;
+   <content type="html">&lt;h2 id=&quot;whatis&quot;&gt;パフォーマンス最適化の意味&lt;/h2&gt;
+
+&lt;p&gt;ハードウェアの値段が下がり、ネットの接続環境も高速化していく。ブラウザも高速化を競い合っている。&lt;br /&gt;
 それでもなお、GoogleもYahoo!、FacebookもTwitterもページのロード時間を短縮するテクニックを生み出している。&lt;/p&gt;
 
 &lt;p&gt;なぜだろうか？&lt;/p&gt;
@@ -1462,7 +1079,7 @@ Photoshopと比べればまだまだ始まったばかり。&lt;br /&gt;
 なんて思っていないだろうか？
 ページのロード時間の80%はフロントエンドで最適化できる。バックエンドが重要ではないとは言わないが、我々フロントエンドデベロッパのもっとも大切なタスクの1つがページの最適化。&lt;/p&gt;
 
-&lt;h2&gt;ページのロード時間で失うモノ&lt;/h2&gt;
+&lt;h2 id=&quot;why&quot;&gt;ページのロード時間で失うモノ&lt;/h2&gt;
 
 &lt;p&gt;サイト最適化ファームのStrangeloopがMashable!に寄稿した記事、&lt;a href=&quot;http://mashable.com/2011/04/06/site-speed/&quot;&gt;Why Websites Are Slow &amp;amp; Why Speed Really Matters [INFOGRAPHIC]&lt;/a&gt;
 によると、  &lt;/p&gt;
@@ -1482,13 +1099,13 @@ Photoshopと比べればまだまだ始まったばかり。&lt;br /&gt;
 
 &lt;p&gt;3クリックルールにはもう意味がないかも知れないが、3秒ルールは実際に存在する。  &lt;/p&gt;
 
-&lt;h2&gt;Steve Soudersの教え&lt;/h2&gt;
+&lt;h2 id=&quot;souders&quot;&gt;Steve Soudersの教え&lt;/h2&gt;
 
 &lt;p&gt;元Yahoo!のパフォーマンス担当責任者であり、現在はGoogleで働くSteve Soudersの&lt;a href=&quot;http://www.oreilly.co.jp/books/9784873113616/&quot;&gt;ハイパフォーマンスWebサイト&lt;/a&gt;はこのトピックの中で確実に読んでおくべき本。
 彼が作り出した14のルールはYahoo!のYSlowのチェック項目にもなっているので見たことがあるはずだ。&lt;br /&gt;
 GoogleのPageSpeedでも近しいチェック項目を持っているので、それぞれの項目が何を意味して、それがどうしてページロード時間の最適化につながるかについて覚えておくことをおすすめする。&lt;/p&gt;
 
-&lt;h2&gt;最適化チェックツール&lt;/h2&gt;
+&lt;h2 id=&quot;check&quot;&gt;最適化チェックツール&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://developer.yahoo.com/yslow/&quot;&gt;Yahoo! YSlow for Firebug&lt;/a&gt;&lt;/li&gt;
@@ -1512,7 +1129,7 @@ Loads.inでは珍しく日本のサーバからのロード時間をテストし
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;最適化ツール&lt;/h2&gt;
+&lt;h2 id=&quot;tool&quot;&gt;最適化ツール&lt;/h2&gt;
 
 &lt;h3&gt;CSSスプライト&lt;/h3&gt;
 
@@ -1546,7 +1163,7 @@ Loads.inでは珍しく日本のサーバからのロード時間をテストし
 Boilerplate&lt;/a&gt;のビルドスクリプトを利用することをおすすめする。&lt;br /&gt;
 CSSスプライト以外はHTML5 Boilerplateのビルドスクリプトでも行える。&lt;/p&gt;
 
-&lt;h2&gt;.htaccess(サーバ側で設定できるなら、その方がベター)&lt;/h2&gt;
+&lt;h3&gt;.htaccess(サーバ側で設定できるなら、その方がベター)&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -1557,7 +1174,7 @@ Boilerplateの.htaccessを利用するだけでYSlowのスコアが15ポイン�
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;スピードについて&lt;/h2&gt;
+&lt;h2 id=&quot;aboutspeed&quot;&gt;スピードについて&lt;/h2&gt;
 
 &lt;p&gt;つい先日FireFox4がリリースされたが、Chromeのスピードには及ばない。SafariもOperaも起動速度に関してはかなり気を使っているし、ページのレンダリングに関しても同様。&lt;br /&gt;
 毎日確実に利用するものだからこそ、スピードが大事。ということだろう。  &lt;/p&gt;
@@ -1576,11 +1193,13 @@ Amazonのクラウドサービスを使ってみるというのもいい経験�
  </entry>
  
  <entry>
-   <title>LESS: CSSをよりシンプルに、パワフルに</title>
+   <title>LESS - CSSプリプロフェッサ</title>
    <link href="http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/"/>
    <updated>2011-04-03T12:51:36+09:00</updated>
    <id>http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css</id>
-   <content type="html">&lt;p&gt;If it ain’t broken, don’t fix it.&lt;/p&gt;
+   <content type="html">&lt;h2 id=&quot;whatis&quot;&gt;LESSとは&lt;/h2&gt;
+
+&lt;p&gt;If it ain’t broken, don’t fix it.&lt;/p&gt;
 
 &lt;p&gt;壊れてないなら、直す必要はない。&lt;br /&gt;
 CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも簡単に覚えられた。  &lt;/p&gt;
@@ -1599,7 +1218,7 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
 
 &lt;p&gt;とコマンドラインから実行すれば、SASSファイルを保存するたびにCSSへ変換してくれるそうだから、自分の好みに合わせて利用してほしい。  &lt;/p&gt;
 
-&lt;h2&gt;LESSでできること&lt;/h2&gt;
+&lt;h2 id=&quot;feature&quot;&gt;LESSでできること&lt;/h2&gt;
 
 &lt;p&gt;LESSでは、&lt;strong&gt;変数&lt;/strong&gt;、&lt;strong&gt;ミックスイン&lt;/strong&gt;、&lt;strong&gt;入れ子ルール&lt;/strong&gt;、&lt;strong&gt;名前空間&lt;/strong&gt;、&lt;strong&gt;四則演算と関数&lt;/strong&gt;などをCSSに追加することができる。&lt;br /&gt;
 プログラミングの経験があるなら、それぞれ覚えがあるだろう機能達ばかりで、CSSには存在しない機能。&lt;/p&gt;
@@ -1776,7 +1395,7 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;便利なミックスインのコレクション&lt;/h2&gt;
+&lt;h2 id=&quot;mixin&quot;&gt;便利なミックスインのコレクション&lt;/h2&gt;
 
 &lt;p&gt;自分がよく利用するルールのミックスインを定義しておけば、飛躍的にCSSの開発はスピードアップする。&lt;br /&gt;
 フロントエンドデベロッパやウェブデザイナはいつだって時間が足りない職種なので、自分なりのコレクションを作って、&lt;a href=&quot;https://gist.github.com/&quot;&gt;Gist&lt;/a&gt;などに置いておくと便利だ。&lt;/p&gt;
@@ -1788,7 +1407,7 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
 
 &lt;p&gt;すでに便利なミックスインを公開している人もいるので、それらから自分の派生を作るほうが早いかも知れないので、ソースを見てみるといいだろう。&lt;/p&gt;
 
-&lt;h2&gt;使い方&lt;/h2&gt;
+&lt;h2 id=&quot;usage&quot;&gt;使い方&lt;/h2&gt;
 
 &lt;p&gt;ここまで来てようやく使い方の説明になるが、&lt;/p&gt;
 
@@ -1823,7 +1442,7 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
 
 &lt;p&gt;なお、URLの末尾に&lt;strong&gt;#!watch&lt;/strong&gt;としても同じことができるので、開発後に記述を削除するのを忘れそうな人は、こちらをおすすめする。&lt;/p&gt;
 
-&lt;h2&gt;開発が終わったら&lt;/h2&gt;
+&lt;h2 id=&quot;compile&quot;&gt;CSSへのコンパイル&lt;/h2&gt;
 
 &lt;p&gt;node.jsで動作するサイトでない限りは、LESSの記述はCSSに展開する必要があるだろう。&lt;/p&gt;
 
@@ -1852,7 +1471,7 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 
 &lt;p&gt;のように、&lt;strong&gt;-x&lt;/strong&gt;オプションをつけると圧縮したCSSとして展開される。&lt;/p&gt;
 
-&lt;h2&gt;参考サイト&lt;/h2&gt;
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://markdotto.com/bootstrap/&quot;&gt;Bootstrap.less&lt;/a&gt;&lt;/li&gt;
@@ -1871,6 +1490,8 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
    <id>http://css.studiomohawk.com/webdesign/2011/04/01/wireframe</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/webdesign/2011/04/01/wireframe/protoplate.png&quot; alt=&quot;Image&quot; class=&quot;huge&quot; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;whatis&quot;&gt;ワイヤフレームとは&lt;/h2&gt;
+
 &lt;p&gt;ワイヤフレームって作ったことありますか？&lt;br /&gt;
 ワイヤフレームはウェブページのコンテントを視覚的に表現するドキュメントの中核を担う存在。
 建築用語でいうところのブループリントと同じだろうか。&lt;/p&gt;
@@ -1883,7 +1504,7 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 どんな見た目になるのかはまだ誰もわからないが、どんなコンテンツがどこに必要で、どんなアクションがいつ必要なのかについては、共通の認識を持っている。
 これこそがワイヤフレームの強みであり、存在意義。&lt;/p&gt;
 
-&lt;h2&gt;ワイヤフレームの使用法&lt;/h2&gt;
+&lt;h2 id=&quot;usage&quot;&gt;ワイヤフレームの使用法&lt;/h2&gt;
 
 &lt;p&gt;見てみないとわからない。&lt;br /&gt;
 デザイナとして働いている私自身、外部のデザイナに仕事を依頼している場合に、そんな台詞を言うことがある。&lt;/p&gt;
@@ -1900,7 +1521,7 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 この2つの比較はPhotoshopで作成した精度の高いモックアップでも可能だ。しかし、ワイヤフレームのフットワークの良さは、より効率的にパターンを生み出す原動力になる。&lt;br /&gt;
 幾つかのワイヤフレームのパターンの中で、差異や類似を提示することももちろんできる。&lt;/p&gt;
 
-&lt;h2&gt;もう1つのワイヤフレームの使用法&lt;/h2&gt;
+&lt;h2 id=&quot;otherusage&quot;&gt;もう1つのワイヤフレームの使用法&lt;/h2&gt;
 
 &lt;p&gt;ワイヤフレームは思考を助けるツールでもある。
 思考を集約することも、拡張することも、とても自然に行うことができる。&lt;br /&gt;
@@ -1915,7 +1536,7 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 迷子になっている人が、今自分がどこにいるのか把握できないのと同じく、問題を明確にできなければ、解決することは不可能。
 その問題を浮き彫りにするためのツールとしてもワイヤフレームは有効だ。&lt;/p&gt;
 
-&lt;h2&gt;ワイヤフレームツール&lt;/h2&gt;
+&lt;h2 id=&quot;tool&quot;&gt;ワイヤフレームツール&lt;/h2&gt;
 
 &lt;p&gt;フリーのツールも、有料のツールも、画像編集アプリケーションと同じくらいの種類があるワイヤフレームツール。
 中には実際にクリックしたり、マウスオーバできたりとインタラクションすら簡単に作成できる高度なツールも存在する。&lt;/p&gt;
@@ -1933,7 +1554,7 @@ $79とやや高額な価格設定かと思うかも知れないが、幾つか�
 
 &lt;p&gt;もちろん、使い慣れたPhotoshopやFireworksなども工夫をすれば、かなり効率的にワイヤフレームを作ることができるはずだ。  &lt;/p&gt;
 
-&lt;h2&gt;ドキュメントとしてのワイヤフレーム&lt;/h2&gt;
+&lt;h2 id=&quot;doc&quot;&gt;ドキュメントとしてのワイヤフレーム&lt;/h2&gt;
 
 &lt;p&gt;37Signalsの&lt;a href=&quot;http://gettingreal.37signals.com/ch11_Dont_Do_Dead_Documents.php&quot;&gt;Don’t Do Dead Documents&lt;/a&gt;にて、&lt;/p&gt;
 
@@ -1951,7 +1572,7 @@ If the wireframe starts as a wireframe and then morphs into the actual design, g
 
 &lt;p&gt;私にとっては、思考を手助けしてくれるツールの側面がまずあり、そこからデザインへの昇華は自然なフローとなっているので、ワイヤフレームは飛ばすことができないタスクの1つ。&lt;/p&gt;
 
-&lt;h2&gt;参考サイト&lt;/h2&gt;
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.uxmag.com/design/shades-of-grey-wireframes-as-thinking-device&quot;&gt;uxmag&lt;/a&gt;&lt;/li&gt;
@@ -1968,14 +1589,16 @@ If the wireframe starts as a wireframe and then morphs into the actual design, g
    <link href="http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/"/>
    <updated>2011-03-15T00:00:00+09:00</updated>
    <id>http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate</id>
-   <content type="html">&lt;p&gt;フロントエンドデベロッパな人たちはウェブ開発プロジェクトを始めるにあたり、HTML、CSS、JSのスケルトン(必要最小限の記述をしたファイル達)を含んだディレクトリを持っている人が多い事だろう。&lt;br /&gt;
+   <content type="html">&lt;h2 id=&quot;whatis&quot;&gt;HTML5 Boilderplateとは&lt;/h2&gt;
+
+&lt;p&gt;フロントエンドデベロッパな人たちはウェブ開発プロジェクトを始めるにあたり、HTML、CSS、JSのスケルトン(必要最小限の記述をしたファイル達)を含んだディレクトリを持っている人が多い事だろう。&lt;br /&gt;
 私も個人のプロジェクト、仕事でのプロジェクトともに、それぞれに少しだけカスタマイズを行うだけで開発を始めることができるディレクトリを持っている。  &lt;/p&gt;
 
 &lt;p&gt;今回紹介する(おそらくすでに紹介するまでもないほど知られているが)&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5 BOILERPLATE&lt;/a&gt;は、Paul IrishとDivya Manianを中心として生み出された膨大な量の知見を詰め込んだHTML5を使ったプロジェクト用のスタートポイント。&lt;br /&gt;
 知っての通り、HTML5を使い始めるのは決して今からでも&lt;strong&gt;早すぎるということは決してない&lt;/strong&gt;が、HTML5に対応するなんてまだ先、と思っていても、このHTML5
 BOILERPLATEに詰め込まれたベスト中のベストプラクティスを吸収しておけば、現在のプロジェクトもより盤石にすることができるはずだ。&lt;/p&gt;
 
-&lt;h2&gt;HTML5 Boilerplateの特筆すべき5つのポイント&lt;/h2&gt;
+&lt;h2 id=&quot;feature&quot;&gt;HTML5 Boilerplateの特筆すべき5つのポイント&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -2010,7 +1633,7 @@ JSをドキュメントの最後に配置するという非常に当たり前の
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;HTML5 Boilerplateの入手方法&lt;/h2&gt;
+&lt;h2 id=&quot;download&quot;&gt;HTML5 Boilerplateの入手方法&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;http://html5boilerplate.com/&lt;/a&gt;から最新の安定板(1.0
 RC
@@ -2025,7 +1648,7 @@ Boilerplateをベースに必要なスターティングポイントを生成し
 コメント、JavaScript、jQuery(圧縮するか、否かも)、Modernizrの利用、サーバ側の設定ファイル、Google
 Analyticsの要不要など、カスタマイズすることが可能。&lt;/p&gt;
 
-&lt;h2&gt;ビルドスクリプトの使い方&lt;/h2&gt;
+&lt;h2 id=&quot;buildscript&quot;&gt;ビルドスクリプトの使い方&lt;/h2&gt;
 
 &lt;p&gt;私もAntに詳しくないのでHTML5
 Boilerplateのビルドスクリプトの使い方については、IBMのデベロッパワークにお任せすることに。詳しくは&lt;a href=&quot;http://www.ibm.com/developerworks/jp/web/library/wa-html5boilerplate/#build&quot;&gt;こちら&lt;/a&gt;。&lt;/p&gt;
@@ -2033,7 +1656,7 @@ Boilerplateのビルドスクリプトの使い方については、IBMのデベ
 &lt;p&gt;私自身はRakeに慣れてきたので、AntのビルドスクリプトをRakeに置き換えてみようかなと思っている。すでにRakeマスタな人がいたら、ぜひ本家のHTML5
 BoilerplateにPull Requestを送ってくださいませ。&lt;/p&gt;
 
-&lt;h2&gt;HTML5 Boilerplateについてもっと詳しく&lt;/h2&gt;
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=qyM37XKkmKQ&quot;&gt;Paul Irish on HTML5 Boilerplate @YouTube&lt;/a&gt;&lt;/li&gt;
@@ -2045,11 +1668,13 @@ BoilerplateにPull Requestを送ってくださいませ。&lt;/p&gt;
  </entry>
  
  <entry>
-   <title>ターミナルを使いこなす</title>
+   <title>コマンドライン</title>
    <link href="http://css.studiomohawk.com/tool/2011/02/13/terminal-101/"/>
    <updated>2011-02-13T00:00:00+09:00</updated>
    <id>http://css.studiomohawk.com/tool/2011/02/13/terminal-101</id>
-   <content type="html">&lt;p&gt;Terminal.appは怖い。&lt;br /&gt;
+   <content type="html">&lt;h2 id=&quot;whatis&quot;&gt;コマンドラインについて&lt;/h2&gt;
+
+&lt;p&gt;Terminal.appは怖い。&lt;br /&gt;
 GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。&lt;br /&gt;
 Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。  &lt;/p&gt;
 
@@ -2068,7 +1693,7 @@ Script&lt;/a&gt;が追加され、フロントエンドデベロッパの間で�
 
 &lt;p&gt;私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるが、きっかけさえつかんでしまえば、どうにかなる。ちなみに私はWindowsでは&lt;a href=&quot;http://www.cygwin.com/&quot;&gt;Cygwin&lt;/a&gt;を&lt;a href=&quot;http://sourceforge.net/projects/console/&quot;&gt;Console&lt;/a&gt;から利用している。&lt;/p&gt;
 
-&lt;h2&gt;まずは見た目からカスタマイズ&lt;/h2&gt;
+&lt;h2 id=&quot;custom&quot;&gt;まずは見た目からカスタマイズ&lt;/h2&gt;
 
 &lt;p&gt;私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないが、そんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。&lt;br /&gt;
 だからこそ、ターミナルにも見た目を要求したい。&lt;/p&gt;
@@ -2127,7 +1752,7 @@ open ~/.bashrc
 
 &lt;p&gt;保存したら、上記のコマンドで変更を反映できる。&lt;/p&gt;
 
-&lt;h2&gt;ターミナルの使い方&lt;/h2&gt;
+&lt;h2 id=&quot;howto&quot;&gt;ターミナルの使い方&lt;/h2&gt;
 
 &lt;p&gt;私自身もまだまだ基本的なコマンドしかソラでは実行できない。必要に応じてコマンドは覚えていけばいいので、自分のペースで続けていってほしい。&lt;br /&gt;
 まずはターミナルで使える便利なショートカットキーを、そして実際にいくつかコマンドを見ていこう。&lt;/p&gt;
@@ -2182,7 +1807,7 @@ DIR_NAME&lt;/code&gt;でDIR_NAMEというディレクトリを作成できる。
 とりあえずのところは、&lt;code&gt;open
 DIR_NAME&lt;/code&gt;としてFinderを立ち上げてコピーや削除をすれば問題ない。&lt;/p&gt;
 
-&lt;h2&gt;パッケージマネジャ&lt;/h2&gt;
+&lt;h2 id=&quot;package&quot;&gt;パッケージマネジャ&lt;/h2&gt;
 
 &lt;p&gt;Bashだけでももちろん協力なツールではあるが、せっかくだからもっとたくさん機能を追加してみたい。&lt;br /&gt;
 RubyやPython、Javaなどコマンドラインでも使える強力なツールがあるが、これらのツールを管理するのはとても大変。そのために&lt;strong&gt;パッケージマネジャ&lt;/strong&gt;が必要になってくる。&lt;/p&gt;
@@ -2192,7 +1817,7 @@ RubyやPython、Javaなどコマンドラインでも使える強力なツール
 &lt;p&gt;&lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt;はシンプルで強力な、新しい世代のパッケージマネジャ。非常に簡単にインストールできるし、利用も簡単なので、初心者にはもってこいのパッケージマネジャ。&lt;br /&gt;
 私はHomebrewでgitをインストールし直した。こちらのほうがアップデートが簡単にできるということで。&lt;/p&gt;
 
-&lt;h2&gt;Homebrewのインストール&lt;/h2&gt;
+&lt;h3&gt;Homebrewのインストール&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -2224,7 +1849,7 @@ list&lt;/code&gt;とすると、インストールされているツールの一
 
 &lt;p&gt;英語ではあるが、brewのコマンドは&lt;a href=&quot;https://github.com/mxcl/homebrew/wiki/The-brew-command&quot;&gt;こちら&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2&gt;ターミナルの世界へようこそ&lt;/h2&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;ターミナルの世界へようこそ&lt;/h2&gt;
 
 &lt;p&gt;ここまでできたら、すっかりコマンド使いっぽく見える。コマンドラインになれてきたら次のステップはオートメーション。&lt;br /&gt;
 私はRubyのRakeを使って、いろいろなタスクを自動化しはじめている。&lt;br /&gt;
@@ -2240,11 +1865,13 @@ Spriteを自動化&lt;/a&gt;したりすることもできるようなので、�
  </entry>
  
  <entry>
-   <title>Gitでバージョンコントロール</title>
+   <title>Git バージョンコントロール</title>
    <link href="http://css.studiomohawk.com/tool/2011/01/29/git-version-control/"/>
    <updated>2011-01-29T00:00:00+09:00</updated>
    <id>http://css.studiomohawk.com/tool/2011/01/29/git-version-control</id>
-   <content type="html">&lt;p&gt;バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。  &lt;/p&gt;
+   <content type="html">&lt;h2 id=&quot;whatis&quot;&gt;バージョンコントロールについて&lt;/h2&gt;
+
+&lt;p&gt;バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。  &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;作業用フォルダがstyle.bk20110128なんて名前であふれている&lt;/li&gt;
@@ -2258,7 +1885,8 @@ Spriteを自動化&lt;/a&gt;したりすることもできるようなので、�
 セットアップも簡単で、利用するのも簡単。
 あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。&lt;/p&gt;
 
-&lt;h2&gt;Gitのインストール&lt;/h2&gt;
+&lt;h2 id=&quot;install&quot;&gt;Gitのインストール&lt;/h2&gt;
+
 &lt;p&gt;※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://code.google.com/p/git-osx-installer/downloads/list?can=3&quot;&gt;OSX Installer for Git&lt;/a&gt;から、自分のOSバージョンにあわせてdmgをダウンロード。&lt;a href=&quot;http://code.google.com/p/msysgit/downloads/list?can=3&quot;&gt;Winはこちら&lt;/a&gt;&lt;br /&gt;
@@ -2285,7 +1913,7 @@ Spriteを自動化&lt;/a&gt;したりすることもできるようなので、�
 &lt;p&gt;こちら、GitをGUIで利用できるようにするアプリ達。私はTowerをテストしつつ、Macでも、Winでも使えるSmartGitをメインで利用している。どちらも日本語版はないが、基本の用語さえ覚えてしまえば問題ないだろう。
 GUIアプリをインストールしても、もう少しTerminalは開いたままに。&lt;/p&gt;
 
-&lt;h2&gt;Gitの基本用語&lt;/h2&gt;
+&lt;h2 id=&quot;term&quot;&gt;Gitの基本用語&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;レポジトリ(Repository)&lt;/em&gt; - 更新履歴などを管理するバージョンコントロールの要になる保管庫。&lt;/li&gt;
@@ -2294,7 +1922,7 @@ GUIアプリをインストールしても、もう少しTerminalは開いたま
   &lt;li&gt;&lt;em&gt;ブランチ(Branch)&lt;/em&gt; - メインの開発からの分岐を作成するブランチ。&lt;q&gt;“Git のブランチモデルは、Git の機能の中でもっともすばらしいものだという人もいるほど”&lt;/q&gt; &lt;cite&gt;&lt;a href=&quot;http://progit.org/book/ja/ch3-0.html&quot;&gt;Pro Git&lt;/a&gt;&lt;/cite&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;Gitをインストールした後にやるべきこと&lt;/h2&gt;
+&lt;h2 id=&quot;todo&quot;&gt;Gitをインストールした後にやるべきこと&lt;/h2&gt;
 
 &lt;p&gt;Terminalはまだ開いたままだろうか？&lt;br /&gt;
 準備が整ったら以下のコマンドを、必要な部分は修正してから、Terminalにて実行。&lt;/p&gt;
@@ -2371,7 +1999,7 @@ Icon?
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h2&gt;Gitの基本的なワークフロー&lt;/h2&gt;
+&lt;h2 id=&quot;workflow&quot;&gt;Gitの基本的なワークフロー&lt;/h2&gt;
 
 &lt;p&gt;それでは先ほど紹介した用語と、ほかのいくつかのGitのコマンドを交えながらGitの基本的なワークフローを説明しよう。&lt;/p&gt;
 
@@ -2541,12 +2169,85 @@ USERディレクトリ下に.bashrcという名前で上記を追加して保存
 
 &lt;p&gt;これで、myfeatureブランチはmasterブランチへマージが完了する。&lt;/p&gt;
 
-&lt;p&gt;ここまでできるようになれば、すっかりGitは使えるようになったといえるはずだ。&lt;br /&gt;
-まだまだ奥が深いGitだが、まずは始めること。&lt;br /&gt;
-githubの使いこなしや、ブランチモデルのベストプラクティスなどまだまだ楽しいトピックもあるが、今回の記事はここまで。&lt;br /&gt;
-Gitについて、もっと知りたいことがあれば、&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;にてリクエストしてほしい。&lt;/p&gt;
+&lt;h2 id=&quot;tips&quot;&gt;GitのTips &amp;amp; Tricks&lt;/h2&gt;
 
-&lt;h2&gt;参考リンク&lt;/h2&gt;
+&lt;h3&gt;git alias&lt;/h3&gt;
+
+&lt;p&gt;コマンドラインの便利さはコマンドを覚えてしまえば、色々なことがコマンド1つ、あるいは2つでできてしまう、ということにつきる。&lt;br /&gt;
+gitもGUIツールの利便性は否定しないが、コマンドラインから利用することにしている私。&lt;br /&gt;
+少しでもタイプする文字を減らしたいので、そんな際に便利なのが&lt;code&gt;git alias&lt;/code&gt;。&lt;br /&gt;
+あらかじめ登録したコマンドをショートカットのように呼び出す事ができる機能だ。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git config -e --global&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;とすると、システムワイドで利用するgitの設定ファイル.gitconfigファイルをエディタで開ける。&lt;br /&gt;
+すでに自分のメールと名前は設定済みのはずなので、ファイルに追記すれば、aliasを利用できる。&lt;/p&gt;
+
+&lt;p&gt;6行目までは、単純によく使うコマンドを2文字に省略しただけで、&lt;br /&gt;
+&lt;code&gt;lg&lt;/code&gt;は&lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;この記事&lt;/a&gt;から拝借した。&lt;code&gt;git log&lt;/code&gt;を少しセクシーにしてくれる。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;fix&lt;/code&gt;は私があまりにもよく繰り返すコミットしたあとでそのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う&lt;code&gt;--amend&lt;/code&gt;オプションをaliasにした。&lt;br /&gt;
+コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、&lt;code&gt;git add
+FILE&lt;/code&gt;と追加して、&lt;code&gt;git fix&lt;/code&gt;とすると、前のコミットメッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;unstage&lt;/code&gt;は&lt;code&gt;add&lt;/code&gt;の反対でgitのstageに追加したくないファイルを削除してくれる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; status
+&lt;span class=&quot;nv&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit
+&lt;span class=&quot;nv&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; branch
+&lt;span class=&quot;nv&quot;&gt;co&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; checkout
+&lt;span class=&quot;nv&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff
+&lt;span class=&quot;nv&quot;&gt;dc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff --cached
+&lt;span class=&quot;nv&quot;&gt;lg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --graph --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s1&quot;&gt;&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39;&lt;/span&gt; --abbrev-commit --date&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;relative
+&lt;span class=&quot;nv&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit --amend -C HEAD
+&lt;span class=&quot;nv&quot;&gt;unstage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; reset HEAD
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;git diff&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;フラグなしに&lt;code&gt;git diff&lt;/code&gt;とした場合、最後のcommitと現在の状態を比較する&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git diff -- &amp;lt;filename&amp;gt;&lt;/code&gt;とすると、1ファイルのみを比較できる&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git diff --cached&lt;/code&gt;ではステージングにあるファイル群とHEAD(*)を比較する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;* HEADは現在のブランチと同義だと思っていていいそうだ。(&lt;a href=&quot;http://stackoverflow.com/questions/2304087/what-is-git-head-exactly&quot;&gt;What is git head, exactly? - Stack Overflow&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。&lt;br /&gt;
+バージョンコントロールを初めたばかりならなおさらだろう。
+そんな時にも便利なのが&lt;code&gt;git diff&lt;/code&gt;だ。&lt;/p&gt;
+
+&lt;p&gt;もちろん、チームでの作業の場合、マスタをCommitする際に、他の人が作業した部分をレビューするのには欠かす事ができないコマンド。&lt;/p&gt;
+
+&lt;h2 id=&quot;github&quot;&gt;Githubの使い方&lt;/h2&gt;
+
+&lt;h3&gt;fork&lt;/h3&gt;
+
+&lt;p&gt;forkはGithub内で公開されているレポジトリを自分のレポジトリとしてコピーしてくる事を指す。&lt;br /&gt;
+利用したいレポジトリを見つけたら、forkボタンをクリックすれば自分のレポジトリにコピーが完成。この時点でどんな変更を行おうとそれは自分のレポジトリ内だけで完結する。&lt;br /&gt;
+その変更をオリジナルにも反映するべきという場合にはPull
+Requestをすることでオリジナルレポジトリの所有者に変更を伝える事ができる。  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git clone git@github.com:ユーザ名/レポジトリ名.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;forkしたレポジトリをローカル環境にclone。&lt;br /&gt;
+ちなみにコマンドラインで上記を実行する際は自分がどのディレクトリにいるのか確認しておこう。&lt;br /&gt;
+&lt;code&gt;pwd&lt;/code&gt;で自分の居場所を教えてくれる。&lt;br /&gt;
+レポジトリ名でディレクトリが生成されるので、
+ついでにremoteの設定をしておこう。この設定をしておけばオリジナルレポジトリで変更があった際にその変更をfetchできる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; レポジトリ名 &lt;span class=&quot;c&quot;&gt;# まずはそのディレクトリに移動&lt;/span&gt;
+git remote add upstream オリジナルのレポジトリのgitパス &lt;span class=&quot;c&quot;&gt;#パスはgithubのレポジトリのページにあるのでコピー&lt;/span&gt;
+git fetch upstream &lt;span class=&quot;c&quot;&gt;# 変更をfetch&lt;/span&gt;
+git merge upstream/master &lt;span class=&quot;c&quot;&gt;# 変更を自分のブランチにmergeする&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://progit.org/book/ja/&quot;&gt;Pro Git&lt;/a&gt; - オンラインでなら無料で日本語訳されたPro Gitを読むことができる。まだ私自身すべてを読み終えたわけではないが、かなり勉強になる&lt;/li&gt;
@@ -2561,11 +2262,13 @@ Gitについて、もっと知りたいことがあれば、&lt;a href=&quot;htt
  </entry>
  
  <entry>
-   <title>レスポンシブウェブデザインについて</title>
+   <title>レスポンシブウェブデザイン</title>
    <link href="http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/"/>
    <updated>2011-01-24T00:00:00+09:00</updated>
    <id>http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design</id>
-   <content type="html">&lt;p&gt;いまこの記事を読んでいるモニタのサイズは何インチだろうか？&lt;br /&gt;
+   <content type="html">&lt;h2 id=&quot;whatis&quot;&gt;レスポンシブウェブデザインとは&lt;/h2&gt;
+
+&lt;p&gt;いまこの記事を読んでいるモニタのサイズは何インチだろうか？&lt;br /&gt;
 iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブック、ノートPC、デスクトップPCと数年前なら思いもよらなかったモニタ/スクリーンサイズでユーザはウェブサイトを閲覧し始めている。
 今後もさらに解像度が異なる環境が増えていくことは間違いない。&lt;/p&gt;
 
@@ -2573,7 +2276,7 @@ iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブ�
 その疑問への1つの回答がレスポンシブウェブデザイン(Responsive Web Design)。
 多くの場合、CSS3で利用が可能になる予定のMedia Queriesを活用して、モニタ/スクリーンのサイズに合わせて最適なデザインを供給するデザイン/コーディング手法がレスポンシブウェブデザインと呼ばれている。&lt;/p&gt;
 
-&lt;h2&gt;レスポンシブウェブデザインの例&lt;/h2&gt;
+&lt;h2 id=&quot;ex&quot;&gt;レスポンシブウェブデザインの例&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://colly.com/&quot;&gt;Simon Collison&lt;/a&gt; / Simon Collisonはレスポンシブウェブデザインをいち早く導入したウェブデザイナ&lt;/li&gt;
@@ -2583,7 +2286,7 @@ iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブ�
 
 &lt;p&gt;実際にサイトを訪れてブラウザのサイズを変更してほしい。サイズに応じてレイアウトが変わっていくのを見てほしい。&lt;/p&gt;
 
-&lt;h2&gt;レスポンシブデザインが解決しないこと&lt;/h2&gt;
+&lt;h2 id=&quot;whatisnot&quot;&gt;レスポンシブウェブデザインが解決しないこと&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;レスポンシブウェブデザインは、特にハンドヘルドデバイス用に最適な解決方法と考えられるが、すべての問題に対する解決を提示できるわけではない。&lt;/em&gt;&lt;/p&gt;
 
@@ -2622,7 +2325,7 @@ for example, if the user goals for your mobile site are more limited in scope th
 こちらも非常に興味深い。現時点では通常デスクトップ用のデザインからスタートし、その後にハンドヘルドデバイス用に最適化していくのが通常のフローと言えるが、Lukeはモバイルデバイス用のデザインを先に行う事で、モバイルで提供すべきサービスの根幹に集中することができ、デザインだけではなく、UIやサイト構造、そしてインタラクションもシンプルにすることができると話している。&lt;br /&gt;
 ミニマムなスタート地点からデスクトップ用デザインなど大きなモニタ/スクリーン、マウスやキーボードなどに対応するデザインを作ることで、すべてのユーザに対して最適なデザインを提供できるという考え方だ。&lt;/p&gt;
 
-&lt;h2&gt;Media Queries&lt;/h2&gt;
+&lt;h2&gt;Media Queries {@mediaqueries}&lt;/h2&gt;
 
 &lt;p&gt;レスポンシブデザインでは、多くの場合、CSS3でサポートされる予定のMedia Queriesを活用し、サイズの異なるモニタ/スクリーンに対し最適なデザインを提供する。&lt;br /&gt;
 Media Queriesについては、&lt;a href=&quot;http://hardboiledwebdesign.com/&quot;&gt;Hardboiled Web Design&lt;/a&gt;の著者であるAndy Clarkの記事&lt;a href=&quot;http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries&quot;&gt;Hardboiled CSS3 Media Queries&lt;/a&gt;で実例を見る事ができる。&lt;/p&gt;
@@ -2668,7 +2371,7 @@ Media Queriesについては、&lt;a href=&quot;http://hardboiledwebdesign.com/&
 レスポンシブウェブデザインは&lt;em&gt;すべてのブラウザで見た目を同じにしなくてはならない&lt;/em&gt;という思想からはほど遠くプログレッシブエンハンスメントという手法に近いので、無理にIE6〜IE8への実装をする必要性はない。&lt;br /&gt;
 レスポンシブウェブデザインは、確かにユーザのスクリーンサイズに合わせた最適なデザインを提供することができるが、それができなくてもユーザビリティはマイナスになったりはしない。&lt;/p&gt;
 
-&lt;h2&gt;レスポンシブグリッドCSS&lt;/h2&gt;
+&lt;h2 id=&quot;gridcss&quot;&gt;レスポンシブグリッドCSS&lt;/h2&gt;
 
 &lt;p&gt;レスポンシブグリッドの最大の弱点は、実装がやや大変なこと。現実的にモバイルに最適化されることを想定していないウェブデザインをモバイル用に変更したり、サイズが変わった際にどのようにグリッドが変更していくべきかなど、デザインとテクニックの両面で解決しなければいけない問題点がある。&lt;br /&gt;
 そこで現れ始めたのが、レスポンシブウェブデザインのためのグリッドCSSだ。&lt;/p&gt;
@@ -2685,7 +2388,7 @@ Media Queriesについては、&lt;a href=&quot;http://hardboiledwebdesign.com/&
 
 &lt;p&gt;こちらは、その名前の通り1140px以上を最大幅とするレスポンシブグリッドCSS。Less Framework3と異なる点はコラムグリッド用のクラスは用意されているところ。そしてコラムグリッドとガター(コラムとコラムの間のマージン)はパーセントで指定されているところ。画像に対しても&lt;code&gt;max-width&lt;/code&gt;を指定し、モニタ/スクリーンのサイズに対して最適なサイズに変更されるようになっていたりする。Photoshopのファイルも配布している。&lt;/p&gt;
 
-&lt;h2&gt;参考リンク&lt;/h2&gt;
+&lt;h2 id=&quot;links&quot;&gt;参考リンク&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.alistapart.com/articles/responsive-web-design/&quot;&gt;Responsive Web Design (A list Apart)&lt;/a&gt;&lt;/li&gt;
@@ -2703,41 +2406,48 @@ Media Queriesについては、&lt;a href=&quot;http://hardboiledwebdesign.com/&
  </entry>
  
  <entry>
-   <title>CSS RadarをJekyllで作り直し</title>
-   <link href="http://css.studiomohawk.com/cssradar/2011/01/23/scratch-and-build/"/>
+   <title>About CSS Radar</title>
+   <link href="http://css.studiomohawk.com/cssradar/2011/01/23/about-cssrader/"/>
    <updated>2011-01-23T00:00:00+09:00</updated>
-   <id>http://css.studiomohawk.com/cssradar/2011/01/23/scratch-and-build</id>
-   <content type="html">&lt;h2&gt;CSS Radarについて&lt;/h2&gt;
+   <id>http://css.studiomohawk.com/cssradar/2011/01/23/about-cssrader</id>
+   <content type="html">&lt;h2 id=&quot;about-site&quot;&gt;CSS Radarについて&lt;/h2&gt;
 
-&lt;p&gt;ほんの半年ほど前からCSS Radarを再開したものの、目的が記事を書くことに知らない間に置き換わっていた。&lt;br /&gt;
-役に立つコンテンツを作れば、ユーザは勝手に増えていく、という幻想を抱くほど私は甘くないが、ユーザを増やすために記事を書くということと、CSS Radarの目的は抜本的に違う。なにより、リアルな現場で働いている人間として、毎日クオリティの高いオリジナルコンテンツを追加できるほど暇ではない。&lt;/p&gt;
+&lt;p&gt;CSS
+Radarは現役フロントエンドデベロッパ/ウェブデザイナとして働く斉藤祐也がフロントエンドにまつわるベストプラクティスを紹介するブログ。&lt;br /&gt;
+2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。&lt;/p&gt;
 
-&lt;p&gt;だから、少しずつでも確実に自分自身の成長につながる記事を書いていこうと、そういう意思をもって、これまで書いた記事とも決別することにした。&lt;br /&gt;
-これまで通り、記事のリクエストは&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;にて募集していくし、人気のあった記事はリライトしていく予定だ。&lt;br /&gt;
-リクエストがあればその記事を最優先でリライトしていくので、気軽にリクエストしてほしい。&lt;/p&gt;
+&lt;p&gt;CSS
+Radarでは一般的なブログと異なり1度更新した記事でも可能な限り最新の情報にアップデートをしていきます。  &lt;/p&gt;
 
-&lt;h2&gt;WordPressとの決別。Jekyllとの出会い&lt;/h2&gt;
+&lt;p&gt;フロントエンドデベロッパが日々立ち向かう技術的な問題はGoogleで検索すれば解決方法がすぐに見つかる時代。
+最新の情報はTwitterやFacebookで自分の信頼できるソースを選んで得る事ができる時代。&lt;/p&gt;
 
-&lt;p&gt;長年愛用してきたWordPressと決別することにした。私にとってWordPressほど優秀なブログツールはおそらくない。それでも新しい環境にチャレンジしていこうということで、&lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;を利用し始めた。&lt;/p&gt;
+&lt;p&gt;そんな時代に私なりのベストプラクティスを収集し集約して紹介するのがCSS
+Radarの編集方針としています。&lt;/p&gt;
 
-&lt;h3&gt;Jekyllとは？&lt;/h3&gt;
+&lt;h2 id=&quot;about-me&quot;&gt;私自身について&lt;/h2&gt;
+
+&lt;p&gt;コンプライアンスの確認を取る気がないので、社名はヒミツとしますが、斉藤祐也は東京にあるとあるウェブ企業にてフロントエンドデベロッパ/ウェブデザイナとして働いている32歳。&lt;br /&gt;
+アメリカ、ラスベガスにてプリントジャーナリズムの学士を取得、卒業後いろいろあって現職にお世話になっています。&lt;br /&gt;
+HTMLとCSSが私のメインエリアで、JSを書いたり、Smartyなどのテンプレ言語も使ったり、ワイヤフレームを書いたり、プロジェクトの初動期のリサーチをしたり、現職のデザインレギュレーションを書いたりするのが主な仕事です。&lt;br /&gt;
+もちろん、ビジュアルデザインの担当もするし、インタラクションやユーザビリティ、SEOについての問題を解決するのをサポートしたりもします。&lt;/p&gt;
+
+&lt;h3&gt;使っているツール&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;元々はgithubのレポジトリ用ページ作成ツール&lt;/li&gt;
-  &lt;li&gt;静的ブログエンジン、コマンドラインでブログを生成する&lt;/li&gt;
-  &lt;li&gt;非常にシンプルで、静的ブログエンジンとしては強力。WordPressでできたことはできない事が多いが普通のブログには十分&lt;/li&gt;
-  &lt;li&gt;記事はmarkdown(ライトウェイトマークアップ言語)を使って記述&lt;/li&gt;
-  &lt;li&gt;MacVimで記事を書くことができる&lt;/li&gt;
-  &lt;li&gt;記事もソースコードもバージョンコントロールできる = gitを使って、&lt;a href=&quot;https://github.com/studiomohawk&quot;&gt;github&lt;/a&gt;で管理できる&lt;/li&gt;
+  &lt;li&gt;OS: Mac OSX(自宅)、Windows7(会社)&lt;/li&gt;
+  &lt;li&gt;エディタ: Vim&lt;/li&gt;
+  &lt;li&gt;ブラウザ: Google Chrome、Firefox(デバッグ専用)&lt;/li&gt;
+  &lt;li&gt;イヤフォン: Sony MDR-CD900ST(家)、Sennheiser IE 8(外)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;CSS Radarの今後&lt;/h2&gt;
+&lt;h2 id=&quot;about-question&quot;&gt;記事のリクエスト、質問など&lt;/h2&gt;
 
-&lt;p&gt;これまで通りCSSやHTMLについても書いていくが、メインエディタであるVimについて、gitを使ったバージョンコントロール、Macを環境とした開発やデザインに使えるツールの紹介やウェブツールについても書いていく。
-これまでは知っていることについて書いていたが、これからは知らないこと、覚えていくことについて書いていくつもりだ。&lt;/p&gt;
+&lt;p&gt;CSS Radarではなかなか新しい記事が更新されません。&lt;br /&gt;
+最新の情報は&lt;a href=&quot;https://twitter.com/intent/user?user_id=107867741&quot;&gt;Twitter@cssradar&lt;/a&gt;にて1日5件以内で紹介しています。&lt;br /&gt;
+また&lt;a href=&quot;http://tinyletter.com/cssradar&quot;&gt;CSS Radar Newsletter&lt;/a&gt;にて1週間分のつぶやきをまとめてメールマガジンとしてまとめています。&lt;/p&gt;
 
-&lt;p&gt;知らないことを書いていくので、これまでよりは更新頻度は落ちることになる。&lt;br /&gt;
-記事を作成している間は、&lt;a href=&quot;http://pinboard.in/u:studiomohawk&quot;&gt;Pinboard&lt;/a&gt;や&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;、そして&lt;a href=&quot;http://www.flickr.com/photos/studiomohawk/&quot;&gt;Flickr&lt;/a&gt;で、私が何をしているかわかるので、ぜひそちらものぞいてみて欲しい。&lt;/p&gt;
+&lt;p&gt;記事への質問、リクエストなどは、&lt;a href=&quot;https://twitter.com/intent/user?user_id=107867741&quot;&gt;Twitter@cssradar&lt;/a&gt;か、cssradar+ask@gmail.comにて受け付けているのでお気軽にどうぞ。&lt;/p&gt;
 </content>
  </entry>
  

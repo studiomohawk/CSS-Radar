@@ -6,28 +6,13 @@
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 <loc>http://css.studiomohawk.com</loc>
-	<lastmod>2011-10-30T00:29:43+09:00</lastmod>
+	<lastmod>2011-11-03T20:53:24+09:00</lastmod>
 	<priority>1.0</priority>
 </url>
 
 <url>
-	<loc>http://css.studiomohawk.com/tool/2011/09/10/give_something_back_to_open_source_via_github/</loc>
-	<lastmod>2011-09-10T20:13:00+09:00</lastmod>
-</url>
-
-<url>
-	<loc>http://css.studiomohawk.com/tool/2011/07/30/indispensable-mac-apps/</loc>
-	<lastmod>2011-07-30T00:13:28+09:00</lastmod>
-</url>
-
-<url>
-	<loc>http://css.studiomohawk.com/vim/2011/07/24/vim-bits-and-pieces/</loc>
+	<loc>http://css.studiomohawk.com/tool/2011/07/24/vim-bits-and-pieces/</loc>
 	<lastmod>2011-07-24T00:57:55+09:00</lastmod>
-</url>
-
-<url>
-	<loc>http://css.studiomohawk.com/git/2011/07/23/git-bits-and-pieces/</loc>
-	<lastmod>2011-07-23T12:34:42+09:00</lastmod>
 </url>
 
 <url>
@@ -81,7 +66,7 @@
 </url>
 
 <url>
-	<loc>http://css.studiomohawk.com/cssradar/2011/01/23/scratch-and-build/</loc>
+	<loc>http://css.studiomohawk.com/cssradar/2011/01/23/about-cssrader/</loc>
 	<lastmod>2011-01-23T00:00:00+09:00</lastmod>
 </url>
 

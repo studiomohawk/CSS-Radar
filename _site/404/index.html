@@ -8,7 +8,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<link href='/assets/master.css' rel="stylesheet" media="all">
+	<link href='/style/reset.css' rel="stylesheet" media="all">
+<link href='/style/base.css' rel="stylesheet" media="all">
+<link href='/style/mod.css' rel="stylesheet" media="all">
+<link href='/style/style.css' rel="stylesheet" media="all">
+<link href='/style/syntaxhighlighter.css' rel="stylesheet" media="all">
+<link href='/style/jquery.fancybox.css' rel="stylesheet" media="all">
+<link href='/style/mediaqueries.css' rel="stylesheet" media="all">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
 	<title itemprop="name" content="404 - Not Found | CSS Radar">404 - Not Found | CSS Radar | For Frond End Developers</title>
@@ -37,7 +43,6 @@
 		<li class="logo"><a href="/">CSS Radar</a></li>
 		<li class="tagline">For Frond End Developers</li>
 	</ul>
-	
 </div>
 </header><!-- id="head" -->
 
@@ -52,7 +57,7 @@
 					</header>
 					<div class="bd">
 						<p>探している記事は削除されたか、存在しないURLを指定しています。<br>
-						CSS Radarでは、記事のリクエストを受け付けています。</p>
+						CSS Radarでは記事のリクエストを受け付けています。</p>
 						<p>記事のリクエストは<a href="http://twitter.com/#!/cssradar">Twitter @ cssradar</a>まで</p>
 						<p>
 							<a class="askme" href="mailto:cssradar+ask@gmail.com">質問やコメントはEメールにて cssradar+ask@gmail.com</a>
@@ -60,25 +65,25 @@
 						<h2>Recent Articles</h2>
 						<ul class="recent">
 							
-							<li><a href="/tool/2011/09/10/give_something_back_to_open_source_via_github/" title="github - pull requestまでの道のり">github - pull requestまでの道のり</a></li>
+							<li><a href="/tool/2011/07/24/vim-bits-and-pieces/" title="Vim">Vim</a></li>
 							
-							<li><a href="/tool/2011/07/30/indispensable-mac-apps/" title="必携Mac OSXアプリ12">必携Mac OSXアプリ12</a></li>
+							<li><a href="/tool/2011/06/11/jekyll-101.tool/" title="Jekyll">Jekyll</a></li>
 							
-							<li><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド">Vim - ビギナーズサバイバルガイド</a></li>
+							<li><a href="/tool/2011/05/14/ruby_for_designer_frontend_dev/" title="ウェブデザイナのためのRuby">ウェブデザイナのためのRuby</a></li>
 							
-							<li><a href="/git/2011/07/23/git-bits-and-pieces/" title="Git - フロントエンドデベロッパのためのgit">Git - フロントエンドデベロッパのためのgit</a></li>
+							<li><a href="/webdesign/2011/04/16/designing_in_browser/" title="インブラウザ デザイン">インブラウザ デザイン</a></li>
 							
-							<li><a href="/tool/2011/06/11/jekyll-101.tool/" title="Jekyllを使ってブログをつくろう">Jekyllを使ってブログをつくろう</a></li>
+							<li><a href="/frontend/2011/04/09/why_speed_matters/" title="パフォーマンス最適化">パフォーマンス最適化</a></li>
 							
-							<li><a href="/tool/2011/05/14/ruby_for_designer_frontend_dev/" title="ウェブデザイナのためのRuby入門">ウェブデザイナのためのRuby入門</a></li>
-							
-							<li><a href="/webdesign/2011/04/16/designing_in_browser/" title="ブラウザでデザインをするということ">ブラウザでデザインをするということ</a></li>
-							
-							<li><a href="/frontend/2011/04/09/why_speed_matters/" title="ページの高速化とその方法について">ページの高速化とその方法について</a></li>
-							
-							<li><a href="/css/2011/04/03/use_less_to_clean_up_your_css/" title="LESS: CSSをよりシンプルに、パワフルに">LESS: CSSをよりシンプルに、パワフルに</a></li>
+							<li><a href="/css/2011/04/03/use_less_to_clean_up_your_css/" title="LESS - CSSプリプロフェッサ">LESS - CSSプリプロフェッサ</a></li>
 							
 							<li><a href="/webdesign/2011/04/01/wireframe/" title="ワイヤフレーム">ワイヤフレーム</a></li>
+							
+							<li><a href="/tool/2011/03/15/html5boilerplate/" title="HTML5 Boilerplate">HTML5 Boilerplate</a></li>
+							
+							<li><a href="/tool/2011/02/13/terminal-101/" title="コマンドライン">コマンドライン</a></li>
+							
+							<li><a href="/tool/2011/01/29/git-version-control/" title="Git バージョンコントロール">Git バージョンコントロール</a></li>
 							
 						</ul>
 					</div>
@@ -91,11 +96,13 @@
 	<div class="hasGrid">
 		<div class="left"><h4>about</h4>
 <p>
-現役フロントエンドデベロッパ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
 </p>
 <p>
-<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>で毎日紹介している記事を1週間分まとめてお届けするCSS Radar Newsletterをはじめました。<br>
-こちらから登録できます。<a href="http://tinyletter.com/cssradar">http://tinyletter.com/cssradar</a>
+記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そんな解決への私なりのベストプラクティスを集めていくのがCSS Radarの編集方針。
+</p>
+<p>
+最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。また<a href="http://tinyletter.com/cssradar">CSS Radar Newsletter</a>にて1週間分のつぶやきをまとめてメールマガジンとしてまとめています。
 </p>
 </div>
 		<div class="right"><h4>elsewhere</h4>
@@ -103,7 +110,7 @@
 	<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内のウェブデザイン情報をつぶやきます</li>
 	<li><a href="http://tinyletter.com/cssradar" rel="me" title="Newsletter">CSS Radar Newsletter</a> / CSS Radarニュースレター。Twitterまとめ + α</li>
 	<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
-	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / デザインのインスピレーション収集中、もちろん写真も</li>
+	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / 趣味は写真。Nikon D90ユーザ</li>
 	<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
 	<li><a href="http://www.layouts-the.me/" rel="me" title="_layouts - themes for jekyll">_layouts</a> / Jekyllテーマギャラリー(英語)</li>
 </ul>
@@ -120,8 +127,10 @@ Theme: <a href="https://github.com/studiomohawk/CSS-Radar">the_radar</a> created
 </footer><!-- id="foot" -->
 
 	</div><!-- id="page" -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src='/assets/master.js'></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src='/js/jquery.easing.js'></script>
+<script src='/js/jquery.fancybox.js'></script>
+<script src='/js/common.js'></script>
 
 </body>
 </html>

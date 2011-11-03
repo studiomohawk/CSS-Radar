@@ -2,17 +2,16 @@
 layout: home
 title: CSS Radar
 ---
-{% for post in site.posts limit:1 %}
-	<header>
-	<div class="head-inner">
-		<h1><a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a></h1>
+{% for post in site.posts limit:10 %}
+<article class="list">
+	<div class="article-inner">
+		<h2 class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+		<ul>
+			{% for toc in post.toc %}
+				<li><a href="{{ post.url }}index.html#{{ toc.hash }}">{{ toc.text }}</a></li>
+			{% endfor %}
+		</ul>
 		<div class="meta">
-			<span class="category">{{ post.categories | category_links }}</span>
-			<date class="date-pub" title="{{ post.date | date_to_xmlschema }}">
-				<span class="day">{{ post.date | date: '%d' }}</span>
-				<span class="month"><abbr>{{ post.date | date: '%b' }}</abbr></span>
-				<span class="year">{{ post.date | date: '%Y' }}</span>
-			</date>
 			{% if post.update %}
 			<date class="update-pub" title="{{ post.update }}">
 				<span class="day">{{ post.update | date: '%d' }}</span>
@@ -20,32 +19,13 @@ title: CSS Radar
 				<span class="year">{{ post.update | date: '%Y' }}</span>
 			</date>
 			{% endif %}
+			<date class="date-pub" title="{{ post.date | date_to_xmlschema }}">
+				<span class="day">{{ post.date | date: '%d' }}</span>
+				<span class="month"><abbr>{{ post.date | date: '%b' }}</abbr></span>
+				<span class="year">{{ post.date | date: '%Y' }}</span>
+			</date>
+			<span class="category">{{ post.categories | category_links }}</span>
 		</div>
 	</div>
-	</header>
-	<div class="bd">
-		{{ post.content }}
-	</div>
-	<footer>
-		<div class="foot-inner">
-		<nav class="pagenation left">
-			<ul>
-				{% if post.previous %}
-				<li class="prev"><a class="internal" rel="prev"  href="{{ post.previous.url }}" title="View {{ post.previous.title }}">&laquo; {{ post.previous.title }}</a></li>
-				{% endif %}
-				{% if post.previous and post.next %}
-				<li class="pipe"> | </li>
-				{% endif %}
-				{% if post.next %}
-				<li class="next"><a class="internal" rel="next"  href="{{ post.next.url }}" title="View {{ post.next.title }}">{{ post.next.title }} &raquo;</a></li>
-				{% endif %}
-			</ul>
-		</nav>
-		<nav class="archive right">
-			<ul>
-				<li><a href="/backnumber/">Back Number</a></li>
-			</ul>
-		</nav>
-		</div>
-	</footer>
+</article>
 {% endfor %}

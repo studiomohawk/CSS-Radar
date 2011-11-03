@@ -1,9 +1,23 @@
 ---
 layout: post
 category: tool 
-title: Jekyllを使ってブログをつくろう
+title: Jekyll
 date: 2011-06-11 13:39:28
+toc:
+- {text: Jekyllとは, hash: whatis}
+- {text: 開発環境の準備, hash: prepare}
+- {text: 基本フォルダ/ファイル構造と記事の作成, hash: structure}
+- {text: テンプレートの作成, hash: template}
+- {text: Liquidについて, hash: liquid}
+- {text: _config.ymlの設定, hash: config}
+- {text: ページの作り方, hash: page}
+- {text: 基本以外のフォルダについて, hash: otherdir}
+- {text: ローカル環境でプレビュー, hash: preview}
+- {text: サーバへのアップロード, hash: upload}
+- {text: 最後に, hash: conclusion}
 ---
+
+## Jekyllとは {#whatis}
 
 Amazon S3にて静的ファイルによるウェブサイトを構築できるようになり、Amazon Web
 Serviceが日本リージョンを追加したことで、これからJekyllのような静的ファイルジェネレータを使ったブログが日本でも増えるのではないか。  
@@ -15,10 +29,10 @@ Radarも今年1月からwordpressを離れ、Jekyllを使ってブログを構�
 Amazon Web Service勉強会でも、JekyllとAmazon S3についての発表があった。([usteam](http://www.ustream.tv/recorded/14269210))  
 そこで、今回はRubyでも、コマンドラインでも初心者である私でもつくれるようになったJekyllについて紹介しよう。
 
-## 開発環境の準備
+## 開発環境の準備 {#prepare}
 
 JekyllはRubyで作成されているので、当然ながらRubyが必要。  
-Rubyの導入については、[ウェブデザイナのためのRuby入門](http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/)を参考にしてほしい。
+Rubyの導入については、[ウェブデザイナのためのRuby](http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/)を参考にしてほしい。
 
 Rubyの準備ができたら、
 
@@ -43,7 +57,7 @@ brew install pip && pip install pygments
 ln -s /usr/local/Cellar/python/2.7/bin/pygmentize /usr/local/bin/pygmentize
 {% endhighlight %}
 
-## 基本フォルダ/ファイル構造と記事の作成
+## 基本フォルダ/ファイル構造と記事の作成 {#structire}
 
 ### 基本フォルダとファイルの準備
 
@@ -90,7 +104,7 @@ categoryにはカテゴリ、titleにはもちろんタイトル、そしてdate
 ここで必須になるのは、layoutとtitleの2ヶ所のみとなり、YAML front
 matterで設定した項目は、記事であればその記事内のテンプレート定義ファイル内の変数として利用することが可能。
 
-## テンプレートの作成
+## テンプレートの作成 {#template}
 
 それではテンプレートの作成について見てみよう。
 
@@ -109,7 +123,7 @@ wordpressでもそうだが、この手のテンプレファイル系は実際�
 私が公開しているJekyll用テーマファイル、[the_minimumの記事用レイアウトファイル](https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_layouts/post.html)を見ながら、
 次項を読んでほしい。
 
-## Liquidについて
+## Liquidについて {#liquid}
 
 Liquidは非常にシンプルなテンプレートエンジンで、これまでwordpressに慣れてきた場合は少し物足りなく感じるかもしれないが、その代わり覚えるのは簡単。
 Liquidで利用できるタグについては、[こちら](https://github.com/tobi/liquid/wiki/liquid-for-designers)を参考に、  
@@ -126,7 +140,7 @@ Liquidで利用できるタグについては、[こちら](https://github.com/t
 インクルードはメンテナンスのために覚えておきたいタグで、  
 オフィシャルページにもあまり説明のないページネーションについてはもっともシンプルな例ながら、利用できるタグについてはほぼ網羅しているので、カスタマイズする際の参考になれば。
 
-## \_config.ymlの設定
+## \_config.ymlの設定 {#config}
 
 ここで利用できる値はほぼ無限にあるものの、まずはオフィシャルを参考にしてほしい。
 [https://github.com/mojombo/jekyll/wiki/Configuration](https://github.com/mojombo/jekyll/wiki/Configuration)
@@ -146,7 +160,7 @@ Analytics用IDを格納する``ga``を呼び出す場合は、
 というように呼び出す事が可能。  
 コンスタントに利用する値、他には例えばサイトのURLやサイト自体のタイトルなどを設定しておくと管理が非常に楽になるはずだ。
 
-## ページの作り方
+## ページの作り方 {#page}
 
 wordpressでは単一ページを作成し、aboutページなどを作成してきたという人もいることだろう。  
 Jekyllでも単一ページを作成することが可能。
@@ -158,14 +172,14 @@ Jekyllでも単一ページを作成することが可能。
 - [バックナンバページ](https://github.com/studiomohawk/CSS-Radar/blob/master/backnumber.html)
 - 少しトリッキーながらフィードファイルも生成できる [atom.xml](https://github.com/studiomohawk/CSS-Radar/blob/master/atom.xml)
 
-## 基本以外のフォルダについて
+## 基本以外のフォルダについて {#otherdir}
 
 Jekyllでは``\_layouts``、``\_posts``、``_site``のみが必須のフォルダと先ほど書いたが、Liquidの説明部分で書いたようにインクルードファイルを格納する、``_include``フォルダや、Jekyllに拡張機能を追加するための、``_plugins``フォルダを作成することができる。アンダーバーがフォルダ名の頭にある場合、Jekyllはそれらをシステムファイルとして扱い、プロセスの際にそれらフォルダも見に行くようになっている。  
 
 アンダーバーがついていないフォルダはJekyllとしては何の処理もしないが、きちんと``\_site``フォルダへ移動してくれる。  
 なので、CSSやJavascript、そして画像などを格納するフォルダを、それぞれ、``style``、``script``、``image``というようにして、ファイルを格納しておこう。
 
-## ローカル環境でプレビュー
+## ローカル環境でプレビュー {#preview}
 
 このチュートリアル中に新たにデザインを作成し、Jekyll用にコーディングを完成するのは難しいと思うので、ここから先はすでに作成した私のthe_minimumをダウンロードしてから実践して見てほしい。
 
@@ -191,7 +205,7 @@ jekyll --server --auto
 Jekyllは非常に強力なのに、シンプルで、インクルードなど便利な機能もついてくるので使い方を工夫すればすばらしいプロトタイプ作成ツールにもなるのではないかと思って、ベースとなるテンプレートを鋭意作成中。
 話は少しそれたが、思っていた以上に簡単だったのではないだろうか？
 
-## サーバへのアップロード
+## サーバへのアップロード {#upload}
 
 サーバへのアップロードはとても簡単。  
 FTPを使って、``\_site``内に生成されたファイル群をアップロードすればOK。  
@@ -202,7 +216,7 @@ FTPを使って、``\_site``内に生成されたファイル群をアップロ�
 
 美しさの保証はまったくしないが、[Rakefileも公開してある](https://github.com/studiomohawk/CSS-Radar/blob/master/Rakefile)ので参考になれば。
 
-## 最後に
+## 最後に {#conclusion}
 
 Jekyllを使ってみようと思ったきっかけは、Rubyの勉強になるだろうという単純な動機からだったが、今となってはwordpressより手軽で、ページロードのスピードも格段に早く、セキュリティの心配もまったくせずに済む、この環境が気に入っている。  
 もちろん、覚えなければならないことも多いし、バージョンが0.10という若い番号なだけに、きちんとしたドキュメントすら整備されていない。  

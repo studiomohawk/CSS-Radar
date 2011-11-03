@@ -1,8 +1,18 @@
 ---
 layout: post
-title: レスポンシブウェブデザインについて
+title: レスポンシブウェブデザイン
 category: css
+date: 2011-01-24 00:00:00
+toc:
+- {text: レスポンシブウェブデザインとは, hash: whatis}
+- {text: レスポンシブウェブデザインの例, hash: ex}
+- {text: レスポンシブウェブデザインが解決しないこと, hash: whatisnot}
+- {text: Media Queries, hash: mediaqueries}
+- {text: レスポンシブグリッドCSS, hash: gridcss}
+- {text: 参考リンク, hash: links}
 ---
+
+## レスポンシブウェブデザインとは {#whatis}
 
 いまこの記事を読んでいるモニタのサイズは何インチだろうか？  
 iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブック、ノートPC、デスクトップPCと数年前なら思いもよらなかったモニタ/スクリーンサイズでユーザはウェブサイトを閲覧し始めている。
@@ -12,7 +22,7 @@ iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブ�
 その疑問への1つの回答がレスポンシブウェブデザイン(Responsive Web Design)。
 多くの場合、CSS3で利用が可能になる予定のMedia Queriesを活用して、モニタ/スクリーンのサイズに合わせて最適なデザインを供給するデザイン/コーディング手法がレスポンシブウェブデザインと呼ばれている。
 
-## レスポンシブウェブデザインの例
+## レスポンシブウェブデザインの例 {#ex}
 
 - [Simon Collison](http://colly.com/) / Simon Collisonはレスポンシブウェブデザインをいち早く導入したウェブデザイナ
 - [Information Architects](http://www.informationarchitects.jp/en/) / WordPressを使ってレスポンシブデザインを実現している
@@ -20,7 +30,7 @@ iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブ�
 
 実際にサイトを訪れてブラウザのサイズを変更してほしい。サイズに応じてレイアウトが変わっていくのを見てほしい。
 
-## レスポンシブデザインが解決しないこと
+## レスポンシブウェブデザインが解決しないこと {#whatisnot}
 
 *レスポンシブウェブデザインは、特にハンドヘルドデバイス用に最適な解決方法と考えられるが、すべての問題に対する解決を提示できるわけではない。*
 
@@ -51,7 +61,7 @@ A List Apartの記事、[Responsive Web Design](http://www.alistapart.com/articl
 こちらも非常に興味深い。現時点では通常デスクトップ用のデザインからスタートし、その後にハンドヘルドデバイス用に最適化していくのが通常のフローと言えるが、Lukeはモバイルデバイス用のデザインを先に行う事で、モバイルで提供すべきサービスの根幹に集中することができ、デザインだけではなく、UIやサイト構造、そしてインタラクションもシンプルにすることができると話している。  
 ミニマムなスタート地点からデスクトップ用デザインなど大きなモニタ/スクリーン、マウスやキーボードなどに対応するデザインを作ることで、すべてのユーザに対して最適なデザインを提供できるという考え方だ。
 
-## Media Queries
+## Media Queries {@mediaqueries}
 
 レスポンシブデザインでは、多くの場合、CSS3でサポートされる予定のMedia Queriesを活用し、サイズの異なるモニタ/スクリーンに対し最適なデザインを提供する。  
 Media Queriesについては、[Hardboiled Web Design](http://hardboiledwebdesign.com/)の著者であるAndy Clarkの記事[Hardboiled CSS3 Media Queries](http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries)で実例を見る事ができる。
@@ -96,7 +106,7 @@ Androidスマートフォン、iPhone、iPod touch、iPadなどのハンドヘ�
 レスポンシブウェブデザインは*すべてのブラウザで見た目を同じにしなくてはならない*という思想からはほど遠くプログレッシブエンハンスメントという手法に近いので、無理にIE6〜IE8への実装をする必要性はない。  
 レスポンシブウェブデザインは、確かにユーザのスクリーンサイズに合わせた最適なデザインを提供することができるが、それができなくてもユーザビリティはマイナスになったりはしない。
 
-## レスポンシブグリッドCSS
+## レスポンシブグリッドCSS {#gridcss}
 
 レスポンシブグリッドの最大の弱点は、実装がやや大変なこと。現実的にモバイルに最適化されることを想定していないウェブデザインをモバイル用に変更したり、サイズが変わった際にどのようにグリッドが変更していくべきかなど、デザインとテクニックの両面で解決しなければいけない問題点がある。  
 そこで現れ始めたのが、レスポンシブウェブデザインのためのグリッドCSSだ。
@@ -109,7 +119,7 @@ Androidスマートフォン、iPhone、iPod touch、iPadなどのハンドヘ�
 
 こちらは、その名前の通り1140px以上を最大幅とするレスポンシブグリッドCSS。Less Framework3と異なる点はコラムグリッド用のクラスは用意されているところ。そしてコラムグリッドとガター(コラムとコラムの間のマージン)はパーセントで指定されているところ。画像に対しても`max-width`を指定し、モニタ/スクリーンのサイズに対して最適なサイズに変更されるようになっていたりする。Photoshopのファイルも配布している。
 
-## 参考リンク
+## 参考リンク {#links}
 
 - [Responsive Web Design (A list Apart)](http://www.alistapart.com/articles/responsive-web-design/)
 - [Media Queries (W3C)](http://www.w3.org/TR/css3-mediaqueries/)

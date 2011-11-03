@@ -17,9 +17,6 @@
 	{% when 'post' %}
 	<title itemprop="name" content="{{ page.title }} | {{ site.sitename }}">{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
 	<meta itemprop="description" name="description" content="{{ content | strip_html | truncatewords: 25 }}">
-	{% when 'changelog' %}
-	<title itemprop="name" content="{{ page.title }} | {{ site.sitename }}">{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
-	<meta itemprop="description" name="description" content="{{ content | strip_html | truncatewords: 25 }}">
 	{% else %}
 	<title itemprop="name" content="{{ page.title }} | {{ site.sitename }}">{{ page.title }} | {{ site.sitename }} | {{ site.tagline }}</title>
 	<meta itemprop="description" name="description" content="{{ page.desctiption }}">

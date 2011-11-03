@@ -8,11 +8,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<link href='/assets/master.css' rel="stylesheet" media="all">
+	<link href='/style/reset.css' rel="stylesheet" media="all">
+<link href='/style/base.css' rel="stylesheet" media="all">
+<link href='/style/mod.css' rel="stylesheet" media="all">
+<link href='/style/style.css' rel="stylesheet" media="all">
+<link href='/style/syntaxhighlighter.css' rel="stylesheet" media="all">
+<link href='/style/jquery.fancybox.css' rel="stylesheet" media="all">
+<link href='/style/mediaqueries.css' rel="stylesheet" media="all">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
-	<title itemprop="name" content="LESS: CSSをよりシンプルに、パワフルに | CSS Radar">LESS: CSSをよりシンプルに、パワフルに | CSS Radar | For Frond End Developers</title>
-	<meta itemprop="description" name="description" content="If it ain’t broken, don’t fix it. 壊れてないなら、直す必要はない。 CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも簡単に覚えられた。 SASSやLESSのようなCSSの拡張が完全に悪だとは思わないが、絶対に必要だとも感じない。 でも、知っておくともっとシンプルに、もっとパワフルに、もっと素早くCSSを書くことができる、プラスアルファの便利ツールであることは間違いない。 実際このブログでも、ほかの幾つかの個人プロジェクトでは私はLESSを使い始めている。 SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが、LESSはJSを使ってダイナミックにCSSへ変換してくれたりもでき、すこしだけ開発時に楽をできるので私はLESSを選んだ。 もちろん、今話題のNode.jsでも利用できるという点もはやり好きモノの私にはぴったりだ。 ちなみに、SASSでも sass --watch style.scss:style.css とコマンドラインから実行すれば、SASSファイルを保存するたびにCSSへ変換してくれるそうだから、自分の好みに合わせて利用してほしい。 LESSでできること LESSでは、変数、ミックスイン、入れ子ルール、名前空間、四則演算と関数などをCSSに追加することができる。 プログラミングの経験があるなら、それぞれ覚えがあるだろう機能達ばかりで、CSSには存在しない機能。 オフィシャルサイトに詳しく利用法については説明があるので、詳細はこちらを確認してほしい。 もちろん英語なので、日本語訳が必要な場合はメールかTwitter@cssradarでリクエストを。 変数...">
+	<title itemprop="name" content="LESS - CSSプリプロフェッサ | CSS Radar">LESS - CSSプリプロフェッサ | CSS Radar | For Frond End Developers</title>
+	<meta itemprop="description" name="description" content="LESSとは If it ain’t broken, don’t fix it. 壊れてないなら、直す必要はない。 CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも簡単に覚えられた。 SASSやLESSのようなCSSの拡張が完全に悪だとは思わないが、絶対に必要だとも感じない。 でも、知っておくともっとシンプルに、もっとパワフルに、もっと素早くCSSを書くことができる、プラスアルファの便利ツールであることは間違いない。 実際このブログでも、ほかの幾つかの個人プロジェクトでは私はLESSを使い始めている。 SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが、LESSはJSを使ってダイナミックにCSSへ変換してくれたりもでき、すこしだけ開発時に楽をできるので私はLESSを選んだ。 もちろん、今話題のNode.jsでも利用できるという点もはやり好きモノの私にはぴったりだ。 ちなみに、SASSでも sass --watch style.scss:style.css とコマンドラインから実行すれば、SASSファイルを保存するたびにCSSへ変換してくれるそうだから、自分の好みに合わせて利用してほしい。 LESSでできること LESSでは、変数、ミックスイン、入れ子ルール、名前空間、四則演算と関数などをCSSに追加することができる。 プログラミングの経験があるなら、それぞれ覚えがあるだろう機能達ばかりで、CSSには存在しない機能。 オフィシャルサイトに詳しく利用法については説明があるので、詳細はこちらを確認してほしい。 もちろん英語なので、日本語訳が必要な場合はメールかTwitter@cssradarでリクエストを。...">
 	
 	<script>
 	var _gaq = _gaq || [];
@@ -37,59 +43,6 @@
 		<li class="logo"><a href="/">CSS Radar</a></li>
 		<li class="tagline">For Frond End Developers</li>
 	</ul>
-	
-	<ul id="menu" class="menu right">
-		<li>Recent Articles</li>
-	</ul>
-	<nav id="backnumber" class="backnumber">
-		<ul>
-			
-		<li>
-		<h6 class="title"><a href="/tool/2011/09/10/give_something_back_to_open_source_via_github/" title="github - pull requestまでの道のり">github - pull requestまでの道のり</a></h6>
-			<date>
-				<span class="day">10</span>
-				<span class="month"><abbr>Sep</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/tool/2011/07/30/indispensable-mac-apps/" title="必携Mac OSXアプリ12">必携Mac OSXアプリ12</a></h6>
-			<date>
-				<span class="day">30</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド">Vim - ビギナーズサバイバルガイド</a></h6>
-			<date>
-				<span class="day">24</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/git/2011/07/23/git-bits-and-pieces/" title="Git - フロントエンドデベロッパのためのgit">Git - フロントエンドデベロッパのためのgit</a></h6>
-			<date>
-				<span class="day">23</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/tool/2011/06/11/jekyll-101.tool/" title="Jekyllを使ってブログをつくろう">Jekyllを使ってブログをつくろう</a></h6>
-			<date>
-				<span class="day">11</span>
-				<span class="month"><abbr>Jun</abbr></span>
-			</date> 
-		</li>
-		
-		<li class="btn">
-			<a href="/backnumber/" class="btn">Read More</a>
-		</li>
-		</ul>
-	</nav>
-	
 </div>
 </header><!-- id="head" -->
 
@@ -99,20 +52,22 @@
 				<div class="content">
 					<header>
 					<div class="head-inner">
-						<h1>LESS: CSSをよりシンプルに、パワフルに</h1>
+						<h1>LESS - CSSプリプロフェッサ</h1>
 						<div class="meta">
-							<span class="category"><a href="/categories/css/" class="css" title="css">css</a></span>
+							
 							<date class="date-pub" title="2011-04-03T12:51:36+09:00">
 								<span class="day">03</span>
 								<span class="month"><abbr>Apr</abbr></span>
 								<span class="year">2011</span>
 							</date>
-							
+							<span class="category"><a href="/categories/css/" class="css" title="css">css</a></span>
 						</div>
 					</div>
 					</header>
 					<div class="bd">
-                      <p>If it ain’t broken, don’t fix it.</p>
+						<h2 id="whatis">LESSとは</h2>
+
+<p>If it ain’t broken, don’t fix it.</p>
 
 <p>壊れてないなら、直す必要はない。<br />
 CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも簡単に覚えられた。  </p>
@@ -131,7 +86,7 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
 
 <p>とコマンドラインから実行すれば、SASSファイルを保存するたびにCSSへ変換してくれるそうだから、自分の好みに合わせて利用してほしい。  </p>
 
-<h2>LESSでできること</h2>
+<h2 id="feature">LESSでできること</h2>
 
 <p>LESSでは、<strong>変数</strong>、<strong>ミックスイン</strong>、<strong>入れ子ルール</strong>、<strong>名前空間</strong>、<strong>四則演算と関数</strong>などをCSSに追加することができる。<br />
 プログラミングの経験があるなら、それぞれ覚えがあるだろう機能達ばかりで、CSSには存在しない機能。</p>
@@ -308,7 +263,7 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
   </li>
 </ul>
 
-<h2>便利なミックスインのコレクション</h2>
+<h2 id="mixin">便利なミックスインのコレクション</h2>
 
 <p>自分がよく利用するルールのミックスインを定義しておけば、飛躍的にCSSの開発はスピードアップする。<br />
 フロントエンドデベロッパやウェブデザイナはいつだって時間が足りない職種なので、自分なりのコレクションを作って、<a href="https://gist.github.com/">Gist</a>などに置いておくと便利だ。</p>
@@ -320,7 +275,7 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
 
 <p>すでに便利なミックスインを公開している人もいるので、それらから自分の派生を作るほうが早いかも知れないので、ソースを見てみるといいだろう。</p>
 
-<h2>使い方</h2>
+<h2 id="usage">使い方</h2>
 
 <p>ここまで来てようやく使い方の説明になるが、</p>
 
@@ -355,7 +310,7 @@ SASSもLESSもほぼ同じ概念で、ほぼ同じ文法で書かれているが
 
 <p>なお、URLの末尾に<strong>#!watch</strong>としても同じことができるので、開発後に記述を削除するのを忘れそうな人は、こちらをおすすめする。</p>
 
-<h2>開発が終わったら</h2>
+<h2 id="compile">CSSへのコンパイル</h2>
 
 <p>node.jsで動作するサイトでない限りは、LESSの記述はCSSに展開する必要があるだろう。</p>
 
@@ -384,7 +339,7 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 
 <p>のように、<strong>-x</strong>オプションをつけると圧縮したCSSとして展開される。</p>
 
-<h2>参考サイト</h2>
+<h2 id="link">参考リンク</h2>
 
 <ul>
   <li><a href="http://markdotto.com/bootstrap/">Bootstrap.less</a></li>
@@ -394,18 +349,18 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
   <li><a href="http://sass-lang.com/">SASS</a></li>
 </ul>
 
-                      <div class="social">
+						<div class="social">
 	<ul class="list-linear">
 		<li><div class="twitter"><a href="https://twitter.com/cssradar" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#00AEFF"></a></div></li>
 	</ul>
 </div>
 
-                      <div class="ask">
+						<div class="ask">
 	<h3>Ask Me Anything via E-mail</h3>
 	<p class="btn-3d"><a class="askme" href="mailto:cssradar+ask@gmail.com">質問やコメントはEメールにて cssradar+ask@gmail.com</a><small><a href="/ask/">コメントについて</a></small></p>
 </div>
 
-                    </div>
+					</div>
 					<footer>
 					<div class="foot-inner">
 						<nav class="pagenation left">
@@ -417,13 +372,13 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 								<li class="pipe"> | </li>
 								
 								
-								<li class="next"><a class="internal" rel="next"  href="/frontend/2011/04/09/why_speed_matters/" title="View ページの高速化とその方法について">ページの高速化とその方法について &raquo;</a></li>
+								<li class="next"><a class="internal" rel="next"  href="/frontend/2011/04/09/why_speed_matters/" title="View パフォーマンス最適化">パフォーマンス最適化 &raquo;</a></li>
 								
 							</ul>
 						</nav>
 						<nav class="archive right">
 							<ul>
-								<li><a href="/backnumber/">Back Number</a></li>
+								<li><a href="/backnumber/">記事一覧</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -437,11 +392,13 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 	<div class="hasGrid">
 		<div class="left"><h4>about</h4>
 <p>
-現役フロントエンドデベロッパ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
 </p>
 <p>
-<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>で毎日紹介している記事を1週間分まとめてお届けするCSS Radar Newsletterをはじめました。<br>
-こちらから登録できます。<a href="http://tinyletter.com/cssradar">http://tinyletter.com/cssradar</a>
+記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そんな解決への私なりのベストプラクティスを集めていくのがCSS Radarの編集方針。
+</p>
+<p>
+最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。また<a href="http://tinyletter.com/cssradar">CSS Radar Newsletter</a>にて1週間分のつぶやきをまとめてメールマガジンとしてまとめています。
 </p>
 </div>
 		<div class="right"><h4>elsewhere</h4>
@@ -449,7 +406,7 @@ node.jsは恐ろしいほどのスピードで開発が進んでいるので、�
 	<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内のウェブデザイン情報をつぶやきます</li>
 	<li><a href="http://tinyletter.com/cssradar" rel="me" title="Newsletter">CSS Radar Newsletter</a> / CSS Radarニュースレター。Twitterまとめ + α</li>
 	<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
-	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / デザインのインスピレーション収集中、もちろん写真も</li>
+	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / 趣味は写真。Nikon D90ユーザ</li>
 	<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
 	<li><a href="http://www.layouts-the.me/" rel="me" title="_layouts - themes for jekyll">_layouts</a> / Jekyllテーマギャラリー(英語)</li>
 </ul>
@@ -466,8 +423,10 @@ Theme: <a href="https://github.com/studiomohawk/CSS-Radar">the_radar</a> created
 </footer><!-- id="foot" -->
 
 	</div><!-- id="page" -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src='/assets/master.js'></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src='/js/jquery.easing.js'></script>
+<script src='/js/jquery.fancybox.js'></script>
+<script src='/js/common.js'></script>
 
 </body>
 </html>

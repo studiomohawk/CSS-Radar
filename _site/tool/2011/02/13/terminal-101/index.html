@@ -8,11 +8,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<link href='/assets/master.css' rel="stylesheet" media="all">
+	<link href='/style/reset.css' rel="stylesheet" media="all">
+<link href='/style/base.css' rel="stylesheet" media="all">
+<link href='/style/mod.css' rel="stylesheet" media="all">
+<link href='/style/style.css' rel="stylesheet" media="all">
+<link href='/style/syntaxhighlighter.css' rel="stylesheet" media="all">
+<link href='/style/jquery.fancybox.css' rel="stylesheet" media="all">
+<link href='/style/mediaqueries.css' rel="stylesheet" media="all">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
-	<title itemprop="name" content="ターミナルを使いこなす | CSS Radar">ターミナルを使いこなす | CSS Radar | For Frond End Developers</title>
-	<meta itemprop="description" name="description" content="Terminal.appは怖い。 GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。 Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。 MacVimをメインのエディタにしてから3ヶ月ほど、年明けからJekyllを使ってブログを作成しはじめた。Rubyを覚えてみようと今年から勉強中。 自分自身考えてもいなかったが、それらすべてがターミナルの便利さを教えてくれた。 MacVimでは、もちろんコマンドを実行できるが、コマンドそのものとは関係なく、インサートモードとノーマルモードの切り替えというメンタリティはGUIとCUIのメンタリティと似てる。それに覚えるのに時間はかかるかもしれないが、一旦覚えてしまうともう戻れない中毒性に近い利便性を手に入れる楽しみも覚えられた。 Jekyllはターミナルを使わなければブログの更新すら出来なくなる。基本的なコマンドはJekyllを使ううちに覚えてしまった。 Rubyはirbで実際にRubyを使って気楽に自分の書いたコードをテストしたりするのにターミナルを利用している。 ソースコードリーディングのテキストとしてお気に入りのHTML5 Boilerplateで、Build Scriptが追加され、フロントエンドデベロッパの間でも、自前のオートメーションを作ることが当たり前になってきそうな流れもある。 そんなタイミングだからこそ、ターミナルを使いこなせる人になろうと、こんな時代に提言したい。 私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるが、きっかけさえつかんでしまえば、どうにかなる。ちなみに私はWindowsではCygwinをConsoleから利用している。 まずは見た目からカスタマイズ 私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないが、そんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。 だからこそ、ターミナルにも見た目を要求したい。 Visor Visorはターミナルをショートカットキーで呼び出すことが出来るTerminal.appのヘルパ。control+controlで画面の1/3ほどのターミナル画面がスライドしてくる便利でかつ、おしゃれなツール。 MacではiTerm2というターミナル互換アプリも人気があるようで、こちらはVisorとは連動できないが、同じようにショートカットキーで呼び出すことができるオプションがある。 .bashrc(リンク先は私が利用している.bashrcファイルの一部) デフォルトでTerminalを開くと、黒い背景に白い文字。あまりにも地味なので、私はもう少しだけカラフルにしている。 そのついでにGitをターミナルで使いやすくなるように、ブランチ名や変更を知らせてくれるマークもカラーをつけて表示している。 ちょっとカスタマイズしてあげるだけで気持ちよく利用することができる。 Mac OSXでターミナルにgitのブランチ名を表示する方法...">
+	<title itemprop="name" content="コマンドライン | CSS Radar">コマンドライン | CSS Radar | For Frond End Developers</title>
+	<meta itemprop="description" name="description" content="コマンドラインについて Terminal.appは怖い。 GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。 Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。 MacVimをメインのエディタにしてから3ヶ月ほど、年明けからJekyllを使ってブログを作成しはじめた。Rubyを覚えてみようと今年から勉強中。 自分自身考えてもいなかったが、それらすべてがターミナルの便利さを教えてくれた。 MacVimでは、もちろんコマンドを実行できるが、コマンドそのものとは関係なく、インサートモードとノーマルモードの切り替えというメンタリティはGUIとCUIのメンタリティと似てる。それに覚えるのに時間はかかるかもしれないが、一旦覚えてしまうともう戻れない中毒性に近い利便性を手に入れる楽しみも覚えられた。 Jekyllはターミナルを使わなければブログの更新すら出来なくなる。基本的なコマンドはJekyllを使ううちに覚えてしまった。 Rubyはirbで実際にRubyを使って気楽に自分の書いたコードをテストしたりするのにターミナルを利用している。 ソースコードリーディングのテキストとしてお気に入りのHTML5 Boilerplateで、Build Scriptが追加され、フロントエンドデベロッパの間でも、自前のオートメーションを作ることが当たり前になってきそうな流れもある。 そんなタイミングだからこそ、ターミナルを使いこなせる人になろうと、こんな時代に提言したい。 私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるが、きっかけさえつかんでしまえば、どうにかなる。ちなみに私はWindowsではCygwinをConsoleから利用している。 まずは見た目からカスタマイズ 私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないが、そんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。 だからこそ、ターミナルにも見た目を要求したい。 Visor Visorはターミナルをショートカットキーで呼び出すことが出来るTerminal.appのヘルパ。control+controlで画面の1/3ほどのターミナル画面がスライドしてくる便利でかつ、おしゃれなツール。 MacではiTerm2というターミナル互換アプリも人気があるようで、こちらはVisorとは連動できないが、同じようにショートカットキーで呼び出すことができるオプションがある。 .bashrc(リンク先は私が利用している.bashrcファイルの一部) デフォルトでTerminalを開くと、黒い背景に白い文字。あまりにも地味なので、私はもう少しだけカラフルにしている。 そのついでにGitをターミナルで使いやすくなるように、ブランチ名や変更を知らせてくれるマークもカラーをつけて表示している。 ちょっとカスタマイズしてあげるだけで気持ちよく利用することができる。 Mac...">
 	
 	<script>
 	var _gaq = _gaq || [];
@@ -37,59 +43,6 @@
 		<li class="logo"><a href="/">CSS Radar</a></li>
 		<li class="tagline">For Frond End Developers</li>
 	</ul>
-	
-	<ul id="menu" class="menu right">
-		<li>Recent Articles</li>
-	</ul>
-	<nav id="backnumber" class="backnumber">
-		<ul>
-			
-		<li>
-		<h6 class="title"><a href="/tool/2011/09/10/give_something_back_to_open_source_via_github/" title="github - pull requestまでの道のり">github - pull requestまでの道のり</a></h6>
-			<date>
-				<span class="day">10</span>
-				<span class="month"><abbr>Sep</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/tool/2011/07/30/indispensable-mac-apps/" title="必携Mac OSXアプリ12">必携Mac OSXアプリ12</a></h6>
-			<date>
-				<span class="day">30</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド">Vim - ビギナーズサバイバルガイド</a></h6>
-			<date>
-				<span class="day">24</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/git/2011/07/23/git-bits-and-pieces/" title="Git - フロントエンドデベロッパのためのgit">Git - フロントエンドデベロッパのためのgit</a></h6>
-			<date>
-				<span class="day">23</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/tool/2011/06/11/jekyll-101.tool/" title="Jekyllを使ってブログをつくろう">Jekyllを使ってブログをつくろう</a></h6>
-			<date>
-				<span class="day">11</span>
-				<span class="month"><abbr>Jun</abbr></span>
-			</date> 
-		</li>
-		
-		<li class="btn">
-			<a href="/backnumber/" class="btn">Read More</a>
-		</li>
-		</ul>
-	</nav>
-	
 </div>
 </header><!-- id="head" -->
 
@@ -99,20 +52,22 @@
 				<div class="content">
 					<header>
 					<div class="head-inner">
-						<h1>ターミナルを使いこなす</h1>
+						<h1>コマンドライン</h1>
 						<div class="meta">
-							<span class="category"><a href="/categories/tool/" class="tool" title="tool">tool</a></span>
+							
 							<date class="date-pub" title="2011-02-13T00:00:00+09:00">
 								<span class="day">13</span>
 								<span class="month"><abbr>Feb</abbr></span>
 								<span class="year">2011</span>
 							</date>
-							
+							<span class="category"><a href="/categories/tool/" class="tool" title="tool">tool</a></span>
 						</div>
 					</div>
 					</header>
 					<div class="bd">
-                      <p>Terminal.appは怖い。<br />
+						<h2 id="whatis">コマンドラインについて</h2>
+
+<p>Terminal.appは怖い。<br />
 GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。<br />
 Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。  </p>
 
@@ -131,7 +86,7 @@ Script</a>が追加され、フロントエンドデベロッパの間でも、�
 
 <p>私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるが、きっかけさえつかんでしまえば、どうにかなる。ちなみに私はWindowsでは<a href="http://www.cygwin.com/">Cygwin</a>を<a href="http://sourceforge.net/projects/console/">Console</a>から利用している。</p>
 
-<h2>まずは見た目からカスタマイズ</h2>
+<h2 id="custom">まずは見た目からカスタマイズ</h2>
 
 <p>私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないが、そんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。<br />
 だからこそ、ターミナルにも見た目を要求したい。</p>
@@ -190,7 +145,7 @@ open ~/.bashrc
 
 <p>保存したら、上記のコマンドで変更を反映できる。</p>
 
-<h2>ターミナルの使い方</h2>
+<h2 id="howto">ターミナルの使い方</h2>
 
 <p>私自身もまだまだ基本的なコマンドしかソラでは実行できない。必要に応じてコマンドは覚えていけばいいので、自分のペースで続けていってほしい。<br />
 まずはターミナルで使える便利なショートカットキーを、そして実際にいくつかコマンドを見ていこう。</p>
@@ -245,7 +200,7 @@ DIR_NAME</code>でDIR_NAMEというディレクトリを作成できる。</li>
 とりあえずのところは、<code>open
 DIR_NAME</code>としてFinderを立ち上げてコピーや削除をすれば問題ない。</p>
 
-<h2>パッケージマネジャ</h2>
+<h2 id="package">パッケージマネジャ</h2>
 
 <p>Bashだけでももちろん協力なツールではあるが、せっかくだからもっとたくさん機能を追加してみたい。<br />
 RubyやPython、Javaなどコマンドラインでも使える強力なツールがあるが、これらのツールを管理するのはとても大変。そのために<strong>パッケージマネジャ</strong>が必要になってくる。</p>
@@ -255,7 +210,7 @@ RubyやPython、Javaなどコマンドラインでも使える強力なツール
 <p><a href="http://mxcl.github.com/homebrew/">Homebrew</a>はシンプルで強力な、新しい世代のパッケージマネジャ。非常に簡単にインストールできるし、利用も簡単なので、初心者にはもってこいのパッケージマネジャ。<br />
 私はHomebrewでgitをインストールし直した。こちらのほうがアップデートが簡単にできるということで。</p>
 
-<h2>Homebrewのインストール</h2>
+<h3>Homebrewのインストール</h3>
 
 <ol>
   <li>
@@ -287,7 +242,7 @@ list</code>とすると、インストールされているツールの一覧を
 
 <p>英語ではあるが、brewのコマンドは<a href="https://github.com/mxcl/homebrew/wiki/The-brew-command">こちら</a></p>
 
-<h2>ターミナルの世界へようこそ</h2>
+<h2 id="conclusion">ターミナルの世界へようこそ</h2>
 
 <p>ここまでできたら、すっかりコマンド使いっぽく見える。コマンドラインになれてきたら次のステップはオートメーション。<br />
 私はRubyのRakeを使って、いろいろなタスクを自動化しはじめている。<br />
@@ -300,24 +255,24 @@ Spriteを自動化</a>したりすることもできるようなので、あの3
 
 <p>どこかの本で読んだことの受け売りだが、60分かかるタスクがあるとしたら、59分かけてそのタスクを行うスクリプトを書いて、1分で実行する。これからのウェブデザイン/フロントエンドデベロッパにはそんな心構えが必要になってくるだろう。</p>
 
-                      <div class="social">
+						<div class="social">
 	<ul class="list-linear">
 		<li><div class="twitter"><a href="https://twitter.com/cssradar" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#00AEFF"></a></div></li>
 	</ul>
 </div>
 
-                      <div class="ask">
+						<div class="ask">
 	<h3>Ask Me Anything via E-mail</h3>
 	<p class="btn-3d"><a class="askme" href="mailto:cssradar+ask@gmail.com">質問やコメントはEメールにて cssradar+ask@gmail.com</a><small><a href="/ask/">コメントについて</a></small></p>
 </div>
 
-                    </div>
+					</div>
 					<footer>
 					<div class="foot-inner">
 						<nav class="pagenation left">
 							<ul>
 								
-								<li class="prev"><a class="internal" rel="prev"  href="/tool/2011/01/29/git-version-control/" title="View Gitでバージョンコントロール">&laquo; Gitでバージョンコントロール</a></li>
+								<li class="prev"><a class="internal" rel="prev"  href="/tool/2011/01/29/git-version-control/" title="View Git バージョンコントロール">&laquo; Git バージョンコントロール</a></li>
 								
 								
 								<li class="pipe"> | </li>
@@ -329,7 +284,7 @@ Spriteを自動化</a>したりすることもできるようなので、あの3
 						</nav>
 						<nav class="archive right">
 							<ul>
-								<li><a href="/backnumber/">Back Number</a></li>
+								<li><a href="/backnumber/">記事一覧</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -343,11 +298,13 @@ Spriteを自動化</a>したりすることもできるようなので、あの3
 	<div class="hasGrid">
 		<div class="left"><h4>about</h4>
 <p>
-現役フロントエンドデベロッパ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
 </p>
 <p>
-<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>で毎日紹介している記事を1週間分まとめてお届けするCSS Radar Newsletterをはじめました。<br>
-こちらから登録できます。<a href="http://tinyletter.com/cssradar">http://tinyletter.com/cssradar</a>
+記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そんな解決への私なりのベストプラクティスを集めていくのがCSS Radarの編集方針。
+</p>
+<p>
+最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。また<a href="http://tinyletter.com/cssradar">CSS Radar Newsletter</a>にて1週間分のつぶやきをまとめてメールマガジンとしてまとめています。
 </p>
 </div>
 		<div class="right"><h4>elsewhere</h4>
@@ -355,7 +312,7 @@ Spriteを自動化</a>したりすることもできるようなので、あの3
 	<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内のウェブデザイン情報をつぶやきます</li>
 	<li><a href="http://tinyletter.com/cssradar" rel="me" title="Newsletter">CSS Radar Newsletter</a> / CSS Radarニュースレター。Twitterまとめ + α</li>
 	<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
-	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / デザインのインスピレーション収集中、もちろん写真も</li>
+	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / 趣味は写真。Nikon D90ユーザ</li>
 	<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
 	<li><a href="http://www.layouts-the.me/" rel="me" title="_layouts - themes for jekyll">_layouts</a> / Jekyllテーマギャラリー(英語)</li>
 </ul>
@@ -372,8 +329,10 @@ Theme: <a href="https://github.com/studiomohawk/CSS-Radar">the_radar</a> created
 </footer><!-- id="foot" -->
 
 	</div><!-- id="page" -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src='/assets/master.js'></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src='/js/jquery.easing.js'></script>
+<script src='/js/jquery.fancybox.js'></script>
+<script src='/js/common.js'></script>
 
 </body>
 </html>

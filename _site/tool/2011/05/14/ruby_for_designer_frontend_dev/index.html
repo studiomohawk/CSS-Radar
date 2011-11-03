@@ -8,11 +8,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="VCjPu4enLtZl8QXpuPVxY6vMufxe68UrchkhHkzz1zA">
 	<link href="http://feeds.feedburner.com/CssRadar" rel="alternate" title="CSS Radar | For Frond End Developers" type="application/atom+xml">
-	<link href='/assets/master.css' rel="stylesheet" media="all">
+	<link href='/style/reset.css' rel="stylesheet" media="all">
+<link href='/style/base.css' rel="stylesheet" media="all">
+<link href='/style/mod.css' rel="stylesheet" media="all">
+<link href='/style/style.css' rel="stylesheet" media="all">
+<link href='/style/syntaxhighlighter.css' rel="stylesheet" media="all">
+<link href='/style/jquery.fancybox.css' rel="stylesheet" media="all">
+<link href='/style/mediaqueries.css' rel="stylesheet" media="all">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 	
-	<title itemprop="name" content="ウェブデザイナのためのRuby入門 | CSS Radar">ウェブデザイナのためのRuby入門 | CSS Radar | For Frond End Developers</title>
-	<meta itemprop="description" name="description" content="CSS Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。 今回はCSSやデザインからはほど遠いように思えるRubyについて。 前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。 Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら、面倒なことを楽にすることもでき始めてきた。 そこで、Rubyを少しだけ使い倒す方法を紹介しようと思い立った。 たまにはPhotoshopを離れて(私はあまり使いませんが)、新しいことに挑戦してみませんか？ *私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。 なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。 Rubyのインストール Mac OS XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。 MacにおけるRubyの管理は、RVM - Ruby Version Managerがおすすめ。 RVMを利用するためには、gitが必須になる。gitのインストールについては、こちらを参照してほしい。 RVMのインストール方法 ターミナルを開いて、 sudo bash &lt;...">
+	<title itemprop="name" content="ウェブデザイナのためのRuby | CSS Radar">ウェブデザイナのためのRuby | CSS Radar | For Frond End Developers</title>
+	<meta itemprop="description" name="description" content="Rubyはウェブデザイナに優しい CSS Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。 今回はCSSやデザインからはほど遠いように思えるRubyについて。 前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。 Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら、面倒なことを楽にすることもでき始めてきた。 そこで、Rubyを少しだけ使い倒す方法を紹介しようと思い立った。 たまにはPhotoshopを離れて(私はあまり使いませんが)、新しいことに挑戦してみませんか？ *私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。 なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。 Rubyのインストール Mac OS XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。 MacにおけるRubyの管理は、RVM - Ruby Version Managerがおすすめ。 RVMを利用するためには、gitが必須になる。gitのインストールについては、こちらを参照してほしい。 RVMのインストール方法 ターミナルを開いて、 sudo bash...">
 	
 	<script>
 	var _gaq = _gaq || [];
@@ -37,59 +43,6 @@
 		<li class="logo"><a href="/">CSS Radar</a></li>
 		<li class="tagline">For Frond End Developers</li>
 	</ul>
-	
-	<ul id="menu" class="menu right">
-		<li>Recent Articles</li>
-	</ul>
-	<nav id="backnumber" class="backnumber">
-		<ul>
-			
-		<li>
-		<h6 class="title"><a href="/tool/2011/09/10/give_something_back_to_open_source_via_github/" title="github - pull requestまでの道のり">github - pull requestまでの道のり</a></h6>
-			<date>
-				<span class="day">10</span>
-				<span class="month"><abbr>Sep</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/tool/2011/07/30/indispensable-mac-apps/" title="必携Mac OSXアプリ12">必携Mac OSXアプリ12</a></h6>
-			<date>
-				<span class="day">30</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim - ビギナーズサバイバルガイド">Vim - ビギナーズサバイバルガイド</a></h6>
-			<date>
-				<span class="day">24</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/git/2011/07/23/git-bits-and-pieces/" title="Git - フロントエンドデベロッパのためのgit">Git - フロントエンドデベロッパのためのgit</a></h6>
-			<date>
-				<span class="day">23</span>
-				<span class="month"><abbr>Jul</abbr></span>
-			</date> 
-		</li>
-		
-		<li>
-		<h6 class="title"><a href="/tool/2011/06/11/jekyll-101.tool/" title="Jekyllを使ってブログをつくろう">Jekyllを使ってブログをつくろう</a></h6>
-			<date>
-				<span class="day">11</span>
-				<span class="month"><abbr>Jun</abbr></span>
-			</date> 
-		</li>
-		
-		<li class="btn">
-			<a href="/backnumber/" class="btn">Read More</a>
-		</li>
-		</ul>
-	</nav>
-	
 </div>
 </header><!-- id="head" -->
 
@@ -99,20 +52,22 @@
 				<div class="content">
 					<header>
 					<div class="head-inner">
-						<h1>ウェブデザイナのためのRuby入門</h1>
+						<h1>ウェブデザイナのためのRuby</h1>
 						<div class="meta">
-							<span class="category"><a href="/categories/tool/" class="tool" title="tool">tool</a></span>
+							
 							<date class="date-pub" title="2011-05-14T00:03:59+09:00">
 								<span class="day">14</span>
 								<span class="month"><abbr>May</abbr></span>
 								<span class="year">2011</span>
 							</date>
-							
+							<span class="category"><a href="/categories/tool/" class="tool" title="tool">tool</a></span>
 						</div>
 					</div>
 					</header>
 					<div class="bd">
-                      <p>CSS
+						<h2 id="rubyis">Rubyはウェブデザイナに優しい</h2>
+
+<p>CSS
 Radarと名がついている割には、CSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。<br />
 今回はCSSやデザインからはほど遠いように思えるRubyについて。<br />
 前にも書いた気がするが、私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。
@@ -124,7 +79,7 @@ Rubyにチャレンジしている真っ最中ながら、色々な新しい概�
 <p class="small">*私はRuby初心者ですので、間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。<br />
 なお、今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。</p>
 
-<h2 id="rubyinstall">Rubyのインストール</h2>
+<h2 id="install">Rubyのインストール</h2>
 
 <p>Mac OS
 XにはRubyが標準でインストールされている。でも、最新版ではなく、まれに最新版でないと動作しないプログラムもあるので、最新版をインストールしておく必要がある。</p>
@@ -200,7 +155,7 @@ rvm default <span class="c"># デフォルト設定したRubyを切り替える�
 
 <p>詳しくは<a href="https://rvm.beginrescueend.com/">https://rvm.beginrescueend.com/</a>(英語)</p>
 
-<h2>Ruby Gem</h2>
+<h2 id="gem">Ruby Gem</h2>
 
 <p>RubyにはGemと呼ばれるパッケージマネージャがある。1.9系以降からはRubyの標準機能となったそうだ。<br />
 MacではGemも標準でインストールされていたと思うが、記憶が確かではないので確認してほしい。</p>
@@ -227,7 +182,7 @@ MacではGemも標準でインストールされていたと思うが、記憶�
 
 <p>とすると、Ruby版make(ビルドツール)であるrakeをインストールできる。  </p>
 
-<h2>ウェブデザイナにおすすめのパッケージ</h2>
+<h2 id="package">ウェブデザイナにおすすめのパッケージ</h2>
 
 <h3>CSS Sprite</h3>
 
@@ -457,7 +412,7 @@ svn checkout http://css-redundancy-checker.googlecode.com/svn/trunk/ css-redunda
 Radarの癖にRakeの詳しい説明を知りたい方は、<a href="http://twitter.com/#!/cssradar">Twitter@cssradar</a>にてリクエストしてほしい。<br />
 私も覚えたてなので、全部の質問には答えることができるかわからないが。</p>
 
-<h2>ウェブデザイナ/フロントエンドデベロッパのRuby</h2>
+<h2 id="conclusion">まとめ</h2>
 
 <p>ウェブデザイナ/フロントエンドデベロッパのタスクは多岐に渡る。<br />
 Adobe
@@ -468,36 +423,36 @@ Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/ア�
 新しいことへの出会いはいつだってインスピレーションへ続く近道だと信じているので、是非チャレンジしてほしい。<br />
 もし今回紹介しなかった便利なスクリプトなどご存知でしたら、是非教えてください。</p>
 
-                      <div class="social">
+						<div class="social">
 	<ul class="list-linear">
 		<li><div class="twitter"><a href="https://twitter.com/cssradar" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#00AEFF"></a></div></li>
 	</ul>
 </div>
 
-                      <div class="ask">
+						<div class="ask">
 	<h3>Ask Me Anything via E-mail</h3>
 	<p class="btn-3d"><a class="askme" href="mailto:cssradar+ask@gmail.com">質問やコメントはEメールにて cssradar+ask@gmail.com</a><small><a href="/ask/">コメントについて</a></small></p>
 </div>
 
-                    </div>
+					</div>
 					<footer>
 					<div class="foot-inner">
 						<nav class="pagenation left">
 							<ul>
 								
-								<li class="prev"><a class="internal" rel="prev"  href="/webdesign/2011/04/16/designing_in_browser/" title="View ブラウザでデザインをするということ">&laquo; ブラウザでデザインをするということ</a></li>
+								<li class="prev"><a class="internal" rel="prev"  href="/webdesign/2011/04/16/designing_in_browser/" title="View インブラウザ デザイン">&laquo; インブラウザ デザイン</a></li>
 								
 								
 								<li class="pipe"> | </li>
 								
 								
-								<li class="next"><a class="internal" rel="next"  href="/tool/2011/06/11/jekyll-101.tool/" title="View Jekyllを使ってブログをつくろう">Jekyllを使ってブログをつくろう &raquo;</a></li>
+								<li class="next"><a class="internal" rel="next"  href="/tool/2011/06/11/jekyll-101.tool/" title="View Jekyll">Jekyll &raquo;</a></li>
 								
 							</ul>
 						</nav>
 						<nav class="archive right">
 							<ul>
-								<li><a href="/backnumber/">Back Number</a></li>
+								<li><a href="/backnumber/">記事一覧</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -511,11 +466,13 @@ Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/ア�
 	<div class="hasGrid">
 		<div class="left"><h4>about</h4>
 <p>
-現役フロントエンドデベロッパ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
 </p>
 <p>
-<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>で毎日紹介している記事を1週間分まとめてお届けするCSS Radar Newsletterをはじめました。<br>
-こちらから登録できます。<a href="http://tinyletter.com/cssradar">http://tinyletter.com/cssradar</a>
+記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そんな解決への私なりのベストプラクティスを集めていくのがCSS Radarの編集方針。
+</p>
+<p>
+最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。また<a href="http://tinyletter.com/cssradar">CSS Radar Newsletter</a>にて1週間分のつぶやきをまとめてメールマガジンとしてまとめています。
 </p>
 </div>
 		<div class="right"><h4>elsewhere</h4>
@@ -523,7 +480,7 @@ Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/ア�
 	<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内のウェブデザイン情報をつぶやきます</li>
 	<li><a href="http://tinyletter.com/cssradar" rel="me" title="Newsletter">CSS Radar Newsletter</a> / CSS Radarニュースレター。Twitterまとめ + α</li>
 	<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
-	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / デザインのインスピレーション収集中、もちろん写真も</li>
+	<li><a href="http://www.flickr.com/photos/studiomohawk/" rel="me" title="Flickr">Flickr</a> / 趣味は写真。Nikon D90ユーザ</li>
 	<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
 	<li><a href="http://www.layouts-the.me/" rel="me" title="_layouts - themes for jekyll">_layouts</a> / Jekyllテーマギャラリー(英語)</li>
 </ul>
@@ -540,8 +497,10 @@ Theme: <a href="https://github.com/studiomohawk/CSS-Radar">the_radar</a> created
 </footer><!-- id="foot" -->
 
 	</div><!-- id="page" -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src='/assets/master.js'></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src='/js/jquery.easing.js'></script>
+<script src='/js/jquery.fancybox.js'></script>
+<script src='/js/common.js'></script>
 
 </body>
 </html>
