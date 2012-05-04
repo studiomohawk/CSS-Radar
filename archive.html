@@ -1,0 +1,28 @@
+---
+layout: archive
+---
+<div class="mod mod-backnumber">
+	<div class="inner">
+		<div class="hd">
+			<h1>Back Number</h1>
+		</div>
+		<div class="bd">
+			<ul class="list-none">
+			{% for post in site.posts %}
+			<li>
+			<div class="group cf">
+				<a href="{{ post.url }}" title="{{ post.title }}">
+				<time class="date-pub milli" title="{{ post.date | date_to_xmlschema }}">
+					<span class="year">{{ post.date | date: '%y' }}</span>
+					<span class="month">{{ post.date | date: '%m' }}</span>
+					<span class="day">{{ post.date | date: '%d' }}</span>
+				</time>
+				<h2 class="post-title">{{ post.title }}</h2>
+				</a>
+				</div><!-- group -->
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->

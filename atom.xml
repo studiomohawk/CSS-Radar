@@ -1,0 +1,34 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<link rel="hub" href="https://pubsubhubbub.appspot.com"/>
+	<title>{{ site.sitename }} | {{ site.tagline }}</title>
+	<link href="{{ site.url }}/atom.xml" rel="self"/>
+	<link href="{{ site.url }}"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://css.studiomohawk.com/</id>
+	<author>
+		<name>Yuya Saito</name>
+		<email>cssradar@gmail.com</email>
+	</author>
+	{% for post in site.posts %}
+		<entry>
+			<title>{{ post.title }}</title>
+			<link href="{{ site.url }}{{ post.url }}"/>
+			<updated>{{ post.update }}</updated>
+			<id>{{ site.url }}{{ post.id }}</id>
+			<content type="html">
+				{{ post.content | xml_escape }}
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	{% endfor %}
+</feed>

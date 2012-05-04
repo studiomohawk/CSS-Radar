@@ -1,0 +1,17 @@
+/*
+## border-radius
+
+- @param top-left-radius: px, em, %;
+- @param top-right-radius: px, em, %;
+- @param bottom-right-radius: px, em, %;
+- @param bottom-left-radius : px, em, %;
+*/
+.border-radius(...) {
+      -webkit-border-radius: @arguments;
+         -moz-border-radius: @arguments;
+              border-radius: @arguments;
+
+    -webkit-background-clip: padding-box;
+       -moz-background-clip: padding;
+            background-clip: padding-box;
+}

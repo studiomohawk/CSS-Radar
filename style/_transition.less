@@ -1,0 +1,16 @@
+/*
+## transition
+
+- @param properties: all, left, opacity, etc;
+- @param duration: 1s, 1000ms;
+- @param delay: 1s, 1000ms;
+- @param easing: linear, ease-in-out, etc;
+*/
+
+.transition(...) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+        -ms-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}

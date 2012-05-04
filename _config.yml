@@ -1,0 +1,19 @@
+# Presentation Settings
+
+sitename: CSS Radar
+tagline: Little Books For Front End Developers
+desc: 現役フロントエンドデベロッパ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+url: http://css.studiomohawk.com
+
+# TOOL Settings
+ga: UA-61203-11
+
+# System Settings
+
+pygments:    true
+markdown:    kramdown
+permalink:   pretty
+kramdown:
+  auto_ids: false
+exclude: LICENSE, README.markdown, Rakefile, .rbenv-version
+include: _includes

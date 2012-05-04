@@ -1,0 +1,22 @@
+/*
+## mod
+
+.mod is from OOCSS by Nicole Sullivan
+*/
+
+.mod {
+	.bd, .ft, .hd { overflow:hidden; *overflow:visible; zoom:1; }
+}
+
+/*
+## media
+
+.media is from OOCSS by Nicole Sullivan
+*/
+
+.media {
+	overflow:hidden; *overflow:visible; zoom:1;
+	.img (@space: 10px) { float:left; margin-right: @space; }
+	.img img, .imgExt img { display:block; }
+	.imgExt (@space: 10px) { float:right; margin-left: @space; }
+}

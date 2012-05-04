@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja" itemscope itemtype="http://schema.org/Blog" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"
+>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+  <title itemprop="name" content="Build Script using Jake | Public Draft">Build Script using Jake | Public Draft | Just writing down what I've found and collected</title>
+  <meta itemprop="description" name="description" property="og:description" content="パッケージ LESS akoenig/laessig .lessファイルの保存時にLESSをCSSに変換。 laessig observe /the/path/to/your/file.less CSS圧縮 ded/sqwish sqwish styles.css sqwish styles.css --strict / 重複するセレクタをマージ CSS結合 cloudhead/less.js master.lessなどに@importで全CSSファイルを呼び出す。 LESSのコンパイルで結合。 CSS シンタックスチェック Command-line Interface ·...">
+  
+  <meta property="og:type" content="blog">
+  <meta property="og:url" content="http://publicdraft.studiomohawk.com">
+  <meta property="og:image" content="http://publicdraft.studiomohawk.com/inazuma-icon-200.png">
+  <meta property="og:site_name" content="Public Draft | Just writing down what I've found and collected">
+
+  <meta name="viewport" content="width=device-width">
+  <link href="http://publicdraft.studiomohawk.com/atom.xml" rel="alternate" title="Public Draft | Just writing down what I've found and collected" type="application/atom+xml">
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo kilo"><a href="/">Public Draft</a></p></div>
+				<div class="bd"><p class="tagline">Just writing down what I've found and collected</p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<time class="date-pub milli" title="2012-04-07T00:00:00+09:00">
+					<span class="year">12</span>
+					<span class="month">04</span>
+					<span class="day">07</span>
+				</time>
+				<h1 class="post-title">Build Script using Jake</h1>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2>パッケージ</h2>
+
+<h3>LESS</h3>
+
+<p><strong><a href="https://github.com/akoenig/laessig">akoenig/laessig</a></strong></p>
+
+<ul>
+  <li><code>.less</code>ファイルの保存時にLESSをCSSに変換。</li>
+  <li><code>laessig observe /the/path/to/your/file.less</code></li>
+</ul>
+
+<h3>CSS圧縮</h3>
+
+<p><strong><a href="https://github.com/ded/sqwish">ded/sqwish</a></strong></p>
+
+<ul>
+  <li><code>sqwish styles.css</code>  </li>
+  <li><code>sqwish styles.css --strict</code> / 重複するセレクタをマージ</li>
+</ul>
+
+<h3>CSS結合</h3>
+
+<p><strong><a href="https://github.com/cloudhead/less.js">cloudhead/less.js</a></strong></p>
+
+<ul>
+  <li><code>master.less</code>などに<code>@import</code>で全CSSファイルを呼び出す。  </li>
+  <li>LESSのコンパイルで結合。</li>
+</ul>
+
+<h3>CSS シンタックスチェック</h3>
+
+<p><strong><a href="https://github.com/stubbornella/csslint/wiki/Command-line-interface">Command-line Interface · stubbornella/csslint Wiki</a></strong></p>
+
+<h3>JavaScript圧縮</h3>
+
+<p><strong><a href="https://github.com/mishoo/UglifyJS">mishoo/UglifyJS</a></strong></p>
+
+<ul>
+  <li><code>uglifyjs -o OUTPUT-FILENAME INPUT-FILENAME</code> / ファイル名を変更  </li>
+  <li><code>uglifyjs --overwrite INPUT_FILENAME</code> / ファイルを上書き</li>
+</ul>
+
+<h3>JavaScript結合</h3>
+
+<p><strong><a href="https://github.com/ender-js/Ender">ender-js/Ender</a></strong>  </p>
+
+<p><a href="http://ender.no.de/#publishing">Ender / publishing</a>でEnder用のパッケージの作成方法について書かれている。  </p>
+
+<p>疑問: <code>repository</code>は必須か？</p>
+
+<h3>JavaScript シンタックスチェック</h3>
+
+<p><strong><a href="https://github.com/jshint/node-jshint/">jshint/node-jshint</a></strong></p>
+
+<h3>その他</h3>
+
+<ul>
+  <li><strong><a href="https://github.com/ryanmcgrath/wrench-js">ryanmcgrath/wrench-js</a></strong> / ファイルの作成、コピー、移動</li>
+  <li><strong><a href="https://github.com/isaacs/node-glob">isaacs/node-glob</a></strong> / ファイルパスを文字列パターンから検索</li>
+</ul>
+
+<h2>Ruby / Python / UNIXツール</h2>
+
+<ul>
+  <li><a href="http://yostudios.github.com/Spritemapper/">Spritemapper</a> / CSS Spriteの生成</li>
+  <li>gifsicle、libjpeg、optipng、pngcrushを使った画像最適化</li>
+  <li>rsyncでサーバにアップ</li>
+</ul>
+
+<h2>参考リンク</h2>
+
+<h3>記事</h3>
+
+<ul>
+  <li><a href="http://blog.millermedeiros.com/node-js-as-a-build-script/">Node.js as a build script by Miller Medeiros</a></li>
+  <li><a href="http://howtonode.org/intro-to-jake">Intro to Jake - JavaScript build tool for Node.js by How To Node</a></li>
+  <li><a href="http://clock.co.uk/tech-blogs/deploying-nodejs-apps">Deploying node.js apps by Ben Gourley by Clock</a></li>
+  <li><a href="http://upliftingcode.com/blog/front-end-build-script-tasks">upliftingcode: Front End Build Script Tasks - deciphering the web one variable at a time</a></li>
+</ul>
+
+<h3>リポジトリ</h3>
+
+<ul>
+  <li><a href="https://github.com/balupton/buildr.npm">balupton/buildr.npm</a> / 画像圧縮まわり</li>
+  <li><a href="https://github.com/BrainSwap/Mandible2">BrainSwap/Mandible2</a> / jakeFileの設定まわり</li>
+  <li><a href="https://github.com/mde/jake">mde/jake</a> / jakeのシンタックス</li>
+  <li><a href="https://github.com/h5bp/node-build-script">h5bp/node-build-script</a> / デファクトデフォルトなので参考に</li>
+</ul>
+
+				</div>
+			<div class="mod mod-social">
+	<div class="inner">
+		<div class="bd">
+			<ul class="list-linear">
+				<li>
+					<!-- facebook like -->
+					<div class="fb-like" data-href="http://publicdraft.studiomohawk.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="lucida grande"></div>
+				</li>
+				<li>
+					<!-- twitter -->
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="cssradar" data-lang="en">Tweet</a>
+				</li>
+				<li>
+					<!-- g+ -->
+					<div class="g-plusone" data-size="medium"></div>
+				</li>
+				<li>
+					<!-- twitter -->
+					<a href="https://twitter.com/cssradar" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @cssradar</a>
+				</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+			</div>
+			<div class="ft">
+				<div class="group">
+					<nav class="page-nav-bottom">
+						
+						
+						<span class="page-nav-item right"><a class="internal" rel="next"	href="/research/2012/04/14/01-02-sublimetext2/" title="	View Sublime Text 2">View next article &rarr;</a></span>
+						
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p class="delta bold"><a href="/"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4>Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="zocial github" href="https://github.com/studiomohawk/publicdraft/issues/new" target="_blank">
+      	<span>Ask Me on Github</span>
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4>About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			斉藤祐也、東京下町出身の現役フロントエンドデベロッパ / ウェブデザイナのリサーチログ。
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4>Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://css.studiomohawk.com/" rel="me" title="CSS Radar">CSS Radar</a> / フロントエンダのためのミニブック</li>
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報をつぶやきます</li>
+				<li><a href="http://newsletter.studiomohawk.com/" rel="me" title="Newsletter">CSS Radar Newsletter</a> / Twitterで紹介した記事1週間分にサマリを追加して紹介します。</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+</div><!-- #page -->
+<div id="fb-root"></div><!-- fb needs this -->
+<script src="/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-19'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<link rel="hub" href="https://pubsubhubbub.appspot.com"/>
+	<title>Public Draft | Just writing down what I've found and collected</title>
+	<link href="http://publicdraft.studiomohawk.com/atom.xml" rel="self"/>
+	<link href="http://publicdraft.studiomohawk.com"/>
+	<updated>2012-05-04T23:41:09+09:00</updated>
+	<id>http://css.studiomohawk.com/</id>
+	<author>
+		<name>Yuya Saito</name>
+		<email>cssradar@gmail.com</email>
+	</author>
+	
+		<entry>
+			<title>Sublime Text 2</title>
+			<link href="http://publicdraft.studiomohawk.com/research/2012/04/14/01-02-sublimetext2/"/>
+			<updated></updated>
+			<id>http://publicdraft.studiomohawk.com/research/2012/04/14/01-02-sublimetext2</id>
+			<content type="html">
+				&lt;h2&gt;インストール&lt;/h2&gt;
+
+&lt;p&gt;まずは&lt;strong&gt;インストール&lt;/strong&gt;から。&lt;br /&gt;
+Sublime Text 2はかなりアクティブに更新されているのでdev buildをインストールして最新機能を使えるようにしておこう。&lt;br /&gt;
+&lt;a href=&quot;http://www.sublimetext.com/dev&quot;&gt;Sublime Text 2 - Dev Builds&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;プラグインをインストール&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://wbond.net/sublime_packages/package_control/installation&quot;&gt;Sublime Package Control&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sublime Text 2をインストールし終えたらまずはじめにやっておくべきことがこのSublime Package Controlをイントールすること。&lt;/p&gt;
+
+&lt;p&gt;Sublime Text 2をスタートしてControl + `(View → Show Console)としてConsoleを立ち上げて&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;py&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Package Control.sublime-package&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sublime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;installed_packages_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;makedirs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_opener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build_opener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ProxyHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()));&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;wb&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://sublime.wbond.net/&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;%20&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;Please restart Sublime Text to finish installation&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;この文字列をコピー&amp;amp;ペーストしてSublime Text2を再起動すれば完了。&lt;br /&gt;
+Package ControlはControl + Shift + pでCommand Palleteを立ち上げて、installをタイプしてみよう。&lt;br /&gt;
+するとPackage Control: Install Packageのオプションがハイライトされるのでエンター。&lt;br /&gt;
+探しているプラグイン名をタイプしてエンターすればプラグインのインストールが開始される。&lt;/p&gt;
+
+&lt;p&gt;Command PalleteからでもPackage Controlで管理されているプラグインを一覧できるが、若干読みづらいと思うのでウェブ上で登録されているプラグインをみることができる&lt;a href=&quot;http://wbond.net/sublime_packages/community&quot;&gt;こちら&lt;/a&gt;を参考に。現時点で288のプラグインが登録されている。&lt;/p&gt;
+
+&lt;h2&gt;ショートカット&lt;/h2&gt;
+
+&lt;h3&gt;覚えておきたいショートカット&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Control + Shift + p / Command Palleteを立ち上げる  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Command PalleteからSublime Text 2の様々な機能やスニペットを検索できます。Package Controlもここからアクセスできる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Command + p / ファイルファインダを立ち上げる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;現在開いているファイルやフォルダ、プロジェクト内をキーワードでファイルを検索、開く。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Command + Control + G / Multi-Select&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;文字列を選択してからこのショートカットを入力するとファイル内にある文字列から選択した文字列と同じ文字列が選択される。この状態で編集するとすべての文字列が置き換えられる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Command + Shift + a / Expand Selection To Tag&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;カーソルのある部分からHTMLのタグ範囲を選択するショートカット。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Command + Option + 1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;単一ウィンドウに切り替え。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Command + Option + Shift + 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ウィンドウを縦に分割。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Command + /&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;コメントをトグルする&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Option + Control + f&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/SublimeText/Tag&quot;&gt;Tag&lt;/a&gt; プラグイン導入済みの場合。&lt;br /&gt;
+選択範囲でHTMLタグをフォーマットする。&lt;/p&gt;
+
+&lt;h2&gt;設定&lt;/h2&gt;
+
+&lt;p&gt;Sublime Text 2ではEmacsやVimのように設定ファイルを編集することで設定を変更できる。Preferences → Settings - Defaultを開いて、変更したい部分をコピーしてから、Preferences → Settings - Userにペーストして設定を変更しよう。  &lt;/p&gt;
+
+&lt;p&gt;同様にキーバインドもPreferences → Key Bindings - Defaultを開いて、変更したい部分をコピーして、Preferences → Key Bindings - Userにペーストして設定を変更できる。&lt;/p&gt;
+
+&lt;p&gt;どちらの設定ファイルもJSON形式で書かれているので	編集はそれほど難しくない。&lt;/p&gt;
+
+&lt;h2&gt;おすすめプラグイン&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/sublimator/sublime-2-zencoding&quot;&gt;Zen Coding&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;HTML、CSSをより早く記述するのに便利なZen Coding。Package Controlから直接はインストールできなかったので、Package Control: add repositoryからhttps://bitbucket.org/sublimator/sublime-2-zencodingを追加してインストールした。  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;div.text&lt;/code&gt;のようないつもの記述をtabでExpandしてくれる。他のコマンドについては~/Library/Application\ Support/Sublime\ Text\ 2/Packages/ZenCodingのkeymapを確認できる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/wbond/sublime_prefixr&quot;&gt;Sublime Prefixr&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CSS3のブラウザベンダープリフィックスを補完してくれるウェブサービス&lt;a href=&quot;http://prefixr.com/&quot;&gt;Nettuts+ Prefixr&lt;/a&gt;を直接利用できる。Package Controlからインストール可能。&lt;/p&gt;
+
+&lt;p&gt;Command + Control + x で実行。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeText/Tag&quot;&gt;Tag&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;HTMLに関する様々な機能を拡張するプラグイン。&lt;br /&gt;
+スラッシュで自動的にタグを閉じる、タグのインデントなどを追加。
+インストールはPackage Controlから。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/facelessuser/BracketHighlighter&quot;&gt;BracketHighlighter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;(),[],&amp;lt;&amp;gt;,{}&lt;/code&gt;、HTMLタグを強調表示。(HTMLタグはややバグっぽい挙動もある様子)。&lt;br /&gt;
+インストールはPackage Controlから。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/kemayo/sublime-text-2-git&quot;&gt;git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Command Palleteから直接gitコマンドを利用できるようにするプラグイン。&lt;br /&gt;
+インストールはPackage Controlから。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeText/SideBarGit&quot;&gt;SideBarGit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sublime Text 2のサイドバーからGitコマンドを実行できるようにするプラグイン。&lt;br /&gt;
+インストールはPackage Controlから。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/titoBouzout/SideBarEnhancements&quot;&gt;SideBarEnhancements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sidebarに削除、実行などの機能を追加するプラグイン。&lt;br /&gt;
+Packageまわりは少しバグがあるようで、ほぼ動作しない様子だがかなり便利。&lt;br /&gt;
+こちらもPackage Controlから。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/danro/LESS-sublime&quot;&gt;LESS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;LESSファイルのシンタックスハイライタ。&lt;br /&gt;
+LESSを保存と同時にコンパイルするプラグインもあるが、私は別プロセスで処理しているのでハイライタだけ利用。&lt;br /&gt;
+Package Controlから。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bgreenlee/sublime-github&quot;&gt;Sublime GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;少々ややこしいネーミングながらgithubのgistをSublime Text 2から利用できるようになる。&lt;br /&gt;
+Command Palleteからgistの表示、gistへの投稿などを行うことができる。&lt;br /&gt;
+Package Controlから。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/netpro2k/SublimeBlockCursor&quot;&gt;SublimeBlockCursor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vimモードに近しいVintageモードに変更するとCommand Modeの際にカーソルの位置が分かりづらくなるのでこのプラグインで解決。&lt;br /&gt;
+私の環境ではPackage Controlからはインストールできなかったので、直接PackageへCloneした。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/spadgos/sublime-AsAbove&quot;&gt;As Above&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;カーソルの真上にいる文字をコピーするプラグイン。&lt;br /&gt;
+Control + Shift + ‘のショートカットキーで1文字づつコピーする。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeText/Open-Include&quot;&gt;Open-Include&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ファイルパスをOption + dで開くプラグイン。&lt;br /&gt;
+画像、動画などをデフォルトアプリで開いてくれる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeText/TrailingSpaces&quot;&gt;TrailingSpaces&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;行末の空白文字を強調表示、削除するプラグイン。&lt;br /&gt;
+削除はSublime Text 2の設定から&lt;br /&gt;
+    “trim_trailing_white_space_on_save”: true,
+と変更すれば保存と同時に削除される。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/uipoet/sublime-jshint&quot;&gt;sublime-jshint&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;JSHistを実行するプラグイン。動作にはnode 0.6系が必要。&lt;br /&gt;
+Control + jで実行。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://andrewbrookins.com/tech/make-sublime-text-2-more-like-vim-wrap-code-goto-last-edit-and-more/&quot;&gt;Make Sublime Text 2 More like Vim: Wrap Code, Go To Last Edit, and More&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vimで使えるちょっと便利なコマンドをエミュレートするプラグイン達。&lt;br /&gt;
+好きなものを選んで利用中。&lt;br /&gt;
+Package Controlからはインストールできないので、Packagesディレクトリに直接cloneしました。&lt;/p&gt;
+
+&lt;h2&gt;Tips&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Vim風キーバインドに変換する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Command PalleteにてPackage Control: Enable Packageを選んでエンターしてVintageモードを有効にする。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;TextMateのカラースキームを利用する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sublime Text 2ではTextMateの.tmbundleファイルを利用することができます。またカラースキームファイルも利用可能。&lt;br /&gt;
+packageフォルダ直下に.tmbundleをコピーしてSublime Text 2を再起動すればメニューからカラースキームを選択できる。&lt;br /&gt;
+私が現在使っているのは&lt;a href=&quot;https://github.com/chriskempson/textmate-tomorrow-theme&quot;&gt;Tomorrow Theme&lt;/a&gt;のNight Eighties。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTMLファイル内をIDやClass名で移動する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Command + Pでファインダを立ち上げ、&lt;code&gt;#&lt;/code&gt;を入力するとHTMLからID名、Class名などを検索できる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;行番号に移動する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Control + gでも移動できますが、Command + pから&lt;code&gt;:&lt;/code&gt;を入力し行番号をタイプしても移動できる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;TerminalからSublimeを起動する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin
+にあるsublをbinなどにsymlinkすればOK。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo ln -s &lt;span class=&quot;s2&quot;&gt;&amp;quot;/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl&amp;quot;&lt;/span&gt; /bin/subl
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sublime Text 2の設定の同期&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sublime Text 2の設定は&lt;br /&gt;
+&lt;code&gt;~/Library/Application Support/Sublime Text 2/&lt;/code&gt;&lt;br /&gt;
+に保存されているので中にあるディレクトリをDropboxに移動しsymlinkすればOK。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Library/Application Support/Sublime Text 2/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ディレクトリに移動して
+Dropboxに作成した/appdata/sublime/に元々あったディレクトリを移動。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ln -s ~/Dropbox/appdata/sublime/Installed&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Packages ./Installed&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Packages
+ln -s ~/Dropbox/appdata/sublime/Packages ./Packages
+ln -s ~/Dropbox/appdata/sublime/Pristine&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Packages ./Pristine&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Packages
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以上でDropboxに置いた設定ファイル群から&lt;code&gt;~/Library/Application Support/Sublime Text 2/&lt;/code&gt;にsymlinkできる。&lt;br /&gt;
+Sublime Textは閉じたままで作業しよう。&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>Build Script using Jake</title>
+			<link href="http://publicdraft.studiomohawk.com/research/2012/04/07/20-41-jake/"/>
+			<updated></updated>
+			<id>http://publicdraft.studiomohawk.com/research/2012/04/07/20-41-jake</id>
+			<content type="html">
+				&lt;h2&gt;パッケージ&lt;/h2&gt;
+
+&lt;h3&gt;LESS&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/akoenig/laessig&quot;&gt;akoenig/laessig&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;.less&lt;/code&gt;ファイルの保存時にLESSをCSSに変換。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;laessig observe /the/path/to/your/file.less&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;CSS圧縮&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/ded/sqwish&quot;&gt;ded/sqwish&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;sqwish styles.css&lt;/code&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;sqwish styles.css --strict&lt;/code&gt; / 重複するセレクタをマージ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;CSS結合&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/cloudhead/less.js&quot;&gt;cloudhead/less.js&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;master.less&lt;/code&gt;などに&lt;code&gt;@import&lt;/code&gt;で全CSSファイルを呼び出す。  &lt;/li&gt;
+  &lt;li&gt;LESSのコンパイルで結合。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;CSS シンタックスチェック&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/stubbornella/csslint/wiki/Command-line-interface&quot;&gt;Command-line Interface · stubbornella/csslint Wiki&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3&gt;JavaScript圧縮&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/mishoo/UglifyJS&quot;&gt;mishoo/UglifyJS&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;uglifyjs -o OUTPUT-FILENAME INPUT-FILENAME&lt;/code&gt; / ファイル名を変更  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;uglifyjs --overwrite INPUT_FILENAME&lt;/code&gt; / ファイルを上書き&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;JavaScript結合&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/ender-js/Ender&quot;&gt;ender-js/Ender&lt;/a&gt;&lt;/strong&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ender.no.de/#publishing&quot;&gt;Ender / publishing&lt;/a&gt;でEnder用のパッケージの作成方法について書かれている。  &lt;/p&gt;
+
+&lt;p&gt;疑問: &lt;code&gt;repository&lt;/code&gt;は必須か？&lt;/p&gt;
+
+&lt;h3&gt;JavaScript シンタックスチェック&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/jshint/node-jshint/&quot;&gt;jshint/node-jshint&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3&gt;その他&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/ryanmcgrath/wrench-js&quot;&gt;ryanmcgrath/wrench-js&lt;/a&gt;&lt;/strong&gt; / ファイルの作成、コピー、移動&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/isaacs/node-glob&quot;&gt;isaacs/node-glob&lt;/a&gt;&lt;/strong&gt; / ファイルパスを文字列パターンから検索&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Ruby / Python / UNIXツール&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://yostudios.github.com/Spritemapper/&quot;&gt;Spritemapper&lt;/a&gt; / CSS Spriteの生成&lt;/li&gt;
+  &lt;li&gt;gifsicle、libjpeg、optipng、pngcrushを使った画像最適化&lt;/li&gt;
+  &lt;li&gt;rsyncでサーバにアップ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;参考リンク&lt;/h2&gt;
+
+&lt;h3&gt;記事&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.millermedeiros.com/node-js-as-a-build-script/&quot;&gt;Node.js as a build script by Miller Medeiros&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://howtonode.org/intro-to-jake&quot;&gt;Intro to Jake - JavaScript build tool for Node.js by How To Node&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://clock.co.uk/tech-blogs/deploying-nodejs-apps&quot;&gt;Deploying node.js apps by Ben Gourley by Clock&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://upliftingcode.com/blog/front-end-build-script-tasks&quot;&gt;upliftingcode: Front End Build Script Tasks - deciphering the web one variable at a time&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;リポジトリ&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/balupton/buildr.npm&quot;&gt;balupton/buildr.npm&lt;/a&gt; / 画像圧縮まわり&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/BrainSwap/Mandible2&quot;&gt;BrainSwap/Mandible2&lt;/a&gt; / jakeFileの設定まわり&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mde/jake&quot;&gt;mde/jake&lt;/a&gt; / jakeのシンタックス&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/h5bp/node-build-script&quot;&gt;h5bp/node-build-script&lt;/a&gt; / デファクトデフォルトなので参考に&lt;/li&gt;
+&lt;/ul&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+</feed>

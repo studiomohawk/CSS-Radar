@@ -1,0 +1,12 @@
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	{% if page.layout != 'home' %}
+	{% include module/home.html %}
+	{% endif %}
+	{% include module/question.html %}
+	{% include module/about.html %}
+	{% include module/elsewhere.html %}
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
