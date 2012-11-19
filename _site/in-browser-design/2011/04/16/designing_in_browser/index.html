@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title itemprop="name" content="インブラウザ デザイン | CSS Radar">インブラウザ デザイン | CSS Radar | Little Books For Front End Developers</title>
+  <meta itemprop="description" name="description" property="og:description" content="インブラウザ デザインとは 長い間、Adobe Photoshopはウェブデザインのデファクトアプリとして君臨してきた。もちろん今も私のMac MiniにCS4がインストールされている。 しかし、個人プロジェクトはもちろんすでに会社のプロジェクトでも私はPhotoshopを卒業しつつある。 ブラウザとお気に入りのエディタ。そしてCSS3があればPhotoshopを使わなくてもデザインができる。 Hardboiled Web Designの作者であるAndy ClarkeはI don’t care about Responsive Web Designにて、 Today, anything that’s fixed and unresponsive isn’t web...">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="">
+	
+  <meta property="og:image" content="http://css.studiomohawk.com/graph.png">
+  <meta property="og:site_name" content="CSS Radar | Little Books For Front End Developers">
+  <meta name="viewport" content="width=device-width">
+  <link href="http://css.studiomohawk.com/atom.xml" rel="alternate" title="CSS Radar | Little Books For Front End Developers" type="application/atom+xml">
+  <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo"><a href="/"><span class="logo-css">CSS</span><span class="logo-radar">Radar</span></a></p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<h1 class="post-title">インブラウザ デザイン</h1>
+				
+				<time class="date-pub update small" title="2011-10-29 22:37:19">
+					<span class="label">Updated: </span>
+					<span class="month">Oct</span>
+					<span class="day">29</span>
+					<span class="year">2011</span>
+				</time>
+				
+				<time class="date-pub pubdate small" title="2011-04-16T10:53:05+09:00">
+					<span class="label">Published: </span>
+					<span class="month">Apr</span>
+					<span class="day">16</span>
+					<span class="year">2011</span>
+				</time>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2 id="whatis">インブラウザ デザインとは</h2>
+
+<p>長い間、Adobe
+Photoshopはウェブデザインのデファクトアプリとして君臨してきた。もちろん今も私のMac MiniにCS4がインストールされている。</p>
+
+<p>しかし、個人プロジェクトはもちろんすでに会社のプロジェクトでも私はPhotoshopを卒業しつつある。  </p>
+
+<p>ブラウザとお気に入りのエディタ。そしてCSS3があればPhotoshopを使わなくてもデザインができる。</p>
+
+<p><a href="http://www.amazon.com/gp/product/1907828001/ref=as_li_ss_tl?ie=UTF8&amp;tag=studiomohawk-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1907828001">Hardboiled Web Design</a>の作者であるAndy Clarkeは<a href="http://stuffandnonsense.co.uk/blog/about/i_dont_care_about_responsive_web_design/">I don’t care about Responsive Web Design</a>にて、</p>
+
+<blockquote>
+  <p>Today, anything that’s fixed and unresponsive isn’t web design, it’s something else. If you don’t embrace the inherent fluidity of the web, you’re not a web designer, you’re something else.
+Web design <strong>is</strong> responsive design, Responsive Web Design <strong>is</strong> web design, done right.</p>
+</blockquote>
+
+<p>とすら書いているが、<a href="http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/">レスポンシブウェブデザイン</a>はPhotoshopで作ることはとても難しい。レスポンシブデザインこそが、紙的な発想から離れることができなかったウェブデザインの新しい時代の旗手。</p>
+
+<p>ブラウザでデザインをするということ。<br />
+その際の実際のプロセスと便利なツール、そして注意点について紹介しよう。</p>
+
+<h2 id="process">インブラウザ デザインのプロセス</h2>
+
+<h3>アイデアの集約と大まかなレイアウトの決定</h3>
+
+<p><a href="http://css.studiomohawk.com/webdesign/2011/04/01/wireframe/">ワイヤフレーム</a>は、ブラウザでデザインを行う際には確実に必要なプロセス。<br />
+Photoshopでのデザインであればワイヤフレームの有効性はPhotoshopの習熟度によっては低くなることもあるかもしれないが、今回はそうはいかない。<br />
+ワイヤフレームだって、スタティックな画像じゃないかと思うかも知れないし、それは事実だ。  </p>
+
+<p>それでも以前書いたように、ワイヤフレームはアイデアを形にする最初のステップであり、要素がどこにどんな風に配置されるのかを集約しレイアウトするのにはぴったりのツールだ。</p>
+
+<h4>このステップで利用するツール</h4>
+
+<ul>
+  <li><a href="http://balsamiq.com/">Balsamiq</a></li>
+</ul>
+
+<h3>ベースになるHTMLとCSSの作成</h3>
+
+<p>このステップは基礎になるHTMLを作っていく。CSSリセットやベースのCSSそしてヘッダやフッタ、ボディになる部分を作成する。</p>
+
+<p>自分でよく使うテンプレートを持っておくことで大幅に時間を短縮できる部分だ。<br />
+私は<a href="http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/">HTML5 Boilerplate</a>にグリッドや<a href="https://github.com/stubbornella/oocss">OOCSS</a>のモジュールを組み込むカスタマイズを施し、よく利用するCSSのスタイルを<a href="http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/">LESS</a>のミックスインとして用意している。</p>
+
+<h4>このステップで利用するツール</h4>
+
+<ul>
+  <li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
+  <li><a href="https://github.com/stubbornella/oocss">OOCSS</a></li>
+  <li><a href="http://lesscss.org/">LESS</a></li>
+</ul>
+
+<h3>レイアウト</h3>
+
+<p>まずはグリッドを決めてしまう。<br />
+Photoshopでのステップだとグリッドを使ったりガイドを使ったりするのがこのステップ。
+この時点でグリッドがレスポンシブデザインに対応しているとあとで楽に作業ができる。<br />
+もちろん慣れないうちは大変だし、リデザインの場合はそうもいかないこともあるだろう。</p>
+
+<p><a href="http://griddle.it/">Griddle.it</a>を使って簡単にCSSでガイドを作成する方法を紹介しよう。</p>
+
+<p>Griddle.itは</p>
+
+<div class="highlight"><pre><code class="html">http://griddle.it/[全体幅]-[コラム数]-[ガターサイズ]
+</code></pre>
+</div>
+
+<p>という指定で、グリッド画像を生成してくれる。
+例えば、こちらを開いてみてほしい。<a href="http://griddle.it/960-12-30">幅960px 12コラム 30pxのガター</a><br />
+さらにバーティカルリズム用ガイドになる横線のグリッドも追加できる。
+<a href="http://griddle.it/960-12-30?horizontal=30">幅960px 12コラム 30pxのガター + 30pxの横線グリッド</a><br />
+ここまで設計したデザインはなかなか日本では見かけないが基礎が強固であればあるほど、表層のデザインは自由度が増すので、是非。</p>
+
+<p>自動で画像を生成してくれるのでグリッドパターンが確定したら、</p>
+
+<div class="highlight"><pre><code class="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(http://griddle.it/960-12-30)</span> <span class="k">repeat-y</span> <span class="k">center</span> <span class="k">top</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>背景画像に読み込んでしまえばOK。</p>
+
+<p>レスポンシブデザインに対応したいという方は私のおすすめフレームワーク<a href="http://lessframework.com/">Less
+Framework</a>を利用してベース(グリッドの部分だけ利用するのがおすすめ)のCSSを作成し、Less Frameworkに対応した実際にグリッドがウィンドウのサイズに合わせて変更されるこの<a href="http://arnaumarch.com/en/less-grid.html">JavaScript</a>を組み込むと楽にできる。</p>
+
+<p>すでに自分のレスポンシブデザインのベースがあるという場合はGriddle.itを利用して、media queriesで呼び出す画像を切り替えればOK。</p>
+
+<p>開発時にJSを呼び出しても問題ないという場合には、
+<a href="http://bohemianalps.com/tools/grid/">The Heads-Up
+Grid</a>がおすすめだ。縦横のグリッドを自由に設定できる上にウィンドウサイズを検知してレスポンシブウェブデザイン用にサイズを変更してくれる。</p>
+
+<p>また、HTML5 Boilerplateをベースに選択していて、Less
+Frameworkなどを組み込むのが面倒な場合はAndy Clerkeの<a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and up</a>を利用するといいだろう。(モバイルファーストという概念で作られているので、若干注意が必要)</p>
+
+<p>さらに、レスポンシブウェブデザインでは現在のウィンドウの幅がどのサイズにあたるのかわかりづらいとちょっと面倒なので、
+<a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size bookmarklet to test/debug CSS3 Media Queries</a>のブックマークレットを利用すれば、ウィンドウサイズを知らせてくれるので非常に便利。</p>
+
+<p>ちなみにこの後のステップではCSSやHTMLを保存し、ブラウザをリフレッシュして変更を確認し〜を繰り返す。
+より時短を目指すため、<a href="http://livejs.com/">Live.js</a>を活用することをおすすめする。<br />
+このJavaScriptはファイルの保存を検知してブラウザのリロードを行わず、変更を反映するという夢のようなツール。<br />
+ブラウザでデザインしていなくて、コーディングしている時にかなり役に立つ強力なJavaScript。</p>
+
+<p>JSを追加したりプロダクション用に削除したりと面倒だなと感じたら、<br />
+<a href="http://livereload.com/">LiveReload</a>というMac用のアプリがおすすめだ。ブラウザの拡張機能とこのアプリさえあれば、監視するフォルダを登録したらファイルを保存したらブラウザをリロードしてくれる。<br />
+ついでに、LESSやSASSなどを利用していても自動的にCSSに変換してくれる強力なアプリ。</p>
+
+<h4>このステップで利用するツール</h4>
+
+<ul>
+  <li><a href="http://griddle.it/">Griddle.it</a></li>
+  <li><a href="http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/">Window Size bookmarklet to test/debug CSS3 Media Queries</a></li>
+  <li><a href="http://bohemianalps.com/tools/grid/">The Heads-Up Grid</a></li>
+  <li><a href="http://livejs.com/">Live.js</a></li>
+  <li><a href="http://livereload.com/">LiveReload</a> (Macのみ)</li>
+  <li><a href="http://lessframework.com/">Less Framework</a> + <a href="http://arnaumarch.com/en/less-grid.html">Less Grid</a> (Less Framework利用時)</li>
+  <li><a href="http://stuffandnonsense.co.uk/projects/320andup/">320 and up</a> (HTML5 Boilerplate利用時)</li>
+</ul>
+
+<h3>残りのステップは、デザインしていくだけ</h3>
+
+<p>コンテンツなしにデザインすることができないのはPhotoshopであろうと、ブラウザでのデザインでも同じ。
+だが、画像素材や原稿がまだの場合は想定している画像のサイズや原稿の分量などを伝えるというステップもあってもいいかも知れない。
+(実際に私の職場では非常によくある)</p>
+
+<p>フレキシビリティこそがブラウザでデザインすることのもっとも優れた点なので活用していこう。</p>
+
+<p>ダミー画像の生成なら、<a href="http://lorempixum.com/">lorempixum</a>が数あるダミー生成ツールのなかでももっとも優れている。<br />
+グレーを始めとする単色だけでなく、サイズの指定はもちろん、画像のジャンルの指定すらできる優れものだ。</p>
+
+<p>プロトタイプとして素材の提供者にブラウザで確認してもらうには十分こと足りるだろう。<br />
+日本語では海外のようなLorem Ipsumテキストがないのでどうしてもダミー原稿が欲しい場合は、私は<a href="http://webtools.dounokouno.com/dummytext/index.html">ダミーテキストジェネレータ</a>を利用している。</p>
+
+<h2 id="tool">インブラウザ デザインをより加速するオンラインツール達</h2>
+
+<p>CSS3を活用してブラウザでデザインしていく上で欠かすことのできないツール群を紹介しよう。  </p>
+
+<ul>
+  <li><a href="http://css3please.com/">CSS3 Please! The Cross-Browser CSS3 Rule Generator</a></li>
+</ul>
+
+<p>Paul Irish氏によるCSS3
+Please!はCSS3のプロパティを実際に値を変え、その効果を確認しながら簡単にコピペすることができるウェブツール。<br />
+border-radius、box-shadow、linear-gradient、rgba、transform、transitionなど、ブラウザプリフィックス付きで非常に便利。</p>
+
+<ul>
+  <li><a href="http://noisepng.com/">NoisePNG - Generate noisy PNG-images with alpha-transparency</a></li>
+</ul>
+
+<p>NoisePNGはその名の通りノイズを生成してPNGとしてダウンロードできるウェブツール。<br />
+生成されるPNGはノイズの部分だけで色はRGBで指定して利用できるので非常に拡張性が高い。<br />
+その上、<a href="http://noisepng.com/100-80-5-monochrome.png">http://noisepng.com/100-80-5-monochrome.png</a>というURLで実際のデザインに簡単に組み込める。</p>
+
+<ul>
+  <li><a href="http://www.grained.org/">Grained.org - Online grained gradient image generator</a></li>
+</ul>
+
+<p>こちらも先ほどのNoisePNGに近いサービスだが、こちらはノイズの入ったグラデーション画像をマウスのドラッグで生成できる。</p>
+
+<ul>
+  <li><a href="http://www.patternify.com/">Patternify - CSS Pattern Generator</a></li>
+</ul>
+
+<p>こちらはノイズではなく規則性のあるパターンを生成してくれるサービス。最大10pxx10pxのキャンバスと色、透明度も選択できるので使い慣れてくると色々なパターンを作成できる。<br />
+作成したパターンはデモ用のdata-url形式でコピーするかPNGをダウンロードできる。またパターンはURLを生成することも可能なので作ったパターンを保存することも可能。</p>
+
+<ul>
+  <li><a href="http://www.colorzilla.com/gradient-editor/">Ultimate CSS Gradient Generator - ColorZilla.com</a></li>
+</ul>
+
+<p>CSS Gradient生成ツールのデファクトスタンダード。前述のCSS3
+Please!でもグラデーションは作成できるが、こちらはPhotoshopと同じようなGUIでの生成が可能。<br />
+画像からCSSを生成することもできる。</p>
+
+<ul>
+  <li><a href="http://www.wordpressthemeshock.com/css-drop-shadow/">Css3 drop shadow generator</a></li>
+</ul>
+
+<p>こちらはDrop ShadowをプレビューしながらCSSを生成できるツール。やはりCSS3
+Please!でも同様の機能は提供されているが、こちらのほうが私には視覚的に理解しやすいし数字ではなくスライダーを動かしながら調整できるところが便利。</p>
+
+<ul>
+  <li><a href="http://prefixr.com/">Prefixr</a></li>
+</ul>
+
+<p>ブラウザプリフィックスをタイプするのは面倒。<br />
+このPrefixrではブラウザプリフィックスの内1つでも入力すると全ブラウザのプリフィックスとそれに対応したシンタックスを補完してくれる。<br />
+なんとAPIすら提供しているので、Vimではすでにエディタ内からこのツールが利用できる。
+(<a href="https://github.com/mr-szymanski/prefixr">mr-szymanski/prefixr - GitHub</a>)</p>
+
+<p>それぞれのサービスは他に類似サービスが沢山あるが、実際に使ってみて1番使い勝手のよいものをピックアップした。<br />
+どれも自信を持っておすすめできるので試してみてほしい。</p>
+
+<h2 id="caution">インブラウザ デザインの注意点</h2>
+
+<p>CSS3はIE6-8では使えないプロパティもある。<strong>全てをブラウザでデザインすることは不可能だ</strong>。<br />
+テキスチャやCSS3では表現しづらいデザインももちろんある。<br />
+<strong>Photoshopを絶対に使ってはならない</strong>ということではない。<br />
+ブラウザでデザインすることはPhotoshopでページすべてのデザインを行うよりもフレキシブルだということ、そして現時点でそれを行うことが以前に比べれば格段に簡単になったことが大切な部分だと思ってほしい。</p>
+
+<p>Photoshopでページすべてのデザインをしていると、カラースキームを変更するのは大変。<br />
+Photoshopでページすべてのデザインをしていると、フォントを変更するのは大変。<br />
+Photoshopでページすべてのデザインをしていると、要素の配置1つを動かしても大変。<br />
+レイヤーの管理は崩壊しちょっとした変更の依頼もストレスになる。<br />
+もちろん、先に書いたレスポンシブウェブデザインの実現も相当な時間がかかる。</p>
+
+<p>インブラウザ デザインではこういった部分でPhotoshopより優れている。<br />
+Photoshopがインブラウザ デザインより優れている部分ももちろんある。<br />
+(私にとっては十分だが)<a href="http://www.pixelmator.com/">Pixelmator</a>も、レイヤースタイルに対応した<a href="http://flyingmeat.com/acorn/">Acorn</a>もPhotoshopがデファクトになってきた強力な機能やユーザビリティにはまだ少し距離がある。<br />
+ここで最も大切なことはPhotoshopでのデザインプロセスにも疑問を投げかける時代が来たということ。</p>
+
+<p>よりプロダクティブになることがウェブデザイナのタスクの1つでそうすることでより優れた問題解決を提案できる。作ることそのものよりどうやって問題を解決するべきか、を考える時間を作り出していくことが大切なこと。</p>
+
+<p>ブラウザでデザインすること。<br />
+このプロセス、ツールセットにバージョンをつけるとしたら、1.0RCといったところだろう。<br />
+CS5.5になるほどイテレーションを繰り返しすばらしいプロダクトを提供してきたAdobe Photoshopと比べればまだまだ始まったばかり。<br />
+このプロセス/ツールセットのバージョンアップを行うのはウェブデザイナたちの役割だ。</p>
+
+<h2 id="link">参考リンク</h2>
+
+<ul>
+  <li><a href="http://37signals.com/svn/posts/1061-why-we-skip-photoshop">Why we skip Photoshop (37signals)</a></li>
+  <li><a href="http://www.hicksdesign.co.uk/journal/graphics-editor-or-text-editor">Graphics Editor or Text Editor? (The Hickensian)</a></li>
+  <li><a href="http://www.stuffandnonsense.co.uk/blog/about/walls_come_tumbling_down_presentation_slides_and_transcript/">Walls Come Tumbling Down presentation slides and transcript (Stuff and Nonsense)</a></li>
+  <li><a href="http://24ways.org/2009/make-your-mockup-in-markup">Make Your Mockup in Markup (24 ways)</a></li>
+  <li><a href="http://christeso.com/why-i-never-design-a-site-in-photoshop">Why I never design a site in Photoshop (Bullies Get High On Beatings)</a></li>
+  <li><a href="http://www.quora.com/Joel-Lewenstein/Life-Without-Photoshop">Life Without Photoshop by Joel Lewenstein (Quora)</a></li>
+  <li><a href="http://www.inspiredm.com/learn-to-use-your-browser-in-web-design/">Learn to Use Your Browser in Web Design (Inspired Magazine)</a></li>
+</ul>
+
+				</div>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						
+						<li class="old"><a class="internal" rel="prev" href="/optimization/2011/04/09/why_speed_matters/" title="パフォーマンス最適化">&larr;</a></li>
+						
+						
+						<li class="new"><a class="internal" rel="next" href="/ruby/2011/05/14/ruby_for_designer_frontend_dev/" title="ウェブデザイナのためのRuby">&rarr;</a></li>
+						
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p><a href="/" class="has-icon"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="has-icon" href="https://github.com/studiomohawk/CSS-Radar/issues/new">
+				<i class='icon-github'></i> Ask Me on Github
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+			</p>
+			<p>
+			CSS Radarでは記事を短編の技術書のように編集して、記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そこでCSS Radarでは私なりのベストプラクティスを集めていく事を編集方針としています。
+			</p>
+			<p>
+			最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報を共有</li>
+				<li><a href="http://seven.studiomohawk.com/" rel="me" title="Seven">Seven</a> / フロントエンドブックマーク</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="http://publicdraft.studiomohawk.com/" rel="me" title="Public Draft">Public Draft</a> / フロントエンド・リサーチログ</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<p class="madeintokyo">
+	Build by Yuya Saito. <a href="https://twitter.com/cssradar" rel="me" title="Twitter@cssradar">@cssradar</a><br>
+	Made Proudly in Tokyo.
+	</p>
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+
+</div><!-- #page -->
+<script src="/asset/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-11'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
+

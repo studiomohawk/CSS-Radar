@@ -1,0 +1,176 @@
+@import 'base';
+
+// ==========================================================================
+// config
+// ==========================================================================
+
+// grid
+column-width = 60px
+gutter-width = 30px
+columns = 10
+
+// text-color
+text-dark  = #1d1f21;
+text-fade  = #545a60;
+text-light = #fafafa;
+text-red   = #CC092F;
+
+// texture
+texture-light = t-cleantexture;
+texture-dark = t-3pxtile;
+
+/* ==========================================================================
+primary: Yuya Saito @ http://twitter.com/cssradar
+============================================================================= */
+
+html {
+	background: url(t-cleantexture) repeat 0 0;
+	color: #1d1f21;
+}
+.unit-inner {
+	column(4);
+	margin: 0 auto;
+}
+.logo {
+	font-family: 'Outage', sans-serif;
+}
+.logo-css:after {
+	display: inline-block;
+	content: '©';
+	color: #b9ca4a;
+}
+.the-article .hd > .group {
+	margin-bottom: 31px;
+	margin-bottom: 3.1rem;
+}
+.post-title {
+	margin-bottom: 0;
+}
+.date-pub {
+	color: #545a60;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: inline-block;
+	position: relative;
+	top: -5px;
+}
+.date-pub.update:after {
+	content: '/';
+	display: inline-block;
+}
+.unit-nav {
+	background: rgba(204, 204, 204, 0.2);
+	color: #BDBDBD;
+	border-bottom: 1px solid #282828;
+}
+.unit-nav ul {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+	text-align: right;
+}
+.unit-nav li {
+	display: inline-block;
+	border-right: 1px solid rgba(204, 204, 204, 0.3);
+}
+.unit-nav .old {
+	border-left: 1px solid rgba(204, 204, 204, 0.3);
+}
+.unit-nav .tweet {
+	border: 0 none;
+	position: relative;
+	top: 4px;
+}
+.unit-nav a {
+	display: inline-block;
+	font-weight: bold;
+	facebook();
+	text-align: center;
+	width: 48px;
+	width: 4.8rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.unit-nav a:hover, .unit-nav a:focus {
+	background: #1d1f21;
+	color: #fafafa;
+}
+.unit-nav .new a {
+	margin-left: -6px;
+}
+.the-footer {
+	background: url(t-3pxtile) repeat 0 0;
+	color: #fafafa;
+	.unit {
+		padding: 3.6rem 0;
+	}
+}
+.madeintokyo {
+	margin-bottom: 0;
+}
+
+/* ==========================================================================
+page specific
+============================================================================= */
+
+/* post
+============================================================================= */
+
+.page-post {
+	h1, .h1 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.content ul {
+		list-style: square;
+		padding-left: 0;
+	}
+	.content ol {
+		list-style: decimal;
+		padding-left: 0;
+	}
+	p code, li code {
+		monospace();
+		margin: 0 2px;
+		padding: 0px 5px;
+		border: 1px solid #EAEAEA;
+		background-color: #F8F8F8;
+		border-radius: 3px;
+	}
+	.highlight pre {
+		color: #fafafa;
+		background-color: #1d1f21;
+		margin: 0;
+		padding: 1.8rem;
+	}
+	pre code {
+		monospace();
+	}
+}
+
+/* ==========================================================================
+media queries
+============================================================================= */
+@media only screen and (min-width: 600px) {
+/* 600 =================================================== */
+	.unit-inner {
+		column(6);
+	}
+}
+@media only screen and (min-width: 768px) {
+/* 768 =================================================== */
+	.unit-inner {
+		column(8);
+	}
+}
+
+/* Keep this at bottom */
+@import '_helper';

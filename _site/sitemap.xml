@@ -5,19 +5,69 @@
 		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-<loc>http://publicdraft.studiomohawk.com</loc>
-	<lastmod>2012-05-04T23:41:09+09:00</lastmod>
+<loc>http://css.studiomohawk.com</loc>
+	<lastmod>2012-11-16T07:34:33+09:00</lastmod>
 	<priority>1.0</priority>
 </url>
 
 <url>
-	<loc>http://publicdraft.studiomohawk.com/research/2012/04/14/01-02-sublimetext2/</loc>
-	<lastmod>2012-04-14T00:00:00+09:00</lastmod>
+	<loc>http://css.studiomohawk.com/english/2012/01/29/reading-english-is-not-so-hard/</loc>
+	<lastmod>2012-01-29T16:45:05+09:00</lastmod>
 </url>
 
 <url>
-	<loc>http://publicdraft.studiomohawk.com/research/2012/04/07/20-41-jake/</loc>
-	<lastmod>2012-04-07T00:00:00+09:00</lastmod>
+	<loc>http://css.studiomohawk.com/vim/2011/07/24/vim-bits-and-pieces/</loc>
+	<lastmod>2011-07-24T00:57:55+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/jekyll/2011/06/11/jekyll/</loc>
+	<lastmod>2011-06-11T13:39:28+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/ruby/2011/05/14/ruby_for_designer_frontend_dev/</loc>
+	<lastmod>2011-05-14T00:03:59+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/in-browser-design/2011/04/16/designing_in_browser/</loc>
+	<lastmod>2011-04-16T10:53:05+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/optimization/2011/04/09/why_speed_matters/</loc>
+	<lastmod>2011-04-09T11:46:40+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/less/2011/04/03/use_less_to_clean_up_your_css/</loc>
+	<lastmod>2011-04-03T12:51:36+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/wireframe/2011/04/01/wireframe/</loc>
+	<lastmod>2011-04-01T00:00:00+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/html5-boilerplate/2011/03/15/html5boilerplate/</loc>
+	<lastmod>2011-03-15T00:00:00+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/commandline/2011/02/13/terminal-101/</loc>
+	<lastmod>2011-02-13T00:00:00+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/git/2011/01/29/git-version-control/</loc>
+	<lastmod>2011-01-29T00:00:00+09:00</lastmod>
+</url>
+
+<url>
+	<loc>http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/</loc>
+	<lastmod>2011-01-24T00:00:00+09:00</lastmod>
 </url>
 
 </urlset>

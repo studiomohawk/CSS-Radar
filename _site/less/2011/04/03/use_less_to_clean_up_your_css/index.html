@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title itemprop="name" content="LESS - CSSプリプロセッサ | CSS Radar">LESS - CSSプリプロセッサ | CSS Radar | Little Books For Front End Developers</title>
+  <meta itemprop="description" name="description" property="og:description" content="時短、効率、スピードアップのためのはじめてのLESS入門 @ SwapSkills SwapSkillsにてLESSについての勉強会にて2012年2月18日（土）13:30 ～ 私が登壇することになりました。 この勉強会ではLESSをこれまで使ったことがない人に向けてLESSの導入の利点、欠点など(このパートはGoogleの小久保 浩大郎さんが担当します)を説明し、私は後半のLESSの文法についての担当になります。 この勉強会をきっかけにLESSのページを丸ごと日本語訳したりして改めて勉強しなおしました。 LESSについて勉強しなきゃな、と思っている方はぜひこの機会にどうぞ! CSSプリプロフェッサとは If it ain’t broken, don’t fix it. 壊れてないなら、直す必要はない。 CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも覚えられた。 LESSやSASSに代表されるCSSプリプロセッサは、CSSにはないプログラミング言語的な機能を追加してくれるツール。 絶対に必要かというとそうでもないが、使いこなすとよりシンプルに、パワフルなスタイルシートを実現することができる。 実際に私もこのブログを始め様々な個人のプロジェクトではLESSを使い始めている。 私がSASSよりLESSを選んだのは制作者であるcloudhead氏はLESSをCSSとはまったく異なる言語にしないようにかなり気を使っているからだ。 CSSは宣言型プログラミングの流れを組む言語であり、cloudhead氏はLESSも同じ流れを保ったままで言語を拡張しようとしている。...">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="">
+	
+  <meta property="og:image" content="http://css.studiomohawk.com/graph.png">
+  <meta property="og:site_name" content="CSS Radar | Little Books For Front End Developers">
+  <meta name="viewport" content="width=device-width">
+  <link href="http://css.studiomohawk.com/atom.xml" rel="alternate" title="CSS Radar | Little Books For Front End Developers" type="application/atom+xml">
+  <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo"><a href="/"><span class="logo-css">CSS</span><span class="logo-radar">Radar</span></a></p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<h1 class="post-title">LESS - CSSプリプロセッサ</h1>
+				
+				<time class="date-pub update small" title="2012-01-18 10:57:14 +0900">
+					<span class="label">Updated: </span>
+					<span class="month">Jan</span>
+					<span class="day">18</span>
+					<span class="year">2012</span>
+				</time>
+				
+				<time class="date-pub pubdate small" title="2011-04-03T12:51:36+09:00">
+					<span class="label">Published: </span>
+					<span class="month">Apr</span>
+					<span class="day">03</span>
+					<span class="year">2011</span>
+				</time>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2>時短、効率、スピードアップのためのはじめてのLESS入門 @ SwapSkills</h2>
+
+<p><a href="http://swapskills.info/month/25.html"><img src="http://swapskills.info/banner/25.png" alt="SwapSkills2012(25)時短、効率、スピードアップのためのはじめての LESS 入門" class="right" /></a></p>
+
+<p><a href="http://swapskills.info/month/25.html">SwapSkills</a>にてLESSについての勉強会にて2012年2月18日（土）13:30 ～ 私が登壇することになりました。<br />
+この勉強会ではLESSをこれまで使ったことがない人に向けてLESSの導入の利点、欠点など(このパートはGoogleの小久保 浩大郎さんが担当します)を説明し、私は後半のLESSの文法についての担当になります。<br />
+この勉強会をきっかけに<a href="http://lesscss.org/">LESS</a>のページを丸ごと<a href="http://less-ja.studiomohawk.com/">日本語訳</a>したりして改めて勉強しなおしました。<br />
+LESSについて勉強しなきゃな、と思っている方はぜひこの機会にどうぞ!</p>
+
+<h2 id="whatis">CSSプリプロフェッサとは</h2>
+
+<p>If it ain’t broken, don’t fix it.</p>
+
+<p>壊れてないなら、直す必要はない。<br />
+CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも覚えられた。  </p>
+
+<p>LESSやSASSに代表されるCSSプリプロセッサは、CSSにはないプログラミング言語的な機能を追加してくれるツール。<br />
+絶対に必要かというとそうでもないが、使いこなすとよりシンプルに、パワフルなスタイルシートを実現することができる。<br />
+実際に私もこのブログを始め様々な個人のプロジェクトではLESSを使い始めている。</p>
+
+<p>私がSASSよりLESSを選んだのは制作者である<a href="http://cloudhead.io/">cloudhead</a>氏はLESSをCSSとはまったく異なる言語にしないようにかなり気を使っているからだ。<br />
+CSSは宣言型プログラミングの流れを組む言語であり、cloudhead氏はLESSも同じ流れを保ったままで言語を拡張しようとしている。<br />
+CSSを開発する人は必ずしもプログラム言語に詳しいとは限らないからcloudhead氏のアプローチを選択した。  </p>
+
+<h2 id="feature">LESSでできること</h2>
+
+<p>LESSでは、<strong>変数</strong>、<strong>ミックスイン</strong>、<strong>入れ子ルール</strong>、<strong>名前空間</strong>、<strong>四則演算と関数</strong>などをCSSに追加することができる。<br />
+プログラミングの経験があるならそれぞれ覚えがあるだろう機能達ばかりでCSSには存在しない機能。</p>
+
+<p>オフィシャルサイトに詳しく利用法については説明があるので詳細は<a href="http://lesscss.org/">こちら</a>。<br />
+制作者の了承を得てオフィシャルサイトの日本語化を行ったので英語が苦手な方は<a href="http://less-ja.studiomohawk.com/">こちら</a>。  </p>
+
+<p>ここではLESSの基本機能とそのシンタックスについて紹介していこう。  </p>
+
+<ul>
+  <li><strong>変数</strong></li>
+</ul>
+
+<div class="highlight"><pre><code class="text">@color: #4D926F;
+#header {
+  color: @color;
+}
+h2 {
+  color: @color;
+}
+</code></pre>
+</div>
+
+<p>というLESSは、</p>
+
+<div class="highlight"><pre><code class="text">#header {
+  color: #4D926F;
+}
+h2 {
+  color: #4D926F;
+}
+</code></pre>
+</div>
+
+<p>のように解釈される。</p>
+
+<p><strong>@+変数名</strong></p>
+
+<p>で定義できる。正確には変数というよりは定数に近い使われ方をしている。  </p>
+
+<div class="highlight"><pre><code class="text">@var: red;
+
+#page {
+  @var: white;
+  #header {
+    color: @var; // white
+  }
+}
+
+#footer {
+  color: @var; // red  
+}
+</code></pre>
+</div>
+
+<p>ただしプログラミング言語と同じくスコープがあり上記のようにローカルに定義がない場合は、親ルールから定義を探しそれでもなければグローバルを探すように作られている。<br />
+このスコープに関しては変数だけではなくミックスインの定義についても同様に扱われる。</p>
+
+<ul>
+  <li><strong>ミックスイン</strong></li>
+</ul>
+
+<p>こちらも実際にどのようにLESSで記述し実際にCSSでどのように解釈されるのかを見た方が早いだろう。</p>
+
+<div class="highlight"><pre><code class="text">.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+</code></pre>
+</div>
+
+<p>というLESSで定義したミックスインを</p>
+
+<div class="highlight"><pre><code class="text">#menu a {
+  color: #111;
+  .bordered;
+}
+</code></pre>
+</div>
+
+<p>にしてルールセットの中に追加すると、</p>
+
+<div class="highlight"><pre><code class="text">#menu a {
+  color: #111;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+</code></pre>
+</div>
+
+<p>CSSではこのように解釈される。  </p>
+
+<p>CSS3を利用する場合、まだまだ多くのベンダープリフィックスを追加しなければいけないのが現実。<br />
+そんな際にこのミックスインは威力を発揮する。<br />
+ミックスインはパラメータを渡したりデフォルトを定義することもできるので、使い回しが効く機能でもある。<br />
+詳しい説明は<a href="http://studiomohawk.github.com/ja-lesscss-org/#-ミックスインの引数利用">こちら</a>から。</p>
+
+<ul>
+  <li><strong>入れ子ルール</strong></li>
+</ul>
+
+<p>ルールセットを入れ子にすることで通常であればなんども繰り返し書かなければならないセレクタを省略できるのが入れ子ルール。  </p>
+
+<div class="highlight"><pre><code class="text">#header { color: black; }
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo { 
+  width: 300px; 
+}
+#header .logo:hover {
+  text-decoration: none;
+}
+</code></pre>
+</div>
+
+<p>という<strong>CSS</strong>は、LESSでは</p>
+
+<div class="highlight"><pre><code class="text">#header        { color: black;
+  .navigation  { font-size: 12px }
+  .logo        { width: 300px;
+    &amp;:hover    { text-decoration: none }
+  }
+}
+</code></pre>
+</div>
+
+<p>というように記述することができる。<br />
+何度もセレクタを書かずに済むだけではなくDOMの構造とほぼ同じ構造になるし、なによりこのように記述することを覚えるとキレイにセレクタを整理する癖がつく。<br />
+なお、<strong>&amp;:hover</strong>という記述があるがこちらは疑似クラス(:link、:visited、:hover、:focusなど)を追加するのに活躍する。<br />
+<strong>&amp;</strong>という結合子は、入れ子になったセレクタを子孫として扱わず親セレクタに追加することができる。<br />
+なので疑似クラスだけではなく、</p>
+
+<div class="highlight"><pre><code class="text">.float.left {...}
+</code></pre>
+</div>
+
+<p>というようなマルチクラスの記述にも対応できる。</p>
+
+<ul>
+  <li><strong>名前空間</strong></li>
+</ul>
+
+<p>こちらは変数やミックスインをまとめる際に活用できる機能。</p>
+
+<div class="highlight"><pre><code class="text">#bundle {
+  .button () {
+    display: block;
+    border: 1px solid black;
+    background-color: grey;
+    &amp;:hover { background-color: white }
+  }
+</code></pre>
+</div>
+
+<p><strong>#bundle</strong>という名前空間の中に<strong>.button</strong>というミックスインを定義する。</p>
+
+<div class="highlight"><pre><code class="text">#header a {
+  color: orange;
+  #bundle &gt; .button;
+}
+</code></pre>
+</div>
+
+<p>このようにして呼び出すことが可能。<br />
+例では<strong>#bundle</strong>とIDをバンドル化しているが、実際にはクラス名でも要素名でもバンドル化は可能。<br />
+つまりスタイルシート内にあるすべてのミックスインは名前空間を持つことができる。</p>
+
+<ul>
+  <li><strong>四則演算と関数</strong></li>
+</ul>
+
+<p>まずは演算から見ていこう。</p>
+
+<div class="highlight"><pre><code class="text">@base: 5%;
+@filler: @base * 2;
+@other: @base + @filler;
+
+color: #888 / 4;
+background-color: @base-color + #111;
+height: 100% / 2 + @filler;
+</code></pre>
+</div>
+
+<p>計算機がデスクの上におかれていたりしないだろうか？ 私はおいてある。<br />
+ウェブデザイナには計算機を手放せない人も多いことだろう。<br />
+その必要をなくしてくれるのが演算。その名前の通り、足し算、引き算、かけ算、割り算を行うことができる。</p>
+
+<p>ただの計算機とは違い色の演算もすることができる。<br />
+しかし<strong>#888 / 4</strong>の答えは予想できても、<strong>#c28381 * #fafafa</strong>はどんな色になるのかわからない。<br />
+よりわかりやすく色を操作するためにあるのが<strong>関数</strong>だ。</p>
+
+<div class="highlight"><pre><code class="text">lighten(@color, 10%);     // @colorより10%明度が*高い*値を返します
+darken(@color, 10%);      // @colorより10%明度が*低い*値を返します
+
+saturate(@color, 10%);    // @colorに10%の彩度を*追加*した値を返します
+desaturate(@color, 10%);  // @colorから10%の彩度を*削減*した値を返します
+
+fadein(@color, 10%);      // @colorから10%透明度が*高い*値を返します
+fadeout(@color, 10%);     // @colorから10%透明度が*低い*値を返します
+fade(@color, 50%);        // @colorの50%の透明度を持つ値を返します
+
+spin(@color, 10);         // @colorから10度色相が大きい値を返します
+spin(@color, -10);        // @colorから10度色相が小さい値を返します
+
+mix(@color1, @color2);    // @color1 と @color2 をミックスした値を返します
+</code></pre>
+</div>
+
+<p>変数と演算、そして色の関数の組み合わせはスタイルシートにより明確な意味を持たせることもできる。<br />
+15pxや#fefefeは作った本人以外、もしかすると作った本人ですら2週間も経てばその意味を忘れてしまうだろう。<br />
+しかし以下の例を見てほしい、</p>
+
+<div class="highlight"><pre><code class="text">@base-color: #fefefe;
+@accent-color: #f99157;
+@subtle-accent: lighten(@accent-color:, 20%);
+@dark-accent: darken(@accent-color:, 20%);
+@base-font-size: 16px;
+@base-height: @base-font-size * 1.618;
+</code></pre>
+</div>
+
+<p>このようにデザインの基礎になる部分を変数化して、演算や色の関数を使ってバリエーションを作るということもできる。<br />
+データに名前を付けるのが変数の本当の実力でそれぞれに名前がついていれば16pxが大事な値であるかも一目瞭然にすることもできる。</p>
+
+<h2 id="mixin">便利なミックスインのコレクション</h2>
+
+<p>自分がよく利用するルールのミックスインを定義しておけば飛躍的にCSSの開発はスピードアップする。<br />
+フロントエンドデベロッパやウェブデザイナはいつだって時間が足りない職種なので自分なりのコレクションを作っておくといいだろう。</p>
+
+<ul>
+  <li><a href="http://markdotto.com/bootstrap/">Preboot.less</a></li>
+</ul>
+
+<p>TwitterのBoostrapでも利用しているミックスイン/変数コレクションの先駆者</p>
+
+<ul>
+  <li><a href="http://www.stuffandnonsense.co.uk/blog/about/less">LESS by Stuff &amp; Nonsense</a></li>
+</ul>
+
+<p>Andy Clarkeも記事中に非常に便利なミックスインを紹介している。</p>
+
+<div class="highlight"><pre><code class="text">.font-size(@font-size: 16) {
+	@rem: (@font-size / 10);
+	font-size: @font-size * 1px;
+	font-size: ~&quot;@rem&quot;;
+}
+// pixelをremに変換しつつ、remが使えない場合のフォールバックを入れる
+
+h1 { .font-size(32); }
+
+// CSS
+// h1 {
+//    font-size:32px;
+//    font-size:3.2rem;
+// }
+</code></pre>
+</div>
+
+<p>また、以下のカラースキーム生成もCSSなら大変だがLESSならより自由度が高く使い回しができて便利。</p>
+
+<div class="highlight"><pre><code class="text">@col : #468DB6;			// Base colour
+@comp : spin(@col, 180);  	// Complementary colour
+
+@Col_l1 : lighten(@col, 5%);	// Lighten base
+@Col_l2 : lighten(@col, 10%);
+@Col_l3 : lighten(@col, 15%);
+@Col_l4 : lighten(@col, 20%);
+
+@Col_d1 : darken(@col, 5%);	// Darken base
+@Col_d2 : darken(@col, 10%);
+@Col_d3 : darken(@col, 15%);
+@Col_d4 : darken(@col, 20%);
+
+@Comp_l1 : lighten(@comp, 5%);	// Lighten complementary
+@Comp_l2 : lighten(@comp, 10%);
+@Comp_l3 : lighten(@comp, 15%);
+@Comp_l4 : lighten(@comp, 20%);
+
+@Comp_d1 : darken(@comp, 5%);	// Darken complementary
+@Comp_d2 : darken(@comp, 10%);
+@Comp_d3 : darken(@comp, 15%);
+@Comp_d4 : darken(@comp, 20%);
+</code></pre>
+</div>
+
+<p>加えて、彼のモバイルファーストアプローチのBoilerplateである<a href="https://github.com/malarkey/320andup/">320 and Up</a>に他のミックスインがあるので参考に。</p>
+
+<ul>
+  <li><a href="http://lesselements.com/">LESS Elements</a> </li>
+</ul>
+
+<p>Preboot.lessと重複する部分も多いけれどぜひチェックしておいてほしい。</p>
+
+<p>大事なことは自分で自分が使いやすいミックスイン/変数コレクションを作ること。<br />
+二度使えないコードを書かないことは大切なこと。何度も使えるコードを何度も書かないことも同じくらい大事。<br />
+D.R.Y(Don’t Repeat
+Yourself)はプログラミングにおける基本的なプリンシパルの1つだが、CSSではなかなか難しいのでLESSでそれを補完できるのは非常に心強い。</p>
+
+<h2 id="usage">使い方</h2>
+
+<p>ここまで来てようやく使い方の説明になるが、</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet/less&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;styles.less&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;less.js&quot;</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p>と使い方はとても簡単。<br />
+注意してほしいのは、<strong>rel=”stylesheet/less”</strong>の部分だけ。</p>
+
+<p>さらにLESS.jsを実際に呼び出している場合は、<code>#!watch</code>という文字列をURLの後ろにつけると、LESSファイルの保存に合わせてスタイルをしてくれる。<br />
+なお、ローカルファイルではChromeで動作しないかも知れないので、そんな場合はChromeに<code>-allow-file-access-from-files</code>のパラメータを渡して起動すれば動作する。<br />
+毎回毎回リフレッシュするのは面倒な上、意外と時間の無駄なので開発中はぜひ利用してほしい。</p>
+
+<h2 id="compile">CSSへのコンパイル</h2>
+
+<p>node.jsで動作するサイトでない限りはLESSの記述はCSSに展開する必要があるだろう。</p>
+
+<p>node.jsを使ったサーバサイドでのコンパイル以外ではLESSファイルをCSSへコンパイルするには大きく2つの方法がある。</p>
+
+<ol>
+  <li>GUIツール</li>
+  <li>コマンドライン</li>
+</ol>
+
+<p>GUIツールから紹介しよう。
+GUIツールは大体同じ動作で、.lessファイルがあるディレクトリをツール上で指定すると自動でコンパイルしてくれる。<br />
+おそらく全部のツールで.lessファイルを保存するたびにCSSに自動でコンパイルされるので実際に呼び出すファイルはCSSで問題ない。<br />
+詳しい使い方はツールのヘルプを参照。</p>
+
+<ul>
+  <li><a href="http://winless.org/online-less-compiler">WinLess - Windows GUI for less.js</a> / Windowsのネイティブアプリで無料</li>
+  <li><a href="http://wearekiss.com/simpless">SimpLESS - Your LESS CSS Compiler</a> / Win、Linux、Macで動作するAdobe Airアプリ。無料</li>
+  <li><a href="http://crunchapp.net/">Crunch! - The tastiest LESS editor</a> / Win、Linux、Macで動作するAdobe Airアプリ。無料</li>
+  <li><a href="http://incident57.com/less/">LESS.app For Mac OS X</a> / Macのネイティブアプリ、無料</li>
+</ul>
+
+<p>他にも幾つかGUIツールはあるが無料のツールは知る限りこの4つ。  </p>
+
+<p>LESS.appを作成したBryan
+Jones氏は<a href="http://incident57.com/codekit/">CodeKit</a>という新しいアプリを作成していてベータ版の間は無料。LESSをCSSに変換するだけでなく、SASSやStylusにも対応し、HAML、Coffee
+Script、画像の最適化など様々な機能が満載の夢のようなアプリ。Macのみ。</p>
+
+<p>また同じくMacのみになってしまうが、<a href="http://livereload.com/?t=1320397070">LiveReload</a>というアプリもLESS、SASS、Coffee Scriptを保存と同時にブラウザをアップデートしながら変換してくれる。</p>
+
+<p>コマンドラインでの利用にはもちろんNode.jsが必要。<br />
+Mac、Windowsともに<a href="http://nodejs.org/">node.js</a>からパッケージがダウンロードできるので、あとはダブルクリックするだけ。簡単。</p>
+
+<p>インストールが終わったらターミナルアプリから</p>
+
+<div class="highlight"><pre><code class="sh">lessc styles.less &gt; styles.css
+</code></pre>
+</div>
+
+<p>とすればいいだけ。</p>
+
+<div class="highlight"><pre><code class="sh">lessc -x　styles.less &gt; styles.css
+</code></pre>
+</div>
+
+<p>のように、<strong>-x</strong>オプションをつけると圧縮したCSSとして展開される。  </p>
+
+<h2 id="link">参考リンク</h2>
+
+<ul>
+  <li><a href="http://lesscss.org/">LESS</a></li>
+  <li><a href="http://www.stuffandnonsense.co.uk/blog/about/less">LESS by Stuff &amp; Nonsense</a></li>
+  <li><a href="http://markdotto.com/bootstrap/">Preboot.less</a></li>
+  <li><a href="http://lesselements.com/">LESS Elements</a></li>
+  <li><a href="http://fadeyev.net/2010/06/19/lessjs-will-obsolete-css/">Less.js Will Obsolete CSS</a></li>
+  <li><a href="http://sass-lang.com/">SASS</a></li>
+</ul>
+
+<script src="/js/hiless.js"></script>
+
+
+				</div>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						
+						<li class="old"><a class="internal" rel="prev" href="/wireframe/2011/04/01/wireframe/" title="ワイヤフレーム">&larr;</a></li>
+						
+						
+						<li class="new"><a class="internal" rel="next" href="/optimization/2011/04/09/why_speed_matters/" title="パフォーマンス最適化">&rarr;</a></li>
+						
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p><a href="/" class="has-icon"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="has-icon" href="https://github.com/studiomohawk/CSS-Radar/issues/new">
+				<i class='icon-github'></i> Ask Me on Github
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+			</p>
+			<p>
+			CSS Radarでは記事を短編の技術書のように編集して、記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そこでCSS Radarでは私なりのベストプラクティスを集めていく事を編集方針としています。
+			</p>
+			<p>
+			最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報を共有</li>
+				<li><a href="http://seven.studiomohawk.com/" rel="me" title="Seven">Seven</a> / フロントエンドブックマーク</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="http://publicdraft.studiomohawk.com/" rel="me" title="Public Draft">Public Draft</a> / フロントエンド・リサーチログ</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<p class="madeintokyo">
+	Build by Yuya Saito. <a href="https://twitter.com/cssradar" rel="me" title="Twitter@cssradar">@cssradar</a><br>
+	Made Proudly in Tokyo.
+	</p>
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+
+</div><!-- #page -->
+<script src="/asset/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-11'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
+

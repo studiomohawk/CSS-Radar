@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title itemprop="name" content="レスポンシブウェブデザイン | CSS Radar">レスポンシブウェブデザイン | CSS Radar | Little Books For Front End Developers</title>
+  <meta itemprop="description" name="description" property="og:description" content="レスポンシブウェブデザインとは いまこの記事を読んでいるモニタのサイズは何インチだろうか？ iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブック、ノートPC、デスクトップPCと数年前なら思いもよらなかったモニタ/スクリーンサイズでユーザはウェブサイトを閲覧し始めている。 今後もさらに解像度が異なる環境が増えていくことは間違いない。 ではそのサイズのモニタごとに、スクリーンごとにデザインを作り、HTML/CSSを書き足していくのか？ その疑問への1つの回答がレスポンシブウェブデザイン(Responsive Web Design)。 多くの場合、CSS3で利用が可能になる予定のMedia Queriesを活用して、モニタ/スクリーンのサイズに合わせて最適なデザインを供給するデザイン/コーディング手法がレスポンシブウェブデザインと呼ばれている。 レスポンシブウェブデザインの例 Simon Collison / Simon Collisonはレスポンシブウェブデザインをいち早く導入したウェブデザイナ Information Architects / WordPressを使ってレスポンシブデザインを実現している Think Vitamin / こちらも最近のリニューアルからレスポンシブウェブデザインを導入 The...">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="">
+	
+  <meta property="og:image" content="http://css.studiomohawk.com/graph.png">
+  <meta property="og:site_name" content="CSS Radar | Little Books For Front End Developers">
+  <meta name="viewport" content="width=device-width">
+  <link href="http://css.studiomohawk.com/atom.xml" rel="alternate" title="CSS Radar | Little Books For Front End Developers" type="application/atom+xml">
+  <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo"><a href="/"><span class="logo-css">CSS</span><span class="logo-radar">Radar</span></a></p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<h1 class="post-title">レスポンシブウェブデザイン</h1>
+				
+				<time class="date-pub update small" title="2011-11-19 13:07:17 +0900">
+					<span class="label">Updated: </span>
+					<span class="month">Nov</span>
+					<span class="day">19</span>
+					<span class="year">2011</span>
+				</time>
+				
+				<time class="date-pub pubdate small" title="2011-01-24T00:00:00+09:00">
+					<span class="label">Published: </span>
+					<span class="month">Jan</span>
+					<span class="day">24</span>
+					<span class="year">2011</span>
+				</time>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2 id="whatis">レスポンシブウェブデザインとは</h2>
+
+<p>いまこの記事を読んでいるモニタのサイズは何インチだろうか？<br />
+iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブック、ノートPC、デスクトップPCと数年前なら思いもよらなかったモニタ/スクリーンサイズでユーザはウェブサイトを閲覧し始めている。
+今後もさらに解像度が異なる環境が増えていくことは間違いない。</p>
+
+<p>ではそのサイズのモニタごとに、スクリーンごとにデザインを作り、HTML/CSSを書き足していくのか？<br />
+その疑問への1つの回答がレスポンシブウェブデザイン(Responsive Web Design)。<br />
+多くの場合、CSS3で利用が可能になる予定のMedia Queriesを活用して、モニタ/スクリーンのサイズに合わせて最適なデザインを供給するデザイン/コーディング手法がレスポンシブウェブデザインと呼ばれている。</p>
+
+<h2 id="ex">レスポンシブウェブデザインの例</h2>
+
+<ul>
+  <li><a href="http://colly.com/">Simon Collison</a> / Simon Collisonはレスポンシブウェブデザインをいち早く導入したウェブデザイナ</li>
+  <li><a href="http://www.informationarchitects.jp/en/">Information Architects</a> / WordPressを使ってレスポンシブデザインを実現している</li>
+  <li><a href="http://thinkvitamin.com/">Think Vitamin</a> / こちらも最近のリニューアルからレスポンシブウェブデザインを導入</li>
+  <li><a href="http://www.bostonglobe.com/">The Boston Globe</a> / メジャーな新聞社のサイト。ここまで大きな規模は初</li>
+  <li><a href="http://css-tricks.com/">CSS-Tricks</a> / レスポンシブウェブデザイン + CSS3のアニメーションを組み込んだ意欲作</li>
+</ul>
+
+<h2 id="whatisnot">レスポンシブウェブデザインが解決しないこと</h2>
+
+<p><em>レスポンシブウェブデザインは、特にハンドヘルドデバイス用に最適な解決方法と考えられるが、すべての問題に対する解決を提示できるわけではない。</em></p>
+
+<p>A List Apartの記事、<a href="http://www.alistapart.com/articles/responsive-web-design/">Responsive Web Design</a>にてEthan Marcotteは、次のように書いている。</p>
+
+<blockquote>
+  <p>That’s not to say there isn’t a business case for separate sites geared toward specific devices; 
+for example, if the user goals for your mobile site are more limited in scope than its desktop equivalent, then serving different content to each might be the best approach.</p>
+</blockquote>
+
+<p>ユーザのゴールに合わせて、ハンドヘルドデバイス用にコンテンツを変更することがベストの解決方法である場合もあるということだ。</p>
+
+<p><a href="http://membership.thinkvitamin.com/library/responsive-web-design/mobile/context">Responsive Web Design: Mobile: Context(Think Vitamin)</a>にてNick Pettitも、レスポンシブウェブデザインを採用するかについて、</p>
+
+<ul>
+  <li>スピード</li>
+</ul>
+
+<p>ハンドヘルドデバイスはWIFIで接続することもあるが、多くの場合は3G回線で接続する。すでに多くのユーザが感じているように、iPhone4のSafariがいくら早くなっても、デスクトップのブラウザのスピードには勝てない。JavaScriptやCSSを無意味にハンドヘルドデバイスでも読み込むことはスピードを犠牲にすることになる。</p>
+
+<ul>
+  <li>スクリーンサイズ</li>
+</ul>
+
+<p>言わずもがな、ハンドヘルドデバイスのスクリーンサイズは決して大きくない。<code>display: none</code>が解決してくれる問題かもしれないが、実際には難しい場合もある。例えば、レストランの情報をデスクトップからアクセスする場合と、ハンドヘルドデバイスからアクセスする場合とでは、提供すべくコンテンツが異なる。そして画像のサイズについて、iPhone4など解像度の高いスクリーンを持つデバイスも現れはじめており、レスポンシブウェブデザインだけでは解決できない問題もある。</p>
+
+<ul>
+  <li>場所</li>
+</ul>
+
+<p>ハンドヘルドデバイスは持ち運ぶため存在する。スクリーンサイズの差異による問題点と同じく、デスクトップと、ハンドヘルドデバイスではユーザが求めているコンテンツそのものが異なる場合も多い。デスクトップではほとんど役目を果たすことがないGeolocationも、ハンドヘルドには重要になってくる。</p>
+
+<p>というような観点で検討するべきだと話している。</p>
+
+<p><a href="http://5by5.tv/bigwebshow/6">EPISODE #6: MOBILE FIRST (The Big Web Show)</a>では、Luke Wroblewskiは「モバイルからまずデザインを始める」という提案をしている。<br />
+こちらも非常に興味深い。現時点では通常デスクトップ用のデザインからスタートし、その後にハンドヘルドデバイス用に最適化していくのが通常のフローと言えるが、Lukeはモバイルデバイス用のデザインを先に行う事でモバイルで提供すべきサービスの根幹に集中することができ、デザインだけではなく、UIやサイト構造、そしてインタラクションもシンプルにすることができると話している。<br />
+ミニマムなスタート地点からデスクトップ用デザインなど大きなモニタ/スクリーン、マウスやキーボードなどに対応するデザインを作ることで、すべてのユーザに対して最適なデザインを提供できるという考え方だ。</p>
+
+<h2 id="mediaqueries">Media Queries</h2>
+
+<p>レスポンシブデザインでは多くの場合、CSS3でサポートされる予定のMedia Queriesを活用しサイズの異なるモニタ/スクリーンに対し最適なデザインを提供する。<br />
+Media Queriesについては、<a href="http://hardboiledwebdesign.com/">Hardboiled Web Design</a>の著者であるAndy Clarkの記事<a href="http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries">Hardboiled CSS3 Media Queries</a>で実例を見る事ができる。</p>
+
+<div class="highlight"><pre><code class="css"><span class="c">/* iPhone 3 (横向き) ----------- */</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> 
+	<span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span> <span class="o">:</span> <span class="nt">321px</span><span class="o">)</span> <span class="p">{</span>
+	<span class="c">/* ここにスタイルルール */</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>CSS3で拡張されるMedia Queriesでは、<code>screen</code>や<code>print</code>のようなメディアタイプだけでなく、デバイス自体のサイズやスクリーンのサイズなどを利用できるようになる。<br />
+例:<code>min-width : 321px</code>、<code>max-width : 320p</code>、<code>max-device-width : 1024px</code>  </p>
+
+<p>上記のように既存のスタイルシートに追記することも可能だし、</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;smartphone.css&quot;</span> <span class="na">media=</span><span class="s">&quot;only screen and (min-device-width : 320px) and (max-device-width : 480px)&quot;</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p>というように<code>link</code>を使って別のスタイルシートとして管理することもできる。</p>
+
+<div class="highlight"><pre><code class="css"><span class="k">@import</span> <span class="nt">url</span><span class="o">(</span><span class="nt">smartphone</span><span class="nc">.css</span><span class="o">)</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-device-width</span> <span class="o">:</span> <span class="nt">320px</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-device-width</span> <span class="o">:</span> <span class="nt">480px</span><span class="o">)</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>W3Cによれば<code>@import</code>を使っても上記のように記述することが可能。(<a href="http://www.w3.org/TR/css3-mediaqueries/#media0">Media Queries</a>)</p>
+
+<p>現時点でのMedia Queriesのサポート状況は、Firefox, Chrome, Safari, Opera, Internet Explorer 9, Android スマートフォン, そしてiOSデバイス(iPhone、iPhone4、iPad、iPod touch)がサポートしている。(※Androidスマートフォン、iPhone、iPod touchについては、W3Cで宣言されているすべての値を利用できるわけではないようだ)</p>
+
+<p>Androidスマートフォン、iPhone、iPod touch、iPadなどのハンドヘルド端末については、</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width; initial-scale=1.0; maximum-scale=1.0;&quot;</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p>という記述も必要になるだろう。
+<code>meta viewport</code>については<a href="http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html">Safari Reference Library</a>(英語)が詳しい説明をしている。<br />
+またはQuirksmodeの<a href="http://www.quirksmode.org/blog/archives/2010/09/combining_meta.htm">Combining meta viewport and media queries</a>(英語)も参考になる。</p>
+
+<p>また、IE6〜IE8まではCSS3で拡張される予定のMedia Queriesはサポートされていないので、レスポンシブデザインの実装をしないか、<a href="http://code.google.com/p/css3-mediaqueries-js/">css3-mediaqueries-js</a>というJavaScriptを使った実装は可能だ。<br />
+レスポンシブウェブデザインは<em>すべてのブラウザで見た目を同じにしなくてはならない</em>という思想からはほど遠くプログレッシブエンハンスメントという手法に近いので、無理にIE6〜IE8への実装をする必要性はない。<br />
+レスポンシブウェブデザインは、確かにユーザのスクリーンサイズに合わせた最適なデザインを提供することができるが、それができなくてもユーザビリティはマイナスになったりはしない。</p>
+
+<h2 id="gridcss">レスポンシブグリッドCSS</h2>
+
+<p>レスポンシブグリッドの最大の弱点は、実装がやや大変なこと。現実的にモバイルに最適化されることを想定していないウェブデザインをモバイル用に変更したり、サイズが変わった際にどのようにグリッドが変更していくべきかなど、デザインとテクニックの両面で解決しなければいけない問題点がある。<br />
+そこで現れ始めたのが、レスポンシブウェブデザインのためのグリッドCSSだ。</p>
+
+<ul>
+  <li><a href="http://lessframework.com/">Less Framework</a></li>
+</ul>
+
+<p>黄金比をベースに3、5、8、13コラム、最小320pxから1280px以上のモニタ/スクリーンに合わせてコラムグリッドの数を変更する。実際に配布されているのは、<code>body</code>に対してmedea queriesを使って幅のサイズを指定するところのみ。コラムグリッドについては、配布されるファイルのコメントを参考にグリッド用のクラスを作成する。非常にミニマムな構成なので、レスポンシブウェブデザインを学ぶ上でのソースコードリーディングに最適だ。</p>
+
+<ul>
+  <li><a href="http://cssgrid.net/">The 1140 grid</a></li>
+</ul>
+
+<p>こちらは、その名前の通り1140px以上を最大幅とするレスポンシブグリッドCSS。Less Framework3と異なる点はコラムグリッド用のクラスは用意されているところ。そしてコラムグリッドとガター(コラムとコラムの間のマージン)はパーセントで指定されているところ。画像に対しても<code>max-width</code>を指定し、モニタ/スクリーンのサイズに対して最適なサイズに変更されるようになっていたりする。Photoshopのファイルも配布している。</p>
+
+<h2 id="problem">レスポンシブウェブデザインの問題点</h2>
+
+<h3>レスポンシブイメージ</h3>
+
+<p>まさに魔法とも思える画像へのレスポンシブ対応である</p>
+
+<div class="highlight"><pre><code class="css"><span class="nt">img</span><span class="o">,</span>
+<span class="nt">embed</span><span class="o">,</span>
+<span class="nt">object</span><span class="o">,</span>
+<span class="nt">video</span> <span class="p">{</span>
+  <span class="k">max-width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>に隠された問題点を指摘できるだろうか？</p>
+
+<ul>
+  <li>ブラウザによって縮小された画像のクオリティ</li>
+  <li>大きなサイズの画像であることには変わらない = 帯域の無駄</li>
+</ul>
+
+<p>この問題点に対して、多くの解決が提案され続けている。<br />
+多くの提案については、<a href="http://www.cloudfour.com/responsive-imgs-part-2/">Responsive IMGs Part 2 — In-depth Look at Techniques « Cloud Four</a>(英語)にてその手法と問題点についてよくまとまっているので目を通しておくことをおすすめする。  </p>
+
+<p>この記事からさらにまとめると</p>
+
+<ul>
+  <li><a href="http://adaptive-images.com/">Adaptive Images in HTML</a></li>
+</ul>
+
+<p>JavaScript + PHP
++ .htaccessを利用したほぼサーバーサイドで解決できるこの手法は、画像が常に同じファイル名であるためにCDNを利用している場合に問題が出る可能性があるがインフラチームと連携すれば実装面と効果面でROIが高いと言える解決。</p>
+
+<ul>
+  <li><a href="http://www.monoliitti.com/images/">Testing Responsive Images</a></li>
+</ul>
+
+<p>JavaScriptのみで解決する方法がこちら</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;noscript</span> <span class="na">data-large=</span><span class="s">&#39;Koala.jpg&#39;</span> <span class="na">data-small=</span><span class="s">&#39;Koala-small.jpg&#39;</span> <span class="na">data-alt=</span><span class="s">&#39;Koala&#39;</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">&#39;Koala.jpg&#39;</span> <span class="na">alt=</span><span class="s">&#39;Koala&#39;</span><span class="nt">&gt;&lt;/noscript&gt;</span>
+</code></pre>
+</div>
+
+<p>まずは画像を<code>noscript</code>タグで囲んで、</p>
+
+<div class="highlight"><pre><code class="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;noscript[data-large][data-small]&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="nx">screen</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;=</span> <span class="mi">500</span> <span class="o">?</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;large&#39;</span><span class="p">)</span> <span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;small&#39;</span><span class="p">);</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;&lt;img src=&quot;&#39;</span> <span class="o">+</span> <span class="nx">src</span> <span class="o">+</span> <span class="s1">&#39;&quot; alt=&quot;&#39;</span> <span class="o">+</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s1">&#39;alt&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot; /&gt;&#39;</span><span class="p">).</span><span class="nx">insertAfter</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>とjQueryでスクリーンサイズに合わせて別画像を呼び出す。<br />
+<code>noscript</code>を使うという慣れない実装ながら、CDNでも問題を起こさないし、大小の画像を両方にリクエストを投げる事もない。リクエストの回数と画像のダウンロードにかかる帯域を節約できる見た目以上にエレガントな解決方法。</p>
+
+<ul>
+  <li><a href="http://www.sencha.com/learn/how-to-use-src-sencha-io/">How to use src.sencha.io</a></li>
+</ul>
+
+<p>tinySrcというサービスがSenchaに吸収され、src.sencha.ioとして生まれ変わった解決法。<br />
+こちらは画像をsrc.sencha.ioに投げるとデバイスに最適化したサイズに変換して戻してくれる。<br />
+Senchaのインフラに頼り切ることにはなるが、個人サイトレベルであれば問題ないだろう。  </p>
+
+<p>と3つほどが解決の候補にあげられる。<br />
+サイトの規模やサーバーサイドチームと相談の上、環境に応じた解決を適切に選択してほしい。</p>
+
+<h3>レスポンシブ広告</h3>
+
+<p>ウェブサイトには画像や動画など以外にも固定幅の要素がある。<br />
+それが広告。ほとんどのウェブデザイナは広告表示にまつわる仕事をしたことがあるだろう。<br />
+ウェブサイトの収入は多くの場合この広告に頼っている現状を考えると、レスポンシブウェブデザインを加速するにはこの問題を解決しないわけにはいかない。</p>
+
+<ul>
+  <li><a href="http://www.markboulton.co.uk/journal/comments/responsive-advertising">Responsive Advertising via Mark Boulton</a></li>
+</ul>
+
+<p>Mark BoultonがBoston
+Globeのレスポンシブウェブデザイン対応から得た経験から、問題の解決作を提案している。</p>
+
+<ul>
+  <li><a href="http://artequalswork.com/posts/responsive-ads.php">Responsive Advertising via ART=WORKR</a></li>
+</ul>
+
+<p>そのMark Boultonの提案への改善策を提案しているのがこちら。</p>
+
+<p>どちらの解決作も</p>
+
+<ol>
+  <li>広告は標準化された固定サイズである</li>
+  <li>広告はサイズと掲載位置をベースに制作され販売される</li>
+  <li>広告にはpop-over、動画などリッチアドという広告もある</li>
+</ol>
+
+<p>という3点にフォーカスして問題の解決を図ろうとしている。<br />
+結論からいって、3.への解決はどちらも苦慮中で、1.は標準サイズのクリエイティブを再利用して解決できるとしている。  </p>
+
+<p>問題は2.の掲載位置。現状ではセールスチームの人間がお客さんにこのサイトのこの位置に掲載されます、と言って販売してくるわけだから、往々にして掲載位置を固定するためにテンプレートが存在することになる。<br />
+つまり</p>
+
+<p>テンプレート &gt; 掲載位置とサイズ &gt; 広告</p>
+
+<p>というメンタルモデルとなるというのがMark
+Boltonの考えで、彼の提案は掲載位置とそれに伴うサイズでの販売ではなく、それらをパッケージ化して販売し、スクリーンサイズに合わせて表示する広告サイズを変化させるというもの。<br />
+全サイズでのインプレッション数をパッケージとして保証すれば問題は解決されるということだ。</p>
+
+<p>それに対して、ART=WORKの提案は</p>
+
+<p><strong>レンジ</strong> &gt; テンプレート &gt; 掲載位置とサイズ &gt; 広告</p>
+
+<p>というように先ほどのメンタルモデルに<strong>レンジ</strong>という上位の概念を取り入れたもの。<br />
+ここでいうレンジについては、実際に画像を見てもらった方がわかりやすい。(<a href="http://artequalswork.com/uploads/responsive-templates.jpg">レンジについて</a>)</p>
+
+<p>ウィンドウサイズをレンジで区切ってそのレンジに合わせてこれまで通りに広告を販売できる。<br />
+モバイルデバイス用に広告を表示させる場合は、そのレンジで購入すればいいという単純な仕組み。  </p>
+
+<p>私の経験では現状日本では、PC用、モバイル用というレンジに近い概念で広告は販売されている。少なくとも私の会社ではそうだ。<br />
+これは日本ではそもそもスマートフォン以前の携帯端末への広告販売に適応してきた歴史があるからだ。<br />
+携帯用、PC用、両方でという販売形態はすでに販売側にも実装側にも制作側にも経験がある。<br />
+この分野に置いては日本が海外を先行していると言えるので、経験を海外に向けて発表でいるいい機会と言える。</p>
+
+<h2 id="links">参考リンク</h2>
+
+<ul>
+  <li><a href="http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/">Mobile-First Responsive Web Design (Brad Frost Web)</a></li>
+  <li><a href="http://www.getfinch.com/finch/entry/its-not-responsive-web-building-its-responsive-web-design/">It’s Not Responsive Web Building, It’s Responsive Web Design (FINCH)</a></li>
+  <li><a href="http://www.lukew.com/ff/entry.asp?1314">An Event Apart: The Responsive Designer’s Workflow (LukeW)</a></li>
+  <li><a href="http://boagworld.com/dev/complex_responsive_design/">Responsive Design: Beyond the Blog (Boagworld)</a></li>
+  <li><a href="http://www.alistapart.com/articles/responsive-web-design/">Responsive Web Design (A list Apart)</a></li>
+  <li><a href="http://www.w3.org/TR/css3-mediaqueries/">Media Queries (W3C)</a></li>
+  <li><a href="http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/">Responsive Web Design: What It Is and How To Use It (Smashing Magazine)</a></li>
+  <li><a href="http://css-tricks.com/css-media-queries/">CSS Media Queries &amp; Using Available Space (CSS-Tricks)</a></li>
+  <li><a href="http://x7.fi/2010/02/12/how-to-fit-your-website-for-the-apple-ipad/">How to fit your website for the Apple iPad (x7 Labs)</a></li>
+  <li><a href="http://www.quirksmode.org/blog/archives/2010/09/combining_meta.html">Combining meta viewport and media queries (Quirksmode)</a></li>
+  <li><a href="http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html">Configuring the Viewport (Safari Reference Library)</a></li>
+  <li><a href="http://www.lukew.com/ff/entry.asp?1117">Mobile First Helps with Big Issues (LukeW)</a></li>
+  <li><a href="http://5by5.tv/bigwebshow/6">EPISODE #6: MOBILE FIRST (The Big Web Show)</a></li>
+  <li><a href="http://membership.thinkvitamin.com/library/responsive-web-design/mobile/context">Responsive Web Design: Mobile: Context (Think Vitamin)</a></li>
+</ul>
+
+<h2 id="books">参考図書</h2>
+
+<ul>
+  <li><a href="http://easy-readers.net/books/adaptive-web-design/">Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement — Easy Readers</a></li>
+  <li><a href="http://www.abookapart.com/products/mobile-first">A Book Apart, Mobile First</a></li>
+  <li><a href="http://www.abookapart.com/products/responsive-web-design">A Book Apart, Responsive Web Design</a></li>
+</ul>
+
+				</div>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						
+						
+						<li class="new"><a class="internal" rel="next" href="/git/2011/01/29/git-version-control/" title="Git バージョンコントロール">&rarr;</a></li>
+						
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p><a href="/" class="has-icon"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="has-icon" href="https://github.com/studiomohawk/CSS-Radar/issues/new">
+				<i class='icon-github'></i> Ask Me on Github
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+			</p>
+			<p>
+			CSS Radarでは記事を短編の技術書のように編集して、記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そこでCSS Radarでは私なりのベストプラクティスを集めていく事を編集方針としています。
+			</p>
+			<p>
+			最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報を共有</li>
+				<li><a href="http://seven.studiomohawk.com/" rel="me" title="Seven">Seven</a> / フロントエンドブックマーク</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="http://publicdraft.studiomohawk.com/" rel="me" title="Public Draft">Public Draft</a> / フロントエンド・リサーチログ</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<p class="madeintokyo">
+	Build by Yuya Saito. <a href="https://twitter.com/cssradar" rel="me" title="Twitter@cssradar">@cssradar</a><br>
+	Made Proudly in Tokyo.
+	</p>
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+
+</div><!-- #page -->
+<script src="/asset/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-11'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
+

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<link rel="hub" href="https://pubsubhubbub.appspot.com"/>
-	<title>Public Draft | Just writing down what I've found and collected</title>
-	<link href="http://publicdraft.studiomohawk.com/atom.xml" rel="self"/>
-	<link href="http://publicdraft.studiomohawk.com"/>
-	<updated>2012-05-04T23:41:09+09:00</updated>
+	<title>CSS Radar | Little Books For Front End Developers</title>
+	<link href="http://css.studiomohawk.com/atom.xml" rel="self"/>
+	<link href="http://css.studiomohawk.com"/>
+	<updated>2012-11-16T07:34:33+09:00</updated>
 	<id>http://css.studiomohawk.com/</id>
 	<author>
 		<name>Yuya Saito</name>
@@ -12,275 +12,157 @@
 	</author>
 	
 		<entry>
-			<title>Sublime Text 2</title>
-			<link href="http://publicdraft.studiomohawk.com/research/2012/04/14/01-02-sublimetext2/"/>
+			<title>ウェブデベロッパのための英語</title>
+			<link href="http://css.studiomohawk.com/english/2012/01/29/reading-english-is-not-so-hard/"/>
 			<updated></updated>
-			<id>http://publicdraft.studiomohawk.com/research/2012/04/14/01-02-sublimetext2</id>
+			<id>http://css.studiomohawk.com/english/2012/01/29/reading-english-is-not-so-hard</id>
 			<content type="html">
-				&lt;h2&gt;インストール&lt;/h2&gt;
+				&lt;h2 id=&quot;preface&quot;&gt;はじめに&lt;/h2&gt;
 
-&lt;p&gt;まずは&lt;strong&gt;インストール&lt;/strong&gt;から。&lt;br /&gt;
-Sublime Text 2はかなりアクティブに更新されているのでdev buildをインストールして最新機能を使えるようにしておこう。&lt;br /&gt;
-&lt;a href=&quot;http://www.sublimetext.com/dev&quot;&gt;Sublime Text 2 - Dev Builds&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ウェブ界隈で仕事をしているとどうしても逃れられないのが英語。&lt;br /&gt;
+ウェブが英語圏を中心に生み出されたからという理由だけではない。インターネットの共通言語が英語なのだ。&lt;/p&gt;
 
-&lt;h2&gt;プラグインをインストール&lt;/h2&gt;
+&lt;p&gt;ここでは英語を話すことができるようになる魔法の教材を売ったりはしない。&lt;br /&gt;
+英語を読むためのちょっとしたコツを共有する。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://wbond.net/sublime_packages/package_control/installation&quot;&gt;Sublime Package Control&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;断っておくが、私は英語を留学することで話すことができるようになり、読むことも、書くことも、最近では翻訳すること、逐次であれば通訳もある程度であればできるが、ものすごく高いTOIECのスコアを誇るとか、誰でも知ってる進学校を卒業したとか、よもやアメリカの有名大学を卒業したということもない。もちろん、教育学部を卒業し、英語を毎日教えているということもない。&lt;br /&gt;
+ここで紹介するのはあくまでも私の経験から得たコツ。&lt;/p&gt;
 
-&lt;p&gt;Sublime Text 2をインストールし終えたらまずはじめにやっておくべきことがこのSublime Package Controlをイントールすること。&lt;/p&gt;
+&lt;h2 id=&quot;firststep&quot;&gt;はじめの一歩&lt;/h2&gt;
 
-&lt;p&gt;Sublime Text 2をスタートしてControl + `(View → Show Console)としてConsoleを立ち上げて&lt;/p&gt;
+&lt;p&gt;わかる単語だけで文章を読んでしまう。そしてわからない単語は辞書を引く。&lt;br /&gt;
+多くの人はわからない単語をがあるから、とそこで一旦読むことをとめてしまう。&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;py&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Package Control.sublime-package&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sublime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;installed_packages_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;makedirs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install_opener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build_opener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ProxyHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()));&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ipp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;wb&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urllib2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://sublime.wbond.net/&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;%20&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;Please restart Sublime Text to finish installation&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;まずは文章の流れを追うこと。意味が分かるかは二の次でいい。&lt;/p&gt;
 
-&lt;p&gt;この文字列をコピー&amp;amp;ペーストしてSublime Text2を再起動すれば完了。&lt;br /&gt;
-Package ControlはControl + Shift + pでCommand Palleteを立ち上げて、installをタイプしてみよう。&lt;br /&gt;
-するとPackage Control: Install Packageのオプションがハイライトされるのでエンター。&lt;br /&gt;
-探しているプラグイン名をタイプしてエンターすればプラグインのインストールが開始される。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Many years ago the great British explorer George Mallory, who was to die on Mount Everest, was asked why did he want to climb it. He said, “Because it is there.”&lt;br /&gt;
+Well, space is there, and we’re going to climb it, and the moon and the planets are there, and new hopes for knowledge and peace are there. And, therefore, as we set sail we ask God’s blessing on the most hazardous and dangerous and greatest adventure on which man has ever embarked.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Command PalleteからでもPackage Controlで管理されているプラグインを一覧できるが、若干読みづらいと思うのでウェブ上で登録されているプラグインをみることができる&lt;a href=&quot;http://wbond.net/sublime_packages/community&quot;&gt;こちら&lt;/a&gt;を参考に。現時点で288のプラグインが登録されている。&lt;/p&gt;
+&lt;p&gt;これはJohn F Kennedyが1932年、9月12日にRice Universityで演説したあの有名な『Moon Speach』の一節。&lt;/p&gt;
 
-&lt;h2&gt;ショートカット&lt;/h2&gt;
+&lt;p&gt;まずは辞書なしにどれくらい理解できるか読んでみてほしい。  &lt;/p&gt;
 
-&lt;h3&gt;覚えておきたいショートカット&lt;/h3&gt;
+&lt;p&gt;そして、簡単にすぐに引ける辞書を用意する。  &lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Control + Shift + p / Command Palleteを立ち上げる  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;私はGoogle ChromeのExtensionである&lt;a href=&quot;https://chrome.google.com/webstore/detail/odncdkhnnoclkbomkbflglagdibfeede?utm_source=chrome-ntp-icon&quot;&gt;英辞郎 on the WEB Pro&lt;/a&gt;を利用している。選択した単語を右クリックから英辞郎 on the WEBの検索をしてくれる便利なツール。Pro版は月額課金なので気をつけてほしい。&lt;br /&gt;
+Pro版の詳しい説明は&lt;a href=&quot;http://eowp.alc.co.jp/info2/&quot;&gt;こちらから&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Command PalleteからSublime Text 2の様々な機能やスニペットを検索できます。Package Controlもここからアクセスできる。&lt;/p&gt;
+&lt;h2 id=&quot;understanding&quot;&gt;80/20の法則&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Command + p / ファイルファインダを立ち上げる&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;大まかに言って20%くらいの単語の意味が理解できれば大体何を言っているのかわかり始める。&lt;/p&gt;
 
-&lt;p&gt;現在開いているファイルやフォルダ、プロジェクト内をキーワードでファイルを検索、開く。&lt;/p&gt;
+&lt;p&gt;ではその20%の見分け方について。&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Command + Control + G / Multi-Select&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;日本語もそうだが、英語にももちろん文章構造がある。&lt;br /&gt;
+文章構造をミクロで見るとすべては1文。つまり文の始まりからピリオドまでがその範囲になる。&lt;br /&gt;
+人は単語だけでは情報を理解することができない。&lt;br /&gt;
+1000014という数字だけみて、国会議事堂の郵便番号だとピンとこないのと同じことだ。&lt;/p&gt;
 
-&lt;p&gt;文字列を選択してからこのショートカットを入力するとファイル内にある文字列から選択した文字列と同じ文字列が選択される。この状態で編集するとすべての文字列が置き換えられる。&lt;/p&gt;
+&lt;p&gt;まずは文そのものを見るくせをつける。&lt;br /&gt;
+その1文を全体で見渡して文における主人公とそのアクションを見つけ出す。&lt;br /&gt;
+シンプルな文章であれば必ずその2つが存在する。&lt;br /&gt;
+受験的な英語ではそれらを巧妙に隠したりするが、実際の文章はそれほどややこしい構造にはなっていない。&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Command + Shift + a / Expand Selection To Tag&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Many years ago the great British explorer George Mallory, who was to die on Mount Everest, was asked why did he want to climb it.&lt;br /&gt;
+He said, “Because it is there.”&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;カーソルのある部分からHTMLのタグ範囲を選択するショートカット。&lt;/p&gt;
+&lt;p&gt;ここでは2つの文を例にしてみてみよう。(それぞれの文にはつながりがあるので)&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Command + Option + 1&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;この2文における主人公はGeorge Mallory。&lt;br /&gt;
+そして彼のアクションはsaid, “Because it is there.”&lt;/p&gt;
 
-&lt;p&gt;単一ウィンドウに切り替え。&lt;/p&gt;
+&lt;p&gt;George Malloryが誰であろうと、なぜならそこにあるから、と言ったことがわかる。&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Command + Option + Shift + 2&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;実はこの文章は短い割にすこしややこしくて主人公はどうやらメインのアクション以前にそこにたどり着くために必要なサブアクションがあるらしい。
+主人公とそのアクションだけで意味をなさない場合は、そのアクションを引き起こすためのきっかけが必要になる。&lt;/p&gt;
 
-&lt;p&gt;ウィンドウを縦に分割。&lt;/p&gt;
+&lt;p&gt;今回でいうと、was asked why did he want to climb itがそれにあたる。
+細かく言うと、was askedがサブアクション。
+何かを聞かれたわけで、その何かがその後に続いている。  &lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Command + /&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;何故彼はそれに登るのか、と聞かれた様子をつかんだだろうか？&lt;/p&gt;
 
-&lt;p&gt;コメントをトグルする&lt;/p&gt;
+&lt;p&gt;それってなんだ。とその前を見てみると、Mount Everestという著名な山があるしそれ以外にモノは文章に出てこないので、it == Mount Everestであることがわかるだろう。&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Option + Control + f&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;あとの単語はわからなくてもいいし、調べる必要もない。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/SublimeText/Tag&quot;&gt;Tag&lt;/a&gt; プラグイン導入済みの場合。&lt;br /&gt;
-選択範囲でHTMLタグをフォーマットする。&lt;/p&gt;
+&lt;p&gt;文章にして書くと非常に長いプロセスのように思うかもしれないが実際にはそれほどかからない。ある程度文章を読むことに(日本語でも、英語でも)慣れていればこの2文なら30秒もかからないでそこまでたどり着くだろう。&lt;/p&gt;
 
-&lt;h2&gt;設定&lt;/h2&gt;
+&lt;h2 id=&quot;forrest&quot;&gt;森を見て、木を見ない&lt;/h2&gt;
 
-&lt;p&gt;Sublime Text 2ではEmacsやVimのように設定ファイルを編集することで設定を変更できる。Preferences → Settings - Defaultを開いて、変更したい部分をコピーしてから、Preferences → Settings - Userにペーストして設定を変更しよう。  &lt;/p&gt;
+&lt;p&gt;知っている単語の数は多ければ多いほど調べるという時間を削減できるから英語を読むのにあたっては知らないよりは知っておいたほうがいい。&lt;br /&gt;
+しかし、単語だけを無用に覚えるのはよくない。&lt;/p&gt;
 
-&lt;p&gt;同様にキーバインドもPreferences → Key Bindings - Defaultを開いて、変更したい部分をコピーして、Preferences → Key Bindings - Userにペーストして設定を変更できる。&lt;/p&gt;
+&lt;p&gt;生きている文章の中で単語を覚える癖を付けるといいだろう。&lt;br /&gt;
+実際に読んでいる文章ごと単語を覚えてしまうということだ。&lt;/p&gt;
 
-&lt;p&gt;どちらの設定ファイルもJSON形式で書かれているので	編集はそれほど難しくない。&lt;/p&gt;
+&lt;p&gt;日本語とは違って英語はルールが多い。&lt;br /&gt;
+ペアや3単語1チームとかで意味を生むことが多い。だから文章で単語を覚えてしまった方が効率的だ。よく言うところの熟語と呼ばれるやつだ(私はなんでもかんでも熟語としてそれを覚えようとするのはよろしくないと思っている)。  &lt;/p&gt;
 
-&lt;h2&gt;おすすめプラグイン&lt;/h2&gt;
+&lt;p&gt;単語の意味もgetという単語を調べたときの辞書に書いてある意味すべてをおぼえてるのではなく、getという単語がもつそのものの意味を理解するようにする。&lt;br /&gt;
+原義にフォーカスして単語を覚えるというのは私だけが提唱している方法論ではなく、&lt;a href=&quot;http://www.amazon.co.jp/dp/4523310424&quot;&gt;語源中心英単語辞典&lt;/a&gt;という辞典が発売されていることからも一般的な手法であることがわかる。&lt;br /&gt;
+原義を理解することで熟語とよばれる単語達チームの達も自然に意味が分かるようになってくる。(だから熟語として覚えるのはあまり意味がない)&lt;br /&gt;
+英語も漢字と同じくパーツで意味がわかることが多い。語源を中心に単語を覚えていくとこのパーツを見破ることができるようになる。&lt;br /&gt;
+この方式の感覚をつかむとボキャブラリが飛躍的に増える。  &lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/sublimator/sublime-2-zencoding&quot;&gt;Zen Coding&lt;/a&gt;  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;単語だけに捕われず文章全体でどういう意味になるのかを理解するようにする。単語も意味だけに捕われず、単語が持つ方向性を理解するようにする。&lt;/p&gt;
 
-&lt;p&gt;HTML、CSSをより早く記述するのに便利なZen Coding。Package Controlから直接はインストールできなかったので、Package Control: add repositoryからhttps://bitbucket.org/sublimator/sublime-2-zencodingを追加してインストールした。  &lt;/p&gt;
+&lt;p&gt;木を見て、森を見ずは英語においても落とし穴で、その反対に解決がある。&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;div.text&lt;/code&gt;のようないつもの記述をtabでExpandしてくれる。他のコマンドについては~/Library/Application\ Support/Sublime\ Text\ 2/Packages/ZenCodingのkeymapを確認できる。&lt;/p&gt;
+&lt;h2 id=&quot;justdoit&quot;&gt;ならうより慣れろ&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/wbond/sublime_prefixr&quot;&gt;Sublime Prefixr&lt;/a&gt;  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;1日1記事。長さは関係ない。&lt;br /&gt;
+とにかく読むことだけが英語を読めるようになる最終的なコツ。  &lt;/p&gt;
 
-&lt;p&gt;CSS3のブラウザベンダープリフィックスを補完してくれるウェブサービス&lt;a href=&quot;http://prefixr.com/&quot;&gt;Nettuts+ Prefixr&lt;/a&gt;を直接利用できる。Package Controlからインストール可能。&lt;/p&gt;
+&lt;p&gt;続けるためには2つの要素が必要だ。&lt;br /&gt;
+1つはなんであれ読むだけの価値があること。&lt;br /&gt;
+もう１つは内容をある程度知っていること。&lt;/p&gt;
 
-&lt;p&gt;Command + Control + x で実行。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeText/Tag&quot;&gt;Tag&lt;/a&gt;  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;HTMLに関する様々な機能を拡張するプラグイン。&lt;br /&gt;
-スラッシュで自動的にタグを閉じる、タグのインデントなどを追加。
-インストールはPackage Controlから。&lt;/p&gt;
+&lt;p&gt;ウェブデベロップメントの世界で生きている人にとってこの2点を満たすのは難しいことではない。プロフェッショナルな文章で毎日のようにすばらしい記事を提供しているメディアが非常に多く、特にチュートリアル系の記事だと見たことがあるスニペットが大部分を占めるのである程度は内容が理解できるはず。  &lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/facelessuser/BracketHighlighter&quot;&gt;BracketHighlighter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.smashingmagazine.com/&quot;&gt;Smashing Magazine&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://net.tutsplus.com/&quot;&gt;Nettuts+&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.netmagazine.com/&quot;&gt;.net magazine&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;(),[],&amp;lt;&amp;gt;,{}&lt;/code&gt;、HTMLタグを強調表示。(HTMLタグはややバグっぽい挙動もある様子)。&lt;br /&gt;
-インストールはPackage Controlから。&lt;/p&gt;
+&lt;p&gt;ほんの一例ながら上記の3メディアは非常にわかりやすい単語で書かれており、文法チェックも通しているので変な部分で悩まなくても済む。&lt;br /&gt;
+この3メディアをRSSに入れておけば確実に毎日何かしら自分の役に立つ情報を得ることもできる。&lt;br /&gt;
+Twitterは文にならない場合も多いし、制限による特殊な表現、そして会話的な文体が多いのでそれほどおすすめはできない。&lt;/p&gt;
+
+&lt;p&gt;私が毎日読んでいる記事達は&lt;a href=&quot;https://github.com/studiomohawk/fakebrain/wiki/feeds-for-front-end-developers&quot;&gt;フロントエンドデベロッパのためのフィード&lt;/a&gt;で大部分を共有している。&lt;br /&gt;
+メディアによっては科学技術書のような体裁で書かれている記事もあるが、大抵は平易な単語、文章で書かれているのでどのフィードもおすすめできる。&lt;/p&gt;
+
+&lt;p&gt;もちろん私が運営している&lt;a href=&quot;http://newsletter.studiomohawk.com/&quot;&gt;CSS Radar Newsletter&lt;/a&gt;は毎週10以上の記事を紹介しているから、週末に届くこのメールで紹介されている記事を次の週の間に読んでいけば毎日何かしら読めることになる。&lt;br /&gt;
+辞書で引いてもわからなかった文の解釈などあればNewsletterで紹介している記事であればすべて読んでいるので気軽に聞いてほしい。&lt;/p&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;読み続けるためのツール&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/kemayo/sublime-text-2-git&quot;&gt;git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.instapaper.com/&quot;&gt;Instapaper&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://readitlaterlist.com/&quot;&gt;Read It Later&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.readability.com/&quot;&gt;Readability&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Command Palleteから直接gitコマンドを利用できるようにするプラグイン。&lt;br /&gt;
-インストールはPackage Controlから。&lt;/p&gt;
+&lt;p&gt;ウェブでもiPhoneでもiPadでも記事を読みやすい形式に変換し、オフラインでも記事を読むことを可能にするこの3ツールのうち1つは有料版を手元に持っておくことをおすすめする。&lt;br /&gt;
+慣れるまではデスクトップのブラウザ上で辞書へのアクセスが簡単にできる環境で記事を読むほうがいいだろう。&lt;br /&gt;
+私はすべての有料版を試したが最終的には&lt;a href=&quot;http://www.readability.com/&quot;&gt;Readability&lt;/a&gt;を利用している。&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeText/SideBarGit&quot;&gt;SideBarGit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&quot;books&quot;&gt;おすすめの本&lt;/h2&gt;
 
-&lt;p&gt;Sublime Text 2のサイドバーからGitコマンドを実行できるようにするプラグイン。&lt;br /&gt;
-インストールはPackage Controlから。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.co.jp/dp/4900790052&quot;&gt;DUO 3.0&lt;/a&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/titoBouzout/SideBarEnhancements&quot;&gt;SideBarEnhancements&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;私が買った英語教育系で唯一の本。私が買った時代は2.0だったけれど。&lt;br /&gt;
+この本は非常に優れた本で、さきほど書いた一文で英語単語、熟語を覚えるために作られた本。&lt;br /&gt;
+560英文から重要単語1600語と重要熟語1000語を覚えることができる。  &lt;/p&gt;
 
-&lt;p&gt;Sidebarに削除、実行などの機能を追加するプラグイン。&lt;br /&gt;
-Packageまわりは少しバグがあるようで、ほぼ動作しない様子だがかなり便利。&lt;br /&gt;
-こちらもPackage Controlから。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/danro/LESS-sublime&quot;&gt;LESS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;LESSファイルのシンタックスハイライタ。&lt;br /&gt;
-LESSを保存と同時にコンパイルするプラグインもあるが、私は別プロセスで処理しているのでハイライタだけ利用。&lt;br /&gt;
-Package Controlから。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/bgreenlee/sublime-github&quot;&gt;Sublime GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;少々ややこしいネーミングながらgithubのgistをSublime Text 2から利用できるようになる。&lt;br /&gt;
-Command Palleteからgistの表示、gistへの投稿などを行うことができる。&lt;br /&gt;
-Package Controlから。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/netpro2k/SublimeBlockCursor&quot;&gt;SublimeBlockCursor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Vimモードに近しいVintageモードに変更するとCommand Modeの際にカーソルの位置が分かりづらくなるのでこのプラグインで解決。&lt;br /&gt;
-私の環境ではPackage Controlからはインストールできなかったので、直接PackageへCloneした。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/spadgos/sublime-AsAbove&quot;&gt;As Above&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;カーソルの真上にいる文字をコピーするプラグイン。&lt;br /&gt;
-Control + Shift + ‘のショートカットキーで1文字づつコピーする。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeText/Open-Include&quot;&gt;Open-Include&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ファイルパスをOption + dで開くプラグイン。&lt;br /&gt;
-画像、動画などをデフォルトアプリで開いてくれる。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/SublimeText/TrailingSpaces&quot;&gt;TrailingSpaces&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;行末の空白文字を強調表示、削除するプラグイン。&lt;br /&gt;
-削除はSublime Text 2の設定から&lt;br /&gt;
-    “trim_trailing_white_space_on_save”: true,
-と変更すれば保存と同時に削除される。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/uipoet/sublime-jshint&quot;&gt;sublime-jshint&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;JSHistを実行するプラグイン。動作にはnode 0.6系が必要。&lt;br /&gt;
-Control + jで実行。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://andrewbrookins.com/tech/make-sublime-text-2-more-like-vim-wrap-code-goto-last-edit-and-more/&quot;&gt;Make Sublime Text 2 More like Vim: Wrap Code, Go To Last Edit, and More&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Vimで使えるちょっと便利なコマンドをエミュレートするプラグイン達。&lt;br /&gt;
-好きなものを選んで利用中。&lt;br /&gt;
-Package Controlからはインストールできないので、Packagesディレクトリに直接cloneしました。&lt;/p&gt;
-
-&lt;h2&gt;Tips&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Vim風キーバインドに変換する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Command PalleteにてPackage Control: Enable Packageを選んでエンターしてVintageモードを有効にする。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TextMateのカラースキームを利用する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sublime Text 2ではTextMateの.tmbundleファイルを利用することができます。またカラースキームファイルも利用可能。&lt;br /&gt;
-packageフォルダ直下に.tmbundleをコピーしてSublime Text 2を再起動すればメニューからカラースキームを選択できる。&lt;br /&gt;
-私が現在使っているのは&lt;a href=&quot;https://github.com/chriskempson/textmate-tomorrow-theme&quot;&gt;Tomorrow Theme&lt;/a&gt;のNight Eighties。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;HTMLファイル内をIDやClass名で移動する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Command + Pでファインダを立ち上げ、&lt;code&gt;#&lt;/code&gt;を入力するとHTMLからID名、Class名などを検索できる。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;行番号に移動する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Control + gでも移動できますが、Command + pから&lt;code&gt;:&lt;/code&gt;を入力し行番号をタイプしても移動できる。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TerminalからSublimeを起動する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin
-にあるsublをbinなどにsymlinkすればOK。&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo ln -s &lt;span class=&quot;s2&quot;&gt;&amp;quot;/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl&amp;quot;&lt;/span&gt; /bin/subl
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sublime Text 2の設定の同期&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sublime Text 2の設定は&lt;br /&gt;
-&lt;code&gt;~/Library/Application Support/Sublime Text 2/&lt;/code&gt;&lt;br /&gt;
-に保存されているので中にあるディレクトリをDropboxに移動しsymlinkすればOK。&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/Library/Application Support/Sublime Text 2/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;ディレクトリに移動して
-Dropboxに作成した/appdata/sublime/に元々あったディレクトリを移動。&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ln -s ~/Dropbox/appdata/sublime/Installed&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Packages ./Installed&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Packages
-ln -s ~/Dropbox/appdata/sublime/Packages ./Packages
-ln -s ~/Dropbox/appdata/sublime/Pristine&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Packages ./Pristine&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;Packages
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;以上でDropboxに置いた設定ファイル群から&lt;code&gt;~/Library/Application Support/Sublime Text 2/&lt;/code&gt;にsymlinkできる。&lt;br /&gt;
-Sublime Textは閉じたままで作業しよう。&lt;/p&gt;
+&lt;p&gt;アメリカの新聞は大まかに言って2000単語から3000単語を知っていれば読むことができることになっている。少なくとも私はジャーナリズム学科でその単語以内で記事を書くことを訓練した。&lt;br /&gt;
+ということは、DUOに収録されている単語さえ覚えてしまえばなんとか読めるレベルになる。&lt;br /&gt;
+私の小遣い稼ぎのために書いているのではない。アフィリエイトのコードもつけていないし、買うなら古い本なので古本屋にいけばそこそこおいてあるはずだから探してみてほしい。仮に2.0しか見つからなくても構わない。大きくは変わらないはずだ。&lt;/p&gt;
 
 				&lt;hr /&gt;
 				&lt;h5&gt;Elsewhere&lt;/h5&gt;
@@ -293,98 +175,2830 @@ Sublime Textは閉じたままで作業しよう。&lt;/p&gt;
 		</entry>
 	
 		<entry>
-			<title>Build Script using Jake</title>
-			<link href="http://publicdraft.studiomohawk.com/research/2012/04/07/20-41-jake/"/>
-			<updated></updated>
-			<id>http://publicdraft.studiomohawk.com/research/2012/04/07/20-41-jake</id>
+			<title>Vim</title>
+			<link href="http://css.studiomohawk.com/vim/2011/07/24/vim-bits-and-pieces/"/>
+			<updated>2011-12-25 12:58:27 +0900</updated>
+			<id>http://css.studiomohawk.com/vim/2011/07/24/vim-bits-and-pieces</id>
 			<content type="html">
-				&lt;h2&gt;パッケージ&lt;/h2&gt;
+				&lt;h2 id=&quot;preface&quot;&gt;はじめに&lt;/h2&gt;
 
-&lt;h3&gt;LESS&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/akoenig/laessig&quot;&gt;akoenig/laessig&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Vimにおける設定ファイルである.vimrc。&lt;br /&gt;
+私のGoogleサーチによる他者の知の結晶とも言える.vimrcはgithubにあるので、参考になれば。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;.less&lt;/code&gt;ファイルの保存時にLESSをCSSに変換。&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;laessig observe /the/path/to/your/file.less&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/studiomohawk/vim&quot;&gt;.vimrc&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;CSS圧縮&lt;/h3&gt;
+&lt;p&gt;Vimで覚えるべきポイントは大きく分けて3つ。
+コマンド、プラグイン、そして設定。&lt;br /&gt;
+この記事ではその3つにVimについての情報源を追加した4つを軸にしつつ、時系列でエントリを追記する形をとることにする。&lt;br /&gt;
+なお、プラグインを追加する際、設定も同時に行う場合が多いがその場合はプラグインのエントリに記述する。
+また同様に覚えたコマンドをより簡単に呼び出すための設定もコマンドのエントリに記述する。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/ded/sqwish&quot;&gt;ded/sqwish&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;私のVimに対するアプローチは、Ruby on RailsとjQueryのコアメンバであるYehuda Katz氏の記事、&lt;a href=&quot;http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/&quot;&gt;Everyone Who Tried to Convince Me to use Vim was Wrong&lt;/a&gt;と同じで、始めからVimのやり方に合わせるのではなくマウスを使ったって、Control + Sで保存したって、別にかまわないと思っている。&lt;/p&gt;
+
+&lt;p&gt;私にとってVimはフィロソフィーではなく、あくまでもツールである。&lt;br /&gt;
+便利に使えるからこそのツールでエンドユーザはその壮大な設計思想など気にする必要はない。自分のペースで自分らしく使いこなす事が真の効率化なのだから。&lt;/p&gt;
+
+&lt;h2 id=&quot;command&quot;&gt;コマンド&lt;/h2&gt;
+
+&lt;h3&gt;ファイルを分割ウィンドウで開く&lt;/h3&gt;
+
+&lt;p&gt;高度なテキストエディタには必ずと言っていいほど存在するファイルを上下、あるいは左右で分割して表示する方法。&lt;br /&gt;
+私はCSSファイルは同じ記述は繰り返さないように最大の努力をしているが、HTMLファイルは同じような記述で書けるように最大限の努力をしている。&lt;br /&gt;
+そんな際に重宝するのがこのコマンド。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;sqwish styles.css&lt;/code&gt;  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;sqwish styles.css --strict&lt;/code&gt; / 重複するセレクタをマージ&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ctrl-w s&lt;/code&gt; こちらは現在のファイルを左右に分割&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ctrl-w v&lt;/code&gt; こちらは現在のファイルを上下に分割&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;CSS結合&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/cloudhead/less.js&quot;&gt;cloudhead/less.js&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;HTML + CSSの組み合わせは大体の場合セットで開いていた方が何かと便利。そんな際は&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;master.less&lt;/code&gt;などに&lt;code&gt;@import&lt;/code&gt;で全CSSファイルを呼び出す。  &lt;/li&gt;
-  &lt;li&gt;LESSのコンパイルで結合。&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:sp FILENAME&lt;/code&gt; FILENAMEを新しく左右に分割されたウィンドウにロード&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:vp FILENAME&lt;/code&gt; FILENAMEを新しく上下に分割されたウィンドウにロード&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;CSS シンタックスチェック&lt;/h3&gt;
+&lt;p&gt;最近はワイドなモニターが主流なので、左右で分割しても苦にならないだろうが、私は昔の人間なので上下に開くことが多い。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/stubbornella/csslint/wiki/Command-line-interface&quot;&gt;Command-line Interface · stubbornella/csslint Wiki&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3&gt;JavaScript圧縮&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/mishoo/UglifyJS&quot;&gt;mishoo/UglifyJS&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;開く方法を紹介したからには、閉じる方法も紹介しよう。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;uglifyjs -o OUTPUT-FILENAME INPUT-FILENAME&lt;/code&gt; / ファイル名を変更  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;uglifyjs --overwrite INPUT_FILENAME&lt;/code&gt; / ファイルを上書き&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:on&lt;/code&gt; は現在選択されているウィンドウのみを残して、他のウィンドウを閉じる&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:q&lt;/code&gt; は現在選択されちえるウィンドウを閉じる&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;JavaScript結合&lt;/h3&gt;
+&lt;p&gt;コマンドが多いなと感じる事だろうが、sはsplitの略で、vはvertical
+splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/ender-js/Ender&quot;&gt;ender-js/Ender&lt;/a&gt;&lt;/strong&gt;  &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://ender.no.de/#publishing&quot;&gt;Ender / publishing&lt;/a&gt;でEnder用のパッケージの作成方法について書かれている。  &lt;/p&gt;
-
-&lt;p&gt;疑問: &lt;code&gt;repository&lt;/code&gt;は必須か？&lt;/p&gt;
-
-&lt;h3&gt;JavaScript シンタックスチェック&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/jshint/node-jshint/&quot;&gt;jshint/node-jshint&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3&gt;その他&lt;/h3&gt;
+&lt;h3&gt;行をソートする&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/ryanmcgrath/wrench-js&quot;&gt;ryanmcgrath/wrench-js&lt;/a&gt;&lt;/strong&gt; / ファイルの作成、コピー、移動&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/isaacs/node-glob&quot;&gt;isaacs/node-glob&lt;/a&gt;&lt;/strong&gt; / ファイルパスを文字列パターンから検索&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:'&amp;lt;,'&amp;gt;!sort&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;Ruby / Python / UNIXツール&lt;/h2&gt;
+&lt;p&gt;選択行をアルファベット順に並べ替える。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;まず、ソートしたい行を選択&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:&lt;/code&gt; をタイプすると、&lt;code&gt;:'&amp;lt;,'&amp;gt;'&lt;/code&gt;と表示される&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;!sort&lt;/code&gt;とタイプ = &lt;code&gt;:'&amp;lt;,'&amp;gt;!sort&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;何が便利かというと、私はCSSのプロパティをアルファベット順に並べ替える(IEハックは除外するが、ここは手作業)ので重宝している。&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://yostudios.github.com/Spritemapper/&quot;&gt;Spritemapper&lt;/a&gt; / CSS Spriteの生成&lt;/li&gt;
-  &lt;li&gt;gifsicle、libjpeg、optipng、pngcrushを使った画像最適化&lt;/li&gt;
-  &lt;li&gt;rsyncでサーバにアップ&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:'&amp;lt;,'&amp;gt;!sort -u&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;参考リンク&lt;/h2&gt;
+&lt;p&gt;とすると、ユニークな行だけ、つまり重複行を削除することも可能。&lt;/p&gt;
 
-&lt;h3&gt;記事&lt;/h3&gt;
+&lt;p&gt;私の環境では日本語に置けるソートは上手く行かないが、ユニーク行を残すことはできた。&lt;/p&gt;
+
+&lt;h3&gt;バッファにあるファイルを全部タブで開く&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.millermedeiros.com/node-js-as-a-build-script/&quot;&gt;Node.js as a build script by Miller Medeiros&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://howtonode.org/intro-to-jake&quot;&gt;Intro to Jake - JavaScript build tool for Node.js by How To Node&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://clock.co.uk/tech-blogs/deploying-nodejs-apps&quot;&gt;Deploying node.js apps by Ben Gourley by Clock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://upliftingcode.com/blog/front-end-build-script-tasks&quot;&gt;upliftingcode: Front End Build Script Tasks - deciphering the web one variable at a time&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;:tab ball&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;リポジトリ&lt;/h3&gt;
+&lt;h2 id=&quot;plugin&quot;&gt;プラグイン&lt;/h2&gt;
+
+&lt;h3&gt;&lt;a href=&quot;https://github.com/garbas/vim-snipmate&quot;&gt;snipMate&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;色々あって利用してこなかったsnipMateに挑戦中。オリジナルのsnipMateは更新が止まっている様子なので、こちらのforkをおすすめされた。&lt;br /&gt;
+snipMateはTextMateのスニペット機能を模したプラグイン。特定のキーワードとtabで登録したスニペットが呼び出せる。  &lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=3818&quot;&gt;MatchTag&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;MatchTagはNotePad++で使えたあの便利なHTMLタグを選ぶとセットになっているタグをハイライトしてくれるプラグイン。
+ずーとこれだけが気になっていたけれど、これで完璧。HTMLを生業にしている人は必携。&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;https://github.com/mr-szymanski/prefixr&quot;&gt;Prefixr&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;CSS3をクロスブラウザで適応するにはブラウザプリフィックス(-o-や、-webkit-など)を記述する必要がある。&lt;br /&gt;
+Nettus+にて作成された&lt;a href=&quot;http://prefixr.com/&quot;&gt;Prefixr&lt;/a&gt;というウェブツールはW3Cで現時点で発表されている記述やどのブラウザプリフィックス付きの記述1つを書いておけばボタン1つで全プリフィックスに変換してくれる強力なツール。&lt;br /&gt;
+そのAPIを利用してvimのプラグインにしたのがこれ。&lt;/p&gt;
+
+&lt;p&gt;変換したい値を選択して&lt;code&gt;:Prefixr&lt;/code&gt;とコマンドを叩けばウェブツールと同じことができる。&lt;br /&gt;
+Vimから離れずに強力なツールが利用できるので非常に時短。&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href=&quot;https://github.com/godlygeek/tabular&quot;&gt;Tabular.vim&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Tabular.vimは&lt;code&gt;=&lt;/code&gt;や、&lt;code&gt;:&lt;/code&gt;のような決まった文字を基点にツラを合わせるためのプラグイン。&lt;br /&gt;
+読みやすいコードを目指すあまり、書いている最中でもツラを合わせないと気が済まない人には必携だ。&lt;/p&gt;
+
+&lt;p&gt;例えば、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#selector&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;zoom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;letter-spacing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;word-spacing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;のようなCSSを&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;:Tab\:&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;とすると&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#selector&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;margin-right&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;zoom&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;letter-spacing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;word-spacing&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;vertical-align&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;このようになる。(環境によっては再現されない可能性がある、そんな際は&lt;a href=&quot;http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/&quot;&gt;Bitstream Vera Sans Mono&lt;/a&gt;をインストールすれば見られるようになる。日本語Fontではないがプログラマ向Fontとして有名なので持っていて損はしないだろう)&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/balupton/buildr.npm&quot;&gt;balupton/buildr.npm&lt;/a&gt; / 画像圧縮まわり&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/BrainSwap/Mandible2&quot;&gt;BrainSwap/Mandible2&lt;/a&gt; / jakeFileの設定まわり&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/mde/jake&quot;&gt;mde/jake&lt;/a&gt; / jakeのシンタックス&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/h5bp/node-build-script&quot;&gt;h5bp/node-build-script&lt;/a&gt; / デファクトデフォルトなので参考に&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;nnoremap &amp;lt;leader&amp;gt;tab :Tab /:\zs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;.vimrcには、上記のマッピングを追記した。例とは異なるツラの揃え方だが私はこちらのほうが好み。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/godlygeek/tabular&quot;&gt;godlygeek/tabular - GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href=&quot;http://sjl.bitbucket.org/gundo.vim/&quot;&gt;Gundo&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Gundo.vimはVimの編集履歴のツリーをバージョンコントロールしたように見せてくれるプラグイン。&lt;br /&gt;
+単にツリーを表示するだけではなく、そのundoの状態もプレビュできる強力なツール。  &lt;/p&gt;
+
+&lt;p&gt;実際に動作している様を見た方が便利さがわかるので、&lt;a href=&quot;http://vimcasts.org/episodes/undo-branching-and-gundo-vim/&quot;&gt;見てみてほしい&lt;/a&gt; (via Vimcast)。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sjl.bitbucket.org/gundo.vim/&quot;&gt;Gundo - Visualize your Vim Undo Tree&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sjl/gundo.vim/&quot;&gt;sjl/gundo.vim - GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;Pathogen&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;vim-pathogenはVimのプラグインをGitのsubmoduleで管理することができるプラグイン。&lt;br /&gt;
+Vimのプラグイン管理は非常に面倒な作業の1つ。gitの使い方を覚えなければならないところが慣れるまでは大変かもしれないが、それだけの価値はある。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;プラグイン(fugitive)を追加&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive  
+&lt;span class=&quot;c&quot;&gt;# git submoduleでfugitiveをbundle/fugitiveに追加  &lt;/span&gt;
+git submodule update --init  
+&lt;span class=&quot;c&quot;&gt;# submoduleを登録して、アップデート&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;プラグインを削除&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rm -r -f 削除するプラグインのディレクトリ &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;例: bundle/fugitive&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;c&quot;&gt;# .gitmodulesをエディタで開いて、削除するsubmoduleの該当行を削除する  &lt;/span&gt;
+git rm -r 削除するプラグインのディレクトリ &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;最後のスラッシュはいれない&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+git submodule sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;プラグインをアップデート&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;git submodule foreach git pull origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;なお、pathogenを利用するためには、.vimrcに&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;vim&quot;&gt;&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; pathogen#runtime_append_all_bundles&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; pathogen#&lt;span class=&quot;k&quot;&gt;helptags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;と追加する必要がある。この行はfiletypeの設定以前に呼び出す必要があるため、.vimrcの最初の行に追加することをおすすめする。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;tpope/vim-pathogen - GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;config&quot;&gt;設定&lt;/h2&gt;
+
+&lt;h3&gt;タブをFirefoxのように操る&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;Control + Tab&lt;/code&gt;で次のタブへ&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Control + Shift + Tab&lt;/code&gt;で前のタブへ&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Control + t&lt;/code&gt;で新しいタブを作る&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;vim&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;quot; keymap Firefox like tab move {&lt;/span&gt;
+nmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;tabprevious&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+nmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :tabnext&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;tabprevious&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :tabnext&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+imap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;Esc&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;:&lt;span class=&quot;k&quot;&gt;tabprevious&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;i&lt;/span&gt;
+imap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;Esc&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;:tabnext&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;i&lt;/span&gt;
+nmap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;tabnew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+imap &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;Esc&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;:&lt;span class=&quot;k&quot;&gt;tabnew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;quot; }&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sontek.net/turning-vim-into-a-modern-python-ide&quot;&gt;John Anderson ( sontek ) - Turning Vim into a modern Python IDE&lt;/a&gt; / VimをPython IDEとして使うための設定。Python使いではなくても参考になる(英語)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mwop.net/blog/249-Vim-Toolbox,-2010-Edition&quot;&gt;Vim Toolbox, 2010 Edition :: phly, boy, phly&lt;/a&gt; / 10年ほどVimを利用しているというMatthew Weier O’Phinney氏のVimについての記事(英語)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stevelosh.com/blog/2010/09/coming-home-to-vim/&quot;&gt;Coming Home to Vim / Steve Losh&lt;/a&gt; / 様々なテキストエディタからVimに落ち着いた経緯と細かい設定の解説がおすすめ(英語)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vim.runpaint.org/toc/&quot;&gt;Vim Recipes&lt;/a&gt; / 基本から応用まで非常にシンプルでミニマムなフォーマットで丁寧に解説してくれる (英語)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/&quot;&gt;Vimcasts - free screencasts about the text editor Vim&lt;/a&gt; / Vimのチュートリアルビデオキャスト。基本のコマンドからプラグインまで詳しく解説している(英語)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://peepcode.com/products/smash-into-vim-i&quot;&gt;Smash Into Vim by PeepCode&lt;/a&gt; / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート1 $12 (英語)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://peepcode.com/products/smash-into-vim-ii&quot;&gt;Smash Into Vim II by PeepCode&lt;/a&gt; / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート2 $12 (英語)&lt;/li&gt;
+&lt;/ul&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>Jekyll</title>
+			<link href="http://css.studiomohawk.com/jekyll/2011/06/11/jekyll/"/>
+			<updated></updated>
+			<id>http://css.studiomohawk.com/jekyll/2011/06/11/jekyll</id>
+			<content type="html">
+				&lt;h2 id=&quot;whatis&quot;&gt;Jekyllとは&lt;/h2&gt;
+
+&lt;p&gt;Amazon S3にて静的ファイルによるウェブサイトを構築できるようになり、Amazon Web Serviceが日本リージョンを追加したことで、これからJekyllのような静的ファイルジェネレータを使ったブログが日本でも増えるのではないか。  &lt;/p&gt;
+
+&lt;p&gt;Jekyllといえば、このCSS Radarも今年1月からwordpressを離れ、Jekyllを使ってブログを構築している。&lt;br /&gt;
+(残念ながらまだAmazon S3でのホストはしていない)  &lt;/p&gt;
+
+&lt;p&gt;Amazon Web Service勉強会でもJekyllとAmazon S3についての発表があった。(&lt;a href=&quot;http://www.ustream.tv/recorded/14269210&quot;&gt;usteam&lt;/a&gt;)&lt;br /&gt;
+そこで、今回はRubyでもコマンドラインでも初心者である私でもつくれるようになったJekyllについて紹介しよう。&lt;/p&gt;
+
+&lt;h2 id=&quot;prepare&quot;&gt;開発環境の準備&lt;/h2&gt;
+
+&lt;p&gt;JekyllはRubyで作成されているので当然ながらRubyが必要。&lt;br /&gt;
+Rubyの導入については、&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/&quot;&gt;ウェブデザイナのためのRuby&lt;/a&gt;を参考にしてほしい。&lt;/p&gt;
+
+&lt;p&gt;Rubyの準備ができたら、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;*パーミッションがどうのというエラーがでたら、&lt;code&gt;sudo gem install jekyll&lt;/code&gt;とすればインストールできるはず。&lt;/p&gt;
+
+&lt;p&gt;CSS RadarではHTMLやら、CSSなどのソースコードの表示もあるので、Pygmentsを使ってシンタックスハイライトを行っている。&lt;br /&gt;
+Homebrewを使っているならインストールは簡単。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;brew install pip &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; pip install pygments
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;としてから、Homebrewでは実行ファイルにsymlinkがつかないそうで下記を実行してsymlinkをつくる&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ln -s /usr/local/Cellar/python/2.7/bin/pygmentize /usr/local/bin/pygmentize
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;structire&quot;&gt;基本フォルダ/ファイル構造と記事の作成&lt;/h2&gt;
+
+&lt;h3&gt;基本フォルダとファイルの準備&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;.  
+|-- _config.yml &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;設定ファイル&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+|-- _layouts &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;テンプレートフォルダ&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+|   |-- default.html  
+|   -- post.html  
+|-- _posts &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;記事フォルダ、.textileか.markdownで記述&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+|   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile  
+|   -- 2009-04-26-barcamp-boston-4-roundup.textile  
+|-- _site &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;HTML生成先フォルダ&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+-- index.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;アンダーバーから始まる、&lt;code&gt;_layouts&lt;/code&gt;、&lt;code&gt;_posts&lt;/code&gt;、&lt;code&gt;_site&lt;/code&gt;の3つのフォルダが必須のフォルダになる。&lt;br /&gt;
+手前から、テンプレート保管、記事、生成先フォルダという役割がある。&lt;br /&gt;
+&lt;code&gt;_config.yml&lt;/code&gt;はサイト全体に影響する設定ファイル。&lt;/p&gt;
+
+&lt;p&gt;必須になるのはたったこれだけというシンプル設計もJekyllの魅力の1つ。&lt;/p&gt;
+
+&lt;h3&gt;記事の作成&lt;/h3&gt;
+
+&lt;p&gt;Jekyllでは、記事の作成は.markdownまたは.textileという軽量マークアップ言語の文法で記述されたプレーンテキストファイルで行う。&lt;br /&gt;
+&lt;code&gt;$YEAR-$MONTH-$DATE-$TITLE.$FORMAT&lt;/code&gt;という形式で、_postsフォルダに格納されたファイルをJekyllがプロセスしてくれる。  &lt;/p&gt;
+
+&lt;p&gt;例えば、2011年5月14日に作成したウェブデザイナのためのRuby入門という記事なら、&lt;code&gt;2011-05-22-ruby-for-designer.markdown&lt;/code&gt;というファイル名になる。&lt;br /&gt;
+URLに入るタイトル名はアルファベットにしておいた方が無難だろう。2バイト文字を利用できるかは試してみた事はない。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tool&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;を使ってブログをつくろう&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2011&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;39&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;記事のファイルの先頭にはYAML front matterと呼ばれる設定部分が必要になる。&lt;br /&gt;
+今回の記事のYAML front matterが上記。&lt;br /&gt;
+layoutでは、_layoutsに作成したテンプレート定義ファイルを設定し、&lt;br /&gt;
+categoryにはカテゴリ、titleにはもちろんタイトル、そしてdateには更新日を記述することができる。&lt;br /&gt;
+ここで必須になるのは、layoutとtitleの2ヶ所のみとなり、YAML front matterで設定した項目は、記事であればその記事内のテンプレート定義ファイル内の変数として利用することが可能。&lt;/p&gt;
+
+&lt;h2 id=&quot;template&quot;&gt;テンプレートの作成&lt;/h2&gt;
+
+&lt;p&gt;それではテンプレートの作成について見てみよう。&lt;/p&gt;
+
+&lt;p&gt;テンプレート定義ファイルは何の変哲もないHTMLで記述される。例外は記事ファイル内のYAML front matterに記述するlayoutの部分で利用するテンプレート名をこちらも同じく、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というようにYAML front matterとして記述するという点と、後述するLiquidというテンプレートエンジンを利用して記事部分のレンダリングなどを行ったりするという点が異なる。　　&lt;/p&gt;
+
+&lt;p&gt;wordpressでもそうだが、この手のテンプレファイル系は実際にファイル自体を見た方が早い。&lt;br /&gt;
+私が公開しているJekyll用テーマファイル、&lt;a href=&quot;https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_layouts/post.html&quot;&gt;the_minimumの記事用レイアウトファイル&lt;/a&gt;を見ながら、
+次項を読んでほしい。&lt;/p&gt;
+
+&lt;h2 id=&quot;liquid&quot;&gt;Liquidについて&lt;/h2&gt;
+
+&lt;p&gt;Liquidは非常にシンプルなテンプレートエンジンで、これまでwordpressに慣れてきた場合は少し物足りなく感じるかもしれないがその代わり覚えるのは簡単。
+Liquidで利用できるタグについては&lt;a href=&quot;https://github.com/tobi/liquid/wiki/liquid-for-designers&quot;&gt;こちら&lt;/a&gt;を参考に、&lt;br /&gt;
+またJekyllで利用できるLiquidの拡張タグについては&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Liquid-Extensions&quot;&gt;こちら&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;先ほどのthe_minimumのpost.htmlを見ながらLiquidテンプレートタグで必須になるもタグと、便利なタグについて紹介しよう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;{{ page.title }} &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 記事のYAML front matterでtitleに設定した値を取得 --&amp;gt;&lt;/span&gt;
+{{ content }} &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 記事本文を取得 --&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;必須になるのは上記2つというやはりシンプル設計。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- インクルード --&amp;gt;&lt;/span&gt;
+{% include header.html %} &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;includeフォルダ内のheader.htmlファイルをインクルードする --&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- ページネーション --&amp;gt;&lt;/span&gt;
+{% if page.previous %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;before left&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;prev&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ page.previous.url }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;View {{ page.previous.title }}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Before&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+{% endif %}
+{% if page.next %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;next right&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;next&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ page.next.url }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;View {{ page.next.title }}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Next&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+{% endif %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;インクルードはメンテナンスのために覚えておきたいタグで、&lt;br /&gt;
+オフィシャルページにもあまり説明のないページネーションについてはもっともシンプルな例ながら利用できるタグについてはほぼ網羅しているので、カスタマイズする際の参考になれば。&lt;/p&gt;
+
+&lt;h2 id=&quot;config&quot;&gt;_config.ymlの設定&lt;/h2&gt;
+
+&lt;p&gt;ここで利用できる値はほぼ無限にあるもののまずはオフィシャルを参考にしてほしい。
+&lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Configuration&quot;&gt;https://github.com/mojombo/jekyll/wiki/Configuration&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;_config.ymlは非常に強力でオフィシャルで使えるとしている設定以外にも自由に設定を拡張できる。&lt;br /&gt;
+こちらについても、&lt;a href=&quot;https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_config.yml&quot;&gt;the_minimumのファイルを参考にしてほしい&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;_config.ymlで設定した値はテンプレートファイル内で、&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;site.項目&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;のように呼び出す事ができる。例えば、the_minimumで設定したGoogle Analytics用IDを格納する&lt;code&gt;ga&lt;/code&gt;を呼び出す場合は、&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;site.ga&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;というように呼び出す事が可能。&lt;br /&gt;
+コンスタントに利用する値、他には例えばサイトのURLやサイト自体のタイトルなどを設定しておくと管理が非常に楽になるはずだ。&lt;/p&gt;
+
+&lt;h2 id=&quot;page&quot;&gt;ページの作り方&lt;/h2&gt;
+
+&lt;p&gt;wordpressでは単一ページを作成しaboutページなどを作成してきたという人もいることだろう。&lt;br /&gt;
+Jekyllでも単一ページを作成することが可能。&lt;/p&gt;
+
+&lt;p&gt;ページの作成方法についてもやはりシンプル設計でトップページにあたる部分&lt;code&gt;index.html&lt;/code&gt;(トップページも単一ページ)と同じ階層にhtmlファイルを設置すればOK。&lt;br /&gt;
+こちらはCSS Radarのファイルを覗いてみてほしい。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/studiomohawk/CSS-Radar/blob/master/404.html&quot;&gt;404ページ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/studiomohawk/CSS-Radar/blob/master/backnumber.html&quot;&gt;バックナンバページ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;少しトリッキーながらフィードファイルも生成できる &lt;a href=&quot;https://github.com/studiomohawk/CSS-Radar/blob/master/atom.xml&quot;&gt;atom.xml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;otherdir&quot;&gt;基本以外のフォルダについて&lt;/h2&gt;
+
+&lt;p&gt;Jekyllでは&lt;code&gt;\_layouts&lt;/code&gt;、&lt;code&gt;\_posts&lt;/code&gt;、&lt;code&gt;_site&lt;/code&gt;のみが必須のフォルダと先ほど書いたが、Liquidの説明部分で書いたようにインクルードファイルを格納する、&lt;code&gt;_include&lt;/code&gt;フォルダや、Jekyllに拡張機能を追加するための、&lt;code&gt;_plugins&lt;/code&gt;フォルダを作成することができる。アンダーバーがフォルダ名の頭にある場合、Jekyllはそれらをシステムファイルとして扱い、プロセスの際にそれらフォルダも見に行くようになっている。  &lt;/p&gt;
+
+&lt;p&gt;アンダーバーがついていないフォルダはJekyllとしては何の処理もしないが、きちんと&lt;code&gt;\_site&lt;/code&gt;フォルダへ移動してくれる。&lt;br /&gt;
+なので、CSSやJavascript、そして画像などを格納するフォルダをそれぞれ、&lt;code&gt;style&lt;/code&gt;、&lt;code&gt;script&lt;/code&gt;、&lt;code&gt;image&lt;/code&gt;というようにしてファイルを格納しておこう。&lt;/p&gt;
+
+&lt;h2 id=&quot;preview&quot;&gt;ローカル環境でプレビュー&lt;/h2&gt;
+
+&lt;p&gt;このチュートリアル中に新たにデザインを作成しJekyll用にコーディングを完成するのは難しいと思うので、ここから先はすでに作成した私のthe_minimumをダウンロードしてから実践して見てほしい。&lt;/p&gt;
+
+&lt;p&gt;Jekyllではコマンドラインを利用してファイルの生成を行う。そう、デザイナには不可解な黒い画面。&lt;br /&gt;
+黒い画面とはいえ使うコマンドは片手で数えられる程度なので問題ないし、コピペできるように記述するので是非試してみてほしい。&lt;/p&gt;
+
+&lt;p&gt;それでは&lt;a href=&quot;https://github.com/studiomohawk/jekyll-theme-the_minimum&quot;&gt;the_minimumのダウンロードは終わっただろうか&lt;/a&gt;？&lt;br /&gt;
+ターミナルを開いてthe_minimumをダウンロードしたフォルダに移動してほしい。移動は&lt;code&gt;cd&lt;/code&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;jekyll --server --auto
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;--server&lt;/code&gt;オプションはプレビュー環境用のサーバを立ち上げ、&lt;br /&gt;
+&lt;code&gt;--auto&lt;/code&gt;オプションはローカルファイルが保存されるたびにファイル生成を行うオプション。&lt;/p&gt;
+
+&lt;p&gt;このコマンドをターミナルにて実行したら、&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/&quot;&gt;http://localhost:4000/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;をブラウザで見るとJekyllをローカル環境で動作させた結果を見る事ができる。  &lt;/p&gt;
+
+&lt;p&gt;Jekyllは非常に強力なのにシンプルでインクルードなど便利な機能もついてくるので使い方を工夫すればすばらしいプロトタイプ作成ツールにもなるのではないかと思って、ベースとなるテンプレートを鋭意作成中。
+話は少しそれたが思っていた以上に簡単だったのではないだろうか？&lt;/p&gt;
+
+&lt;h2 id=&quot;upload&quot;&gt;サーバへのアップロード&lt;/h2&gt;
+
+&lt;p&gt;サーバへのアップロードはとても簡単。&lt;br /&gt;
+FTPを使って、&lt;code&gt;\_site&lt;/code&gt;内に生成されたファイル群をアップロードすればOK。  &lt;/p&gt;
+
+&lt;p&gt;私は面倒くさがりなのでrakeを使ってrsyncでサーバとローカルファイルの同期をとっている。
+&lt;code&gt;rake rsync:live&lt;/code&gt;
+とするだけで指定のローカルフォルダとサーバの同期がとれるようにしてある。&lt;/p&gt;
+
+&lt;h2 id=&quot;automation&quot;&gt;rakeを使って自動化する&lt;/h2&gt;
+
+&lt;p&gt;コマンドラインに苦手意識を持っている人も多いだろうが、rakeやant、makeのようなビルドツールは様々なタスクを自動化してくれる便利ツール。&lt;br /&gt;
+Jekyllはrubyによって書かれているので、rakeを使っていつも行うタスクを幾つか自動化しているので紹介しよう。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;新しい記事を書く / &lt;code&gt;rake post:new[&quot;title&quot;,&quot;category&quot;]&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Jekyllではファイル名もルールに従って記述する必要があったり、YAML front matterの設定を毎回しなければならなかったりする。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rake post:new[&quot;title&quot;,&quot;category&quot;]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;とするだけで、&lt;code&gt;title&lt;/code&gt;からファイル名と記事のタイトルを生成しついでにカテゴリ名を&lt;code&gt;category&lt;/code&gt;から生成してくれる。&lt;br /&gt;
+&lt;code&gt;title&lt;/code&gt;の方はURLの一部になるだけあって日本語は利用できない。結果、記事のタイトルは生成後に日本語に差し替える必要はある。  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:post&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Given a title as an argument, create a new post file&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:category&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%Y-%m-%d&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/\s/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;downcase&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.markdown&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;_posts&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exist?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;RuntimeError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Won&amp;#39;t clobber &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOS&lt;/span&gt;
+&lt;span class=&quot;sh&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;sh&quot;&gt;layout: post&lt;/span&gt;
+&lt;span class=&quot;sh&quot;&gt;category: #{args.category}&lt;/span&gt;
+&lt;span class=&quot;sh&quot;&gt;title: #{args.title}&lt;/span&gt;
+&lt;span class=&quot;sh&quot;&gt;date: #{Time.now.strftime(&amp;#39;%Y-%m-%d %k:%M:%S&amp;#39;)}&lt;/span&gt;
+&lt;span class=&quot;sh&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;EOS&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Now open &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; in an editor.&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Jekyllをローカル環境でプレビュー / &lt;code&gt;rake preview&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;jekyll --auto
+--server&lt;/code&gt;と毎回必ずタイプするのは面倒なので。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rake preview&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Launch preview environment&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:preview&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;jekyll --auto --server&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;rsyncを使ってサーバと同期を取る / &lt;code&gt;rake rsync:live&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Jekyllは静的なファイルを&lt;code&gt;\_site&lt;/code&gt;ディレクトリに生成してくれる。&lt;br /&gt;
+このディレクトリを丸ごとFTPでアップロードすればサイトの更新ができるというシンプルな設計。&lt;br /&gt;
+でもどう考えても毎回FTPを使うのは面倒なので、&lt;code&gt;rsync&lt;/code&gt;を使ってサーバとローカルの同期を取ってしまおう。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rake
+rsync:dryrun&lt;/code&gt;はテスト用で実際には何もサーバには同期されないがどのファイルが同期されるかをチェックするためにある。&lt;br /&gt;
+初めてrsyncする場合、正しく設定ができているのかを含めて実際のサーバ側のファイル達には影響なく実行できるのでまずはこちらでテストを。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rake rsync:live&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;テストが終わって無事が確認できたらこのコマンドでサーバへのアップロードが完了する。&lt;br /&gt;
+設定の際は利用しているサーバにsshしたりするので、自分が管理者ではない場合はレンタルサーバ側に設定などを確認してほしい。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:rsync&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;--dry-run rsync&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:dryrun&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;rsync _site/ -ave ssh --dry-run --delete ユーザ名@ドメイン名:ディレクトリ/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;rsync&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:live&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;rsync _site/ -ave ssh --delete ユーザ名@ドメイン名:ディレクトリ/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>ウェブデザイナのためのRuby</title>
+			<link href="http://css.studiomohawk.com/ruby/2011/05/14/ruby_for_designer_frontend_dev/"/>
+			<updated></updated>
+			<id>http://css.studiomohawk.com/ruby/2011/05/14/ruby_for_designer_frontend_dev</id>
+			<content type="html">
+				&lt;h2 id=&quot;rubyis&quot;&gt;Rubyはウェブデザイナに優しい&lt;/h2&gt;
+
+&lt;p&gt;CSS Radarと名がついている割にはCSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。&lt;br /&gt;
+今回はCSSやデザインからはほど遠いように思えるRubyについて。&lt;br /&gt;
+前にも書いた気がするが私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。
+Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら面倒なことを楽にすることもでき始めてきた。
+そこでRubyを少しだけ使い倒す方法を紹介しようと思い立った。&lt;/p&gt;
+
+&lt;p&gt;たまにはPhotoshopを離れて(&lt;a href=&quot;http://css.studiomohawk.com/webdesign/2011/04/16/designing_in_browser/&quot;&gt;私はあまり使いませんが&lt;/a&gt;)、新しいことに挑戦してみませんか？&lt;/p&gt;
+
+&lt;p&gt;* 私はRuby初心者ですので間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。&lt;br /&gt;
+なお今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。&lt;/p&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Rubyのインストール&lt;/h2&gt;
+
+&lt;p&gt;Mac OS XにはRubyが標準でインストールされている。でも最新版ではなく、まれに最新版でないと動作しないプログラムもあるので最新版をインストールしておく必要がある。&lt;/p&gt;
+
+&lt;p&gt;MacにおけるRubyの管理は、&lt;a href=&quot;https://rvm.beginrescueend.com/&quot;&gt;RVM - Ruby Version Manager&lt;/a&gt;がおすすめ。&lt;br /&gt;
+RVMを利用するためにはgitが必須になる。gitのインストールについては&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/01/29/git-version-control/&quot;&gt;こちらを参照してほしい&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;RVMのインストール方法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;ターミナルを開いて、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo bash &amp;lt; &amp;lt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;curl -s https://rvm.beginrescueend.com/install/rvm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;~/.bash_profile か ~/.bashrcに&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -s &lt;span class=&quot;s2&quot;&gt;&amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# This loads RVM into a shell session.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;を追加(上記ファイルがない場合は、作成して追加)&lt;br /&gt;
+では、RVMが正しく動作するかを確認しよう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;type &lt;/span&gt;rvm | head -1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とターミナルで実行してみる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm is a &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;と返事が返ってきたら成功。
+成功したらまたターミナルにて&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.rvm/scripts/rvm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;と実行しておこう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm install 1.9.2-head
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすればruby 1.9.2-headのバージョンをインストールできる。&lt;br /&gt;
+ちなみにRVMでインストールできるバージョンは&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm list known
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすればリストが表示されるので表示されたパッケージを&lt;code&gt;rvm install&lt;/code&gt;の後に記述すればそのパッケージをインストールできる。&lt;/p&gt;
+
+&lt;p&gt;なおRVMではバージョンごとにgemのパッケージを管理するためさっきまで使えたはずのgemがないとエラーが出る、なんて事態に遭遇したら、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ruby -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;として現在利用しているrubyのバージョンを確認してみよう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;rvm --default use 1.9.2 &lt;span class=&quot;c&quot;&gt;# とすると、1.9.2をデフォルトで利用しはじめ&lt;/span&gt;
+rvm use system &lt;span class=&quot;c&quot;&gt;# システムにインストールされているRubyと&lt;/span&gt;
+rvm default &lt;span class=&quot;c&quot;&gt;# デフォルト設定したRubyを切り替えることも可能 &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;詳しくは&lt;a href=&quot;https://rvm.beginrescueend.com/&quot;&gt;https://rvm.beginrescueend.com/&lt;/a&gt;(英語)&lt;/p&gt;
+
+&lt;h2 id=&quot;gem&quot;&gt;Ruby Gem&lt;/h2&gt;
+
+&lt;p&gt;RubyにはGemと呼ばれるパッケージマネージャがある。1.9系以降からはRubyの標準機能となったそうだ。&lt;br /&gt;
+MacではGemも標準でインストールされていたと思うが記憶が確かではないので確認してほしい。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo gem update --system
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とするとアップデートできるので試してみてほしい。&lt;/p&gt;
+
+&lt;p&gt;パッケージマネージャってなんだ、という点についてはUbuntuを使っていた私にはすんなり理解できたが、そうでもない人が多いのでMacでいうところの、macportやfink、homebrewみたいなライブラリ集積地みたいなものだと覚えておけばいいはず。
+*Homebrewについては、&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/02/13/terminal-101/&quot;&gt;こちらの記事&lt;/a&gt;で紹介したので参考にしてほしい。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install PACKAGENAME
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;としてパッケージをインストールできる。&lt;br /&gt;
+例えば、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install rake
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、Ruby版make(ビルドツール)であるrakeをインストールできる。  &lt;/p&gt;
+
+&lt;h2 id=&quot;package&quot;&gt;ウェブデザイナにおすすめのパッケージ&lt;/h2&gt;
+
+&lt;h3&gt;CSS Sprite&lt;/h3&gt;
+
+&lt;p&gt;CSSスプライトはパフォーマンス向上のためには必須になるテクニックだが、作成するのも、管理するのも、メンテナンスするのもとても面倒。
+ある特定のディレクトリに画像を入れて自動でスプライト画像を作成しCSSもあわせて作ってくれたら。を叶えるプログラムがRubyにある。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/merbjedi/sprite&quot;&gt;merbjedi / sprite&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rmagick&lt;/code&gt;gemが必要になるのでまずはこのgemをインストール。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install rmagick &lt;span class=&quot;c&quot;&gt;#私はこのコマンドではエラーになったので、下記を実行してから再度チャレンジした&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# エラーになった場合は&lt;/span&gt;
+sudo brew install libxml2
+sudo brew install ImageMagick
+&lt;span class=&quot;c&quot;&gt;# を実行してから、上記を実行してほしい。なお、homebrewを利用している場合の例&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;そしてspriteのgemをインストール&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem sources -a http://gemcutter.org
+gem install sprite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;使い方&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;public/
+  images/
+    sprites/
+      black-icons/
+        stop.png
+        go.png
+        back.png
+        forward.png
+
+      weather/
+        sunny.gif
+        rainy.gif
+        cloudy.gif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というようなディレクトリ構造を例とすると、
+&lt;code&gt;public&lt;/code&gt;にて&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sprite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というコマンドを実行すると&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;public/
+  stylesheets/
+    sprites.css
+  images/
+    sprites/
+      black-icons.png
+      weather.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というファイルを生成する。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-small&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/small.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-medium&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/medium.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-large&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/large.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;21px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.sprites.blue-stars-xlarge&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(&amp;#39;/images/icons/blue-stars/xlarge.png&amp;#39;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;no-repeat&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;96px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というようなスタイルを書き出してくれる。&lt;br /&gt;
+sassのmixinも利用できるようで設定も変更できる。&lt;/p&gt;
+
+&lt;p&gt;詳しくは&lt;a href=&quot;https://github.com/merbjedi/sprite&quot;&gt;こちら&lt;/a&gt;(英語)。&lt;/p&gt;
+
+&lt;h3&gt;SASS/LESS&lt;/h3&gt;
+
+&lt;p&gt;LESSは今ではnode.jsプロジェクトとして生まれ変わったが最新版ではないものの、gemからインストールはできる。
+SASSについては先日1年ぶりほどのアップデートがありアクティブにRubyプロジェクトとして成長している。&lt;/p&gt;
+
+&lt;p&gt;ちなみにSASSでは&lt;a href=&quot;http://www.hagenburger.net/BLOG/Lemonade-CSS-Sprites-for-Sass-Compass.html&quot;&gt;Lemonade&lt;/a&gt;というパッケージを利用してCSS Spriteの自動化を行うこともできる。&lt;/p&gt;
+
+&lt;p&gt;LESSについての説明は&lt;a href=&quot;http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/&quot;&gt;LESS: CSSをよりシンプルに、パワフルに&lt;/a&gt;を参考にしてほしい。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install less &lt;span class=&quot;c&quot;&gt;#LESS&lt;/span&gt;
+gem install sass &lt;span class=&quot;c&quot;&gt;#SASS&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Juicer&lt;/h3&gt;
+
+&lt;p&gt;リクエスト回数を減らすためには、CSS/JSの呼び出しは最小にしておく必要がある。&lt;br /&gt;
+が、CSSもJSもメンテナンス性を考えればたくさんのファイルになってしまうのが常。&lt;br /&gt;
+この矛盾を解決するためのプログラムが&lt;a href=&quot;http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool&quot;&gt;Juicer&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;Juicerは、YUI Compressorを利用してCSS/JSを圧縮した上で、CSSであれば@importを使ってファイルを結合してくれ、JSであれば、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;/**
+ * @depends prototype.js
+ * @depends widgets/lightbox.js
+ */
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というコメントを使ってファイルの結合を行うことが可能。&lt;br /&gt;
+CSSはmaster.cssというファイルに@importのみを記述してJSもmaster.jsというファイルにコメント文だけ記述している。&lt;/p&gt;
+
+&lt;p&gt;実行すると、それぞれmaster.min.css、master.min.jsというファイルを書き出してくれる。&lt;/p&gt;
+
+&lt;p&gt;使い方はとても簡単。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;juicer merge --force master.css &lt;span class=&quot;c&quot;&gt;# CSS --forceはmaster.min.cssが存在しても上書きを強制&lt;/span&gt;
+juicer merge -i --force master.js &lt;span class=&quot;c&quot;&gt;#JS -iはエラーを無視して圧縮/結合を実行するオプション&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ついでに、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(/somepath/someimage.png?embed=true)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* ?embed=trueを追加する */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、画像をdata-urlに変換してくれる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;juicer merge --force master.css --embed-images data_uri
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;のように実行すればOK。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;gem install juicer &lt;span class=&quot;c&quot;&gt;# Juicerをインストール&lt;/span&gt;
+juicer install yui_compressor &lt;span class=&quot;c&quot;&gt;# YUI compressorをインストール&lt;/span&gt;
+juicer install closure_compiler &lt;span class=&quot;c&quot;&gt;# Google Closure Compilerをインストール&lt;/span&gt;
+juicer install jslint &lt;span class=&quot;c&quot;&gt;# JsLintをインストール&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;CSS Redundancy Checker&lt;/h3&gt;
+
+&lt;p&gt;何年か前にウェブツールとして同名のツールがあり、ある日使えなくなってしまった。
+&lt;a href=&quot;http://code.google.com/p/css-redundancy-checker/&quot;&gt;CSS Redundancy
+Checker&lt;/a&gt;は、あるHTML郡で使われていないスタイルルールをリストアップしてくれるという強力なツール。&lt;br /&gt;
+フロントエンドデベロッパのタスクのほとんどはIteration、日本語にすると反復することが多く、その反復がよりよいモノを生み出すための最も大事な原動力となる。&lt;br /&gt;
+しかしその副産物として使っていないスタイルルールであふれかえって、何を消したらまずいのかもはやわからない状態になってしまう。&lt;br /&gt;
+その問題を解決するのがこのツールというわけだ。&lt;/p&gt;
+
+&lt;p&gt;使い方&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;ruby css-redundancy-checker.rb &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;CSSファイル名&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;HTMLファイルディレクトリ または URLを一行ずつ記述した.txt&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とするだけ。CSSを分割して管理している場合はJuicerで結合してから実行するといいだろう。
+もちろんある特定のCSSファイルをチェックしたい場合は個別に指定すればOK。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;インストール&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;sudo gem install hpricot &lt;span class=&quot;c&quot;&gt;# hpricotをインストール、必須&lt;/span&gt;
+svn checkout http://css-redundancy-checker.googlecode.com/svn/trunk/ css-redundancy-checker
+&lt;span class=&quot;c&quot;&gt;# svnをインストールしていない場合は、sudo brew install svnとしてから&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;css-redundancy-checker.rbという名前の通りこのスクリプトは単純な1ファイル。&lt;br /&gt;
+なので実行する際はインストールしたディレクトリに移動してから実行する必要がある。&lt;/p&gt;
+
+&lt;h3&gt;Rake&lt;/h3&gt;
+
+&lt;p&gt;Rakeはそれ自体ではなにもしないが非常に強力なツール。&lt;br /&gt;
+ビルドツールとして誕生したRakeのはずだが、私はビルドツールがなんのことかも完璧には理解できない。&lt;br /&gt;
+要するに、A)の次はB)を実行し、C)を実行するのは、A)を実行する必要がある。&lt;br /&gt;
+というなプロセスをrubyを使って行うことができる。いわばエディタなどにあるマクロみたいな存在。&lt;/p&gt;
+
+&lt;p&gt;ここまで紹介してきたツール群はもちろんのこと、Rakeを使って  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://optipng.sourceforge.net/&quot;&gt;OptiPNG&lt;/a&gt;を使ってPNG画像の最適化&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sylvana.net/jpegcrop/jpegtran/&quot;&gt;JPEGtran&lt;/a&gt;を使ってJPEG画像の最適化
+(Macへのインストール方法は、&lt;a href=&quot;http://www.phpied.com/installing-jpegtran-mac-unix-linux/&quot;&gt;こちらを参照&lt;/a&gt;(英語))&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;sprite&lt;/code&gt;を使ってスプライト画像/CSSを作成&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;juicer&lt;/code&gt;を使って、CSS/JSの圧縮/結合&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://code.google.com/p/htmlcompressor/&quot;&gt;htmlcompressor&lt;/a&gt;を使ってHTMLの最適化&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;このプロセスをrake taskとして作成すれば、&lt;code&gt;rake タスク名&lt;/code&gt;とするだけで一気に終了できる。  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rsync&lt;/code&gt;や&lt;code&gt;ftp&lt;/code&gt;なども合わせるとファイルアップロードまで自動化できる。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rakeのチュートリアル&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jasonseifer.com/2010/04/06/rake-tutorial&quot;&gt;Rake Tutorial by Jason Seifer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://martinfowler.com/articles/rake.html&quot;&gt;Using the Rake Build Language&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pastie.org/242691&quot;&gt;Rake Quick Reference by Greg Houston&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;などが参考になるだろう。もちろん全部英語の文書なので、CSS Radarの癖にRakeの詳しい説明を知りたい方は、&lt;a href=&quot;http://twitter.com/#!/cssradar&quot;&gt;Twitter@cssradar&lt;/a&gt;にてリクエストしてほしい。&lt;br /&gt;
+私も覚えたてなので全部の質問には答えることができるかわからないが。&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;ウェブデザイナ/フロントエンドデベロッパのタスクは多岐に渡る。&lt;br /&gt;
+Adobe Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/アクセシビリティに考慮し、行動心理学を応用しつつ、ウェブサイトをユーザに届ける。&lt;br /&gt;
+その上、プログラマの領分であるはずのRubyにまで手を出す。&lt;br /&gt;
+それもすべて時間を生み出すための技術。&lt;br /&gt;
+その時間がよりよいサイトを生み出すための原動力だから。&lt;br /&gt;
+新しいことへの出会いはいつだってインスピレーションへ続く近道だと信じているので、是非チャレンジしてほしい。&lt;br /&gt;
+もし今回紹介しなかった便利なスクリプトなどご存知でしたら、是非教えてください。&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>インブラウザ デザイン</title>
+			<link href="http://css.studiomohawk.com/in-browser-design/2011/04/16/designing_in_browser/"/>
+			<updated>2011-10-29 22:37:19</updated>
+			<id>http://css.studiomohawk.com/in-browser-design/2011/04/16/designing_in_browser</id>
+			<content type="html">
+				&lt;h2 id=&quot;whatis&quot;&gt;インブラウザ デザインとは&lt;/h2&gt;
+
+&lt;p&gt;長い間、Adobe
+Photoshopはウェブデザインのデファクトアプリとして君臨してきた。もちろん今も私のMac MiniにCS4がインストールされている。&lt;/p&gt;
+
+&lt;p&gt;しかし、個人プロジェクトはもちろんすでに会社のプロジェクトでも私はPhotoshopを卒業しつつある。  &lt;/p&gt;
+
+&lt;p&gt;ブラウザとお気に入りのエディタ。そしてCSS3があればPhotoshopを使わなくてもデザインができる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/1907828001/ref=as_li_ss_tl?ie=UTF8&amp;amp;tag=studiomohawk-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1907828001&quot;&gt;Hardboiled Web Design&lt;/a&gt;の作者であるAndy Clarkeは&lt;a href=&quot;http://stuffandnonsense.co.uk/blog/about/i_dont_care_about_responsive_web_design/&quot;&gt;I don’t care about Responsive Web Design&lt;/a&gt;にて、&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Today, anything that’s fixed and unresponsive isn’t web design, it’s something else. If you don’t embrace the inherent fluidity of the web, you’re not a web designer, you’re something else.
+Web design &lt;strong&gt;is&lt;/strong&gt; responsive design, Responsive Web Design &lt;strong&gt;is&lt;/strong&gt; web design, done right.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;とすら書いているが、&lt;a href=&quot;http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/&quot;&gt;レスポンシブウェブデザイン&lt;/a&gt;はPhotoshopで作ることはとても難しい。レスポンシブデザインこそが、紙的な発想から離れることができなかったウェブデザインの新しい時代の旗手。&lt;/p&gt;
+
+&lt;p&gt;ブラウザでデザインをするということ。&lt;br /&gt;
+その際の実際のプロセスと便利なツール、そして注意点について紹介しよう。&lt;/p&gt;
+
+&lt;h2 id=&quot;process&quot;&gt;インブラウザ デザインのプロセス&lt;/h2&gt;
+
+&lt;h3&gt;アイデアの集約と大まかなレイアウトの決定&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://css.studiomohawk.com/webdesign/2011/04/01/wireframe/&quot;&gt;ワイヤフレーム&lt;/a&gt;は、ブラウザでデザインを行う際には確実に必要なプロセス。&lt;br /&gt;
+Photoshopでのデザインであればワイヤフレームの有効性はPhotoshopの習熟度によっては低くなることもあるかもしれないが、今回はそうはいかない。&lt;br /&gt;
+ワイヤフレームだって、スタティックな画像じゃないかと思うかも知れないし、それは事実だ。  &lt;/p&gt;
+
+&lt;p&gt;それでも以前書いたように、ワイヤフレームはアイデアを形にする最初のステップであり、要素がどこにどんな風に配置されるのかを集約しレイアウトするのにはぴったりのツールだ。&lt;/p&gt;
+
+&lt;h4&gt;このステップで利用するツール&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://balsamiq.com/&quot;&gt;Balsamiq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;ベースになるHTMLとCSSの作成&lt;/h3&gt;
+
+&lt;p&gt;このステップは基礎になるHTMLを作っていく。CSSリセットやベースのCSSそしてヘッダやフッタ、ボディになる部分を作成する。&lt;/p&gt;
+
+&lt;p&gt;自分でよく使うテンプレートを持っておくことで大幅に時間を短縮できる部分だ。&lt;br /&gt;
+私は&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/&quot;&gt;HTML5 Boilerplate&lt;/a&gt;にグリッドや&lt;a href=&quot;https://github.com/stubbornella/oocss&quot;&gt;OOCSS&lt;/a&gt;のモジュールを組み込むカスタマイズを施し、よく利用するCSSのスタイルを&lt;a href=&quot;http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/&quot;&gt;LESS&lt;/a&gt;のミックスインとして用意している。&lt;/p&gt;
+
+&lt;h4&gt;このステップで利用するツール&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5 Boilerplate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/stubbornella/oocss&quot;&gt;OOCSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lesscss.org/&quot;&gt;LESS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;レイアウト&lt;/h3&gt;
+
+&lt;p&gt;まずはグリッドを決めてしまう。&lt;br /&gt;
+Photoshopでのステップだとグリッドを使ったりガイドを使ったりするのがこのステップ。
+この時点でグリッドがレスポンシブデザインに対応しているとあとで楽に作業ができる。&lt;br /&gt;
+もちろん慣れないうちは大変だし、リデザインの場合はそうもいかないこともあるだろう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://griddle.it/&quot;&gt;Griddle.it&lt;/a&gt;を使って簡単にCSSでガイドを作成する方法を紹介しよう。&lt;/p&gt;
+
+&lt;p&gt;Griddle.itは&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;http://griddle.it/[全体幅]-[コラム数]-[ガターサイズ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;という指定で、グリッド画像を生成してくれる。
+例えば、こちらを開いてみてほしい。&lt;a href=&quot;http://griddle.it/960-12-30&quot;&gt;幅960px 12コラム 30pxのガター&lt;/a&gt;&lt;br /&gt;
+さらにバーティカルリズム用ガイドになる横線のグリッドも追加できる。
+&lt;a href=&quot;http://griddle.it/960-12-30?horizontal=30&quot;&gt;幅960px 12コラム 30pxのガター + 30pxの横線グリッド&lt;/a&gt;&lt;br /&gt;
+ここまで設計したデザインはなかなか日本では見かけないが基礎が強固であればあるほど、表層のデザインは自由度が増すので、是非。&lt;/p&gt;
+
+&lt;p&gt;自動で画像を生成してくれるのでグリッドパターンが確定したら、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(http://griddle.it/960-12-30)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;repeat-y&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;背景画像に読み込んでしまえばOK。&lt;/p&gt;
+
+&lt;p&gt;レスポンシブデザインに対応したいという方は私のおすすめフレームワーク&lt;a href=&quot;http://lessframework.com/&quot;&gt;Less
+Framework&lt;/a&gt;を利用してベース(グリッドの部分だけ利用するのがおすすめ)のCSSを作成し、Less Frameworkに対応した実際にグリッドがウィンドウのサイズに合わせて変更されるこの&lt;a href=&quot;http://arnaumarch.com/en/less-grid.html&quot;&gt;JavaScript&lt;/a&gt;を組み込むと楽にできる。&lt;/p&gt;
+
+&lt;p&gt;すでに自分のレスポンシブデザインのベースがあるという場合はGriddle.itを利用して、media queriesで呼び出す画像を切り替えればOK。&lt;/p&gt;
+
+&lt;p&gt;開発時にJSを呼び出しても問題ないという場合には、
+&lt;a href=&quot;http://bohemianalps.com/tools/grid/&quot;&gt;The Heads-Up
+Grid&lt;/a&gt;がおすすめだ。縦横のグリッドを自由に設定できる上にウィンドウサイズを検知してレスポンシブウェブデザイン用にサイズを変更してくれる。&lt;/p&gt;
+
+&lt;p&gt;また、HTML5 Boilerplateをベースに選択していて、Less
+Frameworkなどを組み込むのが面倒な場合はAndy Clerkeの&lt;a href=&quot;http://stuffandnonsense.co.uk/projects/320andup/&quot;&gt;320 and up&lt;/a&gt;を利用するといいだろう。(モバイルファーストという概念で作られているので、若干注意が必要)&lt;/p&gt;
+
+&lt;p&gt;さらに、レスポンシブウェブデザインでは現在のウィンドウの幅がどのサイズにあたるのかわかりづらいとちょっと面倒なので、
+&lt;a href=&quot;http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/&quot;&gt;Window Size bookmarklet to test/debug CSS3 Media Queries&lt;/a&gt;のブックマークレットを利用すれば、ウィンドウサイズを知らせてくれるので非常に便利。&lt;/p&gt;
+
+&lt;p&gt;ちなみにこの後のステップではCSSやHTMLを保存し、ブラウザをリフレッシュして変更を確認し〜を繰り返す。
+より時短を目指すため、&lt;a href=&quot;http://livejs.com/&quot;&gt;Live.js&lt;/a&gt;を活用することをおすすめする。&lt;br /&gt;
+このJavaScriptはファイルの保存を検知してブラウザのリロードを行わず、変更を反映するという夢のようなツール。&lt;br /&gt;
+ブラウザでデザインしていなくて、コーディングしている時にかなり役に立つ強力なJavaScript。&lt;/p&gt;
+
+&lt;p&gt;JSを追加したりプロダクション用に削除したりと面倒だなと感じたら、&lt;br /&gt;
+&lt;a href=&quot;http://livereload.com/&quot;&gt;LiveReload&lt;/a&gt;というMac用のアプリがおすすめだ。ブラウザの拡張機能とこのアプリさえあれば、監視するフォルダを登録したらファイルを保存したらブラウザをリロードしてくれる。&lt;br /&gt;
+ついでに、LESSやSASSなどを利用していても自動的にCSSに変換してくれる強力なアプリ。&lt;/p&gt;
+
+&lt;h4&gt;このステップで利用するツール&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://griddle.it/&quot;&gt;Griddle.it&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.josscrowcroft.com/2011/code/window-size-bookmarklet/&quot;&gt;Window Size bookmarklet to test/debug CSS3 Media Queries&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bohemianalps.com/tools/grid/&quot;&gt;The Heads-Up Grid&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://livejs.com/&quot;&gt;Live.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://livereload.com/&quot;&gt;LiveReload&lt;/a&gt; (Macのみ)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lessframework.com/&quot;&gt;Less Framework&lt;/a&gt; + &lt;a href=&quot;http://arnaumarch.com/en/less-grid.html&quot;&gt;Less Grid&lt;/a&gt; (Less Framework利用時)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stuffandnonsense.co.uk/projects/320andup/&quot;&gt;320 and up&lt;/a&gt; (HTML5 Boilerplate利用時)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;残りのステップは、デザインしていくだけ&lt;/h3&gt;
+
+&lt;p&gt;コンテンツなしにデザインすることができないのはPhotoshopであろうと、ブラウザでのデザインでも同じ。
+だが、画像素材や原稿がまだの場合は想定している画像のサイズや原稿の分量などを伝えるというステップもあってもいいかも知れない。
+(実際に私の職場では非常によくある)&lt;/p&gt;
+
+&lt;p&gt;フレキシビリティこそがブラウザでデザインすることのもっとも優れた点なので活用していこう。&lt;/p&gt;
+
+&lt;p&gt;ダミー画像の生成なら、&lt;a href=&quot;http://lorempixum.com/&quot;&gt;lorempixum&lt;/a&gt;が数あるダミー生成ツールのなかでももっとも優れている。&lt;br /&gt;
+グレーを始めとする単色だけでなく、サイズの指定はもちろん、画像のジャンルの指定すらできる優れものだ。&lt;/p&gt;
+
+&lt;p&gt;プロトタイプとして素材の提供者にブラウザで確認してもらうには十分こと足りるだろう。&lt;br /&gt;
+日本語では海外のようなLorem Ipsumテキストがないのでどうしてもダミー原稿が欲しい場合は、私は&lt;a href=&quot;http://webtools.dounokouno.com/dummytext/index.html&quot;&gt;ダミーテキストジェネレータ&lt;/a&gt;を利用している。&lt;/p&gt;
+
+&lt;h2 id=&quot;tool&quot;&gt;インブラウザ デザインをより加速するオンラインツール達&lt;/h2&gt;
+
+&lt;p&gt;CSS3を活用してブラウザでデザインしていく上で欠かすことのできないツール群を紹介しよう。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://css3please.com/&quot;&gt;CSS3 Please! The Cross-Browser CSS3 Rule Generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Paul Irish氏によるCSS3
+Please!はCSS3のプロパティを実際に値を変え、その効果を確認しながら簡単にコピペすることができるウェブツール。&lt;br /&gt;
+border-radius、box-shadow、linear-gradient、rgba、transform、transitionなど、ブラウザプリフィックス付きで非常に便利。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://noisepng.com/&quot;&gt;NoisePNG - Generate noisy PNG-images with alpha-transparency&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;NoisePNGはその名の通りノイズを生成してPNGとしてダウンロードできるウェブツール。&lt;br /&gt;
+生成されるPNGはノイズの部分だけで色はRGBで指定して利用できるので非常に拡張性が高い。&lt;br /&gt;
+その上、&lt;a href=&quot;http://noisepng.com/100-80-5-monochrome.png&quot;&gt;http://noisepng.com/100-80-5-monochrome.png&lt;/a&gt;というURLで実際のデザインに簡単に組み込める。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.grained.org/&quot;&gt;Grained.org - Online grained gradient image generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらも先ほどのNoisePNGに近いサービスだが、こちらはノイズの入ったグラデーション画像をマウスのドラッグで生成できる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.patternify.com/&quot;&gt;Patternify - CSS Pattern Generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらはノイズではなく規則性のあるパターンを生成してくれるサービス。最大10pxx10pxのキャンバスと色、透明度も選択できるので使い慣れてくると色々なパターンを作成できる。&lt;br /&gt;
+作成したパターンはデモ用のdata-url形式でコピーするかPNGをダウンロードできる。またパターンはURLを生成することも可能なので作ったパターンを保存することも可能。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.colorzilla.com/gradient-editor/&quot;&gt;Ultimate CSS Gradient Generator - ColorZilla.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CSS Gradient生成ツールのデファクトスタンダード。前述のCSS3
+Please!でもグラデーションは作成できるが、こちらはPhotoshopと同じようなGUIでの生成が可能。&lt;br /&gt;
+画像からCSSを生成することもできる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.wordpressthemeshock.com/css-drop-shadow/&quot;&gt;Css3 drop shadow generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらはDrop ShadowをプレビューしながらCSSを生成できるツール。やはりCSS3
+Please!でも同様の機能は提供されているが、こちらのほうが私には視覚的に理解しやすいし数字ではなくスライダーを動かしながら調整できるところが便利。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://prefixr.com/&quot;&gt;Prefixr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ブラウザプリフィックスをタイプするのは面倒。&lt;br /&gt;
+このPrefixrではブラウザプリフィックスの内1つでも入力すると全ブラウザのプリフィックスとそれに対応したシンタックスを補完してくれる。&lt;br /&gt;
+なんとAPIすら提供しているので、Vimではすでにエディタ内からこのツールが利用できる。
+(&lt;a href=&quot;https://github.com/mr-szymanski/prefixr&quot;&gt;mr-szymanski/prefixr - GitHub&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;それぞれのサービスは他に類似サービスが沢山あるが、実際に使ってみて1番使い勝手のよいものをピックアップした。&lt;br /&gt;
+どれも自信を持っておすすめできるので試してみてほしい。&lt;/p&gt;
+
+&lt;h2 id=&quot;caution&quot;&gt;インブラウザ デザインの注意点&lt;/h2&gt;
+
+&lt;p&gt;CSS3はIE6-8では使えないプロパティもある。&lt;strong&gt;全てをブラウザでデザインすることは不可能だ&lt;/strong&gt;。&lt;br /&gt;
+テキスチャやCSS3では表現しづらいデザインももちろんある。&lt;br /&gt;
+&lt;strong&gt;Photoshopを絶対に使ってはならない&lt;/strong&gt;ということではない。&lt;br /&gt;
+ブラウザでデザインすることはPhotoshopでページすべてのデザインを行うよりもフレキシブルだということ、そして現時点でそれを行うことが以前に比べれば格段に簡単になったことが大切な部分だと思ってほしい。&lt;/p&gt;
+
+&lt;p&gt;Photoshopでページすべてのデザインをしていると、カラースキームを変更するのは大変。&lt;br /&gt;
+Photoshopでページすべてのデザインをしていると、フォントを変更するのは大変。&lt;br /&gt;
+Photoshopでページすべてのデザインをしていると、要素の配置1つを動かしても大変。&lt;br /&gt;
+レイヤーの管理は崩壊しちょっとした変更の依頼もストレスになる。&lt;br /&gt;
+もちろん、先に書いたレスポンシブウェブデザインの実現も相当な時間がかかる。&lt;/p&gt;
+
+&lt;p&gt;インブラウザ デザインではこういった部分でPhotoshopより優れている。&lt;br /&gt;
+Photoshopがインブラウザ デザインより優れている部分ももちろんある。&lt;br /&gt;
+(私にとっては十分だが)&lt;a href=&quot;http://www.pixelmator.com/&quot;&gt;Pixelmator&lt;/a&gt;も、レイヤースタイルに対応した&lt;a href=&quot;http://flyingmeat.com/acorn/&quot;&gt;Acorn&lt;/a&gt;もPhotoshopがデファクトになってきた強力な機能やユーザビリティにはまだ少し距離がある。&lt;br /&gt;
+ここで最も大切なことはPhotoshopでのデザインプロセスにも疑問を投げかける時代が来たということ。&lt;/p&gt;
+
+&lt;p&gt;よりプロダクティブになることがウェブデザイナのタスクの1つでそうすることでより優れた問題解決を提案できる。作ることそのものよりどうやって問題を解決するべきか、を考える時間を作り出していくことが大切なこと。&lt;/p&gt;
+
+&lt;p&gt;ブラウザでデザインすること。&lt;br /&gt;
+このプロセス、ツールセットにバージョンをつけるとしたら、1.0RCといったところだろう。&lt;br /&gt;
+CS5.5になるほどイテレーションを繰り返しすばらしいプロダクトを提供してきたAdobe Photoshopと比べればまだまだ始まったばかり。&lt;br /&gt;
+このプロセス/ツールセットのバージョンアップを行うのはウェブデザイナたちの役割だ。&lt;/p&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://37signals.com/svn/posts/1061-why-we-skip-photoshop&quot;&gt;Why we skip Photoshop (37signals)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hicksdesign.co.uk/journal/graphics-editor-or-text-editor&quot;&gt;Graphics Editor or Text Editor? (The Hickensian)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.stuffandnonsense.co.uk/blog/about/walls_come_tumbling_down_presentation_slides_and_transcript/&quot;&gt;Walls Come Tumbling Down presentation slides and transcript (Stuff and Nonsense)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://24ways.org/2009/make-your-mockup-in-markup&quot;&gt;Make Your Mockup in Markup (24 ways)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://christeso.com/why-i-never-design-a-site-in-photoshop&quot;&gt;Why I never design a site in Photoshop (Bullies Get High On Beatings)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.quora.com/Joel-Lewenstein/Life-Without-Photoshop&quot;&gt;Life Without Photoshop by Joel Lewenstein (Quora)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.inspiredm.com/learn-to-use-your-browser-in-web-design/&quot;&gt;Learn to Use Your Browser in Web Design (Inspired Magazine)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>パフォーマンス最適化</title>
+			<link href="http://css.studiomohawk.com/optimization/2011/04/09/why_speed_matters/"/>
+			<updated></updated>
+			<id>http://css.studiomohawk.com/optimization/2011/04/09/why_speed_matters</id>
+			<content type="html">
+				&lt;h2 id=&quot;whatis&quot;&gt;パフォーマンス最適化の意味&lt;/h2&gt;
+
+&lt;p&gt;ハードウェアの値段が下がりネットの接続環境も高速化していく。ブラウザも高速化を競い合っている。&lt;br /&gt;
+それでもなお、GoogleもYahoo!、FacebookもTwitterもページのロード時間を短縮するテクニックを生み出している。&lt;/p&gt;
+
+&lt;p&gt;なぜだろうか？&lt;/p&gt;
+
+&lt;p&gt;もちろんカスタマの満足度を上げ、終局的には売り上げに貢献するからだ。&lt;/p&gt;
+
+&lt;p&gt;GoogleもYahoo!も世界で1位2位を争うほどすばらしいデータセンタを所有しているのだから早くて当たり前。
+なんて思っていないだろうか？
+ページのロード時間の80%はフロントエンドで最適化できる。バックエンドが重要ではないとは言わないが我々フロントエンドデベロッパのもっとも大切なタスクの1つがページの最適化。&lt;/p&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;ページのロード時間で失うモノ&lt;/h2&gt;
+
+&lt;p&gt;サイト最適化ファームのStrangeloopがMashable!に寄稿した記事、&lt;a href=&quot;http://mashable.com/2011/04/06/site-speed/&quot;&gt;Why Websites Are Slow &amp;amp; Why Speed Really Matters [INFOGRAPHIC]&lt;/a&gt;
+によると、  &lt;/p&gt;
+
+&lt;p&gt;1秒のロード時間の増加で、&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;7%のコンバージョン&lt;/li&gt;
+  &lt;li&gt;11%のPV&lt;/li&gt;
+  &lt;li&gt;16%のカスタマ満足度&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;を失うとある。  &lt;/p&gt;
+
+&lt;p&gt;さらに、3秒待たされると57%のカスタマはサイトから離脱しそのうち80%のユーザはそのサイトへ戻ってこず、そのうち50%がネガティブな経験を他の人にも共有する。&lt;br /&gt;
+もっと加えると平均的にユーザは実際のロード時間より15%ほど追加でロードにかかっていると感じ、人にその話をする場合、実際のロード時間より35%遅いと伝えている。&lt;/p&gt;
+
+&lt;p&gt;3クリックルールにはもう意味がないかも知れないが3秒ルールは実際に存在する。  &lt;/p&gt;
+
+&lt;h2 id=&quot;souders&quot;&gt;Steve Soudersの教え&lt;/h2&gt;
+
+&lt;p&gt;元Yahoo!のパフォーマンス担当責任者であり、現在はGoogleで働くSteve Soudersの&lt;a href=&quot;http://www.oreilly.co.jp/books/9784873113616/&quot;&gt;ハイパフォーマンスWebサイト&lt;/a&gt;はこのトピックの中で確実に読んでおくべき本。
+彼が作り出した14のルールはYahoo!のYSlowのチェック項目にもなっているので見たことがあるはずだ。&lt;br /&gt;
+GoogleのPageSpeedでも近しいチェック項目を持っているのでそれぞれの項目が何を意味して、それがどうしてページロード時間の最適化につながるかについて覚えておくことをおすすめする。&lt;/p&gt;
+
+&lt;h2 id=&quot;check&quot;&gt;最適化チェックツール&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://developer.yahoo.com/yslow/&quot;&gt;Yahoo! YSlow for Firebug&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://code.google.com/speed/page-speed/&quot;&gt;Page Speed&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;先ほどもその名前が出てきたがこの2つは絶対に必要なブラウザ拡張。Firefox+Firebugでも利用できるが今では両方ともChromeでも動作する。Page
+Speedは&lt;a href=&quot;http://pagespeed.googlelabs.com/&quot;&gt;オンラインバージョン&lt;/a&gt;も公開されモバイルでもチェックができる。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://gtmetrix.com/&quot;&gt;GTmetrix&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;こちらはYSlowとPage Speedを同時にチェックするオンラインツール。ブックマークレットも配布されている。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://loads.in/&quot;&gt;loads.in&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;せっかく最適化しても結果をコンスタントなテスト環境でチェックできなければ意味がない。&lt;br /&gt;
+Loads.inでは珍しく日本のサーバからのロード時間をテストしてくれる。ついでにブラウザ別の結果も見ることができるのでおすすめのオンラインツール。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tool&quot;&gt;最適化ツール&lt;/h2&gt;
+
+&lt;h3&gt;CSSスプライト&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;オンラインツール: &lt;a href=&quot;http://spritegen.website-performance.org/&quot;&gt;CSS Sprite Generator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Ruby(ターミナルから利用): &lt;a href=&quot;https://github.com/merbjedi/sprite&quot;&gt;merbjedi/sprite - GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SASS連携: &lt;a href=&quot;http://www.hagenburger.net/BLOG/Lemonade-CSS-Sprites-for-Sass-Compass.html&quot;&gt;Generate CSS Sprites on the Fly with Lemonade&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;JavaScriptとCSSの結合と縮小化&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ruby(ターミナルから利用): &lt;a href=&quot;http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool&quot;&gt;Juicer - a CSS and JavaScript packaging tool / Ruby - cjohansen.no&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;オンラインツール (CSSとJS): &lt;a href=&quot;http://www.refresh-sf.com/yui/&quot;&gt;Online YUI Compressor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;オンラインツール (CSS): &lt;a href=&quot;http://www.cleancss.com/&quot;&gt;Clean CSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;オンラインツール (JS): &lt;a href=&quot;http://closure-compiler.appspot.com/home&quot;&gt;Closure Compiler Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;画像最適化&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mac OS X GUI: &lt;a href=&quot;http://imageoptim.pornel.net/&quot;&gt;ImageOptim – a PNG/JPEG/GIF optimizer for Mac OS X&lt;/a&gt;
+　
+### バラバラのツールは必要ない？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;そんなにたくさん上げられても使いこなすまで時間がかかりそうだと思ったら、 
+&lt;a href=&quot;http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/&quot;&gt;以前紹介した&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5
+Boilerplate&lt;/a&gt;のビルドスクリプトを利用することをおすすめする。&lt;br /&gt;
+CSSスプライト以外はHTML5 Boilerplateのビルドスクリプトでも行える。&lt;/p&gt;
+
+&lt;h3&gt;.htaccess(サーバ側で設定できるなら、その方がベター)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/blob/master/.htaccess&quot;&gt;.htaccess on HTML5 Boilerplate&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;HTML5
+Boilerplateの.htaccessを利用するだけでYSlowのスコアが15ポイントはあがるのではないかと思うほどすばらしいファイル。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;aboutspeed&quot;&gt;スピードについて&lt;/h2&gt;
+
+&lt;p&gt;つい先日FireFox4がリリースされたがChromeのスピードには及ばない。SafariもOperaも起動速度に関してはかなり気を使っているしページのレンダリングに関しても同様。&lt;br /&gt;
+毎日確実に利用するものだからこそスピードが大事。ということだろう。  &lt;/p&gt;
+
+&lt;p&gt;ウェブサイトも同様にスピードが大事。&lt;br /&gt;
+Googleのページランクに関わるからでも上に書いた実質的なロスでもかまわない、どうにかしてページロード速度の最適化が大切であるかをステークホルダと共有し実践してほしい。&lt;br /&gt;
+もちろん個人サイトでどんな風にやっていくべきかを実験するのもいいだろう。&lt;/p&gt;
+
+&lt;p&gt;私自身かなり気を使って最適化をしている。
+このサイトは海外のサーバなので日本では少しレスポンスが遅く他の個人サイトと同様Amazon S3に移行する予定だ。  &lt;/p&gt;
+
+&lt;p&gt;すると、.htaccessが使えないのでRakeを使って自動化を行うよう調整中。
+Amazonのクラウドサービスを使ってみるというのもいい経験になったしRakeによるビルド/デプロイの自動化もツールとして昇華しやすいので会社でも役に立つと思っている。&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>LESS - CSSプリプロセッサ</title>
+			<link href="http://css.studiomohawk.com/less/2011/04/03/use_less_to_clean_up_your_css/"/>
+			<updated>2012-01-18 10:57:14 +0900</updated>
+			<id>http://css.studiomohawk.com/less/2011/04/03/use_less_to_clean_up_your_css</id>
+			<content type="html">
+				&lt;h2&gt;時短、効率、スピードアップのためのはじめてのLESS入門 @ SwapSkills&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://swapskills.info/month/25.html&quot;&gt;&lt;img src=&quot;http://swapskills.info/banner/25.png&quot; alt=&quot;SwapSkills2012(25)時短、効率、スピードアップのためのはじめての LESS 入門&quot; class=&quot;right&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://swapskills.info/month/25.html&quot;&gt;SwapSkills&lt;/a&gt;にてLESSについての勉強会にて2012年2月18日（土）13:30 ～ 私が登壇することになりました。&lt;br /&gt;
+この勉強会ではLESSをこれまで使ったことがない人に向けてLESSの導入の利点、欠点など(このパートはGoogleの小久保 浩大郎さんが担当します)を説明し、私は後半のLESSの文法についての担当になります。&lt;br /&gt;
+この勉強会をきっかけに&lt;a href=&quot;http://lesscss.org/&quot;&gt;LESS&lt;/a&gt;のページを丸ごと&lt;a href=&quot;http://less-ja.studiomohawk.com/&quot;&gt;日本語訳&lt;/a&gt;したりして改めて勉強しなおしました。&lt;br /&gt;
+LESSについて勉強しなきゃな、と思っている方はぜひこの機会にどうぞ!&lt;/p&gt;
+
+&lt;h2 id=&quot;whatis&quot;&gt;CSSプリプロフェッサとは&lt;/h2&gt;
+
+&lt;p&gt;If it ain’t broken, don’t fix it.&lt;/p&gt;
+
+&lt;p&gt;壊れてないなら、直す必要はない。&lt;br /&gt;
+CSSは追加してほしい仕様はあるけど、壊れている、とまでは感じない。プログラミングの何たるかをまったく理解していなかった私にも覚えられた。  &lt;/p&gt;
+
+&lt;p&gt;LESSやSASSに代表されるCSSプリプロセッサは、CSSにはないプログラミング言語的な機能を追加してくれるツール。&lt;br /&gt;
+絶対に必要かというとそうでもないが、使いこなすとよりシンプルに、パワフルなスタイルシートを実現することができる。&lt;br /&gt;
+実際に私もこのブログを始め様々な個人のプロジェクトではLESSを使い始めている。&lt;/p&gt;
+
+&lt;p&gt;私がSASSよりLESSを選んだのは制作者である&lt;a href=&quot;http://cloudhead.io/&quot;&gt;cloudhead&lt;/a&gt;氏はLESSをCSSとはまったく異なる言語にしないようにかなり気を使っているからだ。&lt;br /&gt;
+CSSは宣言型プログラミングの流れを組む言語であり、cloudhead氏はLESSも同じ流れを保ったままで言語を拡張しようとしている。&lt;br /&gt;
+CSSを開発する人は必ずしもプログラム言語に詳しいとは限らないからcloudhead氏のアプローチを選択した。  &lt;/p&gt;
+
+&lt;h2 id=&quot;feature&quot;&gt;LESSでできること&lt;/h2&gt;
+
+&lt;p&gt;LESSでは、&lt;strong&gt;変数&lt;/strong&gt;、&lt;strong&gt;ミックスイン&lt;/strong&gt;、&lt;strong&gt;入れ子ルール&lt;/strong&gt;、&lt;strong&gt;名前空間&lt;/strong&gt;、&lt;strong&gt;四則演算と関数&lt;/strong&gt;などをCSSに追加することができる。&lt;br /&gt;
+プログラミングの経験があるならそれぞれ覚えがあるだろう機能達ばかりでCSSには存在しない機能。&lt;/p&gt;
+
+&lt;p&gt;オフィシャルサイトに詳しく利用法については説明があるので詳細は&lt;a href=&quot;http://lesscss.org/&quot;&gt;こちら&lt;/a&gt;。&lt;br /&gt;
+制作者の了承を得てオフィシャルサイトの日本語化を行ったので英語が苦手な方は&lt;a href=&quot;http://less-ja.studiomohawk.com/&quot;&gt;こちら&lt;/a&gt;。  &lt;/p&gt;
+
+&lt;p&gt;ここではLESSの基本機能とそのシンタックスについて紹介していこう。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;変数&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;@color: #4D926F;
+#header {
+  color: @color;
+}
+h2 {
+  color: @color;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というLESSは、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;#header {
+  color: #4D926F;
+}
+h2 {
+  color: #4D926F;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;のように解釈される。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@+変数名&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;で定義できる。正確には変数というよりは定数に近い使われ方をしている。  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;@var: red;
+
+#page {
+  @var: white;
+  #header {
+    color: @var; // white
+  }
+}
+
+#footer {
+  color: @var; // red  
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ただしプログラミング言語と同じくスコープがあり上記のようにローカルに定義がない場合は、親ルールから定義を探しそれでもなければグローバルを探すように作られている。&lt;br /&gt;
+このスコープに関しては変数だけではなくミックスインの定義についても同様に扱われる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ミックスイン&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらも実際にどのようにLESSで記述し実際にCSSでどのように解釈されるのかを見た方が早いだろう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というLESSで定義したミックスインを&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;#menu a {
+  color: #111;
+  .bordered;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;にしてルールセットの中に追加すると、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;#menu a {
+  color: #111;
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;CSSではこのように解釈される。  &lt;/p&gt;
+
+&lt;p&gt;CSS3を利用する場合、まだまだ多くのベンダープリフィックスを追加しなければいけないのが現実。&lt;br /&gt;
+そんな際にこのミックスインは威力を発揮する。&lt;br /&gt;
+ミックスインはパラメータを渡したりデフォルトを定義することもできるので、使い回しが効く機能でもある。&lt;br /&gt;
+詳しい説明は&lt;a href=&quot;http://studiomohawk.github.com/ja-lesscss-org/#-ミックスインの引数利用&quot;&gt;こちら&lt;/a&gt;から。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;入れ子ルール&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ルールセットを入れ子にすることで通常であればなんども繰り返し書かなければならないセレクタを省略できるのが入れ子ルール。  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;#header { color: black; }
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo { 
+  width: 300px; 
+}
+#header .logo:hover {
+  text-decoration: none;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;という&lt;strong&gt;CSS&lt;/strong&gt;は、LESSでは&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;#header        { color: black;
+  .navigation  { font-size: 12px }
+  .logo        { width: 300px;
+    &amp;amp;:hover    { text-decoration: none }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というように記述することができる。&lt;br /&gt;
+何度もセレクタを書かずに済むだけではなくDOMの構造とほぼ同じ構造になるし、なによりこのように記述することを覚えるとキレイにセレクタを整理する癖がつく。&lt;br /&gt;
+なお、&lt;strong&gt;&amp;amp;:hover&lt;/strong&gt;という記述があるがこちらは疑似クラス(:link、:visited、:hover、:focusなど)を追加するのに活躍する。&lt;br /&gt;
+&lt;strong&gt;&amp;amp;&lt;/strong&gt;という結合子は、入れ子になったセレクタを子孫として扱わず親セレクタに追加することができる。&lt;br /&gt;
+なので疑似クラスだけではなく、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;.float.left {...}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というようなマルチクラスの記述にも対応できる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;名前空間&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらは変数やミックスインをまとめる際に活用できる機能。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;#bundle {
+  .button () {
+    display: block;
+    border: 1px solid black;
+    background-color: grey;
+    &amp;amp;:hover { background-color: white }
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;#bundle&lt;/strong&gt;という名前空間の中に&lt;strong&gt;.button&lt;/strong&gt;というミックスインを定義する。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;#header a {
+  color: orange;
+  #bundle &amp;gt; .button;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;このようにして呼び出すことが可能。&lt;br /&gt;
+例では&lt;strong&gt;#bundle&lt;/strong&gt;とIDをバンドル化しているが、実際にはクラス名でも要素名でもバンドル化は可能。&lt;br /&gt;
+つまりスタイルシート内にあるすべてのミックスインは名前空間を持つことができる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;四則演算と関数&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;まずは演算から見ていこう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;@base: 5%;
+@filler: @base * 2;
+@other: @base + @filler;
+
+color: #888 / 4;
+background-color: @base-color + #111;
+height: 100% / 2 + @filler;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;計算機がデスクの上におかれていたりしないだろうか？ 私はおいてある。&lt;br /&gt;
+ウェブデザイナには計算機を手放せない人も多いことだろう。&lt;br /&gt;
+その必要をなくしてくれるのが演算。その名前の通り、足し算、引き算、かけ算、割り算を行うことができる。&lt;/p&gt;
+
+&lt;p&gt;ただの計算機とは違い色の演算もすることができる。&lt;br /&gt;
+しかし&lt;strong&gt;#888 / 4&lt;/strong&gt;の答えは予想できても、&lt;strong&gt;#c28381 * #fafafa&lt;/strong&gt;はどんな色になるのかわからない。&lt;br /&gt;
+よりわかりやすく色を操作するためにあるのが&lt;strong&gt;関数&lt;/strong&gt;だ。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;lighten(@color, 10%);     // @colorより10%明度が*高い*値を返します
+darken(@color, 10%);      // @colorより10%明度が*低い*値を返します
+
+saturate(@color, 10%);    // @colorに10%の彩度を*追加*した値を返します
+desaturate(@color, 10%);  // @colorから10%の彩度を*削減*した値を返します
+
+fadein(@color, 10%);      // @colorから10%透明度が*高い*値を返します
+fadeout(@color, 10%);     // @colorから10%透明度が*低い*値を返します
+fade(@color, 50%);        // @colorの50%の透明度を持つ値を返します
+
+spin(@color, 10);         // @colorから10度色相が大きい値を返します
+spin(@color, -10);        // @colorから10度色相が小さい値を返します
+
+mix(@color1, @color2);    // @color1 と @color2 をミックスした値を返します
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;変数と演算、そして色の関数の組み合わせはスタイルシートにより明確な意味を持たせることもできる。&lt;br /&gt;
+15pxや#fefefeは作った本人以外、もしかすると作った本人ですら2週間も経てばその意味を忘れてしまうだろう。&lt;br /&gt;
+しかし以下の例を見てほしい、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;@base-color: #fefefe;
+@accent-color: #f99157;
+@subtle-accent: lighten(@accent-color:, 20%);
+@dark-accent: darken(@accent-color:, 20%);
+@base-font-size: 16px;
+@base-height: @base-font-size * 1.618;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;このようにデザインの基礎になる部分を変数化して、演算や色の関数を使ってバリエーションを作るということもできる。&lt;br /&gt;
+データに名前を付けるのが変数の本当の実力でそれぞれに名前がついていれば16pxが大事な値であるかも一目瞭然にすることもできる。&lt;/p&gt;
+
+&lt;h2 id=&quot;mixin&quot;&gt;便利なミックスインのコレクション&lt;/h2&gt;
+
+&lt;p&gt;自分がよく利用するルールのミックスインを定義しておけば飛躍的にCSSの開発はスピードアップする。&lt;br /&gt;
+フロントエンドデベロッパやウェブデザイナはいつだって時間が足りない職種なので自分なりのコレクションを作っておくといいだろう。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://markdotto.com/bootstrap/&quot;&gt;Preboot.less&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;TwitterのBoostrapでも利用しているミックスイン/変数コレクションの先駆者&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.stuffandnonsense.co.uk/blog/about/less&quot;&gt;LESS by Stuff &amp;amp; Nonsense&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Andy Clarkeも記事中に非常に便利なミックスインを紹介している。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;.font-size(@font-size: 16) {
+	@rem: (@font-size / 10);
+	font-size: @font-size * 1px;
+	font-size: ~&amp;quot;@rem&amp;quot;;
+}
+// pixelをremに変換しつつ、remが使えない場合のフォールバックを入れる
+
+h1 { .font-size(32); }
+
+// CSS
+// h1 {
+//    font-size:32px;
+//    font-size:3.2rem;
+// }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;また、以下のカラースキーム生成もCSSなら大変だがLESSならより自由度が高く使い回しができて便利。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;@col : #468DB6;			// Base colour
+@comp : spin(@col, 180);  	// Complementary colour
+
+@Col_l1 : lighten(@col, 5%);	// Lighten base
+@Col_l2 : lighten(@col, 10%);
+@Col_l3 : lighten(@col, 15%);
+@Col_l4 : lighten(@col, 20%);
+
+@Col_d1 : darken(@col, 5%);	// Darken base
+@Col_d2 : darken(@col, 10%);
+@Col_d3 : darken(@col, 15%);
+@Col_d4 : darken(@col, 20%);
+
+@Comp_l1 : lighten(@comp, 5%);	// Lighten complementary
+@Comp_l2 : lighten(@comp, 10%);
+@Comp_l3 : lighten(@comp, 15%);
+@Comp_l4 : lighten(@comp, 20%);
+
+@Comp_d1 : darken(@comp, 5%);	// Darken complementary
+@Comp_d2 : darken(@comp, 10%);
+@Comp_d3 : darken(@comp, 15%);
+@Comp_d4 : darken(@comp, 20%);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;加えて、彼のモバイルファーストアプローチのBoilerplateである&lt;a href=&quot;https://github.com/malarkey/320andup/&quot;&gt;320 and Up&lt;/a&gt;に他のミックスインがあるので参考に。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lesselements.com/&quot;&gt;LESS Elements&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Preboot.lessと重複する部分も多いけれどぜひチェックしておいてほしい。&lt;/p&gt;
+
+&lt;p&gt;大事なことは自分で自分が使いやすいミックスイン/変数コレクションを作ること。&lt;br /&gt;
+二度使えないコードを書かないことは大切なこと。何度も使えるコードを何度も書かないことも同じくらい大事。&lt;br /&gt;
+D.R.Y(Don’t Repeat
+Yourself)はプログラミングにおける基本的なプリンシパルの1つだが、CSSではなかなか難しいのでLESSでそれを補完できるのは非常に心強い。&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;使い方&lt;/h2&gt;
+
+&lt;p&gt;ここまで来てようやく使い方の説明になるが、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet/less&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/css&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;styles.less&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;less.js&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;と使い方はとても簡単。&lt;br /&gt;
+注意してほしいのは、&lt;strong&gt;rel=”stylesheet/less”&lt;/strong&gt;の部分だけ。&lt;/p&gt;
+
+&lt;p&gt;さらにLESS.jsを実際に呼び出している場合は、&lt;code&gt;#!watch&lt;/code&gt;という文字列をURLの後ろにつけると、LESSファイルの保存に合わせてスタイルをしてくれる。&lt;br /&gt;
+なお、ローカルファイルではChromeで動作しないかも知れないので、そんな場合はChromeに&lt;code&gt;-allow-file-access-from-files&lt;/code&gt;のパラメータを渡して起動すれば動作する。&lt;br /&gt;
+毎回毎回リフレッシュするのは面倒な上、意外と時間の無駄なので開発中はぜひ利用してほしい。&lt;/p&gt;
+
+&lt;h2 id=&quot;compile&quot;&gt;CSSへのコンパイル&lt;/h2&gt;
+
+&lt;p&gt;node.jsで動作するサイトでない限りはLESSの記述はCSSに展開する必要があるだろう。&lt;/p&gt;
+
+&lt;p&gt;node.jsを使ったサーバサイドでのコンパイル以外ではLESSファイルをCSSへコンパイルするには大きく2つの方法がある。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;GUIツール&lt;/li&gt;
+  &lt;li&gt;コマンドライン&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;GUIツールから紹介しよう。
+GUIツールは大体同じ動作で、.lessファイルがあるディレクトリをツール上で指定すると自動でコンパイルしてくれる。&lt;br /&gt;
+おそらく全部のツールで.lessファイルを保存するたびにCSSに自動でコンパイルされるので実際に呼び出すファイルはCSSで問題ない。&lt;br /&gt;
+詳しい使い方はツールのヘルプを参照。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://winless.org/online-less-compiler&quot;&gt;WinLess - Windows GUI for less.js&lt;/a&gt; / Windowsのネイティブアプリで無料&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://wearekiss.com/simpless&quot;&gt;SimpLESS - Your LESS CSS Compiler&lt;/a&gt; / Win、Linux、Macで動作するAdobe Airアプリ。無料&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://crunchapp.net/&quot;&gt;Crunch! - The tastiest LESS editor&lt;/a&gt; / Win、Linux、Macで動作するAdobe Airアプリ。無料&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://incident57.com/less/&quot;&gt;LESS.app For Mac OS X&lt;/a&gt; / Macのネイティブアプリ、無料&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;他にも幾つかGUIツールはあるが無料のツールは知る限りこの4つ。  &lt;/p&gt;
+
+&lt;p&gt;LESS.appを作成したBryan
+Jones氏は&lt;a href=&quot;http://incident57.com/codekit/&quot;&gt;CodeKit&lt;/a&gt;という新しいアプリを作成していてベータ版の間は無料。LESSをCSSに変換するだけでなく、SASSやStylusにも対応し、HAML、Coffee
+Script、画像の最適化など様々な機能が満載の夢のようなアプリ。Macのみ。&lt;/p&gt;
+
+&lt;p&gt;また同じくMacのみになってしまうが、&lt;a href=&quot;http://livereload.com/?t=1320397070&quot;&gt;LiveReload&lt;/a&gt;というアプリもLESS、SASS、Coffee Scriptを保存と同時にブラウザをアップデートしながら変換してくれる。&lt;/p&gt;
+
+&lt;p&gt;コマンドラインでの利用にはもちろんNode.jsが必要。&lt;br /&gt;
+Mac、Windowsともに&lt;a href=&quot;http://nodejs.org/&quot;&gt;node.js&lt;/a&gt;からパッケージがダウンロードできるので、あとはダブルクリックするだけ。簡単。&lt;/p&gt;
+
+&lt;p&gt;インストールが終わったらターミナルアプリから&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;lessc styles.less &amp;gt; styles.css
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすればいいだけ。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;sh&quot;&gt;lessc -x　styles.less &amp;gt; styles.css
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;のように、&lt;strong&gt;-x&lt;/strong&gt;オプションをつけると圧縮したCSSとして展開される。  &lt;/p&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lesscss.org/&quot;&gt;LESS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.stuffandnonsense.co.uk/blog/about/less&quot;&gt;LESS by Stuff &amp;amp; Nonsense&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://markdotto.com/bootstrap/&quot;&gt;Preboot.less&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lesselements.com/&quot;&gt;LESS Elements&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://fadeyev.net/2010/06/19/lessjs-will-obsolete-css/&quot;&gt;Less.js Will Obsolete CSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sass-lang.com/&quot;&gt;SASS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&quot;/js/hiless.js&quot;&gt;&lt;/script&gt;
+
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>ワイヤフレーム</title>
+			<link href="http://css.studiomohawk.com/wireframe/2011/04/01/wireframe/"/>
+			<updated></updated>
+			<id>http://css.studiomohawk.com/wireframe/2011/04/01/wireframe</id>
+			<content type="html">
+				&lt;h2 id=&quot;whatis&quot;&gt;ワイヤフレームとは&lt;/h2&gt;
+
+&lt;p&gt;ワイヤフレームって作ったことありますか？&lt;br /&gt;
+ワイヤフレームはウェブページのコンテントを視覚的に表現するドキュメントの中核を担う存在。
+建築用語でいうところのブループリントと同じだろうか。&lt;/p&gt;
+
+&lt;p&gt;52 Weeks of UXによると、UXデザイナにとって&lt;strong&gt;なくてはならない&lt;/strong&gt;モノであり、IAのベストフレンド、とさえある。(&lt;a href=&quot;http://52weeksofux.com/post/866406780/wireframing-is-not-a-religion&quot;&gt;Wireframing is not a religion&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;私が現在働いている会社にはもちろんUXデザイナという職種もないし、IAという職種もない。デザイナがその一部を担っている。&lt;br /&gt;
+私にとってもワイヤフレームはなくてはならないツールでありベストフレンド。現在担当しているプロジェクトではこの数週間に60以上のワイヤフレームを作成している。&lt;br /&gt;
+まだ一度もPhotoshopを開く事なく、ワイヤフレームをベースにしたプロトタイプも4ページほど作成してある。&lt;br /&gt;
+どんな見た目になるのかはまだ誰もわからないが、どんなコンテンツがどこに必要で、どんなアクションがいつ必要なのかについては、共通の認識を持っている。
+これこそがワイヤフレームの強みであり、存在意義。&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;ワイヤフレームの使用法&lt;/h2&gt;
+
+&lt;p&gt;見てみないとわからない。&lt;br /&gt;
+デザイナとして働いている私自身、外部のデザイナに仕事を依頼している場合に、そんな台詞を言うことがある。&lt;/p&gt;
+
+&lt;p&gt;誰でもデザインについてはそれぞれの主観を持つことができる。&lt;/p&gt;
+
+&lt;p&gt;どこかで見てみないとわからない、という人は、レストランでも食べてみないと注文できないのか、というようなことを言っている場面に出くわしたことがあるが、では、国産イノシシのシヴュや、オーストラリア産仔羊肉のナバラン仕立てとメニューにあったら、どれくらいの人がどんな味の料理が出てくるかわかるか？&lt;br /&gt;
+私はいまだにポワレがなんだかも覚えられないくらいはフランス料理に詳しくはないから、私には無理だ。&lt;br /&gt;
+でも、そんな料理を饗してくれるレストランには、それらがどんな料理なのか素人にもわかるように教えてくれるその道のプロフェッショナルがいるから訊けばわかる。少なくとも想像することを手助けしてくれる。&lt;/p&gt;
+
+&lt;p&gt;ワイヤフレームは&lt;em&gt;差異と類似を明確にする&lt;/em&gt;ツール。
+&lt;a href=&quot;http://uxmovement.com/wireframes/how-to-get-clients-to-approve-your-wireframes-every-time&quot;&gt;How to Get Clients to Approve Your Wireframes Every Time@UX Movement&lt;/a&gt;でも言及されているが、
+リデザイン前のデザインと、より効果的だと考えているワイヤフレームを比較することで違いを提示する。クライアントの要望に近しいデザインとの類似をワイヤフレームで提示する。
+この2つの比較はPhotoshopで作成した精度の高いモックアップでも可能だ。しかし、ワイヤフレームのフットワークの良さはより効率的にパターンを生み出す原動力になる。&lt;br /&gt;
+幾つかのワイヤフレームのパターンの中で差異や類似を提示することももちろんできる。&lt;/p&gt;
+
+&lt;h2 id=&quot;otherusage&quot;&gt;もう1つのワイヤフレームの使用法&lt;/h2&gt;
+
+&lt;p&gt;ワイヤフレームは思考を助けるツールでもある。
+思考を集約することも、拡張することも、とても自然に行うことができる。&lt;br /&gt;
+最前この数週間で60以上のワイヤフレームを作ったと書いたけれど、その内私自身もプロジェクトメンバも納得できる状態になっているのは4枚くらいだ。&lt;br /&gt;
+その4枚については、合わせて10回以上は繰り返して変更を加えてきている。&lt;br /&gt;
+私が実際にワイヤフレームを作成している時間は非常に短い。Photoshopで高精度なモックアップを60枚作り、4枚を10回以上は修正する、なんてただの悪夢でしかない。
+人は誰でもある事柄に費やした時間に比例してその事柄に愛着を持ってしまう習性がある。&lt;br /&gt;
+デザイナやコーダにとって修正はいつだってつらいのはそのためだ。たとえその修正が圧倒的に効果的だと思っていても、いつでも芽生えた愛着と天秤にかける自分がいる。&lt;br /&gt;
+だからこそ素早く作成も修正も行うことができるワイヤフレームの作成方法を模索する必要がある。&lt;/p&gt;
+
+&lt;p&gt;またデザインは問題を解決するための手段であるとよく言われる。ワイヤフレームは問題を見つけ出す手段でもあるところが大きな違い。&lt;br /&gt;
+迷子になっている人が、今自分がどこにいるのか把握できないのと同じく、問題を明確にできなければ解決することは不可能。
+その問題を浮き彫りにするためのツールとしてもワイヤフレームは有効だ。&lt;/p&gt;
+
+&lt;h2 id=&quot;tool&quot;&gt;ワイヤフレームツール&lt;/h2&gt;
+
+&lt;p&gt;フリーのツールも、有料のツールも、画像編集アプリケーションと同じくらいの種類があるワイヤフレームツール。
+中には実際にクリックしたり、マウスオーバできたりとインタラクションすら簡単に作成できる高度なツールも存在する。&lt;/p&gt;
+
+&lt;p&gt;私が利用しているのは、&lt;a href=&quot;http://balsamiq.com/&quot;&gt;Balsamiq&lt;/a&gt;。手書き風のワイヤフレームを簡単に作成できるAdobe
+Airアプリ。環境を選ばないし、ライセンス1つで自分が使用している端末なら数に制限無くインストールできる。&lt;br /&gt;
+$79とやや高額な価格設定かと思うかも知れないが、幾つかのツールを試用してみて、マニュアルなしでも利用できる手軽さと、意外なまでに拡張性がある部分を評価して購入した。&lt;br /&gt;
+今やBalsamiqでワイヤフレームだけではなく、ワークフローやサイトマップも作成したりもするようになりBalsamiqを使わない日はない。&lt;/p&gt;
+
+&lt;p&gt;多くのウェブアプリも存在するジャンルではあるが、私はブラウザで作業するのがやや苦手なのでデスクトップアプリに絞って探したが、
+&lt;a href=&quot;https://gomockingbird.com/&quot;&gt;gomockingbird&lt;/a&gt;やFirefoxのアドオンとしても動作する&lt;a href=&quot;http://pencil.evolus.vn/en-US/Home.aspx&quot;&gt;Pencil Project&lt;/a&gt;なども試してみるといいだろう。&lt;/p&gt;
+
+&lt;p&gt;デスクトップアプリでBalsamiqと最後まで悩んだのが、&lt;a href=&quot;http://www.flairbuilder.com/&quot;&gt;flairbuilder&lt;/a&gt;。こちらはbalsamiqよりも高機能で実際に動作するプロトタイプを作成できる強みがある。
+ただワイヤフレームアプリにおいてはシンプルさを優先した方が確実に効率的だということでBalsamiqを選択した。&lt;/p&gt;
+
+&lt;p&gt;もちろん使い慣れたPhotoshopやFireworksなども工夫をすれば、かなり効率的にワイヤフレームを作ることができるはずだ。  &lt;/p&gt;
+
+&lt;h2 id=&quot;doc&quot;&gt;ドキュメントとしてのワイヤフレーム&lt;/h2&gt;
+
+&lt;p&gt;37Signalsの&lt;a href=&quot;http://gettingreal.37signals.com/ch11_Dont_Do_Dead_Documents.php&quot;&gt;Don’t Do Dead Documents&lt;/a&gt;にて、&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If a wireframe document is destined to stop and never directly become the actual design, don’t bother doing it. 
+If the wireframe starts as a wireframe and then morphs into the actual design, go for it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;とある、&lt;br /&gt;
+要約すると、ワイヤフレームを単純なドキュメントとして作成するならワイヤフレームの存在に意味はなく本当のデザインに変化していくなら作るべきだということ。&lt;/p&gt;
+
+&lt;p&gt;ドキュメンテーションはどんな職種でも必要になるアウトプットの1つだと思うが、デザイナも例外無く成果物の1つとしてドキュメントがあるだろう。
+ワイヤフレームはデザイナのドキュメントとしてはもっとも視覚的なドキュメントになるはずなので、ないよりはあった方がインパクトがあるかも知れないが、
+37Signalsの記事で言及されているように、デザインに昇華しないワイヤフレームは単純に時間の無駄なのでその時間を追加のパターンの作成や、追加の修正に費やした方がいい。&lt;/p&gt;
+
+&lt;p&gt;私にとっては思考を手助けしてくれるツールの側面がまずあり、そこからデザインへの昇華は自然なフローとなっているのでワイヤフレームは飛ばすことができないタスクの1つ。&lt;/p&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.uxmag.com/design/shades-of-grey-wireframes-as-thinking-device&quot;&gt;uxmag&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://52weeksofux.com/post/866406780/wireframing-is-not-a-religion&quot;&gt;52weeksofux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://leehardingonline.co.uk/2010/06/the-value-of-wireframing/&quot;&gt;The Value of Wireframing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://userpathways.com/2008/06/the-what-when-and-why-of-wireframes/&quot;&gt;The what, when and why of wireframes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.uxmag.com/design/shades-of-grey-wireframes-as-thinking-device&quot;&gt;Shades of Grey: Wireframes as Thinking Device&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>HTML5 Boilerplate</title>
+			<link href="http://css.studiomohawk.com/html5-boilerplate/2011/03/15/html5boilerplate/"/>
+			<updated></updated>
+			<id>http://css.studiomohawk.com/html5-boilerplate/2011/03/15/html5boilerplate</id>
+			<content type="html">
+				&lt;h2 id=&quot;whatis&quot;&gt;HTML5 Boilderplateとは&lt;/h2&gt;
+
+&lt;p&gt;フロントエンドデベロッパな人たちはウェブ開発プロジェクトを始めるにあたり、HTML、CSS、JSのスケルトン(必要最小限の記述をしたファイル達)を含んだディレクトリを持っている人が多い事だろう。&lt;br /&gt;
+私も個人のプロジェクト、仕事でのプロジェクトともに、それぞれに少しだけカスタマイズを行うだけで開発を始めることができるディレクトリを持っている。  &lt;/p&gt;
+
+&lt;p&gt;今回紹介する(おそらくすでに紹介するまでもないほど知られているが)&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;HTML5 BOILERPLATE&lt;/a&gt;は、Paul IrishとDivya Manianを中心として生み出された膨大な量の知見を詰め込んだHTML5を使ったプロジェクト用のスタートポイント。&lt;br /&gt;
+知っての通りHTML5を使い始めるのは決して今からでも&lt;strong&gt;早すぎるということは決してない&lt;/strong&gt;が、HTML5に対応するなんてまだ先、と思っていても、このHTML5 BOILERPLATEに詰め込まれたベスト中のベストプラクティスを吸収しておけば、現在のプロジェクトもより盤石にすることができるはずだ。&lt;/p&gt;
+
+&lt;h2 id=&quot;feature&quot;&gt;HTML5 Boilerplateの特筆すべき5つのポイント&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.modernizr.com/&quot;&gt;Modernizr&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;ModernizrはJavaScriptを利用して、ブラウザでサポートしているHTML5/CSS3機能を検出し、HTMLタグ内のclassにサポート状況を出力したり、IEにおけるHTML5要素のスタイル設定行うユーティリティライブラリ。&lt;br /&gt;
+HTML5での開発には欠かす事ができないライブラリ。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/blob/master/css/style.css&quot;&gt;CSS&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;HTML5用リセットCSSをベースに、非常に強固なデフォルトスタイルと.clearfixなど便利なツールClassが用意されている。クロスブラウザ対応はIE6にも対応してあり、日本ではまだまだ現実的な対応として求められる箇所なだけに非常に便利。&lt;br /&gt;
+また、プリント用のメディアクエリや、スマートフォン用に使えるメディアクエリの記述もされている&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/blob/master/index.html&quot;&gt;HTML&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;IEコンディショナルコメントを活用したIE用Classの生成を始めとして、HTML5の新要素を含んだ形で、かつ最小限のスケルトンとして提供されている。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/tree/master/js&quot;&gt;JavaScript&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;Google
+CDNが落ちてもローカルからjQueryを呼び出すスニペットを始めに、ユニットテストを行いやすいような設計でJavaScriptのファイル群は用意されている。jQueryの利用を前提にして、プラグインの呼び出しを記述するファイルなどが用意されている。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;パフォーマンス最適化&lt;/p&gt;
+
+    &lt;p&gt;HTML5
+Boilerplateでは、クロスブラウザ対応などはもちろんとして、パフォーマンス最適化を最も重視した構成になっている。&lt;br /&gt;
+JSをドキュメントの最後に配置するという非常に当たり前の事から、.htaccessファイルによる最適化(gzipやファイルのキャッシュ設定など)も提供されており、少し前のバージョンからはAntを利用したビルドスクリプトを使って、ファイルの圧縮、結合、キャッシュバスタの設定、画像ファイルの最適化などを自動(コマンドは使うが)で行えるようにできるようにしている。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;download&quot;&gt;HTML5 Boilerplateの入手方法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://html5boilerplate.com/&quot;&gt;http://html5boilerplate.com/&lt;/a&gt;から最新の安定板(1.0
+RC
+2011/03/11現在)をダウンロードすることができる。まずは、コメントありのファイルをダウンロードして、一通りソースコードを読んでみる事をおすすめする。非常に勉強になる事ばかり。&lt;/p&gt;
+
+&lt;p&gt;つい先日から、&lt;a href=&quot;http://jp.html5boilerplate.com/&quot;&gt;http://jp.html5boilerplate.com/&lt;/a&gt;日本語に翻訳されたバージョン(私が翻訳を行いました。完璧とは言いがたい訳です。誤訳やよりよい翻訳があれば、&lt;a href=&quot;https://github.com/studiomohawk/html5boilerplate-site&quot;&gt;githubにて翻訳プロジェクトをクローン&lt;/a&gt;していますので、フィードバックをお待ちしています）も利用できるようになっている。&lt;/p&gt;
+
+&lt;p&gt;また、&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate&quot;&gt;Github&lt;/a&gt;からでも入手可能なので、Gitを扱い慣れている場合はそちらから。ブランチとしてコメントのある、なしを選べる(masterがコメントあり、strippedがコメントなし)&lt;/p&gt;
+
+&lt;p&gt;他にも15秒でHTML5
+Boilerplateをベースに必要なスターティングポイントを生成してくれるサービス、&lt;a href=&quot;http://initializr.com/&quot;&gt;Initializr&lt;/a&gt;というサイトもある。&lt;br /&gt;
+コメント、JavaScript、jQuery(圧縮するか、否かも)、Modernizrの利用、サーバ側の設定ファイル、Google
+Analyticsの要不要など、カスタマイズすることが可能。&lt;/p&gt;
+
+&lt;h2 id=&quot;buildscript&quot;&gt;ビルドスクリプトの使い方&lt;/h2&gt;
+
+&lt;p&gt;私もAntに詳しくないのでHTML5
+Boilerplateのビルドスクリプトの使い方については、IBMのデベロッパワークにお任せすることに。詳しくは&lt;a href=&quot;http://www.ibm.com/developerworks/jp/web/library/wa-html5boilerplate/#build&quot;&gt;こちら&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;私自身はRakeに慣れてきたので、AntのビルドスクリプトをRakeに置き換えてみようかなと思っている。すでにRakeマスタな人がいたら、ぜひ本家のHTML5
+BoilerplateにPull Requestを送ってくださいませ。&lt;/p&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.youtube.com/watch?v=qyM37XKkmKQ&quot;&gt;Paul Irish on HTML5 Boilerplate @YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://net.tutsplus.com/tutorials/html-css-techniques/the-official-guide-to-html5-boilerplate/&quot;&gt;The Official Guide to HTML5 Boilerplate @Nettuts+&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/jp/web/library/wa-html5boilerplate/&quot;&gt;HTML5 Boilerplate を使用して Web 開発を容易に始める @IBM Developer Works&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.1stwebdesigner.com/design/snippets-html5-boilerplate/&quot;&gt;20 Snippets You should be using from Html5 Boilerplate @1st Web Designer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>コマンドライン</title>
+			<link href="http://css.studiomohawk.com/commandline/2011/02/13/terminal-101/"/>
+			<updated></updated>
+			<id>http://css.studiomohawk.com/commandline/2011/02/13/terminal-101</id>
+			<content type="html">
+				&lt;h2 id=&quot;whatis&quot;&gt;コマンドラインについて&lt;/h2&gt;
+
+&lt;p&gt;Terminal.appは怖い。&lt;br /&gt;
+GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。&lt;br /&gt;
+Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。  &lt;/p&gt;
+
+&lt;p&gt;MacVimをメインのエディタにしてから3ヶ月ほど、年明けから&lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;を使ってブログを作成しはじめた。Rubyを覚えてみようと今年から勉強中。&lt;br /&gt;
+自分自身考えてもいなかったが、それらすべてがターミナルの便利さを教えてくれた。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MacVimでは、もちろんコマンドを実行できるが、コマンドそのものとは関係なく、インサートモードとノーマルモードの切り替えというメンタリティはGUIとCUIのメンタリティと似てる。それに覚えるのに時間はかかるかもしれないが、一旦覚えてしまうともう戻れない中毒性に近い利便性を手に入れる楽しみも覚えられた。&lt;/li&gt;
+  &lt;li&gt;Jekyllはターミナルを使わなければブログの更新すら出来なくなる。基本的なコマンドはJekyllを使ううちに覚えてしまった。  &lt;/li&gt;
+  &lt;li&gt;Rubyはirbで実際にRubyを使って気楽に自分の書いたコードをテストしたりするのにターミナルを利用している。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ソースコードリーディングのテキストとしてお気に入りのHTML5 Boilerplateで、&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/wiki/Build-script&quot;&gt;Build
+Script&lt;/a&gt;が追加され、フロントエンドデベロッパの間でも、自前のオートメーションを作ることが当たり前になってきそうな流れもある。
+そんなタイミングだからこそ、ターミナルを使いこなせる人になろうと、こんな時代に提言したい。&lt;/p&gt;
+
+&lt;p&gt;私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるがきっかけさえつかんでしまえばどうにかなる。ちなみに私はWindowsでは&lt;a href=&quot;http://www.cygwin.com/&quot;&gt;Cygwin&lt;/a&gt;を&lt;a href=&quot;http://sourceforge.net/projects/console/&quot;&gt;Console&lt;/a&gt;から利用している。&lt;/p&gt;
+
+&lt;h2 id=&quot;custom&quot;&gt;まずは見た目からカスタマイズ&lt;/h2&gt;
+
+&lt;p&gt;私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないがそんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。&lt;br /&gt;
+だからこそターミナルにも見た目を要求したい。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://visor.binaryage.com/&quot;&gt;Visor&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;Visorはターミナルをショートカットキーで呼び出すことが出来るTerminal.appのヘルパ。&lt;strong&gt;control+control&lt;/strong&gt;で画面の1/3ほどのターミナル画面がスライドしてくる便利でかつ、おしゃれなツール。&lt;br /&gt;
+Macでは&lt;a href=&quot;http://sites.google.com/site/iterm2home/&quot;&gt;iTerm2&lt;/a&gt;というターミナル互換アプリも人気があるようで、こちらはVisorとは連動できないが、同じようにショートカットキーで呼び出すことができるオプションがある。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://gist.github.com/824504&quot;&gt;.bashrc&lt;/a&gt;(リンク先は私が利用している.bashrcファイルの一部)&lt;/p&gt;
+
+    &lt;p&gt;デフォルトでTerminalを開くと黒い背景に白い文字。あまりにも地味なので私はもう少しだけカラフルにしている。&lt;br /&gt;
+そのついでに&lt;a href=&quot;/tool/2011/01/29/git-version-control/&quot;&gt;Git&lt;/a&gt;をターミナルで使いやすくなるようにブランチ名や変更を知らせてくれるマークもカラーをつけて表示している。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ちょっとカスタマイズしてあげるだけで気持ちよく利用することができる。  &lt;/p&gt;
+
+&lt;h3&gt;Mac OSXでターミナルにgitのブランチ名を表示する方法&lt;/h3&gt;
+
+&lt;p&gt;少し話から外れるがせっかくなのでその方法を紹介しよう。&lt;br /&gt;
+まずはgitのオートコンプリーションを探してみよう。  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;/usr/local/git/contrib/completion/git-completion.bash&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;通常であれば、上記のようなファイルがあるはずだ。もしなければ、&lt;a href=&quot;https://github.com/git/git/tree/master/contrib/completion&quot;&gt;こちら&lt;/a&gt;にファイルがあるので、&lt;code&gt;/usr/local/git/contrib/completion/&lt;/code&gt;というディレクトリに&lt;code&gt;git-completion.bash&lt;/code&gt;という名前で保存してほしい。&lt;/p&gt;
+
+&lt;p&gt;そして次は.bashrc。&lt;br /&gt;
+MacVimを利用している人なら見覚えがある.(ドット)ファイル。.bashrcはTerminalの中で働いているBashの設定ファイル。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/824504&quot;&gt;gist&lt;/a&gt;にも置いてあるが&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# git settings&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /usr/local/git/contrib/completion/git-completion.bash
+&lt;span class=&quot;nv&quot;&gt;GIT_PS1_SHOWDIRTYSTATE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Git用のカスタマイズは上記の部分。こちらだけでも.bashrcファイルの最後の方に追加しておけば設定終了。&lt;br /&gt;
+もし.bashrcファイルが見当たらないようであれば、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;touch ~/.bashrc
+open ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;として、開いたエディタに上記のスニペットを追加すればOK。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;保存したら、上記のコマンドで変更を反映できる。&lt;/p&gt;
+
+&lt;h2 id=&quot;howto&quot;&gt;ターミナルの使い方&lt;/h2&gt;
+
+&lt;p&gt;私自身もまだまだ基本的なコマンドしかソラでは実行できない。必要に応じてコマンドは覚えていけばいいので、自分のペースで続けていってほしい。&lt;br /&gt;
+まずはターミナルで使える便利なショートカットキーを、そして実際にいくつかコマンドを見ていこう。&lt;/p&gt;
+
+&lt;h3&gt;ショートカットキー&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;control + A&lt;/strong&gt; / 現在のラインの一番始めに移動&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;control + H&lt;/strong&gt; / 現在のラインの一番最後に移動&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;control + U&lt;/strong&gt; / 
+現在位置より手前のラインを削除。ラインの一番最後の場合はラインを削除になる。間違ってオートコンプリートしてしまったときや癖で上カーセルを叩いてしまった場合に便利&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;control + C&lt;/strong&gt; / 現在動作しているプロセスを終了する&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;command + T&lt;/strong&gt; / 新しくタブを作る。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tab&lt;/strong&gt; / 
+ファイル名やディレクトリ名をオートコンプリートしてくれる。先ほど設定したgitのオートコンプリートも同じキーでOK&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;上カーソル&lt;/strong&gt; / ターミナルのヒストリを呼び出してくれる。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ほかにもまだまだショートカットキーはあるが、私が普段使い出来るショートカットはこんな感じだ。&lt;/p&gt;
+
+&lt;h3&gt;コマンド&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;cd&lt;/strong&gt; &lt;/p&gt;
+
+    &lt;p&gt;Change Directoryの略。&lt;code&gt;cd DIR_NAME&lt;/code&gt;のように、移動したいディレクトリ名を入力する。&lt;br /&gt;
+&lt;code&gt;Tab&lt;/code&gt;を使ってオートコンプリートできるし。&lt;code&gt;cd DIR_NAME/CHILD_DIR_NAME&lt;/code&gt;というようにさらに深い階層へもいける、/の後も数文字タイプしたらきちんとオートコンプリートしてくれる。&lt;br /&gt;
+&lt;code&gt;cd ..&lt;/code&gt;とすれば親ディレクトリに移動、&lt;code&gt;cd ~&lt;/code&gt;とすればルートディレクトリに移動となる。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;pwd&lt;/strong&gt; / 現在のディレクトリを表示してくれる。ふと迷子になりがちなので便利&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;ls&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;ディレクトリ内のファイル、ディレクトリを表示するコマンド。&lt;br /&gt;
+&lt;code&gt;ls DIR_NAME&lt;/code&gt;とすれば、DIR_NAMEの中のファイル、ディレクトリを表示。&lt;br /&gt;
+&lt;code&gt;ls -l&lt;/code&gt;とすると、ファイル、ディレクトリの詳細の情報つきでリスト表示。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;touch&lt;/strong&gt; / ファイルを作成するコマンド。&lt;code&gt;touch style.css&lt;/code&gt;とすれば現在のディレクトリにstyle.cssを生成してくれる。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;open&lt;/strong&gt; / こちらはファイルやディレクトリを関連づけしてあるアプリで開いてくれるコマンド。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;mkdir&lt;/strong&gt; / ディレクトリを生成するコマンド。&lt;code&gt;mkdir DIR_NAME&lt;/code&gt;でDIR_NAMEというディレクトリを作成できる。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;まだまだたくさんのコマンドがあるが、私が安心して利用できる基本コマンドはこれくらいだ。ファイルをコピーしたり、削除したりするコマンドは不安が残るので少し慣れたら使い始めるといいだろう。&lt;br /&gt;
+とりあえずのところは、&lt;code&gt;open DIR_NAME&lt;/code&gt;としてFinderを立ち上げてコピーや削除をすれば問題ない。&lt;/p&gt;
+
+&lt;h2 id=&quot;package&quot;&gt;パッケージマネジャ&lt;/h2&gt;
+
+&lt;p&gt;Bashだけでももちろん協力なツールではあるがせっかくだからもっとたくさん機能を追加してみたい。&lt;br /&gt;
+RubyやPython、Javaなどコマンドラインでも使える強力なツールがあるがこれらのツールを管理するのはとても大変。そのために&lt;strong&gt;パッケージマネジャ&lt;/strong&gt;が必要になってくる。&lt;/p&gt;
+
+&lt;p&gt;Macにはデフォルトで使えるパッケージマネジャはインストールされていない。MacPortやFink、そして今回紹介するHomebrewがMacではデファクトとされている。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt;はシンプルで強力な新しい世代のパッケージマネジャ。非常に簡単にインストールできるし利用も簡単なので、初心者にはもってこいのパッケージマネジャ。&lt;br /&gt;
+私はHomebrewでgitをインストールし直した。こちらのほうがアップデートが簡単にできるということで。&lt;/p&gt;
+
+&lt;h3&gt;Homebrewのインストール&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://developer.apple.com/technologies/xcode.html&quot;&gt;xcodeをインストール&lt;/a&gt;、Macで開発するのに当たって絶対に必要になってくるのでxcodeをインストール。Homebrewでも使う。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;ruby -e &quot;$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)&quot;&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;以上でインストールが完了する。&lt;br /&gt;
+早速インストールが終わっているか確認してみよう。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;brew --version&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;0.7.1らしいバージョンナンバが表示されれば問題ない。&lt;br /&gt;
+それでは早速ツールをインストールしてみよう。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;brew install curl&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;curlはさまざまなプロトコルを用いてデータを転送するライブラリ。(by &lt;a href=&quot;http://ja.wikipedia.org/wiki/CURL&quot;&gt;Wikipedia
+cURL&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;brew search&lt;/code&gt;とすればインストールできるツールの一覧を表示。&lt;code&gt;brew list&lt;/code&gt;とするとインストールされているツールの一覧を表示。&lt;/p&gt;
+
+&lt;p&gt;英語ではあるがbrewのコマンドは&lt;a href=&quot;https://github.com/mxcl/homebrew/wiki/The-brew-command&quot;&gt;こちら&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;ターミナルの世界へようこそ&lt;/h2&gt;
+
+&lt;p&gt;ここまでできたらすっかりコマンド使いっぽく見える。コマンドラインになれてきたら次のステップはオートメーション。&lt;br /&gt;
+私はRubyのRakeを使っていろいろなタスクを自動化しはじめている。&lt;br /&gt;
+興味があれば、まずはHTML5 Boilerplateの&lt;a href=&quot;https://github.com/paulirish/html5-boilerplate/wiki/Build-script&quot;&gt;Build Script&lt;/a&gt;について調べてみるといいだろう。&lt;br /&gt;
+現時点ではHTMLを圧縮したり、CSSをコンバインして圧縮したり、Jpeg、PNGのファイルサイズを最適化したりと実に様々なフロントエンドなタスクを自動化している。HTML5 Boilerplateではantというビルドツールを活用している。  &lt;/p&gt;
+
+&lt;p&gt;Rubyでは&lt;a href=&quot;https://github.com/flyerhzm/css_sprite&quot;&gt;CSS Spriteを自動化&lt;/a&gt;したりすることもできるようなのであの30分はかかりそうな面倒なspriteも自動で行うことができるわけだ。&lt;/p&gt;
+
+&lt;p&gt;どこかの本で読んだことの受け売りだが60分かかるタスクがあるとしたら、59分かけてそのタスクを行うスクリプトを書いて、1分で実行する。これからのウェブデザイン/フロントエンドデベロッパにはそんな心構えが必要になってくるだろう。&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>Git バージョンコントロール</title>
+			<link href="http://css.studiomohawk.com/git/2011/01/29/git-version-control/"/>
+			<updated>2011-12-03 01:40:50 +0900</updated>
+			<id>http://css.studiomohawk.com/git/2011/01/29/git-version-control</id>
+			<content type="html">
+				&lt;h2 id=&quot;whatis&quot;&gt;バージョンコントロールについて&lt;/h2&gt;
+
+&lt;p&gt;バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;作業用フォルダがstyle.bk20110128なんて名前であふれている&lt;/li&gt;
+  &lt;li&gt;なんでこの変更したのか、覚えていない。もう3ヶ月も前の話だし&lt;/li&gt;
+  &lt;li&gt;誰が最新のファイル持ってるかわからないまま、作業を開始、もう1度やり直し&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;HTMLであろうと、CSSであろうと、JSであろうと、何であろうとソースコードを人間は必ずどこかで例のような目にあうのだ。    &lt;/p&gt;
+
+&lt;p&gt;バックアップも、更新履歴も、システムでやればいいじゃない。を解決してくれるのが&lt;em&gt;Git&lt;/em&gt;。&lt;br /&gt;
+セットアップも簡単で、利用するのも簡単。
+あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。&lt;/p&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Gitのインストール&lt;/h2&gt;
+
+&lt;p&gt;※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://code.google.com/p/git-osx-installer/downloads/list?can=3&quot;&gt;OSX Installer for Git&lt;/a&gt;から、自分のOSバージョンにあわせてdmgをダウンロード。&lt;a href=&quot;http://code.google.com/p/msysgit/downloads/list?can=3&quot;&gt;Winはこちら&lt;/a&gt;&lt;br /&gt;
+あとはインストーラにお任せ。&lt;/p&gt;
+
+&lt;p&gt;私は&lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt;を使って、Gitをインストールした。&lt;/p&gt;
+
+&lt;p&gt;Gitはアプリケーションフォルダには&lt;em&gt;入らない&lt;/em&gt;系統のアプリ。Terminalで使える。&lt;br /&gt;
+&lt;em&gt;Terminal&lt;/em&gt;(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。  &lt;/p&gt;
+
+&lt;p&gt;では、&lt;code&gt;git --version&lt;/code&gt;&lt;br /&gt;
+をTerminalへコピペしてみてほしい。ちゃんとインストールできていれば、&lt;br /&gt;
+&lt;code&gt;git version 1.7.1.1&lt;/code&gt;&lt;br /&gt;
+というような表示がされるだろう。&lt;/p&gt;
+
+&lt;p&gt;で、コマンドラインでしか使えないの？ なんてことはないので、&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.syntevo.com/smartgit/index.html&quot;&gt;SmartGit&lt;/a&gt;(個人利用はフリー、Winにも対応)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.git-tower.com/&quot;&gt;Tower&lt;/a&gt;(betaテスト中フリー、Macのみ)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://code.google.com/p/tortoisegit/&quot;&gt;TortoiseGit&lt;/a&gt;(フリー、Winのみ)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちら、GitをGUIで利用できるようにするアプリ達。私はTowerをテストしつつ、Macでも、Winでも使えるSmartGitをメインで利用している。どちらも日本語版はないが、基本の用語さえ覚えてしまえば問題ないだろう。
+GUIアプリをインストールしても、もう少しTerminalは開いたままに。&lt;/p&gt;
+
+&lt;h2 id=&quot;term&quot;&gt;Gitの基本用語&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;レポジトリ(Repository)&lt;/em&gt; - 更新履歴などを管理するバージョンコントロールの要になる保管庫。&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;コミット(Commit)&lt;/em&gt; - エディタでいうならば保存に近いコミット。Gitに対して変更が完了したよ、と伝えるコマンド。コミットにはメッセージが必要で、どこをどうして変更したのか伝えることで履歴管理が可能になる&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;クローン(Clone)&lt;/em&gt; - Gitでは0からレポジトリを作成するのも簡単だが、既存のレポジトリをクローンすることができる。多人数で開発をする際は非常に便利&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;ブランチ(Branch)&lt;/em&gt; - メインの開発からの分岐を作成するブランチ。&lt;q&gt;“Git のブランチモデルは、Git の機能の中でもっともすばらしいものだという人もいるほど”&lt;/q&gt; &lt;cite&gt;&lt;a href=&quot;http://progit.org/book/ja/ch3-0.html&quot;&gt;Pro Git&lt;/a&gt;&lt;/cite&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;todo&quot;&gt;Gitをインストールした後にやるべきこと&lt;/h2&gt;
+
+&lt;p&gt;Terminalはまだ開いたままだろうか？&lt;br /&gt;
+準備が整ったら以下のコマンドを、必要な部分は修正してから、Terminalにて実行。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;まずは自己紹介をしよう&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;名前&amp;quot;&lt;/span&gt;
+git config --global user.email メールアドレス@example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;標準のエディタを設定&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*Terminalから利用する場合にコミットメッセージを書くのに使うエディタ。たいていの場合Terminalのデフォルト、viかvimが使われる。それ以外のエディタが好みの場合は設定しよう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global core.editor emacs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ホワイトスペースを無視する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Gitではホワイトスペース1つを追加してもファイルを変更したと認識される(Rubyではホワイトスペースは大事)が、大抵の場合、ホワイトスペース1つでコミットする、ということもないだろう。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global apply.whitespace nowarn
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;すべてのGitレポジトリに無視ファイルを適応&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Macなら.DS_Store(普段は見えないけれどGitは認識する)など、OSが自動で生成するファイルとか、毎回.gitignore(無視リストファイル)をレポジトリに追加したり、その.gitignoreをコミットしたりするのは面倒。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global core.excludesfile ~/.gitignore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;このコマンドのままだとホームディレクトリに.gitignoreがあるから–globalで読んでねという意味になる。&lt;br /&gt;
+私はこのファイルを&lt;a href=&quot;http://db.tt/jxIW2Rp&quot;&gt;Dropbox&lt;/a&gt;を使ってすべての環境で同じファイルを見るようにしている。&lt;/p&gt;
+
+&lt;p&gt;Dropboxにdotというディレクトリを作成しその下に.gitignoreファイルを作成してる&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global core.excludesfile /Users/&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;ユーザディレクトリ&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;/Dropbox/dot/.gitignore
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Macならこんな具合。&lt;/p&gt;
+
+&lt;p&gt;.gitignoreファイルの文法は&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# &amp;#39;#&amp;#39; から始まる行はコメント&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# foo.txtというファイル名は無視&lt;/span&gt;
+foo.txt
+&lt;span class=&quot;c&quot;&gt;# .htmlで終わるファイルを無視。&amp;#39;\*&amp;#39;はワイルドカード&lt;/span&gt;
+*.html
+&lt;span class=&quot;c&quot;&gt;# &amp;#39;!&amp;#39;は例外。上の例から引き続きで、.htmlで終わるファイルは無視するけどfoo.htmlは例外。&lt;/span&gt;
+!foo.html
+
+&lt;span class=&quot;c&quot;&gt;# Macユーザなら、下記で基本はOK。参考: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore&lt;/span&gt;
+
+.DS_Store?
+Icon?
+&lt;span class=&quot;c&quot;&gt;# Thumbnails&lt;/span&gt;
+._*
+&lt;span class=&quot;c&quot;&gt;# Files that might appear on external disk&lt;/span&gt;
+.Spotlight-V100
+.Trashes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;workflow&quot;&gt;Gitの基本的なワークフロー&lt;/h2&gt;
+
+&lt;p&gt;それでは先ほど紹介した用語と、ほかのいくつかのGitのコマンドを交えながらGitの基本的なワークフローを説明しよう。&lt;/p&gt;
+
+&lt;p&gt;その前に少しTerminalで使えるコマンドを少々。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;cd&lt;/em&gt; - ”Change Directly”。ディレクトリを変更するコマンド。&lt;code&gt;cd ../&lt;/code&gt;とすれば、親ディレクトリにも移動できる、HTMLのリンクと同じ。&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;pwd&lt;/em&gt; - 現在のディレクトリを教えてくれる。Macだけかも&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;ls&lt;/em&gt; - 現在のディレクトリに含まれるファイルをリストアップしてくれる、Winだと&lt;code&gt;ls -a&lt;/code&gt;としないとだめ？&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;touch&lt;/em&gt; - ファイルを作成できる。&lt;code&gt;touch style.css&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ファイルの移動や、削除ももちろんコマンドでできるが。慣れないうちは上記の4つで十分だ。私もコマンドになれてきたとはいえ、使うBashコマンドの7割は上記の4つという程度。&lt;/p&gt;
+
+&lt;p&gt;それでは、Gitの世界へようこそ。最初は面倒だなと思うこともあるけれど、これから幾多の困難をともにする強力なパートナとなってくれるだろう。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;既存のレポジトリをクローンしない場合、&lt;code&gt;git init&lt;/code&gt;はgitのスタートを告げるコマンド。&lt;br /&gt;
+作業ディレクトリに対して.gitディレクトリを作成する。  &lt;/p&gt;
+
+&lt;p&gt;Macユーザ恐れるなかれ、.gitディレクトリ、だけではないが.(ドット)から始まるファイル、ディレクトリは普通はFinderには見えない隠し要素になる。&lt;br /&gt;
+Terminalで&lt;code&gt;ls&lt;/code&gt;とすれば、きちんと存在が確認できる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;または上記のコマンドを叩くと見えるようになる。&lt;br /&gt;
+おお、うざい。と思ったら、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;defaults write com.apple.finder AppleShowAllFiles FALSE
+killall Finder
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;で元に戻せる。&lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;TotalFinder&lt;/a&gt;というFinderにタブを追加できるアプリケーションなら、GUIでOn/Offできる機能もついてくるのでおすすめ($15)(ちょっと重いけど、便利)。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git add&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;.gitが作成された作業ディレクトリに必要なファイルを作成/コピーしてきたら、&lt;code&gt;git add&lt;/code&gt;コマンドで、ファイルをレポジトリに追加する。&lt;br /&gt;
+私は大概&lt;code&gt;git add .&lt;/code&gt;としてしまう。最後の.(ドット)は、まだレポジトリに追加されていないファイル全部、という意味だ。&lt;br /&gt;
+もちろん、&lt;code&gt;git add ファイル名&lt;/code&gt;としてファイルを1つづつ追加することも可能。&lt;/p&gt;
+
+&lt;p&gt;※readme.mdというテキストファイルを追加して、そこにプロジェクトの概要などを書き留めておくと、便利だ。.mdはMarkdownというライトウェイトマークアップ言語の拡張子。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;初めてのコミット。まずはプロジェクトの開始を伝えるコミットからスタート。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git commit -a -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Initial Commit&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;-aフラグは、すべての変更に対してコミットするという意味。便利だが、ある理由で1ファイルを修正したのか、そのある理由が複数ファイルに渡る修正なのか、それとも？となってしまうので、コミットの単位については明確な理由がかける範囲で。&lt;br /&gt;
+-mフラグは、エディタを開かず、その場でコミットメッセージを書けるようにする。その後’(シングルクォート)か”(ダブルクォート)で囲んだ部分がメッセージになる。日本語でももちろん問題ない。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;それではgitの現状を確認してみよう。&lt;code&gt;git status&lt;/code&gt;では、.gitディレクトリに含めれるファイルすべてを密かに監視している。&lt;br /&gt;
+ファイルは追加(add)されているか？ コミット済みなのか？　コミットから変更されたか？ 前回のコミットから変更されたか？&lt;br /&gt;
+git statusはそれらの状態を教えてくれる便利なコマンドだ。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git log&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ファイルに変更を加え、いくつかのコミットを行った後、しばらくすると変更点についてはすっかり忘れている。&lt;br /&gt;
+そんな時はコミットメッセージを読めばわかる。(わかるようにコミットメッセージを書くことが大事)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git log --graph --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とフラグを渡しつつ、&lt;code&gt;git log&lt;/code&gt;とすると下記のようにコミット1回につき1行で、表示される。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;7366587c589fe6ee60aeff553e899dc13086d7ec About Responsive Web Design is finished
+28b07e6c8fa6299c9c6b3321a339b1c7881e2fe4 erase meta since I use .htaccess
+90187a85261b208abbb0c52511fcf675ebe4739d fix css little bit
+5035c4eabe855efbac15596663190a6126eb0880 Read me was old
+4600e678e757950e5d6a7c7fbfc9a6420333e1c2 Ready to deploy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ここでは残念ながら地味な表示だが、Terminal内では、デキる感じがしないでもないように、黒背景にグリーンが映えるマトリックスな世界を繰り広げられる(Terminalの設定による)。&lt;br /&gt;
+&lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;pimping out git log&lt;/a&gt;で紹介されていた&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git config --global alias.lg &lt;span class=&quot;s2&quot;&gt;&amp;quot;log --graph --pretty=format:&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39; --abbrev-commit --date=relative&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、git logのデフォルトで1行、色つきフォーマットでログを見ることが可能&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git branch&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Gitの真打ち、branch。ブランチは分岐を表示・作成するコマンド。  &lt;/p&gt;
+
+&lt;p&gt;コミットがすべて完了しているmaster(デフォルト)で、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git branch newfeature
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とすると、masterをベースにnewfeatureというブランチが作成される。  &lt;/p&gt;
+
+&lt;p&gt;私は現状、以下のようにブランチモデルを作っている。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;master(デフォルト) = 現時点で本番環境を管理するブランチ。ここへのコミットは少ない。gitnのtag機能を使ってバージョンナンバを持っている。&lt;/li&gt;
+  &lt;li&gt;develop = 開発バージョン。基本的にすべての作業はこのブランチをメインして行う。ここへのコミットは非常に多い。&lt;/li&gt;
+  &lt;li&gt;feature = developとの違いは、開発の中でも特に新しいデザインパターン用のコーディングなどを行う。&lt;/li&gt;
+  &lt;li&gt;fix = 文字通り修正用のブランチ。修正が完了次第コミットし、必要に応じてmasterまたはdevelopとマージする。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;開発の規模感にもよるが、HTML、CSS、JavaScriptをメインで担当する私にとっては上記のブランチでまかなえる。&lt;br /&gt;
+上記のブランチモデルは、&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt;を参考に、よりシンプルにしたバージョン。
+このブランチの詳しい使い方については、また別の記事としたい。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git merge&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;branchにはmergeは欠かせない。表裏一体の存在といえる。branchを作成し、その場で開発を続けていても、いつかはmasterへマージする日がやってくる。&lt;br /&gt;
+マージする際、衝突があればgitはそれを解決しないとマージできないと警告を発する。SmartGitを利用していれば、グラフィカルな環境で衝突している部分を表示してくれる。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git merge&lt;/code&gt;をする際には、まず現在いるブランチをコミットして、から&lt;code&gt;git checkout master&lt;/code&gt;というように、マージさせたいブランチに切り替える。&lt;br /&gt;
+自分が今いるブランチがどこなのか、ほかにどんなブランチがあるかを確認するには、&lt;code&gt;git branch&lt;/code&gt;とすれば&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;*master
+newfeature
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というように表示してくれる。&lt;br /&gt;
+ちなみに、Terminal用プログラムBashの設定で&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;parse_git_branch &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git-symbolic-ref HEAD 2&amp;gt; /dev/null&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;(&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;#refs/heads/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;)&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;RED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;31m\]&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;YELLOW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;33m\]&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;GREEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\[\033[0;32m\]&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ &amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;上記を追加すると、コマンドプロンプト(コマンドを叩く左側に出る文字列)に、現在のブランチを表示してくれる。
+USERディレクトリ下に.bashrcという名前で上記を追加して保存。既存でなければ、ファイル名を.bashrcとし保存すればOK。&lt;/p&gt;
+
+&lt;p&gt;では無事にmasterへブランチを切り替えられただろうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git merge myfeature&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;これで、myfeatureブランチはmasterブランチへマージが完了する。&lt;/p&gt;
+
+&lt;h2 id=&quot;tips&quot;&gt;GitのTips &amp;amp; Tricks&lt;/h2&gt;
+
+&lt;h3&gt;git alias&lt;/h3&gt;
+
+&lt;p&gt;コマンドラインの便利さはコマンドを覚えてしまえば、色々なことがコマンド1つ、あるいは2つでできてしまう、ということにつきる。&lt;br /&gt;
+gitもGUIツールの利便性は否定しないが、コマンドラインから利用することにしている私。&lt;br /&gt;
+少しでもタイプする文字を減らしたいので、そんな際に便利なのが&lt;code&gt;git alias&lt;/code&gt;。&lt;br /&gt;
+あらかじめ登録したコマンドをショートカットのように呼び出す事ができる機能だ。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git config -e --global&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;とすると、システムワイドで利用するgitの設定ファイル.gitconfigファイルをエディタで開ける。&lt;br /&gt;
+すでに自分のメールと名前は設定済みのはずなので、ファイルに追記すれば、aliasを利用できる。&lt;/p&gt;
+
+&lt;p&gt;6行目までは、単純によく使うコマンドを2文字に省略しただけで、&lt;br /&gt;
+&lt;code&gt;lg&lt;/code&gt;は&lt;a href=&quot;http://www.jukie.net/bart/blog/pimping-out-git-log&quot;&gt;この記事&lt;/a&gt;から拝借した。&lt;code&gt;git log&lt;/code&gt;を少しセクシーにしてくれる。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;fix&lt;/code&gt;は私があまりにもよく繰り返すコミットしたあとでそのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う&lt;code&gt;--amend&lt;/code&gt;オプションをaliasにした。&lt;br /&gt;
+コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、&lt;code&gt;git add
+FILE&lt;/code&gt;と追加して、&lt;code&gt;git fix&lt;/code&gt;とすると、前のコミットメッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;unstage&lt;/code&gt;は&lt;code&gt;add&lt;/code&gt;の反対でgitのstageに追加したくないファイルを削除してくれる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;st&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; status
+&lt;span class=&quot;nv&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit
+&lt;span class=&quot;nv&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; branch
+&lt;span class=&quot;nv&quot;&gt;co&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; checkout
+&lt;span class=&quot;nv&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff
+&lt;span class=&quot;nv&quot;&gt;dc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; diff --cached
+&lt;span class=&quot;nv&quot;&gt;lg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; log --graph --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s1&quot;&gt;&amp;#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;#39;&lt;/span&gt; --abbrev-commit --date&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;relative
+&lt;span class=&quot;nv&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; commit --amend -C HEAD
+&lt;span class=&quot;nv&quot;&gt;unstage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; reset HEAD
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;git diff&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;フラグなしに&lt;code&gt;git diff&lt;/code&gt;とした場合、最後のcommitと現在の状態を比較する&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git diff -- &amp;lt;filename&amp;gt;&lt;/code&gt;とすると、1ファイルのみを比較できる&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git diff --cached&lt;/code&gt;ではステージングにあるファイル群とHEAD(*)を比較する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;* HEADは現在のブランチと同義だと思っていていいそうだ。(&lt;a href=&quot;http://stackoverflow.com/questions/2304087/what-is-git-head-exactly&quot;&gt;What is git head, exactly? - Stack Overflow&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。&lt;br /&gt;
+バージョンコントロールを初めたばかりならなおさらだろう。
+そんな時にも便利なのが&lt;code&gt;git diff&lt;/code&gt;だ。&lt;/p&gt;
+
+&lt;p&gt;もちろん、チームでの作業の場合、マスタをCommitする際に、他の人が作業した部分をレビューするのには欠かす事ができないコマンド。&lt;/p&gt;
+
+&lt;h2 id=&quot;github&quot;&gt;Githubの使い方&lt;/h2&gt;
+
+&lt;h3&gt;fork&lt;/h3&gt;
+
+&lt;p&gt;forkはGithub内で公開されているレポジトリを自分のレポジトリとしてコピーしてくる事を指す。&lt;br /&gt;
+利用したいレポジトリを見つけたら、forkボタンをクリックすれば自分のレポジトリにコピーが完成。この時点でどんな変更を行おうとそれは自分のレポジトリ内だけで完結する。&lt;br /&gt;
+その変更をオリジナルにも反映するべきという場合にはPull
+Requestをすることでオリジナルレポジトリの所有者に変更を伝える事ができる。  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git clone git@github.com:ユーザ名/レポジトリ名.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;forkしたレポジトリをローカル環境にclone。&lt;br /&gt;
+ちなみにコマンドラインで上記を実行する際は自分がどのディレクトリにいるのか確認しておこう。&lt;br /&gt;
+&lt;code&gt;pwd&lt;/code&gt;で自分の居場所を教えてくれる。&lt;br /&gt;
+レポジトリ名でディレクトリが生成されるので、
+ついでにremoteの設定をしておこう。この設定をしておけばオリジナルレポジトリで変更があった際にその変更をfetchできる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; レポジトリ名 &lt;span class=&quot;c&quot;&gt;# まずはそのディレクトリに移動&lt;/span&gt;
+git remote add upstream オリジナルのレポジトリのgitパス &lt;span class=&quot;c&quot;&gt;#パスはgithubのレポジトリのページにあるのでコピー&lt;/span&gt;
+git fetch upstream &lt;span class=&quot;c&quot;&gt;# 変更をfetch&lt;/span&gt;
+git merge upstream/master &lt;span class=&quot;c&quot;&gt;# 変更を自分のブランチにmergeする&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;helper&quot;&gt;ヘルパスクリプト&lt;/h2&gt;
+
+&lt;h3&gt;Git Extras&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/visionmedia/git-extras&quot;&gt;visionmedia/git-extras&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Git ExtrasはGitに便利コマンドを追加するスクリプト集。  &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git commits-since yesterday&lt;/code&gt; で昨日からのコミットだけを見る事ができたり、&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git delete-submodule lib/foo&lt;/code&gt; でlib/fooのsubmoduleを削除したり、&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git-touch [filename]&lt;/code&gt; でfilenameを作成して、&lt;code&gt;git add&lt;/code&gt;したり、&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git undo&lt;/code&gt; で最後のコミットを削除したりする。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;インストールは簡単。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;curl https://raw.github.com/visionmedia/git-extras/master/bin/git-extras | &lt;span class=&quot;nv&quot;&gt;INSTALL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;y sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;紹介した以外にも沢山のコマンドが追加されるので入れておいても損はしないと思う。&lt;/p&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://progit.org/book/ja/&quot;&gt;Pro Git&lt;/a&gt; - オンラインでなら無料で日本語訳されたPro Gitを読むことができる。まだ私自身すべてを読み終えたわけではないが、かなり勉強になる&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://help.github.com/git-cheat-sheets/&quot;&gt;Git cheat sheets (github)&lt;/a&gt; - Githubにあるgitのチートシート&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt; - ブランチモデルの実例をコマンドともに解説している&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kernel.org/pub/software/scm/git/docs/&quot;&gt;git(1) Manual Page&lt;/a&gt; - gitのマニュアルページ。コマンドのフラグなどはこちら。git helpからコマンドでも参照できる&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www8.atwiki.jp/git_jp/pub/git-manual-jp/Documentation/chunked/index.html&quot;&gt;Git ユーザマニュアル (バージョン 1.5.3 以降用)&lt;/a&gt; - 上記リンクの日本語版&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.alistapart.com/articles/get-started-with-git/&quot;&gt;Get Started with Git (A List Apart)&lt;/a&gt; - A List ApartにてAl Shaw氏による記事&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gitcasts.com/&quot;&gt;GitCasts&lt;/a&gt; - Gitのスクリーンキャスト。英語だが、グラフィカルな環境でしか覚えられない人には最適&lt;/li&gt;
+&lt;/ul&gt;
+
+				&lt;hr /&gt;
+				&lt;h5&gt;Elsewhere&lt;/h5&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;http://twitter.com/#!/cssradar&quot; rel=&quot;me&quot; title=&quot;cssradar@twitter&quot;&gt;cssradar@twitter&lt;/a&gt; / 1日5件以内のウェブデザイン情報をつぶやきます&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;http://tinyletter.com/cssradar&quot; rel=&quot;me&quot; title=&quot;Newsletter&quot;&gt;CSS Radar Newsletter&lt;/a&gt; / CSS Radarニュースレター。Twitterまとめ + α&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;https://plus.google.com/b/109704095110060909968/&quot; rel=&quot;me&quot; title=&quot;Google+ Page&quot;&gt;Google +&lt;/a&gt; / どんな風に使っていくかアイデア募集中&lt;/li&gt;
+				&lt;/ul&gt;
+			</content>
+		</entry>
+	
+		<entry>
+			<title>レスポンシブウェブデザイン</title>
+			<link href="http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design/"/>
+			<updated>2011-11-19 13:07:17 +0900</updated>
+			<id>http://css.studiomohawk.com/css/2011/01/24/about-responsive-web-design</id>
+			<content type="html">
+				&lt;h2 id=&quot;whatis&quot;&gt;レスポンシブウェブデザインとは&lt;/h2&gt;
+
+&lt;p&gt;いまこの記事を読んでいるモニタのサイズは何インチだろうか？&lt;br /&gt;
+iPhone、アンドロイドOS搭載スマートフォン、iPad、ネットブック、ノートPC、デスクトップPCと数年前なら思いもよらなかったモニタ/スクリーンサイズでユーザはウェブサイトを閲覧し始めている。
+今後もさらに解像度が異なる環境が増えていくことは間違いない。&lt;/p&gt;
+
+&lt;p&gt;ではそのサイズのモニタごとに、スクリーンごとにデザインを作り、HTML/CSSを書き足していくのか？&lt;br /&gt;
+その疑問への1つの回答がレスポンシブウェブデザイン(Responsive Web Design)。&lt;br /&gt;
+多くの場合、CSS3で利用が可能になる予定のMedia Queriesを活用して、モニタ/スクリーンのサイズに合わせて最適なデザインを供給するデザイン/コーディング手法がレスポンシブウェブデザインと呼ばれている。&lt;/p&gt;
+
+&lt;h2 id=&quot;ex&quot;&gt;レスポンシブウェブデザインの例&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://colly.com/&quot;&gt;Simon Collison&lt;/a&gt; / Simon Collisonはレスポンシブウェブデザインをいち早く導入したウェブデザイナ&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.informationarchitects.jp/en/&quot;&gt;Information Architects&lt;/a&gt; / WordPressを使ってレスポンシブデザインを実現している&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://thinkvitamin.com/&quot;&gt;Think Vitamin&lt;/a&gt; / こちらも最近のリニューアルからレスポンシブウェブデザインを導入&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bostonglobe.com/&quot;&gt;The Boston Globe&lt;/a&gt; / メジャーな新聞社のサイト。ここまで大きな規模は初&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://css-tricks.com/&quot;&gt;CSS-Tricks&lt;/a&gt; / レスポンシブウェブデザイン + CSS3のアニメーションを組み込んだ意欲作&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;whatisnot&quot;&gt;レスポンシブウェブデザインが解決しないこと&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;レスポンシブウェブデザインは、特にハンドヘルドデバイス用に最適な解決方法と考えられるが、すべての問題に対する解決を提示できるわけではない。&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A List Apartの記事、&lt;a href=&quot;http://www.alistapart.com/articles/responsive-web-design/&quot;&gt;Responsive Web Design&lt;/a&gt;にてEthan Marcotteは、次のように書いている。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;That’s not to say there isn’t a business case for separate sites geared toward specific devices; 
+for example, if the user goals for your mobile site are more limited in scope than its desktop equivalent, then serving different content to each might be the best approach.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ユーザのゴールに合わせて、ハンドヘルドデバイス用にコンテンツを変更することがベストの解決方法である場合もあるということだ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://membership.thinkvitamin.com/library/responsive-web-design/mobile/context&quot;&gt;Responsive Web Design: Mobile: Context(Think Vitamin)&lt;/a&gt;にてNick Pettitも、レスポンシブウェブデザインを採用するかについて、&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;スピード&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ハンドヘルドデバイスはWIFIで接続することもあるが、多くの場合は3G回線で接続する。すでに多くのユーザが感じているように、iPhone4のSafariがいくら早くなっても、デスクトップのブラウザのスピードには勝てない。JavaScriptやCSSを無意味にハンドヘルドデバイスでも読み込むことはスピードを犠牲にすることになる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;スクリーンサイズ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;言わずもがな、ハンドヘルドデバイスのスクリーンサイズは決して大きくない。&lt;code&gt;display: none&lt;/code&gt;が解決してくれる問題かもしれないが、実際には難しい場合もある。例えば、レストランの情報をデスクトップからアクセスする場合と、ハンドヘルドデバイスからアクセスする場合とでは、提供すべくコンテンツが異なる。そして画像のサイズについて、iPhone4など解像度の高いスクリーンを持つデバイスも現れはじめており、レスポンシブウェブデザインだけでは解決できない問題もある。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;場所&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ハンドヘルドデバイスは持ち運ぶため存在する。スクリーンサイズの差異による問題点と同じく、デスクトップと、ハンドヘルドデバイスではユーザが求めているコンテンツそのものが異なる場合も多い。デスクトップではほとんど役目を果たすことがないGeolocationも、ハンドヘルドには重要になってくる。&lt;/p&gt;
+
+&lt;p&gt;というような観点で検討するべきだと話している。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://5by5.tv/bigwebshow/6&quot;&gt;EPISODE #6: MOBILE FIRST (The Big Web Show)&lt;/a&gt;では、Luke Wroblewskiは「モバイルからまずデザインを始める」という提案をしている。&lt;br /&gt;
+こちらも非常に興味深い。現時点では通常デスクトップ用のデザインからスタートし、その後にハンドヘルドデバイス用に最適化していくのが通常のフローと言えるが、Lukeはモバイルデバイス用のデザインを先に行う事でモバイルで提供すべきサービスの根幹に集中することができ、デザインだけではなく、UIやサイト構造、そしてインタラクションもシンプルにすることができると話している。&lt;br /&gt;
+ミニマムなスタート地点からデスクトップ用デザインなど大きなモニタ/スクリーン、マウスやキーボードなどに対応するデザインを作ることで、すべてのユーザに対して最適なデザインを提供できるという考え方だ。&lt;/p&gt;
+
+&lt;h2 id=&quot;mediaqueries&quot;&gt;Media Queries&lt;/h2&gt;
+
+&lt;p&gt;レスポンシブデザインでは多くの場合、CSS3でサポートされる予定のMedia Queriesを活用しサイズの異なるモニタ/スクリーンに対し最適なデザインを提供する。&lt;br /&gt;
+Media Queriesについては、&lt;a href=&quot;http://hardboiledwebdesign.com/&quot;&gt;Hardboiled Web Design&lt;/a&gt;の著者であるAndy Clarkの記事&lt;a href=&quot;http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries&quot;&gt;Hardboiled CSS3 Media Queries&lt;/a&gt;で実例を見る事ができる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* iPhone 3 (横向き) ----------- */&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;screen&lt;/span&gt; 
+	&lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;min-width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;321px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;/* ここにスタイルルール */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;CSS3で拡張されるMedia Queriesでは、&lt;code&gt;screen&lt;/code&gt;や&lt;code&gt;print&lt;/code&gt;のようなメディアタイプだけでなく、デバイス自体のサイズやスクリーンのサイズなどを利用できるようになる。&lt;br /&gt;
+例:&lt;code&gt;min-width : 321px&lt;/code&gt;、&lt;code&gt;max-width : 320p&lt;/code&gt;、&lt;code&gt;max-device-width : 1024px&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;上記のように既存のスタイルシートに追記することも可能だし、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;smartphone.css&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;media=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;only screen and (min-device-width : 320px) and (max-device-width : 480px)&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;というように&lt;code&gt;link&lt;/code&gt;を使って別のスタイルシートとして管理することもできる。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;smartphone&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.css&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;only&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;min-device-width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;320px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;max-device-width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;480px&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;W3Cによれば&lt;code&gt;@import&lt;/code&gt;を使っても上記のように記述することが可能。(&lt;a href=&quot;http://www.w3.org/TR/css3-mediaqueries/#media0&quot;&gt;Media Queries&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;現時点でのMedia Queriesのサポート状況は、Firefox, Chrome, Safari, Opera, Internet Explorer 9, Android スマートフォン, そしてiOSデバイス(iPhone、iPhone4、iPad、iPod touch)がサポートしている。(※Androidスマートフォン、iPhone、iPod touchについては、W3Cで宣言されているすべての値を利用できるわけではないようだ)&lt;/p&gt;
+
+&lt;p&gt;Androidスマートフォン、iPhone、iPod touch、iPadなどのハンドヘルド端末については、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;width=device-width; initial-scale=1.0; maximum-scale=1.0;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;という記述も必要になるだろう。
+&lt;code&gt;meta viewport&lt;/code&gt;については&lt;a href=&quot;http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html&quot;&gt;Safari Reference Library&lt;/a&gt;(英語)が詳しい説明をしている。&lt;br /&gt;
+またはQuirksmodeの&lt;a href=&quot;http://www.quirksmode.org/blog/archives/2010/09/combining_meta.htm&quot;&gt;Combining meta viewport and media queries&lt;/a&gt;(英語)も参考になる。&lt;/p&gt;
+
+&lt;p&gt;また、IE6〜IE8まではCSS3で拡張される予定のMedia Queriesはサポートされていないので、レスポンシブデザインの実装をしないか、&lt;a href=&quot;http://code.google.com/p/css3-mediaqueries-js/&quot;&gt;css3-mediaqueries-js&lt;/a&gt;というJavaScriptを使った実装は可能だ。&lt;br /&gt;
+レスポンシブウェブデザインは&lt;em&gt;すべてのブラウザで見た目を同じにしなくてはならない&lt;/em&gt;という思想からはほど遠くプログレッシブエンハンスメントという手法に近いので、無理にIE6〜IE8への実装をする必要性はない。&lt;br /&gt;
+レスポンシブウェブデザインは、確かにユーザのスクリーンサイズに合わせた最適なデザインを提供することができるが、それができなくてもユーザビリティはマイナスになったりはしない。&lt;/p&gt;
+
+&lt;h2 id=&quot;gridcss&quot;&gt;レスポンシブグリッドCSS&lt;/h2&gt;
+
+&lt;p&gt;レスポンシブグリッドの最大の弱点は、実装がやや大変なこと。現実的にモバイルに最適化されることを想定していないウェブデザインをモバイル用に変更したり、サイズが変わった際にどのようにグリッドが変更していくべきかなど、デザインとテクニックの両面で解決しなければいけない問題点がある。&lt;br /&gt;
+そこで現れ始めたのが、レスポンシブウェブデザインのためのグリッドCSSだ。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lessframework.com/&quot;&gt;Less Framework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;黄金比をベースに3、5、8、13コラム、最小320pxから1280px以上のモニタ/スクリーンに合わせてコラムグリッドの数を変更する。実際に配布されているのは、&lt;code&gt;body&lt;/code&gt;に対してmedea queriesを使って幅のサイズを指定するところのみ。コラムグリッドについては、配布されるファイルのコメントを参考にグリッド用のクラスを作成する。非常にミニマムな構成なので、レスポンシブウェブデザインを学ぶ上でのソースコードリーディングに最適だ。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cssgrid.net/&quot;&gt;The 1140 grid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こちらは、その名前の通り1140px以上を最大幅とするレスポンシブグリッドCSS。Less Framework3と異なる点はコラムグリッド用のクラスは用意されているところ。そしてコラムグリッドとガター(コラムとコラムの間のマージン)はパーセントで指定されているところ。画像に対しても&lt;code&gt;max-width&lt;/code&gt;を指定し、モニタ/スクリーンのサイズに対して最適なサイズに変更されるようになっていたりする。Photoshopのファイルも配布している。&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;レスポンシブウェブデザインの問題点&lt;/h2&gt;
+
+&lt;h3&gt;レスポンシブイメージ&lt;/h3&gt;
+
+&lt;p&gt;まさに魔法とも思える画像へのレスポンシブ対応である&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;embed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;video&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;に隠された問題点を指摘できるだろうか？&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ブラウザによって縮小された画像のクオリティ&lt;/li&gt;
+  &lt;li&gt;大きなサイズの画像であることには変わらない = 帯域の無駄&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この問題点に対して、多くの解決が提案され続けている。&lt;br /&gt;
+多くの提案については、&lt;a href=&quot;http://www.cloudfour.com/responsive-imgs-part-2/&quot;&gt;Responsive IMGs Part 2 — In-depth Look at Techniques « Cloud Four&lt;/a&gt;(英語)にてその手法と問題点についてよくまとまっているので目を通しておくことをおすすめする。  &lt;/p&gt;
+
+&lt;p&gt;この記事からさらにまとめると&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://adaptive-images.com/&quot;&gt;Adaptive Images in HTML&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;JavaScript + PHP
++ .htaccessを利用したほぼサーバーサイドで解決できるこの手法は、画像が常に同じファイル名であるためにCDNを利用している場合に問題が出る可能性があるがインフラチームと連携すれば実装面と効果面でROIが高いと言える解決。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.monoliitti.com/images/&quot;&gt;Testing Responsive Images&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;JavaScriptのみで解決する方法がこちら&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;noscript&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-large=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Koala.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-small=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Koala-small.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Koala&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Koala.jpg&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Koala&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/noscript&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;まずは画像を&lt;code&gt;noscript&lt;/code&gt;タグで囲んで、&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;noscript[data-large][data-small]&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;screen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;large&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;small&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;img src=&amp;quot;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;quot; alt=&amp;quot;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;alt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;quot; /&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;insertAfter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;とjQueryでスクリーンサイズに合わせて別画像を呼び出す。&lt;br /&gt;
+&lt;code&gt;noscript&lt;/code&gt;を使うという慣れない実装ながら、CDNでも問題を起こさないし、大小の画像を両方にリクエストを投げる事もない。リクエストの回数と画像のダウンロードにかかる帯域を節約できる見た目以上にエレガントな解決方法。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sencha.com/learn/how-to-use-src-sencha-io/&quot;&gt;How to use src.sencha.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;tinySrcというサービスがSenchaに吸収され、src.sencha.ioとして生まれ変わった解決法。&lt;br /&gt;
+こちらは画像をsrc.sencha.ioに投げるとデバイスに最適化したサイズに変換して戻してくれる。&lt;br /&gt;
+Senchaのインフラに頼り切ることにはなるが、個人サイトレベルであれば問題ないだろう。  &lt;/p&gt;
+
+&lt;p&gt;と3つほどが解決の候補にあげられる。&lt;br /&gt;
+サイトの規模やサーバーサイドチームと相談の上、環境に応じた解決を適切に選択してほしい。&lt;/p&gt;
+
+&lt;h3&gt;レスポンシブ広告&lt;/h3&gt;
+
+&lt;p&gt;ウェブサイトには画像や動画など以外にも固定幅の要素がある。&lt;br /&gt;
+それが広告。ほとんどのウェブデザイナは広告表示にまつわる仕事をしたことがあるだろう。&lt;br /&gt;
+ウェブサイトの収入は多くの場合この広告に頼っている現状を考えると、レスポンシブウェブデザインを加速するにはこの問題を解決しないわけにはいかない。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.markboulton.co.uk/journal/comments/responsive-advertising&quot;&gt;Responsive Advertising via Mark Boulton&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mark BoultonがBoston
+Globeのレスポンシブウェブデザイン対応から得た経験から、問題の解決作を提案している。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://artequalswork.com/posts/responsive-ads.php&quot;&gt;Responsive Advertising via ART=WORKR&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;そのMark Boultonの提案への改善策を提案しているのがこちら。&lt;/p&gt;
+
+&lt;p&gt;どちらの解決作も&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;広告は標準化された固定サイズである&lt;/li&gt;
+  &lt;li&gt;広告はサイズと掲載位置をベースに制作され販売される&lt;/li&gt;
+  &lt;li&gt;広告にはpop-over、動画などリッチアドという広告もある&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;という3点にフォーカスして問題の解決を図ろうとしている。&lt;br /&gt;
+結論からいって、3.への解決はどちらも苦慮中で、1.は標準サイズのクリエイティブを再利用して解決できるとしている。  &lt;/p&gt;
+
+&lt;p&gt;問題は2.の掲載位置。現状ではセールスチームの人間がお客さんにこのサイトのこの位置に掲載されます、と言って販売してくるわけだから、往々にして掲載位置を固定するためにテンプレートが存在することになる。&lt;br /&gt;
+つまり&lt;/p&gt;
+
+&lt;p&gt;テンプレート &amp;gt; 掲載位置とサイズ &amp;gt; 広告&lt;/p&gt;
+
+&lt;p&gt;というメンタルモデルとなるというのがMark
+Boltonの考えで、彼の提案は掲載位置とそれに伴うサイズでの販売ではなく、それらをパッケージ化して販売し、スクリーンサイズに合わせて表示する広告サイズを変化させるというもの。&lt;br /&gt;
+全サイズでのインプレッション数をパッケージとして保証すれば問題は解決されるということだ。&lt;/p&gt;
+
+&lt;p&gt;それに対して、ART=WORKの提案は&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;レンジ&lt;/strong&gt; &amp;gt; テンプレート &amp;gt; 掲載位置とサイズ &amp;gt; 広告&lt;/p&gt;
+
+&lt;p&gt;というように先ほどのメンタルモデルに&lt;strong&gt;レンジ&lt;/strong&gt;という上位の概念を取り入れたもの。&lt;br /&gt;
+ここでいうレンジについては、実際に画像を見てもらった方がわかりやすい。(&lt;a href=&quot;http://artequalswork.com/uploads/responsive-templates.jpg&quot;&gt;レンジについて&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;ウィンドウサイズをレンジで区切ってそのレンジに合わせてこれまで通りに広告を販売できる。&lt;br /&gt;
+モバイルデバイス用に広告を表示させる場合は、そのレンジで購入すればいいという単純な仕組み。  &lt;/p&gt;
+
+&lt;p&gt;私の経験では現状日本では、PC用、モバイル用というレンジに近い概念で広告は販売されている。少なくとも私の会社ではそうだ。&lt;br /&gt;
+これは日本ではそもそもスマートフォン以前の携帯端末への広告販売に適応してきた歴史があるからだ。&lt;br /&gt;
+携帯用、PC用、両方でという販売形態はすでに販売側にも実装側にも制作側にも経験がある。&lt;br /&gt;
+この分野に置いては日本が海外を先行していると言えるので、経験を海外に向けて発表でいるいい機会と言える。&lt;/p&gt;
+
+&lt;h2 id=&quot;links&quot;&gt;参考リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/&quot;&gt;Mobile-First Responsive Web Design (Brad Frost Web)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.getfinch.com/finch/entry/its-not-responsive-web-building-its-responsive-web-design/&quot;&gt;It’s Not Responsive Web Building, It’s Responsive Web Design (FINCH)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.lukew.com/ff/entry.asp?1314&quot;&gt;An Event Apart: The Responsive Designer’s Workflow (LukeW)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://boagworld.com/dev/complex_responsive_design/&quot;&gt;Responsive Design: Beyond the Blog (Boagworld)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.alistapart.com/articles/responsive-web-design/&quot;&gt;Responsive Web Design (A list Apart)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.w3.org/TR/css3-mediaqueries/&quot;&gt;Media Queries (W3C)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/&quot;&gt;Responsive Web Design: What It Is and How To Use It (Smashing Magazine)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://css-tricks.com/css-media-queries/&quot;&gt;CSS Media Queries &amp;amp; Using Available Space (CSS-Tricks)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://x7.fi/2010/02/12/how-to-fit-your-website-for-the-apple-ipad/&quot;&gt;How to fit your website for the Apple iPad (x7 Labs)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.quirksmode.org/blog/archives/2010/09/combining_meta.html&quot;&gt;Combining meta viewport and media queries (Quirksmode)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/UsingtheViewport/UsingtheViewport.html&quot;&gt;Configuring the Viewport (Safari Reference Library)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.lukew.com/ff/entry.asp?1117&quot;&gt;Mobile First Helps with Big Issues (LukeW)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://5by5.tv/bigwebshow/6&quot;&gt;EPISODE #6: MOBILE FIRST (The Big Web Show)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://membership.thinkvitamin.com/library/responsive-web-design/mobile/context&quot;&gt;Responsive Web Design: Mobile: Context (Think Vitamin)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;books&quot;&gt;参考図書&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://easy-readers.net/books/adaptive-web-design/&quot;&gt;Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement — Easy Readers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.abookapart.com/products/mobile-first&quot;&gt;A Book Apart, Mobile First&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.abookapart.com/products/responsive-web-design&quot;&gt;A Book Apart, Responsive Web Design&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 				&lt;hr /&gt;

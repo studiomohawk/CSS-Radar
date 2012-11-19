@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title itemprop="name" content="Git バージョンコントロール | CSS Radar">Git バージョンコントロール | CSS Radar | Little Books For Front End Developers</title>
+  <meta itemprop="description" name="description" property="og:description" content="バージョンコントロールについて バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。 作業用フォルダがstyle.bk20110128なんて名前であふれている なんでこの変更したのか、覚えていない。もう3ヶ月も前の話だし 誰が最新のファイル持ってるかわからないまま、作業を開始、もう1度やり直し HTMLであろうと、CSSであろうと、JSであろうと、何であろうとソースコードを人間は必ずどこかで例のような目にあうのだ。 バックアップも、更新履歴も、システムでやればいいじゃない。を解決してくれるのがGit。 セットアップも簡単で、利用するのも簡単。 あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。 Gitのインストール ※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。 OSX Installer for Gitから、自分のOSバージョンにあわせてdmgをダウンロード。Winはこちら あとはインストーラにお任せ。 私はHomebrewを使って、Gitをインストールした。 Gitはアプリケーションフォルダには入らない系統のアプリ。Terminalで使える。 Terminal(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。 では、git --version をTerminalへコピペしてみてほしい。ちゃんとインストールできていれば、 git...">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="">
+	
+  <meta property="og:image" content="http://css.studiomohawk.com/graph.png">
+  <meta property="og:site_name" content="CSS Radar | Little Books For Front End Developers">
+  <meta name="viewport" content="width=device-width">
+  <link href="http://css.studiomohawk.com/atom.xml" rel="alternate" title="CSS Radar | Little Books For Front End Developers" type="application/atom+xml">
+  <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo"><a href="/"><span class="logo-css">CSS</span><span class="logo-radar">Radar</span></a></p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<h1 class="post-title">Git バージョンコントロール</h1>
+				
+				<time class="date-pub update small" title="2011-12-03 01:40:50 +0900">
+					<span class="label">Updated: </span>
+					<span class="month">Dec</span>
+					<span class="day">03</span>
+					<span class="year">2011</span>
+				</time>
+				
+				<time class="date-pub pubdate small" title="2011-01-29T00:00:00+09:00">
+					<span class="label">Published: </span>
+					<span class="month">Jan</span>
+					<span class="day">29</span>
+					<span class="year">2011</span>
+				</time>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2 id="whatis">バージョンコントロールについて</h2>
+
+<p>バージョンコントロール。まだ始めていなかったら、今からでも遅くはない。  </p>
+
+<ul>
+  <li>作業用フォルダがstyle.bk20110128なんて名前であふれている</li>
+  <li>なんでこの変更したのか、覚えていない。もう3ヶ月も前の話だし</li>
+  <li>誰が最新のファイル持ってるかわからないまま、作業を開始、もう1度やり直し</li>
+</ul>
+
+<p>HTMLであろうと、CSSであろうと、JSであろうと、何であろうとソースコードを人間は必ずどこかで例のような目にあうのだ。    </p>
+
+<p>バックアップも、更新履歴も、システムでやればいいじゃない。を解決してくれるのが<em>Git</em>。<br />
+セットアップも簡単で、利用するのも簡単。
+あのLinuxの父、Linus TorvaldsがLinux Kernelを管理するために開発した、というオリガミは信頼の証。</p>
+
+<h2 id="install">Gitのインストール</h2>
+
+<p>※以下はMac環境での説明になるが、Windowsでもほとんど変わらない。</p>
+
+<p><a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3">OSX Installer for Git</a>から、自分のOSバージョンにあわせてdmgをダウンロード。<a href="http://code.google.com/p/msysgit/downloads/list?can=3">Winはこちら</a><br />
+あとはインストーラにお任せ。</p>
+
+<p>私は<a href="http://mxcl.github.com/homebrew/">Homebrew</a>を使って、Gitをインストールした。</p>
+
+<p>Gitはアプリケーションフォルダには<em>入らない</em>系統のアプリ。Terminalで使える。<br />
+<em>Terminal</em>(日本語だと端末？)の時点で、たぶん半数以上のユーザの興味を奪った自信があるが、騙されたと思って立ち上げてほしい。アプリケーションフォルダのユーティリティフォルダにあるはずだ。  </p>
+
+<p>では、<code>git --version</code><br />
+をTerminalへコピペしてみてほしい。ちゃんとインストールできていれば、<br />
+<code>git version 1.7.1.1</code><br />
+というような表示がされるだろう。</p>
+
+<p>で、コマンドラインでしか使えないの？ なんてことはないので、</p>
+
+<ul>
+  <li><a href="http://www.syntevo.com/smartgit/index.html">SmartGit</a>(個人利用はフリー、Winにも対応)</li>
+  <li><a href="http://www.git-tower.com/">Tower</a>(betaテスト中フリー、Macのみ)</li>
+  <li><a href="http://code.google.com/p/tortoisegit/">TortoiseGit</a>(フリー、Winのみ)</li>
+</ul>
+
+<p>こちら、GitをGUIで利用できるようにするアプリ達。私はTowerをテストしつつ、Macでも、Winでも使えるSmartGitをメインで利用している。どちらも日本語版はないが、基本の用語さえ覚えてしまえば問題ないだろう。
+GUIアプリをインストールしても、もう少しTerminalは開いたままに。</p>
+
+<h2 id="term">Gitの基本用語</h2>
+
+<ul>
+  <li><em>レポジトリ(Repository)</em> - 更新履歴などを管理するバージョンコントロールの要になる保管庫。</li>
+  <li><em>コミット(Commit)</em> - エディタでいうならば保存に近いコミット。Gitに対して変更が完了したよ、と伝えるコマンド。コミットにはメッセージが必要で、どこをどうして変更したのか伝えることで履歴管理が可能になる</li>
+  <li><em>クローン(Clone)</em> - Gitでは0からレポジトリを作成するのも簡単だが、既存のレポジトリをクローンすることができる。多人数で開発をする際は非常に便利</li>
+  <li><em>ブランチ(Branch)</em> - メインの開発からの分岐を作成するブランチ。<q>“Git のブランチモデルは、Git の機能の中でもっともすばらしいものだという人もいるほど”</q> <cite><a href="http://progit.org/book/ja/ch3-0.html">Pro Git</a></cite></li>
+</ul>
+
+<h2 id="todo">Gitをインストールした後にやるべきこと</h2>
+
+<p>Terminalはまだ開いたままだろうか？<br />
+準備が整ったら以下のコマンドを、必要な部分は修正してから、Terminalにて実行。</p>
+
+<ul>
+  <li>まずは自己紹介をしよう</li>
+</ul>
+
+<div class="highlight"><pre><code class="bash">git config --global user.name <span class="s2">&quot;名前&quot;</span>
+git config --global user.email メールアドレス@example.com
+</code></pre>
+</div>
+
+<ul>
+  <li>標準のエディタを設定</li>
+</ul>
+
+<p>*Terminalから利用する場合にコミットメッセージを書くのに使うエディタ。たいていの場合Terminalのデフォルト、viかvimが使われる。それ以外のエディタが好みの場合は設定しよう。</p>
+
+<div class="highlight"><pre><code class="bash">git config --global core.editor emacs
+</code></pre>
+</div>
+
+<ul>
+  <li>ホワイトスペースを無視する</li>
+</ul>
+
+<p>Gitではホワイトスペース1つを追加してもファイルを変更したと認識される(Rubyではホワイトスペースは大事)が、大抵の場合、ホワイトスペース1つでコミットする、ということもないだろう。</p>
+
+<div class="highlight"><pre><code class="bash">git config --global apply.whitespace nowarn
+</code></pre>
+</div>
+
+<ul>
+  <li>すべてのGitレポジトリに無視ファイルを適応</li>
+</ul>
+
+<p>Macなら.DS_Store(普段は見えないけれどGitは認識する)など、OSが自動で生成するファイルとか、毎回.gitignore(無視リストファイル)をレポジトリに追加したり、その.gitignoreをコミットしたりするのは面倒。</p>
+
+<div class="highlight"><pre><code class="bash">git config --global core.excludesfile ~/.gitignore
+</code></pre>
+</div>
+
+<p>このコマンドのままだとホームディレクトリに.gitignoreがあるから–globalで読んでねという意味になる。<br />
+私はこのファイルを<a href="http://db.tt/jxIW2Rp">Dropbox</a>を使ってすべての環境で同じファイルを見るようにしている。</p>
+
+<p>Dropboxにdotというディレクトリを作成しその下に.gitignoreファイルを作成してる</p>
+
+<div class="highlight"><pre><code class="bash">git config --global core.excludesfile /Users/<span class="o">[</span>ユーザディレクトリ<span class="o">]</span>/Dropbox/dot/.gitignore
+</code></pre>
+</div>
+
+<p>Macならこんな具合。</p>
+
+<p>.gitignoreファイルの文法は</p>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># &#39;#&#39; から始まる行はコメント</span>
+<span class="c"># foo.txtというファイル名は無視</span>
+foo.txt
+<span class="c"># .htmlで終わるファイルを無視。&#39;\*&#39;はワイルドカード</span>
+*.html
+<span class="c"># &#39;!&#39;は例外。上の例から引き続きで、.htmlで終わるファイルは無視するけどfoo.htmlは例外。</span>
+!foo.html
+
+<span class="c"># Macユーザなら、下記で基本はOK。参考: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore</span>
+
+.DS_Store?
+Icon?
+<span class="c"># Thumbnails</span>
+._*
+<span class="c"># Files that might appear on external disk</span>
+.Spotlight-V100
+.Trashes
+</code></pre>
+</div>
+
+<h2 id="workflow">Gitの基本的なワークフロー</h2>
+
+<p>それでは先ほど紹介した用語と、ほかのいくつかのGitのコマンドを交えながらGitの基本的なワークフローを説明しよう。</p>
+
+<p>その前に少しTerminalで使えるコマンドを少々。</p>
+
+<ul>
+  <li><em>cd</em> - ”Change Directly”。ディレクトリを変更するコマンド。<code>cd ../</code>とすれば、親ディレクトリにも移動できる、HTMLのリンクと同じ。</li>
+  <li><em>pwd</em> - 現在のディレクトリを教えてくれる。Macだけかも</li>
+  <li><em>ls</em> - 現在のディレクトリに含まれるファイルをリストアップしてくれる、Winだと<code>ls -a</code>としないとだめ？</li>
+  <li><em>touch</em> - ファイルを作成できる。<code>touch style.css</code></li>
+</ul>
+
+<p>ファイルの移動や、削除ももちろんコマンドでできるが。慣れないうちは上記の4つで十分だ。私もコマンドになれてきたとはいえ、使うBashコマンドの7割は上記の4つという程度。</p>
+
+<p>それでは、Gitの世界へようこそ。最初は面倒だなと思うこともあるけれど、これから幾多の困難をともにする強力なパートナとなってくれるだろう。</p>
+
+<ul>
+  <li><code>git init</code></li>
+</ul>
+
+<p>既存のレポジトリをクローンしない場合、<code>git init</code>はgitのスタートを告げるコマンド。<br />
+作業ディレクトリに対して.gitディレクトリを作成する。  </p>
+
+<p>Macユーザ恐れるなかれ、.gitディレクトリ、だけではないが.(ドット)から始まるファイル、ディレクトリは普通はFinderには見えない隠し要素になる。<br />
+Terminalで<code>ls</code>とすれば、きちんと存在が確認できる。</p>
+
+<div class="highlight"><pre><code class="bash">defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+</code></pre>
+</div>
+
+<p>または上記のコマンドを叩くと見えるようになる。<br />
+おお、うざい。と思ったら、</p>
+
+<div class="highlight"><pre><code class="bash">defaults write com.apple.finder AppleShowAllFiles FALSE
+killall Finder
+</code></pre>
+</div>
+
+<p>で元に戻せる。<a href="http://totalfinder.binaryage.com/">TotalFinder</a>というFinderにタブを追加できるアプリケーションなら、GUIでOn/Offできる機能もついてくるのでおすすめ($15)(ちょっと重いけど、便利)。</p>
+
+<ul>
+  <li><code>git add</code></li>
+</ul>
+
+<p>.gitが作成された作業ディレクトリに必要なファイルを作成/コピーしてきたら、<code>git add</code>コマンドで、ファイルをレポジトリに追加する。<br />
+私は大概<code>git add .</code>としてしまう。最後の.(ドット)は、まだレポジトリに追加されていないファイル全部、という意味だ。<br />
+もちろん、<code>git add ファイル名</code>としてファイルを1つづつ追加することも可能。</p>
+
+<p>※readme.mdというテキストファイルを追加して、そこにプロジェクトの概要などを書き留めておくと、便利だ。.mdはMarkdownというライトウェイトマークアップ言語の拡張子。</p>
+
+<ul>
+  <li><code>git commit</code></li>
+</ul>
+
+<p>初めてのコミット。まずはプロジェクトの開始を伝えるコミットからスタート。</p>
+
+<div class="highlight"><pre><code class="bash">git commit -a -m <span class="s2">&quot;Initial Commit&quot;</span>
+</code></pre>
+</div>
+
+<p>-aフラグは、すべての変更に対してコミットするという意味。便利だが、ある理由で1ファイルを修正したのか、そのある理由が複数ファイルに渡る修正なのか、それとも？となってしまうので、コミットの単位については明確な理由がかける範囲で。<br />
+-mフラグは、エディタを開かず、その場でコミットメッセージを書けるようにする。その後’(シングルクォート)か”(ダブルクォート)で囲んだ部分がメッセージになる。日本語でももちろん問題ない。</p>
+
+<ul>
+  <li><code>git status</code></li>
+</ul>
+
+<p>それではgitの現状を確認してみよう。<code>git status</code>では、.gitディレクトリに含めれるファイルすべてを密かに監視している。<br />
+ファイルは追加(add)されているか？ コミット済みなのか？　コミットから変更されたか？ 前回のコミットから変更されたか？<br />
+git statusはそれらの状態を教えてくれる便利なコマンドだ。  </p>
+
+<ul>
+  <li><code>git log</code></li>
+</ul>
+
+<p>ファイルに変更を加え、いくつかのコミットを行った後、しばらくすると変更点についてはすっかり忘れている。<br />
+そんな時はコミットメッセージを読めばわかる。(わかるようにコミットメッセージを書くことが大事)</p>
+
+<div class="highlight"><pre><code class="bash">git log --graph --pretty<span class="o">=</span>oneline
+</code></pre>
+</div>
+
+<p>とフラグを渡しつつ、<code>git log</code>とすると下記のようにコミット1回につき1行で、表示される。</p>
+
+<div class="highlight"><pre><code class="bash">7366587c589fe6ee60aeff553e899dc13086d7ec About Responsive Web Design is finished
+28b07e6c8fa6299c9c6b3321a339b1c7881e2fe4 erase meta since I use .htaccess
+90187a85261b208abbb0c52511fcf675ebe4739d fix css little bit
+5035c4eabe855efbac15596663190a6126eb0880 Read me was old
+4600e678e757950e5d6a7c7fbfc9a6420333e1c2 Ready to deploy
+</code></pre>
+</div>
+
+<p>ここでは残念ながら地味な表示だが、Terminal内では、デキる感じがしないでもないように、黒背景にグリーンが映えるマトリックスな世界を繰り広げられる(Terminalの設定による)。<br />
+<a href="http://www.jukie.net/bart/blog/pimping-out-git-log">pimping out git log</a>で紹介されていた</p>
+
+<div class="highlight"><pre><code class="bash">git config --global alias.lg <span class="s2">&quot;log --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit --date=relative&quot;</span>
+</code></pre>
+</div>
+
+<p>とすると、git logのデフォルトで1行、色つきフォーマットでログを見ることが可能</p>
+
+<ul>
+  <li><code>git branch</code></li>
+</ul>
+
+<p>Gitの真打ち、branch。ブランチは分岐を表示・作成するコマンド。  </p>
+
+<p>コミットがすべて完了しているmaster(デフォルト)で、</p>
+
+<div class="highlight"><pre><code class="bash">git branch newfeature
+</code></pre>
+</div>
+
+<p>とすると、masterをベースにnewfeatureというブランチが作成される。  </p>
+
+<p>私は現状、以下のようにブランチモデルを作っている。</p>
+
+<ul>
+  <li>master(デフォルト) = 現時点で本番環境を管理するブランチ。ここへのコミットは少ない。gitnのtag機能を使ってバージョンナンバを持っている。</li>
+  <li>develop = 開発バージョン。基本的にすべての作業はこのブランチをメインして行う。ここへのコミットは非常に多い。</li>
+  <li>feature = developとの違いは、開発の中でも特に新しいデザインパターン用のコーディングなどを行う。</li>
+  <li>fix = 文字通り修正用のブランチ。修正が完了次第コミットし、必要に応じてmasterまたはdevelopとマージする。</li>
+</ul>
+
+<p>開発の規模感にもよるが、HTML、CSS、JavaScriptをメインで担当する私にとっては上記のブランチでまかなえる。<br />
+上記のブランチモデルは、<a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a>を参考に、よりシンプルにしたバージョン。
+このブランチの詳しい使い方については、また別の記事としたい。</p>
+
+<ul>
+  <li><code>git merge</code></li>
+</ul>
+
+<p>branchにはmergeは欠かせない。表裏一体の存在といえる。branchを作成し、その場で開発を続けていても、いつかはmasterへマージする日がやってくる。<br />
+マージする際、衝突があればgitはそれを解決しないとマージできないと警告を発する。SmartGitを利用していれば、グラフィカルな環境で衝突している部分を表示してくれる。</p>
+
+<p><code>git merge</code>をする際には、まず現在いるブランチをコミットして、から<code>git checkout master</code>というように、マージさせたいブランチに切り替える。<br />
+自分が今いるブランチがどこなのか、ほかにどんなブランチがあるかを確認するには、<code>git branch</code>とすれば</p>
+
+<div class="highlight"><pre><code class="bash">*master
+newfeature
+</code></pre>
+</div>
+
+<p>というように表示してくれる。<br />
+ちなみに、Terminal用プログラムBashの設定で</p>
+
+<div class="highlight"><pre><code class="bash"><span class="k">function </span>parse_git_branch <span class="o">{</span>
+  <span class="nv">ref</span><span class="o">=</span><span class="k">$(</span>git-symbolic-ref HEAD 2&gt; /dev/null<span class="k">)</span> <span class="o">||</span> <span class="k">return</span>
+<span class="k">  </span><span class="nb">echo</span> <span class="s2">&quot;(&quot;</span><span class="k">${</span><span class="nv">ref</span><span class="p">#refs/heads/</span><span class="k">}</span><span class="s2">&quot;)&quot;</span>
+<span class="o">}</span>
+
+<span class="nv">RED</span><span class="o">=</span><span class="s2">&quot;\[\033[0;31m\]&quot;</span>
+<span class="nv">YELLOW</span><span class="o">=</span><span class="s2">&quot;\[\033[0;33m\]&quot;</span>
+<span class="nv">GREEN</span><span class="o">=</span><span class="s2">&quot;\[\033[0;32m\]&quot;</span>
+
+<span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ &quot;</span>
+</code></pre>
+</div>
+
+<p>上記を追加すると、コマンドプロンプト(コマンドを叩く左側に出る文字列)に、現在のブランチを表示してくれる。
+USERディレクトリ下に.bashrcという名前で上記を追加して保存。既存でなければ、ファイル名を.bashrcとし保存すればOK。</p>
+
+<p>では無事にmasterへブランチを切り替えられただろうか。</p>
+
+<p><code>git merge myfeature</code></p>
+
+<p>これで、myfeatureブランチはmasterブランチへマージが完了する。</p>
+
+<h2 id="tips">GitのTips &amp; Tricks</h2>
+
+<h3>git alias</h3>
+
+<p>コマンドラインの便利さはコマンドを覚えてしまえば、色々なことがコマンド1つ、あるいは2つでできてしまう、ということにつきる。<br />
+gitもGUIツールの利便性は否定しないが、コマンドラインから利用することにしている私。<br />
+少しでもタイプする文字を減らしたいので、そんな際に便利なのが<code>git alias</code>。<br />
+あらかじめ登録したコマンドをショートカットのように呼び出す事ができる機能だ。</p>
+
+<p><code>git config -e --global</code></p>
+
+<p>とすると、システムワイドで利用するgitの設定ファイル.gitconfigファイルをエディタで開ける。<br />
+すでに自分のメールと名前は設定済みのはずなので、ファイルに追記すれば、aliasを利用できる。</p>
+
+<p>6行目までは、単純によく使うコマンドを2文字に省略しただけで、<br />
+<code>lg</code>は<a href="http://www.jukie.net/bart/blog/pimping-out-git-log">この記事</a>から拝借した。<code>git log</code>を少しセクシーにしてくれる。</p>
+
+<p><code>fix</code>は私があまりにもよく繰り返すコミットしたあとでそのコミットに入れるべき変更に気がついたり、コミットを重ねるべきタイミングでない際に使う<code>--amend</code>オプションをaliasにした。<br />
+コミット後、編集が必要だったファイルがあれば、そのファイルを編集し、<code>git add
+FILE</code>と追加して、<code>git fix</code>とすると、前のコミットメッセージを繰り返しタイプせずとも以前のコミットメッセージを利用してコミットできる。</p>
+
+<p><code>unstage</code>は<code>add</code>の反対でgitのstageに追加したくないファイルを削除してくれる。</p>
+
+<div class="highlight"><pre><code class="bash"><span class="o">[</span><span class="nb">alias</span><span class="o">]</span>
+<span class="nv">st</span> <span class="o">=</span> status
+<span class="nv">ci</span> <span class="o">=</span> commit
+<span class="nv">br</span> <span class="o">=</span> branch
+<span class="nv">co</span> <span class="o">=</span> checkout
+<span class="nv">df</span> <span class="o">=</span> diff
+<span class="nv">dc</span> <span class="o">=</span> diff --cached
+<span class="nv">lg</span> <span class="o">=</span> log --graph --pretty<span class="o">=</span>format:<span class="s1">&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39;</span> --abbrev-commit --date<span class="o">=</span>relative
+<span class="nv">fix</span> <span class="o">=</span> commit --amend -C HEAD
+<span class="nv">unstage</span> <span class="o">=</span> reset HEAD
+</code></pre>
+</div>
+
+<h3>git diff</h3>
+
+<ul>
+  <li>フラグなしに<code>git diff</code>とした場合、最後のcommitと現在の状態を比較する</li>
+  <li><code>git diff -- &lt;filename&gt;</code>とすると、1ファイルのみを比較できる</li>
+  <li><code>git diff --cached</code>ではステージングにあるファイル群とHEAD(*)を比較する</li>
+</ul>
+
+<p>* HEADは現在のブランチと同義だと思っていていいそうだ。(<a href="http://stackoverflow.com/questions/2304087/what-is-git-head-exactly">What is git head, exactly? - Stack Overflow</a>)</p>
+
+<p>あってはならない事だとは思うが、Commitを忘れて次の編集時に気がつくなんて事はそこそこ多く発生する。<br />
+バージョンコントロールを初めたばかりならなおさらだろう。
+そんな時にも便利なのが<code>git diff</code>だ。</p>
+
+<p>もちろん、チームでの作業の場合、マスタをCommitする際に、他の人が作業した部分をレビューするのには欠かす事ができないコマンド。</p>
+
+<h2 id="github">Githubの使い方</h2>
+
+<h3>fork</h3>
+
+<p>forkはGithub内で公開されているレポジトリを自分のレポジトリとしてコピーしてくる事を指す。<br />
+利用したいレポジトリを見つけたら、forkボタンをクリックすれば自分のレポジトリにコピーが完成。この時点でどんな変更を行おうとそれは自分のレポジトリ内だけで完結する。<br />
+その変更をオリジナルにも反映するべきという場合にはPull
+Requestをすることでオリジナルレポジトリの所有者に変更を伝える事ができる。  </p>
+
+<div class="highlight"><pre><code class="bash">git clone git@github.com:ユーザ名/レポジトリ名.git
+</code></pre>
+</div>
+
+<p>forkしたレポジトリをローカル環境にclone。<br />
+ちなみにコマンドラインで上記を実行する際は自分がどのディレクトリにいるのか確認しておこう。<br />
+<code>pwd</code>で自分の居場所を教えてくれる。<br />
+レポジトリ名でディレクトリが生成されるので、
+ついでにremoteの設定をしておこう。この設定をしておけばオリジナルレポジトリで変更があった際にその変更をfetchできる。</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">cd</span> レポジトリ名 <span class="c"># まずはそのディレクトリに移動</span>
+git remote add upstream オリジナルのレポジトリのgitパス <span class="c">#パスはgithubのレポジトリのページにあるのでコピー</span>
+git fetch upstream <span class="c"># 変更をfetch</span>
+git merge upstream/master <span class="c"># 変更を自分のブランチにmergeする</span>
+</code></pre>
+</div>
+
+<h2 id="helper">ヘルパスクリプト</h2>
+
+<h3>Git Extras</h3>
+
+<p><a href="https://github.com/visionmedia/git-extras">visionmedia/git-extras</a></p>
+
+<p>Git ExtrasはGitに便利コマンドを追加するスクリプト集。  </p>
+
+<ul>
+  <li><code>git commits-since yesterday</code> で昨日からのコミットだけを見る事ができたり、</li>
+  <li><code>git delete-submodule lib/foo</code> でlib/fooのsubmoduleを削除したり、</li>
+  <li><code>git-touch [filename]</code> でfilenameを作成して、<code>git add</code>したり、</li>
+  <li><code>git undo</code> で最後のコミットを削除したりする。</li>
+</ul>
+
+<p>インストールは簡単。</p>
+
+<div class="highlight"><pre><code class="bash">curl https://raw.github.com/visionmedia/git-extras/master/bin/git-extras | <span class="nv">INSTALL</span><span class="o">=</span>y sh
+</code></pre>
+</div>
+
+<p>紹介した以外にも沢山のコマンドが追加されるので入れておいても損はしないと思う。</p>
+
+<h2 id="link">参考リンク</h2>
+
+<ul>
+  <li><a href="http://progit.org/book/ja/">Pro Git</a> - オンラインでなら無料で日本語訳されたPro Gitを読むことができる。まだ私自身すべてを読み終えたわけではないが、かなり勉強になる</li>
+  <li><a href="http://help.github.com/git-cheat-sheets/">Git cheat sheets (github)</a> - Githubにあるgitのチートシート</li>
+  <li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a> - ブランチモデルの実例をコマンドともに解説している</li>
+  <li><a href="http://www.kernel.org/pub/software/scm/git/docs/">git(1) Manual Page</a> - gitのマニュアルページ。コマンドのフラグなどはこちら。git helpからコマンドでも参照できる</li>
+  <li><a href="http://www8.atwiki.jp/git_jp/pub/git-manual-jp/Documentation/chunked/index.html">Git ユーザマニュアル (バージョン 1.5.3 以降用)</a> - 上記リンクの日本語版</li>
+  <li><a href="http://www.alistapart.com/articles/get-started-with-git/">Get Started with Git (A List Apart)</a> - A List ApartにてAl Shaw氏による記事</li>
+  <li><a href="http://gitcasts.com/">GitCasts</a> - Gitのスクリーンキャスト。英語だが、グラフィカルな環境でしか覚えられない人には最適</li>
+</ul>
+
+				</div>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						
+						<li class="old"><a class="internal" rel="prev" href="/css/2011/01/24/about-responsive-web-design/" title="レスポンシブウェブデザイン">&larr;</a></li>
+						
+						
+						<li class="new"><a class="internal" rel="next" href="/commandline/2011/02/13/terminal-101/" title="コマンドライン">&rarr;</a></li>
+						
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p><a href="/" class="has-icon"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="has-icon" href="https://github.com/studiomohawk/CSS-Radar/issues/new">
+				<i class='icon-github'></i> Ask Me on Github
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+			</p>
+			<p>
+			CSS Radarでは記事を短編の技術書のように編集して、記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そこでCSS Radarでは私なりのベストプラクティスを集めていく事を編集方針としています。
+			</p>
+			<p>
+			最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報を共有</li>
+				<li><a href="http://seven.studiomohawk.com/" rel="me" title="Seven">Seven</a> / フロントエンドブックマーク</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="http://publicdraft.studiomohawk.com/" rel="me" title="Public Draft">Public Draft</a> / フロントエンド・リサーチログ</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<p class="madeintokyo">
+	Build by Yuya Saito. <a href="https://twitter.com/cssradar" rel="me" title="Twitter@cssradar">@cssradar</a><br>
+	Made Proudly in Tokyo.
+	</p>
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+
+</div><!-- #page -->
+<script src="/asset/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-11'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
+

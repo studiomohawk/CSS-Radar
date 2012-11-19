@@ -4,14 +4,6 @@ category: english
 title: "ウェブデベロッパのための英語"
 date: 2012-01-29 16:45:05
 tldr: "英語がわからなくて困る。ウェブ界隈で生きている人には多い問題だろう。ここでは私が考えている英語の文章の読み方、コツを紹介。生真面目に全部の単語の意味を調べてはいけない。わかるところから始めよう。"
-toc:
-- {text: はじめに, hash: preface}
-- {text: はじめの一歩, hash: firststep}
-- {text: 80-20の法則, hash: understanding}
-- {text: 森を見て、木を見ない, hash: forrest}
-- {text: ならうより慣れろ, hash: justdoit}
-- {text: 読み続けるためのツール, hash: tools}
-- {text: おすすめの本, hash: books}
 ---
 
 ## はじめに {#preface}
@@ -35,7 +27,7 @@ toc:
 > Many years ago the great British explorer George Mallory, who was to die on Mount Everest, was asked why did he want to climb it. He said, "Because it is there."  
 Well, space is there, and we're going to climb it, and the moon and the planets are there, and new hopes for knowledge and peace are there. And, therefore, as we set sail we ask God's blessing on the most hazardous and dangerous and greatest adventure on which man has ever embarked.
 
-これはJohn F Kennedyが1932年、9月12日にRice Universityで演説したあの有名な"Moon Speach"の一節。
+これはJohn F Kennedyが1932年、9月12日にRice Universityで演説したあの有名な『Moon Speach』の一節。
 
 まずは辞書なしにどれくらい理解できるか読んでみてほしい。  
 

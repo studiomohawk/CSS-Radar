@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title itemprop="name" content="ウェブデザイナのためのRuby | CSS Radar">ウェブデザイナのためのRuby | CSS Radar | Little Books For Front End Developers</title>
+  <meta itemprop="description" name="description" property="og:description" content="Rubyはウェブデザイナに優しい CSS Radarと名がついている割にはCSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。 今回はCSSやデザインからはほど遠いように思えるRubyについて。 前にも書いた気がするが私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。 Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら面倒なことを楽にすることもでき始めてきた。 そこでRubyを少しだけ使い倒す方法を紹介しようと思い立った。 たまにはPhotoshopを離れて(私はあまり使いませんが)、新しいことに挑戦してみませんか？ * 私はRuby初心者ですので間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。 なお今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。 Rubyのインストール Mac OS XにはRubyが標準でインストールされている。でも最新版ではなく、まれに最新版でないと動作しないプログラムもあるので最新版をインストールしておく必要がある。 MacにおけるRubyの管理は、RVM - Ruby Version Managerがおすすめ。 RVMを利用するためにはgitが必須になる。gitのインストールについてはこちらを参照してほしい。 RVMのインストール方法 ターミナルを開いて、 sudo...">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="">
+	
+  <meta property="og:image" content="http://css.studiomohawk.com/graph.png">
+  <meta property="og:site_name" content="CSS Radar | Little Books For Front End Developers">
+  <meta name="viewport" content="width=device-width">
+  <link href="http://css.studiomohawk.com/atom.xml" rel="alternate" title="CSS Radar | Little Books For Front End Developers" type="application/atom+xml">
+  <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo"><a href="/"><span class="logo-css">CSS</span><span class="logo-radar">Radar</span></a></p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<h1 class="post-title">ウェブデザイナのためのRuby</h1>
+				
+				<time class="date-pub pubdate small" title="2011-05-14T00:03:59+09:00">
+					<span class="label">Published: </span>
+					<span class="month">May</span>
+					<span class="day">14</span>
+					<span class="year">2011</span>
+				</time>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2 id="rubyis">Rubyはウェブデザイナに優しい</h2>
+
+<p>CSS Radarと名がついている割にはCSSの話があまりないなと最近になって気がついたけれど、誰も気にしちゃいないだろう。<br />
+今回はCSSやデザインからはほど遠いように思えるRubyについて。<br />
+前にも書いた気がするが私は極度の面倒くさがり。とにかく楽をするためなら、どんな苦労もいとわない。
+Rubyにチャレンジしている真っ最中ながら、色々な新しい概念に触れ、色々な新しいワザを覚え、少しずつながら面倒なことを楽にすることもでき始めてきた。
+そこでRubyを少しだけ使い倒す方法を紹介しようと思い立った。</p>
+
+<p>たまにはPhotoshopを離れて(<a href="http://css.studiomohawk.com/webdesign/2011/04/16/designing_in_browser/">私はあまり使いませんが</a>)、新しいことに挑戦してみませんか？</p>
+
+<p>* 私はRuby初心者ですので間違っている記述や、もっと簡単にできるのに、という部分が多々あるでしょう。そんな際は是非メールをください。<br />
+なお今回の記事はMac OSXでの話で、Windowsについてはまったく触れませんが、基本的な概念は同じです。</p>
+
+<h2 id="install">Rubyのインストール</h2>
+
+<p>Mac OS XにはRubyが標準でインストールされている。でも最新版ではなく、まれに最新版でないと動作しないプログラムもあるので最新版をインストールしておく必要がある。</p>
+
+<p>MacにおけるRubyの管理は、<a href="https://rvm.beginrescueend.com/">RVM - Ruby Version Manager</a>がおすすめ。<br />
+RVMを利用するためにはgitが必須になる。gitのインストールについては<a href="http://css.studiomohawk.com/tool/2011/01/29/git-version-control/">こちらを参照してほしい</a>。</p>
+
+<p><strong>RVMのインストール方法</strong></p>
+
+<p>ターミナルを開いて、</p>
+
+<div class="highlight"><pre><code class="sh">sudo bash &lt; &lt;<span class="o">(</span>curl -s https://rvm.beginrescueend.com/install/rvm<span class="o">)</span>
+</code></pre>
+</div>
+
+<p>~/.bash_profile か ~/.bashrcに</p>
+
+<div class="highlight"><pre><code class="sh"><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="c"># This loads RVM into a shell session.</span>
+</code></pre>
+</div>
+
+<p>を追加(上記ファイルがない場合は、作成して追加)<br />
+では、RVMが正しく動作するかを確認しよう。</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nb">type </span>rvm | head -1
+</code></pre>
+</div>
+
+<p>とターミナルで実行してみる。</p>
+
+<div class="highlight"><pre><code class="sh">rvm is a <span class="k">function</span>
+</code></pre>
+</div>
+
+<p>と返事が返ってきたら成功。
+成功したらまたターミナルにて</p>
+
+<div class="highlight"><pre><code class="sh"><span class="nb">source</span> ~/.rvm/scripts/rvm
+</code></pre>
+</div>
+
+<p>と実行しておこう。</p>
+
+<div class="highlight"><pre><code class="sh">rvm install 1.9.2-head
+</code></pre>
+</div>
+
+<p>とすればruby 1.9.2-headのバージョンをインストールできる。<br />
+ちなみにRVMでインストールできるバージョンは</p>
+
+<div class="highlight"><pre><code class="sh">rvm list known
+</code></pre>
+</div>
+
+<p>とすればリストが表示されるので表示されたパッケージを<code>rvm install</code>の後に記述すればそのパッケージをインストールできる。</p>
+
+<p>なおRVMではバージョンごとにgemのパッケージを管理するためさっきまで使えたはずのgemがないとエラーが出る、なんて事態に遭遇したら、</p>
+
+<div class="highlight"><pre><code class="sh">ruby -v
+</code></pre>
+</div>
+
+<p>として現在利用しているrubyのバージョンを確認してみよう。</p>
+
+<div class="highlight"><pre><code class="sh">rvm --default use 1.9.2 <span class="c"># とすると、1.9.2をデフォルトで利用しはじめ</span>
+rvm use system <span class="c"># システムにインストールされているRubyと</span>
+rvm default <span class="c"># デフォルト設定したRubyを切り替えることも可能 </span>
+</code></pre>
+</div>
+
+<p>詳しくは<a href="https://rvm.beginrescueend.com/">https://rvm.beginrescueend.com/</a>(英語)</p>
+
+<h2 id="gem">Ruby Gem</h2>
+
+<p>RubyにはGemと呼ばれるパッケージマネージャがある。1.9系以降からはRubyの標準機能となったそうだ。<br />
+MacではGemも標準でインストールされていたと思うが記憶が確かではないので確認してほしい。</p>
+
+<div class="highlight"><pre><code class="sh">sudo gem update --system
+</code></pre>
+</div>
+
+<p>とするとアップデートできるので試してみてほしい。</p>
+
+<p>パッケージマネージャってなんだ、という点についてはUbuntuを使っていた私にはすんなり理解できたが、そうでもない人が多いのでMacでいうところの、macportやfink、homebrewみたいなライブラリ集積地みたいなものだと覚えておけばいいはず。
+*Homebrewについては、<a href="http://css.studiomohawk.com/tool/2011/02/13/terminal-101/">こちらの記事</a>で紹介したので参考にしてほしい。</p>
+
+<div class="highlight"><pre><code class="sh">gem install PACKAGENAME
+</code></pre>
+</div>
+
+<p>としてパッケージをインストールできる。<br />
+例えば、</p>
+
+<div class="highlight"><pre><code class="sh">gem install rake
+</code></pre>
+</div>
+
+<p>とすると、Ruby版make(ビルドツール)であるrakeをインストールできる。  </p>
+
+<h2 id="package">ウェブデザイナにおすすめのパッケージ</h2>
+
+<h3>CSS Sprite</h3>
+
+<p>CSSスプライトはパフォーマンス向上のためには必須になるテクニックだが、作成するのも、管理するのも、メンテナンスするのもとても面倒。
+ある特定のディレクトリに画像を入れて自動でスプライト画像を作成しCSSもあわせて作ってくれたら。を叶えるプログラムがRubyにある。</p>
+
+<ul>
+  <li><strong><a href="https://github.com/merbjedi/sprite">merbjedi / sprite</a></strong></li>
+</ul>
+
+<p><strong>インストール</strong></p>
+
+<p><code>rmagick</code>gemが必要になるのでまずはこのgemをインストール。</p>
+
+<div class="highlight"><pre><code class="sh">gem install rmagick <span class="c">#私はこのコマンドではエラーになったので、下記を実行してから再度チャレンジした</span>
+
+<span class="c"># エラーになった場合は</span>
+sudo brew install libxml2
+sudo brew install ImageMagick
+<span class="c"># を実行してから、上記を実行してほしい。なお、homebrewを利用している場合の例</span>
+</code></pre>
+</div>
+
+<p>そしてspriteのgemをインストール</p>
+
+<div class="highlight"><pre><code class="sh">gem sources -a http://gemcutter.org
+gem install sprite
+</code></pre>
+</div>
+
+<p><strong>使い方</strong></p>
+
+<div class="highlight"><pre><code class="sh">public/
+  images/
+    sprites/
+      black-icons/
+        stop.png
+        go.png
+        back.png
+        forward.png
+
+      weather/
+        sunny.gif
+        rainy.gif
+        cloudy.gif
+</code></pre>
+</div>
+
+<p>というようなディレクトリ構造を例とすると、
+<code>public</code>にて</p>
+
+<div class="highlight"><pre><code class="sh">sprite
+</code></pre>
+</div>
+
+<p>というコマンドを実行すると</p>
+
+<div class="highlight"><pre><code class="sh">public/
+  stylesheets/
+    sprites.css
+  images/
+    sprites/
+      black-icons.png
+      weather.png
+</code></pre>
+</div>
+
+<p>というファイルを生成する。</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.sprites.blue-stars-small</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/small.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">0px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">12px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">6px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.sprites.blue-stars-medium</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/medium.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">6px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.sprites.blue-stars-large</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/large.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">21px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">60px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.sprites.blue-stars-xlarge</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;/images/icons/blue-stars/xlarge.png&#39;)</span> <span class="k">no-repeat</span> <span class="m">0px</span> <span class="m">96px</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">75px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>というようなスタイルを書き出してくれる。<br />
+sassのmixinも利用できるようで設定も変更できる。</p>
+
+<p>詳しくは<a href="https://github.com/merbjedi/sprite">こちら</a>(英語)。</p>
+
+<h3>SASS/LESS</h3>
+
+<p>LESSは今ではnode.jsプロジェクトとして生まれ変わったが最新版ではないものの、gemからインストールはできる。
+SASSについては先日1年ぶりほどのアップデートがありアクティブにRubyプロジェクトとして成長している。</p>
+
+<p>ちなみにSASSでは<a href="http://www.hagenburger.net/BLOG/Lemonade-CSS-Sprites-for-Sass-Compass.html">Lemonade</a>というパッケージを利用してCSS Spriteの自動化を行うこともできる。</p>
+
+<p>LESSについての説明は<a href="http://css.studiomohawk.com/css/2011/04/03/use_less_to_clean_up_your_css/">LESS: CSSをよりシンプルに、パワフルに</a>を参考にしてほしい。</p>
+
+<p><strong>インストール</strong></p>
+
+<div class="highlight"><pre><code class="sh">gem install less <span class="c">#LESS</span>
+gem install sass <span class="c">#SASS</span>
+</code></pre>
+</div>
+
+<h3>Juicer</h3>
+
+<p>リクエスト回数を減らすためには、CSS/JSの呼び出しは最小にしておく必要がある。<br />
+が、CSSもJSもメンテナンス性を考えればたくさんのファイルになってしまうのが常。<br />
+この矛盾を解決するためのプログラムが<a href="http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool">Juicer</a>。</p>
+
+<p>Juicerは、YUI Compressorを利用してCSS/JSを圧縮した上で、CSSであれば@importを使ってファイルを結合してくれ、JSであれば、</p>
+
+<div class="highlight"><pre><code class="sh">/**
+ * @depends prototype.js
+ * @depends widgets/lightbox.js
+ */
+</code></pre>
+</div>
+
+<p>というコメントを使ってファイルの結合を行うことが可能。<br />
+CSSはmaster.cssというファイルに@importのみを記述してJSもmaster.jsというファイルにコメント文だけ記述している。</p>
+
+<p>実行すると、それぞれmaster.min.css、master.min.jsというファイルを書き出してくれる。</p>
+
+<p>使い方はとても簡単。</p>
+
+<div class="highlight"><pre><code class="sh">juicer merge --force master.css <span class="c"># CSS --forceはmaster.min.cssが存在しても上書きを強制</span>
+juicer merge -i --force master.js <span class="c">#JS -iはエラーを無視して圧縮/結合を実行するオプション</span>
+</code></pre>
+</div>
+
+<p>ついでに、</p>
+
+<div class="highlight"><pre><code class="css"><span class="nt">h1</span> <span class="p">{</span> <span class="k">background</span><span class="o">:</span> <span class="sx">url(/somepath/someimage.png?embed=true)</span><span class="p">;</span> <span class="p">}</span>
+<span class="c">/* ?embed=trueを追加する */</span>
+</code></pre>
+</div>
+
+<p>とすると、画像をdata-urlに変換してくれる。</p>
+
+<div class="highlight"><pre><code class="sh">juicer merge --force master.css --embed-images data_uri
+</code></pre>
+</div>
+
+<p>のように実行すればOK。</p>
+
+<p><strong>インストール</strong></p>
+
+<div class="highlight"><pre><code class="sh">gem install juicer <span class="c"># Juicerをインストール</span>
+juicer install yui_compressor <span class="c"># YUI compressorをインストール</span>
+juicer install closure_compiler <span class="c"># Google Closure Compilerをインストール</span>
+juicer install jslint <span class="c"># JsLintをインストール</span>
+</code></pre>
+</div>
+
+<h3>CSS Redundancy Checker</h3>
+
+<p>何年か前にウェブツールとして同名のツールがあり、ある日使えなくなってしまった。
+<a href="http://code.google.com/p/css-redundancy-checker/">CSS Redundancy
+Checker</a>は、あるHTML郡で使われていないスタイルルールをリストアップしてくれるという強力なツール。<br />
+フロントエンドデベロッパのタスクのほとんどはIteration、日本語にすると反復することが多く、その反復がよりよいモノを生み出すための最も大事な原動力となる。<br />
+しかしその副産物として使っていないスタイルルールであふれかえって、何を消したらまずいのかもはやわからない状態になってしまう。<br />
+その問題を解決するのがこのツールというわけだ。</p>
+
+<p>使い方</p>
+
+<div class="highlight"><pre><code class="sh">ruby css-redundancy-checker.rb <span class="o">[</span>CSSファイル名<span class="o">]</span> <span class="o">[</span>HTMLファイルディレクトリ または URLを一行ずつ記述した.txt<span class="o">]</span>
+</code></pre>
+</div>
+
+<p>とするだけ。CSSを分割して管理している場合はJuicerで結合してから実行するといいだろう。
+もちろんある特定のCSSファイルをチェックしたい場合は個別に指定すればOK。</p>
+
+<p><strong>インストール</strong></p>
+
+<div class="highlight"><pre><code class="sh">sudo gem install hpricot <span class="c"># hpricotをインストール、必須</span>
+svn checkout http://css-redundancy-checker.googlecode.com/svn/trunk/ css-redundancy-checker
+<span class="c"># svnをインストールしていない場合は、sudo brew install svnとしてから</span>
+</code></pre>
+</div>
+
+<p>css-redundancy-checker.rbという名前の通りこのスクリプトは単純な1ファイル。<br />
+なので実行する際はインストールしたディレクトリに移動してから実行する必要がある。</p>
+
+<h3>Rake</h3>
+
+<p>Rakeはそれ自体ではなにもしないが非常に強力なツール。<br />
+ビルドツールとして誕生したRakeのはずだが、私はビルドツールがなんのことかも完璧には理解できない。<br />
+要するに、A)の次はB)を実行し、C)を実行するのは、A)を実行する必要がある。<br />
+というなプロセスをrubyを使って行うことができる。いわばエディタなどにあるマクロみたいな存在。</p>
+
+<p>ここまで紹介してきたツール群はもちろんのこと、Rakeを使って  </p>
+
+<ul>
+  <li><a href="http://optipng.sourceforge.net/">OptiPNG</a>を使ってPNG画像の最適化</li>
+  <li><a href="http://sylvana.net/jpegcrop/jpegtran/">JPEGtran</a>を使ってJPEG画像の最適化
+(Macへのインストール方法は、<a href="http://www.phpied.com/installing-jpegtran-mac-unix-linux/">こちらを参照</a>(英語))</li>
+  <li><code>sprite</code>を使ってスプライト画像/CSSを作成</li>
+  <li><code>juicer</code>を使って、CSS/JSの圧縮/結合</li>
+  <li><a href="http://code.google.com/p/htmlcompressor/">htmlcompressor</a>を使ってHTMLの最適化</li>
+</ul>
+
+<p>このプロセスをrake taskとして作成すれば、<code>rake タスク名</code>とするだけで一気に終了できる。  </p>
+
+<p><code>rsync</code>や<code>ftp</code>なども合わせるとファイルアップロードまで自動化できる。</p>
+
+<p><strong>Rakeのチュートリアル</strong></p>
+
+<ul>
+  <li><a href="http://jasonseifer.com/2010/04/06/rake-tutorial">Rake Tutorial by Jason Seifer</a></li>
+  <li><a href="http://martinfowler.com/articles/rake.html">Using the Rake Build Language</a></li>
+  <li><a href="http://pastie.org/242691">Rake Quick Reference by Greg Houston</a></li>
+</ul>
+
+<p>などが参考になるだろう。もちろん全部英語の文書なので、CSS Radarの癖にRakeの詳しい説明を知りたい方は、<a href="http://twitter.com/#!/cssradar">Twitter@cssradar</a>にてリクエストしてほしい。<br />
+私も覚えたてなので全部の質問には答えることができるかわからないが。</p>
+
+<h2 id="conclusion">まとめ</h2>
+
+<p>ウェブデザイナ/フロントエンドデベロッパのタスクは多岐に渡る。<br />
+Adobe Suitesを使いこなし、HTML/CSS/JSを駆使し、ユーザビリティ/アクセシビリティに考慮し、行動心理学を応用しつつ、ウェブサイトをユーザに届ける。<br />
+その上、プログラマの領分であるはずのRubyにまで手を出す。<br />
+それもすべて時間を生み出すための技術。<br />
+その時間がよりよいサイトを生み出すための原動力だから。<br />
+新しいことへの出会いはいつだってインスピレーションへ続く近道だと信じているので、是非チャレンジしてほしい。<br />
+もし今回紹介しなかった便利なスクリプトなどご存知でしたら、是非教えてください。</p>
+
+				</div>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						
+						<li class="old"><a class="internal" rel="prev" href="/in-browser-design/2011/04/16/designing_in_browser/" title="インブラウザ デザイン">&larr;</a></li>
+						
+						
+						<li class="new"><a class="internal" rel="next" href="/jekyll/2011/06/11/jekyll/" title="Jekyll">&rarr;</a></li>
+						
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p><a href="/" class="has-icon"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="has-icon" href="https://github.com/studiomohawk/CSS-Radar/issues/new">
+				<i class='icon-github'></i> Ask Me on Github
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+			</p>
+			<p>
+			CSS Radarでは記事を短編の技術書のように編集して、記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そこでCSS Radarでは私なりのベストプラクティスを集めていく事を編集方針としています。
+			</p>
+			<p>
+			最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報を共有</li>
+				<li><a href="http://seven.studiomohawk.com/" rel="me" title="Seven">Seven</a> / フロントエンドブックマーク</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="http://publicdraft.studiomohawk.com/" rel="me" title="Public Draft">Public Draft</a> / フロントエンド・リサーチログ</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<p class="madeintokyo">
+	Build by Yuya Saito. <a href="https://twitter.com/cssradar" rel="me" title="Twitter@cssradar">@cssradar</a><br>
+	Made Proudly in Tokyo.
+	</p>
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+
+</div><!-- #page -->
+<script src="/asset/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-11'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
+

@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title itemprop="name" content="Vim | CSS Radar">Vim | CSS Radar | Little Books For Front End Developers</title>
+  <meta itemprop="description" name="description" property="og:description" content="はじめに Vimにおける設定ファイルである.vimrc。 私のGoogleサーチによる他者の知の結晶とも言える.vimrcはgithubにあるので、参考になれば。 .vimrc Vimで覚えるべきポイントは大きく分けて3つ。 コマンド、プラグイン、そして設定。 この記事ではその3つにVimについての情報源を追加した4つを軸にしつつ、時系列でエントリを追記する形をとることにする。 なお、プラグインを追加する際、設定も同時に行う場合が多いがその場合はプラグインのエントリに記述する。 また同様に覚えたコマンドをより簡単に呼び出すための設定もコマンドのエントリに記述する。 私のVimに対するアプローチは、Ruby on RailsとjQueryのコアメンバであるYehuda Katz氏の記事、Everyone Who Tried to Convince Me to use Vim was Wrongと同じで、始めからVimのやり方に合わせるのではなくマウスを使ったって、Control + Sで保存したって、別にかまわないと思っている。...">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="">
+	
+  <meta property="og:image" content="http://css.studiomohawk.com/graph.png">
+  <meta property="og:site_name" content="CSS Radar | Little Books For Front End Developers">
+  <meta name="viewport" content="width=device-width">
+  <link href="http://css.studiomohawk.com/atom.xml" rel="alternate" title="CSS Radar | Little Books For Front End Developers" type="application/atom+xml">
+  <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo"><a href="/"><span class="logo-css">CSS</span><span class="logo-radar">Radar</span></a></p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<h1 class="post-title">Vim</h1>
+				
+				<time class="date-pub update small" title="2011-12-25 12:58:27 +0900">
+					<span class="label">Updated: </span>
+					<span class="month">Dec</span>
+					<span class="day">25</span>
+					<span class="year">2011</span>
+				</time>
+				
+				<time class="date-pub pubdate small" title="2011-07-24T00:57:55+09:00">
+					<span class="label">Published: </span>
+					<span class="month">Jul</span>
+					<span class="day">24</span>
+					<span class="year">2011</span>
+				</time>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2 id="preface">はじめに</h2>
+
+<p>Vimにおける設定ファイルである.vimrc。<br />
+私のGoogleサーチによる他者の知の結晶とも言える.vimrcはgithubにあるので、参考になれば。</p>
+
+<ul>
+  <li><a href="https://github.com/studiomohawk/vim">.vimrc</a></li>
+</ul>
+
+<p>Vimで覚えるべきポイントは大きく分けて3つ。
+コマンド、プラグイン、そして設定。<br />
+この記事ではその3つにVimについての情報源を追加した4つを軸にしつつ、時系列でエントリを追記する形をとることにする。<br />
+なお、プラグインを追加する際、設定も同時に行う場合が多いがその場合はプラグインのエントリに記述する。
+また同様に覚えたコマンドをより簡単に呼び出すための設定もコマンドのエントリに記述する。</p>
+
+<p>私のVimに対するアプローチは、Ruby on RailsとjQueryのコアメンバであるYehuda Katz氏の記事、<a href="http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/">Everyone Who Tried to Convince Me to use Vim was Wrong</a>と同じで、始めからVimのやり方に合わせるのではなくマウスを使ったって、Control + Sで保存したって、別にかまわないと思っている。</p>
+
+<p>私にとってVimはフィロソフィーではなく、あくまでもツールである。<br />
+便利に使えるからこそのツールでエンドユーザはその壮大な設計思想など気にする必要はない。自分のペースで自分らしく使いこなす事が真の効率化なのだから。</p>
+
+<h2 id="command">コマンド</h2>
+
+<h3>ファイルを分割ウィンドウで開く</h3>
+
+<p>高度なテキストエディタには必ずと言っていいほど存在するファイルを上下、あるいは左右で分割して表示する方法。<br />
+私はCSSファイルは同じ記述は繰り返さないように最大の努力をしているが、HTMLファイルは同じような記述で書けるように最大限の努力をしている。<br />
+そんな際に重宝するのがこのコマンド。</p>
+
+<ul>
+  <li><code>ctrl-w s</code> こちらは現在のファイルを左右に分割</li>
+  <li><code>ctrl-w v</code> こちらは現在のファイルを上下に分割</li>
+</ul>
+
+<p>HTML + CSSの組み合わせは大体の場合セットで開いていた方が何かと便利。そんな際は</p>
+
+<ul>
+  <li><code>:sp FILENAME</code> FILENAMEを新しく左右に分割されたウィンドウにロード</li>
+  <li><code>:vp FILENAME</code> FILENAMEを新しく上下に分割されたウィンドウにロード</li>
+</ul>
+
+<p>最近はワイドなモニターが主流なので、左右で分割しても苦にならないだろうが、私は昔の人間なので上下に開くことが多い。</p>
+
+<p>開く方法を紹介したからには、閉じる方法も紹介しよう。</p>
+
+<ul>
+  <li><code>:on</code> は現在選択されているウィンドウのみを残して、他のウィンドウを閉じる</li>
+  <li><code>:q</code> は現在選択されちえるウィンドウを閉じる</li>
+</ul>
+
+<p>コマンドが多いなと感じる事だろうが、sはsplitの略で、vはvertical
+splitの略、onはonlyの略で、qはquitなので、覚えやすいはずだ。</p>
+
+<h3>行をソートする</h3>
+
+<ul>
+  <li><code>:'&lt;,'&gt;!sort</code></li>
+</ul>
+
+<p>選択行をアルファベット順に並べ替える。</p>
+
+<ol>
+  <li>まず、ソートしたい行を選択</li>
+  <li><code>:</code> をタイプすると、<code>:'&lt;,'&gt;'</code>と表示される</li>
+  <li><code>!sort</code>とタイプ = <code>:'&lt;,'&gt;!sort</code></li>
+</ol>
+
+<p>何が便利かというと、私はCSSのプロパティをアルファベット順に並べ替える(IEハックは除外するが、ここは手作業)ので重宝している。</p>
+
+<ul>
+  <li><code>:'&lt;,'&gt;!sort -u</code></li>
+</ul>
+
+<p>とすると、ユニークな行だけ、つまり重複行を削除することも可能。</p>
+
+<p>私の環境では日本語に置けるソートは上手く行かないが、ユニーク行を残すことはできた。</p>
+
+<h3>バッファにあるファイルを全部タブで開く</h3>
+
+<ul>
+  <li><code>:tab ball</code></li>
+</ul>
+
+<h2 id="plugin">プラグイン</h2>
+
+<h3><a href="https://github.com/garbas/vim-snipmate">snipMate</a></h3>
+
+<p>色々あって利用してこなかったsnipMateに挑戦中。オリジナルのsnipMateは更新が止まっている様子なので、こちらのforkをおすすめされた。<br />
+snipMateはTextMateのスニペット機能を模したプラグイン。特定のキーワードとtabで登録したスニペットが呼び出せる。  </p>
+
+<h3><a href="http://www.vim.org/scripts/script.php?script_id=3818">MatchTag</a></h3>
+
+<p>MatchTagはNotePad++で使えたあの便利なHTMLタグを選ぶとセットになっているタグをハイライトしてくれるプラグイン。
+ずーとこれだけが気になっていたけれど、これで完璧。HTMLを生業にしている人は必携。</p>
+
+<h3><a href="https://github.com/mr-szymanski/prefixr">Prefixr</a></h3>
+
+<p>CSS3をクロスブラウザで適応するにはブラウザプリフィックス(-o-や、-webkit-など)を記述する必要がある。<br />
+Nettus+にて作成された<a href="http://prefixr.com/">Prefixr</a>というウェブツールはW3Cで現時点で発表されている記述やどのブラウザプリフィックス付きの記述1つを書いておけばボタン1つで全プリフィックスに変換してくれる強力なツール。<br />
+そのAPIを利用してvimのプラグインにしたのがこれ。</p>
+
+<p>変換したい値を選択して<code>:Prefixr</code>とコマンドを叩けばウェブツールと同じことができる。<br />
+Vimから離れずに強力なツールが利用できるので非常に時短。</p>
+
+<h3><a href="https://github.com/godlygeek/tabular">Tabular.vim</a></h3>
+
+<p>Tabular.vimは<code>=</code>や、<code>:</code>のような決まった文字を基点にツラを合わせるためのプラグイン。<br />
+読みやすいコードを目指すあまり、書いている最中でもツラを合わせないと気が済まない人には必携だ。</p>
+
+<p>例えば、</p>
+
+<div class="highlight"><pre><code class="css"><span class="nf">#selector</span> <span class="p">{</span>
+	<span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+	<span class="o">*</span><span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+	<span class="k">margin-right</span><span class="o">:</span> <span class="m">4px</span><span class="p">;</span>
+	<span class="n">zoom</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+	<span class="k">letter-spacing</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+	<span class="k">word-spacing</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+	<span class="k">vertical-align</span><span class="o">:</span> <span class="k">top</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>のようなCSSを</p>
+
+<p><code>:Tab\:</code></p>
+
+<p>とすると</p>
+
+<div class="highlight"><pre><code class="css"><span class="nf">#selector</span> <span class="p">{</span>
+	<span class="k">display</span>        <span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+	<span class="o">*</span><span class="k">display</span>       <span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+	<span class="k">margin-right</span>   <span class="o">:</span> <span class="m">4px</span><span class="p">;</span>
+	<span class="n">zoom</span>           <span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+	<span class="k">letter-spacing</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+	<span class="k">word-spacing</span>   <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+	<span class="k">vertical-align</span> <span class="o">:</span> <span class="k">top</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>このようになる。(環境によっては再現されない可能性がある、そんな際は<a href="http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/">Bitstream Vera Sans Mono</a>をインストールすれば見られるようになる。日本語Fontではないがプログラマ向Fontとして有名なので持っていて損はしないだろう)</p>
+
+<ul>
+  <li><code>nnoremap &lt;leader&gt;tab :Tab /:\zs</code></li>
+</ul>
+
+<p>.vimrcには、上記のマッピングを追記した。例とは異なるツラの揃え方だが私はこちらのほうが好み。</p>
+
+<ul>
+  <li><a href="https://github.com/godlygeek/tabular">godlygeek/tabular - GitHub</a></li>
+</ul>
+
+<h3><a href="http://sjl.bitbucket.org/gundo.vim/">Gundo</a></h3>
+
+<p>Gundo.vimはVimの編集履歴のツリーをバージョンコントロールしたように見せてくれるプラグイン。<br />
+単にツリーを表示するだけではなく、そのundoの状態もプレビュできる強力なツール。  </p>
+
+<p>実際に動作している様を見た方が便利さがわかるので、<a href="http://vimcasts.org/episodes/undo-branching-and-gundo-vim/">見てみてほしい</a> (via Vimcast)。  </p>
+
+<ul>
+  <li><a href="http://sjl.bitbucket.org/gundo.vim/">Gundo - Visualize your Vim Undo Tree</a></li>
+  <li><a href="https://github.com/sjl/gundo.vim/">sjl/gundo.vim - GitHub</a></li>
+</ul>
+
+<h3><a href="https://github.com/tpope/vim-pathogen">Pathogen</a></h3>
+
+<p>vim-pathogenはVimのプラグインをGitのsubmoduleで管理することができるプラグイン。<br />
+Vimのプラグイン管理は非常に面倒な作業の1つ。gitの使い方を覚えなければならないところが慣れるまでは大変かもしれないが、それだけの価値はある。</p>
+
+<p><strong>プラグイン(fugitive)を追加</strong></p>
+
+<div class="highlight"><pre><code class="sh">git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive  
+<span class="c"># git submoduleでfugitiveをbundle/fugitiveに追加  </span>
+git submodule update --init  
+<span class="c"># submoduleを登録して、アップデート</span>
+</code></pre>
+</div>
+
+<p><strong>プラグインを削除</strong></p>
+
+<div class="highlight"><pre><code class="sh">rm -r -f 削除するプラグインのディレクトリ <span class="o">(</span>例: bundle/fugitive<span class="o">)</span>  
+<span class="c"># .gitmodulesをエディタで開いて、削除するsubmoduleの該当行を削除する  </span>
+git rm -r 削除するプラグインのディレクトリ <span class="o">(</span>最後のスラッシュはいれない<span class="o">)</span>  
+git submodule sync
+</code></pre>
+</div>
+
+<p><strong>プラグインをアップデート</strong></p>
+
+<div class="highlight"><pre><code class="sh">git submodule foreach git pull origin master
+</code></pre>
+</div>
+
+<p>なお、pathogenを利用するためには、.vimrcに</p>
+
+<div class="highlight"><pre><code class="vim"><span class="k">call</span> pathogen#runtime_append_all_bundles<span class="p">()</span>
+<span class="k">call</span> pathogen#<span class="k">helptags</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p>と追加する必要がある。この行はfiletypeの設定以前に呼び出す必要があるため、.vimrcの最初の行に追加することをおすすめする。</p>
+
+<ul>
+  <li><a href="https://github.com/tpope/vim-pathogen">tpope/vim-pathogen - GitHub</a></li>
+</ul>
+
+<h2 id="config">設定</h2>
+
+<h3>タブをFirefoxのように操る</h3>
+
+<ul>
+  <li><code>Control + Tab</code>で次のタブへ</li>
+  <li><code>Control + Shift + Tab</code>で前のタブへ</li>
+  <li><code>Control + t</code>で新しいタブを作る</li>
+</ul>
+
+<div class="highlight"><pre><code class="vim"><span class="c">&quot; keymap Firefox like tab move {</span>
+nmap <span class="p">&lt;</span>C<span class="p">-</span>S<span class="p">-</span><span class="k">tab</span><span class="p">&gt;</span> :<span class="k">tabprevious</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">tab</span><span class="p">&gt;</span> :tabnext<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+map <span class="p">&lt;</span>C<span class="p">-</span>S<span class="p">-</span><span class="k">tab</span><span class="p">&gt;</span> :<span class="k">tabprevious</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+map <span class="p">&lt;</span>C<span class="p">-</span><span class="k">tab</span><span class="p">&gt;</span> :tabnext<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+imap <span class="p">&lt;</span>C<span class="p">-</span>S<span class="p">-</span><span class="k">tab</span><span class="p">&gt;</span> <span class="p">&lt;</span>Esc<span class="p">&gt;</span>:<span class="k">tabprevious</span><span class="p">&lt;</span>CR<span class="p">&gt;</span><span class="k">i</span>
+imap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">tab</span><span class="p">&gt;</span> <span class="p">&lt;</span>Esc<span class="p">&gt;</span>:tabnext<span class="p">&lt;</span>CR<span class="p">&gt;</span><span class="k">i</span>
+nmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">t</span><span class="p">&gt;</span> :<span class="k">tabnew</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+imap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">t</span><span class="p">&gt;</span> <span class="p">&lt;</span>Esc<span class="p">&gt;</span>:<span class="k">tabnew</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+<span class="c">&quot; }</span>
+</code></pre>
+</div>
+
+<h2 id="link">参考リンク</h2>
+
+<ul>
+  <li><a href="http://sontek.net/turning-vim-into-a-modern-python-ide">John Anderson ( sontek ) - Turning Vim into a modern Python IDE</a> / VimをPython IDEとして使うための設定。Python使いではなくても参考になる(英語)</li>
+  <li><a href="http://mwop.net/blog/249-Vim-Toolbox,-2010-Edition">Vim Toolbox, 2010 Edition :: phly, boy, phly</a> / 10年ほどVimを利用しているというMatthew Weier O’Phinney氏のVimについての記事(英語)</li>
+  <li><a href="http://stevelosh.com/blog/2010/09/coming-home-to-vim/">Coming Home to Vim / Steve Losh</a> / 様々なテキストエディタからVimに落ち着いた経緯と細かい設定の解説がおすすめ(英語)</li>
+  <li><a href="http://vim.runpaint.org/toc/">Vim Recipes</a> / 基本から応用まで非常にシンプルでミニマムなフォーマットで丁寧に解説してくれる (英語)</li>
+  <li><a href="http://vimcasts.org/">Vimcasts - free screencasts about the text editor Vim</a> / Vimのチュートリアルビデオキャスト。基本のコマンドからプラグインまで詳しく解説している(英語)</li>
+  <li><a href="http://peepcode.com/products/smash-into-vim-i">Smash Into Vim by PeepCode</a> / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート1 $12 (英語)</li>
+  <li><a href="http://peepcode.com/products/smash-into-vim-ii">Smash Into Vim II by PeepCode</a> / Vimのチュートリアルビデオ。基本をわかりやすく解説 パート2 $12 (英語)</li>
+</ul>
+
+				</div>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						
+						<li class="old"><a class="internal" rel="prev" href="/jekyll/2011/06/11/jekyll/" title="Jekyll">&larr;</a></li>
+						
+						
+						<li class="new"><a class="internal" rel="next" href="/english/2012/01/29/reading-english-is-not-so-hard/" title="ウェブデベロッパのための英語">&rarr;</a></li>
+						
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p><a href="/" class="has-icon"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="has-icon" href="https://github.com/studiomohawk/CSS-Radar/issues/new">
+				<i class='icon-github'></i> Ask Me on Github
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+			</p>
+			<p>
+			CSS Radarでは記事を短編の技術書のように編集して、記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そこでCSS Radarでは私なりのベストプラクティスを集めていく事を編集方針としています。
+			</p>
+			<p>
+			最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報を共有</li>
+				<li><a href="http://seven.studiomohawk.com/" rel="me" title="Seven">Seven</a> / フロントエンドブックマーク</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="http://publicdraft.studiomohawk.com/" rel="me" title="Public Draft">Public Draft</a> / フロントエンド・リサーチログ</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<p class="madeintokyo">
+	Build by Yuya Saito. <a href="https://twitter.com/cssradar" rel="me" title="Twitter@cssradar">@cssradar</a><br>
+	Made Proudly in Tokyo.
+	</p>
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+
+</div><!-- #page -->
+<script src="/asset/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-11'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
+

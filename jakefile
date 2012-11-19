@@ -1,0 +1,85 @@
+var fs = require('fs'),
+	path = require('path'),
+	exec = require('child_process').exec,
+	util = require('util');
+
+getDate = function(format) {
+	var today = new Date();
+	var DD = today.getDate();
+	var MM = today.getMonth() + 1; //January is 0!
+	var YYYY = today.getFullYear();
+	var hh = today.getHours();
+	var mm = today.getMinutes();
+	var ss = today.getSeconds();
+
+	if (DD < 10) {
+		DD = '0' + DD;
+	}
+	if (MM < 10) {
+		MM = '0' + MM;
+	}
+
+	if (format === 'filename') {
+		return [YYYY, MM, DD].join('-');
+	} else if (format === 'yml') {
+		return [YYYY, MM, DD].join('-') + ' ' + [hh, mm, ss].join(':');
+	} else {
+		return [MM, DD, YYYY, hh, mm, ss].join('-');
+	}
+};
+
+// Shortcut to run exec command with logging and error support
+execLog = function(stringCommand, callback) {
+	exec(stringCommand, function(error, stdout, stderr) {
+		if (callback) {
+			callback();
+		}
+		if (stdout) {
+			console.log(stdout);
+		}
+		if (stderr) {
+			console.log('stderr: ' + stderr);
+		}
+		if (error !== null) {
+			console.log('exec error: ' + error);
+		}
+	});
+};
+
+gsub = function(source, pattern, replacement) {
+	var match, result;
+	if (!((pattern !== null) && (replacement !== null))) {
+		return source;
+	}
+	result = '';
+	while (source.length > 0) {
+		if ((match = source.match(pattern))) {
+			result += source.slice(0, match.index);
+			result += replacement;
+			source = source.slice(match.index + match[0].length);
+		} else {
+			result += source;
+			source = '';
+		}
+	}
+	return result;
+};
+
+// ## Tasks
+desc('Start writing!');
+task('write', function(title) {
+	var filename = getDate('filename') + '-' + gsub(title, '/\s/', '-').toLowerCase() + '.markdown';
+	var path = "_posts/";
+	var yml = getDate('yml');
+	var output = path + filename;
+	var stream = fs.createWriteStream(output);
+	console.log('Creating new post: ' + output);
+	stream.once('open', function(fd) {
+		stream.write('---\n');
+		stream.write('layout: post\n');
+		stream.write('title: ' + title + '\n');
+		stream.write('date: ' + yml + '\n');
+		stream.write('category:\n');
+		stream.write('---\n');
+	});
+});

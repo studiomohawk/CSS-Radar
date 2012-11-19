@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title itemprop="name" content="Jekyll | CSS Radar">Jekyll | CSS Radar | Little Books For Front End Developers</title>
+  <meta itemprop="description" name="description" property="og:description" content="Jekyllとは Amazon S3にて静的ファイルによるウェブサイトを構築できるようになり、Amazon Web Serviceが日本リージョンを追加したことで、これからJekyllのような静的ファイルジェネレータを使ったブログが日本でも増えるのではないか。 Jekyllといえば、このCSS Radarも今年1月からwordpressを離れ、Jekyllを使ってブログを構築している。 (残念ながらまだAmazon S3でのホストはしていない) Amazon Web Service勉強会でもJekyllとAmazon S3についての発表があった。(usteam) そこで、今回はRubyでもコマンドラインでも初心者である私でもつくれるようになったJekyllについて紹介しよう。 開発環境の準備 JekyllはRubyで作成されているので当然ながらRubyが必要。 Rubyの導入については、ウェブデザイナのためのRubyを参考にしてほしい。 Rubyの準備ができたら、 gem install jekyll *パーミッションがどうのというエラーがでたら、sudo gem install jekyllとすればインストールできるはず。...">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="">
+	
+  <meta property="og:image" content="http://css.studiomohawk.com/graph.png">
+  <meta property="og:site_name" content="CSS Radar | Little Books For Front End Developers">
+  <meta name="viewport" content="width=device-width">
+  <link href="http://css.studiomohawk.com/atom.xml" rel="alternate" title="CSS Radar | Little Books For Front End Developers" type="application/atom+xml">
+  <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo"><a href="/"><span class="logo-css">CSS</span><span class="logo-radar">Radar</span></a></p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<h1 class="post-title">Jekyll</h1>
+				
+				<time class="date-pub pubdate small" title="2011-06-11T13:39:28+09:00">
+					<span class="label">Published: </span>
+					<span class="month">Jun</span>
+					<span class="day">11</span>
+					<span class="year">2011</span>
+				</time>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2 id="whatis">Jekyllとは</h2>
+
+<p>Amazon S3にて静的ファイルによるウェブサイトを構築できるようになり、Amazon Web Serviceが日本リージョンを追加したことで、これからJekyllのような静的ファイルジェネレータを使ったブログが日本でも増えるのではないか。  </p>
+
+<p>Jekyllといえば、このCSS Radarも今年1月からwordpressを離れ、Jekyllを使ってブログを構築している。<br />
+(残念ながらまだAmazon S3でのホストはしていない)  </p>
+
+<p>Amazon Web Service勉強会でもJekyllとAmazon S3についての発表があった。(<a href="http://www.ustream.tv/recorded/14269210">usteam</a>)<br />
+そこで、今回はRubyでもコマンドラインでも初心者である私でもつくれるようになったJekyllについて紹介しよう。</p>
+
+<h2 id="prepare">開発環境の準備</h2>
+
+<p>JekyllはRubyで作成されているので当然ながらRubyが必要。<br />
+Rubyの導入については、<a href="http://css.studiomohawk.com/tool/2011/05/14/ruby_for_designer_frontend_dev/">ウェブデザイナのためのRuby</a>を参考にしてほしい。</p>
+
+<p>Rubyの準備ができたら、</p>
+
+<div class="highlight"><pre><code class="sh">gem install jekyll
+</code></pre>
+</div>
+
+<p>*パーミッションがどうのというエラーがでたら、<code>sudo gem install jekyll</code>とすればインストールできるはず。</p>
+
+<p>CSS RadarではHTMLやら、CSSなどのソースコードの表示もあるので、Pygmentsを使ってシンタックスハイライトを行っている。<br />
+Homebrewを使っているならインストールは簡単。</p>
+
+<div class="highlight"><pre><code class="sh">brew install pip <span class="o">&amp;&amp;</span> pip install pygments
+</code></pre>
+</div>
+
+<p>としてから、Homebrewでは実行ファイルにsymlinkがつかないそうで下記を実行してsymlinkをつくる</p>
+
+<div class="highlight"><pre><code class="sh">ln -s /usr/local/Cellar/python/2.7/bin/pygmentize /usr/local/bin/pygmentize
+</code></pre>
+</div>
+
+<h2 id="structire">基本フォルダ/ファイル構造と記事の作成</h2>
+
+<h3>基本フォルダとファイルの準備</h3>
+
+<div class="highlight"><pre><code class="sh">.  
+|-- _config.yml <span class="o">(</span>設定ファイル<span class="o">)</span>  
+|-- _layouts <span class="o">(</span>テンプレートフォルダ<span class="o">)</span>  
+|   |-- default.html  
+|   -- post.html  
+|-- _posts <span class="o">(</span>記事フォルダ、.textileか.markdownで記述<span class="o">)</span>  
+|   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile  
+|   -- 2009-04-26-barcamp-boston-4-roundup.textile  
+|-- _site <span class="o">(</span>HTML生成先フォルダ<span class="o">)</span>  
+-- index.html
+</code></pre>
+</div>
+
+<p>アンダーバーから始まる、<code>_layouts</code>、<code>_posts</code>、<code>_site</code>の3つのフォルダが必須のフォルダになる。<br />
+手前から、テンプレート保管、記事、生成先フォルダという役割がある。<br />
+<code>_config.yml</code>はサイト全体に影響する設定ファイル。</p>
+
+<p>必須になるのはたったこれだけというシンプル設計もJekyllの魅力の1つ。</p>
+
+<h3>記事の作成</h3>
+
+<p>Jekyllでは、記事の作成は.markdownまたは.textileという軽量マークアップ言語の文法で記述されたプレーンテキストファイルで行う。<br />
+<code>$YEAR-$MONTH-$DATE-$TITLE.$FORMAT</code>という形式で、_postsフォルダに格納されたファイルをJekyllがプロセスしてくれる。  </p>
+
+<p>例えば、2011年5月14日に作成したウェブデザイナのためのRuby入門という記事なら、<code>2011-05-22-ruby-for-designer.markdown</code>というファイル名になる。<br />
+URLに入るタイトル名はアルファベットにしておいた方が無難だろう。2バイト文字を利用できるかは試してみた事はない。</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="o">---</span>
+<span class="n">layout</span><span class="p">:</span> <span class="n">post</span>
+<span class="n">category</span><span class="p">:</span> <span class="n">tool</span> 
+<span class="n">title</span><span class="p">:</span> <span class="no">Jekyll</span><span class="err">を使ってブログをつくろう</span>
+<span class="n">date</span><span class="p">:</span> <span class="mi">2011</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mi">11</span> <span class="mi">13</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">28</span>
+<span class="o">---</span>
+</code></pre>
+</div>
+
+<p>記事のファイルの先頭にはYAML front matterと呼ばれる設定部分が必要になる。<br />
+今回の記事のYAML front matterが上記。<br />
+layoutでは、_layoutsに作成したテンプレート定義ファイルを設定し、<br />
+categoryにはカテゴリ、titleにはもちろんタイトル、そしてdateには更新日を記述することができる。<br />
+ここで必須になるのは、layoutとtitleの2ヶ所のみとなり、YAML front matterで設定した項目は、記事であればその記事内のテンプレート定義ファイル内の変数として利用することが可能。</p>
+
+<h2 id="template">テンプレートの作成</h2>
+
+<p>それではテンプレートの作成について見てみよう。</p>
+
+<p>テンプレート定義ファイルは何の変哲もないHTMLで記述される。例外は記事ファイル内のYAML front matterに記述するlayoutの部分で利用するテンプレート名をこちらも同じく、</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="o">---</span>
+<span class="n">layout</span><span class="p">:</span> <span class="n">post</span>
+<span class="o">---</span>
+</code></pre>
+</div>
+
+<p>というようにYAML front matterとして記述するという点と、後述するLiquidというテンプレートエンジンを利用して記事部分のレンダリングなどを行ったりするという点が異なる。　　</p>
+
+<p>wordpressでもそうだが、この手のテンプレファイル系は実際にファイル自体を見た方が早い。<br />
+私が公開しているJekyll用テーマファイル、<a href="https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_layouts/post.html">the_minimumの記事用レイアウトファイル</a>を見ながら、
+次項を読んでほしい。</p>
+
+<h2 id="liquid">Liquidについて</h2>
+
+<p>Liquidは非常にシンプルなテンプレートエンジンで、これまでwordpressに慣れてきた場合は少し物足りなく感じるかもしれないがその代わり覚えるのは簡単。
+Liquidで利用できるタグについては<a href="https://github.com/tobi/liquid/wiki/liquid-for-designers">こちら</a>を参考に、<br />
+またJekyllで利用できるLiquidの拡張タグについては<a href="https://github.com/mojombo/jekyll/wiki/Liquid-Extensions">こちら</a>。</p>
+
+<p>先ほどのthe_minimumのpost.htmlを見ながらLiquidテンプレートタグで必須になるもタグと、便利なタグについて紹介しよう。</p>
+
+<div class="highlight"><pre><code class="html">{{ page.title }} <span class="c">&lt;!-- 記事のYAML front matterでtitleに設定した値を取得 --&gt;</span>
+{{ content }} <span class="c">&lt;!-- 記事本文を取得 --&gt;</span>
+</code></pre>
+</div>
+
+<p>必須になるのは上記2つというやはりシンプル設計。</p>
+
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- インクルード --&gt;</span>
+{% include header.html %} <span class="c">&lt;!--</span>
+<span class="c">includeフォルダ内のheader.htmlファイルをインクルードする --&gt;</span>
+
+<span class="c">&lt;!-- ページネーション --&gt;</span>
+{% if page.previous %}
+<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;before left&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">rel=</span><span class="s">&quot;prev&quot;</span> <span class="na">href=</span><span class="s">&quot;{{ page.previous.url }}&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">title=</span><span class="s">&quot;View {{ page.previous.title }}&quot;</span><span class="nt">&gt;</span>Before<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+{% endif %}
+{% if page.next %}
+<span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;next right&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">rel=</span><span class="s">&quot;next&quot;</span> <span class="na">href=</span><span class="s">&quot;{{ page.next.url }}&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">title=</span><span class="s">&quot;View {{ page.next.title }}&quot;</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+{% endif %}
+</code></pre>
+</div>
+
+<p>インクルードはメンテナンスのために覚えておきたいタグで、<br />
+オフィシャルページにもあまり説明のないページネーションについてはもっともシンプルな例ながら利用できるタグについてはほぼ網羅しているので、カスタマイズする際の参考になれば。</p>
+
+<h2 id="config">_config.ymlの設定</h2>
+
+<p>ここで利用できる値はほぼ無限にあるもののまずはオフィシャルを参考にしてほしい。
+<a href="https://github.com/mojombo/jekyll/wiki/Configuration">https://github.com/mojombo/jekyll/wiki/Configuration</a></p>
+
+<p>_config.ymlは非常に強力でオフィシャルで使えるとしている設定以外にも自由に設定を拡張できる。<br />
+こちらについても、<a href="https://github.com/studiomohawk/jekyll-theme-the_minimum/blob/master/_config.yml">the_minimumのファイルを参考にしてほしい</a>。</p>
+
+<p>_config.ymlで設定した値はテンプレートファイル内で、</p>
+
+<p><code>site.項目</code>  </p>
+
+<p>のように呼び出す事ができる。例えば、the_minimumで設定したGoogle Analytics用IDを格納する<code>ga</code>を呼び出す場合は、</p>
+
+<p><code>site.ga</code></p>
+
+<p>というように呼び出す事が可能。<br />
+コンスタントに利用する値、他には例えばサイトのURLやサイト自体のタイトルなどを設定しておくと管理が非常に楽になるはずだ。</p>
+
+<h2 id="page">ページの作り方</h2>
+
+<p>wordpressでは単一ページを作成しaboutページなどを作成してきたという人もいることだろう。<br />
+Jekyllでも単一ページを作成することが可能。</p>
+
+<p>ページの作成方法についてもやはりシンプル設計でトップページにあたる部分<code>index.html</code>(トップページも単一ページ)と同じ階層にhtmlファイルを設置すればOK。<br />
+こちらはCSS Radarのファイルを覗いてみてほしい。</p>
+
+<ul>
+  <li><a href="https://github.com/studiomohawk/CSS-Radar/blob/master/404.html">404ページ</a></li>
+  <li><a href="https://github.com/studiomohawk/CSS-Radar/blob/master/backnumber.html">バックナンバページ</a></li>
+  <li>少しトリッキーながらフィードファイルも生成できる <a href="https://github.com/studiomohawk/CSS-Radar/blob/master/atom.xml">atom.xml</a></li>
+</ul>
+
+<h2 id="otherdir">基本以外のフォルダについて</h2>
+
+<p>Jekyllでは<code>\_layouts</code>、<code>\_posts</code>、<code>_site</code>のみが必須のフォルダと先ほど書いたが、Liquidの説明部分で書いたようにインクルードファイルを格納する、<code>_include</code>フォルダや、Jekyllに拡張機能を追加するための、<code>_plugins</code>フォルダを作成することができる。アンダーバーがフォルダ名の頭にある場合、Jekyllはそれらをシステムファイルとして扱い、プロセスの際にそれらフォルダも見に行くようになっている。  </p>
+
+<p>アンダーバーがついていないフォルダはJekyllとしては何の処理もしないが、きちんと<code>\_site</code>フォルダへ移動してくれる。<br />
+なので、CSSやJavascript、そして画像などを格納するフォルダをそれぞれ、<code>style</code>、<code>script</code>、<code>image</code>というようにしてファイルを格納しておこう。</p>
+
+<h2 id="preview">ローカル環境でプレビュー</h2>
+
+<p>このチュートリアル中に新たにデザインを作成しJekyll用にコーディングを完成するのは難しいと思うので、ここから先はすでに作成した私のthe_minimumをダウンロードしてから実践して見てほしい。</p>
+
+<p>Jekyllではコマンドラインを利用してファイルの生成を行う。そう、デザイナには不可解な黒い画面。<br />
+黒い画面とはいえ使うコマンドは片手で数えられる程度なので問題ないし、コピペできるように記述するので是非試してみてほしい。</p>
+
+<p>それでは<a href="https://github.com/studiomohawk/jekyll-theme-the_minimum">the_minimumのダウンロードは終わっただろうか</a>？<br />
+ターミナルを開いてthe_minimumをダウンロードしたフォルダに移動してほしい。移動は<code>cd</code>。</p>
+
+<div class="highlight"><pre><code class="sh">jekyll --server --auto
+</code></pre>
+</div>
+
+<p><code>--server</code>オプションはプレビュー環境用のサーバを立ち上げ、<br />
+<code>--auto</code>オプションはローカルファイルが保存されるたびにファイル生成を行うオプション。</p>
+
+<p>このコマンドをターミナルにて実行したら、</p>
+
+<p><a href="http://localhost:4000/">http://localhost:4000/</a></p>
+
+<p>をブラウザで見るとJekyllをローカル環境で動作させた結果を見る事ができる。  </p>
+
+<p>Jekyllは非常に強力なのにシンプルでインクルードなど便利な機能もついてくるので使い方を工夫すればすばらしいプロトタイプ作成ツールにもなるのではないかと思って、ベースとなるテンプレートを鋭意作成中。
+話は少しそれたが思っていた以上に簡単だったのではないだろうか？</p>
+
+<h2 id="upload">サーバへのアップロード</h2>
+
+<p>サーバへのアップロードはとても簡単。<br />
+FTPを使って、<code>\_site</code>内に生成されたファイル群をアップロードすればOK。  </p>
+
+<p>私は面倒くさがりなのでrakeを使ってrsyncでサーバとローカルファイルの同期をとっている。
+<code>rake rsync:live</code>
+とするだけで指定のローカルフォルダとサーバの同期がとれるようにしてある。</p>
+
+<h2 id="automation">rakeを使って自動化する</h2>
+
+<p>コマンドラインに苦手意識を持っている人も多いだろうが、rakeやant、makeのようなビルドツールは様々なタスクを自動化してくれる便利ツール。<br />
+Jekyllはrubyによって書かれているので、rakeを使っていつも行うタスクを幾つか自動化しているので紹介しよう。</p>
+
+<ul>
+  <li><strong>新しい記事を書く / <code>rake post:new["title","category"]</code></strong></li>
+</ul>
+
+<p>Jekyllではファイル名もルールに従って記述する必要があったり、YAML front matterの設定を毎回しなければならなかったりする。</p>
+
+<p><code>rake post:new["title","category"]</code></p>
+
+<p>とするだけで、<code>title</code>からファイル名と記事のタイトルを生成しついでにカテゴリ名を<code>category</code>から生成してくれる。<br />
+<code>title</code>の方はURLの一部になるだけあって日本語は利用できない。結果、記事のタイトルは生成後に日本語に差し替える必要はある。  </p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">namespace</span> <span class="ss">:post</span> <span class="k">do</span>
+  <span class="n">desc</span> <span class="s2">&quot;Given a title as an argument, create a new post file&quot;</span>
+  <span class="n">task</span> <span class="ss">:new</span><span class="p">,</span> <span class="o">[</span><span class="ss">:title</span><span class="p">,</span> <span class="ss">:category</span><span class="o">]</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-%d&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">#{</span><span class="n">args</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\s/</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">downcase</span><span class="si">}</span><span class="s2">.markdown&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;_posts&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="no">File</span><span class="o">.</span><span class="n">exist?</span> <span class="n">path</span><span class="p">;</span> <span class="k">raise</span> <span class="no">RuntimeError</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Won&#39;t clobber </span><span class="si">#{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">);</span> <span class="k">end</span>
+    <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="o">|</span>
+      <span class="n">file</span><span class="o">.</span><span class="n">write</span> <span class="o">&lt;&lt;-</span><span class="no">EOS</span>
+<span class="sh">---</span>
+<span class="sh">layout: post</span>
+<span class="sh">category: #{args.category}</span>
+<span class="sh">title: #{args.title}</span>
+<span class="sh">date: #{Time.now.strftime(&#39;%Y-%m-%d %k:%M:%S&#39;)}</span>
+<span class="sh">---</span>
+<span class="no">EOS</span>
+    <span class="k">end</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Now open </span><span class="si">#{</span><span class="n">path</span><span class="si">}</span><span class="s2"> in an editor.&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<ul>
+  <li><strong>Jekyllをローカル環境でプレビュー / <code>rake preview</code></strong></li>
+</ul>
+
+<p><code>jekyll --auto
+--server</code>と毎回必ずタイプするのは面倒なので。</p>
+
+<p><code>rake preview</code></p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">desc</span> <span class="s2">&quot;Launch preview environment&quot;</span>
+<span class="n">task</span> <span class="ss">:preview</span> <span class="k">do</span>
+  <span class="nb">system</span> <span class="s2">&quot;jekyll --auto --server&quot;</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<ul>
+  <li><strong>rsyncを使ってサーバと同期を取る / <code>rake rsync:live</code></strong></li>
+</ul>
+
+<p>Jekyllは静的なファイルを<code>\_site</code>ディレクトリに生成してくれる。<br />
+このディレクトリを丸ごとFTPでアップロードすればサイトの更新ができるというシンプルな設計。<br />
+でもどう考えても毎回FTPを使うのは面倒なので、<code>rsync</code>を使ってサーバとローカルの同期を取ってしまおう。</p>
+
+<p><code>rake
+rsync:dryrun</code>はテスト用で実際には何もサーバには同期されないがどのファイルが同期されるかをチェックするためにある。<br />
+初めてrsyncする場合、正しく設定ができているのかを含めて実際のサーバ側のファイル達には影響なく実行できるのでまずはこちらでテストを。</p>
+
+<p><code>rake rsync:live</code></p>
+
+<p>テストが終わって無事が確認できたらこのコマンドでサーバへのアップロードが完了する。<br />
+設定の際は利用しているサーバにsshしたりするので、自分が管理者ではない場合はレンタルサーバ側に設定などを確認してほしい。</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">namespace</span> <span class="ss">:rsync</span> <span class="k">do</span>
+  <span class="n">desc</span> <span class="s2">&quot;--dry-run rsync&quot;</span>
+    <span class="n">task</span> <span class="ss">:dryrun</span> <span class="k">do</span>
+      <span class="nb">system</span><span class="p">(</span><span class="s1">&#39;rsync _site/ -ave ssh --dry-run --delete ユーザ名@ドメイン名:ディレクトリ/&#39;</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="n">desc</span> <span class="s2">&quot;rsync&quot;</span>
+    <span class="n">task</span> <span class="ss">:live</span> <span class="k">do</span>
+      <span class="nb">system</span><span class="p">(</span><span class="s1">&#39;rsync _site/ -ave ssh --delete ユーザ名@ドメイン名:ディレクトリ/&#39;</span><span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+
+				</div>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						
+						<li class="old"><a class="internal" rel="prev" href="/ruby/2011/05/14/ruby_for_designer_frontend_dev/" title="ウェブデザイナのためのRuby">&larr;</a></li>
+						
+						
+						<li class="new"><a class="internal" rel="next" href="/vim/2011/07/24/vim-bits-and-pieces/" title="Vim">&rarr;</a></li>
+						
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p><a href="/" class="has-icon"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="has-icon" href="https://github.com/studiomohawk/CSS-Radar/issues/new">
+				<i class='icon-github'></i> Ask Me on Github
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+			</p>
+			<p>
+			CSS Radarでは記事を短編の技術書のように編集して、記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そこでCSS Radarでは私なりのベストプラクティスを集めていく事を編集方針としています。
+			</p>
+			<p>
+			最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報を共有</li>
+				<li><a href="http://seven.studiomohawk.com/" rel="me" title="Seven">Seven</a> / フロントエンドブックマーク</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="http://publicdraft.studiomohawk.com/" rel="me" title="Public Draft">Public Draft</a> / フロントエンド・リサーチログ</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<p class="madeintokyo">
+	Build by Yuya Saito. <a href="https://twitter.com/cssradar" rel="me" title="Twitter@cssradar">@cssradar</a><br>
+	Made Proudly in Tokyo.
+	</p>
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+
+</div><!-- #page -->
+<script src="/asset/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-11'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
+

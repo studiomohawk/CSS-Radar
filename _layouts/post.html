@@ -10,37 +10,51 @@
 		<div class="inner">
 			<div class="hd">
 				<div class="group">
-				<time class="date-pub milli" title="{{ page.date | date_to_xmlschema }}">
-					<span class="year">{{ page.date | date: '%y' }}</span>
-					<span class="month">{{ page.date | date: '%m' }}</span>
-					<span class="day">{{ page.date | date: '%d' }}</span>
-				</time>
 				<h1 class="post-title">{{ page.title }}</h1>
+				{% if page.update %}
+				<time class="date-pub update small" title="{{ page.update }}">
+					<span class="label">Updated: </span>
+					<span class="month">{{ page.update | date: '%b' }}</span>
+					<span class="day">{{ page.update | date: '%d' }}</span>
+					<span class="year">{{ page.update | date: '%Y' }}</span>
+				</time>
+				{% endif %}
+				<time class="date-pub pubdate small" title="{{ page.date | date_to_xmlschema }}">
+					<span class="label">Published: </span>
+					<span class="month">{{ page.date | date: '%b' }}</span>
+					<span class="day">{{ page.date | date: '%d' }}</span>
+					<span class="year">{{ page.date | date: '%Y' }}</span>
+				</time>
 				</div><!-- group -->
 			</div>
 			<div class="bd">
 				<div class="content">
 					{{ content }}
 				</div>
-			{% include module/social.html %}
-			</div>
-			<div class="ft">
-				<div class="group">
-					<nav class="page-nav-bottom">
-						{% if page.previous %}
-						<span class="page-nav-item left"><a class="internal" rel="prev" href="{{ page.previous.url }}" title="	View {{ page.previous.title }}">&larr; View previous article</a></span>
-						{% endif %}
-						{% if page.next %}
-						<span class="page-nav-item right"><a class="internal" rel="next"	href="{{ page.next.url }}" title="	View {{ page.next.title }}">View next article &rarr;</a></span>
-						{% endif %}
-					</nav><!-- /.page-nav-bottom -->
-				</div><!-- group -->
 			</div>
 		</div><!-- inner -->
 	</div><!-- mod -->
 </article>
 </div><!-- unit-inner -->
 </div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						{% if page.previous %}
+						<li class="old"><a class="internal" rel="prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}">&larr;</a></li>
+						{% endif %}
+						{% if page.next %}
+						<li class="new"><a class="internal" rel="next" href="{{ page.next.url }}" title="{{ page.next.title }}">&rarr;</a></li>
+						{% endif %}
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
 </div><!-- body -->
 
 {% include module/footer.html %}

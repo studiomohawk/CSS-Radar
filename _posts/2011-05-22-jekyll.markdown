@@ -4,18 +4,6 @@ category: jekyll
 title: "Jekyll"
 date: 2011-06-11 13:39:28
 tldr: "ハッカーのためのブログツール。静的ファイル生成ツールであるJekyllを使う上で知っておきたいすべてについて。インストールからサーバへのアップロード、そして自動化の方法も紹介しているのでこれを機会にぜひ自分のブログを作ろう。"
-toc:
-- {text: Jekyllとは, hash: whatis}
-- {text: 開発環境の準備, hash: prepare}
-- {text: 基本フォルダ/ファイル構造と記事の作成, hash: structure}
-- {text: テンプレートの作成, hash: template}
-- {text: Liquidについて, hash: liquid}
-- {text: _config.ymlの設定, hash: config}
-- {text: ページの作り方, hash: page}
-- {text: 基本以外のフォルダについて, hash: otherdir}
-- {text: ローカル環境でプレビュー, hash: preview}
-- {text: サーバへのアップロード, hash: upload}
-- {text: rakeを使って自動化する, hash: automation}
 ---
 
 ## Jekyllとは {#whatis}
@@ -39,7 +27,7 @@ Rubyの準備ができたら、
 gem install jekyll
 {% endhighlight %}
 
-*パーミッションがどうのというエラーがでたら、``sudo gem instal jekyll``とすればインストールできるはず。
+\*パーミッションがどうのというエラーがでたら、``sudo gem install jekyll``とすればインストールできるはず。
 
 CSS RadarではHTMLやら、CSSなどのソースコードの表示もあるので、Pygmentsを使ってシンタックスハイライトを行っている。  
 Homebrewを使っているならインストールは簡単。
@@ -232,7 +220,7 @@ FTPを使って、``\_site``内に生成されたファイル群をアップロ�
 コマンドラインに苦手意識を持っている人も多いだろうが、rakeやant、makeのようなビルドツールは様々なタスクを自動化してくれる便利ツール。  
 Jekyllはrubyによって書かれているので、rakeを使っていつも行うタスクを幾つか自動化しているので紹介しよう。
 
-- *新しい記事を書く / ``rake post:new["title","category"]``*
+- **新しい記事を書く / ``rake post:new["title","category"]``**
 
 Jekyllではファイル名もルールに従って記述する必要があったり、YAML front matterの設定を毎回しなければならなかったりする。
 
@@ -263,7 +251,7 @@ EOS
 end
 {% endhighlight %}
 
-- *Jekyllをローカル環境でプレビュー / ``rake preview``
+- **Jekyllをローカル環境でプレビュー / ``rake preview``**
 
 ``jekyll --auto
 --server``と毎回必ずタイプするのは面倒なので。
@@ -277,7 +265,7 @@ task :preview do
 end
 {% endhighlight %}
 
-- *rsyncを使ってサーバと同期を取る / ``rake rsync:live``
+- **rsyncを使ってサーバと同期を取る / ``rake rsync:live``**
 
 Jekyllは静的なファイルを``\_site``ディレクトリに生成してくれる。  
 このディレクトリを丸ごとFTPでアップロードすればサイトの更新ができるというシンプルな設計。  

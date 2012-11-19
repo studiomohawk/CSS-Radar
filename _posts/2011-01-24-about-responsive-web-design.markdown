@@ -5,15 +5,6 @@ category: css
 date: 2011-01-24 00:00:00
 update: 2011-11-19T13:07:17+09:00
 tldr: "間違いなく2011年のウェブデザインのキーワードはレスポンシブウェブデザイン。まだまだコマーシャルな大きなプロジェクトでは実装例が少ないが、この2、3年でデファクトになっていくだろうこのキーワードについて知っておきたいことを紹介しよう。"
-toc:
-- {text: レスポンシブウェブデザインとは, hash: whatis}
-- {text: レスポンシブウェブデザインの例, hash: ex}
-- {text: レスポンシブウェブデザインが解決しないこと, hash: whatisnot}
-- {text: Media Queries, hash: mediaqueries}
-- {text: レスポンシブグリッドCSS, hash: gridcss}
-- {text: 問題点, hash: problem}
-- {text: 参考リンク, hash: links}
-- {text: 参考図書, hash: books}
 ---
 
 ## レスポンシブウェブデザインとは {#whatis}
@@ -70,7 +61,7 @@ A List Apartの記事、[Responsive Web Design](http://www.alistapart.com/articl
 レスポンシブデザインでは多くの場合、CSS3でサポートされる予定のMedia Queriesを活用しサイズの異なるモニタ/スクリーンに対し最適なデザインを提供する。  
 Media Queriesについては、[Hardboiled Web Design](http://hardboiledwebdesign.com/)の著者であるAndy Clarkの記事[Hardboiled CSS3 Media Queries](http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries)で実例を見る事ができる。
 
-{% highlight css linenos %}
+{% highlight css %}
 /* iPhone 3 (横向き) ----------- */
 @media only screen 
 	and (min-width : 321px) {
@@ -83,13 +74,13 @@ CSS3で拡張されるMedia Queriesでは、`screen`や`print`のようなメデ
 
 上記のように既存のスタイルシートに追記することも可能だし、
 
-{% highlight html linenos %}
+{% highlight html %}
 <link rel="stylesheet" href="smartphone.css" media="only screen and (min-device-width : 320px) and (max-device-width : 480px)">
 {% endhighlight %}
 
 というように`link`を使って別のスタイルシートとして管理することもできる。
 
-{% highlight css linenos %}
+{% highlight css %}
 @import url(smartphone.css) only screen and (min-device-width : 320px) and (max-device-width : 480px);
 {% endhighlight %}
 
@@ -98,7 +89,7 @@ W3Cによれば`@import`を使っても上記のように記述することが�
 現時点でのMedia Queriesのサポート状況は、Firefox, Chrome, Safari, Opera, Internet Explorer 9, Android スマートフォン, そしてiOSデバイス(iPhone、iPhone4、iPad、iPod touch)がサポートしている。(※Androidスマートフォン、iPhone、iPod touchについては、W3Cで宣言されているすべての値を利用できるわけではないようだ)
 
 Androidスマートフォン、iPhone、iPod touch、iPadなどのハンドヘルド端末については、
-{% highlight html linenos %}
+{% highlight html %}
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 {% endhighlight %}
 

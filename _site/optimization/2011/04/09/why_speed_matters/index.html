@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title itemprop="name" content="パフォーマンス最適化 | CSS Radar">パフォーマンス最適化 | CSS Radar | Little Books For Front End Developers</title>
+  <meta itemprop="description" name="description" property="og:description" content="パフォーマンス最適化の意味 ハードウェアの値段が下がりネットの接続環境も高速化していく。ブラウザも高速化を競い合っている。 それでもなお、GoogleもYahoo!、FacebookもTwitterもページのロード時間を短縮するテクニックを生み出している。 なぜだろうか？ もちろんカスタマの満足度を上げ、終局的には売り上げに貢献するからだ。 GoogleもYahoo!も世界で1位2位を争うほどすばらしいデータセンタを所有しているのだから早くて当たり前。 なんて思っていないだろうか？ ページのロード時間の80%はフロントエンドで最適化できる。バックエンドが重要ではないとは言わないが我々フロントエンドデベロッパのもっとも大切なタスクの1つがページの最適化。 ページのロード時間で失うモノ サイト最適化ファームのStrangeloopがMashable!に寄稿した記事、Why Websites Are Slow &amp; Why Speed Really Matters [INFOGRAPHIC] によると、 1秒のロード時間の増加で、 7%のコンバージョン 11%のPV 16%のカスタマ満足度 を失うとある。...">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="">
+	
+  <meta property="og:image" content="http://css.studiomohawk.com/graph.png">
+  <meta property="og:site_name" content="CSS Radar | Little Books For Front End Developers">
+  <meta name="viewport" content="width=device-width">
+  <link href="http://css.studiomohawk.com/atom.xml" rel="alternate" title="CSS Radar | Little Books For Front End Developers" type="application/atom+xml">
+  <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo"><a href="/"><span class="logo-css">CSS</span><span class="logo-radar">Radar</span></a></p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<h1 class="post-title">パフォーマンス最適化</h1>
+				
+				<time class="date-pub pubdate small" title="2011-04-09T11:46:40+09:00">
+					<span class="label">Published: </span>
+					<span class="month">Apr</span>
+					<span class="day">09</span>
+					<span class="year">2011</span>
+				</time>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2 id="whatis">パフォーマンス最適化の意味</h2>
+
+<p>ハードウェアの値段が下がりネットの接続環境も高速化していく。ブラウザも高速化を競い合っている。<br />
+それでもなお、GoogleもYahoo!、FacebookもTwitterもページのロード時間を短縮するテクニックを生み出している。</p>
+
+<p>なぜだろうか？</p>
+
+<p>もちろんカスタマの満足度を上げ、終局的には売り上げに貢献するからだ。</p>
+
+<p>GoogleもYahoo!も世界で1位2位を争うほどすばらしいデータセンタを所有しているのだから早くて当たり前。
+なんて思っていないだろうか？
+ページのロード時間の80%はフロントエンドで最適化できる。バックエンドが重要ではないとは言わないが我々フロントエンドデベロッパのもっとも大切なタスクの1つがページの最適化。</p>
+
+<h2 id="why">ページのロード時間で失うモノ</h2>
+
+<p>サイト最適化ファームのStrangeloopがMashable!に寄稿した記事、<a href="http://mashable.com/2011/04/06/site-speed/">Why Websites Are Slow &amp; Why Speed Really Matters [INFOGRAPHIC]</a>
+によると、  </p>
+
+<p>1秒のロード時間の増加で、</p>
+
+<ul>
+  <li>7%のコンバージョン</li>
+  <li>11%のPV</li>
+  <li>16%のカスタマ満足度</li>
+</ul>
+
+<p>を失うとある。  </p>
+
+<p>さらに、3秒待たされると57%のカスタマはサイトから離脱しそのうち80%のユーザはそのサイトへ戻ってこず、そのうち50%がネガティブな経験を他の人にも共有する。<br />
+もっと加えると平均的にユーザは実際のロード時間より15%ほど追加でロードにかかっていると感じ、人にその話をする場合、実際のロード時間より35%遅いと伝えている。</p>
+
+<p>3クリックルールにはもう意味がないかも知れないが3秒ルールは実際に存在する。  </p>
+
+<h2 id="souders">Steve Soudersの教え</h2>
+
+<p>元Yahoo!のパフォーマンス担当責任者であり、現在はGoogleで働くSteve Soudersの<a href="http://www.oreilly.co.jp/books/9784873113616/">ハイパフォーマンスWebサイト</a>はこのトピックの中で確実に読んでおくべき本。
+彼が作り出した14のルールはYahoo!のYSlowのチェック項目にもなっているので見たことがあるはずだ。<br />
+GoogleのPageSpeedでも近しいチェック項目を持っているのでそれぞれの項目が何を意味して、それがどうしてページロード時間の最適化につながるかについて覚えておくことをおすすめする。</p>
+
+<h2 id="check">最適化チェックツール</h2>
+
+<ul>
+  <li><a href="http://developer.yahoo.com/yslow/">Yahoo! YSlow for Firebug</a></li>
+  <li>
+    <p><a href="http://code.google.com/speed/page-speed/">Page Speed</a></p>
+
+    <p>先ほどもその名前が出てきたがこの2つは絶対に必要なブラウザ拡張。Firefox+Firebugでも利用できるが今では両方ともChromeでも動作する。Page
+Speedは<a href="http://pagespeed.googlelabs.com/">オンラインバージョン</a>も公開されモバイルでもチェックができる。</p>
+  </li>
+  <li>
+    <p><a href="http://gtmetrix.com/">GTmetrix</a></p>
+
+    <p>こちらはYSlowとPage Speedを同時にチェックするオンラインツール。ブックマークレットも配布されている。</p>
+  </li>
+  <li>
+    <p><a href="http://loads.in/">loads.in</a></p>
+
+    <p>せっかく最適化しても結果をコンスタントなテスト環境でチェックできなければ意味がない。<br />
+Loads.inでは珍しく日本のサーバからのロード時間をテストしてくれる。ついでにブラウザ別の結果も見ることができるのでおすすめのオンラインツール。</p>
+  </li>
+</ul>
+
+<h2 id="tool">最適化ツール</h2>
+
+<h3>CSSスプライト</h3>
+
+<ul>
+  <li>オンラインツール: <a href="http://spritegen.website-performance.org/">CSS Sprite Generator</a></li>
+  <li>Ruby(ターミナルから利用): <a href="https://github.com/merbjedi/sprite">merbjedi/sprite - GitHub</a></li>
+  <li>SASS連携: <a href="http://www.hagenburger.net/BLOG/Lemonade-CSS-Sprites-for-Sass-Compass.html">Generate CSS Sprites on the Fly with Lemonade</a></li>
+</ul>
+
+<h3>JavaScriptとCSSの結合と縮小化</h3>
+
+<ul>
+  <li>Ruby(ターミナルから利用): <a href="http://cjohansen.no/en/ruby/juicer_a_css_and_javascript_packaging_tool">Juicer - a CSS and JavaScript packaging tool / Ruby - cjohansen.no</a></li>
+  <li>オンラインツール (CSSとJS): <a href="http://www.refresh-sf.com/yui/">Online YUI Compressor</a></li>
+  <li>オンラインツール (CSS): <a href="http://www.cleancss.com/">Clean CSS</a></li>
+  <li>オンラインツール (JS): <a href="http://closure-compiler.appspot.com/home">Closure Compiler Service</a></li>
+</ul>
+
+<h3>画像最適化</h3>
+
+<ul>
+  <li>Mac OS X GUI: <a href="http://imageoptim.pornel.net/">ImageOptim – a PNG/JPEG/GIF optimizer for Mac OS X</a>
+　
+### バラバラのツールは必要ない？</li>
+</ul>
+
+<p>そんなにたくさん上げられても使いこなすまで時間がかかりそうだと思ったら、 
+<a href="http://css.studiomohawk.com/tool/2011/03/15/html5boilerplate/">以前紹介した</a><br />
+<a href="http://html5boilerplate.com/">HTML5
+Boilerplate</a>のビルドスクリプトを利用することをおすすめする。<br />
+CSSスプライト以外はHTML5 Boilerplateのビルドスクリプトでも行える。</p>
+
+<h3>.htaccess(サーバ側で設定できるなら、その方がベター)</h3>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/paulirish/html5-boilerplate/blob/master/.htaccess">.htaccess on HTML5 Boilerplate</a></p>
+
+    <p>HTML5
+Boilerplateの.htaccessを利用するだけでYSlowのスコアが15ポイントはあがるのではないかと思うほどすばらしいファイル。</p>
+  </li>
+</ul>
+
+<h2 id="aboutspeed">スピードについて</h2>
+
+<p>つい先日FireFox4がリリースされたがChromeのスピードには及ばない。SafariもOperaも起動速度に関してはかなり気を使っているしページのレンダリングに関しても同様。<br />
+毎日確実に利用するものだからこそスピードが大事。ということだろう。  </p>
+
+<p>ウェブサイトも同様にスピードが大事。<br />
+Googleのページランクに関わるからでも上に書いた実質的なロスでもかまわない、どうにかしてページロード速度の最適化が大切であるかをステークホルダと共有し実践してほしい。<br />
+もちろん個人サイトでどんな風にやっていくべきかを実験するのもいいだろう。</p>
+
+<p>私自身かなり気を使って最適化をしている。
+このサイトは海外のサーバなので日本では少しレスポンスが遅く他の個人サイトと同様Amazon S3に移行する予定だ。  </p>
+
+<p>すると、.htaccessが使えないのでRakeを使って自動化を行うよう調整中。
+Amazonのクラウドサービスを使ってみるというのもいい経験になったしRakeによるビルド/デプロイの自動化もツールとして昇華しやすいので会社でも役に立つと思っている。</p>
+
+				</div>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						
+						<li class="old"><a class="internal" rel="prev" href="/less/2011/04/03/use_less_to_clean_up_your_css/" title="LESS - CSSプリプロセッサ">&larr;</a></li>
+						
+						
+						<li class="new"><a class="internal" rel="next" href="/in-browser-design/2011/04/16/designing_in_browser/" title="インブラウザ デザイン">&rarr;</a></li>
+						
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p><a href="/" class="has-icon"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="has-icon" href="https://github.com/studiomohawk/CSS-Radar/issues/new">
+				<i class='icon-github'></i> Ask Me on Github
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+			</p>
+			<p>
+			CSS Radarでは記事を短編の技術書のように編集して、記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そこでCSS Radarでは私なりのベストプラクティスを集めていく事を編集方針としています。
+			</p>
+			<p>
+			最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報を共有</li>
+				<li><a href="http://seven.studiomohawk.com/" rel="me" title="Seven">Seven</a> / フロントエンドブックマーク</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="http://publicdraft.studiomohawk.com/" rel="me" title="Public Draft">Public Draft</a> / フロントエンド・リサーチログ</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<p class="madeintokyo">
+	Build by Yuya Saito. <a href="https://twitter.com/cssradar" rel="me" title="Twitter@cssradar">@cssradar</a><br>
+	Made Proudly in Tokyo.
+	</p>
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+
+</div><!-- #page -->
+<script src="/asset/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-11'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
+

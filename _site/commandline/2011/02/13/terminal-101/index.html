@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title itemprop="name" content="コマンドライン | CSS Radar">コマンドライン | CSS Radar | Little Books For Front End Developers</title>
+  <meta itemprop="description" name="description" property="og:description" content="コマンドラインについて Terminal.appは怖い。 GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。 Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。 MacVimをメインのエディタにしてから3ヶ月ほど、年明けからJekyllを使ってブログを作成しはじめた。Rubyを覚えてみようと今年から勉強中。 自分自身考えてもいなかったが、それらすべてがターミナルの便利さを教えてくれた。 MacVimでは、もちろんコマンドを実行できるが、コマンドそのものとは関係なく、インサートモードとノーマルモードの切り替えというメンタリティはGUIとCUIのメンタリティと似てる。それに覚えるのに時間はかかるかもしれないが、一旦覚えてしまうともう戻れない中毒性に近い利便性を手に入れる楽しみも覚えられた。 Jekyllはターミナルを使わなければブログの更新すら出来なくなる。基本的なコマンドはJekyllを使ううちに覚えてしまった。 Rubyはirbで実際にRubyを使って気楽に自分の書いたコードをテストしたりするのにターミナルを利用している。 ソースコードリーディングのテキストとしてお気に入りのHTML5 Boilerplateで、Build Scriptが追加され、フロントエンドデベロッパの間でも、自前のオートメーションを作ることが当たり前になってきそうな流れもある。 そんなタイミングだからこそ、ターミナルを使いこなせる人になろうと、こんな時代に提言したい。 私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるがきっかけさえつかんでしまえばどうにかなる。ちなみに私はWindowsではCygwinをConsoleから利用している。 まずは見た目からカスタマイズ 私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないがそんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。 だからこそターミナルにも見た目を要求したい。 Visor Visorはターミナルをショートカットキーで呼び出すことが出来るTerminal.appのヘルパ。control+controlで画面の1/3ほどのターミナル画面がスライドしてくる便利でかつ、おしゃれなツール。 MacではiTerm2というターミナル互換アプリも人気があるようで、こちらはVisorとは連動できないが、同じようにショートカットキーで呼び出すことができるオプションがある。 .bashrc(リンク先は私が利用している.bashrcファイルの一部) デフォルトでTerminalを開くと黒い背景に白い文字。あまりにも地味なので私はもう少しだけカラフルにしている。 そのついでにGitをターミナルで使いやすくなるようにブランチ名や変更を知らせてくれるマークもカラーをつけて表示している。 ちょっとカスタマイズしてあげるだけで気持ちよく利用することができる。 Mac...">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="">
+	
+  <meta property="og:image" content="http://css.studiomohawk.com/graph.png">
+  <meta property="og:site_name" content="CSS Radar | Little Books For Front End Developers">
+  <meta name="viewport" content="width=device-width">
+  <link href="http://css.studiomohawk.com/atom.xml" rel="alternate" title="CSS Radar | Little Books For Front End Developers" type="application/atom+xml">
+  <link rel="stylesheet" href="/asset/style/style.css">
+</head>
+<body>
+
+<div id="page" class="page page-post">
+<header class="the-header">
+<div class="unit unit-logo">
+	<div class="unit-inner">
+		<div class="mod">
+			<div class="inner">
+				<div class="hd"><p class="logo"><a href="/"><span class="logo-css">CSS</span><span class="logo-radar">Radar</span></a></p></div>
+			</div><!-- inner -->
+		</div><!-- mod -->
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</header>
+
+
+<div role="main" class="body">
+<div class="unit">
+<div class="unit-inner">
+<article class="the-article hentry">
+	<div class="mod">
+		<div class="inner">
+			<div class="hd">
+				<div class="group">
+				<h1 class="post-title">コマンドライン</h1>
+				
+				<time class="date-pub pubdate small" title="2011-02-13T00:00:00+09:00">
+					<span class="label">Published: </span>
+					<span class="month">Feb</span>
+					<span class="day">13</span>
+					<span class="year">2011</span>
+				</time>
+				</div><!-- group -->
+			</div>
+			<div class="bd">
+				<div class="content">
+					<h2 id="whatis">コマンドラインについて</h2>
+
+<p>Terminal.appは怖い。<br />
+GUIでなんだって出来る時代にパソコンに出会った私にとっても、それは変わらない。<br />
+Macをメインで使い始める前、たっぷり3年以上もUbuntuというLinuxディストリビューションをメインで使っていた私でも、Terminalで何かをしなければならない時しか開くことはなかった。  </p>
+
+<p>MacVimをメインのエディタにしてから3ヶ月ほど、年明けから<a href="https://github.com/mojombo/jekyll">Jekyll</a>を使ってブログを作成しはじめた。Rubyを覚えてみようと今年から勉強中。<br />
+自分自身考えてもいなかったが、それらすべてがターミナルの便利さを教えてくれた。  </p>
+
+<ul>
+  <li>MacVimでは、もちろんコマンドを実行できるが、コマンドそのものとは関係なく、インサートモードとノーマルモードの切り替えというメンタリティはGUIとCUIのメンタリティと似てる。それに覚えるのに時間はかかるかもしれないが、一旦覚えてしまうともう戻れない中毒性に近い利便性を手に入れる楽しみも覚えられた。</li>
+  <li>Jekyllはターミナルを使わなければブログの更新すら出来なくなる。基本的なコマンドはJekyllを使ううちに覚えてしまった。  </li>
+  <li>Rubyはirbで実際にRubyを使って気楽に自分の書いたコードをテストしたりするのにターミナルを利用している。</li>
+</ul>
+
+<p>ソースコードリーディングのテキストとしてお気に入りのHTML5 Boilerplateで、<a href="https://github.com/paulirish/html5-boilerplate/wiki/Build-script">Build
+Script</a>が追加され、フロントエンドデベロッパの間でも、自前のオートメーションを作ることが当たり前になってきそうな流れもある。
+そんなタイミングだからこそ、ターミナルを使いこなせる人になろうと、こんな時代に提言したい。</p>
+
+<p>私のように家ではMacで会社ではWindowsという人も多いだろう、今回はMacについての紹介になるがきっかけさえつかんでしまえばどうにかなる。ちなみに私はWindowsでは<a href="http://www.cygwin.com/">Cygwin</a>を<a href="http://sourceforge.net/projects/console/">Console</a>から利用している。</p>
+
+<h2 id="custom">まずは見た目からカスタマイズ</h2>
+
+<p>私はGUIアプリでも、たとえそれがいかに便利でも見た目が悪いと長続きしないタチ。本末転倒かもしれないがそんな性格がウェブデザイナとしての自分を支えていると思い込んでいる。<br />
+だからこそターミナルにも見た目を要求したい。</p>
+
+<ul>
+  <li>
+    <p><a href="http://visor.binaryage.com/">Visor</a></p>
+
+    <p>Visorはターミナルをショートカットキーで呼び出すことが出来るTerminal.appのヘルパ。<strong>control+control</strong>で画面の1/3ほどのターミナル画面がスライドしてくる便利でかつ、おしゃれなツール。<br />
+Macでは<a href="http://sites.google.com/site/iterm2home/">iTerm2</a>というターミナル互換アプリも人気があるようで、こちらはVisorとは連動できないが、同じようにショートカットキーで呼び出すことができるオプションがある。</p>
+  </li>
+  <li>
+    <p><a href="https://gist.github.com/824504">.bashrc</a>(リンク先は私が利用している.bashrcファイルの一部)</p>
+
+    <p>デフォルトでTerminalを開くと黒い背景に白い文字。あまりにも地味なので私はもう少しだけカラフルにしている。<br />
+そのついでに<a href="/tool/2011/01/29/git-version-control/">Git</a>をターミナルで使いやすくなるようにブランチ名や変更を知らせてくれるマークもカラーをつけて表示している。</p>
+  </li>
+</ul>
+
+<p>ちょっとカスタマイズしてあげるだけで気持ちよく利用することができる。  </p>
+
+<h3>Mac OSXでターミナルにgitのブランチ名を表示する方法</h3>
+
+<p>少し話から外れるがせっかくなのでその方法を紹介しよう。<br />
+まずはgitのオートコンプリーションを探してみよう。  </p>
+
+<p><code>/usr/local/git/contrib/completion/git-completion.bash</code></p>
+
+<p>通常であれば、上記のようなファイルがあるはずだ。もしなければ、<a href="https://github.com/git/git/tree/master/contrib/completion">こちら</a>にファイルがあるので、<code>/usr/local/git/contrib/completion/</code>というディレクトリに<code>git-completion.bash</code>という名前で保存してほしい。</p>
+
+<p>そして次は.bashrc。<br />
+MacVimを利用している人なら見覚えがある.(ドット)ファイル。.bashrcはTerminalの中で働いているBashの設定ファイル。</p>
+
+<p><a href="https://gist.github.com/824504">gist</a>にも置いてあるが</p>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># git settings</span>
+<span class="nb">source</span> /usr/local/git/contrib/completion/git-completion.bash
+<span class="nv">GIT_PS1_SHOWDIRTYSTATE</span><span class="o">=</span><span class="nb">true</span>
+<span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ &#39;</span>
+</code></pre>
+</div>
+
+<p>Git用のカスタマイズは上記の部分。こちらだけでも.bashrcファイルの最後の方に追加しておけば設定終了。<br />
+もし.bashrcファイルが見当たらないようであれば、</p>
+
+<div class="highlight"><pre><code class="bash">touch ~/.bashrc
+open ~/.bashrc
+</code></pre>
+</div>
+
+<p>として、開いたエディタに上記のスニペットを追加すればOK。</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">source</span> ~/.bashrc
+</code></pre>
+</div>
+
+<p>保存したら、上記のコマンドで変更を反映できる。</p>
+
+<h2 id="howto">ターミナルの使い方</h2>
+
+<p>私自身もまだまだ基本的なコマンドしかソラでは実行できない。必要に応じてコマンドは覚えていけばいいので、自分のペースで続けていってほしい。<br />
+まずはターミナルで使える便利なショートカットキーを、そして実際にいくつかコマンドを見ていこう。</p>
+
+<h3>ショートカットキー</h3>
+
+<ul>
+  <li><strong>control + A</strong> / 現在のラインの一番始めに移動</li>
+  <li><strong>control + H</strong> / 現在のラインの一番最後に移動</li>
+  <li><strong>control + U</strong> / 
+現在位置より手前のラインを削除。ラインの一番最後の場合はラインを削除になる。間違ってオートコンプリートしてしまったときや癖で上カーセルを叩いてしまった場合に便利</li>
+  <li><strong>control + C</strong> / 現在動作しているプロセスを終了する</li>
+  <li><strong>command + T</strong> / 新しくタブを作る。</li>
+  <li><strong>Tab</strong> / 
+ファイル名やディレクトリ名をオートコンプリートしてくれる。先ほど設定したgitのオートコンプリートも同じキーでOK</li>
+  <li><strong>上カーソル</strong> / ターミナルのヒストリを呼び出してくれる。</li>
+</ul>
+
+<p>ほかにもまだまだショートカットキーはあるが、私が普段使い出来るショートカットはこんな感じだ。</p>
+
+<h3>コマンド</h3>
+
+<ul>
+  <li>
+    <p><strong>cd</strong> </p>
+
+    <p>Change Directoryの略。<code>cd DIR_NAME</code>のように、移動したいディレクトリ名を入力する。<br />
+<code>Tab</code>を使ってオートコンプリートできるし。<code>cd DIR_NAME/CHILD_DIR_NAME</code>というようにさらに深い階層へもいける、/の後も数文字タイプしたらきちんとオートコンプリートしてくれる。<br />
+<code>cd ..</code>とすれば親ディレクトリに移動、<code>cd ~</code>とすればルートディレクトリに移動となる。</p>
+  </li>
+  <li><strong>pwd</strong> / 現在のディレクトリを表示してくれる。ふと迷子になりがちなので便利</li>
+  <li>
+    <p><strong>ls</strong></p>
+
+    <p>ディレクトリ内のファイル、ディレクトリを表示するコマンド。<br />
+<code>ls DIR_NAME</code>とすれば、DIR_NAMEの中のファイル、ディレクトリを表示。<br />
+<code>ls -l</code>とすると、ファイル、ディレクトリの詳細の情報つきでリスト表示。</p>
+  </li>
+  <li><strong>touch</strong> / ファイルを作成するコマンド。<code>touch style.css</code>とすれば現在のディレクトリにstyle.cssを生成してくれる。</li>
+  <li><strong>open</strong> / こちらはファイルやディレクトリを関連づけしてあるアプリで開いてくれるコマンド。</li>
+  <li><strong>mkdir</strong> / ディレクトリを生成するコマンド。<code>mkdir DIR_NAME</code>でDIR_NAMEというディレクトリを作成できる。</li>
+</ul>
+
+<p>まだまだたくさんのコマンドがあるが、私が安心して利用できる基本コマンドはこれくらいだ。ファイルをコピーしたり、削除したりするコマンドは不安が残るので少し慣れたら使い始めるといいだろう。<br />
+とりあえずのところは、<code>open DIR_NAME</code>としてFinderを立ち上げてコピーや削除をすれば問題ない。</p>
+
+<h2 id="package">パッケージマネジャ</h2>
+
+<p>Bashだけでももちろん協力なツールではあるがせっかくだからもっとたくさん機能を追加してみたい。<br />
+RubyやPython、Javaなどコマンドラインでも使える強力なツールがあるがこれらのツールを管理するのはとても大変。そのために<strong>パッケージマネジャ</strong>が必要になってくる。</p>
+
+<p>Macにはデフォルトで使えるパッケージマネジャはインストールされていない。MacPortやFink、そして今回紹介するHomebrewがMacではデファクトとされている。</p>
+
+<p><a href="http://mxcl.github.com/homebrew/">Homebrew</a>はシンプルで強力な新しい世代のパッケージマネジャ。非常に簡単にインストールできるし利用も簡単なので、初心者にはもってこいのパッケージマネジャ。<br />
+私はHomebrewでgitをインストールし直した。こちらのほうがアップデートが簡単にできるということで。</p>
+
+<h3>Homebrewのインストール</h3>
+
+<ol>
+  <li>
+    <p><a href="http://developer.apple.com/technologies/xcode.html">xcodeをインストール</a>、Macで開発するのに当たって絶対に必要になってくるのでxcodeをインストール。Homebrewでも使う。</p>
+  </li>
+  <li>
+    <p><code>ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"</code></p>
+  </li>
+</ol>
+
+<p>以上でインストールが完了する。<br />
+早速インストールが終わっているか確認してみよう。</p>
+
+<p><code>brew --version</code></p>
+
+<p>0.7.1らしいバージョンナンバが表示されれば問題ない。<br />
+それでは早速ツールをインストールしてみよう。</p>
+
+<p><code>brew install curl</code></p>
+
+<p>curlはさまざまなプロトコルを用いてデータを転送するライブラリ。(by <a href="http://ja.wikipedia.org/wiki/CURL">Wikipedia
+cURL</a>)</p>
+
+<p><code>brew search</code>とすればインストールできるツールの一覧を表示。<code>brew list</code>とするとインストールされているツールの一覧を表示。</p>
+
+<p>英語ではあるがbrewのコマンドは<a href="https://github.com/mxcl/homebrew/wiki/The-brew-command">こちら</a></p>
+
+<h2 id="conclusion">ターミナルの世界へようこそ</h2>
+
+<p>ここまでできたらすっかりコマンド使いっぽく見える。コマンドラインになれてきたら次のステップはオートメーション。<br />
+私はRubyのRakeを使っていろいろなタスクを自動化しはじめている。<br />
+興味があれば、まずはHTML5 Boilerplateの<a href="https://github.com/paulirish/html5-boilerplate/wiki/Build-script">Build Script</a>について調べてみるといいだろう。<br />
+現時点ではHTMLを圧縮したり、CSSをコンバインして圧縮したり、Jpeg、PNGのファイルサイズを最適化したりと実に様々なフロントエンドなタスクを自動化している。HTML5 Boilerplateではantというビルドツールを活用している。  </p>
+
+<p>Rubyでは<a href="https://github.com/flyerhzm/css_sprite">CSS Spriteを自動化</a>したりすることもできるようなのであの30分はかかりそうな面倒なspriteも自動で行うことができるわけだ。</p>
+
+<p>どこかの本で読んだことの受け売りだが60分かかるタスクがあるとしたら、59分かけてそのタスクを行うスクリプトを書いて、1分で実行する。これからのウェブデザイン/フロントエンドデベロッパにはそんな心構えが必要になってくるだろう。</p>
+
+				</div>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+</article>
+</div><!-- unit-inner -->
+</div><!-- unit -->
+<div class="unit unit-nav">
+	<div class="unit-inner">
+			<div class="bd">
+				<div class="group">
+					<nav class="page-nav">
+					<ul>
+						
+						<li class="old"><a class="internal" rel="prev" href="/git/2011/01/29/git-version-control/" title="Git バージョンコントロール">&larr;</a></li>
+						
+						
+						<li class="new"><a class="internal" rel="next" href="/html5-boilerplate/2011/03/15/html5boilerplate/" title="HTML5 Boilerplate">&rarr;</a></li>
+						
+						</ul>
+					</nav><!-- /.page-nav-bottom -->
+				</div><!-- group -->
+			</div>
+	</div>
+</div>
+</div><!-- body -->
+
+<footer class="the-footer">
+<div class="unit">
+	<div class="unit-inner">
+	
+		<div class="mod mod-home">
+		<div class="inner">
+			<div class="bd">
+				<p><a href="/" class="has-icon"><i class="icon-home"></i> Home</a></p>
+			</div>
+		</div><!-- inner -->
+	</div><!-- mod -->
+
+	
+	<div class="mod mod-question">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Questions?</h4>
+		</div>
+		<div class="bd">
+			<p>
+			<a class="has-icon" href="https://github.com/studiomohawk/CSS-Radar/issues/new">
+				<i class='icon-github'></i> Ask Me on Github
+      </a>
+			</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-about">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">About</h4>
+		</div>
+		<div class="bd">
+			<p>
+			現役フロントエンドデベロッパ/ウェブデザイナ、斉藤祐也がフロントエンドにまつわる情報やTipsを紹介。2〜3年は遅れているという日本のウェブをアップデートしたい。そんな思いで更新していきます。
+			</p>
+			<p>
+			CSS Radarでは記事を短編の技術書のように編集して、記事はすべて可能な限り最新の情報にアップデートをしています。フロントエンドデベロッパが立ち向かわなければいけない問題への解決はGoogleで検索すればすぐに見つかる時代。そこでCSS Radarでは私なりのベストプラクティスを集めていく事を編集方針としています。
+			</p>
+			<p>
+			最新の情報については、<a href="https://twitter.com/intent/user?user_id=107867741">Twitter@cssradar</a>にて紹介しています。</p>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<div class="mod mod-elsewhere">
+	<div class="inner">
+		<div class="hd">
+			<h4 class="h2">Elsewhere</h4>
+		</div>
+		<div class="bd">
+			<ul class="list-square">
+				<li><a href="http://twitter.com/#!/cssradar" rel="me" title="cssradar@twitter">cssradar@twitter</a> / 1日5件以内でフロントエンドな情報を共有</li>
+				<li><a href="http://seven.studiomohawk.com/" rel="me" title="Seven">Seven</a> / フロントエンドブックマーク</li>
+				<li><a href="http://enja.studiomohawk.com/" rel="me" title="en.ja">en.ja</a> / フロントエンダのための翻訳記事</li>
+				<li><a href="http://publicdraft.studiomohawk.com/" rel="me" title="Public Draft">Public Draft</a> / フロントエンド・リサーチログ</li>
+				<li><a href="https://github.com/studiomohawk" rel="me" title="github">github</a> / このブログのソースも公開してます</li>
+				<li><a href="http://pinboard.in/u:studiomohawk" rel="me" title="Pinboard">Pinboard</a> / カオスにならないようきちんとモニタ</li>
+				<li><a href="http://500px.com/studiomohawk/photos" rel="me" title="500px">500px</a> / 趣味は写真。Nikon D90ユーザ</li>
+			</ul>
+		</div>
+	</div><!-- inner -->
+</div><!-- mod -->
+
+	<p class="madeintokyo">
+	Build by Yuya Saito. <a href="https://twitter.com/cssradar" rel="me" title="Twitter@cssradar">@cssradar</a><br>
+	Made Proudly in Tokyo.
+	</p>
+	</div><!-- unit-inner -->
+</div><!-- unit -->
+</footer>
+
+</div><!-- #page -->
+<script src="/asset/script/script.js"></script>
+<!-- end scripts -->
+<script>
+var _gaq=[['_setAccount','UA-61203-11'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
+

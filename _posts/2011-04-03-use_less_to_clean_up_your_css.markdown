@@ -1,17 +1,10 @@
 ---
 layout: post
-title: LESS - CSSプリプロフェッサ
+title: LESS - CSSプリプロセッサ
 category: less
 date: 2011-04-03 12:51:36
 update: 2012-01-18T10:57:14+09:00
 tldr: "LESSやSASSのようなメタ言語はCSSの開発を劇的に変えることができるツール。ここではそのうちLESSについて。ツールに振り回されるのではなくツールを使いこなすために知っておきたいことを紹介しよう。"
-toc:
-- {text: CSSプリプロフェッサとは, hash: whatis}
-- {text: LESSでできること, hash: feature}
-- {text: 便利なミックスインのコレクション, hash: mixin}
-- {text: 使い方, hash: usage}
-- {text: CSSへのコンパイル, hash: compile}
-- {text: 参考リンク, hash:link}
 ---
 
 ## 時短、効率、スピードアップのためのはじめてのLESS入門 @ SwapSkills

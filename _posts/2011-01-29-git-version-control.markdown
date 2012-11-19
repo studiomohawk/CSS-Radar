@@ -6,16 +6,6 @@ date: 2011-01-29 00:00:00
 update: 2011-12-03T01:40:50+09:00
 tldr: "バージョンコントロールといえばGit。あのLinus
 Torvalds氏が作っただけにシンプルで使いやすいGitを使ってバージョンコントロールをしよう。そう、今すぐにでもはじめて1つ心配事を減らす。GUIも沢山あるので思っているよりは簡単に使えるはず。マスターしなくてもいいので、知っている技だけを使ってバックアップだらけのフォルダに別れを告げよう。"
-toc:
-- {text: バージョンコントロールについて, hash: whatis}
-- {text: Gitのインストール, hash: install}
-- {text: Gitの基本用語, hash: term}
-- {text: gitをインストールした後にやるべきこと, hash: todo}
-- {text: Gitの基本的なワークフロー, hash: workflow}
-- {text: GitのTips & Tricks, hash: tips}
-- {text: Githubの使い方, hash: github}
-- {text: ヘルパスクリプト, hash: helper}
-- {text: 参考リンク, hash: link}
 ---
 
 ## バージョンコントロールについて {#whatis}
