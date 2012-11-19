@@ -377,8 +377,8 @@ blockquote {
   body {
     font-size: 24px;
     font-size: 2.4rem;
-    line-height: 1.5;
-/* 36px */
+    line-height: 2;
+/* 48px */
   }
   h1,
   .h1,
@@ -392,8 +392,8 @@ blockquote {
   .h5,
   h6,
   .h6 {
-    margin-bottom: 36px;
-    margin-bottom: 3.6rem;
+    margin-bottom: 48px;
+    margin-bottom: 4.8rem;
     font-weight: bold;
   }
   p,
@@ -402,8 +402,8 @@ blockquote {
   dl,
   blockquote,
   .the-article img {
-    margin-bottom: 36px;
-    margin-bottom: 3.6rem;
+    margin-bottom: 48px;
+    margin-bottom: 4.8rem;
   }
   h1,
   .h1 {
@@ -1416,8 +1416,8 @@ html {
   font-weight: bold;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
   text-align: center;
-  width: 36px;
-  width: 3.6rem;
+  width: 48px;
+  width: 4.8rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
