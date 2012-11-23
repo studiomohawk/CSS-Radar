@@ -140,6 +140,8 @@ input[disabled] {
 }
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 /* 1 */
   padding: 0;
@@ -151,6 +153,8 @@ input[type="search"] {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
 /* 2 */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -194,9 +198,19 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
+  background: 1px solid #4d4d4c;
+  margin: 2em 0;
   padding: 0;
+  background-image: -webkit-linear-gradient(left, #ccc, #4d4d4c, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #4d4d4c, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #4d4d4c, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #4d4d4c, #ccc);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #ccc), color-stop(0.33333333333333326, #4d4d4c), color-stop(1, #ccc));
+  background-image: -webkit-linear-gradient(left, #ccc 0%, #4d4d4c 33.33333333333333%, #ccc 100%);
+  background-image: -moz-linear-gradient(left, #ccc 0%, #4d4d4c 33.33333333333333%, #ccc 100%);
+  background-image: -o-linear-gradient(left, #ccc 0%, #4d4d4c 33.33333333333333%, #ccc 100%);
+  background-image: -ms-linear-gradient(left, #ccc 0%, #4d4d4c 33.33333333333333%, #ccc 100%);
+  background-image: linear-gradient(left, #ccc 0%, #4d4d4c 33.33333333333333%, #ccc 100%);
 }
 img {
   vertical-align: middle;
@@ -213,87 +227,126 @@ textarea {
   list-style: square;
   padding-left: 0;
 }
+.list-none {
+  list-style: none;
+  padding-left: 0;
+}
 @font-face {
   font-family: 'Outage';
   src: url("/asset/font/Outage.eot?#iefix") format('embedded-opentype'), url("/asset/font/Outage.woff") format('woff'), url("/asset/font/Outage.ttf") format('truetype'), url("/asset/font/Outage.svg#svgFontName") format('svg');
+}
+@font-face {
+  font-family: 'nounproject';
+  src: url("/asset/font/icon/icomoon-nanoproject.eot?#iefix") format('embedded-opentype'), url("/asset/font/icon/icomoon-nanoproject.woff") format('woff'), url("/asset/font/icon/icomoon-nanoproject.ttf") format('truetype'), url("/asset/font/icon/icomoon-nanoproject.svg#nounproject") format('svg');
 }
 html {
   font-size: 62.5%;
 }
 body {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 2;
+  font-size: 1.6em;
+  line-height: 2em;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", Osaka, Sans-Serif;
 }
 .logo {
-  font-size: 48px;
-  font-size: 4.8rem;
-}
-.logo-css:after {
-  display: inline-block;
-  content: '©';
-  font-size: 72px;
-  font-size: 7.2rem;
-  position: relative;
-  top: 10px;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  margin-top: 0;
-  margin-bottom: 32px;
-  margin-bottom: 3.2rem;
-  font-weight: bold;
-  -moz-font-feature-settings: "liga=1, kern=1";
-  -ms-font-feature-settings: "liga" 1, "kern" 1;
-  text-rendering: optimizeLegibility;
+  font-size: 4em;
 }
 p,
 ul,
 ol,
 dl,
 blockquote,
-.the-article img {
-  margin-top: 0;
-  margin-bottom: 32px;
-  margin-bottom: 3.2rem;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+pre,
+td,
+th,
+label,
+textarea,
+caption {
+  font-size: 1em;
+/* equiv 16px */
+  line-height: 2em;
+  margin: 0 0 2em 0;
 }
 h1,
 .h1 {
-  font-size: 36px;
-  font-size: 3.6rem;
-  line-height: 1.5;
+  font-size: 3.25em;
+/* equiv 52px */
+  line-height: 1.2308em;
+  margin: 0 0 0.6154em 0;
 }
 h2,
 .h2 {
-  font-size: 32px;
-  font-size: 3.2rem;
-  line-height: 1;
+  font-size: 2.5em;
+/* equiv 40px */
+  line-height: 1.6em;
+  margin: 0 0 0.8em 0;
 }
 h3,
 .h3 {
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 1.5;
+  font-size: 1.75em;
+/* equiv 28px */
+  line-height: 1.1429em;
+  margin: 0 0 1.1429em 0;
+}
+h4,
+.h4 {
+  font-size: 1.375em;
+/* equiv 22px */
+  line-height: 1.4545em;
+  margin: 0 0 1.4545em 0;
+}
+h5,
+.h5 {
+  font-size: 1.1875em;
+/* equiv 19px */
+  line-height: 1.6842em;
+  margin: 0 0 1.6842em 0;
+}
+h6,
+.h6 {
+  font-size: 1em;
+/* equiv 16px */
+  line-height: 2em;
+  margin: 0 0 2em 0;
 }
 small,
 .small {
-  font-size: 14.299999999999999px;
-  font-size: 1.43rem;
-  line-height: 2.25;
+  font-size: 0.25em;
+/* equiv 4px */
+  line-height: 8em;
+  margin: 8em 0 8em 0;
+}
+.the-article .hd > .group {
+  margin-bottom: 1.8em;
+}
+.unit-nav a {
+  width: 2em;
+}
+.the-footer .unit {
+  padding: 2em 0;
+}
+li p,
+li ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+textarea,
+table,
+td,
+th,
+code,
+pre,
+samp,
+div,
+p {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 pre,
 code {
@@ -305,164 +358,220 @@ pre {
   word-wrap: break-word;
 }
 blockquote {
-  border-left: 0.5rem solid rgba(21,25,25,0.8);
-  padding-left: 1rem;
-  margin-left: -1.5rem;
+  border-left: 0.5em solid rgba(21,25,25,0.8);
+  padding-left: 1em;
+  margin-left: -1.5em !important;
   margin-right: 0;
 }
 @media only screen and (min-width: 768px) {
   body {
-    font-size: 20px;
-    font-size: 2rem;
-    line-height: 1.8;
+    font-size: 2em;
+    line-height: 2;
   }
   .logo {
-    font-size: 72px;
-    font-size: 7.2rem;
-    line-height: normal;
+    font-size: 3.4em;
   }
-  .logo-css:after {
-    font-size: 144px;
-    font-size: 14.4rem;
-    position: relative;
-    top: 28px;
-  }
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6,
   p,
   ul,
   ol,
   dl,
   blockquote,
-  .the-article img {
-    margin-bottom: 36px;
-    margin-bottom: 3.6rem;
+  pre,
+  td,
+  th,
+  label,
+  textarea,
+  caption {
+    font-size: 1em;
+/* equiv 20px */
+    line-height: 2em;
+    margin: 0 0 2em 0;
   }
   h1,
   .h1 {
-    font-size: 36px;
-    font-size: 3.6rem;
-    line-height: 1.5;
+    font-size: 2.8em;
+/* equiv 56px */
+    line-height: 1.4286em;
+    margin: 0 0 0.7143em 0;
   }
   h2,
   .h2 {
-    font-size: 32px;
-    font-size: 3.2rem;
-    line-height: 1;
+    font-size: 2.2em;
+/* equiv 44px */
+    line-height: 1.8182em;
+    margin: 0 0 0.9091em 0;
   }
   h3,
   .h3 {
-    font-size: 24px;
-    font-size: 2.4rem;
-    line-height: 1.5;
+    font-size: 1.6em;
+/* equiv 32px */
+    line-height: 1.25em;
+    margin: 0 0 1.25em 0;
+  }
+  h4,
+  .h4 {
+    font-size: 1.3em;
+/* equiv 26px */
+    line-height: 1.5385em;
+    margin: 0 0 1.5385em 0;
+  }
+  h5,
+  .h5 {
+    font-size: 1.15em;
+/* equiv 23px */
+    line-height: 1.7391em;
+    margin: 0 0 1.7391em 0;
+  }
+  h6,
+  .h6 {
+    font-size: 1em;
+/* equiv 20px */
+    line-height: 2em;
+    margin: 0 0 2em 0;
   }
   small,
   .small {
-    font-size: 14.299999999999999px;
-    font-size: 1.43rem;
-    line-height: 2.25;
+    font-size: 0.4em;
+/* equiv 8px */
+    line-height: 5em;
+  }
+  .the-article .hd > .group {
+    margin-bottom: 1.8em;
+  }
+  .unit-nav a {
+    width: 2em;
+  }
+  .the-footer .unit {
+    padding: 2em 0;
   }
 }
 @media only screen and (min-width: 992px) {
   body {
-    font-size: 24px;
-    font-size: 2.4rem;
-    line-height: 2;
+    font-size: 2.4em;
+    line-height: 2em;
 /* 48px */
   }
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6 {
-    margin-bottom: 48px;
-    margin-bottom: 4.8rem;
-    font-weight: bold;
+  .logo {
+    font-size: 3em;
   }
   p,
   ul,
   ol,
   dl,
   blockquote,
-  .the-article img {
-    margin-bottom: 48px;
-    margin-bottom: 4.8rem;
+  pre,
+  td,
+  th,
+  label,
+  textarea,
+  caption {
+    font-size: 1em;
+/* equiv 24px */
+    line-height: 2em;
+    margin: 0 0 2em 0;
   }
   h1,
   .h1 {
-    font-size: 48px;
-    font-size: 4.8rem;
-    line-height: 1.5;
+    font-size: 2.5em;
+/* equiv 60px */
+    line-height: 1.6em;
+    margin: 0 0 0.8em 0;
   }
   h2,
   .h2 {
-    font-size: 36px;
-    font-size: 3.6rem;
-    line-height: 1;
+    font-size: 2em;
+/* equiv 48px */
+    line-height: 1em;
+    margin: 0 0 1em 0;
   }
   h3,
   .h3 {
-    font-size: 24px;
-    font-size: 2.4rem;
-    line-height: 1.5;
+    font-size: 1.5em;
+/* equiv 36px */
+    line-height: 1.3333em;
+    margin: 0 0 1.3333em 0;
+  }
+  h4,
+  .h4 {
+    font-size: 1.25em;
+/* equiv 30px */
+    line-height: 1.6em;
+    margin: 0 0 1.6em 0;
+  }
+  h5,
+  .h5 {
+    font-size: 1.125em;
+/* equiv 27px */
+    line-height: 1.7778em;
+    margin: 0 0 1.7778em 0;
+  }
+  h6,
+  .h6 {
+    font-size: 1em;
+/* equiv 24px */
+    line-height: 2em;
+    margin: 0 0 2em 0;
   }
   small,
   .small {
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 2.25;
+    font-size: 0.5em;
+/* equiv 12px */
+    line-height: 4em;
+    margin: 4em 0 4em 0;
+  }
+  .the-article .hd > .group {
+    margin-bottom: 1.8em;
+  }
+  .unit-nav a {
+    width: 2em;
+  }
+  .the-footer .unit {
+    padding: 2em 0;
   }
 }
 a,
 a:link,
 a:visited {
   text-decoration: none;
-  color: #1d1f21;
+  color: #4d4d4c;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 a:hover {
-  color: #000;
+  color: #363635;
 }
 a:active {
   outline: none;
 }
+a:hover .logo-css:after {
+  color: #b5bd68;
+}
 .post-title a:hover {
-  border-bottom: 1px solid #cc092f;
-  color: #d12d41;
+  border-bottom: 1px solid #c82829;
+  color: #c82829;
 }
-.page-post .content a,
-.page-post .content a:link,
-.page-post .content a:visited {
-  border-bottom: 1px dotted #1d1f21;
+.content a,
+.content a:link,
+.content a:visited {
+  border-bottom: 1px dotted #4d4d4c;
   text-decoration: none;
-  color: #1d1f21;
+  color: #4d4d4c;
 }
-.page-post .content a:hover {
-  border-bottom: 1px solid #cc092f;
-  color: #a60726;
+.content a:hover {
+  border-bottom: 1px solid #c82829;
+  color: #c82829;
 }
 .the-footer a,
 .the-footer a:link,
 .the-footer a:visited {
-  border-bottom: 1px dotted #fafafa;
+  border-bottom: 1px dotted #fff;
   text-decoration: none;
-  color: #fafafa;
+  color: #fff;
 }
 .the-footer a:hover {
   border-bottom: 0 none;
@@ -472,12 +581,9 @@ a:active {
 .has-icon:link,
 .has-icon:visited {
   border-bottom: 0 none !important;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  transition-duration: 0.2s;
 }
 .has-icon:hover {
-  color: #a60726 !important;
+  color: #c82829 !important;
 }
 .highlight {
   margin-bottom: 1.5rem;
@@ -1355,23 +1461,34 @@ primary: Yuya Saito @ http://twitter.com/cssradar
 ============================================================================= */
 html {
   background: url("/asset/texture/clean_textile.png") repeat 0 0;
-  color: #1d1f21;
+  color: #4d4d4c;
+  border-top: solid 8px #b5bd68;
 }
 .unit-inner {
   width: 330px;
   margin: 0 auto;
 }
-.logo {
-  font-family: 'Outage', sans-serif;
+.unit-logo {
+  padding: 4em 0 4.5em;
 }
 .logo-css:after {
+  font-family: 'nounproject';
+  content: "\e31f";
   display: inline-block;
-  content: '©';
-  color: #b9ca4a;
+  position: relative;
+  top: 6px;
+  margin: 0 6px;
 }
-.the-article .hd > .group {
-  margin-bottom: 31px;
-  margin-bottom: 3.1rem;
+.logo {
+  font-family: 'Outage', sans-serif;
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  top: 6px;
+}
+.group-title {
+  text-align: center;
 }
 .post-title {
   margin-bottom: 0;
@@ -1381,12 +1498,45 @@ html {
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
+  margin: 0 !important;
   position: relative;
   top: -5px;
 }
 .date-pub.update:after {
   content: '/';
   display: inline-block;
+}
+.content h1,
+.content .h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.content ul {
+  list-style: square;
+  padding-left: 0;
+}
+.content ol {
+  list-style: decimal;
+  padding-left: 0;
+}
+.content p code,
+.content li code {
+  font-family: "Ubuntu Mono", Monaco, Consolas, "Lucida Console", monospace, monospace;
+  margin: 0 2px;
+  padding: 0px 5px;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.content .highlight pre {
+  color: #fafafa;
+  background-color: #1d1f21;
+  margin: 0;
+  padding: 1.8rem;
+}
+.content pre code {
+  font-family: "Ubuntu Mono", Monaco, Consolas, "Lucida Console", monospace, monospace;
 }
 .unit-nav {
   background: rgba(204,204,204,0.2);
@@ -1416,14 +1566,21 @@ html {
   font-weight: bold;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
   text-align: center;
-  width: 48px;
-  width: 4.8rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
   transition-duration: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1441,9 +1598,6 @@ html {
   background: url("/asset/texture/px_by_Gre3g.png") repeat 0 0;
   color: #fafafa;
 }
-.the-footer .unit {
-  padding: 3.6rem 0;
-}
 .madeintokyo {
   margin-bottom: 0;
 }
@@ -1452,37 +1606,6 @@ page specific
 ============================================================================= */
 /* post
 ============================================================================= */
-.page-post h1,
-.page-post .h1 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.page-post .content ul {
-  list-style: square;
-  padding-left: 0;
-}
-.page-post .content ol {
-  list-style: decimal;
-  padding-left: 0;
-}
-.page-post p code,
-.page-post li code {
-  font-family: "Ubuntu Mono", Monaco, Consolas, "Lucida Console", monospace, monospace;
-  margin: 0 2px;
-  padding: 0px 5px;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  border-radius: 3px;
-}
-.page-post .highlight pre {
-  color: #fafafa;
-  background-color: #1d1f21;
-  margin: 0;
-  padding: 1.8rem;
-}
-.page-post pre code {
-  font-family: "Ubuntu Mono", Monaco, Consolas, "Lucida Console", monospace, monospace;
-}
 /* ==========================================================================
 media queries
 ============================================================================= */

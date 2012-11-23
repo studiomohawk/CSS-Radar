@@ -28,9 +28,14 @@ hr {
 	display: block;
 	height: 1px;
 	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
+	background: 1px solid #4d4d4c;
+	margin: 2em 0;
 	padding: 0;
+	background-image: -webkit-linear-gradient(left, #ccc, #4d4d4c, #ccc);
+	background-image: -moz-linear-gradient(left, #ccc, #4d4d4c, #ccc);
+	background-image: -o-linear-gradient(left, #ccc, #4d4d4c, #ccc);
+	background-image: -ms-linear-gradient(left, #ccc, #4d4d4c, #ccc);
+	background-image: linear-gradient(left, #ccc, #4d4d4c, #ccc);
 }
 
 img {
@@ -49,5 +54,9 @@ textarea {
 
 .list-square {
 	list-style: square;
+	padding-left: 0;
+}
+.list-none {
+	list-style: none;
 	padding-left: 0;
 }

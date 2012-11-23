@@ -2,45 +2,50 @@ a,
 a:link,
 a:visited {
 	text-decoration: none;
-	color: #1d1f21;
+	color: foreground;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;
 }
 a:hover {
-	color: #000;
+	color: darken(foreground, 30%);
 }
 a:active {
 	outline: none;
 }
-
-.post-title a:hover {
-	border-bottom: 1px solid #CC092F;
-	color: #D12D41;
+a:hover .logo-css:after {
+	color: green;
 }
-
-.page-post .content {
+.post-title {
+	a:hover {
+		border-bottom: 1px solid red;
+		color: red;
+	}
+}
+.content {
 	a,
 	a:link,
 	a:visited {
-		border-bottom: 1px dotted #1d1f21;
+		border-bottom: 1px dotted foreground;
 		text-decoration: none;
-		color: #1d1f21;
+		color: foreground;
 	}
 	a:hover {
-		border-bottom: 1px solid #CC092F;
-		color: #a60726;
+		border-bottom: 1px solid red;
+		color: red;
 	}
 }
-
 .the-footer {
 	a,
 	a:link,
 	a:visited {
-		border-bottom: 1px dotted #fafafa;
+		border-bottom: 1px dotted background;
 		text-decoration: none;
-		color: #fafafa;
+		color: background;
 	}
 	a:hover {
 		border-bottom: 0 none;
-		color: #fff;
+		color: lighten(background, 30%);
 	}
 // the-footer 
 }
@@ -48,10 +53,7 @@ a:active {
 .has-icon:link,
 .has-icon:visited {
 	border-bottom: 0 none !important;
-	-webkit-transition-duration: 0.2s;
-	-moz-transition-duration: 0.2s;
-	transition-duration: 0.2s;
 }
 .has-icon:hover {
-	color: #a60726 !important;
+	color: red !important;
 }

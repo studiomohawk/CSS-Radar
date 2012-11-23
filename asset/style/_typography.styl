@@ -4,77 +4,96 @@ rem(sizeValue) {
 	font-size: sizeValue rem;
 }
 
-
 html {
 	font-size: 62.5%;
 }
 body {
-	rem(1.6);
-	line-height: 2;
+	font-size: 1.6em;
+	line-height: 2em;
 	cssradar();
 }
 .logo {
-	rem(4.8);
-}
-.logo-css:after {
-	display: inline-block;
-	content: '©';
-	rem(7.2)
-	position: relative;
-	top: 10px;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4
-h5,
-.h5
-h6,
-.h6 {
-	margin-top: 0;
-	margin-bottom: 32px;
-	margin-bottom: 3.2rem;
-	font-weight: bold;
-	-moz-font-feature-settings: "liga=1, kern=1";
-	-ms-font-feature-settings: "liga" 1,"kern" 1;
-	text-rendering: optimizeLegibility;
+	font-size: 4em;
 }
 p,
 ul,
 ol,
 dl,
 blockquote,
-.the-article img {
-	margin-top: 0;
-	margin-bottom: 32px;
-	margin-bottom: 3.2rem;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
+pre,
+td,
+th,
+label,
+textarea,
+caption {
+  font-size: 1em; /* equiv 16px */
+  line-height: 2em;
+  margin: 0 0 2em 0;
 }
 h1,
 .h1 {
-	rem(3.6);
-	line-height: 1.5;
+  font-size: 3.25em; /* equiv 52px */
+  line-height: 1.2308em;
+  margin: 0 0 .6154em 0;
 }
 h2,
 .h2 {
-	rem(3.2)
-	line-height: 1;
+  font-size: 2.5em; /* equiv 40px */
+  line-height: 1.6em;
+  margin: 0 0 .8em 0;
 }
 h3,
 .h3 {
-	rem(2.4)
-	line-height: 1.5;
+  font-size: 1.75em; /* equiv 28px */
+  line-height: 1.1429em;
+  margin: 0 0  1.1429em 0;
 }
-small,
-.small {
-	rem(1.43);
-	line-height: 2.25;
+h4,
+.h4 {
+  font-size: 1.375em; /* equiv 22px */
+  line-height: 1.4545em;
+  margin: 0 0  1.4545em 0;
+}
+h5,
+.h5 {
+  font-size: 1.1875em; /* equiv 19px */
+  line-height: 1.6842em;
+  margin: 0 0  1.6842em 0;
+}
+h6,
+.h6 {
+  font-size: 1em; /* equiv 16px */
+  line-height: 2em;
+  margin: 0 0  2em 0;
+}
+small, .small {
+  font-size: .25em; /* equiv 4px */
+  line-height: 8em;
+  margin: 8em 0  8em 0;
+}
+.the-article .hd > .group {
+	margin-bottom: 1.8em;
+}
+.unit-nav a {
+	width: 2em;
+}
+.the-footer .unit {
+	padding: 2em 0;
+}
+
+/* avoid supp margin on nested elements */
+li p, li ul{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+/* you shall not pass */
+textarea, table, td, th, code, pre, samp, div, p {
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
 }
 pre,
 code { -webkit-font-smoothing: subpixel-antialiased }
@@ -84,117 +103,157 @@ pre {
 	word-wrap: break-word;
 }
 blockquote {
-  border-left: 0.5rem solid rgba(21, 25, 25, 0.8);
-  padding-left: 1rem;
-  margin-left: -1.5rem;
+  border-left: 0.5em solid rgba(21, 25, 25, 0.8);
+  padding-left: 1em;
+  margin-left: -1.5em !important;
   margin-right: 0;
 }
 @media only screen and (min-width: 768px) { 
 	/* 768 =================================================== */
 	body {
-		rem(2.0);
-		line-height: 1.8;
+		font-size: 2em;
+		line-height: 2;
 	}
 	.logo {
-		rem(7.2);
-		line-height: normal;
+		font-size: 3.4em;
 	}
-	.logo-css:after {
-		rem(14.4)
-		position: relative;
-		top: 28px;
-	}
-	h1,
-	.h1,
-	h2,
-	.h2,
-	h3,
-	.h3,
-	h4,
-	.h4
-	h5,
-	.h5
-	h6,
-	.h6,
 	p,
 	ul,
 	ol,
 	dl,
 	blockquote,
-	.the-article img {
-  	margin-bottom: 36px;
-  	margin-bottom: 3.6rem;
+	pre,
+	td,
+	th,
+	label,
+	textarea,
+	caption {
+		font-size: 1em; /* equiv 20px */
+		line-height: 2em;
+		margin: 0 0 2em 0;
 	}
 	h1,
 	.h1 {
-		rem(3.6);
-  	line-height: 1.5;
+		font-size: 2.8em; /* equiv 56px */
+		line-height: 1.4286em;
+		margin: 0 0 .7143em 0;
 	}
 	h2,
 	.h2 {
-		rem(3.2)
-		line-height: 1;
+		font-size: 2.2em; /* equiv 44px */
+		line-height: 1.8182em;
+		margin: 0 0 .9091em 0;
 	}
 	h3,
 	.h3 {
-		rem(2.4)
-		line-height: 1.5;
+		font-size: 1.6em; /* equiv 32px */
+		line-height: 1.25em;
+		margin: 0 0  1.25em 0;
 	}
-	small,
-	.small {
-		rem(1.43);
-  	line-height: 2.25;
+	h4,
+	.h4 {
+		font-size: 1.3em; /* equiv 26px */
+		line-height: 1.5385em;
+		margin: 0 0  1.5385em 0;
+	}
+	h5,
+	.h5 {
+		font-size: 1.15em; /* equiv 23px */
+		line-height: 1.7391em;
+		margin: 0 0  1.7391em 0;
+	}
+	h6,
+	.h6 {
+		font-size: 1em; /* equiv 20px */
+		line-height: 2em;
+		margin: 0 0  2em 0;
+	}
+	small, .small {
+		font-size: .4em; /* equiv 8px */
+		line-height: 5em;
+	}
+	.the-article .hd > .group {
+		margin-bottom: 1.8em;
+	}
+	.unit-nav a {
+		width: 2em;
+	}
+	.the-footer .unit {
+		padding: 2em 0;
 	}
 }
 @media only screen and (min-width: 992px) { 
 	/* 992 =================================================== */
 	body {
-		rem(2.4);
-		line-height: 2; /* 48px */
+		font-size: 2.4em;
+		line-height: 2em; /* 48px */
 	}
-	h1,
-	.h1,
-	h2,
-	.h2,
-	h3,
-	.h3,
-	h4,
-	.h4
-	h5,
-	.h5
-	h6,
-	.h6 {
-		margin-bottom: 48px;
-		margin-bottom: 4.8rem;
-		font-weight: bold;
+	.logo {
+		font-size: 3em;
 	}
 	p,
 	ul,
 	ol,
 	dl,
 	blockquote,
-	.the-article img {
-		margin-bottom: 48px;
-		margin-bottom: 4.8rem;
+	pre,
+	td,
+	th,
+	label,
+	textarea,
+	caption {
+		font-size: 1em; /* equiv 24px */
+		line-height: 2em;
+		margin: 0 0 2em 0;
 	}
 	h1,
 	.h1 {
-		rem(4.8);
-		line-height: 1.5;
+		font-size: 2.5em; /* equiv 60px */
+		line-height: 1.6em;
+		margin: 0 0 .8em 0;
 	}
 	h2,
 	.h2 {
-		rem(3.6)
-		line-height: 1;
+		font-size: 2em; /* equiv 48px */
+		line-height: 1em;
+		margin: 0 0 1em 0;
 	}
 	h3,
 	.h3 {
-		rem(2.4)
-		line-height: 1.5;
+		font-size: 1.5em; /* equiv 36px */
+		line-height: 1.3333em;
+		margin: 0 0 1.3333em 0;
 	}
-	small,
-	.small {
-		rem(1.6);
-		line-height: 2.25;
+	h4,
+	.h4 {
+		font-size: 1.25em; /* equiv 30px */
+		line-height: 1.6em;
+		margin: 0 0 1.6em 0;
+	}
+	h5,
+	.h5 {
+		font-size: 1.125em; /* equiv 27px */
+		line-height: 1.7778em;
+		margin: 0 0 1.7778em 0;
+	}
+	h6,
+	.h6 {
+		font-size: 1em; /* equiv 24px */
+		line-height: 2em;
+		margin: 0 0 2em 0;
+	}
+	small, .small {
+		font-size: .5em; /* equiv 12px */
+		line-height: 4em;
+		margin: 4em 0 4em 0;
+	}
+	.the-article .hd > .group {
+		margin-bottom: 1.8em;
+	}
+	.unit-nav a {
+		width: 2em;
+	}
+	.the-footer .unit {
+		padding: 2em 0;
 	}
 }

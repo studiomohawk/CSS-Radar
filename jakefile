@@ -83,3 +83,8 @@ task('write', function(title) {
 		stream.write('---\n');
 	});
 });
+
+desc ('Deploy Amazon s3 Using s3Sync')
+task('deploy', function() {
+	execLog('s3sync -rpv _site/ css.studiomohawk.com:');
+});

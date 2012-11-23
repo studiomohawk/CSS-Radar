@@ -37,22 +37,12 @@ module.exports = function(grunt) {
 		s3: {
 			key: '<%= aws.key %>',
 			secret: '<%= aws.secret %>',
-			bucket: 'css.studiomohawk.com',
+			bucket: 'playground-at-home',
 			access: 'public-read',
 			upload: [
 				{
-					src: '_site/*',
+					src: '_site/**/*',
 					dest: '.'
-				},
-				{
-					src: '_site/asset/style/*.css',
-					dest: 'asset/style/',
-					gzip: true
-				},
-				{
-					src: '_site/asset/script/*.js',
-					dest: 'asset/script/',
-					gzip: true
 				}
 			]
 		},
@@ -74,12 +64,12 @@ module.exports = function(grunt) {
 	// Default task
 	grunt.registerTask('default', 'watch');
 	// CSS Build task
-	grunt.registerTask('cssbuild', ['stylus','csso']);
+	grunt.registerTask('cssbuild', ['stylus', 'csso']);
 	// JavaScript Build task
-	grunt.registerTask('jsbuild', ['concat:js','min']);
+	grunt.registerTask('jsbuild', ['concat:js', 'min']);
 	// development task
-	grunt.registerTask('dev', ['jekyll','watch']);
+	grunt.registerTask('dev', ['watch']);
 	// depoy task
-	grunt.registerTask('deploy', ['cssbuild','jsbuild','s3']);
+	grunt.registerTask('deploy', ['cssbuild', 'img']);
 
 };
