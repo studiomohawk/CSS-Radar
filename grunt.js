@@ -56,14 +56,10 @@ module.exports = function(grunt) {
 				}
 			]
 		},
-		reload: {
-			port: 35729,
-			liveReload: {}
-		},
 		watch: {
 			css: {
 				files: ['asset/style/*.styl'],
-				tasks: ['stylus', 'reload']
+				tasks: ['stylus']
 			}
 		}
 	});
@@ -82,7 +78,7 @@ module.exports = function(grunt) {
 	// JavaScript Build task
 	grunt.registerTask('jsbuild', ['concat:js','min']);
 	// development task
-	grunt.registerTask('dev', ['jekyll', 'reload', 'watch']);
+	grunt.registerTask('dev', ['jekyll','watch']);
 	// depoy task
 	grunt.registerTask('deploy', ['cssbuild','jsbuild','s3']);
 

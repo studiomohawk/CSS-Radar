@@ -2,7 +2,7 @@
   "name": "cssradar",
   "version": "2.0.0",
   "dependencies" : {
-    "grunt-contrib-stylus": "~0.3.1",
+    "grunt-contrib-stylus": "git://github.com/ahomu/grunt-contrib-stylus.git#devel",
     "grunt-csso": "~0.2.1",
 		"grunt-s3": "~0.0.8",
 		"grunt-jekyll": "~0.2.2",
