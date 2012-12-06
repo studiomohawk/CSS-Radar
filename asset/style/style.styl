@@ -8,9 +8,12 @@ html {
 	background: url(t-cleantexture) repeat 0 0;
 	color: foreground;
 	border-top: solid 8px green;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-overflow-scrolling: touch;
 }
 .unit-inner {
-	column(4);
+	column(3);
 	margin: 0 auto;
 }
 .unit-logo {
@@ -33,7 +36,7 @@ html {
 	top: 6px;
 }
 .group-title {
-	text-align: center;
+//	text-align: center;
 }
 .post-title {
 	margin-bottom: 0;
@@ -146,6 +149,12 @@ page specific
 /* ==========================================================================
 media queries
 ============================================================================= */
+@media only screen and (min-width: 480px) {
+/* 480 =================================================== */
+	.unit-inner {
+		column(5);
+	}
+}
 @media only screen and (min-width: 600px) {
 /* 600 =================================================== */
 	.unit-inner {

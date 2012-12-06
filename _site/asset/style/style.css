@@ -185,6 +185,7 @@ textarea {
 }
 body {
   margin: 0 auto;
+  width: 100%;
 }
 ::-moz-selection {
   background: #b3d4fc;
@@ -310,8 +311,8 @@ h6,
 }
 small,
 .small {
-  font-size: 0.25em;
-/* equiv 4px */
+  font-size: 0.5em;
+/* equiv 8px */
   line-height: 8em;
   margin: 8em 0 8em 0;
 }
@@ -1463,9 +1464,12 @@ html {
   background: url("/asset/texture/clean_textile.png") repeat 0 0;
   color: #4d4d4c;
   border-top: solid 8px #b5bd68;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 .unit-inner {
-  width: 330px;
+  width: 240px;
   margin: 0 auto;
 }
 .unit-logo {
@@ -1486,9 +1490,6 @@ html {
   margin: 0;
   position: relative;
   top: 6px;
-}
-.group-title {
-  text-align: center;
 }
 .post-title {
   margin-bottom: 0;
@@ -1609,6 +1610,11 @@ page specific
 /* ==========================================================================
 media queries
 ============================================================================= */
+@media only screen and (min-width: 480px) {
+  .unit-inner {
+    width: 420px;
+  }
+}
 @media only screen and (min-width: 600px) {
   .unit-inner {
     width: 510px;

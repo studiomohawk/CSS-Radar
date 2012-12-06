@@ -33,19 +33,6 @@ module.exports = function(grunt) {
 				server: true
 			}
 		},
-		aws: '<json:grunt-aws.json>',
-		s3: {
-			key: '<%= aws.key %>',
-			secret: '<%= aws.secret %>',
-			bucket: 'playground-at-home',
-			access: 'public-read',
-			upload: [
-				{
-					src: '_site/**/*',
-					dest: '.'
-				}
-			]
-		},
 		watch: {
 			css: {
 				files: ['asset/style/*.styl'],
@@ -59,7 +46,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-csso');
 	grunt.loadNpmTasks('grunt-img');
 	grunt.loadNpmTasks('grunt-jekyll');
-	grunt.loadNpmTasks('grunt-s3');
 
 	// Default task
 	grunt.registerTask('default', 'watch');
