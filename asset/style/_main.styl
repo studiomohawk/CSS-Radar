@@ -1,0 +1,174 @@
+/* ==========================================================================
+primary: Yuya Saito @ http://twitter.com/cssradar
+============================================================================= */
+
+html {
+	border-top: solid 8px green;
+	background: url(t-cleantexture) repeat 0 0;
+	color: foreground;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+.unit-inner {
+	margin: 0 auto;
+	column(3);
+}
+.unit-logo {
+	padding: 4em 0 4.5em;
+}
+.logo-css:after {
+	position: relative;
+	top: 6px;
+	display: inline-block;
+	margin: 0 6px;
+	content: "\e31f";
+	font-family: 'nounproject';
+}
+.logo {
+	position: relative;
+	top: 6px;
+	margin: 0;
+	text-align: center;
+	font-family: 'Outage', sans-serif;
+	line-height: 1;
+}
+.group-title {
+	text-align: center;
+}
+.post-title {
+	margin-bottom: 0;
+	text-align: left;
+}
+.date-pub {
+	position: relative;
+	top: -5px;
+	display: inline-block;
+	margin: 0 !important;
+	color: #545a60;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.date-pub.update:after {
+	display: inline-block;
+	content: '/';
+}
+.content {
+	h1, .h1 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	ul {
+		padding-left: 0;
+		list-style: square;
+	}
+	ol {
+		padding-left: 0;
+		list-style: decimal;
+	}
+	p code, li code {
+		margin: 0 2px;
+		padding: 0px 5px;
+		border: 1px solid #EAEAEA;
+		border-radius: 3px;
+		background-color: #F8F8F8;
+		monospace();
+	}
+	.highlight pre {
+		margin: 0;
+		padding: 1.8rem;
+		background-color: #1d1f21;
+		color: #fafafa;
+	}
+	pre code {
+		monospace();
+	}
+}
+.unit-nav {
+	border-bottom: 1px solid #282828;
+	background: rgba(204, 204, 204, 0.2);
+	color: #BDBDBD;
+}
+.unit-nav ul {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+	text-align: right;
+}
+.unit-nav li {
+	display: inline-block;
+	border-right: 1px solid rgba(204, 204, 204, 0.3);
+}
+.unit-nav .old {
+	border-left: 1px solid rgba(204, 204, 204, 0.3);
+}
+.unit-nav .tweet {
+	position: relative;
+	top: 4px;
+	border: 0 none;
+}
+.unit-nav a {
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	font-weight: bold;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	facebook();
+}
+.unit-nav a:hover, .unit-nav a:focus {
+	background: #1d1f21;
+	color: #fafafa;
+}
+.unit-nav .new a {
+	margin-left: -6px;
+}
+.the-footer {
+	background: url(t-3pxtile) repeat 0 0;
+	color: #fafafa;
+}
+.madeintokyo {
+	margin-bottom: 0;
+}
+
+/* ==========================================================================
+page specific
+============================================================================= */
+
+/* post
+============================================================================= */
+
+/* ==========================================================================
+media queries
+============================================================================= */
+@media only screen and (min-width: 480px) {
+/* 480 =================================================== */
+	.unit-inner {
+		column(5);
+	}
+}
+@media only screen and (min-width: 600px) {
+/* 600 =================================================== */
+	.unit-inner {
+		column(6);
+	}
+}
+@media only screen and (min-width: 768px) {
+/* 768 =================================================== */
+	.unit-inner {
+		column(9);
+	}
+}
+
+// Dev Only
+// html { background-image: url(http://basehold.it/i/48/ff0000); }
+// .the-footer .unit { background-image: url(http://basehold.it/i/48/ffffff); }
+
